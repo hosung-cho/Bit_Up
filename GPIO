@@ -1,0 +1,56 @@
+module gpio(
+    // Wishbone 인터페이스 신호
+    input wire wb_clk_i,
+    input  wire        wb_rst_i,
+    input  wire [31:0] wb_adr_i,
+    input  wire [31:0] wb_dat_i,
+    output reg  [31:0] wb_dat_o,
+    input  wire        wb_we_i,
+    input  wire        wb_stb_i,
+    input  wire        wb_cyc_i,
+    output reg         wb_ack_o,
+    
+    // 실제 외부 핀 (Top Module의 패드와 연결됨)
+   inout wire [11:0] gpio_pads // 메모 상 약 10~12 핀 할당 예상 [cite: 56]
+    );
+    
+    // 1. 내부 레지스터 정의 
+    // 0x4000_1000: GPIO_DATA
+    // 0x4000_1004: GPIO_DIR (1: Output, 0: Input)
+    reg [11:0] gpio_data_reg;
+    reg [11:0] gpio_dir_reg;
+    
+    // 2. Wishbone 쓰기 로직
+    always @(posedge wb_clk_i) begin
+        if (wb_rst_i) begin
+            gpio_data_reg <= 12'h000;
+            gpio_dir_reg  <= 12'h000; // 초기값은 입력 모드
+            wb_ack_o      <= 1'b0;
+        end else if (wb_cyc_i && wb_stb_i && !wb_ack_o) begin
+            wb_ack_o <= 1'b1; // 응답 신호
+            if (wb_we_i) begin
+                // 주소의 하위 비트(Offset)로 레지스터 구분 [cite: 131]
+                if (wb_adr_i[2] == 1'b0) gpio_data_reg <= wb_dat_i[11:0]; // 0x0
+                else                     gpio_dir_reg  <= wb_dat_i[11:0]; // 0x4
+            end
+        end else begin
+            wb_ack_o <= 1'b0;
+        end
+    end
+    
+    // 3. Wishbone 읽기 로직 (CPU가 핀 상태를 읽을 때)
+    always @(*) begin
+        if (wb_adr_i[2] == 1'b0) wb_dat_o = {20'b0, gpio_pads}; // 현재 핀 상태 읽기
+        else                     wb_dat_o = {20'b0, gpio_dir_reg};
+    end
+    
+    // 4. 삼상 버퍼 (Tri-state Buffer) 제어 
+    // 방향이 1(출력)이면 내부 값을 내보내고, 0(입력)이면 고임피던스(Z) 상태로 만듦
+    genvar i;
+    generate
+        for (i = 0; i < 12; i = i + 1) begin : gpio_tri_state
+            assign gpio_pads[i] = (gpio_dir_reg[i]) ? gpio_data_reg[i] : 1'bz;
+        end
+    endgenerate
+    
+endmodule
