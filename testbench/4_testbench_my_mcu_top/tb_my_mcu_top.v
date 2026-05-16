@@ -14,7 +14,7 @@ module tb_my_mcu_top;
    reg        ibus_ack = 1'b0;
 
    my_mcu_top dut (
-      .i_clk_16m(clk_fast),
+      .i_clk_fast(clk_fast),
       .i_rst_n(rst_n),
       .o_rf_sync(rf_sync),
       .o_rf_sck(rf_sck),
@@ -136,7 +136,7 @@ module tb_my_mcu_top;
       for (i = 0; i < 16; i = i + 1)
          pico_ram[i] = 32'h0;
 
-      #5000000;
+      #10000000;
       if (frame_cnt == 0)
          $fatal(1, "No RF frames observed");
 

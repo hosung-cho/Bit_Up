@@ -1,8 +1,11 @@
 /*
  * my_mcu_top.v : SOP-28 패키지 타겟 RISC-V SoC Top Module
  */
-module my_mcu_top (
-    input  wire i_clk_16m,  // 외부 고속 클럭 (16MHz)
+module my_mcu_top #(
+    // clk_sys = i_clk_fast / CLK_SYS_DIV. Keep this even and >= 2.
+    parameter integer CLK_SYS_DIV = 32
+) (
+    input  wire i_clk_fast, // 외부 기준/고속 클럭. 실제 주파수는 보드에서 결정
     input  wire i_rst_n,    // Active-Low 리셋 버튼
 
     // External RF 브리지 (Pico 통신용)
@@ -19,15 +22,22 @@ module my_mcu_top (
 );
 
     // 1. 클럭 및 리셋
-    reg [3:0] clk_div;
+    localparam integer CLK_DIV_HALF = CLK_SYS_DIV / 2;
+    localparam integer CLK_DIV_WIDTH = (CLK_DIV_HALF <= 2) ? 1 : $clog2(CLK_DIV_HALF);
+
+    reg [CLK_DIV_WIDTH-1:0] clk_div;
     reg clk_sys;
-    always @(posedge i_clk_16m or negedge i_rst_n) begin
+    always @(posedge i_clk_fast or negedge i_rst_n) begin
         if (!i_rst_n) begin
-            clk_div <= 0;
-            clk_sys <= 0;
+            clk_div <= {CLK_DIV_WIDTH{1'b0}};
+            clk_sys <= 1'b0;
         end else begin
-            clk_div <= clk_div + 1;
-            if (clk_div == 4'd7) clk_sys <= ~clk_sys; // 1MHz System Clock
+            if (clk_div == CLK_DIV_HALF-1) begin
+                clk_div <= {CLK_DIV_WIDTH{1'b0}};
+                clk_sys <= ~clk_sys;
+            end else begin
+                clk_div <= clk_div + 1'b1;
+            end
         end
     end
     reg [3:0] rst_shift;
@@ -150,7 +160,7 @@ module my_mcu_top (
         .i_raddr(raddr),
         .i_ren(ren),
         .o_rdata(rdata),
-        .i_clk_fast(i_clk_16m),
+        .i_clk_fast(i_clk_fast),
         .i_rst(rst),
         .o_ext_rf_sync(o_rf_sync),
         .o_ext_rf_sck(o_rf_sck),
