@@ -1,0 +1,121 @@
+`timescale 1ns / 1ps
+
+module tb_gpio;
+
+    // 1. 테스트할 모듈(DUT)과 연결할 신호 선언
+    reg         wb_clk_i;
+    reg         wb_rst_i;
+    reg  [31:0] wb_adr_i;
+    reg  [31:0] wb_dat_i;
+    wire [31:0] wb_dat_o;
+    reg         wb_we_i;
+    reg         wb_stb_i;
+    reg         wb_cyc_i;
+    wire        wb_ack_o;
+
+    // 실제 외부 핀은 양방향(inout)이므로 테스트벤치에서는 wire로 선언하고 구동합니다.
+    wire [11:0] gpio_pads;
+    reg  [11:0] gpio_in_drive; // 외부에서 핀으로 입력 신호를 넣어줄 때 사용할 레지스터
+
+    // 입력 모드일 때는 외부 레지스터 값을 연결하고, 출력 모드일 때는 고임피던스(Z)로 끊어줌
+    // (테스트벤치에서 DUT의 출력 신호와 충돌 나지 않게 하기 위함)
+    assign gpio_pads = gpio_in_drive;
+
+    // 2. 테스트할 GPIO 모듈(DUT) 인스턴스화
+    gpio u_gpio (
+        .wb_clk_i (wb_clk_i),
+        .wb_rst_i (wb_rst_i),
+        .wb_adr_i (wb_adr_i),
+        .wb_dat_i (wb_dat_i),
+        .wb_dat_o (wb_dat_o),
+        .wb_we_i  (wb_we_i),
+        .wb_stb_i (wb_stb_i),
+        .wb_cyc_i (wb_cyc_i),
+        .wb_ack_o (wb_ack_o),
+        .gpio_pads(gpio_pads)
+    );
+
+    // 3. 50MHz 클럭 생성 (주기: 20ns)
+    always #10 wb_clk_i = ~wb_clk_i;
+
+    // 4. 테스트 시나리오 진행
+    initial begin
+        // 초기화
+        wb_clk_i      = 0;
+        wb_rst_i      = 1;
+        wb_adr_i      = 32'h0;
+        wb_dat_i      = 32'h0;
+        wb_we_i       = 0;
+        wb_stb_i      = 0;
+        wb_cyc_i      = 0;
+        gpio_in_drive = 12'bzzzz_zzzz_zzzz; // 처음엔 외부 입력 없음
+
+        #40;
+        wb_rst_i = 0; // 리셋 해제
+        #20;
+
+        // -------------------------------------------------------------
+        // 시나리오 [1]: GPIO_DIR 레지스터에 쓰기 (0x4000_1004)
+        // 하위 4비트는 Output(1), 상위 8비트는 Input(0)으로 설정 -> 12'h00F [cite: 98, 134]
+        // -------------------------------------------------------------
+        $display("[WRITE] Setting GPIO_DIR to 12'h00F");
+        @(posedge wb_clk_i);
+        wb_adr_i = 32'h4000_1004; // DIR 레지스터 주소 [cite: 98, 134]
+        wb_dat_i = 32'h0000_000F; // 하위 4비트 출력 설정
+        wb_we_i  = 1;             // Write Enable
+        wb_cyc_i = 1; wb_stb_i = 1;
+
+        // Slave(GPIO)가 응답(ACK)할 때까지 대기
+        @(posedge wb_ack_o);
+        @(posedge wb_clk_i);
+        wb_cyc_i = 0; wb_stb_i = 0; wb_we_i = 0; // 버스 신호 해제
+        #20;
+
+        // -------------------------------------------------------------
+        // 시나리오 [2]: GPIO_DATA 레지스터에 쓰기 (0x4000_1000)
+        // 출력으로 설정한 하위 4비트에 4'b1010(4'hA)을 출력해봄 
+        // -------------------------------------------------------------
+        $display("[WRITE] Writing 12'h00A to GPIO_DATA");
+        @(posedge wb_clk_i);
+        wb_adr_i = 32'h4000_1000; // DATA 레지스터 주소 
+        wb_dat_i = 32'h0000_000A; 
+        wb_we_i  = 1;
+        wb_cyc_i = 1; wb_stb_i = 1;
+
+        @(posedge wb_ack_o);
+        @(posedge wb_clk_i);
+        wb_cyc_i = 0; wb_stb_i = 0; wb_we_i = 0;
+        #20;
+        // 이 시점에서 파형(Waveform) 상 gpio_pads[3:0]이 4'hA로 바뀌었는지 확인해야 합니다!
+
+        // -------------------------------------------------------------
+        // 시나리오 [3]: 외부에서 입력 핀으로 신호 넣어주기
+        // 입력으로 설정된 상위 8비트 중 일부에 외부 신호(8'h55)를 인위적으로 주입
+        // -------------------------------------------------------------
+        $display("[INPUT] Driving external signals to GPIO input pads");
+        // 하위 4비트는 DUT가 출력 중이므로 Z로 두고, 상위 8비트에 8'h55 주입 -> 12'h55Z
+        gpio_in_drive = 12'b0101_0101_zzzz; 
+        #20;
+
+        // -------------------------------------------------------------
+        // 시나리오 [4]: GPIO_DATA 레지스터 읽기 (0x4000_1000)
+        // CPU가 현재 핀 상태를 제대로 읽어오는지 확인 
+        // 예상되는 wb_dat_o 결과: 12'h55A (입력 8'h55 + 출력 4'hA)
+        // -------------------------------------------------------------
+        $display("[READ] Reading GPIO_DATA...");
+        @(posedge wb_clk_i);
+        wb_adr_i = 32'h4000_1000; // DATA 레지스터 주소 
+        wb_we_i  = 0;             // Read Operation
+        wb_cyc_i = 1; wb_stb_i = 1;
+
+        @(posedge wb_ack_o);
+        $display("[READ RESULT] wb_dat_o = 32'h%h (Expected: 32'h0000055a)", wb_dat_o);
+        @(posedge wb_clk_i);
+        wb_cyc_i = 0; wb_stb_i = 0;
+        
+        #100;
+        $display("Simulation Finished!");
+        $finish;
+    end
+
+endmodule
