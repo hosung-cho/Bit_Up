@@ -85,8 +85,11 @@ module my_mcu_top #(
     wire [4+WITH_CSR:0] rf_read_reg1_to_if;
     wire        wen0, wen1;
     wire        rd_alu_en;
+    wire        rd_csr_en;
+    wire        rd_mem_en;
     wire [W-1:0] wdata0, wdata1;
     wire [W-1:0] rdata0, rdata1;
+    wire        ibus_csr_op;
 
     wire [$clog2(RF_DEPTH)-1:0] waddr;
     wire [RF_WIDTH-1:0] wdata;
@@ -95,13 +98,15 @@ module my_mcu_top #(
     wire                ren;
     wire [RF_WIDTH-1:0] rdata;
 
+    assign ibus_csr_op = (wb_ibus_rdt[6:0] == 7'b1110011) && (|wb_ibus_rdt[14:12]);
+
     always @(posedge clk_sys) begin
         if (rst) begin
             rf_read_reg0 <= {1'b0, 5'd0};
             rf_read_reg1 <= {1'b0, 5'd0};
         end else if (wb_ibus_ack) begin
             rf_read_reg0 <= {1'b0, wb_ibus_rdt[19:15]};
-            rf_read_reg1 <= {1'b0, wb_ibus_rdt[24:20]};
+            rf_read_reg1 <= ibus_csr_op ? rf_read_reg1 : {1'b0, wb_ibus_rdt[24:20]};
         end else if (rf_rreq) begin
             rf_read_reg0 <= rreg0;
             rf_read_reg1 <= rreg1;
@@ -109,7 +114,8 @@ module my_mcu_top #(
     end
 
     assign rf_read_reg0_to_if = wb_ibus_ack ? {1'b0, wb_ibus_rdt[19:15]} : rf_read_reg0;
-    assign rf_read_reg1_to_if = wb_ibus_ack ? {1'b0, wb_ibus_rdt[24:20]} : rf_read_reg1;
+    assign rf_read_reg1_to_if = (wb_ibus_ack && !ibus_csr_op) ? {1'b0, wb_ibus_rdt[24:20]} :
+                                rf_rreq ? rreg1 : rf_read_reg1;
 
     // 5. SERV 코어 (RF 직접 연결)
     serv_top #(
@@ -132,6 +138,8 @@ module my_mcu_top #(
         .o_wdata0(wdata0),
         .o_wdata1(wdata1),
         .o_rd_alu_en(rd_alu_en),
+        .o_rd_csr_en(rd_csr_en),
+        .o_rd_mem_en(rd_mem_en),
         .o_rreg0(rreg0),
         .o_rreg1(rreg1),
         .i_rdata0(rdata0),
@@ -169,7 +177,7 @@ module my_mcu_top #(
         .i_wen1(wen1),
         .i_wdata0(wdata0),
         .i_wdata1(wdata1),
-        .i_wdata0_next(rd_alu_en),
+        .i_wdata0_next(rd_alu_en | rd_csr_en),
         .i_rreg0(rf_read_reg0_to_if),
         .i_rreg1(rf_read_reg1_to_if),
         .o_rdata0(rdata0),

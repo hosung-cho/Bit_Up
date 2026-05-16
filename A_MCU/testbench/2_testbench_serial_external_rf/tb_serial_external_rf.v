@@ -2,8 +2,11 @@
 
 module tb_serial_external_rf();
    localparam RF_WIDTH = 2;
-   localparam RF_DEPTH = 32*(32+4)/RF_WIDTH;
+   localparam CSR_REGS = 4;
+   localparam RF_DEPTH = 32*(32+CSR_REGS)/RF_WIDTH;
    localparam RF_AW    = $clog2(RF_DEPTH);
+   localparam RAW      = $clog2(32+CSR_REGS);
+   localparam RF_FRAME_BITS = RAW + 8;
 
    reg clk_sys = 0;
    reg clk_fast = 0;
@@ -50,8 +53,8 @@ module tb_serial_external_rf();
       .i_ext_rf_miso(miso)
    );
 
-   reg [31:0] pico_ram [0:31];
-   reg [12:0] rx_buffer;
+   reg [31:0] pico_ram [0:32+CSR_REGS-1];
+   reg [RF_FRAME_BITS-1:0] rx_buffer;
    integer bit_cnt = 0;
    reg [1:0] pico_tx_data = 0;
    integer frame_cnt = 0;
@@ -61,16 +64,16 @@ module tb_serial_external_rf();
    reg        exp_valid = 0;
    reg        exp_wen = 0;
    reg        exp_ren = 0;
-   reg [4:0]  exp_reg = 0;
+   reg [RAW-1:0]  exp_reg = 0;
    reg [3:0]  exp_bit = 0;
    reg [1:0]  exp_wdata = 0;
-   reg [12:0] exp_frame = 0;
+   reg [RF_FRAME_BITS-1:0] exp_frame = 0;
 
    function [RF_AW-1:0] rf_addr;
-      input [4:0] reg_idx;
+      input [RAW-1:0] reg_idx;
       input [3:0] bit_idx;
       begin
-         rf_addr = {1'b0, reg_idx, bit_idx};
+         rf_addr = {reg_idx, bit_idx};
       end
    endfunction
 
@@ -85,7 +88,7 @@ module tb_serial_external_rf();
    task expect_next_frame;
       input        wen;
       input        ren;
-      input [4:0]  reg_idx;
+      input [RAW-1:0]  reg_idx;
       input [3:0]  bit_idx;
       input [1:0]  wdata;
       begin
@@ -127,7 +130,7 @@ module tb_serial_external_rf();
    endtask
 
    task serial_write;
-      input [4:0] reg_idx;
+      input [RAW-1:0] reg_idx;
       input [3:0] chunk_idx;
       input [1:0] data;
       integer start_count;
@@ -155,7 +158,7 @@ module tb_serial_external_rf();
    endtask
 
    task serial_read;
-      input [4:0] reg_idx;
+      input [RAW-1:0] reg_idx;
       input [3:0] chunk_idx;
       input [1:0] expected;
       integer start_count;
@@ -192,12 +195,12 @@ module tb_serial_external_rf();
 
    always @(posedge sck) begin
       if (sync) begin
-         rx_buffer[12 - bit_cnt] = mosi;
+         rx_buffer[RF_FRAME_BITS-1 - bit_cnt] = mosi;
          bit_cnt = bit_cnt + 1;
 
-         if (bit_cnt == 11) begin
-            if (rx_buffer[11]) begin
-               pico_tx_data = pico_ram[rx_buffer[10:6]][{rx_buffer[5:2], 1'b0} +: 2];
+         if (bit_cnt == RF_FRAME_BITS-2) begin
+            if (rx_buffer[RF_FRAME_BITS-2]) begin
+               pico_tx_data = pico_ram[rx_buffer[RF_FRAME_BITS-3:6]][{rx_buffer[5:2], 1'b0} +: 2];
             end
          end
       end
@@ -220,25 +223,25 @@ module tb_serial_external_rf();
          $display("       observed=%b", rx_buffer);
       end
 
-         if (rx_buffer[12]) begin
-            pico_ram[rx_buffer[10:6]][{rx_buffer[5:2], 1'b0} +: 2] = rx_buffer[1:0];
+         if (rx_buffer[RF_FRAME_BITS-1]) begin
+            pico_ram[rx_buffer[RF_FRAME_BITS-3:6]][{rx_buffer[5:2], 1'b0} +: 2] = rx_buffer[1:0];
          end
       end
    end
 
    always @(posedge sync) begin
       bit_cnt = 0;
-      rx_buffer = 13'b0;
+      rx_buffer = {RF_FRAME_BITS{1'b0}};
    end
 
-   assign miso = (bit_cnt >= 10 && bit_cnt <= 12) ? pico_tx_data[1] :
-                 (bit_cnt >= 13) ? pico_tx_data[0] : 1'b0;
+   assign miso = (bit_cnt >= RF_FRAME_BITS-3 && bit_cnt <= RF_FRAME_BITS-1) ? pico_tx_data[1] :
+                 (bit_cnt >= RF_FRAME_BITS) ? pico_tx_data[0] : 1'b0;
 
    integer i;
    integer chunk_idx;
    reg [1:0] pattern;
    initial begin
-      for (i = 0; i < 32; i = i + 1)
+      for (i = 0; i < 32+CSR_REGS; i = i + 1)
          pico_ram[i] = 32'h0;
 
       rst = 1;

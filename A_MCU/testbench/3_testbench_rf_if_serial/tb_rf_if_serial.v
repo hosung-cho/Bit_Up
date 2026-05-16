@@ -7,6 +7,7 @@ module tb_rf_if_serial();
    localparam RF_DEPTH  = (32*(32+CSR_REGS))/RF_WIDTH;
    localparam RF_AW     = $clog2(RF_DEPTH);
    localparam RAW       = $clog2(32+CSR_REGS);
+   localparam RF_FRAME_BITS = RAW + 8;
 
    reg clk_sys = 0;
    reg clk_fast = 0;
@@ -98,8 +99,8 @@ module tb_rf_if_serial();
       .i_ext_rf_miso(miso)
    );
 
-   reg [31:0] pico_ram [0:31];
-   reg [12:0] rx_buffer = 0;
+   reg [31:0] pico_ram [0:32+CSR_REGS-1];
+   reg [RF_FRAME_BITS-1:0] rx_buffer = 0;
    integer bit_cnt = 0;
    reg [1:0] pico_tx_data = 0;
    integer frame_cnt = 0;
@@ -244,12 +245,12 @@ module tb_rf_if_serial();
 
    always @(posedge sck) begin
       if (sync) begin
-         rx_buffer[12 - bit_cnt] = mosi;
+         rx_buffer[RF_FRAME_BITS-1 - bit_cnt] = mosi;
          bit_cnt = bit_cnt + 1;
 
-         if (bit_cnt == 11) begin
-            if (rx_buffer[11])
-               pico_tx_data = pico_ram[rx_buffer[10:6]][{rx_buffer[5:2], 1'b0} +: 2];
+         if (bit_cnt == RF_FRAME_BITS-2) begin
+            if (rx_buffer[RF_FRAME_BITS-2])
+               pico_tx_data = pico_ram[rx_buffer[RF_FRAME_BITS-3:6]][{rx_buffer[5:2], 1'b0} +: 2];
          end
       end
    end
@@ -258,15 +259,15 @@ module tb_rf_if_serial();
       if (test_active) begin
          frame_cnt = frame_cnt + 1;
 
-         if (rx_buffer[12]) begin
+         if (rx_buffer[RF_FRAME_BITS-1]) begin
             write_frame_cnt = write_frame_cnt + 1;
-            pico_ram[rx_buffer[10:6]][{rx_buffer[5:2], 1'b0} +: 2] = rx_buffer[1:0];
+            pico_ram[rx_buffer[RF_FRAME_BITS-3:6]][{rx_buffer[5:2], 1'b0} +: 2] = rx_buffer[1:0];
             $display("[FRAME W] x%0d bits[%0d:%0d] = %b",
-                     rx_buffer[10:6], ({rx_buffer[5:2], 1'b0} + 1), {rx_buffer[5:2], 1'b0}, rx_buffer[1:0]);
-         end else if (rx_buffer[11]) begin
+                     rx_buffer[RF_FRAME_BITS-3:6], ({rx_buffer[5:2], 1'b0} + 1), {rx_buffer[5:2], 1'b0}, rx_buffer[1:0]);
+         end else if (rx_buffer[RF_FRAME_BITS-2]) begin
             read_frame_cnt = read_frame_cnt + 1;
             $display("[FRAME R] x%0d bits[%0d:%0d]",
-                     rx_buffer[10:6], ({rx_buffer[5:2], 1'b0} + 1), {rx_buffer[5:2], 1'b0});
+                     rx_buffer[RF_FRAME_BITS-3:6], ({rx_buffer[5:2], 1'b0} + 1), {rx_buffer[5:2], 1'b0});
          end else begin
             fail("Frame without WEN or REN");
             $display("       frame=%b", rx_buffer);
@@ -276,15 +277,15 @@ module tb_rf_if_serial();
 
    always @(posedge sync) begin
       bit_cnt = 0;
-      rx_buffer = 13'b0;
+      rx_buffer = {RF_FRAME_BITS{1'b0}};
    end
 
-   assign miso = (bit_cnt >= 10 && bit_cnt <= 12) ? pico_tx_data[1] :
-                 (bit_cnt >= 13) ? pico_tx_data[0] : 1'b0;
+   assign miso = (bit_cnt >= RF_FRAME_BITS-3 && bit_cnt <= RF_FRAME_BITS-1) ? pico_tx_data[1] :
+                 (bit_cnt >= RF_FRAME_BITS) ? pico_tx_data[0] : 1'b0;
 
    integer i;
    initial begin
-      for (i = 0; i < 32; i = i + 1)
+      for (i = 0; i < 32+CSR_REGS; i = i + 1)
          pico_ram[i] = 32'h0;
 
       rst = 1'b1;
