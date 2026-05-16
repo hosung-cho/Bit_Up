@@ -2,16 +2,21 @@
 # Vivado Tcl Simulation Script
 # ==========================================
 
+set script_dir [file normalize [file dirname [info script]]]
+set project_root [file normalize "$script_dir/../../.."]
+set tb_dir [file normalize "$script_dir/.."]
+set top_module tb_my_mcu_top
+
 puts "\[Tcl\] 1. 임시 시뮬레이션 프로젝트 생성 중..."
 # 타겟 보드나 칩 파트 넘버를 적어주세요. (예: xc7a35tcpg236-1)
 # -in_memory를 빼고, 'sim_workspace'라는 임시 폴더에 프로젝트를 생성하도록 수정했습니다.
 # -force 옵션을 넣으면 스크립트를 다시 실행할 때 기존 폴더를 덮어씁니다.
-create_project -force -part xc7a35tcpg236-1 sim_project ./sim_workspace
+create_project -force -part xc7a35tcpg236-1 sim_project "$script_dir/sim_workspace"
 
 puts "\[Tcl\] 2. 소스 파일 및 테스트벤치 추가 중..."
-# glob를 사용하면 폴더 내의 모든 .v 파일을 한 번에 불러올 수 있습니다.
-read_verilog [glob ../../src/rtl/*.v]
-read_verilog [glob ../*.v]
+read_verilog [glob "$project_root/src/rtl/serv/*.v"]
+read_verilog [glob "$project_root/src/rtl/*.v"]
+read_verilog [glob "$tb_dir/*.v"]
 
 # 테스트벤치가 사용하는 메모리 초기화 파일을 시뮬레이션 파일셋에 포함합니다.
 # add_files -fileset sim_1 [glob ../*.hex]
@@ -23,7 +28,7 @@ read_verilog [glob ../*.v]
 
 puts "\[Tcl\] 3. Top 모듈 지정..."
 # 테스트벤치의 Top 모듈 이름을 정확히 적어야 합니다.
-set_property top tb_external_rf [get_filesets sim_1]
+set_property top $top_module [get_filesets sim_1]
 
 puts "\[Tcl\] 4. 시뮬레이션 설정..."
 # 기본 시뮬레이션 시간은 1000ns입니다. 테스트벤치의 $finish를 만날 때까지
@@ -43,5 +48,4 @@ puts "\[Tcl\] 5. 컴파일 및 시뮬레이션 실행!"
 launch_simulation
 
 puts "\[Tcl\] 시뮬레이션 완료!"
-
 
