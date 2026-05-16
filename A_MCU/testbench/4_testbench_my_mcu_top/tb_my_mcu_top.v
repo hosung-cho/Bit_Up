@@ -197,7 +197,7 @@ module tb_my_mcu_top;
          csr_port1_cnt = csr_port1_cnt + 1;
       if (dut.wen)
          rf_ram_wen_cnt = rf_ram_wen_cnt + 1;
-      if (dut.wb_ibus_cyc) begin
+      if (dut.wb_ibus_ack) begin
          fetch_cnt = fetch_cnt + 1;
          last_ibus_adr = dut.wb_ibus_adr;
          last_ibus_insn = dut.wb_ibus_rdt;
@@ -439,7 +439,34 @@ module tb_my_mcu_top;
       ext_mem[297] = 32'h00000013; // nop
       ext_mem[298] = 32'h00000013; // nop
       ext_mem[299] = 32'h1e702223; // sw   x7, 0x1e4(x0)
-      ext_mem[300] = 32'h0000006f; // jal  x0, 0
+      ext_mem[76] = 32'h342020f3;  // csrrs x1, mcause, x0
+      ext_mem[77] = 32'h00000013;  // nop
+      ext_mem[78] = 32'h00000013;  // nop
+      ext_mem[79] = 32'h00000013;  // nop
+      ext_mem[80] = 32'h00000013;  // nop
+      ext_mem[81] = 32'h1e102423;  // sw    x1, 0x1e8(x0)
+      ext_mem[82] = 32'h01300113;  // addi  x2, x0, 0x13 (nop encoding)
+      ext_mem[83] = 32'h00000013;  // nop
+      ext_mem[84] = 32'h00000013;  // nop
+      ext_mem[85] = 32'h00000013;  // nop
+      ext_mem[86] = 32'h00000013;  // nop
+      ext_mem[87] = 32'h4a202c23;  // sw    x2, 0x4b8(x0) (patch ecall to nop)
+      ext_mem[88] = 32'h00000013;  // nop
+      ext_mem[89] = 32'h00000013;  // nop
+      ext_mem[90] = 32'h00000013;  // nop
+      ext_mem[91] = 32'h00000013;  // nop
+      ext_mem[92] = 32'h00000013;  // nop
+      ext_mem[93] = 32'h30200073;  // mret
+      ext_mem[300] = 32'h13000f93; // addi x31, x0, 0x130
+      ext_mem[301] = 32'h305f9073; // csrrw x0, mtvec, x31
+      ext_mem[302] = 32'h00000073; // ecall
+      ext_mem[303] = 32'h00100393; // addi x7, x0, 1   (executed after mret)
+      ext_mem[304] = 32'h00000013; // nop
+      ext_mem[305] = 32'h00000013; // nop
+      ext_mem[306] = 32'h00000013; // nop
+      ext_mem[307] = 32'h00000013; // nop
+      ext_mem[308] = 32'h1e702823; // sw   x7, 0x1f0(x0)
+      ext_mem[309] = 32'h0000006f; // jal  x0, 0
       ext_mem[8'h40] = 32'h00000003;
       ext_mem[8'h42] = 32'hdeadbeef;
       ext_mem[8'h43] = 32'h123480ff;
@@ -452,7 +479,7 @@ module tb_my_mcu_top;
       ext_mem[8'h4a] = 32'h00000000;
       ext_mem[8'h4b] = 32'h00000001;
 
-      #60000000;
+      #120000000;
       if (frame_cnt == 0)
          $fatal(1, "No RF frames observed");
       if (mem_frame_cnt == 0)
@@ -495,7 +522,7 @@ module tb_my_mcu_top;
       expect_reg(6'd29, 32'h00000003);
       expect_reg(6'd30, 32'h00000004);
       expect_reg(6'd32, 32'h00000001);
-      expect_reg(6'd33, 32'h00000002);
+      expect_reg(6'd33, 32'h00000130);
       expect_reg(6'd34, 32'h00000003);
       expect_reg(6'd35, 32'h00000004);
 
@@ -567,6 +594,8 @@ module tb_my_mcu_top;
       expect_mem_word(8'h77, 32'h00000001);
       expect_mem_word(8'h78, 32'h00000001);
       expect_mem_word(8'h79, 32'h00000001);
+      expect_mem_word(8'h7a, 32'h0000000b);
+      expect_mem_word(8'h7c, 32'h00000001);
 
       if (gpio_out !== 8'h5a) begin
          error_cnt = error_cnt + 1;

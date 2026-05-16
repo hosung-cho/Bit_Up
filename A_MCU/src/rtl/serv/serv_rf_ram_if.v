@@ -61,16 +61,18 @@ module serv_rf_ram_if
    reg [width+W-1:0] wdata1_r;
    reg          wen0_r;
    reg          wen1_r;
+   reg [3:0]    write_chunk;
    reg [7:0]    write_wait;
    reg [31:0]   bypass_ram [0:32+csr_regs-1];
    reg          bypass_valid [0:32+csr_regs-1];
 
-   wire [CMSB:0] wcnt = rcnt-4;
-   wire          rtrig0 = (rcnt[l2r-1:0] == 1);
+   wire [CMSB:0] rcnt_eff = (i_rreq | i_wreq) ? {{CMSB-1{1'b0}}, i_wreq, 1'b0} : rcnt;
+   wire [CMSB:0] wcnt = rcnt_eff-4;
+   wire          rtrig0 = (rcnt_eff[l2r-1:0] == 1);
    wire          wtrig0 = rtrig1;
    wire          wtrig1 = wcnt[0];
    wire [raw-1:0] wreg = wtrig1 ? i_wreg1 : i_wreg0;
-   wire [3:0]     wchunk = wcnt[CMSB:l2r];
+   wire [3:0]     wchunk = write_chunk;
 
    // ALU writeback is phase-aligned one cycle later than memory writeback in
    // this off-chip RF path, so port 0 can select the next packed shift value.
@@ -128,6 +130,11 @@ module serv_rf_ram_if
          write_wait <= 8'd63;
       else if (write_wait != 8'd0)
          write_wait <= write_wait - 6'd1;
+
+      if (i_wreq)
+         write_chunk <= 4'd0;
+      else if (wtrig1 && (wen0_r || wen1_r))
+         write_chunk <= write_chunk + 4'd1;
 
       if (o_wen && (wreg != {raw{1'b0}})) begin
          bypass_ram[wreg][{wchunk, 1'b0} +: 2] <= o_wdata;
@@ -192,6 +199,7 @@ module serv_rf_ram_if
             wdata1_r <= {(width+W){1'b0}};
             wen0_r <= 1'b0;
             wen1_r <= 1'b0;
+            write_chunk <= 4'b0;
             write_wait <= 8'b0;
             prefetch_active <= 1'b0;
             pending_read <= 1'b0;
