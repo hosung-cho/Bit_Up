@@ -1,46 +1,92 @@
-/*
- * serv_rf_ram.v : External Bridge (Off-chip RF)
- * 내부 저장소를 제거하고 외부 Pico와 통신합니다.
- */
 module serv_rf_ram
   #(parameter width=2,
     parameter csr_regs=4,
     parameter depth=32*(16+csr_regs)/width)
-   (input wire i_clk,
+   (
+    input wire i_clk,
     input wire [$clog2(depth)-1:0] i_waddr,
     input wire [width-1:0]     i_wdata,
     input wire         i_wen,
     input wire [$clog2(depth)-1:0] i_raddr,
     input wire         i_ren,
-    output wire [width-1:0]      o_rdata,
+    output wire [width-1:0]    o_rdata,
 
-    // 외부 Pico와 연결될 브리지 핀들
-    output wire [4:0] o_ext_rf_rreg, // 읽을 레지스터 번호 (x0~x15)
-    output wire [4:0] o_ext_rf_wreg, // 쓸 레지스터 번호
-    output wire [width-1:0] o_ext_rf_wdata, 
-    output wire [3:0] o_ext_rf_bit_idx, // 32비트 중 몇 번째 비트인지 (0, 2, 4...)
-    input  wire [width-1:0] i_ext_rf_rdata, 
-    output wire o_ext_rf_wen,
-    output wire o_ext_rf_ren
+    input wire i_clk_fast,
+    input wire i_rst,
+
+    output reg  o_ext_rf_sync,
+    output wire o_ext_rf_sck,
+    output wire o_ext_rf_mosi,
+    input  wire i_ext_rf_miso
     );
 
-   // RV32E(width=2) 기준 주소 구조 분해
-   // i_raddr = {reg_idx[4:0], bit_idx[3:0]}
-   assign o_ext_rf_rreg    = i_raddr[$clog2(depth)-1 : 4];
-   assign o_ext_rf_bit_idx = i_raddr[3:0];
-   assign o_ext_rf_wreg    = i_waddr[$clog2(depth)-1 : 4];
-   
-   assign o_ext_rf_wdata   = i_wdata;
-   assign o_ext_rf_wen     = i_wen;
-   assign o_ext_rf_ren     = i_ren;
+   wire [4:0] rreg = i_raddr[$clog2(depth)-1 : 4];
+   wire [3:0] rbit = i_raddr[3:0];
+   wire [4:0] wreg = i_waddr[$clog2(depth)-1 : 4];
+   wire [3:0] wbit = i_waddr[3:0];
 
-   // x0 레지스터(Zero Register)는 칩 내부에서 0으로 강제 (Pico 부담 경감)
-   reg regzero;
-   always @(posedge i_clk) begin
-      regzero <= !(|o_ext_rf_rreg); // x0 접근 시 1
+   wire [4:0] target_reg = i_ren ? rreg : wreg;
+   wire [3:0] target_bit = i_ren ? rbit : wbit;
+   wire [12:0] req_key = {i_wen, i_ren, target_reg, target_bit, i_wdata};
+
+   // ----------------------------------------------------
+   // 시리얼 전송 FSM
+   // ----------------------------------------------------
+   reg [4:0] tx_state;
+   reg [12:0] shift_tx;
+   reg [width-1:0] shift_rx;
+   reg [12:0] last_req_key;
+   reg        req_seen;
+   reg        launch_pending;
+
+   // [수정됨] SCK 위상을 반전(~i_clk_fast)하여 피코가 안정적으로 데이터를 읽게 함
+   assign o_ext_rf_sck = (o_ext_rf_sync) ? ~i_clk_fast : 1'b0;
+   assign o_ext_rf_mosi = shift_tx[12];
+
+   always @(posedge i_clk_fast) begin
+      if (i_rst) begin
+         tx_state <= 0;
+         o_ext_rf_sync <= 0;
+         shift_rx <= 0;
+         last_req_key <= 13'b0;
+         req_seen <= 1'b0;
+         launch_pending <= 1'b0;
+      end else begin
+         if (!(i_wen || i_ren)) begin
+            req_seen <= 1'b0;
+            launch_pending <= 1'b0;
+         end
+
+         if (tx_state == 0) begin
+            if (launch_pending && (i_wen || i_ren)) begin
+               shift_tx <= req_key;
+               last_req_key <= req_key;
+               req_seen <= 1'b1;
+               launch_pending <= 1'b0;
+               tx_state <= 13;
+               o_ext_rf_sync <= 1'b1;
+            end else if ((i_wen || i_ren) && (!req_seen || (req_key != last_req_key))) begin
+               launch_pending <= 1'b1;
+            end
+         end 
+         else begin
+            if (tx_state == 2) shift_rx[1] <= i_ext_rf_miso;
+            if (tx_state == 1) shift_rx[0] <= i_ext_rf_miso;
+
+            shift_tx <= {shift_tx[11:0], 1'b0};
+            tx_state <= tx_state - 1;
+
+            if (tx_state == 1) begin
+               o_ext_rf_sync <= 1'b0;
+            end
+         end
+      end
    end
 
-   // 외부 데이터를 코어로 전달
-   assign o_rdata = (regzero) ? {width{1'b0}} : i_ext_rf_rdata;
+   reg regzero;
+   always @(posedge i_clk) begin
+      regzero <= !(|rreg);
+   end
+   assign o_rdata = (regzero) ? {width{1'b0}} : shift_rx;
 
 endmodule

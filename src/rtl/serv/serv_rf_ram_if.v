@@ -1,31 +1,21 @@
 /*
- * serv_rf_ram_if.v : Interface between SERV and SRAM-based RF storage
+ * serv_rf_ram_if.v : SERV RF adapter for 2-bit external serial RF storage
  *
- * SPDX-FileCopyrightText: 2019 Olof Kindgren <olof@award-winning.me>
- * SPDX-License-Identifier: ISC
+ * This project uses W=1 and width=2. The write side follows the original SERV
+ * RAM adapter timing. Reads are prefetched from the external bridge before
+ * SERV is released with o_ready.
  */
 `default_nettype none
 module serv_rf_ram_if
-  #(//Data width. Adjust to preferred width of SRAM data interface
-    parameter width=8,
-
+  #(parameter width=2,
     parameter W = 1,
-    //Select reset strategy.
-    // "MINI" for resetting minimally required FFs
-    // "NONE" for relying on FFs having a defined value on startup
     parameter reset_strategy="MINI",
-
-    //Number of CSR registers. These are allocated after the normal
-    // GPR registers in the RAM.
     parameter csr_regs=4,
-
-    //Internal parameters calculated from above values. Do not change
     parameter B=W-1,
-    parameter raw=$clog2(32+csr_regs), //Register address width
-    parameter l2w=$clog2(width), //log2 of width
-    parameter aw=5+raw-l2w) //Address width
+    parameter raw=$clog2(32+csr_regs),
+    parameter l2w=$clog2(width),
+    parameter aw=5+raw-l2w)
   (
-   //SERV side
    input wire		   i_clk,
    input wire		   i_rst,
    input wire		   i_wreq,
@@ -41,146 +31,157 @@ module serv_rf_ram_if
    input wire [raw-1:0]	   i_rreg1,
    output wire [B:0]	   o_rdata0,
    output wire [B:0]	   o_rdata1,
-   //RAM side
-   output wire [aw-1:0]	   o_waddr,
+   output wire [aw-1:0]   o_waddr,
    output wire [width-1:0] o_wdata,
    output wire		   o_wen,
-   output wire [aw-1:0]	   o_raddr,
-   output wire		   o_ren,
+   output reg [aw-1:0]	   o_raddr,
+   output reg		   o_ren,
    input wire [width-1:0]  i_rdata);
 
+   reg ready_pulse;
+   assign o_ready = i_wreq | ready_pulse;
+
+   reg [31:0] read_buf0;
+   reg [31:0] read_buf1;
+   reg [5:0]  stream_cnt;
+   reg        stream_pending;
+   reg        stream_active;
+
+   assign o_rdata0 = stream_active ? read_buf0[stream_cnt[4:0]] : 1'b0;
+   assign o_rdata1 = stream_active ? read_buf1[stream_cnt[4:0]] : 1'b0;
+
    localparam ratio = width/W;
-   localparam CMSB = 4-$clog2(W); //Counter MSB
-   localparam l2r  = $clog2(ratio);
+   localparam CMSB = 4-$clog2(W);
+   localparam l2r = $clog2(ratio);
 
-   reg 				   rgnt;
-   assign o_ready = rgnt | i_wreq;
-   reg [CMSB:0] 	  rcnt;
+   reg [CMSB:0] rcnt;
+   reg          rtrig1;
+   reg [width-1:0] wdata0_r;
+   reg [width+W-1:0] wdata1_r;
+   reg          wen0_r;
+   reg          wen1_r;
+   reg [5:0]    write_wait;
 
-   reg 		  rtrig1;
-   /*
-    ********** Write side ***********
-    */
+   wire [CMSB:0] wcnt = rcnt-4;
+   wire          rtrig0 = (rcnt[l2r-1:0] == 1);
+   wire          wtrig0 = rtrig1;
+   wire          wtrig1 = wcnt[0];
+   wire [raw-1:0] wreg = wtrig1 ? i_wreg1 : i_wreg0;
 
-   wire [CMSB:0] 	     wcnt;
-
-   reg [width-1:0]   wdata0_r;
-   reg [width+W-1:0]   wdata1_r;
-
-   reg 		     wen0_r;
-   reg 		     wen1_r;
-   wire 	     wtrig0;
-   wire 	     wtrig1;
-
-   assign wtrig0 = rtrig1;
-
-   generate if (ratio == 2) begin : gen_wtrig_ratio_eq_2
-      assign wtrig1 =  wcnt[0];
-   end else begin : gen_wtrig_ratio_neq_2
-      reg wtrig0_r;
-      always @(posedge i_clk) wtrig0_r <= wtrig0;
-      assign wtrig1 = wtrig0_r;
-   end
-   endgenerate
-
-   assign 	     o_wdata = wtrig1 ?
-			       wdata1_r[width-1:0] :
-			       wdata0_r;
-
-   wire [raw-1:0] wreg  = wtrig1 ? i_wreg1 : i_wreg0;
-   generate if (width == 32) begin : gen_w_eq_32
-      assign o_waddr = wreg;
-   end else begin : gen_w_neq_32
-      assign o_waddr = {wreg, wcnt[CMSB:l2r]};
-   end
-   endgenerate
-
+   assign o_wdata = wtrig1 ? wdata1_r[width-1:0] : wdata0_r;
+   assign o_waddr = {wreg, wcnt[CMSB:l2r]};
    assign o_wen = (wtrig0 & wen0_r) | (wtrig1 & wen1_r);
 
-   assign wcnt = rcnt-4;
+   reg        prefetch_active;
+   reg        pending_read;
+   reg [5:0]  issue_idx;
+   reg        prev_valid;
+   reg        prev_sel;
+   reg [3:0]  prev_chunk;
+   reg [raw-1:0] prev_reg;
+   reg [raw-1:0] rreg0_q;
+   reg [raw-1:0] rreg1_q;
+
+   wire [3:0] issue_chunk = issue_idx[4:1];
+   wire       issue_sel   = issue_idx[0];
+   wire [raw-1:0] issue_reg = issue_sel ? rreg1_q : rreg0_q;
 
    always @(posedge i_clk) begin
+      ready_pulse <= 1'b0;
+      o_ren <= 1'b0;
+
+      if (stream_pending) begin
+         stream_pending <= 1'b0;
+         stream_active <= 1'b1;
+         stream_cnt <= 6'd0;
+      end
+
       if (wcnt[0]) begin
-	 wen0_r    <= i_wen0;
-	 wen1_r    <= i_wen1;
+         wen0_r <= i_wen0;
+         wen1_r <= i_wen1;
       end
 
-      wdata0_r  <= {i_wdata0,wdata0_r[width-1:W]};
-      wdata1_r  <= {i_wdata1,wdata1_r[width+W-1:W]};
-
-   end
-
-   /*
-    ********** Read side ***********
-    */
-
-
-   wire 	  rtrig0;
-
-   wire [raw-1:0] rreg = rtrig0 ? i_rreg1 : i_rreg0;
-   generate if (width == 32) begin : gen_rreg_eq_32
-      assign o_raddr = rreg;
-   end else begin : gen_rreg_neq_32
-      assign o_raddr = {rreg, rcnt[CMSB:l2r]};
-   end
-   endgenerate
-
-   reg [width-1:0]  rdata0;
-   reg [width-1-W:0]  rdata1;
-
-   reg 		    rgate;
-
-   assign o_rdata0 = rdata0[B:0];
-   assign o_rdata1 = rtrig1 ? i_rdata[B:0] : rdata1[B:0];
-
-   assign rtrig0 = (rcnt[l2r-1:0] == 1);
-
-   generate if (ratio == 2) begin : gen_ren_w_eq_2
-      assign o_ren = rgate;
-   end else begin : gen_ren_w_neq_2
-      assign o_ren = rgate & (rcnt[l2r-1:1] == 0);
-   end
-   endgenerate
-
-   reg 	      rreq_r;
-
-   generate if (ratio > 2) begin : gen_rdata1_w_neq_2
-      always @(posedge i_clk) begin
-	 rdata1 <= {{W{1'b0}},rdata1[width-W-1:W]};
-	 if (rtrig1)
-	   rdata1[width-W-1:0] <= i_rdata[width-1:W];
-      end
-   end else begin : gen_rdata1_w_eq_2
-      always @(posedge i_clk) if (rtrig1) rdata1 <= i_rdata[W*2-1:W];
-   end
-   endgenerate
-
-   always @(posedge i_clk) begin
-      if (&rcnt | i_rreq)
-	rgate <= i_rreq;
+      wdata0_r <= {i_wdata0, wdata0_r[width-1:W]};
+      wdata1_r <= {i_wdata1, wdata1_r[width+W-1:W]};
 
       rtrig1 <= rtrig0;
-      rcnt <= rcnt+{{CMSB{1'b0}},1'b1};
+      rcnt <= rcnt + {{CMSB{1'b0}}, 1'b1};
       if (i_rreq | i_wreq)
-	 rcnt <= {{CMSB-1{1'b0}},i_wreq,1'b0};
+         rcnt <= {{CMSB-1{1'b0}}, i_wreq, 1'b0};
 
-      rreq_r <= i_rreq;
-      rgnt <= rreq_r;
+      if (i_wreq)
+         write_wait <= 6'd40;
+      else if (write_wait != 6'd0)
+         write_wait <= write_wait - 6'd1;
 
-      rdata0 <= {{W{1'b0}}, rdata0[width-1:W]};
-      if (rtrig0)
-	rdata0 <= i_rdata;
+      if (i_rreq) begin
+         pending_read <= 1'b1;
+         rreg0_q <= i_rreg0;
+         rreg1_q <= i_rreg1;
+      end
+
+      if (!prefetch_active && (write_wait == 6'd0) && pending_read) begin
+         prefetch_active <= 1'b1;
+         pending_read <= 1'b0;
+         issue_idx <= 6'd0;
+         prev_valid <= 1'b0;
+      end else if (prefetch_active) begin
+         if (prev_valid) begin
+            if (prev_sel)
+               read_buf1[{prev_chunk, 1'b0} +: 2] <= (prev_reg == {raw{1'b0}}) ? {width{1'b0}} : i_rdata;
+            else
+               read_buf0[{prev_chunk, 1'b0} +: 2] <= (prev_reg == {raw{1'b0}}) ? {width{1'b0}} : i_rdata;
+         end
+
+         if (issue_idx < 6'd32) begin
+            o_ren <= 1'b1;
+            o_raddr <= {issue_reg, issue_chunk};
+            prev_valid <= 1'b1;
+            prev_sel <= issue_sel;
+            prev_chunk <= issue_chunk;
+            prev_reg <= issue_reg;
+            issue_idx <= issue_idx + 6'd1;
+         end else begin
+            prev_valid <= 1'b0;
+            prefetch_active <= 1'b0;
+            ready_pulse <= 1'b1;
+            stream_pending <= 1'b1;
+         end
+      end
+
+      if (stream_active) begin
+         stream_cnt <= stream_cnt + 6'd1;
+         if (stream_cnt == 6'd31)
+            stream_active <= 1'b0;
+      end
 
       if (i_rst) begin
-	 if (reset_strategy != "NONE") begin
-	    rgate <= 1'b0;
-	    rgnt <= 1'b0;
-	    rreq_r <= 1'b0;
-	    rcnt <= {CMSB+1{1'b0}};
-	 end
+         if (reset_strategy != "NONE") begin
+            ready_pulse <= 1'b0;
+            o_raddr <= {aw{1'b0}};
+            o_ren <= 1'b0;
+            read_buf0 <= 32'b0;
+            read_buf1 <= 32'b0;
+            rcnt <= {CMSB+1{1'b0}};
+            rtrig1 <= 1'b0;
+            wdata0_r <= {width{1'b0}};
+            wdata1_r <= {(width+W){1'b0}};
+            wen0_r <= 1'b0;
+            wen1_r <= 1'b0;
+            write_wait <= 6'b0;
+            prefetch_active <= 1'b0;
+            pending_read <= 1'b0;
+            issue_idx <= 6'b0;
+            prev_valid <= 1'b0;
+            stream_pending <= 1'b0;
+            stream_active <= 1'b0;
+            stream_cnt <= 6'b0;
+            rreg0_q <= {raw{1'b0}};
+            rreg1_q <= {raw{1'b0}};
+            prev_reg <= {raw{1'b0}};
+         end
       end
    end
 
-
-
 endmodule
+`default_nettype wire
