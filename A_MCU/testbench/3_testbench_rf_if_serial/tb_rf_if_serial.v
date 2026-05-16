@@ -65,6 +65,7 @@ module tb_rf_if_serial();
       .i_wen1(i_wen1),
       .i_wdata0(i_wdata0),
       .i_wdata1(i_wdata1),
+      .i_wdata0_next(1'b0),
       .i_rreg0(i_rreg0),
       .i_rreg1(i_rreg1),
       .o_rdata0(o_rdata0),

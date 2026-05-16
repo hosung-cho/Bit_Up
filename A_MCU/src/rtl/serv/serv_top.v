@@ -54,6 +54,7 @@ module serv_top
    output wire 		      o_wen1,
    output wire [B:0] o_wdata0,
    output wire [B:0] o_wdata1,
+   output wire       o_rd_alu_en,
    output wire [4+WITH_CSR:0] o_rreg0,
    output wire [4+WITH_CSR:0] o_rreg1,
    input wire  [B:0] i_rdata0,
@@ -105,6 +106,8 @@ module serv_top
    wire [B:0]    mem_rd;
    wire [B:0]    csr_rd;
    wire 	 mtval_pc;
+
+   assign o_rd_alu_en = rd_alu_en;
 
    wire          ctrl_pc_en;
    wire          jump;

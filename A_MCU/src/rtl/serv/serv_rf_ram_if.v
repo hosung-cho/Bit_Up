@@ -27,6 +27,7 @@ module serv_rf_ram_if
    input wire		   i_wen1,
    input wire [B:0]	   i_wdata0,
    input wire [B:0]	   i_wdata1,
+   input wire		   i_wdata0_next,
    input wire [raw-1:0]	   i_rreg0,
    input wire [raw-1:0]	   i_rreg1,
    output wire [B:0]	   o_rdata0,
@@ -71,7 +72,12 @@ module serv_rf_ram_if
    wire [raw-1:0] wreg = wtrig1 ? i_wreg1 : i_wreg0;
    wire [3:0]     wchunk = wcnt[CMSB:l2r];
 
-   assign o_wdata = wtrig1 ? wdata1_r[width-1:0] : wdata0_r;
+   // ALU writeback is phase-aligned one cycle later than memory writeback in
+   // this off-chip RF path, so port 0 can select the next packed shift value.
+   wire [width-1:0] wdata0_next = {i_wdata0, wdata0_r[width-1:W]};
+
+   assign o_wdata = wtrig1 ? wdata1_r[width-1:0] :
+                    i_wdata0_next ? wdata0_next : wdata0_r;
    assign o_waddr = {wreg, wchunk};
    assign o_wen = (wtrig0 & wen0_r) | (wtrig1 & wen1_r);
 
