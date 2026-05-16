@@ -60,7 +60,7 @@ module serv_rf_ram_if
    reg [width+W-1:0] wdata1_r;
    reg          wen0_r;
    reg          wen1_r;
-   reg [5:0]    write_wait;
+   reg [7:0]    write_wait;
 
    wire [CMSB:0] wcnt = rcnt-4;
    wire          rtrig0 = (rcnt[l2r-1:0] == 1);
@@ -110,8 +110,8 @@ module serv_rf_ram_if
          rcnt <= {{CMSB-1{1'b0}}, i_wreq, 1'b0};
 
       if (i_wreq)
-         write_wait <= 6'd40;
-      else if (write_wait != 6'd0)
+         write_wait <= 8'd63;
+      else if (write_wait != 8'd0)
          write_wait <= write_wait - 6'd1;
 
       if (i_rreq) begin
@@ -120,7 +120,7 @@ module serv_rf_ram_if
          rreg1_q <= i_rreg1;
       end
 
-      if (!prefetch_active && (write_wait == 6'd0) && pending_read) begin
+      if (!prefetch_active && (write_wait == 8'd0) && pending_read) begin
          prefetch_active <= 1'b1;
          pending_read <= 1'b0;
          issue_idx <= 6'd0;
@@ -168,7 +168,7 @@ module serv_rf_ram_if
             wdata1_r <= {(width+W){1'b0}};
             wen0_r <= 1'b0;
             wen1_r <= 1'b0;
-            write_wait <= 6'b0;
+            write_wait <= 8'b0;
             prefetch_active <= 1'b0;
             pending_read <= 1'b0;
             issue_idx <= 6'b0;

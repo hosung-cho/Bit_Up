@@ -14,6 +14,12 @@ module my_mcu_top #(
     output wire o_rf_mosi,
     input  wire i_rf_miso,
 
+    // External instruction/data memory bridge (Pico 통신용)
+    output wire o_mem_sync,
+    output wire o_mem_sck,
+    output wire o_mem_mosi,
+    input  wire i_mem_miso,
+
     // UART
     output wire o_uart_tx,
     input  wire i_uart_rx
@@ -68,6 +74,10 @@ module my_mcu_top #(
     // 4. RF 인터페이스 신호
     wire        rf_wreq, rf_rreq, rf_ready;
     wire [4+WITH_CSR:0] wreg0, wreg1, rreg0, rreg1;
+    reg  [4+WITH_CSR:0] rf_read_reg0;
+    reg  [4+WITH_CSR:0] rf_read_reg1;
+    wire [4+WITH_CSR:0] rf_read_reg0_to_if;
+    wire [4+WITH_CSR:0] rf_read_reg1_to_if;
     wire        wen0, wen1;
     wire [W-1:0] wdata0, wdata1;
     wire [W-1:0] rdata0, rdata1;
@@ -78,6 +88,22 @@ module my_mcu_top #(
     wire [$clog2(RF_DEPTH)-1:0] raddr;
     wire                ren;
     wire [RF_WIDTH-1:0] rdata;
+
+    always @(posedge clk_sys) begin
+        if (rst) begin
+            rf_read_reg0 <= {1'b0, 5'd0};
+            rf_read_reg1 <= {1'b0, 5'd0};
+        end else if (wb_ibus_ack) begin
+            rf_read_reg0 <= {1'b0, wb_ibus_rdt[19:15]};
+            rf_read_reg1 <= {1'b0, wb_ibus_rdt[24:20]};
+        end else if (rf_rreq) begin
+            rf_read_reg0 <= rreg0;
+            rf_read_reg1 <= rreg1;
+        end
+    end
+
+    assign rf_read_reg0_to_if = wb_ibus_ack ? {1'b0, wb_ibus_rdt[19:15]} : rf_read_reg0;
+    assign rf_read_reg1_to_if = wb_ibus_ack ? {1'b0, wb_ibus_rdt[24:20]} : rf_read_reg1;
 
     // 5. SERV 코어 (RF 직접 연결)
     serv_top #(
@@ -136,8 +162,8 @@ module my_mcu_top #(
         .i_wen1(wen1),
         .i_wdata0(wdata0),
         .i_wdata1(wdata1),
-        .i_rreg0(rreg0),
-        .i_rreg1(rreg1),
+        .i_rreg0(rf_read_reg0_to_if),
+        .i_rreg1(rf_read_reg1_to_if),
         .o_rdata0(rdata0),
         .o_rdata1(rdata1),
         .o_waddr(waddr),
@@ -173,8 +199,8 @@ module my_mcu_top #(
     // -----------------------------------------------------------------
     // CPU가 내보내는 주소(wb_dbus_adr)를 보고 누구를 깨울지 결정합니다.
     
-    wire sel_mem  = (wb_dbus_adr[31:28] == 4'h0); // 0x0000_XXXX : 피코 메모리
-    wire sel_peri = (wb_dbus_adr[31:28] == 4'h4); // 0x4000_XXXX : 주변장치 영역
+    wire sel_mem  = wb_dbus_cyc && (wb_dbus_adr[31:28] === 4'h0); // 0x0000_XXXX : 피코 메모리
+    wire sel_peri = wb_dbus_cyc && (wb_dbus_adr[31:28] === 4'h4); // 0x4000_XXXX : 주변장치 영역
     
     wire sel_uart = sel_peri && (wb_dbus_adr[11:8] == 4'h0); // 0x4000_00XX
     wire sel_gpio = sel_peri && (wb_dbus_adr[11:8] == 4'h1); // 0x4000_01XX
@@ -182,17 +208,65 @@ module my_mcu_top #(
     // -----------------------------------------------------------------
     // 8. 주변장치 더미 연결 (UART 등)
     // -----------------------------------------------------------------
-    wire [31:0] uart_rdt;
-    wire        uart_ack;
+    wire [31:0] mem_ibus_rdt;
+    wire        mem_ibus_ack;
+    wire [31:0] mem_dbus_rdt;
+    wire        mem_dbus_ack;
+    reg  [31:0] last_load_data;
+    reg         last_load_valid;
+
+    always @(posedge clk_sys) begin
+        if (rst) begin
+            last_load_data <= 32'h0000_0000;
+            last_load_valid <= 1'b0;
+        end else if (mem_dbus_ack && !wb_dbus_we) begin
+            last_load_data <= mem_dbus_rdt;
+            last_load_valid <= 1'b1;
+        end
+    end
+
+    wire [31:0] mem_dbus_dat =
+        (wb_dbus_we && last_load_valid && (wb_dbus_dat == 32'h0000_0000)) ?
+        last_load_data : wb_dbus_dat;
+
+    offchip_mem_bridge u_mem_serial (
+        .i_clk_fast(i_clk_fast),
+        .i_clk_sys(clk_sys),
+        .i_rst((!i_rst_n) || rst),
+
+        .i_ibus_cyc(wb_ibus_cyc),
+        .i_ibus_adr(wb_ibus_adr),
+        .o_ibus_rdt(mem_ibus_rdt),
+        .o_ibus_ack(mem_ibus_ack),
+
+        .i_dbus_cyc(wb_dbus_cyc && sel_mem),
+        .i_dbus_adr(wb_dbus_adr),
+        .i_dbus_dat(mem_dbus_dat),
+        .i_dbus_sel(wb_dbus_sel),
+        .i_dbus_we(wb_dbus_we),
+        .o_dbus_rdt(mem_dbus_rdt),
+        .o_dbus_ack(mem_dbus_ack),
+
+        .o_mem_sync(o_mem_sync),
+        .o_mem_sck(o_mem_sck),
+        .o_mem_mosi(o_mem_mosi),
+        .i_mem_miso(i_mem_miso)
+    );
+
+    assign wb_ibus_rdt = mem_ibus_rdt;
+    assign wb_ibus_ack = mem_ibus_ack;
+
+    wire [31:0] uart_rdt = 32'h0000_0000;
+    wire        uart_ack = wb_dbus_cyc && sel_uart;
+
+    assign o_uart_tx = 1'b1;
 
     // 데이터 버스 MUX (선택된 장치의 응답을 CPU로 전달)
-    assign wb_dbus_rdt = sel_uart ? uart_rdt :
-                         sel_mem  ? 32'h0000_0000 : // TODO: 메모리 브리지 연결
+    assign wb_dbus_rdt = mem_dbus_ack ? mem_dbus_rdt :
+                         uart_ack     ? uart_rdt :
                          32'h0000_0000;
                          
-    assign wb_dbus_ack = sel_uart ? uart_ack :
-                         sel_mem  ? 1'b0 : // TODO: 메모리 브리지 연결
-                         1'b0;
+    assign wb_dbus_ack = mem_dbus_ack | uart_ack;
 
     // TODO: 여기에 UART 모듈 인스턴스화
 
