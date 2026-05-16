@@ -22,7 +22,12 @@ module my_mcu_top #(
 
     // UART
     output wire o_uart_tx,
-    input  wire i_uart_rx
+    input  wire i_uart_rx,
+
+    // GPIO
+    input  wire [7:0] i_gpio,
+    output wire [7:0] o_gpio,
+    output wire [7:0] o_gpio_oe
     
     // (SPI, GPIO 핀 등은 생략 - 필요시 추가)
 );
@@ -212,22 +217,6 @@ module my_mcu_top #(
     wire        mem_ibus_ack;
     wire [31:0] mem_dbus_rdt;
     wire        mem_dbus_ack;
-    reg  [31:0] last_load_data;
-    reg         last_load_valid;
-
-    always @(posedge clk_sys) begin
-        if (rst) begin
-            last_load_data <= 32'h0000_0000;
-            last_load_valid <= 1'b0;
-        end else if (mem_dbus_ack && !wb_dbus_we) begin
-            last_load_data <= mem_dbus_rdt;
-            last_load_valid <= 1'b1;
-        end
-    end
-
-    wire [31:0] mem_dbus_dat =
-        (wb_dbus_we && last_load_valid && (wb_dbus_dat == 32'h0000_0000)) ?
-        last_load_data : wb_dbus_dat;
 
     offchip_mem_bridge u_mem_serial (
         .i_clk_fast(i_clk_fast),
@@ -241,7 +230,7 @@ module my_mcu_top #(
 
         .i_dbus_cyc(wb_dbus_cyc && sel_mem),
         .i_dbus_adr(wb_dbus_adr),
-        .i_dbus_dat(mem_dbus_dat),
+        .i_dbus_dat(wb_dbus_dat),
         .i_dbus_sel(wb_dbus_sel),
         .i_dbus_we(wb_dbus_we),
         .o_dbus_rdt(mem_dbus_rdt),
@@ -258,15 +247,33 @@ module my_mcu_top #(
 
     wire [31:0] uart_rdt = 32'h0000_0000;
     wire        uart_ack = wb_dbus_cyc && sel_uart;
+    wire [31:0] gpio_rdt;
+    wire        gpio_ack;
 
     assign o_uart_tx = 1'b1;
+
+    simple_gpio u_gpio (
+        .i_clk(clk_sys),
+        .i_rst(rst),
+        .i_cyc(wb_dbus_cyc && sel_gpio),
+        .i_we(wb_dbus_we),
+        .i_sel(wb_dbus_sel),
+        .i_adr(wb_dbus_adr[3:0]),
+        .i_dat(wb_dbus_dat),
+        .o_rdt(gpio_rdt),
+        .o_ack(gpio_ack),
+        .i_gpio(i_gpio),
+        .o_gpio(o_gpio),
+        .o_gpio_oe(o_gpio_oe)
+    );
 
     // 데이터 버스 MUX (선택된 장치의 응답을 CPU로 전달)
     assign wb_dbus_rdt = mem_dbus_ack ? mem_dbus_rdt :
                          uart_ack     ? uart_rdt :
+                         gpio_ack     ? gpio_rdt :
                          32'h0000_0000;
                          
-    assign wb_dbus_ack = mem_dbus_ack | uart_ack;
+    assign wb_dbus_ack = mem_dbus_ack | uart_ack | gpio_ack;
 
     // TODO: 여기에 UART 모듈 인스턴스화
 

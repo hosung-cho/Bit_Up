@@ -61,15 +61,18 @@ module serv_rf_ram_if
    reg          wen0_r;
    reg          wen1_r;
    reg [7:0]    write_wait;
+   reg [31:0]   bypass_ram [0:32+csr_regs-1];
+   reg          bypass_valid [0:32+csr_regs-1];
 
    wire [CMSB:0] wcnt = rcnt-4;
    wire          rtrig0 = (rcnt[l2r-1:0] == 1);
    wire          wtrig0 = rtrig1;
    wire          wtrig1 = wcnt[0];
    wire [raw-1:0] wreg = wtrig1 ? i_wreg1 : i_wreg0;
+   wire [3:0]     wchunk = wcnt[CMSB:l2r];
 
    assign o_wdata = wtrig1 ? wdata1_r[width-1:0] : wdata0_r;
-   assign o_waddr = {wreg, wcnt[CMSB:l2r]};
+   assign o_waddr = {wreg, wchunk};
    assign o_wen = (wtrig0 & wen0_r) | (wtrig1 & wen1_r);
 
    reg        prefetch_active;
@@ -85,6 +88,10 @@ module serv_rf_ram_if
    wire [3:0] issue_chunk = issue_idx[4:1];
    wire       issue_sel   = issue_idx[0];
    wire [raw-1:0] issue_reg = issue_sel ? rreg1_q : rreg0_q;
+   wire       prev_bypass_valid = bypass_valid[prev_reg];
+   wire [width-1:0] prev_bypass_data = bypass_ram[prev_reg][{prev_chunk, 1'b0} +: 2];
+
+   integer init_idx;
 
    always @(posedge i_clk) begin
       ready_pulse <= 1'b0;
@@ -114,6 +121,11 @@ module serv_rf_ram_if
       else if (write_wait != 8'd0)
          write_wait <= write_wait - 6'd1;
 
+      if (o_wen && (wreg != {raw{1'b0}})) begin
+         bypass_ram[wreg][{wchunk, 1'b0} +: 2] <= o_wdata;
+         bypass_valid[wreg] <= 1'b1;
+      end
+
       if (i_rreq) begin
          pending_read <= 1'b1;
          rreg0_q <= i_rreg0;
@@ -128,9 +140,13 @@ module serv_rf_ram_if
       end else if (prefetch_active) begin
          if (prev_valid) begin
             if (prev_sel)
-               read_buf1[{prev_chunk, 1'b0} +: 2] <= (prev_reg == {raw{1'b0}}) ? {width{1'b0}} : i_rdata;
+               read_buf1[{prev_chunk, 1'b0} +: 2] <=
+                  (prev_reg == {raw{1'b0}}) ? {width{1'b0}} :
+                  prev_bypass_valid ? prev_bypass_data : i_rdata;
             else
-               read_buf0[{prev_chunk, 1'b0} +: 2] <= (prev_reg == {raw{1'b0}}) ? {width{1'b0}} : i_rdata;
+               read_buf0[{prev_chunk, 1'b0} +: 2] <=
+                  (prev_reg == {raw{1'b0}}) ? {width{1'b0}} :
+                  prev_bypass_valid ? prev_bypass_data : i_rdata;
          end
 
          if (issue_idx < 6'd32) begin
@@ -179,6 +195,10 @@ module serv_rf_ram_if
             rreg0_q <= {raw{1'b0}};
             rreg1_q <= {raw{1'b0}};
             prev_reg <= {raw{1'b0}};
+            for (init_idx = 0; init_idx < 32+csr_regs; init_idx = init_idx + 1) begin
+               bypass_ram[init_idx] <= 32'b0;
+               bypass_valid[init_idx] <= 1'b0;
+            end
          end
       end
    end

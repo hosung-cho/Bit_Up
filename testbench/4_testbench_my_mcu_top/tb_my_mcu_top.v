@@ -14,6 +14,9 @@ module tb_my_mcu_top;
    wire mem_sck;
    wire mem_mosi;
    wire mem_miso;
+   reg [7:0] gpio_in = 8'ha5;
+   wire [7:0] gpio_out;
+   wire [7:0] gpio_oe;
 
    my_mcu_top dut (
       .i_clk_fast(clk_fast),
@@ -27,7 +30,10 @@ module tb_my_mcu_top;
       .o_mem_mosi(mem_mosi),
       .i_mem_miso(mem_miso),
       .o_uart_tx(),
-      .i_uart_rx(1'b1)
+      .i_uart_rx(1'b1),
+      .i_gpio(gpio_in),
+      .o_gpio(gpio_out),
+      .o_gpio_oe(gpio_oe)
    );
 
    initial begin
@@ -36,7 +42,7 @@ module tb_my_mcu_top;
       rst_n = 1;
    end
 
-   reg [31:0] pico_ram [0:15];
+   reg [31:0] pico_ram [0:31];
    reg [12:0] rx_buffer = 0;
    integer bit_cnt = 0;
    reg [1:0] pico_tx_data = 0;
@@ -167,7 +173,7 @@ module tb_my_mcu_top;
    end
 
    initial begin
-      for (i = 0; i < 16; i = i + 1)
+      for (i = 0; i < 32; i = i + 1)
          pico_ram[i] = 32'h0;
       for (i = 0; i < 256; i = i + 1)
          ext_mem[i] = 32'h00000013;
@@ -175,20 +181,42 @@ module tb_my_mcu_top;
       ext_mem[0] = 32'h00300513;  // addi x10, x0, 3
       ext_mem[1] = 32'h00450593;  // addi x11, x10, 4
       ext_mem[2] = 32'h10002603;  // lw   x12, 0x100(x0)
-      ext_mem[3] = 32'h00000013;  // nop
-      ext_mem[4] = 32'h00000013;  // nop
-      ext_mem[5] = 32'h00000013;  // nop
-      ext_mem[6] = 32'h00000013;  // nop
-      ext_mem[7] = 32'h00000013;  // nop
-      ext_mem[8] = 32'h00000013;  // nop
-      ext_mem[9] = 32'h00000013;  // nop
-      ext_mem[10] = 32'h00000013; // nop
-      ext_mem[11] = 32'h00000013; // nop
+      ext_mem[3] = 32'h10c00683;  // lb   x13, 0x10c(x0)
+      ext_mem[4] = 32'h10c04703;  // lbu  x14, 0x10c(x0)
+      ext_mem[5] = 32'h10c01783;  // lh   x15, 0x10c(x0)
+      ext_mem[6] = 32'h10c05803;  // lhu  x16, 0x10c(x0)
+      ext_mem[7] = 32'h10c02223;  // sw   x12, 0x104(x0)
+      ext_mem[8] = 32'h10002423;  // sw   x0,  0x108(x0)
+      ext_mem[9] = 32'h10e00823;  // sb   x14, 0x110(x0)
+      ext_mem[10] = 32'h11001a23; // sh   x16, 0x114(x0)
+      ext_mem[11] = 32'h11802883; // lw   x17, 0x118(x0)  GPIO base
       ext_mem[12] = 32'h00000013; // nop
       ext_mem[13] = 32'h00000013; // nop
-      ext_mem[14] = 32'h10c02223; // sw   x12, 0x104(x0)
-      ext_mem[15] = 32'h0000006f; // jal  x0, 0
+      ext_mem[14] = 32'h00000013; // nop
+      ext_mem[15] = 32'h00000013; // nop
+      ext_mem[16] = 32'h11c02903; // lw   x18, 0x11c(x0) GPIO DATA_OUT value
+      ext_mem[17] = 32'h00000013; // nop
+      ext_mem[18] = 32'h00000013; // nop
+      ext_mem[19] = 32'h00000013; // nop
+      ext_mem[20] = 32'h00000013; // nop
+      ext_mem[21] = 32'h0128a023; // sw   x18, 0x0(x17)  GPIO DATA_OUT
+      ext_mem[22] = 32'h0008a983; // lw   x19, 0x0(x17)  GPIO DATA_OUT
+      ext_mem[23] = 32'h12002903; // lw   x18, 0x120(x0) GPIO OE value
+      ext_mem[24] = 32'h00000013; // nop
+      ext_mem[25] = 32'h00000013; // nop
+      ext_mem[26] = 32'h00000013; // nop
+      ext_mem[27] = 32'h00000013; // nop
+      ext_mem[28] = 32'h0128a423; // sw   x18, 0x8(x17)  GPIO OE
+      ext_mem[29] = 32'h0048aa03; // lw   x20, 0x4(x17)  GPIO DATA_IN
+      ext_mem[30] = 32'h0000006f; // jal  x0, 0
       ext_mem[8'h40] = 32'h00000003;
+      ext_mem[8'h42] = 32'hdeadbeef;
+      ext_mem[8'h43] = 32'h123480ff;
+      ext_mem[8'h44] = 32'haaaa5555;
+      ext_mem[8'h45] = 32'h12345678;
+      ext_mem[8'h46] = 32'h40000100;
+      ext_mem[8'h47] = 32'h0000005a;
+      ext_mem[8'h48] = 32'h000000ff;
 
       #10000000;
       if (frame_cnt == 0)
@@ -205,7 +233,15 @@ module tb_my_mcu_top;
       $display("RF control = wreq=%0d wen0=%0d wen1=%0d",
                rf_wreq_cnt, wen0_cnt, wen1_cnt);
       $display("RF adapter = ram_wen=%0d", rf_ram_wen_cnt);
+      expect_reg(5'd10, 32'h00000003);
+      expect_reg(5'd11, 32'h00000007);
       expect_reg(5'd12, 32'h00000003);
+      expect_reg(5'd13, 32'hffffffff);
+      expect_reg(5'd14, 32'h000000ff);
+      expect_reg(5'd15, 32'hffff80ff);
+      expect_reg(5'd16, 32'h000080ff);
+      expect_reg(5'd19, 32'h0000005a);
+      expect_reg(5'd20, 32'h000000a5);
 
       if (ext_mem[8'h40] !== 32'h00000003) begin
          error_cnt = error_cnt + 1;
@@ -219,6 +255,41 @@ module tb_my_mcu_top;
          $display("[FAIL] memory[0x104]=%h expected=00000003", ext_mem[8'h41]);
       end else begin
          $display("[PASS] memory[0x104] = %h", ext_mem[8'h41]);
+      end
+
+      if (ext_mem[8'h42] !== 32'h00000000) begin
+         error_cnt = error_cnt + 1;
+         $display("[FAIL] memory[0x108]=%h expected=00000000", ext_mem[8'h42]);
+      end else begin
+         $display("[PASS] memory[0x108] = %h", ext_mem[8'h42]);
+      end
+
+      if (ext_mem[8'h44] !== 32'haaaa55ff) begin
+         error_cnt = error_cnt + 1;
+         $display("[FAIL] memory[0x110]=%h expected=aaaa55ff", ext_mem[8'h44]);
+      end else begin
+         $display("[PASS] memory[0x110] = %h", ext_mem[8'h44]);
+      end
+
+      if (ext_mem[8'h45] !== 32'h123480ff) begin
+         error_cnt = error_cnt + 1;
+         $display("[FAIL] memory[0x114]=%h expected=123480ff", ext_mem[8'h45]);
+      end else begin
+         $display("[PASS] memory[0x114] = %h", ext_mem[8'h45]);
+      end
+
+      if (gpio_out !== 8'h5a) begin
+         error_cnt = error_cnt + 1;
+         $display("[FAIL] gpio_out=%h expected=5a", gpio_out);
+      end else begin
+         $display("[PASS] gpio_out = %h", gpio_out);
+      end
+
+      if (gpio_oe !== 8'hff) begin
+         error_cnt = error_cnt + 1;
+         $display("[FAIL] gpio_oe=%h expected=ff", gpio_oe);
+      end else begin
+         $display("[PASS] gpio_oe = %h", gpio_oe);
       end
 
       if (error_cnt == 0)
