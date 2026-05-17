@@ -5,6 +5,10 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
 echo "Vivado Tcl Batch mode simulation starts..."
+export PROGRAM_HEX="${PROGRAM_HEX:-$SCRIPT_DIR/generated/program.hex}"
+export EXPECTED_HEX="${EXPECTED_HEX:-$SCRIPT_DIR/generated/expected_mem.hex}"
+export EXPECTED_VALID_HEX="${EXPECTED_VALID_HEX:-$SCRIPT_DIR/generated/expected_valid.hex}"
+
 vivado -mode batch -source run_sim.tcl -notrace
 
 echo
