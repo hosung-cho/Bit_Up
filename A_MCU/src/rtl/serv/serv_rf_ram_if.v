@@ -62,15 +62,7 @@ module serv_rf_ram_if
    reg          wen0_r;
    reg          wen1_r;
    reg [3:0]    write_chunk;
-   reg [6:0]    write_wait;
-   // Area-first MPW path:
-   // Do not keep a full on-chip RF bypass/cache copy. Keep only the most
-   // recent writeback so short RAW hazards do not depend on serial
-   // off-chip RF commit latency.
-   reg [raw-1:0] fw_reg0;
-   reg [31:0]    fw_data0;
-   reg           fw_valid;
-
+   reg [5:0]    write_wait;
    wire [CMSB:0] rcnt_eff = (i_rreq | i_wreq) ? {{CMSB-1{1'b0}}, i_wreq, 1'b0} : rcnt;
    wire [CMSB:0] wcnt = rcnt_eff-4;
    wire          rtrig0 = (rcnt_eff[l2r-1:0] == 1);
@@ -93,32 +85,15 @@ module serv_rf_ram_if
    reg        prefetch_active;
    reg        pending_read;
    reg [5:0]  issue_idx;
-   reg        prev_valid;
-   reg        prev_sel;
-   reg [3:0]  prev_chunk;
-   reg [raw-1:0] prev_reg;
-   reg [raw-1:0] rreg0_q;
-   reg [raw-1:0] rreg1_q;
 
    wire [3:0] issue_chunk = issue_idx[4:1];
    wire       issue_sel   = issue_idx[0];
-   wire [raw-1:0] issue_reg = issue_sel ? rreg1_q : rreg0_q;
-
-   wire fw_wr_hit = fw_valid && (fw_reg0 == wreg);
-   wire fw_rd_hit = fw_valid && (fw_reg0 == prev_reg);
-   wire [width-1:0] fw_rd_data = fw_data0[{prev_chunk, 1'b0} +: width];
-
-   function [31:0] set_chunk;
-      input [31:0] data;
-      input [3:0] chunk;
-      input [width-1:0] chunk_data;
-      reg [31:0] tmp;
-      begin
-         tmp = data;
-         tmp[{chunk, 1'b0} +: width] = chunk_data;
-         set_chunk = tmp;
-      end
-   endfunction
+   wire [raw-1:0] issue_reg = issue_sel ? i_rreg1 : i_rreg0;
+   wire       prev_valid = prefetch_active && (issue_idx != 6'd0);
+   wire [4:0] prev_issue_idx = issue_idx[4:0] - 5'd1;
+   wire       prev_sel = prev_issue_idx[0];
+   wire [3:0] prev_chunk = prev_issue_idx[4:1];
+   wire [raw-1:0] prev_reg = prev_sel ? i_rreg1 : i_rreg0;
 
    always @(posedge i_clk) begin
       ready_pulse <= 1'b0;
@@ -144,9 +119,9 @@ module serv_rf_ram_if
          rcnt <= {{CMSB-1{1'b0}}, i_wreq, 1'b0};
 
       if (i_wreq) begin
-         write_wait <= 7'd95;
-      end else if (write_wait != 7'd0) begin
-         write_wait <= write_wait - 7'd1;
+         write_wait <= 6'd63;
+      end else if (write_wait != 6'd0) begin
+         write_wait <= write_wait - 6'd1;
       end
 
       if (i_wreq)
@@ -154,49 +129,29 @@ module serv_rf_ram_if
       else if (wtrig1 && (wen0_r || wen1_r))
          write_chunk <= write_chunk + 4'd1;
 
-      if (o_wen && (wreg != {raw{1'b0}})) begin
-         if (fw_wr_hit) begin
-            fw_data0 <= set_chunk(fw_data0, wchunk, o_wdata);
-         end else begin
-            fw_reg0 <= wreg;
-            fw_data0 <= set_chunk(32'b0, wchunk, o_wdata);
-            fw_valid <= 1'b1;
-         end
-      end
-
       if (i_rreq) begin
          pending_read <= 1'b1;
-         rreg0_q <= i_rreg0;
-         rreg1_q <= i_rreg1;
       end
 
-      if (!prefetch_active && (write_wait == 8'd0) && pending_read) begin
+      if (!prefetch_active && (write_wait == 6'd0) && pending_read) begin
          prefetch_active <= 1'b1;
          pending_read <= 1'b0;
          issue_idx <= 6'd0;
-         prev_valid <= 1'b0;
       end else if (prefetch_active) begin
          if (prev_valid) begin
             if (prev_sel)
                read_buf1[{prev_chunk, 1'b0} +: 2] <=
-                  (prev_reg == {raw{1'b0}}) ? {width{1'b0}} :
-                  fw_rd_hit ? fw_rd_data : i_rdata;
+                  (prev_reg == {raw{1'b0}}) ? {width{1'b0}} : i_rdata;
             else
                read_buf0[{prev_chunk, 1'b0} +: 2] <=
-                  (prev_reg == {raw{1'b0}}) ? {width{1'b0}} :
-                  fw_rd_hit ? fw_rd_data : i_rdata;
+                  (prev_reg == {raw{1'b0}}) ? {width{1'b0}} : i_rdata;
          end
 
          if (issue_idx < 6'd32) begin
             o_ren <= 1'b1;
             o_raddr <= {issue_reg, issue_chunk};
-            prev_valid <= 1'b1;
-            prev_sel <= issue_sel;
-            prev_chunk <= issue_chunk;
-            prev_reg <= issue_reg;
             issue_idx <= issue_idx + 6'd1;
          end else begin
-            prev_valid <= 1'b0;
             prefetch_active <= 1'b0;
             ready_pulse <= 1'b1;
             stream_pending <= 1'b1;
@@ -223,18 +178,13 @@ module serv_rf_ram_if
             wen0_r <= 1'b0;
             wen1_r <= 1'b0;
             write_chunk <= 4'b0;
-            write_wait <= 7'b0;
+            write_wait <= 6'b0;
             prefetch_active <= 1'b0;
             pending_read <= 1'b0;
             issue_idx <= 6'b0;
-            prev_valid <= 1'b0;
             stream_pending <= 1'b0;
             stream_active <= 1'b0;
             stream_cnt <= 5'b0;
-            rreg0_q <= {raw{1'b0}};
-            rreg1_q <= {raw{1'b0}};
-            prev_reg <= {raw{1'b0}};
-            fw_valid <= 1'b0;
          end
       end
    end
