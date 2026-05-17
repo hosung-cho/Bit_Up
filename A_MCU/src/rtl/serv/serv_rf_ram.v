@@ -20,9 +20,10 @@ module serv_rf_ram
     output wire o_ext_rf_sck,
     output wire o_ext_rf_mosi,
     input  wire i_ext_rf_miso
-    );
+   );
 
    localparam [4:0] FRAME_BITS = frame_bits;
+   localparam KEY_BITS = frame_bits - width;
 
    wire [raw-1:0] rreg = i_raddr[$clog2(depth)-1 : 4];
    wire [3:0] rbit = i_raddr[3:0];
@@ -32,27 +33,27 @@ module serv_rf_ram
    wire [raw-1:0] target_reg = i_ren ? rreg : wreg;
    wire [3:0] target_bit = i_ren ? rbit : wbit;
    wire [frame_bits-1:0] req_key = {i_wen, i_ren, target_reg, target_bit, i_wdata};
+   wire [KEY_BITS-1:0] req_seen_key = {i_wen, i_ren, target_reg, target_bit};
 
    // ----------------------------------------------------
    // 시리얼 전송 FSM
    // ----------------------------------------------------
    reg [4:0] tx_state;
-   reg [frame_bits-1:0] shift_tx;
    reg [width-1:0] shift_rx;
-   reg [frame_bits-1:0] last_req_key;
+   reg [KEY_BITS-1:0] last_req_key;
    reg        req_seen;
    reg        launch_pending;
 
    // [수정됨] SCK 위상을 반전(~i_clk_fast)하여 피코가 안정적으로 데이터를 읽게 함
    assign o_ext_rf_sck = (o_ext_rf_sync) ? ~i_clk_fast : 1'b0;
-   assign o_ext_rf_mosi = shift_tx[frame_bits-1];
+   assign o_ext_rf_mosi = o_ext_rf_sync ? req_key[tx_state - 1'b1] : 1'b0;
 
    always @(posedge i_clk_fast) begin
       if (i_rst) begin
          tx_state <= 0;
          o_ext_rf_sync <= 0;
          shift_rx <= 0;
-         last_req_key <= {frame_bits{1'b0}};
+         last_req_key <= {KEY_BITS{1'b0}};
          req_seen <= 1'b0;
          launch_pending <= 1'b0;
       end else begin
@@ -63,13 +64,12 @@ module serv_rf_ram
 
          if (tx_state == 0) begin
             if (launch_pending && (i_wen || i_ren)) begin
-               shift_tx <= req_key;
-               last_req_key <= req_key;
+               last_req_key <= req_seen_key;
                req_seen <= 1'b1;
                launch_pending <= 1'b0;
                tx_state <= FRAME_BITS;
                o_ext_rf_sync <= 1'b1;
-            end else if ((i_wen || i_ren) && (!req_seen || (req_key != last_req_key))) begin
+            end else if ((i_wen || i_ren) && (!req_seen || (req_seen_key != last_req_key))) begin
                launch_pending <= 1'b1;
             end
          end 
@@ -77,7 +77,6 @@ module serv_rf_ram
             if (tx_state == 2) shift_rx[1] <= i_ext_rf_miso;
             if (tx_state == 1) shift_rx[0] <= i_ext_rf_miso;
 
-            shift_tx <= {shift_tx[frame_bits-2:0], 1'b0};
             tx_state <= tx_state - 1;
 
             if (tx_state == 1) begin

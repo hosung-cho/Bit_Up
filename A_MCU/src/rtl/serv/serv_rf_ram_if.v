@@ -44,12 +44,12 @@ module serv_rf_ram_if
 
    reg [31:0] read_buf0;
    reg [31:0] read_buf1;
-   reg [5:0]  stream_cnt;
+   reg [4:0]  stream_cnt;
    reg        stream_pending;
    reg        stream_active;
 
-   assign o_rdata0 = stream_active ? read_buf0[stream_cnt[4:0]] : 1'b0;
-   assign o_rdata1 = stream_active ? read_buf1[stream_cnt[4:0]] : 1'b0;
+   assign o_rdata0 = stream_active ? read_buf0[stream_cnt] : 1'b0;
+   assign o_rdata1 = stream_active ? read_buf1[stream_cnt] : 1'b0;
 
    localparam ratio = width/W;
    localparam CMSB = 4-$clog2(W);
@@ -62,16 +62,14 @@ module serv_rf_ram_if
    reg          wen0_r;
    reg          wen1_r;
    reg [3:0]    write_chunk;
-   reg [7:0]    write_wait;
+   reg [6:0]    write_wait;
    // Area-first MPW path:
    // Do not keep a full on-chip RF bypass/cache copy. Keep only the most
    // recent writeback so short RAW hazards do not depend on serial
    // off-chip RF commit latency.
    reg [raw-1:0] fw_reg0;
-   reg [raw-1:0] fw_reg1;
    reg [31:0]    fw_data0;
-   reg [31:0]    fw_data1;
-   reg [1:0]     fw_valid;
+   reg           fw_valid;
 
    wire [CMSB:0] rcnt_eff = (i_rreq | i_wreq) ? {{CMSB-1{1'b0}}, i_wreq, 1'b0} : rcnt;
    wire [CMSB:0] wcnt = rcnt_eff-4;
@@ -106,14 +104,9 @@ module serv_rf_ram_if
    wire       issue_sel   = issue_idx[0];
    wire [raw-1:0] issue_reg = issue_sel ? rreg1_q : rreg0_q;
 
-   wire fw_wr_hit0 = fw_valid[0] && (fw_reg0 == wreg);
-   wire fw_wr_hit1 = fw_valid[1] && (fw_reg1 == wreg);
-   wire fw_wr_hit = fw_wr_hit0 | fw_wr_hit1;
-   wire fw_rd_hit0 = fw_valid[0] && (fw_reg0 == prev_reg);
-   wire fw_rd_hit1 = fw_valid[1] && (fw_reg1 == prev_reg);
-   wire fw_rd_hit = fw_rd_hit0 | fw_rd_hit1;
-   wire [31:0] fw_rd_data32 = fw_rd_hit0 ? fw_data0 : fw_data1;
-   wire [width-1:0] fw_rd_data = fw_rd_data32[{prev_chunk, 1'b0} +: width];
+   wire fw_wr_hit = fw_valid && (fw_reg0 == wreg);
+   wire fw_rd_hit = fw_valid && (fw_reg0 == prev_reg);
+   wire [width-1:0] fw_rd_data = fw_data0[{prev_chunk, 1'b0} +: width];
 
    function [31:0] set_chunk;
       input [31:0] data;
@@ -134,7 +127,7 @@ module serv_rf_ram_if
       if (stream_pending) begin
          stream_pending <= 1'b0;
          stream_active <= 1'b1;
-         stream_cnt <= 6'd0;
+         stream_cnt <= 5'd0;
       end
 
       if (wcnt[0]) begin
@@ -151,9 +144,9 @@ module serv_rf_ram_if
          rcnt <= {{CMSB-1{1'b0}}, i_wreq, 1'b0};
 
       if (i_wreq) begin
-         write_wait <= 8'd95;
-      end else if (write_wait != 8'd0) begin
-         write_wait <= write_wait - 6'd1;
+         write_wait <= 7'd95;
+      end else if (write_wait != 7'd0) begin
+         write_wait <= write_wait - 7'd1;
       end
 
       if (i_wreq)
@@ -162,16 +155,12 @@ module serv_rf_ram_if
          write_chunk <= write_chunk + 4'd1;
 
       if (o_wen && (wreg != {raw{1'b0}})) begin
-         if (fw_wr_hit0) begin
+         if (fw_wr_hit) begin
             fw_data0 <= set_chunk(fw_data0, wchunk, o_wdata);
-         end else if (fw_wr_hit1) begin
-            fw_data1 <= set_chunk(fw_data1, wchunk, o_wdata);
          end else begin
-            fw_reg1 <= fw_reg0;
             fw_reg0 <= wreg;
-            fw_data1 <= fw_data0;
             fw_data0 <= set_chunk(32'b0, wchunk, o_wdata);
-            fw_valid <= {fw_valid[0], 1'b1};
+            fw_valid <= 1'b1;
          end
       end
 
@@ -234,18 +223,18 @@ module serv_rf_ram_if
             wen0_r <= 1'b0;
             wen1_r <= 1'b0;
             write_chunk <= 4'b0;
-            write_wait <= 8'b0;
+            write_wait <= 7'b0;
             prefetch_active <= 1'b0;
             pending_read <= 1'b0;
             issue_idx <= 6'b0;
             prev_valid <= 1'b0;
             stream_pending <= 1'b0;
             stream_active <= 1'b0;
-            stream_cnt <= 6'b0;
+            stream_cnt <= 5'b0;
             rreg0_q <= {raw{1'b0}};
             rreg1_q <= {raw{1'b0}};
             prev_reg <= {raw{1'b0}};
-            fw_valid <= 2'b0;
+            fw_valid <= 1'b0;
          end
       end
    end

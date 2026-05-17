@@ -100,7 +100,7 @@ module my_mcu_top #(
             decode_rd_wdata0_next =
                 (opcode == 7'b0110111) ||                 // LUI
                 (opcode == 7'b0010111) ||                 // AUIPC
-                ((opcode == 7'b1110011) && (|funct3)) ||  // CSR
+                ((WITH_CSR != 0) && (opcode == 7'b1110011) && (|funct3)) ||
                 (is_alu_op && !is_shift_op && !is_compare_op);
         end
     endfunction
