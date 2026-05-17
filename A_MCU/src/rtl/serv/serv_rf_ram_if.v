@@ -63,8 +63,8 @@ module serv_rf_ram_if
    reg          wen1_r;
    reg [3:0]    write_chunk;
    reg [7:0]    write_wait;
-   reg [15:0]   bypass_ram [0:31];
-   reg [31:0]   bypass_valid;
+   reg [31:0]   bypass_ram [0:15];
+   reg [15:0]   bypass_valid;
 
    wire [CMSB:0] rcnt_eff = (i_rreq | i_wreq) ? {{CMSB-1{1'b0}}, i_wreq, 1'b0} : rcnt;
    wire [CMSB:0] wcnt = rcnt_eff-4;
@@ -98,10 +98,9 @@ module serv_rf_ram_if
    wire [3:0] issue_chunk = issue_idx[4:1];
    wire       issue_sel   = issue_idx[0];
    wire [raw-1:0] issue_reg = issue_sel ? rreg1_q : rreg0_q;
-   wire       prev_bypass_valid = (prev_reg < 6'd32) ? bypass_valid[prev_reg] : 1'b0;
-   wire [15:0] raw_bypass_data = (prev_reg < 6'd32) ? bypass_ram[prev_reg] : 16'd0;
-   wire [31:0] sign_ext_data = {{16{raw_bypass_data[15]}}, raw_bypass_data};
-   wire [width-1:0] prev_bypass_data = sign_ext_data[{prev_chunk, 1'b0} +: 2];
+   wire       prev_bypass_valid = (prev_reg < 6'd16) ? bypass_valid[prev_reg] : 1'b0;
+   wire [31:0] prev_bypass_data_32 = (prev_reg < 6'd16) ? bypass_ram[prev_reg] : 32'd0;
+   wire [width-1:0] prev_bypass_data = prev_bypass_data_32[{prev_chunk, 1'b0} +: 2];
 
    integer init_idx;
 
@@ -140,10 +139,8 @@ module serv_rf_ram_if
          write_chunk <= write_chunk + 4'd1;
 
       if (o_wen && (wreg != {raw{1'b0}})) begin
-         if (wreg < 6'd32) begin
-            if (wchunk < 4'd8) begin
-               bypass_ram[wreg][{wchunk, 1'b0} +: 2] <= o_wdata;
-            end
+         if (wreg < 6'd16) begin
+            bypass_ram[wreg][{wchunk, 1'b0} +: 2] <= o_wdata;
             bypass_valid[wreg] <= 1'b1;
          end
       end
@@ -218,7 +215,7 @@ module serv_rf_ram_if
             rreg0_q <= {raw{1'b0}};
             rreg1_q <= {raw{1'b0}};
             prev_reg <= {raw{1'b0}};
-            bypass_valid <= 32'h00000000;
+            bypass_valid <= 16'h0000;
          end
       end
    end
