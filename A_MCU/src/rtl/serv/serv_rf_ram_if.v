@@ -63,8 +63,8 @@ module serv_rf_ram_if
    reg          wen1_r;
    reg [3:0]    write_chunk;
    reg [7:0]    write_wait;
-   reg [31:0]   bypass_ram [0:32+csr_regs-1];
-   reg          bypass_valid [0:32+csr_regs-1];
+   reg [15:0]   bypass_ram [0:31];
+   reg [31:0]   bypass_valid;
 
    wire [CMSB:0] rcnt_eff = (i_rreq | i_wreq) ? {{CMSB-1{1'b0}}, i_wreq, 1'b0} : rcnt;
    wire [CMSB:0] wcnt = rcnt_eff-4;
@@ -98,8 +98,10 @@ module serv_rf_ram_if
    wire [3:0] issue_chunk = issue_idx[4:1];
    wire       issue_sel   = issue_idx[0];
    wire [raw-1:0] issue_reg = issue_sel ? rreg1_q : rreg0_q;
-   wire       prev_bypass_valid = bypass_valid[prev_reg];
-   wire [width-1:0] prev_bypass_data = bypass_ram[prev_reg][{prev_chunk, 1'b0} +: 2];
+   wire       prev_bypass_valid = (prev_reg < 6'd32) ? bypass_valid[prev_reg] : 1'b0;
+   wire [15:0] raw_bypass_data = (prev_reg < 6'd32) ? bypass_ram[prev_reg] : 16'd0;
+   wire [31:0] sign_ext_data = {{16{raw_bypass_data[15]}}, raw_bypass_data};
+   wire [width-1:0] prev_bypass_data = sign_ext_data[{prev_chunk, 1'b0} +: 2];
 
    integer init_idx;
 
@@ -126,10 +128,11 @@ module serv_rf_ram_if
       if (i_rreq | i_wreq)
          rcnt <= {{CMSB-1{1'b0}}, i_wreq, 1'b0};
 
-      if (i_wreq)
+      if (i_wreq) begin
          write_wait <= 8'd63;
-      else if (write_wait != 8'd0)
+      end else if (write_wait != 8'd0) begin
          write_wait <= write_wait - 6'd1;
+      end
 
       if (i_wreq)
          write_chunk <= 4'd0;
@@ -137,8 +140,12 @@ module serv_rf_ram_if
          write_chunk <= write_chunk + 4'd1;
 
       if (o_wen && (wreg != {raw{1'b0}})) begin
-         bypass_ram[wreg][{wchunk, 1'b0} +: 2] <= o_wdata;
-         bypass_valid[wreg] <= 1'b1;
+         if (wreg < 6'd32) begin
+            if (wchunk < 4'd8) begin
+               bypass_ram[wreg][{wchunk, 1'b0} +: 2] <= o_wdata;
+            end
+            bypass_valid[wreg] <= 1'b1;
+         end
       end
 
       if (i_rreq) begin
@@ -211,10 +218,7 @@ module serv_rf_ram_if
             rreg0_q <= {raw{1'b0}};
             rreg1_q <= {raw{1'b0}};
             prev_reg <= {raw{1'b0}};
-            for (init_idx = 0; init_idx < 32+csr_regs; init_idx = init_idx + 1) begin
-               bypass_ram[init_idx] <= 32'b0;
-               bypass_valid[init_idx] <= 1'b0;
-            end
+            bypass_valid <= 32'h00000000;
          end
       end
    end
