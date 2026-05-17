@@ -1,7 +1,8 @@
 `timescale 1ns/1ps
 
 module tb_rv32i_directed;
-   localparam RF_RAW = 6;
+   localparam RF_RAW = 5;
+   localparam RF_REGS = 32;
    localparam RF_FRAME_BITS = RF_RAW + 8;
    localparam RESULT_BASE = 32'h0000_0700;
 
@@ -73,7 +74,7 @@ module tb_rv32i_directed;
       .o_gpio_oe(gpio_oe)
    );
 
-   reg [31:0] pico_ram [0:35];
+   reg [31:0] pico_ram [0:RF_REGS-1];
    reg [RF_FRAME_BITS-1:0] rx_buffer = 0;
    integer bit_cnt = 0;
    reg [1:0] pico_tx_data = 0;
@@ -282,7 +283,7 @@ module tb_rv32i_directed;
          bit_cnt = bit_cnt + 1;
 
          if (bit_cnt == RF_FRAME_BITS-2) begin
-            if (rx_buffer[RF_FRAME_BITS-2] && rx_buffer[RF_FRAME_BITS-3:6] < 6'd36)
+            if (rx_buffer[RF_FRAME_BITS-2] && rx_buffer[RF_FRAME_BITS-3:6] < RF_REGS)
                pico_tx_data = pico_ram[rx_buffer[RF_FRAME_BITS-3:6]][{rx_buffer[5:2], 1'b0} +: 2];
          end
       end
@@ -292,7 +293,7 @@ module tb_rv32i_directed;
       frame_cnt = frame_cnt + 1;
       if (rx_buffer[RF_FRAME_BITS-1]) begin
          write_frame_cnt = write_frame_cnt + 1;
-         if (rx_buffer[RF_FRAME_BITS-3:6] < 6'd36)
+         if (rx_buffer[RF_FRAME_BITS-3:6] < RF_REGS)
             pico_ram[rx_buffer[RF_FRAME_BITS-3:6]][{rx_buffer[5:2], 1'b0} +: 2] = rx_buffer[1:0];
          else
             invalid_rf_frame_cnt = invalid_rf_frame_cnt + 1;
@@ -319,7 +320,7 @@ module tb_rv32i_directed;
 
    initial begin
       rst_n = 0;
-      #200;
+      #5000;
       rst_n = 1;
    end
 

@@ -87,10 +87,6 @@ module serv_rf_ram
       end
    end
 
-   reg regzero;
-   always @(posedge i_clk) begin
-      regzero <= !(|rreg);
-   end
-   assign o_rdata = (regzero) ? {width{1'b0}} : shift_rx;
+   assign o_rdata = shift_rx;
 
 endmodule

@@ -33,7 +33,19 @@ module my_mcu_top #(
 );
 
     // 1. 클럭 및 리셋
-    wire clk_sys = i_clk_fast;
+    localparam integer CLK_DIV_HALF = CLK_SYS_DIV / 2;
+    localparam integer CLK_DIV_WIDTH = (CLK_DIV_HALF <= 2) ? 1 : $clog2(CLK_DIV_HALF);
+
+    reg [CLK_DIV_WIDTH-1:0] clk_div = {CLK_DIV_WIDTH{1'b0}};
+    reg clk_sys = 1'b0;
+    always @(posedge i_clk_fast) begin
+        if (clk_div == CLK_DIV_HALF-1) begin
+            clk_div <= {CLK_DIV_WIDTH{1'b0}};
+            clk_sys <= ~clk_sys;
+        end else begin
+            clk_div <= clk_div + 1'b1;
+        end
+    end
     wire rst = !i_rst_n;
 
     // 2. SERV 파라미터
@@ -63,7 +75,6 @@ module my_mcu_top #(
     reg         rd_wdata0_next;
     wire [W-1:0] wdata0, wdata1;
     wire [W-1:0] rdata0, rdata1;
-    wire        ibus_system_op;
 
     wire [$clog2(RF_DEPTH)-1:0] waddr;
     wire [RF_WIDTH-1:0] wdata;
@@ -71,8 +82,6 @@ module my_mcu_top #(
     wire [$clog2(RF_DEPTH)-1:0] raddr;
     wire                ren;
     wire [RF_WIDTH-1:0] rdata;
-
-    assign ibus_system_op = (wb_ibus_rdt[6:0] == 7'b1110011);
 
     function decode_rd_wdata0_next;
         input [31:0] insn;
@@ -101,18 +110,22 @@ module my_mcu_top #(
         reg [1:0] csr_addr;
         reg       csr_valid;
         begin
-            csr_addr = {insn[26] & insn[20], !insn[26] | insn[21]};
-            csr_valid = insn[20] | (insn[26] & !insn[21]);
-
-            if (insn[6:0] == 7'b1110011) begin
-                if (|insn[14:12])
-                    decode_rf_read_reg1 = csr_valid ? {4'b1000, csr_addr} : {1'b0, insn[24:20]};
-                else if (insn == 32'h30200073)
-                    decode_rf_read_reg1 = 6'b100010; // mret reads mepc
-                else
-                    decode_rf_read_reg1 = 6'b100001; // traps read mtvec
+            if (WITH_CSR == 0) begin
+                decode_rf_read_reg1 = insn[24:20];
             end else begin
-                decode_rf_read_reg1 = {1'b0, insn[24:20]};
+                csr_addr = {insn[26] & insn[20], !insn[26] | insn[21]};
+                csr_valid = insn[20] | (insn[26] & !insn[21]);
+
+                if (insn[6:0] == 7'b1110011) begin
+                    if (|insn[14:12])
+                        decode_rf_read_reg1 = csr_valid ? {4'b1000, csr_addr} : {1'b0, insn[24:20]};
+                    else if (insn == 32'h30200073)
+                        decode_rf_read_reg1 = 6'b100010; // mret reads mepc
+                    else
+                        decode_rf_read_reg1 = 6'b100001; // traps read mtvec
+                end else begin
+                    decode_rf_read_reg1 = {1'b0, insn[24:20]};
+                end
             end
         end
     endfunction

@@ -68,8 +68,10 @@ module serv_rf_ram_if
    // recent writeback so short RAW hazards do not depend on serial
    // off-chip RF commit latency.
    reg [raw-1:0] fw_reg0;
+   reg [raw-1:0] fw_reg1;
    reg [31:0]    fw_data0;
-   reg           fw_valid;
+   reg [31:0]    fw_data1;
+   reg [1:0]     fw_valid;
 
    wire [CMSB:0] rcnt_eff = (i_rreq | i_wreq) ? {{CMSB-1{1'b0}}, i_wreq, 1'b0} : rcnt;
    wire [CMSB:0] wcnt = rcnt_eff-4;
@@ -104,9 +106,14 @@ module serv_rf_ram_if
    wire       issue_sel   = issue_idx[0];
    wire [raw-1:0] issue_reg = issue_sel ? rreg1_q : rreg0_q;
 
-   wire fw_wr_hit = fw_valid && (fw_reg0 == wreg);
-   wire fw_rd_hit = fw_valid && (fw_reg0 == prev_reg);
-   wire [width-1:0] fw_rd_data = fw_data0[{prev_chunk, 1'b0} +: width];
+   wire fw_wr_hit0 = fw_valid[0] && (fw_reg0 == wreg);
+   wire fw_wr_hit1 = fw_valid[1] && (fw_reg1 == wreg);
+   wire fw_wr_hit = fw_wr_hit0 | fw_wr_hit1;
+   wire fw_rd_hit0 = fw_valid[0] && (fw_reg0 == prev_reg);
+   wire fw_rd_hit1 = fw_valid[1] && (fw_reg1 == prev_reg);
+   wire fw_rd_hit = fw_rd_hit0 | fw_rd_hit1;
+   wire [31:0] fw_rd_data32 = fw_rd_hit0 ? fw_data0 : fw_data1;
+   wire [width-1:0] fw_rd_data = fw_rd_data32[{prev_chunk, 1'b0} +: width];
 
    function [31:0] set_chunk;
       input [31:0] data;
@@ -155,12 +162,16 @@ module serv_rf_ram_if
          write_chunk <= write_chunk + 4'd1;
 
       if (o_wen && (wreg != {raw{1'b0}})) begin
-         if (fw_wr_hit) begin
+         if (fw_wr_hit0) begin
             fw_data0 <= set_chunk(fw_data0, wchunk, o_wdata);
+         end else if (fw_wr_hit1) begin
+            fw_data1 <= set_chunk(fw_data1, wchunk, o_wdata);
          end else begin
+            fw_reg1 <= fw_reg0;
             fw_reg0 <= wreg;
+            fw_data1 <= fw_data0;
             fw_data0 <= set_chunk(32'b0, wchunk, o_wdata);
-            fw_valid <= 1'b1;
+            fw_valid <= {fw_valid[0], 1'b1};
          end
       end
 
@@ -234,7 +245,7 @@ module serv_rf_ram_if
             rreg0_q <= {raw{1'b0}};
             rreg1_q <= {raw{1'b0}};
             prev_reg <= {raw{1'b0}};
-            fw_valid <= 1'b0;
+            fw_valid <= 2'b0;
          end
       end
    end

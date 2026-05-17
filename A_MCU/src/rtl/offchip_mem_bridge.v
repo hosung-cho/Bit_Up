@@ -21,7 +21,7 @@ module offchip_mem_bridge (
 
     input  wire        i_ibus_cyc,
     input  wire [31:0] i_ibus_adr,
-    output reg  [31:0] o_ibus_rdt,
+    output wire [31:0] o_ibus_rdt,
     output reg         o_ibus_ack,
 
     input  wire        i_dbus_cyc,
@@ -29,7 +29,7 @@ module offchip_mem_bridge (
     input  wire [31:0] i_dbus_dat,
     input  wire [3:0]  i_dbus_sel,
     input  wire        i_dbus_we,
-    output reg  [31:0] o_dbus_rdt,
+    output wire [31:0] o_dbus_rdt,
     output reg         o_dbus_ack,
 
     output reg         o_mem_sync,
@@ -43,17 +43,17 @@ module offchip_mem_bridge (
     localparam [1:0] ST_ACK = 2'd2;
     localparam [1:0] ST_ACK_HOLD = 2'd3;
 
-    reg [1:0] state;
-    reg [31:0] shift_rx;
-    reg [6:0] bit_count;
-    reg active_ibus;
-    reg active_we;
-    reg req_pending;
-    reg boot_seen;
+    reg [1:0] state = ST_IDLE;
+    reg [31:0] shift_rx = 32'b0;
+    reg [6:0] bit_count = 7'b0;
+    reg active_ibus = 1'b0;
+    reg active_we = 1'b0;
+    reg req_pending = 1'b0;
 
-    wire clk_sys_rise = 1'b1;
+    reg clk_sys_prev = 1'b0;
+    wire clk_sys_rise = i_clk_sys & !clk_sys_prev;
 
-    wire dbus_req = boot_seen && i_dbus_cyc;
+    wire dbus_req = i_dbus_cyc;
     wire ibus_req = i_ibus_cyc;
 
     wire        next_ibus = !dbus_req && ibus_req;
@@ -64,23 +64,25 @@ module offchip_mem_bridge (
     wire [69:0] active_frame = {active_we, active_ibus, active_sel,
                                 active_addr, active_dat};
 
+    assign o_ibus_rdt = shift_rx;
+    assign o_dbus_rdt = shift_rx;
+
     assign o_mem_sck = o_mem_sync ? ~i_clk_fast : 1'b0;
     assign o_mem_mosi = o_mem_sync ? active_frame[bit_count - 1'b1] : 1'b0;
 
     always @(posedge i_clk_fast) begin
+        clk_sys_prev <= i_clk_sys;
+
         if (i_rst) begin
             state <= ST_IDLE;
             shift_rx <= 32'b0;
             bit_count <= 7'd0;
             active_ibus <= 1'b0;
             active_we <= 1'b0;
-            o_ibus_rdt <= 32'b0;
-            o_dbus_rdt <= 32'b0;
             o_ibus_ack <= 1'b0;
             o_dbus_ack <= 1'b0;
             o_mem_sync <= 1'b0;
             req_pending <= 1'b0;
-            boot_seen <= 1'b0;
         end else begin
             case (state)
                 ST_IDLE: begin
@@ -122,11 +124,8 @@ module offchip_mem_bridge (
                 ST_ACK: begin
                     if (clk_sys_rise) begin
                         if (active_ibus) begin
-                            o_ibus_rdt <= shift_rx;
                             o_ibus_ack <= 1'b1;
-                            boot_seen <= 1'b1;
                         end else begin
-                            o_dbus_rdt <= shift_rx;
                             o_dbus_ack <= 1'b1;
                         end
                         state <= ST_ACK_HOLD;
