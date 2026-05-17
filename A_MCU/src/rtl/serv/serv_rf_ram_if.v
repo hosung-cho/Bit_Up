@@ -63,8 +63,13 @@ module serv_rf_ram_if
    reg          wen1_r;
    reg [3:0]    write_chunk;
    reg [7:0]    write_wait;
-   reg [31:0]   bypass_ram [0:15];
-   reg [15:0]   bypass_valid;
+   // Area-first MPW path:
+   // Do not keep a full on-chip RF bypass/cache copy. Keep only the most
+   // recent writeback so short RAW hazards do not depend on serial
+   // off-chip RF commit latency.
+   reg [raw-1:0] fw_reg0;
+   reg [31:0]    fw_data0;
+   reg           fw_valid;
 
    wire [CMSB:0] rcnt_eff = (i_rreq | i_wreq) ? {{CMSB-1{1'b0}}, i_wreq, 1'b0} : rcnt;
    wire [CMSB:0] wcnt = rcnt_eff-4;
@@ -98,11 +103,22 @@ module serv_rf_ram_if
    wire [3:0] issue_chunk = issue_idx[4:1];
    wire       issue_sel   = issue_idx[0];
    wire [raw-1:0] issue_reg = issue_sel ? rreg1_q : rreg0_q;
-   wire       prev_bypass_valid = (prev_reg < 6'd16) ? bypass_valid[prev_reg] : 1'b0;
-   wire [31:0] prev_bypass_data_32 = (prev_reg < 6'd16) ? bypass_ram[prev_reg] : 32'd0;
-   wire [width-1:0] prev_bypass_data = prev_bypass_data_32[{prev_chunk, 1'b0} +: 2];
 
-   integer init_idx;
+   wire fw_wr_hit = fw_valid && (fw_reg0 == wreg);
+   wire fw_rd_hit = fw_valid && (fw_reg0 == prev_reg);
+   wire [width-1:0] fw_rd_data = fw_data0[{prev_chunk, 1'b0} +: width];
+
+   function [31:0] set_chunk;
+      input [31:0] data;
+      input [3:0] chunk;
+      input [width-1:0] chunk_data;
+      reg [31:0] tmp;
+      begin
+         tmp = data;
+         tmp[{chunk, 1'b0} +: width] = chunk_data;
+         set_chunk = tmp;
+      end
+   endfunction
 
    always @(posedge i_clk) begin
       ready_pulse <= 1'b0;
@@ -128,7 +144,7 @@ module serv_rf_ram_if
          rcnt <= {{CMSB-1{1'b0}}, i_wreq, 1'b0};
 
       if (i_wreq) begin
-         write_wait <= 8'd63;
+         write_wait <= 8'd95;
       end else if (write_wait != 8'd0) begin
          write_wait <= write_wait - 6'd1;
       end
@@ -139,9 +155,12 @@ module serv_rf_ram_if
          write_chunk <= write_chunk + 4'd1;
 
       if (o_wen && (wreg != {raw{1'b0}})) begin
-         if (wreg < 6'd16) begin
-            bypass_ram[wreg][{wchunk, 1'b0} +: 2] <= o_wdata;
-            bypass_valid[wreg] <= 1'b1;
+         if (fw_wr_hit) begin
+            fw_data0 <= set_chunk(fw_data0, wchunk, o_wdata);
+         end else begin
+            fw_reg0 <= wreg;
+            fw_data0 <= set_chunk(32'b0, wchunk, o_wdata);
+            fw_valid <= 1'b1;
          end
       end
 
@@ -161,11 +180,11 @@ module serv_rf_ram_if
             if (prev_sel)
                read_buf1[{prev_chunk, 1'b0} +: 2] <=
                   (prev_reg == {raw{1'b0}}) ? {width{1'b0}} :
-                  prev_bypass_valid ? prev_bypass_data : i_rdata;
+                  fw_rd_hit ? fw_rd_data : i_rdata;
             else
                read_buf0[{prev_chunk, 1'b0} +: 2] <=
                   (prev_reg == {raw{1'b0}}) ? {width{1'b0}} :
-                  prev_bypass_valid ? prev_bypass_data : i_rdata;
+                  fw_rd_hit ? fw_rd_data : i_rdata;
          end
 
          if (issue_idx < 6'd32) begin
@@ -215,7 +234,7 @@ module serv_rf_ram_if
             rreg0_q <= {raw{1'b0}};
             rreg1_q <= {raw{1'b0}};
             prev_reg <= {raw{1'b0}};
-            bypass_valid <= 16'h0000;
+            fw_valid <= 1'b0;
          end
       end
    end

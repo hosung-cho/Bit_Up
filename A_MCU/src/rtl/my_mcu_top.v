@@ -33,35 +33,11 @@ module my_mcu_top #(
 );
 
     // 1. 클럭 및 리셋
-    localparam integer CLK_DIV_HALF = CLK_SYS_DIV / 2;
-    localparam integer CLK_DIV_WIDTH = (CLK_DIV_HALF <= 2) ? 1 : $clog2(CLK_DIV_HALF);
-
-    reg [CLK_DIV_WIDTH-1:0] clk_div;
-    reg clk_sys;
-    always @(posedge i_clk_fast or negedge i_rst_n) begin
-        if (!i_rst_n) begin
-            clk_div <= {CLK_DIV_WIDTH{1'b0}};
-            clk_sys <= 1'b0;
-        end else begin
-            if (clk_div == CLK_DIV_HALF-1) begin
-                clk_div <= {CLK_DIV_WIDTH{1'b0}};
-                clk_sys <= ~clk_sys;
-            end else begin
-                clk_div <= clk_div + 1'b1;
-            end
-        end
-    end
-    reg [3:0] rst_shift;
-    always @(posedge clk_sys or negedge i_rst_n) begin
-        if (!i_rst_n)
-            rst_shift <= 4'hf;
-        else
-            rst_shift <= {rst_shift[2:0], 1'b0};
-    end
-    wire rst = |rst_shift;
+    wire clk_sys = i_clk_fast;
+    wire rst = !i_rst_n;
 
     // 2. SERV 파라미터
-    localparam WITH_CSR  = 1;
+    localparam WITH_CSR  = 0;
     localparam W         = 1;
     localparam RF_WIDTH  = W * 2;
     localparam CSR_REGS  = WITH_CSR * 4;
@@ -257,15 +233,6 @@ module my_mcu_top #(
     // -----------------------------------------------------------------
     // CPU가 내보내는 주소(wb_dbus_adr)를 보고 누구를 깨울지 결정합니다.
     
-    wire sel_mem  = wb_dbus_cyc && (wb_dbus_adr[31:28] === 4'h0); // 0x0000_XXXX : 피코 메모리
-    wire sel_peri = wb_dbus_cyc && (wb_dbus_adr[31:28] === 4'h4); // 0x4000_XXXX : 주변장치 영역
-    
-    wire sel_uart = sel_peri && (wb_dbus_adr[11:8] == 4'h0); // 0x4000_00XX
-    wire sel_gpio = sel_peri && (wb_dbus_adr[11:8] == 4'h1); // 0x4000_01XX
-
-    // -----------------------------------------------------------------
-    // 8. 주변장치 더미 연결 (UART 등)
-    // -----------------------------------------------------------------
     wire [31:0] mem_ibus_rdt;
     wire        mem_ibus_ack;
     wire [31:0] mem_dbus_rdt;
@@ -281,7 +248,7 @@ module my_mcu_top #(
         .o_ibus_rdt(mem_ibus_rdt),
         .o_ibus_ack(mem_ibus_ack),
 
-        .i_dbus_cyc(wb_dbus_cyc && sel_mem),
+        .i_dbus_cyc(wb_dbus_cyc),
         .i_dbus_adr(wb_dbus_adr),
         .i_dbus_dat(wb_dbus_dat),
         .i_dbus_sel(wb_dbus_sel),
@@ -298,36 +265,11 @@ module my_mcu_top #(
     assign wb_ibus_rdt = mem_ibus_rdt;
     assign wb_ibus_ack = mem_ibus_ack;
 
-    wire [31:0] uart_rdt = 32'h0000_0000;
-    wire        uart_ack = wb_dbus_cyc && sel_uart;
-    wire [31:0] gpio_rdt;
-    wire        gpio_ack;
-
     assign o_uart_tx = 1'b1;
+    assign o_gpio = 8'h00;
+    assign o_gpio_oe = 8'h00;
 
-    simple_gpio u_gpio (
-        .i_clk(clk_sys),
-        .i_rst(rst),
-        .i_cyc(wb_dbus_cyc && sel_gpio),
-        .i_we(wb_dbus_we),
-        .i_sel(wb_dbus_sel),
-        .i_adr(wb_dbus_adr[3:0]),
-        .i_dat(wb_dbus_dat),
-        .o_rdt(gpio_rdt),
-        .o_ack(gpio_ack),
-        .i_gpio(i_gpio),
-        .o_gpio(o_gpio),
-        .o_gpio_oe(o_gpio_oe)
-    );
-
-    // 데이터 버스 MUX (선택된 장치의 응답을 CPU로 전달)
-    assign wb_dbus_rdt = mem_dbus_ack ? mem_dbus_rdt :
-                         uart_ack     ? uart_rdt :
-                         gpio_ack     ? gpio_rdt :
-                         32'h0000_0000;
-                         
-    assign wb_dbus_ack = mem_dbus_ack | uart_ack | gpio_ack;
-
-    // TODO: 여기에 UART 모듈 인스턴스화
+    assign wb_dbus_rdt = mem_dbus_rdt;
+    assign wb_dbus_ack = mem_dbus_ack;
 
 endmodule
