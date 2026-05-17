@@ -44,7 +44,7 @@ END {
 awk 'BEGIN { for (i = 0; i < 512; i++) print (i == 448) ? "00000001" : "00000000" }' \
   > "$BUILD_DIR/expected_mem.hex"
 
-awk 'BEGIN { for (i = 0; i < 512; i++) print (i == 448) ? "1" : "0" }' \
+awk 'BEGIN { for (i = 0; i < 512; i++) print (i == 448) ? "00000001" : "00000000" }' \
   > "$BUILD_DIR/expected_valid.hex"
 
 echo "Generated:"

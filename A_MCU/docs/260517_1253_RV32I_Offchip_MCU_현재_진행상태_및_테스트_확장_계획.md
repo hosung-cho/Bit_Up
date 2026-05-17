@@ -123,7 +123,8 @@ cd A_MCU/testbench/5_testbench_rv32i_directed/sim
 - GPR 내부값을 hierarchy로 직접 들여다보지 않고, 테스트 프로그램이 data memory marker 영역에 결과를 `sw`로 기록한다.
 - testbench가 marker memory 값을 기대값과 비교한다.
 - 기본 실행은 testbench 안의 내장 directed program을 사용한다.
-- 외부 regression program을 위해 `PROGRAM_HEX`, `EXPECTED_HEX`, `EXPECTED_VALID_HEX` 환경변수 기반 로딩 경로를 작업 중이다.
+- 각 marker compare 로그에 instruction/case 이름을 함께 출력한다.
+- 외부 hex 기반 regression은 5번에서 분리하고, 새 6번 testbench에서 다룬다.
 
 현재 포함된 instruction 범위:
 
@@ -149,10 +150,43 @@ cd A_MCU/testbench/5_testbench_rv32i_directed/sim
 
 따라서 현재는 기존 smoke보다 훨씬 넓은 RV32I 기본 instruction 조합이 실제 `my_mcu_top` + off-chip IMEM/DMEM/RF 경로에서 동작함을 확인했다.
 
+현재 5번 testbench의 대표 로그 형식:
+
+```text
+RV32I directed regression case list
+  R-type      : ADD SUB SLL SLT SLTU XOR OR AND SRL SRA
+  I-type      : ADDI SLTI SLTIU XORI ORI ANDI
+  Shift imm   : SLLI SRLI SRAI
+  Load        : LW LH LB LHU LBU
+  Store       : SW SH SB
+  U-type      : LUI AUIPC
+  Branch      : BEQ BNE BLT BGE BLTU BGEU
+  Jump        : JAL JALR
+
+[PASS] ADD ...
+[PASS] SUB ...
+[PASS] LW offset 0 ...
+[PASS] JALR target executed ...
+[TB PASS] rv32i directed tests passed on my_mcu_top off-chip path
+```
+
+## RV32I Hex Testbench 분리
+
+외부 hex 기반 regression은 5번 directed testbench에서 분리하여 6번 testbench로 새로 만들었다.
+
+추가한 위치:
+
+- `A_MCU/testbench/6_testbench_rv32i_hex/tb_rv32i_hex.v`
+- `A_MCU/testbench/6_testbench_rv32i_hex/programs/external_smoke.S`
+- `A_MCU/testbench/6_testbench_rv32i_hex/programs/link.ld`
+- `A_MCU/testbench/6_testbench_rv32i_hex/sim/build_external_smoke.sh`
+- `A_MCU/testbench/6_testbench_rv32i_hex/sim/run_sim.tcl`
+- `A_MCU/testbench/6_testbench_rv32i_hex/sim/run.sh`
+
 외부 hex 기반 실행 형식:
 
 ```sh
-cd A_MCU/testbench/5_testbench_rv32i_directed/sim
+cd A_MCU/testbench/6_testbench_rv32i_hex/sim
 ./build_external_smoke.sh
 PROGRAM_HEX=/path/to/program.hex \
 EXPECTED_HEX=/path/to/expected_mem.hex \
@@ -160,17 +194,11 @@ EXPECTED_VALID_HEX=/path/to/expected_valid.hex \
 ./run.sh
 ```
 
-추가한 assembly 기반 준비 파일:
-
-- `programs/external_smoke.S`
-- `programs/link.ld`
-- `sim/build_external_smoke.sh`
-
 현재 상태:
 
 - `/opt/riscv32i/bin/riscv32-unknown-elf-gcc`로 `external_smoke.S`를 ELF/binary/hex로 생성하는 단계는 통과했다.
 - 기본 내장 directed regression은 계속 PASS이다.
-- 외부 hex를 Vivado/XSim simulation에 연결하는 실행 단계는 아직 완료되지 않았다. `-testplusarg`, `$readmemh`, generated include 방식까지 시도했지만, 현재 환경의 XSim이 external mode snapshot load 단계에서 `unexpected exception when evaluating tcl command`로 중단된다.
+- 외부 hex를 Vivado/XSim simulation에 연결하는 실행 단계는 아직 완료되지 않았다. 6번 testbench에서 `-testplusarg`, `$readmemh`, generated include 방식까지 시도했지만, 현재 환경의 XSim이 external mode snapshot load 단계에서 `unexpected exception when evaluating tcl command`로 중단된다.
 - 따라서 외부 hex flow는 “빌드 준비 완료, Vivado 실행 연결 미완료” 상태로 본다.
 
 이 경로는 official `riscv-tests` 또는 assembly에서 생성한 hex를 연결하기 위한 준비 단계이다. 아직 official `rv32ui-p-*`를 자동 변환/실행하는 flow까지는 연결하지 않았다.

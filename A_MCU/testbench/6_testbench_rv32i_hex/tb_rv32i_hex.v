@@ -1,6 +1,8 @@
 `timescale 1ns/1ps
 
-module tb_rv32i_directed;
+`include "external_hex_config.vh"
+
+module tb_rv32i_hex;
    localparam RF_RAW = 6;
    localparam RF_FRAME_BITS = RF_RAW + 8;
    localparam RESULT_BASE = 32'h0000_0700;
@@ -98,15 +100,18 @@ module tb_rv32i_directed;
    reg [31:0] last_ibus_insn = 0;
 
    reg expected_valid [0:511];
+   reg [31:0] expected_valid_words [0:511];
    reg [31:0] expected_mem [0:511];
-   reg [5:0] expected_case_id [0:511];
-   reg [8*64-1:0] case_name [0:63];
 
    integer i;
    integer pc_word;
    integer result_addr;
    integer error_cnt = 0;
-   integer case_count = 0;
+   integer use_external_program = 0;
+   integer external_flag_fd;
+   reg [8*1024-1:0] program_hex_path;
+   reg [8*1024-1:0] expected_hex_path;
+   reg [8*1024-1:0] expected_valid_hex_path;
 
    function [31:0] enc_r;
       input [6:0] funct7;
@@ -190,33 +195,16 @@ module tb_rv32i_directed;
       begin
          expected_valid[addr[10:2]] = 1'b1;
          expected_mem[addr[10:2]] = value;
-         expected_case_id[addr[10:2]] = case_count[5:0];
-         case_name[case_count[5:0]] = "unnamed";
-         case_count = case_count + 1;
-      end
-   endtask
-
-   task put_expected_case;
-      input [31:0] addr;
-      input [31:0] value;
-      input [8*64-1:0] name;
-      begin
-         expected_valid[addr[10:2]] = 1'b1;
-         expected_mem[addr[10:2]] = value;
-         expected_case_id[addr[10:2]] = case_count[5:0];
-         case_name[case_count[5:0]] = name;
-         case_count = case_count + 1;
       end
    endtask
 
    task store_result;
       input [4:0] reg_idx;
       input [31:0] value;
-      input [8*64-1:0] name;
       begin
          emit_nops(4);
          emit(enc_s(result_addr, reg_idx, 5'd0, FNC_SW));
-         put_expected_case(result_addr, value, name);
+         put_expected_addr(result_addr, value);
          result_addr = result_addr + 4;
       end
    endtask
@@ -226,11 +214,11 @@ module tb_rv32i_directed;
       begin
          if (ext_mem[word_idx] !== expected_mem[word_idx]) begin
             error_cnt = error_cnt + 1;
-            $display("[FAIL] %-48s memory[0x%03h]=%h expected=%h",
-                     case_name[expected_case_id[word_idx]], {word_idx, 2'b00}, ext_mem[word_idx], expected_mem[word_idx]);
+            $display("[FAIL] memory[0x%03h]=%h expected=%h",
+                     {word_idx, 2'b00}, ext_mem[word_idx], expected_mem[word_idx]);
          end else begin
-            $display("[PASS] %-48s memory[0x%03h]=%h",
-                     case_name[expected_case_id[word_idx]], {word_idx, 2'b00}, ext_mem[word_idx]);
+            $display("[PASS] memory[0x%03h] = %h",
+                     {word_idx, 2'b00}, ext_mem[word_idx]);
          end
       end
    endtask
@@ -329,101 +317,118 @@ module tb_rv32i_directed;
       for (i = 0; i < 512; i = i + 1) begin
          ext_mem[i] = 32'h00000013;
          expected_valid[i] = 1'b0;
+         expected_valid_words[i] = 32'h0;
          expected_mem[i] = 32'h0;
-         expected_case_id[i] = 6'd0;
       end
-      for (i = 0; i < 64; i = i + 1)
-         case_name[i] = "";
 
       pc_word = 0;
       result_addr = RESULT_BASE;
-      case_count = 0;
 
-      $display("------------------------------------------------------------");
-      $display("RV32I directed regression case list");
-      $display("  R-type      : ADD SUB SLL SLT SLTU XOR OR AND SRL SRA");
-      $display("  I-type      : ADDI SLTI SLTIU XORI ORI ANDI");
-      $display("  Shift imm   : SLLI SRLI SRAI");
-      $display("  Load        : LW LH LB LHU LBU");
-      $display("  Store       : SW SH SB");
-      $display("  U-type      : LUI AUIPC");
-      $display("  Branch      : BEQ BNE BLT BGE BLTU BGEU");
-      $display("  Jump        : JAL JALR");
-      $display("------------------------------------------------------------");
+      use_external_program = 0;
+      external_flag_fd = $fopen("/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/testbench/6_testbench_rv32i_hex/sim/generated/use_external.flag", "r");
+      if (external_flag_fd != 0) begin
+         $fclose(external_flag_fd);
+         use_external_program = 1;
+         $display("Loading external hex from generated directory");
+         $readmemh("/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/testbench/6_testbench_rv32i_hex/sim/generated/program.hex", ext_mem);
+         $readmemh("/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/testbench/6_testbench_rv32i_hex/sim/generated/expected_mem.hex", expected_mem);
+         $readmemh("/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/testbench/6_testbench_rv32i_hex/sim/generated/expected_valid.hex", expected_valid_words);
+         for (i = 0; i < 512; i = i + 1)
+            expected_valid[i] = expected_valid_words[i][0];
+      end
+      if ($value$plusargs("PROGRAM_HEX=%s", program_hex_path)) begin
+         if (!$value$plusargs("EXPECTED_HEX=%s", expected_hex_path))
+            $fatal(1, "PROGRAM_HEX requires EXPECTED_HEX plusarg");
+         if (!$value$plusargs("EXPECTED_VALID_HEX=%s", expected_valid_hex_path))
+            $fatal(1, "PROGRAM_HEX requires EXPECTED_VALID_HEX plusarg");
 
+         use_external_program = 1;
+         $display("Loading external hex:");
+         $display("  program        = %0s", program_hex_path);
+         $display("  expected       = %0s", expected_hex_path);
+         $display("  expected_valid = %0s", expected_valid_hex_path);
+         $readmemh(program_hex_path, ext_mem);
+         $readmemh(expected_hex_path, expected_mem);
+         $readmemh(expected_valid_hex_path, expected_valid_words);
+         for (i = 0; i < 512; i = i + 1)
+            expected_valid[i] = expected_valid_words[i][0];
+      end
+      `include "external_hex_init.vh"
+
+      if (!use_external_program) begin
       // R-type and shift-immediate directed tests from 0_testbench_Basic.
       emit(enc_i(-100, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
       emit(enc_i(200, 5'd0, FNC_ADD_SUB, 5'd2, OPC_ARI_ITYPE));
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_ADD_SUB, 5'd3));
-      store_result(5'd3, 32'h00000064, "ADD");
+      store_result(5'd3, 32'h00000064);
       emit(enc_r(FNC7_1, 5'd2, 5'd1, FNC_ADD_SUB, 5'd4));
-      store_result(5'd4, 32'hfffffed4, "SUB");
+      store_result(5'd4, 32'hfffffed4);
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_SLL, 5'd5));
-      store_result(5'd5, 32'hffff9c00, "SLL");
+      store_result(5'd5, 32'hffff9c00);
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_SLT, 5'd6));
-      store_result(5'd6, 32'h00000001, "SLT");
+      store_result(5'd6, 32'h00000001);
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_SLTU, 5'd7));
-      store_result(5'd7, 32'h00000000, "SLTU");
+      store_result(5'd7, 32'h00000000);
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_XOR, 5'd8));
-      store_result(5'd8, 32'hffffff54, "XOR");
+      store_result(5'd8, 32'hffffff54);
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_OR, 5'd9));
-      store_result(5'd9, 32'hffffffdc, "OR");
+      store_result(5'd9, 32'hffffffdc);
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_AND, 5'd10));
-      store_result(5'd10, 32'h00000088, "AND");
+      store_result(5'd10, 32'h00000088);
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_SRL_SRA, 5'd11));
-      store_result(5'd11, 32'h00ffffff, "SRL");
+      store_result(5'd11, 32'h00ffffff);
       emit(enc_r(FNC7_1, 5'd2, 5'd1, FNC_SRL_SRA, 5'd12));
-      store_result(5'd12, 32'hffffffff, "SRA");
+      store_result(5'd12, 32'hffffffff);
       emit(enc_i({7'b0000000, 5'd20}, 5'd1, FNC_SLL, 5'd13, OPC_ARI_ITYPE));
-      store_result(5'd13, 32'hf9c00000, "SLLI");
+      store_result(5'd13, 32'hf9c00000);
       emit(enc_i({7'b0000000, 5'd20}, 5'd1, FNC_SRL_SRA, 5'd14, OPC_ARI_ITYPE));
-      store_result(5'd14, 32'h00000fff, "SRLI");
+      store_result(5'd14, 32'h00000fff);
       emit(enc_i({7'b0100000, 5'd20}, 5'd1, FNC_SRL_SRA, 5'd15, OPC_ARI_ITYPE));
-      store_result(5'd15, 32'hffffffff, "SRAI");
+      store_result(5'd15, 32'hffffffff);
 
       // I-type arithmetic directed tests.
       emit(enc_i(-200, 5'd1, FNC_ADD_SUB, 5'd3, OPC_ARI_ITYPE));
-      store_result(5'd3, 32'hfffffed4, "ADDI");
+      store_result(5'd3, 32'hfffffed4);
       emit(enc_i(-200, 5'd1, FNC_SLT, 5'd4, OPC_ARI_ITYPE));
-      store_result(5'd4, 32'h00000000, "SLTI");
+      store_result(5'd4, 32'h00000000);
       emit(enc_i(-200, 5'd1, FNC_SLTU, 5'd5, OPC_ARI_ITYPE));
-      store_result(5'd5, 32'h00000000, "SLTIU");
+      store_result(5'd5, 32'h00000000);
       emit(enc_i(-200, 5'd1, FNC_XOR, 5'd6, OPC_ARI_ITYPE));
-      store_result(5'd6, 32'h000000a4, "XORI");
+      store_result(5'd6, 32'h000000a4);
       emit(enc_i(-200, 5'd1, FNC_OR, 5'd7, OPC_ARI_ITYPE));
-      store_result(5'd7, 32'hffffffbc, "ORI");
+      store_result(5'd7, 32'hffffffbc);
       emit(enc_i(-200, 5'd1, FNC_AND, 5'd8, OPC_ARI_ITYPE));
-      store_result(5'd8, 32'hffffff18, "ANDI");
+      store_result(5'd8, 32'hffffff18);
 
       // Load subword tests.
       ext_mem[9'h180] = 32'hdeadbeef;
       emit(enc_i(32'h600, 5'd0, FNC_ADD_SUB, 5'd20, OPC_ARI_ITYPE));
       emit(enc_i(0, 5'd20, FNC_LW, 5'd2, OPC_LOAD));
-      store_result(5'd2, 32'hdeadbeef, "LW offset 0");
+      store_result(5'd2, 32'hdeadbeef);
       emit(enc_i(0, 5'd20, FNC_LH, 5'd3, OPC_LOAD));
-      store_result(5'd3, 32'hffffbeef, "LH offset 0 sign-extend");
+      store_result(5'd3, 32'hffffbeef);
       emit(enc_i(2, 5'd20, FNC_LH, 5'd5, OPC_LOAD));
-      store_result(5'd5, 32'hffffdead, "LH offset 2 sign-extend");
+      store_result(5'd5, 32'hffffdead);
       emit(enc_i(0, 5'd20, FNC_LB, 5'd7, OPC_LOAD));
-      store_result(5'd7, 32'hffffffef, "LB offset 0 sign-extend");
+      store_result(5'd7, 32'hffffffef);
       emit(enc_i(1, 5'd20, FNC_LB, 5'd8, OPC_LOAD));
-      store_result(5'd8, 32'hffffffbe, "LB offset 1 sign-extend");
+      store_result(5'd8, 32'hffffffbe);
       emit(enc_i(2, 5'd20, FNC_LB, 5'd9, OPC_LOAD));
-      store_result(5'd9, 32'hffffffad, "LB offset 2 sign-extend");
+      store_result(5'd9, 32'hffffffad);
       emit(enc_i(3, 5'd20, FNC_LB, 5'd10, OPC_LOAD));
-      store_result(5'd10, 32'hffffffde, "LB offset 3 sign-extend");
+      store_result(5'd10, 32'hffffffde);
       emit(enc_i(0, 5'd20, FNC_LHU, 5'd11, OPC_LOAD));
-      store_result(5'd11, 32'h0000beef, "LHU offset 0 zero-extend");
+      store_result(5'd11, 32'h0000beef);
       emit(enc_i(2, 5'd20, FNC_LHU, 5'd13, OPC_LOAD));
-      store_result(5'd13, 32'h0000dead, "LHU offset 2 zero-extend");
+      store_result(5'd13, 32'h0000dead);
       emit(enc_i(0, 5'd20, FNC_LBU, 5'd15, OPC_LOAD));
-      store_result(5'd15, 32'h000000ef, "LBU offset 0 zero-extend");
+      store_result(5'd15, 32'h000000ef);
       emit(enc_i(1, 5'd20, FNC_LBU, 5'd16, OPC_LOAD));
-      store_result(5'd16, 32'h000000be, "LBU offset 1 zero-extend");
+      store_result(5'd16, 32'h000000be);
       emit(enc_i(2, 5'd20, FNC_LBU, 5'd17, OPC_LOAD));
-      store_result(5'd17, 32'h000000ad, "LBU offset 2 zero-extend");
+      store_result(5'd17, 32'h000000ad);
       emit(enc_i(3, 5'd20, FNC_LBU, 5'd18, OPC_LOAD));
-      store_result(5'd18, 32'h000000de, "LBU offset 3 zero-extend");
+      store_result(5'd18, 32'h000000de);
 
       // Store byte/halfword/word tests.
       ext_mem[9'h190] = 32'h0;
@@ -433,23 +438,23 @@ module tb_rv32i_directed;
       emit(enc_u(32'h12345000, 5'd21, OPC_LUI));
       emit(enc_i(32'h678, 5'd21, FNC_ADD_SUB, 5'd21, OPC_ARI_ITYPE));
       emit(enc_s(32'h640, 5'd21, 5'd0, FNC_SW));
-      put_expected_case(32'h640, 32'h12345678, "SW full word");
+      put_expected_addr(32'h640, 32'h12345678);
       emit(enc_s(32'h644, 5'd21, 5'd0, FNC_SH));
-      put_expected_case(32'h644, 32'h00005678, "SH low halfword");
+      put_expected_addr(32'h644, 32'h00005678);
       emit(enc_s(32'h64a, 5'd21, 5'd0, FNC_SH));
-      put_expected_case(32'h648, 32'h56780000, "SH high halfword");
+      put_expected_addr(32'h648, 32'h56780000);
       emit(enc_s(32'h650, 5'd21, 5'd0, FNC_SB));
       emit(enc_s(32'h651, 5'd21, 5'd0, FNC_SB));
       emit(enc_s(32'h652, 5'd21, 5'd0, FNC_SB));
       emit(enc_s(32'h653, 5'd21, 5'd0, FNC_SB));
-      put_expected_case(32'h650, 32'h78787878, "SB byte lanes 0/1/2/3");
+      put_expected_addr(32'h650, 32'h78787878);
 
       // U-type tests. AUIPC expected value is tied to the actual program PC.
       emit(enc_u(32'h7fff0000, 5'd22, OPC_LUI));
-      store_result(5'd22, 32'h7fff0000, "LUI");
+      store_result(5'd22, 32'h7fff0000);
       i = pc_word;
       emit(enc_u(32'h7fff0000, 5'd23, OPC_AUIPC));
-      store_result(5'd23, 32'h7fff0000 + (i * 4), "AUIPC");
+      store_result(5'd23, 32'h7fff0000 + (i * 4));
 
       // Branch taken and not-taken tests for all RV32I branch funct3 values.
       emit(enc_i(100, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
@@ -458,7 +463,7 @@ module tb_rv32i_directed;
       emit(enc_b(8, 5'd2, 5'd1, FNC_BEQ));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
       emit(enc_i(2, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
-      store_result(5'd24, 32'h00000002, "BEQ taken");
+      store_result(5'd24, 32'h00000002);
 
       emit(enc_i(100, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
       emit(enc_i(200, 5'd0, FNC_ADD_SUB, 5'd2, OPC_ARI_ITYPE));
@@ -466,7 +471,7 @@ module tb_rv32i_directed;
       emit(enc_b(8, 5'd2, 5'd1, FNC_BNE));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
       emit(enc_i(3, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
-      store_result(5'd24, 32'h00000003, "BNE taken");
+      store_result(5'd24, 32'h00000003);
 
       emit(enc_i(100, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
       emit(enc_i(200, 5'd0, FNC_ADD_SUB, 5'd2, OPC_ARI_ITYPE));
@@ -474,7 +479,7 @@ module tb_rv32i_directed;
       emit(enc_b(8, 5'd2, 5'd1, FNC_BLT));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
       emit(enc_i(4, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
-      store_result(5'd24, 32'h00000004, "BLT taken");
+      store_result(5'd24, 32'h00000004);
 
       emit(enc_i(200, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
       emit(enc_i(100, 5'd0, FNC_ADD_SUB, 5'd2, OPC_ARI_ITYPE));
@@ -482,7 +487,7 @@ module tb_rv32i_directed;
       emit(enc_b(8, 5'd2, 5'd1, FNC_BGE));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
       emit(enc_i(5, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
-      store_result(5'd24, 32'h00000005, "BGE taken");
+      store_result(5'd24, 32'h00000005);
 
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
       emit(enc_i(-1, 5'd0, FNC_ADD_SUB, 5'd2, OPC_ARI_ITYPE));
@@ -490,7 +495,7 @@ module tb_rv32i_directed;
       emit(enc_b(8, 5'd2, 5'd1, FNC_BLTU));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
       emit(enc_i(6, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
-      store_result(5'd24, 32'h00000006, "BLTU taken");
+      store_result(5'd24, 32'h00000006);
 
       emit(enc_i(-1, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd2, OPC_ARI_ITYPE));
@@ -498,16 +503,16 @@ module tb_rv32i_directed;
       emit(enc_b(8, 5'd2, 5'd1, FNC_BGEU));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
       emit(enc_i(7, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
-      store_result(5'd24, 32'h00000007, "BGEU taken");
+      store_result(5'd24, 32'h00000007);
 
       // JAL and JALR link/skip tests.
       i = pc_word;
       emit(enc_j(8, 5'd25));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd26, OPC_ARI_ITYPE));
       emit(enc_i(9, 5'd0, FNC_ADD_SUB, 5'd27, OPC_ARI_ITYPE));
-      store_result(5'd25, (i * 4) + 4, "JAL link rd=pc+4");
-      store_result(5'd26, 32'h00000000, "JAL skipped instruction");
-      store_result(5'd27, 32'h00000009, "JAL target executed");
+      store_result(5'd25, (i * 4) + 4);
+      store_result(5'd26, 32'h00000000);
+      store_result(5'd27, 32'h00000009);
 
       i = pc_word;
       emit(enc_i((i + 3) * 4, 5'd0, FNC_ADD_SUB, 5'd28, OPC_ARI_ITYPE));
@@ -515,11 +520,12 @@ module tb_rv32i_directed;
       emit(enc_i(0, 5'd28, 3'b000, 5'd29, OPC_JALR));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd30, OPC_ARI_ITYPE));
       emit(enc_i(10, 5'd0, FNC_ADD_SUB, 5'd31, OPC_ARI_ITYPE));
-      store_result(5'd29, (i * 4) + 4, "JALR link rd=pc+4");
-      store_result(5'd30, 32'h00000000, "JALR skipped instruction");
-      store_result(5'd31, 32'h0000000a, "JALR target executed");
+      store_result(5'd29, (i * 4) + 4);
+      store_result(5'd30, 32'h00000000);
+      store_result(5'd31, 32'h0000000a);
 
       emit(32'h0000006f);
+      end
 
       #180000000;
       if (frame_cnt == 0)
@@ -527,7 +533,10 @@ module tb_rv32i_directed;
       if (mem_frame_cnt == 0)
          $fatal(1, "No memory frames observed");
 
-      $display("RV32I directed program words = %0d", pc_word);
+      if (use_external_program)
+         $display("RV32I directed program source = external hex");
+      else
+         $display("RV32I directed program words = %0d", pc_word);
       $display("RF frames observed = %0d writes=%0d reads=%0d invalid=%0d",
                frame_cnt, write_frame_cnt, read_frame_cnt, invalid_rf_frame_cnt);
       $display("Memory frames observed = %0d writes=%0d reads=%0d",
