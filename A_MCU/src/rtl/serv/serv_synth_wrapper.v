@@ -55,9 +55,6 @@ module serv_synth_wrapper
    wire 	      wen1;
    wire 	      wdata0;
    wire 	      wdata1;
-   wire 	      rd_alu_en;
-   wire 	      rd_csr_en;
-   wire 	      rd_mem_en;
    wire [4+WITH_CSR:0] rreg0;
    wire [4+WITH_CSR:0] rreg1;
    wire 	      rf_ready;
@@ -80,7 +77,6 @@ module serv_synth_wrapper
       .i_wen1   (wen1),
       .i_wdata0 (wdata0),
       .i_wdata1 (wdata1),
-      .i_wdata0_next (rd_alu_en | rd_csr_en),
       .i_rreg0  (rreg0),
       .i_rreg1  (rreg1),
       .o_rdata0 (rdata0),
@@ -111,9 +107,6 @@ module serv_synth_wrapper
       .o_wen1      (wen1),
       .o_wdata0    (wdata0),
       .o_wdata1    (wdata1),
-      .o_rd_alu_en (rd_alu_en),
-      .o_rd_csr_en (rd_csr_en),
-      .o_rd_mem_en (rd_mem_en),
       .o_rreg0     (rreg0),
       .o_rreg1     (rreg1),
       .i_rdata0    (rdata0),

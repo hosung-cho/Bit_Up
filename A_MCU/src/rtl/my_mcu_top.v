@@ -84,9 +84,6 @@ module my_mcu_top #(
     wire [4+WITH_CSR:0] rf_read_reg0_to_if;
     wire [4+WITH_CSR:0] rf_read_reg1_to_if;
     wire        wen0, wen1;
-    wire        rd_alu_en;
-    wire        rd_csr_en;
-    wire        rd_mem_en;
     reg         rd_wdata0_next;
     wire [W-1:0] wdata0, wdata1;
     wire [W-1:0] rdata0, rdata1;
@@ -123,6 +120,27 @@ module my_mcu_top #(
         end
     endfunction
 
+    function [4+WITH_CSR:0] decode_rf_read_reg1;
+        input [31:0] insn;
+        reg [1:0] csr_addr;
+        reg       csr_valid;
+        begin
+            csr_addr = {insn[26] & insn[20], !insn[26] | insn[21]};
+            csr_valid = insn[20] | (insn[26] & !insn[21]);
+
+            if (insn[6:0] == 7'b1110011) begin
+                if (|insn[14:12])
+                    decode_rf_read_reg1 = csr_valid ? {4'b1000, csr_addr} : {1'b0, insn[24:20]};
+                else if (insn == 32'h30200073)
+                    decode_rf_read_reg1 = 6'b100010; // mret reads mepc
+                else
+                    decode_rf_read_reg1 = 6'b100001; // traps read mtvec
+            end else begin
+                decode_rf_read_reg1 = {1'b0, insn[24:20]};
+            end
+        end
+    endfunction
+
     always @(posedge clk_sys) begin
         if (rst) begin
             rf_read_reg0 <= {1'b0, 5'd0};
@@ -130,7 +148,7 @@ module my_mcu_top #(
             rd_wdata0_next <= 1'b0;
         end else if (wb_ibus_ack) begin
             rf_read_reg0 <= {1'b0, wb_ibus_rdt[19:15]};
-            rf_read_reg1 <= ibus_system_op ? rf_read_reg1 : {1'b0, wb_ibus_rdt[24:20]};
+            rf_read_reg1 <= decode_rf_read_reg1(wb_ibus_rdt);
             rd_wdata0_next <= decode_rd_wdata0_next(wb_ibus_rdt);
         end else if (rf_rreq) begin
             rf_read_reg0 <= rreg0;
@@ -138,9 +156,11 @@ module my_mcu_top #(
         end
     end
 
-    assign rf_read_reg0_to_if = wb_ibus_ack ? {1'b0, wb_ibus_rdt[19:15]} : rf_read_reg0;
-    assign rf_read_reg1_to_if = (wb_ibus_ack && !ibus_system_op) ? {1'b0, wb_ibus_rdt[24:20]} :
-                                rf_rreq ? rreg1 : rf_read_reg1;
+    assign rf_read_reg0_to_if = wb_ibus_ack ? {1'b0, wb_ibus_rdt[19:15]} :
+                                rf_read_reg0;
+    assign rf_read_reg1_to_if = (rf_rreq && rreg1[4+WITH_CSR]) ? rreg1 :
+                                wb_ibus_ack ? decode_rf_read_reg1(wb_ibus_rdt) :
+                                rf_read_reg1;
 
     // 5. SERV 코어 (RF 직접 연결)
     serv_top #(
@@ -162,9 +182,6 @@ module my_mcu_top #(
         .o_wen1(wen1),
         .o_wdata0(wdata0),
         .o_wdata1(wdata1),
-        .o_rd_alu_en(rd_alu_en),
-        .o_rd_csr_en(rd_csr_en),
-        .o_rd_mem_en(rd_mem_en),
         .o_rreg0(rreg0),
         .o_rreg1(rreg1),
         .i_rdata0(rdata0),

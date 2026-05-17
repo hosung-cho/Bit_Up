@@ -172,7 +172,7 @@ module tb_my_mcu_top;
    endtask
 
    task expect_mem_word;
-      input [7:0] word_idx;
+      input [8:0] word_idx;
       input [31:0] expected;
       begin
          if (ext_mem[word_idx] !== expected) begin
@@ -439,25 +439,39 @@ module tb_my_mcu_top;
       ext_mem[297] = 32'h00000013; // nop
       ext_mem[298] = 32'h00000013; // nop
       ext_mem[299] = 32'h1e702223; // sw   x7, 0x1e4(x0)
-      ext_mem[76] = 32'h342020f3;  // csrrs x1, mcause, x0
-      ext_mem[77] = 32'h00000013;  // nop
-      ext_mem[78] = 32'h00000013;  // nop
-      ext_mem[79] = 32'h00000013;  // nop
-      ext_mem[80] = 32'h00000013;  // nop
-      ext_mem[81] = 32'h1e102423;  // sw    x1, 0x1e8(x0)
-      ext_mem[82] = 32'h01300113;  // addi  x2, x0, 0x13 (nop encoding)
-      ext_mem[83] = 32'h00000013;  // nop
-      ext_mem[84] = 32'h00000013;  // nop
-      ext_mem[85] = 32'h00000013;  // nop
-      ext_mem[86] = 32'h00000013;  // nop
-      ext_mem[87] = 32'h4a202c23;  // sw    x2, 0x4b8(x0) (patch ecall to nop)
-      ext_mem[88] = 32'h00000013;  // nop
-      ext_mem[89] = 32'h00000013;  // nop
-      ext_mem[90] = 32'h00000013;  // nop
-      ext_mem[91] = 32'h00000013;  // nop
-      ext_mem[92] = 32'h00000013;  // nop
-      ext_mem[93] = 32'h30200073;  // mret
-      ext_mem[300] = 32'h13000f93; // addi x31, x0, 0x130
+      ext_mem[384] = 32'h342020f3; // csrrs x1, mcause, x0
+      ext_mem[385] = 32'h00000013; // nop
+      ext_mem[386] = 32'h00000013; // nop
+      ext_mem[387] = 32'h00000013; // nop
+      ext_mem[388] = 32'h00000013; // nop
+      ext_mem[389] = 32'h70102423; // sw    x1, 0x708(x0)
+      ext_mem[390] = 32'h4bc00113; // addi  x2, x0, 0x4bc (return after ecall)
+      ext_mem[391] = 32'h00000013; // nop
+      ext_mem[392] = 32'h00000013; // nop
+      ext_mem[393] = 32'h00000013; // nop
+      ext_mem[394] = 32'h00000013; // nop
+      ext_mem[395] = 32'h70202023; // sw    x2, 0x700(x0)
+      ext_mem[396] = 32'h00000013; // nop
+      ext_mem[397] = 32'h00000013; // nop
+      ext_mem[398] = 32'h00000013; // nop
+      ext_mem[399] = 32'h00000013; // nop
+      ext_mem[400] = 32'h341111f3; // csrrw x3, mepc, x2
+      ext_mem[401] = 32'h00000013; // nop
+      ext_mem[402] = 32'h00000013; // nop
+      ext_mem[403] = 32'h00000013; // nop
+      ext_mem[404] = 32'h00000013; // nop
+      ext_mem[405] = 32'h34102273; // csrrs x4, mepc, x0
+      ext_mem[406] = 32'h00000013; // nop
+      ext_mem[407] = 32'h00000013; // nop
+      ext_mem[408] = 32'h00000013; // nop
+      ext_mem[409] = 32'h00000013; // nop
+      ext_mem[410] = 32'h70402623; // sw   x4, 0x70c(x0)
+      ext_mem[411] = 32'h00000013; // nop
+      ext_mem[412] = 32'h00000013; // nop
+      ext_mem[413] = 32'h00000013; // nop
+      ext_mem[414] = 32'h00000013; // nop
+      ext_mem[415] = 32'h30200073; // mret
+      ext_mem[300] = 32'h60000f93; // addi x31, x0, 0x600
       ext_mem[301] = 32'h305f9073; // csrrw x0, mtvec, x31
       ext_mem[302] = 32'h00000073; // ecall
       ext_mem[303] = 32'h00100393; // addi x7, x0, 1   (executed after mret)
@@ -465,7 +479,7 @@ module tb_my_mcu_top;
       ext_mem[305] = 32'h00000013; // nop
       ext_mem[306] = 32'h00000013; // nop
       ext_mem[307] = 32'h00000013; // nop
-      ext_mem[308] = 32'h1e702823; // sw   x7, 0x1f0(x0)
+      ext_mem[308] = 32'h70702223; // sw   x7, 0x704(x0)
       ext_mem[309] = 32'h0000006f; // jal  x0, 0
       ext_mem[8'h40] = 32'h00000003;
       ext_mem[8'h42] = 32'hdeadbeef;
@@ -522,9 +536,9 @@ module tb_my_mcu_top;
       expect_reg(6'd29, 32'h00000003);
       expect_reg(6'd30, 32'h00000004);
       expect_reg(6'd32, 32'h00000001);
-      expect_reg(6'd33, 32'h00000130);
-      expect_reg(6'd34, 32'h00000003);
-      expect_reg(6'd35, 32'h00000004);
+      expect_reg(6'd33, 32'h00000600);
+      expect_reg(6'd34, 32'h000004bc);
+      expect_reg(6'd35, 32'h00000000);
 
       if (ext_mem[8'h40] !== 32'h00000003) begin
          error_cnt = error_cnt + 1;
@@ -594,8 +608,10 @@ module tb_my_mcu_top;
       expect_mem_word(8'h77, 32'h00000001);
       expect_mem_word(8'h78, 32'h00000001);
       expect_mem_word(8'h79, 32'h00000001);
-      expect_mem_word(8'h7a, 32'h0000000b);
-      expect_mem_word(8'h7c, 32'h00000001);
+      expect_mem_word(9'h1c0, 32'h000004bc);
+      expect_mem_word(9'h1c1, 32'h00000001);
+      expect_mem_word(9'h1c2, 32'h0000000b);
+      expect_mem_word(9'h1c3, 32'h000004bc);
 
       if (gpio_out !== 8'h5a) begin
          error_cnt = error_cnt + 1;
