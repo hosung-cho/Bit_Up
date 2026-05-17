@@ -1,7 +1,7 @@
 module serv_rf_ram
   #(parameter width=2,
     parameter csr_regs=4,
-    parameter depth=32*(16+csr_regs)/width,
+    parameter depth=32*(32+csr_regs)/width,
     parameter raw=$clog2(32+csr_regs),
     parameter frame_bits=raw+8)
    (
@@ -74,13 +74,17 @@ module serv_rf_ram
             end
          end 
          else begin
-            if (tx_state == 2) shift_rx[1] <= i_ext_rf_miso;
-            if (tx_state == 1) shift_rx[0] <= i_ext_rf_miso;
+            if (tx_state == 3) shift_rx[1] <= i_ext_rf_miso;
+            if (tx_state == 2) shift_rx[0] <= i_ext_rf_miso;
 
             tx_state <= tx_state - 1;
 
-            if (tx_state == 1) begin
+            if (tx_state == 2) begin
                o_ext_rf_sync <= 1'b0;
+            end
+
+            if (tx_state == 1) begin
+               req_seen <= 1'b0;
             end
          end
       end

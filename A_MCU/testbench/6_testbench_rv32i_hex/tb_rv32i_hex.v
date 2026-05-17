@@ -44,7 +44,7 @@ module tb_rv32i_hex;
 
    reg clk_fast = 0;
    reg rst_n = 0;
-   always #31.25 clk_fast = ~clk_fast;
+   always #0.5 clk_fast = ~clk_fast;
 
    wire rf_sync;
    wire rf_sck;
@@ -259,6 +259,9 @@ module tb_rv32i_hex;
       end else begin
          mem_read_cnt = mem_read_cnt + 1;
       end
+      $display("[MEM TRACE] Frame #%0d | Addr=0x%08h (Idx=%0d) | Write=%b | Data=0x%08h | Sel=%b",
+               mem_frame_cnt, mem_addr, mem_word_index, mem_rx_buffer[69],
+               mem_rx_buffer[69] ? mem_wdata : ext_mem[mem_word_index], mem_sel);
    end
 
    assign mem_miso = (mem_sync && mem_bit_cnt >= 38 && mem_bit_cnt < 70) ?
@@ -287,6 +290,8 @@ module tb_rv32i_hex;
       end else if (rx_buffer[RF_FRAME_BITS-2]) begin
          read_frame_cnt = read_frame_cnt + 1;
       end
+      $display("[RF TRACE] Frame #%0d | Reg=%0d | Write=%b | Read=%b | Data=2'b%b",
+               frame_cnt, rx_buffer[RF_FRAME_BITS-3:6], rx_buffer[RF_FRAME_BITS-1], rx_buffer[RF_FRAME_BITS-2], rx_buffer[1:0]);
    end
 
    always @(posedge rf_sync) begin
@@ -305,9 +310,16 @@ module tb_rv32i_hex;
       end
    end
 
+   always @(posedge dut.clk_sys) begin
+      if ($time < 50000) begin
+         $display("[SYS_MON] Time=%0d ns | rst=%b | cyc=%b | ack=%b | rdt=%h | rf_rreq=%b | rf_ready=%b | has_fetched=%b",
+                  $time, dut.rst, dut.wb_ibus_cyc, dut.wb_ibus_ack, dut.wb_ibus_rdt, dut.rf_rreq, dut.rf_ready, dut.has_fetched_first_insn);
+      end
+   end
+
    initial begin
       rst_n = 0;
-      #200;
+      #20000;
       rst_n = 1;
    end
 
@@ -527,7 +539,7 @@ module tb_rv32i_hex;
       emit(32'h0000006f);
       end
 
-      #180000000;
+      #800000000;
       if (frame_cnt == 0)
          $fatal(1, "No RF frames observed");
       if (mem_frame_cnt == 0)

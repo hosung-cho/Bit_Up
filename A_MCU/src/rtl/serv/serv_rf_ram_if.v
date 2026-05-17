@@ -85,21 +85,27 @@ module serv_rf_ram_if
    reg        prefetch_active;
    reg        pending_read;
    reg [5:0]  issue_idx;
+   reg [raw-1:0] rreg0_latched;
+   reg [raw-1:0] rreg1_latched;
 
    wire [3:0] issue_chunk = issue_idx[4:1];
    wire       issue_sel   = issue_idx[0];
-   wire [raw-1:0] issue_reg = issue_sel ? i_rreg1 : i_rreg0;
+   wire [raw-1:0] issue_reg = issue_sel ? rreg1_latched : rreg0_latched;
    wire       prev_valid = prefetch_active && (issue_idx != 6'd0);
    wire [4:0] prev_issue_idx = issue_idx[4:0] - 5'd1;
    wire       prev_sel = prev_issue_idx[0];
    wire [3:0] prev_chunk = prev_issue_idx[4:1];
-   wire [raw-1:0] prev_reg = prev_sel ? i_rreg1 : i_rreg0;
+   wire [raw-1:0] prev_reg = prev_sel ? rreg1_latched : rreg0_latched;
 
-   always @(posedge i_clk) begin
-      ready_pulse <= 1'b0;
-      o_ren <= 1'b0;
+    always @(posedge i_clk) begin
+       if (i_rreq || i_wreq || prefetch_active || pending_read || ready_pulse) begin
+          $display("[RF_IF TRACE] i_rreq=%b i_wreq=%b prefetch_active=%b pending_read=%b write_wait=%0d issue_idx=%0d ready_pulse=%b o_ready=%b",
+                   i_rreq, i_wreq, prefetch_active, pending_read, write_wait, issue_idx, ready_pulse, o_ready);
+       end
+       ready_pulse <= 1'b0;
+       o_ren <= 1'b0;
 
-      if (stream_pending) begin
+       if (stream_pending) begin
          stream_pending <= 1'b0;
          stream_active <= 1'b1;
          stream_cnt <= 5'd0;
@@ -131,6 +137,8 @@ module serv_rf_ram_if
 
       if (i_rreq) begin
          pending_read <= 1'b1;
+         rreg0_latched <= i_rreg0;
+         rreg1_latched <= i_rreg1;
       end
 
       if (!prefetch_active && (write_wait == 6'd0) && pending_read) begin
@@ -182,6 +190,8 @@ module serv_rf_ram_if
             prefetch_active <= 1'b0;
             pending_read <= 1'b0;
             issue_idx <= 6'b0;
+            rreg0_latched <= {raw{1'b0}};
+            rreg1_latched <= {raw{1'b0}};
             stream_pending <= 1'b0;
             stream_active <= 1'b0;
             stream_cnt <= 5'b0;

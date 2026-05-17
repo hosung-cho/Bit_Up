@@ -130,15 +130,18 @@ module my_mcu_top #(
         end
     endfunction
 
-    always @(posedge clk_sys) begin
+    reg has_fetched_first_insn;
+    always @(posedge clk_sys or posedge rst) begin
         if (rst) begin
             rf_read_reg0 <= {1'b0, 5'd0};
             rf_read_reg1 <= {1'b0, 5'd0};
             rd_wdata0_next <= 1'b0;
+            has_fetched_first_insn <= 1'b0;
         end else if (wb_ibus_ack) begin
             rf_read_reg0 <= {1'b0, wb_ibus_rdt[19:15]};
             rf_read_reg1 <= decode_rf_read_reg1(wb_ibus_rdt);
             rd_wdata0_next <= decode_rd_wdata0_next(wb_ibus_rdt);
+            has_fetched_first_insn <= 1'b1;
         end else if (rf_rreq) begin
             rf_read_reg0 <= rreg0;
             rf_read_reg1 <= rreg1;
@@ -200,7 +203,7 @@ module my_mcu_top #(
         .i_clk(clk_sys),
         .i_rst(rst),
         .i_wreq(rf_wreq),
-        .i_rreq(rf_rreq),
+        .i_rreq(rf_rreq && (has_fetched_first_insn || wb_ibus_ack)),
         .o_ready(rf_ready),
         .i_wreg0(wreg0),
         .i_wreg1(wreg1),

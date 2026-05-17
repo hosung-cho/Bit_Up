@@ -53,8 +53,8 @@ module offchip_mem_bridge (
     reg clk_sys_prev = 1'b0;
     wire clk_sys_rise = i_clk_sys & !clk_sys_prev;
 
-    wire dbus_req = i_dbus_cyc;
-    wire ibus_req = i_ibus_cyc;
+    wire dbus_req = i_rst ? 1'b0 : i_dbus_cyc;
+    wire ibus_req = i_rst ? 1'b0 : i_ibus_cyc;
 
     wire        next_ibus = !dbus_req && ibus_req;
     wire        next_we   = dbus_req && i_dbus_we;
@@ -117,17 +117,8 @@ module offchip_mem_bridge (
 
                     if (bit_count == 7'd1) begin
                         o_mem_sync <= 1'b0;
-                        state <= ST_ACK;
-                    end
-                end
-
-                ST_ACK: begin
-                    if (clk_sys_rise) begin
-                        if (active_ibus) begin
-                            o_ibus_ack <= 1'b1;
-                        end else begin
-                            o_dbus_ack <= 1'b1;
-                        end
+                        if (active_ibus) o_ibus_ack <= 1'b1;
+                        else             o_dbus_ack <= 1'b1;
                         state <= ST_ACK_HOLD;
                     end
                 end
