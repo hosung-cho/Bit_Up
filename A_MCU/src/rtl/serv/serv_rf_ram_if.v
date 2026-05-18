@@ -62,6 +62,7 @@ module serv_rf_ram_if
    reg          wen0_r;
    reg          wen1_r;
    reg [3:0]    write_chunk;
+   reg          wdata0_next_phase;
    reg [5:0]    write_wait;
    wire [CMSB:0] rcnt_eff = (i_rreq | i_wreq) ? {{CMSB-1{1'b0}}, i_wreq, 1'b0} : rcnt;
    wire [CMSB:0] wcnt = rcnt_eff-4;
@@ -74,8 +75,11 @@ module serv_rf_ram_if
    wire [width-1:0] wdata1_phase = wdata1_r[width:W];
    wire [width-1:0] wdata1_sel = i_wreg1[raw-1] ? wdata1_phase : wdata1_r[width-1:0];
 
+   wire          use_wdata0_next = i_wdata0_next &
+                                   ((write_chunk == 4'd0) ? rcnt[2] : wdata0_next_phase);
+
    assign o_wdata = wtrig1 ? wdata1_sel :
-                    i_wdata0_next ? wdata0_next : wdata0_r;
+                    use_wdata0_next ? wdata0_next : wdata0_r;
    assign o_waddr = {wreg, write_chunk};
    assign o_wen = (wtrig0 & wen0_r) | (wtrig1 & wen1_r);
 
@@ -128,6 +132,11 @@ module serv_rf_ram_if
       else if (wtrig1 && (wen0_r || wen1_r))
          write_chunk <= write_chunk + 4'd1;
 
+      if (i_wreq)
+         wdata0_next_phase <= 1'b0;
+      else if (o_wen && !wtrig1 && (write_chunk == 4'd0))
+         wdata0_next_phase <= i_wdata0_next & rcnt[2];
+
       if (i_rreq) begin
          pending_read <= 1'b1;
          rreg0_latched <= i_rreg0;
@@ -179,6 +188,7 @@ module serv_rf_ram_if
             wen0_r <= 1'b0;
             wen1_r <= 1'b0;
             write_chunk <= 4'b0;
+            wdata0_next_phase <= 1'b0;
             write_wait <= 6'b0;
             prefetch_active <= 1'b0;
             pending_read <= 1'b0;

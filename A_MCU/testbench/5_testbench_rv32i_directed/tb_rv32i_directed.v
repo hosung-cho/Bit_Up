@@ -360,27 +360,27 @@ module tb_rv32i_directed;
       emit(enc_i(-100, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
       emit(enc_i(200, 5'd0, FNC_ADD_SUB, 5'd2, OPC_ARI_ITYPE));
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_ADD_SUB, 5'd3));
-      store_result(5'd3, 32'h00000000, "ADD");
+      store_result(5'd3, 32'h00000064, "ADD");
       emit(enc_r(FNC7_1, 5'd2, 5'd1, FNC_ADD_SUB, 5'd4));
-      store_result(5'd4, 32'hfffffe70, "SUB");
+      store_result(5'd4, 32'hfffffed4, "SUB");
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_SLL, 5'd5));
-      store_result(5'd5, 32'hffff3800, "SLL");
+      store_result(5'd5, 32'hffff9c00, "SLL");
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_SLT, 5'd6));
       store_result(5'd6, 32'h00000001, "SLT");
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_SLTU, 5'd7));
       store_result(5'd7, 32'h00000000, "SLTU");
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_XOR, 5'd8));
-      store_result(5'd8, 32'hfffffff0, "XOR");
+      store_result(5'd8, 32'hffffff54, "XOR");
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_OR, 5'd9));
-      store_result(5'd9, 32'hfffffff8, "OR");
+      store_result(5'd9, 32'hffffffdc, "OR");
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_AND, 5'd10));
-      store_result(5'd10, 32'h00000008, "AND");
+      store_result(5'd10, 32'h00000088, "AND");
       emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_SRL_SRA, 5'd11));
       store_result(5'd11, 32'h00ffffff, "SRL");
       emit(enc_r(FNC7_1, 5'd2, 5'd1, FNC_SRL_SRA, 5'd12));
       store_result(5'd12, 32'hffffffff, "SRA");
       emit(enc_i({7'b0000000, 5'd20}, 5'd1, FNC_SLL, 5'd13, OPC_ARI_ITYPE));
-      store_result(5'd13, 32'hf3800000, "SLLI");
+      store_result(5'd13, 32'hf9c00000, "SLLI");
       emit(enc_i({7'b0000000, 5'd20}, 5'd1, FNC_SRL_SRA, 5'd14, OPC_ARI_ITYPE));
       store_result(5'd14, 32'h00000fff, "SRLI");
       emit(enc_i({7'b0100000, 5'd20}, 5'd1, FNC_SRL_SRA, 5'd15, OPC_ARI_ITYPE));
@@ -388,17 +388,17 @@ module tb_rv32i_directed;
 
       // I-type arithmetic directed tests.
       emit(enc_i(-200, 5'd1, FNC_ADD_SUB, 5'd3, OPC_ARI_ITYPE));
-      store_result(5'd3, 32'hfffffe70, "ADDI");
+      store_result(5'd3, 32'hfffffed4, "ADDI");
       emit(enc_i(-200, 5'd1, FNC_SLT, 5'd4, OPC_ARI_ITYPE));
       store_result(5'd4, 32'h00000000, "SLTI");
       emit(enc_i(-200, 5'd1, FNC_SLTU, 5'd5, OPC_ARI_ITYPE));
       store_result(5'd5, 32'h00000000, "SLTIU");
       emit(enc_i(-200, 5'd1, FNC_XOR, 5'd6, OPC_ARI_ITYPE));
-      store_result(5'd6, 32'h00000000, "XORI");
+      store_result(5'd6, 32'h000000a4, "XORI");
       emit(enc_i(-200, 5'd1, FNC_OR, 5'd7, OPC_ARI_ITYPE));
-      store_result(5'd7, 32'hffffff38, "ORI");
+      store_result(5'd7, 32'hffffffbc, "ORI");
       emit(enc_i(-200, 5'd1, FNC_AND, 5'd8, OPC_ARI_ITYPE));
-      store_result(5'd8, 32'hffffff38, "ANDI");
+      store_result(5'd8, 32'hffffff18, "ANDI");
 
       // Load subword tests.
       ext_mem[9'h180] = 32'hdeadbeef;
@@ -438,16 +438,16 @@ module tb_rv32i_directed;
       emit(enc_u(32'h12345000, 5'd21, OPC_LUI));
       emit(enc_i(32'h678, 5'd21, FNC_ADD_SUB, 5'd21, OPC_ARI_ITYPE));
       emit(enc_s(32'h640, 5'd21, 5'd0, FNC_SW));
-      put_expected_case(32'h640, 32'h2468acf0, "SW full word");
+      put_expected_case(32'h640, 32'h12345678, "SW full word");
       emit(enc_s(32'h644, 5'd21, 5'd0, FNC_SH));
-      put_expected_case(32'h644, 32'h0000acf0, "SH low halfword");
+      put_expected_case(32'h644, 32'h00005678, "SH low halfword");
       emit(enc_s(32'h64a, 5'd21, 5'd0, FNC_SH));
-      put_expected_case(32'h648, 32'hacf00000, "SH high halfword");
+      put_expected_case(32'h648, 32'h56780000, "SH high halfword");
       emit(enc_s(32'h650, 5'd21, 5'd0, FNC_SB));
       emit(enc_s(32'h651, 5'd21, 5'd0, FNC_SB));
       emit(enc_s(32'h652, 5'd21, 5'd0, FNC_SB));
       emit(enc_s(32'h653, 5'd21, 5'd0, FNC_SB));
-      put_expected_case(32'h650, 32'hf0f0f0f0, "SB byte lanes 0/1/2/3");
+      put_expected_case(32'h650, 32'h78787878, "SB byte lanes 0/1/2/3");
 
       // U-type tests. AUIPC expected value is tied to the actual program PC.
       emit(enc_u(32'h7fff0000, 5'd22, OPC_LUI));
@@ -471,7 +471,7 @@ module tb_rv32i_directed;
       emit(enc_b(8, 5'd2, 5'd1, FNC_BNE));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
       emit(enc_i(3, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
-      store_result(5'd24, 32'h00000001, "BNE taken");
+      store_result(5'd24, 32'h00000003, "BNE taken");
  
       emit(enc_i(100, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
       emit(enc_i(200, 5'd0, FNC_ADD_SUB, 5'd2, OPC_ARI_ITYPE));
@@ -479,7 +479,7 @@ module tb_rv32i_directed;
       emit(enc_b(8, 5'd2, 5'd1, FNC_BLT));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
       emit(enc_i(4, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
-      store_result(5'd24, 32'h00000002, "BLT taken");
+      store_result(5'd24, 32'h00000004, "BLT taken");
  
       emit(enc_i(200, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
       emit(enc_i(100, 5'd0, FNC_ADD_SUB, 5'd2, OPC_ARI_ITYPE));
@@ -487,7 +487,7 @@ module tb_rv32i_directed;
       emit(enc_b(8, 5'd2, 5'd1, FNC_BGE));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
       emit(enc_i(5, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
-      store_result(5'd24, 32'h00000002, "BGE taken");
+      store_result(5'd24, 32'h00000005, "BGE taken");
  
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
       emit(enc_i(-1, 5'd0, FNC_ADD_SUB, 5'd2, OPC_ARI_ITYPE));
@@ -495,7 +495,7 @@ module tb_rv32i_directed;
       emit(enc_b(8, 5'd2, 5'd1, FNC_BLTU));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
       emit(enc_i(6, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
-      store_result(5'd24, 32'h00000003, "BLTU taken");
+      store_result(5'd24, 32'h00000006, "BLTU taken");
  
       emit(enc_i(-1, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd2, OPC_ARI_ITYPE));
@@ -503,7 +503,7 @@ module tb_rv32i_directed;
       emit(enc_b(8, 5'd2, 5'd1, FNC_BGEU));
       emit(enc_i(1, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
       emit(enc_i(7, 5'd0, FNC_ADD_SUB, 5'd24, OPC_ARI_ITYPE));
-      store_result(5'd24, 32'h00000003, "BGEU taken");
+      store_result(5'd24, 32'h00000007, "BGEU taken");
  
       // JAL and JALR link/skip tests.
       i = pc_word;
@@ -512,7 +512,7 @@ module tb_rv32i_directed;
       emit(enc_i(9, 5'd0, FNC_ADD_SUB, 5'd27, OPC_ARI_ITYPE));
       store_result(5'd25, (i * 4) + 4, "JAL link rd=pc+4");
       store_result(5'd26, 32'h00000000, "JAL skipped instruction");
-      store_result(5'd27, 32'h00000004, "JAL target executed");
+      store_result(5'd27, 32'h00000009, "JAL target executed");
  
       i = pc_word;
       emit(enc_i((i + 3) * 4, 5'd0, FNC_ADD_SUB, 5'd28, OPC_ARI_ITYPE));
@@ -522,7 +522,7 @@ module tb_rv32i_directed;
       emit(enc_i(10, 5'd0, FNC_ADD_SUB, 5'd31, OPC_ARI_ITYPE));
       store_result(5'd29, (i * 4) + 4, "JALR link rd=pc+4");
       store_result(5'd30, 32'h00000000, "JALR skipped instruction");
-      store_result(5'd31, 32'h00000005, "JALR target executed");
+      store_result(5'd31, 32'h0000000a, "JALR target executed");
 
       emit(32'h0000006f);
 
