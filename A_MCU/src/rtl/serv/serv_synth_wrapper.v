@@ -60,6 +60,7 @@ module serv_synth_wrapper
    wire 	      rf_ready;
    wire 	      rdata0;
    wire 	      rdata1;
+   wire          rf_wdata0_next;
 
    serv_rf_ram_if
      #(.width    (RF_WIDTH),
@@ -77,6 +78,7 @@ module serv_synth_wrapper
       .i_wen1   (wen1),
       .i_wdata0 (wdata0),
       .i_wdata1 (wdata1),
+      .i_wdata0_next (rf_wdata0_next),
       .i_rreg0  (rreg0),
       .i_rreg1  (rreg1),
       .o_rdata0 (rdata0),
@@ -111,6 +113,7 @@ module serv_synth_wrapper
       .o_rreg1     (rreg1),
       .i_rdata0    (rdata0),
       .i_rdata1    (rdata1),
+      .o_rf_wdata0_next (rf_wdata0_next),
 
       .o_ibus_adr   (o_ibus_adr),
       .o_ibus_cyc   (o_ibus_cyc),

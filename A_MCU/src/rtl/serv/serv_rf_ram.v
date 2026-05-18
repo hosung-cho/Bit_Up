@@ -79,17 +79,14 @@ module serv_rf_ram
 
             tx_state <= tx_state - 1;
 
-            if (tx_state == 2) begin
+            if (tx_state == 1) begin
                o_ext_rf_sync <= 1'b0;
             end
 
-            if (tx_state == 1) begin
-               req_seen <= 1'b0;
-            end
          end
       end
    end
 
-   assign o_rdata = shift_rx;
+   assign o_rdata = (rreg == {raw{1'b0}}) ? {width{1'b0}} : shift_rx;
 
 endmodule

@@ -3,7 +3,7 @@
 `include "external_hex_config.vh"
 
 module tb_rv32i_hex;
-   localparam RF_RAW = 6;
+   localparam RF_RAW = 5;
    localparam RF_FRAME_BITS = RF_RAW + 8;
    localparam RESULT_BASE = 32'h0000_0700;
 
@@ -75,7 +75,7 @@ module tb_rv32i_hex;
       .o_gpio_oe(gpio_oe)
    );
 
-   reg [31:0] pico_ram [0:35];
+   reg [31:0] pico_ram [0:31];
    reg [RF_FRAME_BITS-1:0] rx_buffer = 0;
    integer bit_cnt = 0;
    reg [1:0] pico_tx_data = 0;
@@ -259,9 +259,6 @@ module tb_rv32i_hex;
       end else begin
          mem_read_cnt = mem_read_cnt + 1;
       end
-      $display("[MEM TRACE] Frame #%0d | Addr=0x%08h (Idx=%0d) | Write=%b | Data=0x%08h | Sel=%b",
-               mem_frame_cnt, mem_addr, mem_word_index, mem_rx_buffer[69],
-               mem_rx_buffer[69] ? mem_wdata : ext_mem[mem_word_index], mem_sel);
    end
 
    assign mem_miso = (mem_sync && mem_bit_cnt >= 38 && mem_bit_cnt < 70) ?
@@ -273,7 +270,7 @@ module tb_rv32i_hex;
          bit_cnt = bit_cnt + 1;
 
          if (bit_cnt == RF_FRAME_BITS-2) begin
-            if (rx_buffer[RF_FRAME_BITS-2] && rx_buffer[RF_FRAME_BITS-3:6] < 6'd36)
+            if (rx_buffer[RF_FRAME_BITS-2] && rx_buffer[RF_FRAME_BITS-3:6] < 32)
                pico_tx_data = pico_ram[rx_buffer[RF_FRAME_BITS-3:6]][{rx_buffer[5:2], 1'b0} +: 2];
          end
       end
@@ -283,15 +280,13 @@ module tb_rv32i_hex;
       frame_cnt = frame_cnt + 1;
       if (rx_buffer[RF_FRAME_BITS-1]) begin
          write_frame_cnt = write_frame_cnt + 1;
-         if (rx_buffer[RF_FRAME_BITS-3:6] < 6'd36)
+         if (rx_buffer[RF_FRAME_BITS-3:6] < 32)
             pico_ram[rx_buffer[RF_FRAME_BITS-3:6]][{rx_buffer[5:2], 1'b0} +: 2] = rx_buffer[1:0];
          else
             invalid_rf_frame_cnt = invalid_rf_frame_cnt + 1;
       end else if (rx_buffer[RF_FRAME_BITS-2]) begin
          read_frame_cnt = read_frame_cnt + 1;
       end
-      $display("[RF TRACE] Frame #%0d | Reg=%0d | Write=%b | Read=%b | Data=2'b%b",
-               frame_cnt, rx_buffer[RF_FRAME_BITS-3:6], rx_buffer[RF_FRAME_BITS-1], rx_buffer[RF_FRAME_BITS-2], rx_buffer[1:0]);
    end
 
    always @(posedge rf_sync) begin
@@ -299,21 +294,14 @@ module tb_rv32i_hex;
       rx_buffer = {RF_FRAME_BITS{1'b0}};
    end
 
-   assign rf_miso = (bit_cnt >= RF_FRAME_BITS-3 && bit_cnt <= RF_FRAME_BITS-1) ? pico_tx_data[1] :
-                    (bit_cnt >= RF_FRAME_BITS) ? pico_tx_data[0] : 1'b0;
+   assign rf_miso = (bit_cnt == RF_FRAME_BITS-2) ? pico_tx_data[1] :
+                    (bit_cnt >= RF_FRAME_BITS-1) ? pico_tx_data[0] : 1'b0;
 
    always @(posedge dut.clk_sys) begin
       if (dut.wb_ibus_ack) begin
          fetch_cnt = fetch_cnt + 1;
          last_ibus_adr = dut.wb_ibus_adr;
          last_ibus_insn = dut.wb_ibus_rdt;
-      end
-   end
-
-   always @(posedge dut.clk_sys) begin
-      if ($time < 50000) begin
-         $display("[SYS_MON] Time=%0d ns | rst=%b | cyc=%b | ack=%b | rdt=%h | rf_rreq=%b | rf_ready=%b | has_fetched=%b",
-                  $time, dut.rst, dut.wb_ibus_cyc, dut.wb_ibus_ack, dut.wb_ibus_rdt, dut.rf_rreq, dut.rf_ready, dut.has_fetched_first_insn);
       end
    end
 
@@ -324,7 +312,7 @@ module tb_rv32i_hex;
    end
 
    initial begin
-      for (i = 0; i < 36; i = i + 1)
+      for (i = 0; i < 32; i = i + 1)
          pico_ram[i] = 32'h0;
       for (i = 0; i < 512; i = i + 1) begin
          ext_mem[i] = 32'h00000013;
@@ -539,7 +527,7 @@ module tb_rv32i_hex;
       emit(32'h0000006f);
       end
 
-      #800000000;
+      #10000000;
       if (frame_cnt == 0)
          $fatal(1, "No RF frames observed");
       if (mem_frame_cnt == 0)

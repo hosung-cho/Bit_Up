@@ -72,7 +72,7 @@ module my_mcu_top #(
     wire [4+WITH_CSR:0] rf_read_reg0_to_if;
     wire [4+WITH_CSR:0] rf_read_reg1_to_if;
     wire        wen0, wen1;
-    reg         rd_wdata0_next;
+    wire        rf_wdata0_next;
     wire [W-1:0] wdata0, wdata1;
     wire [W-1:0] rdata0, rdata1;
 
@@ -82,28 +82,6 @@ module my_mcu_top #(
     wire [$clog2(RF_DEPTH)-1:0] raddr;
     wire                ren;
     wire [RF_WIDTH-1:0] rdata;
-
-    function decode_rd_wdata0_next;
-        input [31:0] insn;
-        reg [6:0] opcode;
-        reg [2:0] funct3;
-        reg       is_alu_op;
-        reg       is_shift_op;
-        reg       is_compare_op;
-        begin
-            opcode = insn[6:0];
-            funct3 = insn[14:12];
-            is_alu_op = (opcode == 7'b0010011) || (opcode == 7'b0110011);
-            is_shift_op = is_alu_op && funct3[0] && !funct3[1];
-            is_compare_op = is_alu_op && (funct3[2:1] == 2'b01);
-
-            decode_rd_wdata0_next =
-                (opcode == 7'b0110111) ||                 // LUI
-                (opcode == 7'b0010111) ||                 // AUIPC
-                ((WITH_CSR != 0) && (opcode == 7'b1110011) && (|funct3)) ||
-                (is_alu_op && !is_shift_op && !is_compare_op);
-        end
-    endfunction
 
     function [4+WITH_CSR:0] decode_rf_read_reg1;
         input [31:0] insn;
@@ -135,12 +113,10 @@ module my_mcu_top #(
         if (rst) begin
             rf_read_reg0 <= {1'b0, 5'd0};
             rf_read_reg1 <= {1'b0, 5'd0};
-            rd_wdata0_next <= 1'b0;
             has_fetched_first_insn <= 1'b0;
         end else if (wb_ibus_ack) begin
             rf_read_reg0 <= {1'b0, wb_ibus_rdt[19:15]};
             rf_read_reg1 <= decode_rf_read_reg1(wb_ibus_rdt);
-            rd_wdata0_next <= decode_rd_wdata0_next(wb_ibus_rdt);
             has_fetched_first_insn <= 1'b1;
         end else if (rf_rreq) begin
             rf_read_reg0 <= rreg0;
@@ -178,6 +154,7 @@ module my_mcu_top #(
         .o_rreg1(rreg1),
         .i_rdata0(rdata0),
         .i_rdata1(rdata1),
+        .o_rf_wdata0_next(rf_wdata0_next),
 
         // Instruction Bus
         .o_ibus_adr(wb_ibus_adr), .o_ibus_cyc(wb_ibus_cyc),
@@ -211,7 +188,7 @@ module my_mcu_top #(
         .i_wen1(wen1),
         .i_wdata0(wdata0),
         .i_wdata1(wdata1),
-        .i_wdata0_next(rd_wdata0_next),
+        .i_wdata0_next(rf_wdata0_next),
         .i_rreg0(rf_read_reg0_to_if),
         .i_rreg1(rf_read_reg1_to_if),
         .o_rdata0(rdata0),

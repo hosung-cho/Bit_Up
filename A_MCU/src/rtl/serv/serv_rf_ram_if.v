@@ -69,17 +69,14 @@ module serv_rf_ram_if
    wire          wtrig0 = rtrig1;
    wire          wtrig1 = wcnt[0];
    wire [raw-1:0] wreg = wtrig1 ? i_wreg1 : i_wreg0;
-   wire [3:0]     wchunk = write_chunk;
 
-   // ALU writeback is phase-aligned one cycle later than memory writeback in
-   // this off-chip RF path, so port 0 can select the next packed shift value.
    wire [width-1:0] wdata0_next = {i_wdata0, wdata0_r[width-1:W]};
    wire [width-1:0] wdata1_phase = wdata1_r[width:W];
    wire [width-1:0] wdata1_sel = i_wreg1[raw-1] ? wdata1_phase : wdata1_r[width-1:0];
 
    assign o_wdata = wtrig1 ? wdata1_sel :
                     i_wdata0_next ? wdata0_next : wdata0_r;
-   assign o_waddr = {wreg, wchunk};
+   assign o_waddr = {wreg, write_chunk};
    assign o_wen = (wtrig0 & wen0_r) | (wtrig1 & wen1_r);
 
    reg        prefetch_active;
@@ -98,10 +95,6 @@ module serv_rf_ram_if
    wire [raw-1:0] prev_reg = prev_sel ? rreg1_latched : rreg0_latched;
 
     always @(posedge i_clk) begin
-       if (i_rreq || i_wreq || prefetch_active || pending_read || ready_pulse) begin
-          $display("[RF_IF TRACE] i_rreq=%b i_wreq=%b prefetch_active=%b pending_read=%b write_wait=%0d issue_idx=%0d ready_pulse=%b o_ready=%b",
-                   i_rreq, i_wreq, prefetch_active, pending_read, write_wait, issue_idx, ready_pulse, o_ready);
-       end
        ready_pulse <= 1'b0;
        o_ren <= 1'b0;
 

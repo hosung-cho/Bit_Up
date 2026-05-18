@@ -234,8 +234,8 @@ module tb_serial_external_rf();
       rx_buffer = {RF_FRAME_BITS{1'b0}};
    end
 
-   assign miso = (bit_cnt >= RF_FRAME_BITS-3 && bit_cnt <= RF_FRAME_BITS-1) ? pico_tx_data[1] :
-                 (bit_cnt >= RF_FRAME_BITS) ? pico_tx_data[0] : 1'b0;
+   assign miso = (bit_cnt == RF_FRAME_BITS-2) ? pico_tx_data[1] :
+                    (bit_cnt >= RF_FRAME_BITS-1) ? pico_tx_data[0] : 1'b0;
 
    integer i;
    integer chunk_idx;

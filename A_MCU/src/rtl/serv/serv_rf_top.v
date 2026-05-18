@@ -101,6 +101,7 @@ module serv_rf_top
    wire 	      rf_ready;
    wire [W-1:0]	      rdata0;
    wire [W-1:0]	      rdata1;
+   wire          rf_wdata0_next;
 
    wire [RF_L2D-1:0]   waddr;
    wire [RF_WIDTH-1:0] wdata;
@@ -126,6 +127,7 @@ module serv_rf_top
       .i_wen1   (wen1),
       .i_wdata0 (wdata0),
       .i_wdata1 (wdata1),
+      .i_wdata0_next (rf_wdata0_next),
       .i_rreg0  (rreg0),
       .i_rreg1  (rreg1),
       .o_rdata0 (rdata0),
@@ -200,6 +202,7 @@ module serv_rf_top
       .o_rreg1     (rreg1),
       .i_rdata0    (rdata0),
       .i_rdata1    (rdata1),
+      .o_rf_wdata0_next (rf_wdata0_next),
 
       .o_ibus_adr   (o_ibus_adr),
       .o_ibus_cyc   (o_ibus_cyc),

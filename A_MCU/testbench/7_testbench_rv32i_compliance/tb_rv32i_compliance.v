@@ -3,7 +3,7 @@
 `include "external_hex_config.vh"
 
 module tb_rv32i_compliance;
-   localparam RF_RAW = 6;
+   localparam RF_RAW = 5;
    localparam RF_FRAME_BITS = RF_RAW + 8;
    localparam RESULT_BASE = 32'h0000_0700;
 
@@ -75,7 +75,7 @@ module tb_rv32i_compliance;
       .o_gpio_oe(gpio_oe)
    );
 
-   reg [31:0] pico_ram [0:35];
+   reg [31:0] pico_ram [0:31];
    reg [RF_FRAME_BITS-1:0] rx_buffer = 0;
    integer bit_cnt = 0;
    reg [1:0] pico_tx_data = 0;
@@ -270,7 +270,7 @@ module tb_rv32i_compliance;
          bit_cnt = bit_cnt + 1;
 
          if (bit_cnt == RF_FRAME_BITS-2) begin
-            if (rx_buffer[RF_FRAME_BITS-2] && rx_buffer[RF_FRAME_BITS-3:6] < 6'd36)
+            if (rx_buffer[RF_FRAME_BITS-2] && rx_buffer[RF_FRAME_BITS-3:6] < 32)
                pico_tx_data = pico_ram[rx_buffer[RF_FRAME_BITS-3:6]][{rx_buffer[5:2], 1'b0} +: 2];
          end
       end
@@ -280,7 +280,7 @@ module tb_rv32i_compliance;
       frame_cnt = frame_cnt + 1;
       if (rx_buffer[RF_FRAME_BITS-1]) begin
          write_frame_cnt = write_frame_cnt + 1;
-         if (rx_buffer[RF_FRAME_BITS-3:6] < 6'd36)
+         if (rx_buffer[RF_FRAME_BITS-3:6] < 32)
             pico_ram[rx_buffer[RF_FRAME_BITS-3:6]][{rx_buffer[5:2], 1'b0} +: 2] = rx_buffer[1:0];
          else
             invalid_rf_frame_cnt = invalid_rf_frame_cnt + 1;
@@ -294,8 +294,8 @@ module tb_rv32i_compliance;
       rx_buffer = {RF_FRAME_BITS{1'b0}};
    end
 
-   assign rf_miso = (bit_cnt >= RF_FRAME_BITS-3 && bit_cnt <= RF_FRAME_BITS-1) ? pico_tx_data[1] :
-                    (bit_cnt >= RF_FRAME_BITS) ? pico_tx_data[0] : 1'b0;
+   assign rf_miso = (bit_cnt == RF_FRAME_BITS-2) ? pico_tx_data[1] :
+                    (bit_cnt >= RF_FRAME_BITS-1) ? pico_tx_data[0] : 1'b0;
 
    always @(posedge dut.clk_sys) begin
       if (dut.wb_ibus_ack) begin
@@ -312,7 +312,7 @@ module tb_rv32i_compliance;
    end
 
    initial begin
-      for (i = 0; i < 36; i = i + 1)
+      for (i = 0; i < 32; i = i + 1)
          pico_ram[i] = 32'h0;
       for (i = 0; i < 512; i = i + 1) begin
          ext_mem[i] = 32'h00000013;

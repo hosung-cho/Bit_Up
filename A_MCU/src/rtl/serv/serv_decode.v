@@ -66,7 +66,8 @@ module serv_decode
    //To RF IF
    output reg       o_rd_mem_en,
    output reg       o_rd_csr_en,
-   output reg       o_rd_alu_en);
+   output reg       o_rd_alu_en,
+   output reg       o_rf_wdata0_next);
 
    reg [4:0] opcode;
    reg [2:0] funct3;
@@ -231,6 +232,7 @@ module serv_decode
    assign co_alu_rd_sel[0] = (funct3 == 3'b000); // Add/sub
    assign co_alu_rd_sel[1] = (funct3[2:1] == 2'b01); //SLT*
    assign co_alu_rd_sel[2] = funct3[2]; //Bool
+   wire co_rf_wdata0_next = co_rd_alu_en & co_alu_rd_sel[0] & !imm30;
 
    //0 (OP_B_SOURCE_IMM) when OPIMM
    //1 (OP_B_SOURCE_RS2) when BRANCH or OP
@@ -296,6 +298,7 @@ module serv_decode
             o_op_b_source      = co_op_b_source;
             o_rd_csr_en        = co_rd_csr_en;
             o_rd_alu_en        = co_rd_alu_en;
+            o_rf_wdata0_next   = co_rf_wdata0_next;
             o_rd_mem_en        = co_rd_mem_en;
          end
 
@@ -357,6 +360,7 @@ module serv_decode
                o_op_b_source      <= co_op_b_source;
                o_rd_csr_en        <= co_rd_csr_en;
                o_rd_alu_en        <= co_rd_alu_en;
+               o_rf_wdata0_next   <= co_rf_wdata0_next;
                o_rd_mem_en        <= co_rd_mem_en;
             end
          end

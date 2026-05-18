@@ -58,6 +58,7 @@ module serv_top
    output wire [4+WITH_CSR:0] o_rreg1,
    input wire  [B:0] i_rdata0,
    input wire  [B:0] i_rdata1,
+   output wire        o_rf_wdata0_next,
 
    output wire [31:0] 	      o_ibus_adr,
    output wire 		      o_ibus_cyc,
@@ -100,6 +101,7 @@ module serv_top
    wire 	 rd_alu_en;
    wire 	 rd_csr_en;
    wire 	 rd_mem_en;
+   wire     rf_wdata0_next;
    wire [B:0]    ctrl_rd;
    wire [B:0]    alu_rd;
    wire [B:0]    mem_rd;
@@ -139,6 +141,8 @@ module serv_top
    wire [B:0]    bufreg2_q;
    wire [31:0] dbus_rdt;
    wire        dbus_ack;
+
+   assign o_rf_wdata0_next = rf_wdata0_next;
 
    wire          alu_sub;
    wire [1:0] 	 alu_bool_op;
@@ -352,7 +356,8 @@ module serv_top
       //To RF IF
       .o_rd_mem_en        (rd_mem_en),
       .o_rd_csr_en        (rd_csr_en),
-      .o_rd_alu_en        (rd_alu_en));
+      .o_rd_alu_en        (rd_alu_en),
+      .o_rf_wdata0_next   (rf_wdata0_next));
 
    serv_immdec #(.W (W)) immdec
      (

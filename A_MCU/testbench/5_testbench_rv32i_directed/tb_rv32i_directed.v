@@ -307,8 +307,8 @@ module tb_rv32i_directed;
       rx_buffer = {RF_FRAME_BITS{1'b0}};
    end
 
-   assign rf_miso = (bit_cnt >= RF_FRAME_BITS-3 && bit_cnt <= RF_FRAME_BITS-1) ? pico_tx_data[1] :
-                    (bit_cnt >= RF_FRAME_BITS) ? pico_tx_data[0] : 1'b0;
+   assign rf_miso = (bit_cnt == RF_FRAME_BITS-2) ? pico_tx_data[1] :
+                    (bit_cnt >= RF_FRAME_BITS-1) ? pico_tx_data[0] : 1'b0;
 
    always @(posedge dut.clk_sys) begin
       if (dut.wb_ibus_ack) begin
