@@ -212,6 +212,8 @@ module serv_top
       end else begin : gen_no_align
          assign  o_ibus_adr  = wb_ibus_adr;
          assign  o_ibus_cyc  = wb_ibus_cyc;
+         always @(posedge clk) if (wb_ibus_cyc && wb_ibus_ack) $display("TB_PC: %h TIME: %t", wb_ibus_adr, $time);
+         always @(posedge clk) if (o_dbus_cyc && o_dbus_we) $display("TB_DBUS_WE: addr=%h data=%h sel=%b TIME: %t", o_dbus_adr, o_dbus_dat, o_dbus_sel, $time);
          assign  wb_ibus_rdt = i_ibus_rdt;
          assign  wb_ibus_ack = i_ibus_ack;
         end

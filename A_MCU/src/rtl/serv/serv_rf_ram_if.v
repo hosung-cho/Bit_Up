@@ -142,10 +142,10 @@ module serv_rf_ram_if
          if (prev_valid) begin
             if (prev_sel)
                read_buf1[{prev_chunk, 1'b0} +: 2] <=
-                  (prev_reg == {raw{1'b0}}) ? {width{1'b0}} : i_rdata;
+                  (prev_reg[4:0] == 5'd0) ? {width{1'b0}} : i_rdata;
             else
                read_buf0[{prev_chunk, 1'b0} +: 2] <=
-                  (prev_reg == {raw{1'b0}}) ? {width{1'b0}} : i_rdata;
+                  (prev_reg[4:0] == 5'd0) ? {width{1'b0}} : i_rdata;
          end
 
          if (issue_idx < 6'd32) begin

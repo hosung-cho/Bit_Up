@@ -87,6 +87,6 @@ module serv_rf_ram
       end
    end
 
-   assign o_rdata = (rreg == {raw{1'b0}}) ? {width{1'b0}} : shift_rx;
+   assign o_rdata = (rreg[4:0] == 5'd0) ? {width{1'b0}} : shift_rx;
 
 endmodule
