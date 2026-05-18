@@ -307,7 +307,7 @@ module tb_rv32i_compliance;
 
    initial begin
       rst_n = 0;
-      #200;
+      #20000;
       rst_n = 1;
    end
 

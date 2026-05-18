@@ -62,15 +62,16 @@ for TEST in "${TEST_CASES[@]}"; do
     continue
   fi
 
-  # 🚀 XSim 작업 디렉토리에 파일들 직접 덮어쓰기 (컴파일 생략 핵심!)
-  cp -f "$TEST_GEN_DIR/program.hex" "$XSIM_DIR/program.hex"
-  cp -f "$TEST_GEN_DIR/expected_mem.hex" "$XSIM_DIR/expected_mem.hex"
-  cp -f "$TEST_GEN_DIR/expected_valid.hex" "$XSIM_DIR/expected_valid.hex"
-  cp -f "$SCRIPT_DIR/generated/use_external.flag" "$XSIM_DIR/use_external.flag"
+  # 테스트벤치는 sim/generated 아래 canonical hex 파일을 읽는다.
+  # 스냅샷은 재사용하되, 실행 직전에 케이스별 hex만 canonical 위치에 덮어쓴다.
+  cp -f "$TEST_GEN_DIR/program.hex" "$SCRIPT_DIR/generated/program.hex"
+  cp -f "$TEST_GEN_DIR/expected_mem.hex" "$SCRIPT_DIR/generated/expected_mem.hex"
+  cp -f "$TEST_GEN_DIR/expected_valid.hex" "$SCRIPT_DIR/generated/expected_valid.hex"
+  echo "1" > "$SCRIPT_DIR/generated/use_external.flag"
 
   # 🚀 XSim 본체 다이렉트 실행 (0.1초 컷!)
   cd "$XSIM_DIR"
-  ./$XSIM_BIN tb_rv32i_compliance_behav \
+  "$XSIM_BIN" tb_rv32i_compliance_behav \
     -key {Behavioral:sim_1:Functional:tb_rv32i_compliance} \
     -tclbatch tb_rv32i_compliance.tcl \
     -log simulate.log > /dev/null 2>&1 || true

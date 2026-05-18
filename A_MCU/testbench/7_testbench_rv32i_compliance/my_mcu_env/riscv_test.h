@@ -67,6 +67,10 @@ _start:                                                                 \
         .align 2;                                                       \
 write_tohost:                                                           \
         /* Write results directly to RESULT_BASE (0x700) */             \
+        nop;                                                            \
+        nop;                                                            \
+        nop;                                                            \
+        nop;                                                            \
         sw gp, 0x700(zero);                                             \
 self_loop:                                                              \
         j self_loop;                                                    \
