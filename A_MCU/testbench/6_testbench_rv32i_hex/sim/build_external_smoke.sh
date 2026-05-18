@@ -44,6 +44,13 @@ END {
 }
 ' > "$BUILD_DIR/program.hex"
 
+# The directed hex program uses 0x600 as an external data-memory fixture.
+# Keep it outside the executed text region and initialize it through the hex
+# image instead of constructing a negative-immediate constant in RF.
+awk 'NR == 385 { print "deadbeef"; next } { print }' \
+  "$BUILD_DIR/program.hex" > "$BUILD_DIR/program.hex.tmp"
+mv "$BUILD_DIR/program.hex.tmp" "$BUILD_DIR/program.hex"
+
 echo "4. Parse ELF symbols dynamically for PC-dependent instructions..."
 PC_ADDR=$("${TOOL_PREFIX}-nm" "$BUILD_DIR/external_smoke.elf" | grep -w "pc_label" | awk '{print $1}')
 JAL_ADDR=$("${TOOL_PREFIX}-nm" "$BUILD_DIR/external_smoke.elf" | grep -w "jal_label" | awk '{print $1}')
