@@ -3,7 +3,8 @@ module serv_rf_ram
     parameter csr_regs=4,
     parameter depth=32*(32+csr_regs)/width,
     parameter raw=$clog2(32+csr_regs),
-    parameter frame_bits=raw+8)
+    parameter frame_bits=raw+8,
+    parameter integer LAUNCH_DELAY = 1)
    (
     input wire i_clk,
     input wire [$clog2(depth)-1:0] i_waddr,
@@ -70,7 +71,14 @@ module serv_rf_ram
                tx_state <= FRAME_BITS;
                o_ext_rf_sync <= 1'b1;
             end else if ((i_wen || i_ren) && (!req_seen || (req_seen_key != last_req_key))) begin
-               launch_pending <= 1'b1;
+               if (LAUNCH_DELAY == 0) begin
+                  last_req_key <= req_seen_key;
+                  req_seen <= 1'b1;
+                  tx_state <= FRAME_BITS;
+                  o_ext_rf_sync <= 1'b1;
+               end else begin
+                  launch_pending <= 1'b1;
+               end
             end
          end 
          else begin

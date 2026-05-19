@@ -14,7 +14,9 @@
  * For reads, the external memory drives MISO during the final 32 bit times.
  * For writes, the bridge ignores MISO and acknowledges after the frame.
  */
-module offchip_mem_bridge (
+module offchip_mem_bridge #(
+    parameter integer SYS_CLK_EQUALS_FAST = 0
+) (
     input  wire        i_clk_fast,
     input  wire        i_clk_sys,
     input  wire        i_rst,
@@ -40,8 +42,7 @@ module offchip_mem_bridge (
 
     localparam [1:0] ST_IDLE = 2'd0;
     localparam [1:0] ST_SHIFT = 2'd1;
-    localparam [1:0] ST_ACK = 2'd2;
-    localparam [1:0] ST_ACK_HOLD = 2'd3;
+    localparam [1:0] ST_ACK_HOLD = 2'd2;
 
     reg [1:0] state = ST_IDLE;
     reg [31:0] shift_rx = 32'b0;
@@ -52,6 +53,7 @@ module offchip_mem_bridge (
 
     reg clk_sys_prev = 1'b0;
     wire clk_sys_rise = i_clk_sys & !clk_sys_prev;
+    wire sys_tick = (SYS_CLK_EQUALS_FAST != 0) ? 1'b1 : clk_sys_rise;
 
     wire dbus_req = i_rst ? 1'b0 : i_dbus_cyc;
     wire ibus_req = i_rst ? 1'b0 : i_ibus_cyc;
@@ -90,9 +92,9 @@ module offchip_mem_bridge (
                     o_dbus_ack <= 1'b0;
                     o_mem_sync <= 1'b0;
 
-                    if (clk_sys_rise) begin
+                    if (sys_tick) begin
                         if (dbus_req || ibus_req) begin
-                            if (req_pending) begin
+                            if ((SYS_CLK_EQUALS_FAST != 0) || req_pending) begin
                                 active_ibus <= next_ibus;
                                 active_we <= next_we;
                                 shift_rx <= 32'b0;
@@ -124,7 +126,7 @@ module offchip_mem_bridge (
                 end
 
                 ST_ACK_HOLD: begin
-                    if (clk_sys_rise) begin
+                    if (sys_tick) begin
                         o_ibus_ack <= 1'b0;
                         o_dbus_ack <= 1'b0;
                         state <= ST_IDLE;

@@ -1,5 +1,6 @@
 padgroup Control permute
 twpin_i_clk_fast nonfixed
+twpin_i_clk_sys_ext nonfixed
 twpin_i_rst_n nonfixed
 twpin_i_uart_rx nonfixed
 twpin_o_uart_tx nonfixed
