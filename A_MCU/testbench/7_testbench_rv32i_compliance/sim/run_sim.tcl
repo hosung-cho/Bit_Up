@@ -96,6 +96,9 @@ puts "\[Tcl\] 4. 시뮬레이션 설정..."
 set_property -name {xsim.simulate.runtime} -value {all} -objects [get_filesets sim_1]
 set_property -name {xsim.elaborate.load_glbl} -value {false} -objects [get_filesets sim_1]
 set_property -name {xsim.simulate.log_all_signals} -value {false} -objects [get_filesets sim_1]
+if {[info exists ::env(TB_TRACE_RF_X11_X14)] && ($::env(TB_TRACE_RF_X11_X14) ne "0")} {
+    set_property verilog_define {TB_TRACE_RF_X11_X14} [get_filesets sim_1]
+}
 
 puts "\[Tcl\] 5. 컴파일 및 시뮬레이션 실행!"
 launch_simulation
