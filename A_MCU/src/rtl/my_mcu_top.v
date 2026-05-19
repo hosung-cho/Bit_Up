@@ -152,40 +152,48 @@ module my_mcu_top #(
         end
     endfunction
 
+    function decode_wdata0_next_hint;
+        input [31:0] insn;
+        reg is_bool_alu;
+        reg is_sub_alu;
+        reg is_u_type;
+        begin
+            is_bool_alu = ((insn[6:0] == 7'b0110011) ||
+                           (insn[6:0] == 7'b0010011)) &&
+                          ((insn[14:12] == 3'b100) ||
+                           (insn[14:12] == 3'b110) ||
+                           (insn[14:12] == 3'b111));
+            is_sub_alu = (insn[6:0] == 7'b0110011) &&
+                         (insn[14:12] == 3'b000) &&
+                         insn[30];
+            is_u_type = (insn[6:0] == 7'b0110111) || // LUI
+                        (insn[6:0] == 7'b0010111);   // AUIPC
+
+            decode_wdata0_next_hint = is_bool_alu | is_sub_alu | is_u_type;
+        end
+    endfunction
+
     reg has_fetched_first_insn;
-    reg [31:0] current_insn;
+    reg current_wdata0_next_hint;
     always @(posedge clk_sys or posedge rst) begin
         if (rst) begin
             rf_read_reg0 <= {1'b0, 5'd0};
             rf_read_reg1 <= {1'b0, 5'd0};
             has_fetched_first_insn <= 1'b0;
-            current_insn <= 32'h0000_0013;
+            current_wdata0_next_hint <= 1'b0;
         end else if (wb_ibus_ack) begin
             rf_read_reg0 <= {1'b0, wb_ibus_rdt[19:15]};
             rf_read_reg1 <= decode_rf_read_reg1(wb_ibus_rdt);
             has_fetched_first_insn <= 1'b1;
-            current_insn <= wb_ibus_rdt;
+            current_wdata0_next_hint <= decode_wdata0_next_hint(wb_ibus_rdt);
         end else if (rf_rreq) begin
             rf_read_reg0 <= rreg0;
             rf_read_reg1 <= rreg1;
         end
     end
 
-    wire current_is_bool_alu = ((current_insn[6:0] == 7'b0110011) ||
-                                (current_insn[6:0] == 7'b0010011)) &&
-                               ((current_insn[14:12] == 3'b100) ||
-                                (current_insn[14:12] == 3'b110) ||
-                                (current_insn[14:12] == 3'b111));
-    wire current_is_sub_alu = (current_insn[6:0] == 7'b0110011) &&
-                              (current_insn[14:12] == 3'b000) &&
-                              current_insn[30];
-    wire current_is_u_type = (current_insn[6:0] == 7'b0110111) || // LUI
-                             (current_insn[6:0] == 7'b0010111);   // AUIPC
-
     assign rf_wdata0_next_to_if = rf_wdata0_next |
-                                  current_is_bool_alu |
-                                  current_is_sub_alu |
-                                  current_is_u_type;
+                                  current_wdata0_next_hint;
 
     assign rf_read_reg0_to_if = wb_ibus_ack ? {1'b0, wb_ibus_rdt[19:15]} :
                                 rf_read_reg0;

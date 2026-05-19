@@ -286,10 +286,10 @@ module tb_rv32i_compliance;
              (rx_buffer[RF_FRAME_BITS-3:6] == 5'd7) ||
              (rx_buffer[RF_FRAME_BITS-3:6] == 5'd6) ||
              (rx_buffer[RF_FRAME_BITS-3:6] == 5'd12))
-            $display("TB_RF_WRITE: reg=%0d chunk=%0d data=%b pc=%h insn=%h next_raw=%b next_if=%b bool=%b rcnt=%b wchunk=%0d wnext=%b w0r=%b time=%t",
+            $display("TB_RF_WRITE: reg=%0d chunk=%0d data=%b pc=%h last_insn=%h next_raw=%b next_if=%b hint=%b rcnt=%b wchunk=%0d wnext=%b w0r=%b time=%t",
                      rx_buffer[RF_FRAME_BITS-3:6], rx_buffer[5:2], rx_buffer[1:0],
-                     dut.wb_ibus_adr, dut.current_insn, dut.rf_wdata0_next,
-                     dut.rf_wdata0_next_to_if, dut.current_is_bool_alu,
+                     dut.wb_ibus_adr, last_ibus_insn, dut.rf_wdata0_next,
+                     dut.rf_wdata0_next_to_if, dut.current_wdata0_next_hint,
                      dut.u_rf_if.rcnt, dut.u_rf_if.write_chunk,
                      dut.u_rf_if.wdata0_next, dut.u_rf_if.wdata0_r, $time);
 `endif

@@ -68,8 +68,12 @@ Rec_Pointer Next_Ptr_Glob = &Glob_2;
 int    Int_Glob = 0;
 char   Char_Glob_1 = '\0';
 char   Char_Glob_2 = '\0';
-int    Arr_1_Glob[50];
-int    Arr_2_Glob[50][50];
+/*
+ * This compact benchmark only touches Arr_1_Glob[8] and Arr_2_Glob[8][7].
+ * Keep the backing storage inside the 2KB external RAM used by this MCU TB.
+ */
+int    Arr_1_Glob[9];
+int    Arr_2_Glob[9][8];
 
 /* 함수 프로토타입 */
 void Proc_1(Rec_Pointer Ptr_Val_Par);

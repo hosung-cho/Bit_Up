@@ -188,7 +188,7 @@ module tb_rv32i_dhrystone;
 
    initial begin
       rst_n = 0;
-      #200;
+      #20000;
       rst_n = 1;
    end
 
@@ -214,6 +214,12 @@ module tb_rv32i_dhrystone;
       // 시뮬레이션 폭발 방지 세이프가드 타임아웃 (450ms)
       #450000000;
       $display("[TIMEOUT] Dhrystone benchmark simulation timed out!");
+      $display("  cycles=%0d fetches=%0d last_pc=%08h last_insn=%08h",
+               cycle_cnt, fetch_cnt, last_ibus_adr, last_ibus_insn);
+      $display("  RF frames=%0d writes=%0d reads=%0d invalid=%0d",
+               frame_cnt, write_frame_cnt, read_frame_cnt, invalid_rf_frame_cnt);
+      $display("  Memory frames=%0d writes=%0d reads=%0d last_addr=%08h last_wdata=%08h",
+               mem_frame_cnt, mem_write_cnt, mem_read_cnt, mem_addr, mem_wdata);
       $fatal(1, "[TIMEOUT] Fail");
    end
 endmodule
