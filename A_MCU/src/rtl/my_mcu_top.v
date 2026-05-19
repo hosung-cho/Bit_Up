@@ -9,7 +9,7 @@ module my_mcu_top #(
     // QFlow physical implementation copy: synthesize the area-first external
     // slow-clock variant.  The canonical RTL keeps USE_EXT_SYS_CLK=0 by
     // default for existing functional simulations.
-    parameter integer USE_EXT_SYS_CLK = 1
+    parameter integer USE_EXT_SYS_CLK = 0
 ) (
     input  wire i_clk_fast,    // RF/memory serial fast clock
     input  wire i_clk_sys_ext, // optional external slow SERV clock
@@ -25,18 +25,7 @@ module my_mcu_top #(
     output wire o_mem_sync,
     output wire o_mem_sck,
     output wire o_mem_mosi,
-    input  wire i_mem_miso,
-
-    // UART
-    output wire o_uart_tx,
-    input  wire i_uart_rx,
-
-    // GPIO
-    input  wire [7:0] i_gpio,
-    output wire [7:0] o_gpio,
-    output wire [7:0] o_gpio_oe
-    
-    // (SPI, GPIO 핀 등은 생략 - 필요시 추가)
+    input  wire i_mem_miso
 );
 
     // 1. 클럭 및 리셋
@@ -335,10 +324,6 @@ module my_mcu_top #(
         .o_mem_mosi(o_mem_mosi),
         .i_mem_miso(i_mem_miso)
     );
-
-    assign o_uart_tx = 1'b1;
-    assign o_gpio = 8'h00;
-    assign o_gpio_oe = 8'h00;
 
     assign wb_dbus_rdt = mem_dbus_rdt;
     assign wb_dbus_ack = mem_dbus_ack;

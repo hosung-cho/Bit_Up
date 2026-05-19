@@ -66,12 +66,7 @@ module tb_rv32i_directed;
       .o_mem_sync(mem_sync),
       .o_mem_sck(mem_sck),
       .o_mem_mosi(mem_mosi),
-      .i_mem_miso(mem_miso),
-      .o_uart_tx(),
-      .i_uart_rx(1'b1),
-      .i_gpio(8'ha5),
-      .o_gpio(gpio_out),
-      .o_gpio_oe(gpio_oe)
+      .i_mem_miso(mem_miso)
    );
 
    reg [31:0] pico_ram [0:RF_REGS-1];

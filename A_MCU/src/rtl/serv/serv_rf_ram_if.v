@@ -48,8 +48,8 @@ module serv_rf_ram_if
    reg        stream_pending;
    reg        stream_active;
 
-   assign o_rdata0 = stream_active ? read_buf0[stream_cnt] : 1'b0;
-   assign o_rdata1 = stream_active ? read_buf1[stream_cnt] : 1'b0;
+   assign o_rdata0 = stream_active ? read_buf0[0] : 1'b0;
+   assign o_rdata1 = stream_active ? read_buf1[0] : 1'b0;
 
    localparam ratio = width/W;
    localparam CMSB = 4-$clog2(W);
@@ -150,11 +150,9 @@ module serv_rf_ram_if
       end else if (prefetch_active) begin
          if (prev_valid) begin
             if (prev_sel)
-               read_buf1[{prev_chunk, 1'b0} +: 2] <=
-                  (prev_reg[4:0] == 5'd0) ? {width{1'b0}} : i_rdata;
+               read_buf1 <= {(prev_reg[4:0] == 5'd0) ? {width{1'b0}} : i_rdata, read_buf1[31:2]};
             else
-               read_buf0[{prev_chunk, 1'b0} +: 2] <=
-                  (prev_reg[4:0] == 5'd0) ? {width{1'b0}} : i_rdata;
+               read_buf0 <= {(prev_reg[4:0] == 5'd0) ? {width{1'b0}} : i_rdata, read_buf0[31:2]};
          end
 
          if (issue_idx < 6'd32) begin
@@ -169,8 +167,10 @@ module serv_rf_ram_if
       end
 
       if (stream_active) begin
-         stream_cnt <= stream_cnt + 6'd1;
-         if (stream_cnt == 6'd31)
+         read_buf0 <= {1'b0, read_buf0[31:1]};
+         read_buf1 <= {1'b0, read_buf1[31:1]};
+         stream_cnt <= stream_cnt + 5'd1;
+         if (stream_cnt == 5'd31)
             stream_active <= 1'b0;
       end
 

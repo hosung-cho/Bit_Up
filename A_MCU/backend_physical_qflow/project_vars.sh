@@ -4,6 +4,7 @@
 # Prefer conservative density first; tighten only after routing succeeds.
 set initial_density = 0.90
 set graywolf_options = "-n"
+set yosys_options = "-s /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/backend_physical_qflow/source/my_mcu_top_custom.ys"
 
 # The ETRI examples disallow stacked vias for this process setup.
 set via_stacks = "none"
