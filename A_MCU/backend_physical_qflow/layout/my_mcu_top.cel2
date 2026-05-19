@@ -1,0 +1,53 @@
+padgroup Control permute
+twpin_i_clk_fast nonfixed
+twpin_i_rst_n nonfixed
+twpin_i_uart_rx nonfixed
+twpin_o_uart_tx nonfixed
+restrict side T
+
+padgroup RF_Bridge permute
+twpin_o_rf_sync nonfixed
+twpin_o_rf_sck nonfixed
+twpin_o_rf_mosi nonfixed
+twpin_i_rf_miso nonfixed
+restrict side L
+
+padgroup Mem_Bridge permute
+twpin_o_mem_sync nonfixed
+twpin_o_mem_sck nonfixed
+twpin_o_mem_mosi nonfixed
+twpin_i_mem_miso nonfixed
+restrict side R
+
+padgroup GPIO_In permute
+twpin_i_gpio[0] nonfixed
+twpin_i_gpio[1] nonfixed
+twpin_i_gpio[2] nonfixed
+twpin_i_gpio[3] nonfixed
+twpin_i_gpio[4] nonfixed
+twpin_i_gpio[5] nonfixed
+twpin_i_gpio[6] nonfixed
+twpin_i_gpio[7] nonfixed
+restrict side B
+
+padgroup GPIO_Out permute
+twpin_o_gpio[0] nonfixed
+twpin_o_gpio[1] nonfixed
+twpin_o_gpio[2] nonfixed
+twpin_o_gpio[3] nonfixed
+twpin_o_gpio[4] nonfixed
+twpin_o_gpio[5] nonfixed
+twpin_o_gpio[6] nonfixed
+twpin_o_gpio[7] nonfixed
+restrict side B
+
+padgroup GPIO_OE permute
+twpin_o_gpio_oe[0] nonfixed
+twpin_o_gpio_oe[1] nonfixed
+twpin_o_gpio_oe[2] nonfixed
+twpin_o_gpio_oe[3] nonfixed
+twpin_o_gpio_oe[4] nonfixed
+twpin_o_gpio_oe[5] nonfixed
+twpin_o_gpio_oe[6] nonfixed
+twpin_o_gpio_oe[7] nonfixed
+restrict side B

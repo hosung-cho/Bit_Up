@@ -1,0 +1,12 @@
+#!/bin/tcsh -f
+# QFlow project variables for my_mcu_top on ETRI 0.5um CMOS.
+
+# Prefer conservative density first; tighten only after routing succeeds.
+set initial_density = 0.90
+set graywolf_options = "-n"
+
+# The ETRI examples disallow stacked vias for this process setup.
+set via_stacks = "none"
+
+# Keep qrouter visible in logs; use non-GUI batch execution.
+set route_show = 0
