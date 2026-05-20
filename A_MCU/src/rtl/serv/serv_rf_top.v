@@ -130,6 +130,7 @@ module serv_rf_top
       .i_wdata0_next (rf_wdata0_next),
       .i_rreg0  (rreg0),
       .i_rreg1  (rreg1),
+      .i_stream_rs2_en (1'b1),
       .o_rdata0 (rdata0),
       .o_rdata1 (rdata1),
       .o_waddr  (waddr),

@@ -16,6 +16,8 @@ module serv_top
     parameter [0:0] DEBUG = 1'b0,
     parameter [0:0] MDU = 1'b0,
     parameter [0:0] WITH_MEM = 1'b1,
+    parameter [0:0] WORD_MEM_ONLY = 1'b0,
+    parameter [0:0] STORE_ONLY_MEM = 1'b0,
     parameter [0:0] COMPRESSED=0,
     parameter [0:0] ALIGN = COMPRESSED)
    (
@@ -300,6 +302,8 @@ module serv_top
    serv_decode
      #(.PRE_REGISTER (PRE_REGISTER),
        .WITH_MEM(WITH_MEM),
+       .WORD_MEM_ONLY(WORD_MEM_ONLY),
+       .STORE_ONLY_MEM(STORE_ONLY_MEM),
        .MDU(MDU))
    decode
      (
@@ -541,6 +545,7 @@ module serv_top
       if (WITH_MEM) begin : gen_mem_if
          serv_mem_if
            #(.WITH_CSR (WITH_CSR[0:0]),
+             .WORD_MEM_ONLY (WORD_MEM_ONLY),
              .W (W))
          mem_if
            (

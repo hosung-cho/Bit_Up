@@ -1,4 +1,6 @@
-# Custom synthesis script for area-first optimization
+# Experimental synthesis script: restore rs2 with a streaming rs2 RF read path.
+# This keeps data bus disabled and tries to recover the area lost by
+# SINGLE_RF_READ=0 without bringing back the full second 32-bit read buffer.
 read_liberty -lib -ignore_miss_dir -setattr blackbox /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
 read_verilog  /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/my_mcu_top.v
 read_verilog  offchip_mem_bridge.v
@@ -25,28 +27,22 @@ chparam -set SINGLE_RF_READ 0 my_mcu_top
 chparam -set STREAM_RS2_READ 1 my_mcu_top
 chparam -set RESET_STRATEGY "NONE" my_mcu_top
 
-# High-level synthesis (preventing default abc inside synth)
 synth -top my_mcu_top -noabc
 
-# Flatten the hierarchy BEFORE register mapping and combinatorial mapping
 flatten
 share -force
 opt -purge
 
-# Map register flops
 dfflibmap -liberty /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
 opt -purge
 
-# Custom ABC script for area optimization on the FLATTENED design
 abc -exe /usr/local/share/qflow/bin/yosys-abc -liberty /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib -script +strash;ifraig;scorr;dc2;strash;map,-a
 setundef -zero
 
 clean -purge
-# Output buffering
 iopadmap -outpad BUFX2 A:Y -bits
-# Cleanup
 opt
 clean
 rename -enumerate
-write_verilog  my_mcu_top_mapped.v
+write_verilog  my_mcu_top_rs2_stream_mapped.v
 stat

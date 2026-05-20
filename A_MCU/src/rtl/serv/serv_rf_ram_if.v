@@ -13,6 +13,7 @@ module serv_rf_ram_if
     parameter gpr_regs=32,
     parameter csr_regs=4,
     parameter single_read_port=0,
+    parameter stream_rs2_read=0,
     parameter B=W-1,
     parameter raw=$clog2(gpr_regs+csr_regs),
     parameter l2w=$clog2(width),
@@ -32,6 +33,7 @@ module serv_rf_ram_if
    input wire		   i_wdata0_next,
    input wire [raw-1:0]	   i_rreg0,
    input wire [raw-1:0]	   i_rreg1,
+   input wire              i_stream_rs2_en,
    output wire [B:0]	   o_rdata0,
    output wire [B:0]	   o_rdata1,
    
@@ -62,8 +64,12 @@ module serv_rf_ram_if
    reg        stream_active;
 
    assign o_rdata0 = stream_active ? read_buf0[0] : 1'b0;
+   wire stream_rs2_mode = (stream_rs2_read != 0) && (single_read_port == 0);
+   wire stream_rs2_active = stream_rs2_mode && i_stream_rs2_en;
+   reg [width-1:0] rs2_stream_buf;
+
    assign o_rdata1 = (single_read_port != 0) ? 1'b0 :
-                     stream_active ? read_buf1[0] : 1'b0;
+                     stream_active ? (stream_rs2_active ? rs2_stream_buf[0] : read_buf1[0]) : 1'b0;
 
    localparam ratio = width/W;
    localparam CMSB = 4-$clog2(W);
@@ -108,12 +114,22 @@ module serv_rf_ram_if
    reg [raw-1:0] rreg0_latched;
    reg [raw-1:0] rreg1_latched;
 
-   wire [3:0] issue_chunk = (single_read_port != 0) ? issue_idx[3:0] : issue_idx[4:1];
-   wire       issue_sel   = (single_read_port != 0) ? 1'b0 : issue_idx[0];
+   wire       issue_stream_rs2 = stream_rs2_active && (issue_idx == 6'd16);
+   wire [3:0] issue_chunk = (single_read_port != 0) ? issue_idx[3:0] :
+                             stream_rs2_mode ? (issue_stream_rs2 ? 4'd0 : issue_idx[3:0]) :
+                             issue_idx[4:1];
+   wire       issue_sel   = (single_read_port != 0) ? 1'b0 :
+                             stream_rs2_mode ? issue_stream_rs2 :
+                             issue_idx[0];
    wire [raw-1:0] issue_reg = issue_sel ? rreg1_latched : rreg0_latched;
    wire       prev_valid = prefetch_active && (issue_idx != 6'd0);
    wire [4:0] prev_issue_idx = issue_idx[4:0] - 5'd1;
-   wire       prev_sel = (single_read_port != 0) ? 1'b0 : prev_issue_idx[0];
+   wire       prev_sel = (single_read_port != 0) ? 1'b0 :
+                          stream_rs2_mode ? (stream_rs2_active && (prev_issue_idx == 5'd16)) :
+                          prev_issue_idx[0];
+   wire [5:0] issue_limit = (single_read_port != 0) ? 6'd16 :
+                             stream_rs2_mode ? (i_stream_rs2_en ? 6'd17 : 6'd16) :
+                             6'd32;
    wire [aw-1:0] raddr_w = o_raddr;
    wire          ren_w   = o_ren;
 
@@ -237,13 +253,17 @@ module serv_rf_ram_if
          issue_idx <= 6'd0;
       end else if (prefetch_active) begin
          if (prev_valid) begin
-            if (prev_sel)
-               read_buf1 <= {rdata_w, read_buf1[31:2]};
-            else
+            if (prev_sel) begin
+               if (stream_rs2_active)
+                  rs2_stream_buf <= rdata_w;
+               else
+                  read_buf1 <= {rdata_w, read_buf1[31:2]};
+            end else begin
                read_buf0 <= {rdata_w, read_buf0[31:2]};
+            end
          end
 
-         if (issue_idx < ((single_read_port != 0) ? 6'd16 : 6'd32)) begin
+         if (issue_idx < issue_limit) begin
             o_ren <= 1'b1;
             o_raddr <= {issue_reg, issue_chunk};
             issue_idx <= issue_idx + 6'd1;
@@ -256,7 +276,20 @@ module serv_rf_ram_if
 
       if (stream_active) begin
          read_buf0 <= {1'b0, read_buf0[31:1]};
-         read_buf1 <= {1'b0, read_buf1[31:1]};
+         if (stream_rs2_mode) begin
+            if (!stream_cnt[0]) begin
+               rs2_stream_buf <= {1'b0, rs2_stream_buf[width-1:1]};
+               if (stream_rs2_active && (stream_cnt != 5'd30)) begin
+                  o_ren <= 1'b1;
+                  o_raddr <= {rreg1_latched, stream_cnt[4:1] + 4'd1};
+               end
+            end else if (stream_cnt != 5'd31) begin
+               if (stream_rs2_active)
+                  rs2_stream_buf <= rdata_w;
+            end
+         end else begin
+            read_buf1 <= {1'b0, read_buf1[31:1]};
+         end
          stream_cnt <= stream_cnt + 5'd1;
          if (stream_cnt == 5'd31)
             stream_active <= 1'b0;
@@ -269,6 +302,7 @@ module serv_rf_ram_if
             o_ren <= 1'b0;
             read_buf0 <= 32'b0;
             read_buf1 <= 32'b0;
+            rs2_stream_buf <= {width{1'b0}};
             rcnt <= {CMSB+1{1'b0}};
             rtrig1 <= 1'b0;
             wdata0_r <= {width{1'b0}};

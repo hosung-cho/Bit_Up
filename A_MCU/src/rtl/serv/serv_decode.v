@@ -8,6 +8,8 @@
 module serv_decode
   #(parameter [0:0] PRE_REGISTER = 1,
     parameter [0:0] WITH_MEM = 1,
+    parameter [0:0] WORD_MEM_ONLY = 0,
+    parameter [0:0] STORE_ONLY_MEM = 0,
     parameter [0:0] MDU = 0)
   (
    input wire        clk,
@@ -86,11 +88,15 @@ module serv_decode
 	(funct3[1] & ~funct3[2] & ~opcode[0] & ~opcode[4]) | co_mdu_op;
    wire co_shift_op = (opcode[2] & ~funct3[1]) & !co_mdu_op;
    wire co_branch_op = opcode[4];
-   wire co_dbus_en    = WITH_MEM & ~opcode[2] & ~opcode[4];
-   wire co_mtval_pc   = opcode[4];
    wire co_mem_word   = funct3[1];
+   wire co_word_mem_ok = !WORD_MEM_ONLY | co_mem_word;
+   wire co_mem_store  = opcode[3];
+   wire co_mem_load   = !opcode[2] & !opcode[0];
+   wire co_mem_access_ok = !STORE_ONLY_MEM | co_mem_store;
+   wire co_dbus_en    = WITH_MEM & co_mem_access_ok & co_word_mem_ok & ~opcode[2] & ~opcode[4];
+   wire co_mtval_pc   = opcode[4];
    wire co_rd_alu_en  = !opcode[0] & opcode[2] & !opcode[4] & !co_mdu_op;
-   wire co_rd_mem_en  = (WITH_MEM & !opcode[2] & !opcode[0]) | co_mdu_op;
+   wire co_rd_mem_en  = (WITH_MEM & !STORE_ONLY_MEM & co_word_mem_ok & co_mem_load) | co_mdu_op;
    wire [2:0] co_ext_funct3 = funct3;
 
    //jal,branch =     imm
@@ -206,9 +212,9 @@ module serv_decode
 
    wire co_alu_cmp_sig = ~((funct3[0] & funct3[1]) | (funct3[1] & funct3[2]));
 
-   wire co_mem_cmd  = WITH_MEM & opcode[3];
-   wire co_mem_signed = WITH_MEM & ~funct3[2];
-   wire co_mem_half   = WITH_MEM & funct3[0];
+   wire co_mem_cmd  = WITH_MEM & co_mem_store;
+   wire co_mem_signed = WITH_MEM & !WORD_MEM_ONLY & ~funct3[2];
+   wire co_mem_half   = WITH_MEM & !WORD_MEM_ONLY & funct3[0];
 
    wire [1:0] co_alu_bool_op = funct3[1:0];
 

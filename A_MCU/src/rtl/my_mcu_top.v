@@ -16,8 +16,11 @@ module my_mcu_top #(
     parameter integer MEM_ADDR_BITS = 32,
     parameter integer USE_RF_INTERLOCK = 1,
     parameter integer DISABLE_DBUS = 0,
+    parameter integer WORD_MEM_ONLY = 0,
+    parameter integer STORE_ONLY_DBUS = 0,
     parameter integer SERV_PRE_REGISTER = 1,
     parameter integer SINGLE_RF_READ = 0,
+    parameter integer STREAM_RS2_READ = 0,
     // Keep MINI for simulation/debug. The physical implementation copy can
     // override this to "NONE" when the MPW flow needs the smallest cell area.
     parameter RESET_STRATEGY = "MINI"
@@ -217,8 +220,18 @@ module my_mcu_top #(
         end
     endfunction
 
+    function decode_uses_rs2;
+        input [31:0] insn;
+        begin
+            decode_uses_rs2 = (insn[6:0] == 7'b0110011) | // R-type ALU
+                              (insn[6:0] == 7'b1100011) | // branch compare
+                              (insn[6:0] == 7'b0100011);  // store data
+        end
+    endfunction
+
     reg has_fetched_first_insn;
     reg current_wdata0_next_hint;
+    reg current_stream_rs2_hint;
     generate
         if (RESET_STRATEGY == "NONE") begin : gen_rf_prefetch_hint_no_reset
             always @(posedge clk_sys) begin
@@ -227,6 +240,7 @@ module my_mcu_top #(
                     rf_read_reg1 <= (USE_RF_INTERLOCK == 0) ? rreg1 : decode_rf_read_reg1(wb_ibus_rdt);
                     has_fetched_first_insn <= 1'b1;
                     current_wdata0_next_hint <= (USE_RF_INTERLOCK == 0) ? 1'b0 : decode_wdata0_next_hint(wb_ibus_rdt);
+                    current_stream_rs2_hint <= decode_uses_rs2(wb_ibus_rdt);
                 end else if (rf_rreq) begin
                     rf_read_reg0 <= rreg0;
                     rf_read_reg1 <= rreg1;
@@ -239,11 +253,13 @@ module my_mcu_top #(
                     rf_read_reg1 <= {1'b0, 5'd0};
                     has_fetched_first_insn <= 1'b0;
                     current_wdata0_next_hint <= 1'b0;
+                    current_stream_rs2_hint <= 1'b0;
                 end else if (wb_ibus_ack) begin
                     rf_read_reg0 <= (USE_RF_INTERLOCK == 0) ? rreg0 : {1'b0, wb_ibus_rdt[19:15]};
                     rf_read_reg1 <= (USE_RF_INTERLOCK == 0) ? rreg1 : decode_rf_read_reg1(wb_ibus_rdt);
                     has_fetched_first_insn <= 1'b1;
                     current_wdata0_next_hint <= (USE_RF_INTERLOCK == 0) ? 1'b0 : decode_wdata0_next_hint(wb_ibus_rdt);
+                    current_stream_rs2_hint <= decode_uses_rs2(wb_ibus_rdt);
                 end else if (rf_rreq) begin
                     rf_read_reg0 <= rreg0;
                     rf_read_reg1 <= rreg1;
@@ -270,6 +286,8 @@ module my_mcu_top #(
         .W(W),
         .PRE_REGISTER(SERV_PRE_REGISTER != 0),
         .WITH_MEM(DISABLE_DBUS == 0),
+        .WORD_MEM_ONLY(WORD_MEM_ONLY != 0),
+        .STORE_ONLY_MEM(STORE_ONLY_DBUS != 0),
         .RESET_STRATEGY(RESET_STRATEGY)
     ) u_cpu (
         .clk(clk_sys),
@@ -313,6 +331,7 @@ module my_mcu_top #(
         .gpr_regs(GPR_REGS),
         .csr_regs(CSR_REGS),
         .single_read_port(SINGLE_RF_READ != 0),
+        .stream_rs2_read(STREAM_RS2_READ != 0),
         .W(W)
     ) u_rf_if (
         .i_clk(clk_sys),
@@ -329,6 +348,7 @@ module my_mcu_top #(
         .i_wdata0_next(rf_wdata0_next_to_if),
         .i_rreg0(rf_rreg0_to_if),
         .i_rreg1(rf_rreg1_to_if),
+        .i_stream_rs2_en(wb_ibus_ack ? decode_uses_rs2(wb_ibus_rdt) : current_stream_rs2_hint),
         .o_rdata0(rdata0),
         .o_rdata1(rdata1),
         .o_waddr(waddr),
@@ -364,8 +384,8 @@ module my_mcu_top #(
         .i_dbus_cyc((DISABLE_DBUS == 0) ? wb_dbus_cyc : 1'b0),
         .i_dbus_adr(wb_dbus_adr),
         .i_dbus_dat(wb_dbus_dat),
-        .i_dbus_sel(wb_dbus_sel),
-        .i_dbus_we(wb_dbus_we),
+        .i_dbus_sel((STORE_ONLY_DBUS != 0) ? 4'b1111 : wb_dbus_sel),
+        .i_dbus_we((STORE_ONLY_DBUS != 0) ? 1'b1 : wb_dbus_we),
         .o_dbus_rdt(mem_dbus_rdt),
         .o_dbus_ack(mem_dbus_ack),
 
@@ -375,7 +395,7 @@ module my_mcu_top #(
         .i_mem_miso(i_mem_miso)
     );
 
-    assign wb_dbus_rdt = (DISABLE_DBUS == 0) ? mem_dbus_rdt : 32'b0;
+    assign wb_dbus_rdt = ((DISABLE_DBUS == 0) && (STORE_ONLY_DBUS == 0)) ? mem_dbus_rdt : 32'b0;
     assign wb_dbus_ack = (DISABLE_DBUS == 0) ? mem_dbus_ack : wb_dbus_cyc;
 
 endmodule
