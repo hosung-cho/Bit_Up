@@ -2153,7 +2153,7 @@ wire _359_ ;
 
 DFFPOSX1 _3823_ (
     .D(_1192_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
     .Q(\u_cpu.state.i_ctrl_misalign )
 );
 
@@ -2164,13 +2164,25 @@ OAI21X1 _3403_ (
     .Y(_449_)
 );
 
-FILL FILL_0_CLKBUF1_insert134 (
+FILL FILL_0__2675_ (
+);
+
+FILL FILL_0_CLKBUF1_insert131 (
+);
+
+FILL FILL_0_CLKBUF1_insert133 (
+);
+
+FILL FILL_0_CLKBUF1_insert136 (
+);
+
+FILL FILL_0_CLKBUF1_insert138 (
 );
 
 MUX2X1 _3632_ (
     .A(_151_),
     .B(_854_),
-    .S(_602__bF$buf1),
+    .S(_602__bF$buf4),
     .Y(_1114_)
 );
 
@@ -2179,18 +2191,21 @@ INVX1 _3212_ (
     .Y(_311_)
 );
 
+FILL FILL_0__2064_ (
+);
+
 NAND2X1 _2903_ (
     .A(\u_rf_if.read_buf0 [21]),
-    .B(_22__bF$buf1),
+    .B(_22__bF$buf2),
     .Y(_87_)
 );
 
-FILL FILL_0__3269_ (
+FILL FILL_0__3689_ (
 );
 
 DFFPOSX1 _3861_ (
     .D(_1126_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
     .Q(\u_cpu.ctrl.pc_plus_offset_cy_r_w )
 );
 
@@ -2207,22 +2222,25 @@ AOI21X1 _3021_ (
     .Y(_1298_)
 );
 
-FILL FILL_0__2293_ (
-);
-
 NAND2X1 _2712_ (
     .A(\u_rf_if.read_buf1 [4]),
-    .B(_1783__bF$buf1),
+    .B(_1783__bF$buf4),
     .Y(_1797_)
 );
 
 FILL FILL_0__3498_ (
 );
 
+FILL FILL_0__3078_ (
+);
+
 DFFPOSX1 _3917_ (
     .D(_1353_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
     .Q(\u_rf_if.read_buf1 [25])
+);
+
+FILL FILL_0__1984_ (
 );
 
 INVX1 _3670_ (
@@ -2240,11 +2258,23 @@ AOI22X1 _3250_ (
 
 DFFPOSX1 _4035_ (
     .D(_1211_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
     .Q(\u_cpu.bufreg.data [17])
 );
 
+FILL FILL_0_BUFX2_insert21 (
+);
+
 FILL FILL_0_BUFX2_insert23 (
+);
+
+FILL FILL_0_BUFX2_insert25 (
+);
+
+FILL FILL_0_BUFX2_insert27 (
+);
+
+FILL FILL_0_BUFX2_insert29 (
 );
 
 OAI21X1 _2941_ (
@@ -2263,27 +2293,33 @@ AOI21X1 _2521_ (
 
 OAI21X1 _2101_ (
     .A(_840_),
-    .B(_973__bF$buf4),
+    .B(_973__bF$buf3),
     .C(_835_),
     .Y(_834_)
 );
 
 DFFPOSX1 _3726_ (
     .D(_1250_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
     .Q(\u_cpu.bufreg.i_sh_signed )
 );
 
 OAI21X1 _3306_ (
-    .A(_659__bF$buf2),
+    .A(_659__bF$buf5),
     .B(_292_),
     .C(_387_),
     .Y(_388_)
 );
 
+FILL FILL_0__2998_ (
+);
+
+FILL FILL_0__2578_ (
+);
+
 AND2X2 _2750_ (
     .A(_1825_),
-    .B(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf7),
     .Y(_1365_)
 );
 
@@ -2296,12 +2332,12 @@ OAI21X1 _2330_ (
 
 DFFPOSX1 _3955_ (
     .D(_1372_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
     .Q(\u_rf_if.read_buf1 [6])
 );
 
 OAI21X1 _3535_ (
-    .A(mem_dbus_ack_bF$buf5),
+    .A(mem_dbus_ack_bF$buf0),
     .B(\u_cpu.bufreg2.dlo [3]),
     .C(_553_),
     .Y(_554_)
@@ -2314,36 +2350,33 @@ OAI21X1 _3115_ (
     .Y(_241_)
 );
 
+FILL FILL_0__2387_ (
+);
+
 DFFPOSX1 _4073_ (
     .D(_1438_),
-    .CLK(i_clk_fast_bF$buf6),
+    .CLK(i_clk_fast_bF$buf7),
     .Q(\u_mem_serial.shift_reg [17])
 );
 
 OAI21X1 _2806_ (
-    .A(\u_rf_if.stream_active_bF$buf1 ),
+    .A(\u_rf_if.stream_active_bF$buf7 ),
     .B(_1742_),
     .C(_13_),
     .Y(_14_)
 );
 
-FILL FILL126750x118950 (
-);
-
 DFFSR _3764_ (
-    .R(i_rst_n_bF$buf9),
+    .R(i_rst_n_bF$buf10),
     .S(vdd),
     .D(_1111_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
     .Q(ibus_pending_rdt[20])
 );
 
 INVX1 _3344_ (
     .A(\u_cpu.bufreg.data [15]),
     .Y(_410_)
-);
-
-FILL FILL_0__2196_ (
 );
 
 OAI21X1 _2615_ (
@@ -2403,15 +2436,18 @@ BUFX2 BUFX2_insert39 (
     .Y(_602__bF$buf1)
 );
 
+FILL FILL_0__1887_ (
+);
+
 DFFPOSX1 _3993_ (
     .D(_1193_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
     .Q(\u_cpu.bufreg.data [30])
 );
 
 OAI22X1 _3573_ (
     .A(_578_),
-    .B(_212__bF$buf2),
+    .B(_212__bF$buf3),
     .C(_577_),
     .D(_570__bF$buf4),
     .Y(_1149_)
@@ -2422,8 +2458,11 @@ INVX1 _3153_ (
     .Y(_269_)
 );
 
+FILL FILL_0__3613_ (
+);
+
 OAI21X1 _2844_ (
-    .A(_22__bF$buf2),
+    .A(_22__bF$buf6),
     .B(_41_),
     .C(_42_),
     .Y(_43_)
@@ -2437,14 +2476,14 @@ INVX1 _2424_ (
 OAI21X1 _2004_ (
     .A(_922_),
     .B(_920_),
-    .C(_973__bF$buf6),
+    .C(_973__bF$buf4),
     .Y(_919_)
 );
 
 MUX2X1 _3629_ (
     .A(_330_),
     .B(_833_),
-    .S(_602__bF$buf3),
+    .S(_602__bF$buf1),
     .Y(_1117_)
 );
 
@@ -2474,7 +2513,7 @@ NOR2X1 _2233_ (
 
 DFFPOSX1 _3858_ (
     .D(_1324_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
     .Q(\u_rf_if.read_buf0 [24])
 );
 
@@ -2491,19 +2530,25 @@ INVX1 _3018_ (
 OAI21X1 _3191_ (
     .A(rreg0[4]),
     .B(_296_),
-    .C(_659__bF$buf3),
+    .C(_659__bF$buf2),
     .Y(_297_)
 );
 
 OAI21X1 _1924_ (
-    .A(_1023__bF$buf3),
+    .A(_1023__bF$buf4),
     .B(_990_),
     .C(_989_),
     .Y(_988_)
 );
 
+FILL FILL_0__3651_ (
+);
+
+FILL FILL_0__3231_ (
+);
+
 OAI21X1 _2709_ (
-    .A(_1783__bF$buf2),
+    .A(_1783__bF$buf3),
     .B(_1793_),
     .C(_1794_),
     .Y(_1795_)
@@ -2512,7 +2557,7 @@ OAI21X1 _2709_ (
 MUX2X1 _2882_ (
     .A(\u_rf_if.read_buf0 [17]),
     .B(\u_rf_if.read_buf0 [18]),
-    .S(\u_rf_if.stream_active_bF$buf4 ),
+    .S(\u_rf_if.stream_active_bF$buf2 ),
     .Y(_71_)
 );
 
@@ -2524,7 +2569,7 @@ INVX1 _2462_ (
 MUX2X1 _2042_ (
     .A(\u_cpu.bufreg.data [18]),
     .B(\u_cpu.ctrl.o_ibus_adr [18]),
-    .S(_1006__bF$buf0),
+    .S(_1006__bF$buf2),
     .Y(_886_)
 );
 
@@ -2542,12 +2587,15 @@ OAI21X1 _3247_ (
     .Y(_340_)
 );
 
-FILL FILL_0__2099_ (
+FILL FILL_0__2502_ (
+);
+
+FILL FILL_0__3040_ (
 );
 
 NAND2X1 _2938_ (
     .A(\u_rf_if.read_buf0 [29]),
-    .B(_22__bF$buf3),
+    .B(_22__bF$buf5),
     .Y(_114_)
 );
 
@@ -2571,12 +2619,12 @@ OAI21X1 _2271_ (
 
 DFFPOSX1 _3896_ (
     .D(_1152_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [21])
 );
 
 OAI21X1 _3476_ (
-    .A(mem_dbus_ack_bF$buf5),
+    .A(mem_dbus_ack_bF$buf4),
     .B(\u_cpu.bufreg2.dlo [17]),
     .C(_508_),
     .Y(_509_)
@@ -2585,21 +2633,27 @@ OAI21X1 _3476_ (
 AOI21X1 _3056_ (
     .A(_200_),
     .B(_199_),
-    .C(_1070__bF$buf5),
+    .C(_1070__bF$buf4),
     .Y(_1288_)
+);
+
+FILL FILL128250x75750 (
+);
+
+FILL FILL_0__3516_ (
 );
 
 MUX2X1 _1962_ (
     .A(\u_cpu.bufreg.data [8]),
     .B(\u_cpu.ctrl.o_ibus_adr [8]),
-    .S(_1006__bF$buf4),
+    .S(_1006__bF$buf3),
     .Y(_956_)
 );
 
 MUX2X1 _2747_ (
     .A(\u_rf_if.read_buf1 [14]),
     .B(\u_rf_if.read_buf1 [15]),
-    .S(\u_rf_if.stream_active_bF$buf7 ),
+    .S(\u_rf_if.stream_active_bF$buf0 ),
     .Y(_1823_)
 );
 
@@ -2612,26 +2666,29 @@ OR2X2 _2327_ (
 MUX2X1 _2080_ (
     .A(\u_mem_serial.shift_reg [22]),
     .B(\u_cpu.bufreg2.dlo [17]),
-    .S(_994__bF$buf1),
+    .S(_994__bF$buf5),
     .Y(_853_)
 );
 
 NAND2X1 _3285_ (
-    .A(ibus_pending_ack_bF$buf1),
+    .A(ibus_pending_ack_bF$buf2),
     .B(_369_),
     .Y(_370_)
 );
 
-FILL FILL_0__2120_ (
+FILL FILL_0__2540_ (
 );
 
-FILL FILL_0_BUFX2_insert113 (
+FILL FILL_0_BUFX2_insert111 (
+);
+
+FILL FILL_0_BUFX2_insert114 (
 );
 
 MUX2X1 _2976_ (
     .A(_139_),
     .B(_875_),
-    .S(ibus_pending_ack_bF$buf1),
+    .S(ibus_pending_ack_bF$buf5),
     .Y(_140_)
 );
 
@@ -2644,7 +2701,7 @@ NAND2X1 _2556_ (
 MUX2X1 _2136_ (
     .A(\u_mem_serial.shift_reg [29]),
     .B(\u_cpu.bufreg.i_shamt [0]),
-    .S(_994__bF$buf3),
+    .S(_994__bF$buf5),
     .Y(_804_)
 );
 
@@ -2653,8 +2710,11 @@ INVX1 _3094_ (
     .Y(_224_)
 );
 
+FILL FILL_0__3554_ (
+);
+
 OAI21X1 _2785_ (
-    .A(_1783__bF$buf3),
+    .A(_1783__bF$buf1),
     .B(_1850_),
     .C(_1851_),
     .Y(_1852_)
@@ -2665,6 +2725,12 @@ OAI21X1 _2365_ (
     .B(_736_),
     .C(_1858_),
     .Y(_1493_)
+);
+
+FILL FILL_0__2405_ (
+);
+
+FILL FILL_0__3363_ (
 );
 
 AOI21X1 _2594_ (
@@ -2681,7 +2747,7 @@ INVX1 _2174_ (
 
 DFFPOSX1 _3799_ (
     .D(_1296_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
     .Q(\u_rf_if.issue_chunk [2])
 );
 
@@ -2692,7 +2758,7 @@ AOI21X1 _3379_ (
     .Y(_1193_)
 );
 
-FILL FILL127350x10950 (
+FILL FILL_0__3419_ (
 );
 
 BUFX2 _1865_ (
@@ -2700,10 +2766,10 @@ BUFX2 _1865_ (
     .Y(o_mem_mosi)
 );
 
-FILL FILL_0__3172_ (
+FILL FILL_0__1905_ (
 );
 
-FILL FILL_0__1905_ (
+FILL FILL128850x7350 (
 );
 
 NOR2X1 _3188_ (
@@ -2712,7 +2778,10 @@ NOR2X1 _3188_ (
     .Y(_294_)
 );
 
-FILL FILL_0__2023_ (
+FILL FILL_0__2863_ (
+);
+
+FILL FILL_0__2443_ (
 );
 
 FILL FILL_0__3228_ (
@@ -2720,7 +2789,7 @@ FILL FILL_0__3228_ (
 
 NAND2X1 _2879_ (
     .A(\u_rf_if.read_buf0 [15]),
-    .B(_22__bF$buf6),
+    .B(_22__bF$buf4),
     .Y(_69_)
 );
 
@@ -2737,7 +2806,7 @@ INVX1 _2039_ (
 
 DFFPOSX1 _3820_ (
     .D(_1134_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [3])
 );
 
@@ -2755,7 +2824,7 @@ FILL FILL_0__2252_ (
 OAI21X1 _2688_ (
     .A(\u_rf_if.stream_cnt [2]),
     .B(_1755_),
-    .C(i_rst_n_bF$buf6),
+    .C(i_rst_n_bF$buf9),
     .Y(_1779_)
 );
 
@@ -2765,16 +2834,28 @@ NOR2X1 _2268_ (
     .Y(_680_)
 );
 
+FILL FILL_0__2728_ (
+);
+
+FILL FILL_0__2308_ (
+);
+
 INVX1 _1959_ (
     .A(\u_mem_serial.shift_reg [8]),
     .Y(_959_)
 );
 
 OAI21X1 _2900_ (
-    .A(_22__bF$buf1),
+    .A(_22__bF$buf2),
     .B(_83_),
     .C(_84_),
     .Y(_85_)
+);
+
+FILL FILL_0__3686_ (
+);
+
+FILL FILL_0__3266_ (
 );
 
 OAI21X1 _2497_ (
@@ -2786,38 +2867,44 @@ OAI21X1 _2497_ (
 
 OAI21X1 _2077_ (
     .A(_861_),
-    .B(_973__bF$buf5),
+    .B(_973__bF$buf1),
     .C(_856_),
     .Y(_855_)
 );
 
-FILL FILL_0__3075_ (
+FILL FILL_0__2117_ (
+);
+
+FILL FILL_0__2290_ (
 );
 
 DFFSR _3914_ (
-    .R(i_rst_n_bF$buf11),
+    .R(i_rst_n_bF$buf10),
     .S(vdd),
     .D(_1101_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
     .Q(ibus_pending_rdt[10])
+);
+
+FILL FILL_0__2766_ (
 );
 
 DFFPOSX1 _4032_ (
     .D(_1418_),
-    .CLK(i_clk_fast_bF$buf2),
+    .CLK(i_clk_fast_bF$buf1),
     .Q(\u_mem_serial.state [0])
 );
 
 OAI21X1 _1997_ (
     .A(_931_),
-    .B(_973__bF$buf6),
+    .B(_973__bF$buf0),
     .C(_926_),
     .Y(_925_)
 );
 
 DFFPOSX1 _3723_ (
     .D(_1457_),
-    .CLK(i_clk_fast_bF$buf1),
+    .CLK(i_clk_fast_bF$buf2),
     .Q(\u_mem_serial.bit_count [4])
 );
 
@@ -2828,12 +2915,18 @@ OAI21X1 _3303_ (
     .Y(_385_)
 );
 
+FILL FILL_0__2575_ (
+);
+
 FILL FILL_0__2155_ (
+);
+
+FILL FILL129150x21750 (
 );
 
 DFFPOSX1 _3952_ (
     .D(_1175_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
     .Q(\u_cpu.bufreg2.dlo [15])
 );
 
@@ -2851,13 +2944,19 @@ OAI21X1 _3112_ (
 
 DFFPOSX1 _4070_ (
     .D(_1228_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm31 )
 );
 
 INVX1 _2803_ (
     .A(\u_rf_if.read_buf1 [29]),
     .Y(_11_)
+);
+
+FILL FILL_0__3589_ (
+);
+
+FILL FILL_0__3169_ (
 );
 
 DFFPOSX1 _3761_ (
@@ -2869,8 +2968,11 @@ DFFPOSX1 _3761_ (
 MUX2X1 _3341_ (
     .A(_407_),
     .B(_408_),
-    .S(_1536__bF$buf0),
+    .S(_1536__bF$buf4),
     .Y(_1211_)
+);
+
+FILL FILL_0__2193_ (
 );
 
 NAND2X1 _2612_ (
@@ -2881,13 +2983,13 @@ NAND2X1 _2612_ (
 
 DFFPOSX1 _3817_ (
     .D(_1305_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
     .Q(\u_rf_if.rreg1_latched [2])
 );
 
 DFFPOSX1 _3990_ (
     .D(_1393_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
     .Q(\u_rf_if.rreg1_latched [4])
 );
 
@@ -2898,14 +3000,14 @@ INVX1 _3570_ (
 
 OAI21X1 _3150_ (
     .A(\u_mem_serial.shift_reg [3]),
-    .B(ibus_pending_ack_bF$buf3),
+    .B(ibus_pending_ack_bF$buf2),
     .C(_266_),
     .Y(_267_)
 );
 
 AND2X2 _2841_ (
     .A(_40_),
-    .B(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf11),
     .Y(_1343_)
 );
 
@@ -2917,7 +3019,7 @@ AOI21X1 _2421_ (
 );
 
 NOR2X1 _2001_ (
-    .A(_1002__bF$buf2),
+    .A(_1002__bF$buf3),
     .B(_923_),
     .Y(_922_)
 );
@@ -2925,13 +3027,16 @@ NOR2X1 _2001_ (
 MUX2X1 _3626_ (
     .A(_316_),
     .B(_812_),
-    .S(_602__bF$buf0),
+    .S(_602__bF$buf4),
     .Y(_1120_)
 );
 
 INVX1 _3206_ (
     .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [2]),
     .Y(_307_)
+);
+
+FILL FILL_0__2478_ (
 );
 
 FILL FILL_0__2058_ (
@@ -2951,7 +3056,7 @@ NAND3X1 _2230_ (
 
 DFFPOSX1 _3855_ (
     .D(_1142_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [11])
 );
 
@@ -2969,6 +3074,12 @@ OAI21X1 _3015_ (
     .Y(_171_)
 );
 
+FILL FILL_0_CLKBUF1_insert47 (
+);
+
+FILL FILL_0_CLKBUF1_insert49 (
+);
+
 NOR2X1 _1921_ (
     .A(_1070__bF$buf1),
     .B(_991_),
@@ -2977,8 +3088,11 @@ NOR2X1 _1921_ (
 
 AND2X2 _2706_ (
     .A(_1792_),
-    .B(i_rst_n_bF$buf8),
+    .B(i_rst_n_bF$buf9),
     .Y(_1376_)
+);
+
+FILL FILL_0__1978_ (
 );
 
 OAI21X1 _3664_ (
@@ -2997,17 +3111,17 @@ AOI21X1 _3244_ (
 
 DFFPOSX1 _4029_ (
     .D(_1208_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
     .Q(\u_cpu.bufreg.data [14])
 );
 
-FILL FILL126450x50550 (
+FILL FILL_0__3704_ (
 );
 
 OAI21X1 _2935_ (
     .A(_111_),
-    .B(_22__bF$buf3),
-    .C(i_rst_n_bF$buf10),
+    .B(_22__bF$buf5),
+    .C(i_rst_n_bF$buf11),
     .Y(_112_)
 );
 
@@ -3018,7 +3132,7 @@ INVX1 _2515_ (
 
 DFFPOSX1 _3893_ (
     .D(_1341_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
     .Q(\u_rf_if.read_buf0 [7])
 );
 
@@ -3032,16 +3146,13 @@ OAI21X1 _3473_ (
 AOI21X1 _3053_ (
     .A(_198_),
     .B(_196_),
-    .C(_1070__bF$buf5),
+    .C(_1070__bF$buf2),
     .Y(_1289_)
-);
-
-FILL FILL126750x104550 (
 );
 
 NAND2X1 _2744_ (
     .A(\u_rf_if.read_buf1 [12]),
-    .B(_1783__bF$buf4),
+    .B(_1783__bF$buf1),
     .Y(_1821_)
 );
 
@@ -3053,12 +3164,12 @@ OR2X2 _2324_ (
 
 DFFPOSX1 _3949_ (
     .D(_1369_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
     .Q(\u_rf_if.read_buf1 [9])
 );
 
 NAND2X1 _3529_ (
-    .A(mem_dbus_ack_bF$buf5),
+    .A(mem_dbus_ack_bF$buf0),
     .B(_548_),
     .Y(_549_)
 );
@@ -3080,7 +3191,7 @@ AOI22X1 _3282_ (
 
 DFFPOSX1 _4067_ (
     .D(_1435_),
-    .CLK(i_clk_fast_bF$buf5),
+    .CLK(i_clk_fast_bF$buf7),
     .Q(\u_mem_serial.shift_reg [20])
 );
 
@@ -3098,14 +3209,14 @@ INVX1 _2553_ (
 
 OAI21X1 _2133_ (
     .A(_812_),
-    .B(_973__bF$buf4),
+    .B(_973__bF$buf6),
     .C(_807_),
     .Y(_806_)
 );
 
 DFFPOSX1 _3758_ (
     .D(_1275_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
     .Q(\u_cpu.state.cnt_r [1])
 );
 
@@ -3117,11 +3228,11 @@ INVX1 _3338_ (
 AOI21X1 _3091_ (
     .A(_689_),
     .B(_221_),
-    .C(_1070__bF$buf1),
+    .C(_1070__bF$buf6),
     .Y(_1274_)
 );
 
-FILL FILL126750x93750 (
+FILL FILL_0__3551_ (
 );
 
 FILL FILL_0__3131_ (
@@ -3135,7 +3246,7 @@ NOR2X1 _2609_ (
 
 AND2X2 _2782_ (
     .A(_1849_),
-    .B(i_rst_n_bF$buf1),
+    .B(i_rst_n_bF$buf7),
     .Y(_1357_)
 );
 
@@ -3147,29 +3258,32 @@ NOR2X1 _2362_ (
 
 DFFPOSX1 _3987_ (
     .D(_1189_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
     .Q(\u_cpu.bufreg2.dhi [6])
 );
 
 OAI22X1 _3567_ (
     .A(_575_),
-    .B(_212__bF$buf2),
+    .B(_212__bF$buf1),
     .C(_574_),
-    .D(_570__bF$buf4),
+    .D(_570__bF$buf0),
     .Y(_1152_)
 );
 
 OAI21X1 _3147_ (
     .A(_1062_),
-    .B(_1692__bF$buf3),
+    .B(_1692__bF$buf0),
     .C(_264_),
     .Y(_1261_)
+);
+
+FILL FILL_0__3607_ (
 );
 
 MUX2X1 _2838_ (
     .A(\u_rf_if.read_buf0 [6]),
     .B(\u_rf_if.read_buf0 [7]),
-    .S(\u_rf_if.stream_active_bF$buf2 ),
+    .S(\u_rf_if.stream_active_bF$buf6 ),
     .Y(_38_)
 );
 
@@ -3194,7 +3308,7 @@ INVX1 _2171_ (
 
 DFFPOSX1 _3796_ (
     .D(_1128_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [29])
 );
 
@@ -3203,13 +3317,19 @@ INVX1 _3376_ (
     .Y(_427_)
 );
 
+FILL FILL_0__2631_ (
+);
+
+FILL FILL_0__3416_ (
+);
+
 BUFX2 _1862_ (
     .A(_1856_),
     .Y(o_rf_mosi)
 );
 
 NOR2X1 _2647_ (
-    .A(\u_rf_if.stream_active_bF$buf6 ),
+    .A(\u_rf_if.stream_active_bF$buf3 ),
     .B(\u_rf_if.ready_pulse ),
     .Y(_1749_)
 );
@@ -3223,20 +3343,26 @@ OAI21X1 _2227_ (
 
 OAI21X1 _3185_ (
     .A(\u_mem_serial.shift_reg [30]),
-    .B(ibus_pending_ack_bF$buf4),
+    .B(ibus_pending_ack_bF$buf0),
     .C(_291_),
     .Y(_292_)
 );
 
+FILL FILL_0__2440_ (
+);
+
+FILL FILL_0__2020_ (
+);
+
 NAND3X1 _1918_ (
     .A(\u_mem_serial.shift_reg [0]),
-    .B(_1023__bF$buf2),
-    .C(_994__bF$buf5),
+    .B(_1023__bF$buf4),
+    .C(_994__bF$buf2),
     .Y(_993_)
 );
 
 OAI21X1 _2876_ (
-    .A(_22__bF$buf5),
+    .A(_22__bF$buf4),
     .B(_65_),
     .C(_66_),
     .Y(_67_)
@@ -3251,11 +3377,17 @@ NAND2X1 _2456_ (
 OAI21X1 _2036_ (
     .A(_894_),
     .B(_892_),
-    .C(_973__bF$buf2),
+    .C(_973__bF$buf6),
     .Y(_891_)
 );
 
 FILL FILL_0__2916_ (
+);
+
+FILL FILL128250x28950 (
+);
+
+FILL FILL_0__3454_ (
 );
 
 FILL FILL_0__3034_ (
@@ -3276,10 +3408,13 @@ INVX1 _2265_ (
 FILL FILL_0__1940_ (
 );
 
+FILL FILL_0__2305_ (
+);
+
 OAI21X1 _1956_ (
     .A(_964_),
     .B(_962_),
-    .C(_973__bF$buf0),
+    .C(_973__bF$buf5),
     .Y(_961_)
 );
 
@@ -3293,7 +3428,7 @@ OAI21X1 _2494_ (
 MUX2X1 _2074_ (
     .A(\u_cpu.bufreg.data [22]),
     .B(\u_cpu.ctrl.o_ibus_adr [22]),
-    .S(_1006__bF$buf0),
+    .S(_1006__bF$buf1),
     .Y(_858_)
 );
 
@@ -3310,19 +3445,28 @@ MUX2X1 _3279_ (
     .Y(_365_)
 );
 
+FILL FILL_0__2954_ (
+);
+
+FILL FILL_0__3319_ (
+);
+
+FILL FILL_0__3492_ (
+);
+
 DFFPOSX1 _3911_ (
     .D(_1350_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
     .Q(\u_rf_if.read_buf1 [28])
 );
 
 AND2X2 _3088_ (
-    .A(i_rst_n_bF$buf5),
+    .A(i_rst_n_bF$buf8),
     .B(\u_cpu.state.cnt_r [1]),
     .Y(_1276_)
 );
 
-FILL FILL127350x86550 (
+FILL FILL_0__2343_ (
 );
 
 MUX2X1 _1994_ (
@@ -3335,7 +3479,7 @@ MUX2X1 _1994_ (
 MUX2X1 _2779_ (
     .A(\u_rf_if.read_buf1 [22]),
     .B(\u_rf_if.read_buf1 [23]),
-    .S(\u_rf_if.stream_active_bF$buf3 ),
+    .S(\u_rf_if.stream_active_bF$buf1 ),
     .Y(_1847_)
 );
 
@@ -3348,7 +3492,7 @@ NAND3X1 _2359_ (
 
 DFFPOSX1 _3720_ (
     .D(_1247_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
     .Q(rreg0[1])
 );
 
@@ -3360,7 +3504,7 @@ INVX1 _3300_ (
 FILL FILL_0__2819_ (
 );
 
-FILL FILL_0__2992_ (
+FILL FILL_0__3357_ (
 );
 
 INVX1 _2588_ (
@@ -3371,14 +3515,23 @@ INVX1 _2588_ (
 MUX2X1 _2168_ (
     .A(_791_),
     .B(_776_),
-    .S(_994__bF$buf5),
+    .S(_994__bF$buf0),
     .Y(_775_)
+);
+
+FILL FILL_0__2208_ (
+);
+
+FILL FILL_0__2381_ (
 );
 
 NAND2X1 _2800_ (
     .A(\u_rf_if.read_buf1 [26]),
-    .B(_1783__bF$buf2),
+    .B(_1783__bF$buf4),
     .Y(_9_)
+);
+
+FILL FILL_0__3166_ (
 );
 
 INVX1 _2397_ (
@@ -3386,10 +3539,19 @@ INVX1 _2397_ (
     .Y(_1520_)
 );
 
+FILL FILL_0__2190_ (
+);
+
 NAND2X1 _3814_ (
     .A(\u_cpu.state.init_done ),
     .B(_1065_),
     .Y(_1064_)
+);
+
+FILL FILL_0__2666_ (
+);
+
+FILL FILL_0__2246_ (
 );
 
 NAND3X1 _1897_ (
@@ -3411,15 +3573,12 @@ INVX1 _3203_ (
     .Y(_305_)
 );
 
-FILL FILL_0__2895_ (
-);
-
-FILL FILL127350x18150 (
+FILL FILL_0__2055_ (
 );
 
 DFFPOSX1 _3852_ (
     .D(_1321_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
     .Q(\u_rf_if.read_buf0 [27])
 );
 
@@ -3438,17 +3597,20 @@ NAND2X1 _3012_ (
 MUX2X1 _2703_ (
     .A(\u_rf_if.read_buf1 [3]),
     .B(\u_rf_if.read_buf1 [4]),
-    .S(\u_rf_if.stream_active_bF$buf5 ),
+    .S(\u_rf_if.stream_active_bF$buf4 ),
     .Y(_1790_)
+);
+
+FILL FILL_0__3489_ (
+);
+
+FILL FILL_0__3069_ (
 );
 
 DFFPOSX1 _3908_ (
     .D(_1155_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [24])
-);
-
-FILL FILL_0__1975_ (
 );
 
 AND2X2 _3661_ (
@@ -3460,19 +3622,22 @@ AND2X2 _3661_ (
 MUX2X1 _3241_ (
     .A(_334_),
     .B(_840_),
-    .S(ibus_pending_ack_bF$buf1),
+    .S(ibus_pending_ack_bF$buf3),
     .Y(_335_)
 );
 
 DFFPOSX1 _4026_ (
     .D(_1207_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
     .Q(\u_cpu.bufreg.data [13])
+);
+
+FILL FILL_0__2093_ (
 );
 
 NAND2X1 _2932_ (
     .A(\u_rf_if.read_buf0 [27]),
-    .B(_22__bF$buf2),
+    .B(_22__bF$buf5),
     .Y(_110_)
 );
 
@@ -3485,22 +3650,22 @@ OAI21X1 _2512_ (
 
 DFFPOSX1 _3717_ (
     .D(_1454_),
-    .CLK(i_clk_fast_bF$buf0),
+    .CLK(i_clk_fast_bF$buf6),
     .Q(\u_mem_serial.shift_reg [1])
 );
 
 DFFSR _3890_ (
     .R(vdd),
-    .S(i_rst_n_bF$buf9),
+    .S(i_rst_n_bF$buf0),
     .D(_1095_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
     .Q(ibus_pending_rdt[4])
 );
 
 MUX2X1 _3470_ (
     .A(_502_),
     .B(_504_),
-    .S(_450__bF$buf0),
+    .S(_450__bF$buf1),
     .Y(_1178_)
 );
 
@@ -3510,8 +3675,14 @@ NAND2X1 _3050_ (
     .Y(_196_)
 );
 
+FILL FILL_0__2989_ (
+);
+
+FILL FILL_0__2569_ (
+);
+
 OAI21X1 _2741_ (
-    .A(_1783__bF$buf6),
+    .A(_1783__bF$buf5),
     .B(_1817_),
     .C(_1818_),
     .Y(_1819_)
@@ -3525,14 +3696,14 @@ NOR2X1 _2321_ (
 
 DFFPOSX1 _3946_ (
     .D(_1172_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
     .Q(\u_cpu.bufreg2.dlo [12])
 );
 
 MUX2X1 _3526_ (
     .A(_544_),
     .B(_546_),
-    .S(_450__bF$buf0),
+    .S(_450__bF$buf3),
     .Y(_1164_)
 );
 
@@ -3543,12 +3714,12 @@ OAI21X1 _3106_ (
     .Y(_232_)
 );
 
-FILL FILL_0__2798_ (
+FILL FILL_0__2378_ (
 );
 
 DFFPOSX1 _4064_ (
     .D(_1225_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [5])
 );
 
@@ -3574,14 +3745,14 @@ MUX2X1 _2130_ (
 
 DFFPOSX1 _3755_ (
     .D(_1272_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
     .Q(\u_cpu.state.o_cnt [2])
 );
 
 MUX2X1 _3335_ (
     .A(_404_),
     .B(_405_),
-    .S(_1536__bF$buf3),
+    .S(_1536__bF$buf2),
     .Y(_1214_)
 );
 
@@ -3595,7 +3766,7 @@ FILL FILL_0__1878_ (
 
 DFFPOSX1 _3984_ (
     .D(_1390_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
     .Q(\u_rf_if.rtrig1 )
 );
 
@@ -3611,7 +3782,7 @@ INVX1 _3144_ (
 
 NAND2X1 _2835_ (
     .A(\u_rf_if.read_buf0 [4]),
-    .B(_22__bF$buf4),
+    .B(_22__bF$buf6),
     .Y(_36_)
 );
 
@@ -3622,7 +3793,7 @@ INVX1 _2415_ (
 
 DFFPOSX1 _3793_ (
     .D(_1293_),
-    .CLK(i_clk_fast_bF$buf4),
+    .CLK(i_clk_fast_bF$buf5),
     .Q(\u_rf_if.last_req_key [1])
 );
 
@@ -3636,7 +3807,7 @@ OAI21X1 _3373_ (
 AOI21X1 _2644_ (
     .A(_1747_),
     .B(_1744_),
-    .C(_1070__bF$buf0),
+    .C(_1070__bF$buf5),
     .Y(_1393_)
 );
 
@@ -3659,15 +3830,18 @@ MUX2X1 _3429_ (
 );
 
 OAI21X1 _3009_ (
-    .A(_673__bF$buf3),
-    .B(_674__bF$buf3),
+    .A(_673__bF$buf0),
+    .B(_674__bF$buf1),
     .C(\u_rf_if.rreg0_latched [3]),
     .Y(_166_)
 );
 
+FILL FILL128550x100950 (
+);
+
 OAI21X1 _3182_ (
-    .A(_673__bF$buf2),
-    .B(_674__bF$buf0),
+    .A(_673__bF$buf1),
+    .B(_674__bF$buf2),
     .C(\u_cpu.bufreg.i_sh_signed ),
     .Y(_289_)
 );
@@ -3678,9 +3852,15 @@ NOR2X1 _1915_ (
     .Y(_1455_)
 );
 
+FILL FILL_0__3642_ (
+);
+
+FILL FILL_0__3222_ (
+);
+
 AND2X2 _2873_ (
     .A(_64_),
-    .B(i_rst_n_bF$buf1),
+    .B(i_rst_n_bF$buf8),
     .Y(_1335_)
 );
 
@@ -3690,7 +3870,7 @@ INVX1 _2453_ (
 );
 
 NOR2X1 _2033_ (
-    .A(_1002__bF$buf2),
+    .A(_1002__bF$buf4),
     .B(_895_),
     .Y(_894_)
 );
@@ -3708,9 +3888,15 @@ NOR2X1 _3238_ (
     .Y(_333_)
 );
 
+FILL FILL_0__3031_ (
+);
+
+FILL FILL128250x82950 (
+);
+
 NAND2X1 _2929_ (
     .A(\u_rf_if.read_buf0 [28]),
-    .B(\u_rf_if.stream_active_bF$buf1 ),
+    .B(\u_rf_if.stream_active_bF$buf5 ),
     .Y(_107_)
 );
 
@@ -3734,7 +3920,7 @@ INVX1 _2262_ (
 
 DFFPOSX1 _3887_ (
     .D(_1338_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
     .Q(\u_rf_if.read_buf0 [10])
 );
 
@@ -3749,21 +3935,21 @@ NAND2X1 _3047_ (
     .Y(_194_)
 );
 
-FILL FILL_0__2722_ (
-);
-
-FILL FILL127050x64950 (
+FILL FILL_0__3507_ (
 );
 
 NOR2X1 _1953_ (
-    .A(_1002__bF$buf1),
+    .A(_1002__bF$buf2),
     .B(_965_),
     .Y(_964_)
 );
 
+FILL FILL_0__3680_ (
+);
+
 AND2X2 _2738_ (
     .A(_1816_),
-    .B(i_rst_n_bF$buf3),
+    .B(i_rst_n_bF$buf7),
     .Y(_1368_)
 );
 
@@ -3793,16 +3979,16 @@ INVX1 _3696_ (
 );
 
 OAI21X1 _3276_ (
-    .A(_659__bF$buf5),
+    .A(_659__bF$buf3),
     .B(_361_),
     .C(_362_),
     .Y(_363_)
 );
 
-FILL FILL126750x46950 (
+FILL FILL_0__2531_ (
 );
 
-FILL FILL_0__2951_ (
+FILL FILL_0__2111_ (
 );
 
 OAI22X1 _2967_ (
@@ -3826,9 +4012,12 @@ INVX1 _2127_ (
 );
 
 NOR2X1 _3085_ (
-    .A(_1070__bF$buf4),
+    .A(_1070__bF$buf3),
     .B(_219_),
     .Y(_1278_)
+);
+
+FILL FILL_0__3545_ (
 );
 
 INVX1 _1991_ (
@@ -3838,7 +4027,7 @@ INVX1 _1991_ (
 
 NAND2X1 _2776_ (
     .A(\u_rf_if.read_buf1 [20]),
-    .B(_1783__bF$buf5),
+    .B(_1783__bF$buf1),
     .Y(_1845_)
 );
 
@@ -3851,12 +4040,15 @@ NAND3X1 _2356_ (
 
 DFFPOSX1 _4099_ (
     .D(_1451_),
-    .CLK(i_clk_fast_bF$buf3),
+    .CLK(i_clk_fast_bF$buf6),
     .Q(\u_mem_serial.shift_reg [4])
 );
 
+FILL FILL_0__3354_ (
+);
+
 NAND2X1 _2585_ (
-    .A(i_rst_n_bF$buf4),
+    .A(i_rst_n_bF$buf1),
     .B(_689_),
     .Y(_1698_)
 );
@@ -3867,9 +4059,6 @@ NOR2X1 _2165_ (
     .Y(_778_)
 );
 
-FILL FILL_0__2625_ (
-);
-
 INVX1 _2394_ (
     .A(_1516_),
     .Y(_1517_)
@@ -3877,9 +4066,9 @@ INVX1 _2394_ (
 
 OAI22X1 _3599_ (
     .A(_591_),
-    .B(_212__bF$buf3),
+    .B(_212__bF$buf4),
     .C(_590_),
-    .D(_570__bF$buf0),
+    .D(_570__bF$buf3),
     .Y(_1136_)
 );
 
@@ -3893,10 +4082,25 @@ NAND3X1 _3179_ (
 FILL FILL_0__2854_ (
 );
 
+FILL FILL_0__2434_ (
+);
+
+FILL FILL128250x108150 (
+);
+
+FILL FILL_0__3219_ (
+);
+
+FILL FILL_0__3392_ (
+);
+
 DFFPOSX1 _3811_ (
     .D(_1302_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
     .Q(\u_rf_if.rreg0_latched [1])
+);
+
+FILL FILL_0__2243_ (
 );
 
 AOI21X1 _1894_ (
@@ -3918,6 +4122,9 @@ AOI21X1 _2259_ (
     .Y(_689_)
 );
 
+FILL FILL_0__1934_ (
+);
+
 INVX1 _3620_ (
     .A(\u_cpu.alu.cmp_r ),
     .Y(_600_)
@@ -3928,6 +4135,18 @@ INVX1 _3200_ (
     .Y(_303_)
 );
 
+FILL FILL_0__2719_ (
+);
+
+FILL FILL_0__2892_ (
+);
+
+FILL FILL_0__3257_ (
+);
+
+FILL FILL128550x57750 (
+);
+
 INVX1 _2488_ (
     .A(_1610_),
     .Y(_1611_)
@@ -3936,17 +4155,14 @@ INVX1 _2488_ (
 OAI21X1 _2068_ (
     .A(_866_),
     .B(_864_),
-    .C(_973__bF$buf5),
+    .C(_973__bF$buf6),
     .Y(_863_)
 );
 
-FILL FILL_0__2528_ (
+FILL FILL_0__2108_ (
 );
 
-FILL FILL127350x72150 (
-);
-
-FILL FILL127350x39750 (
+FILL FILL_0__2281_ (
 );
 
 NAND2X1 _2700_ (
@@ -3957,7 +4173,7 @@ NAND2X1 _2700_ (
 
 DFFPOSX1 _3905_ (
     .D(_1347_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
     .Q(\u_rf_if.read_buf0 [1])
 );
 
@@ -3971,26 +4187,32 @@ FILL FILL_0__2757_ (
 
 DFFPOSX1 _4023_ (
     .D(_1411_),
-    .CLK(i_clk_fast_bF$buf1),
+    .CLK(i_clk_fast_bF$buf4),
     .Q(\u_rf_if.shift_rx [0])
 );
 
 OAI21X1 _1988_ (
     .A(_936_),
     .B(_934_),
-    .C(_973__bF$buf6),
+    .C(_973__bF$buf1),
     .Y(_933_)
+);
+
+FILL FILL_0__3295_ (
 );
 
 DFFPOSX1 _3714_ (
     .D(_1244_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [2])
+);
+
+FILL FILL_0__2146_ (
 );
 
 DFFPOSX1 _3943_ (
     .D(_1366_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
     .Q(\u_rf_if.read_buf1 [12])
 );
 
@@ -4005,21 +4227,30 @@ NOR2X1 _3103_ (
     .Y(_229_)
 );
 
+FILL FILL128850x10950 (
+);
+
+FILL FILL_0__2795_ (
+);
+
 DFFPOSX1 _4061_ (
     .D(_1432_),
-    .CLK(i_clk_fast_bF$buf6),
+    .CLK(i_clk_fast_bF$buf7),
     .Q(\u_mem_serial.shift_reg [23])
 );
 
 DFFPOSX1 _3752_ (
     .D(_1269_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
     .Q(\u_cpu.ctrl.i_jump )
 );
 
 INVX1 _3332_ (
     .A(\u_cpu.bufreg.data [21]),
     .Y(_404_)
+);
+
+FILL FILL_0__2184_ (
 );
 
 AOI21X1 _2603_ (
@@ -4031,19 +4262,19 @@ AOI21X1 _2603_ (
 
 DFFPOSX1 _3808_ (
     .D(_1131_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
     .Q(\u_cpu.ctrl.pc )
 );
 
 DFFPOSX1 _3981_ (
     .D(_1387_),
-    .CLK(i_clk_fast_bF$buf1),
+    .CLK(i_clk_fast_bF$buf4),
     .Q(\u_rf_if.shift_rx [1])
 );
 
 OAI22X1 _3561_ (
     .A(_572_),
-    .B(_212__bF$buf2),
+    .B(_212__bF$buf0),
     .C(_571_),
     .D(_570__bF$buf4),
     .Y(_1155_)
@@ -4051,16 +4282,13 @@ OAI22X1 _3561_ (
 
 OAI21X1 _3141_ (
     .A(\u_mem_serial.shift_reg [5]),
-    .B(ibus_pending_ack_bF$buf3),
+    .B(ibus_pending_ack_bF$buf1),
     .C(_259_),
     .Y(_260_)
 );
 
-FILL FILL_0__3601_ (
-);
-
 OAI21X1 _2832_ (
-    .A(_22__bF$buf4),
+    .A(_22__bF$buf6),
     .B(_32_),
     .C(_33_),
     .Y(_34_)
@@ -4080,17 +4308,26 @@ AOI21X1 _3617_ (
 );
 
 DFFSR _3790_ (
-    .R(i_rst_n_bF$buf7),
+    .R(i_rst_n_bF$buf0),
     .S(vdd),
     .D(_1071_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
     .Q(ibus_pending_rdt[31])
 );
 
 NOR2X1 _3370_ (
     .A(\u_cpu.bufreg.data [2]),
-    .B(_1536__bF$buf1),
+    .B(_1536__bF$buf3),
     .Y(_423_)
+);
+
+FILL FILL_0__2469_ (
+);
+
+FILL FILL_0__2049_ (
+);
+
+FILL FILL_0__3410_ (
 );
 
 INVX1 _2641_ (
@@ -4106,7 +4343,7 @@ NOR2X1 _2221_ (
 
 DFFPOSX1 _3846_ (
     .D(_1318_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
     .Q(\u_rf_if.o_waddr [0])
 );
 
@@ -4118,7 +4355,7 @@ INVX1 _3426_ (
 MUX2X1 _3006_ (
     .A(_163_),
     .B(_896_),
-    .S(ibus_pending_ack_bF$buf5),
+    .S(ibus_pending_ack_bF$buf4),
     .Y(_164_)
 );
 
@@ -4132,7 +4369,7 @@ NAND3X1 _1912_ (
 MUX2X1 _2870_ (
     .A(\u_rf_if.read_buf0 [14]),
     .B(\u_rf_if.read_buf0 [15]),
-    .S(\u_rf_if.stream_active_bF$buf3 ),
+    .S(\u_rf_if.stream_active_bF$buf2 ),
     .Y(_62_)
 );
 
@@ -4143,14 +4380,17 @@ INVX1 _2450_ (
 
 AND2X2 _2030_ (
     .A(_897_),
-    .B(i_rst_n_bF$buf2),
+    .B(i_rst_n_bF$buf6),
     .Y(_1439_)
+);
+
+FILL FILL_0__1969_ (
 );
 
 MUX2X1 _3655_ (
     .A(_603_),
     .B(_556_),
-    .S(_602__bF$buf2),
+    .S(_602__bF$buf3),
     .Y(_1092_)
 );
 
@@ -4159,9 +4399,12 @@ INVX1 _3235_ (
     .Y(_330_)
 );
 
+FILL FILL_0__2910_ (
+);
+
 NAND2X1 _2926_ (
     .A(\u_rf_if.read_buf0 [26]),
-    .B(_22__bF$buf2),
+    .B(_22__bF$buf0),
     .Y(_105_)
 );
 
@@ -4174,12 +4417,12 @@ OAI21X1 _2506_ (
 
 DFFPOSX1 _3884_ (
     .D(_1149_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [18])
 );
 
 NAND2X1 _3464_ (
-    .A(mem_dbus_ack_bF$buf5),
+    .A(mem_dbus_ack_bF$buf3),
     .B(_882_),
     .Y(_500_)
 );
@@ -4191,12 +4434,9 @@ NAND3X1 _3044_ (
     .Y(_192_)
 );
 
-FILL FILL_0__3504_ (
-);
-
 AND2X2 _1950_ (
     .A(_967_),
-    .B(i_rst_n_bF$buf2),
+    .B(i_rst_n_bF$buf0),
     .Y(_1449_)
 );
 
@@ -4215,7 +4455,7 @@ OAI21X1 _2315_ (
 );
 
 NAND3X1 _3693_ (
-    .A(ibus_pending_ack_bF$buf0),
+    .A(ibus_pending_ack_bF$buf2),
     .B(ibus_pending_rdt[1]),
     .C(ibus_pending_rdt[0]),
     .Y(_628_)
@@ -4228,8 +4468,11 @@ INVX1 _3273_ (
 
 DFFPOSX1 _4058_ (
     .D(_1222_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
     .Q(\u_cpu.bufreg.data [28])
+);
+
+FILL FILL128850x100950 (
 );
 
 NOR2X1 _2964_ (
@@ -4248,34 +4491,37 @@ AOI21X1 _2544_ (
 OAI21X1 _2124_ (
     .A(_817_),
     .B(_815_),
-    .C(_973__bF$buf4),
+    .C(_973__bF$buf3),
     .Y(_814_)
 );
 
 DFFSR _3749_ (
-    .R(i_rst_n_bF$buf9),
+    .R(i_rst_n_bF$buf1),
     .S(vdd),
     .D(_1107_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
     .Q(ibus_pending_rdt[16])
 );
 
 MUX2X1 _3329_ (
     .A(_401_),
     .B(_402_),
-    .S(_1536__bF$buf3),
+    .S(_1536__bF$buf2),
     .Y(_1217_)
 );
 
 MUX2X1 _3082_ (
     .A(\u_mem_serial.shift_reg [36]),
     .B(\u_cpu.bufreg2.cnt_next [6]),
-    .S(_994__bF$buf5),
+    .S(_994__bF$buf2),
     .Y(_217_)
 );
 
+FILL FILL_0__3122_ (
+);
+
 OAI21X1 _2773_ (
-    .A(_1783__bF$buf5),
+    .A(_1783__bF$buf2),
     .B(_1841_),
     .C(_1842_),
     .Y(_1843_)
@@ -4290,7 +4536,7 @@ OAI21X1 _2353_ (
 
 DFFPOSX1 _3978_ (
     .D(_1385_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
     .Q(\u_rf_if.wdata0_r [0])
 );
 
@@ -4301,20 +4547,20 @@ INVX1 _3558_ (
 
 OAI21X1 _3138_ (
     .A(_1500_),
-    .B(_1692__bF$buf3),
+    .B(_1692__bF$buf2),
     .C(_257_),
     .Y(_1263_)
 );
 
 DFFPOSX1 _4096_ (
     .D(_1241_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [4])
 );
 
 AND2X2 _2829_ (
     .A(_31_),
-    .B(i_rst_n_bF$buf10),
+    .B(i_rst_n_bF$buf11),
     .Y(_1346_)
 );
 
@@ -4331,21 +4577,30 @@ INVX1 _2582_ (
 
 AND2X2 _2162_ (
     .A(_781_),
-    .B(i_rst_n_bF$buf5),
+    .B(i_rst_n_bF$buf2),
     .Y(_1423_)
 );
 
 DFFPOSX1 _3787_ (
     .D(_1290_),
-    .CLK(i_clk_fast_bF$buf4),
+    .CLK(i_clk_fast_bF$buf3),
     .Q(\u_rf_if.last_req_key [4])
 );
 
 MUX2X1 _3367_ (
     .A(_420_),
     .B(_421_),
-    .S(_1536__bF$buf2),
+    .S(_1536__bF$buf3),
     .Y(_1198_)
+);
+
+FILL FILL_0__2622_ (
+);
+
+FILL FILL_0__3580_ (
+);
+
+FILL FILL_0__3160_ (
 );
 
 OAI21X1 _2638_ (
@@ -4373,9 +4628,12 @@ INVX1 _3596_ (
 );
 
 OR2X2 _3176_ (
-    .A(_659__bF$buf2),
+    .A(_659__bF$buf5),
     .B(_285_),
     .Y(_286_)
+);
+
+FILL FILL_0__2011_ (
 );
 
 INVX1 _1909_ (
@@ -4388,7 +4646,7 @@ FILL FILL_0__3636_ (
 
 NAND2X1 _2867_ (
     .A(\u_rf_if.read_buf0 [12]),
-    .B(_22__bF$buf5),
+    .B(_22__bF$buf4),
     .Y(_60_)
 );
 
@@ -4406,13 +4664,16 @@ NOR2X1 _2027_ (
     .Y(_899_)
 );
 
-FILL FILL127050x50550 (
+FILL FILL_0__2907_ (
 );
 
 FILL FILL_0__2660_ (
 );
 
-FILL FILL127050x3750 (
+FILL FILL_0__3445_ (
+);
+
+FILL FILL_0__3025_ (
 );
 
 NAND2X1 _1891_ (
@@ -4433,8 +4694,11 @@ NOR2X1 _2256_ (
     .Y(_692_)
 );
 
+FILL FILL_0__1931_ (
+);
+
 NOR2X1 _1947_ (
-    .A(_1023__bF$buf5),
+    .A(_1023__bF$buf3),
     .B(_970_),
     .Y(_969_)
 );
@@ -4451,15 +4715,24 @@ NOR2X1 _2065_ (
     .Y(_866_)
 );
 
-DFFSR _3902_ (
-    .R(i_rst_n_bF$buf9),
-    .S(vdd),
-    .D(_1098_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
-    .Q(ibus_pending_rdt[7])
+FILL FILL_0__2945_ (
 );
 
-FILL FILL127350x93750 (
+FILL FILL_0__2525_ (
+);
+
+FILL FILL_0__3483_ (
+);
+
+FILL FILL128550x108150 (
+);
+
+DFFSR _3902_ (
+    .R(i_rst_n_bF$buf1),
+    .S(vdd),
+    .D(_1098_),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .Q(ibus_pending_rdt[7])
 );
 
 AOI22X1 _2294_ (
@@ -4471,30 +4744,30 @@ AOI22X1 _2294_ (
 );
 
 NAND2X1 _3499_ (
-    .A(mem_dbus_ack_bF$buf4),
+    .A(mem_dbus_ack_bF$buf6),
     .B(_945_),
     .Y(_526_)
 );
 
 OAI22X1 _3079_ (
     .A(_211_),
-    .B(_212__bF$buf1),
+    .B(_212__bF$buf2),
     .C(_215_),
     .D(_213_),
     .Y(_1280_)
 );
 
+FILL FILL_0__2334_ (
+);
+
 DFFPOSX1 _4020_ (
     .D(_1409_),
-    .CLK(i_clk_fast_bF$buf4),
+    .CLK(i_clk_fast_bF$buf5),
     .Q(\u_rf_if.last_req_key [10])
 );
 
-FILL FILL_0__3539_ (
-);
-
 NOR2X1 _1985_ (
-    .A(_1002__bF$buf2),
+    .A(_1002__bF$buf0),
     .B(_937_),
     .Y(_936_)
 );
@@ -4505,12 +4778,15 @@ NOR2X1 _3711_ (
     .Y(_1072_)
 );
 
-FILL FILL_0__2563_ (
+FILL FILL_0__2983_ (
+);
+
+FILL FILL_0__3348_ (
 );
 
 OAI21X1 _2999_ (
-    .A(_673__bF$buf3),
-    .B(_674__bF$buf3),
+    .A(_673__bF$buf2),
+    .B(_674__bF$buf1),
     .C(\u_rf_if.rreg0_latched [1]),
     .Y(_158_)
 );
@@ -4518,7 +4794,7 @@ OAI21X1 _2999_ (
 MUX2X1 _2579_ (
     .A(_1693_),
     .B(_882_),
-    .S(ibus_pending_ack_bF$buf2),
+    .S(ibus_pending_ack_bF$buf5),
     .Y(_1694_)
 );
 
@@ -4531,12 +4807,12 @@ OAI21X1 _2159_ (
 
 DFFPOSX1 _3940_ (
     .D(_1169_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
     .Q(\u_cpu.bufreg2.dlo [9])
 );
 
 NAND2X1 _3520_ (
-    .A(mem_dbus_ack_bF$buf6),
+    .A(mem_dbus_ack_bF$buf2),
     .B(_541_),
     .Y(_542_)
 );
@@ -4548,10 +4824,25 @@ AOI21X1 _3100_ (
     .Y(_1271_)
 );
 
+FILL FILL_0__2792_ (
+);
+
+FILL FILL_0__2372_ (
+);
+
+FILL FILL_0__3157_ (
+);
+
 NAND2X1 _2388_ (
     .A(_1509_),
     .B(_1510_),
     .Y(_1511_)
+);
+
+FILL FILL_0__2848_ (
+);
+
+FILL FILL_0__2181_ (
 );
 
 NOR2X1 _2600_ (
@@ -4562,7 +4853,7 @@ NOR2X1 _2600_ (
 
 DFFPOSX1 _3805_ (
     .D(_1299_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
     .Q(\u_rf_if.issue_sel )
 );
 
@@ -4572,30 +4863,39 @@ OR2X2 _2197_ (
     .Y(_750_)
 );
 
+FILL FILL_0__1872_ (
+);
+
+FILL FILL_0__2657_ (
+);
+
+FILL FILL_0__2237_ (
+);
+
 NAND3X1 _1888_ (
     .A(_1026_),
     .B(_1025_),
-    .C(_1023__bF$buf2),
+    .C(_1023__bF$buf0),
     .Y(_1022_)
+);
+
+FILL FILL_0__3195_ (
 );
 
 OAI22X1 _3614_ (
     .A(_595_),
-    .B(_212__bF$buf4),
+    .B(_212__bF$buf1),
     .C(_597_),
-    .D(_570__bF$buf3),
+    .D(_570__bF$buf0),
     .Y(_1127_)
 );
 
-FILL FILL127350x25350 (
-);
-
-FILL FILL_0__2466_ (
+FILL FILL_0__2046_ (
 );
 
 DFFPOSX1 _3843_ (
     .D(_1139_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [8])
 );
 
@@ -4619,26 +4919,29 @@ FILL FILL_0__2695_ (
 MUX2X1 _3652_ (
     .A(_265_),
     .B(_548_),
-    .S(_602__bF$buf4),
+    .S(_602__bF$buf3),
     .Y(_1094_)
 );
 
 MUX2X1 _3232_ (
     .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [3]),
     .B(_327_),
-    .S(_659__bF$buf4),
+    .S(_659__bF$buf1),
     .Y(_328_)
 );
 
 DFFPOSX1 _4017_ (
     .D(_1203_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
     .Q(\u_cpu.bufreg.data [9])
+);
+
+FILL FILL_0__2084_ (
 );
 
 NAND2X1 _2923_ (
     .A(\u_rf_if.read_buf0 [27]),
-    .B(\u_rf_if.stream_active_bF$buf7 ),
+    .B(\u_rf_if.stream_active_bF$buf5 ),
     .Y(_102_)
 );
 
@@ -4650,19 +4953,19 @@ OAI21X1 _2503_ (
 );
 
 NAND2X1 _3708_ (
-    .A(ibus_pending_ack_bF$buf2),
-    .B(_674__bF$buf2),
+    .A(ibus_pending_ack_bF$buf4),
+    .B(_674__bF$buf0),
     .Y(_638_)
 );
 
 DFFPOSX1 _3881_ (
     .D(_1335_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
     .Q(\u_rf_if.read_buf0 [13])
 );
 
 OAI21X1 _3461_ (
-    .A(mem_dbus_ack_bF$buf1),
+    .A(mem_dbus_ack_bF$buf5),
     .B(\u_cpu.bufreg2.dlo [21]),
     .C(_497_),
     .Y(_498_)
@@ -4674,9 +4977,12 @@ NAND2X1 _3041_ (
     .Y(_190_)
 );
 
+FILL FILL_0__3501_ (
+);
+
 NAND2X1 _2732_ (
     .A(\u_rf_if.read_buf1 [9]),
-    .B(_1783__bF$buf6),
+    .B(_1783__bF$buf5),
     .Y(_1812_)
 );
 
@@ -4685,16 +4991,19 @@ INVX1 _2312_ (
     .Y(_611_)
 );
 
+FILL FILL_0__3098_ (
+);
+
 DFFPOSX1 _3937_ (
     .D(_1363_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
     .Q(\u_rf_if.read_buf1 [15])
 );
 
 MUX2X1 _3517_ (
     .A(_537_),
     .B(_539_),
-    .S(_450__bF$buf3),
+    .S(_450__bF$buf4),
     .Y(_1166_)
 );
 
@@ -4708,17 +5017,17 @@ NAND3X1 _3690_ (
 NAND3X1 _3270_ (
     .A(_682_),
     .B(_350_),
-    .C(_659__bF$buf5),
+    .C(_659__bF$buf3),
     .Y(_358_)
-);
-
-FILL FILL_0__2369_ (
 );
 
 DFFPOSX1 _4055_ (
     .D(_1429_),
-    .CLK(i_clk_fast_bF$buf3),
+    .CLK(i_clk_fast_bF$buf7),
     .Q(\u_mem_serial.shift_reg [26])
+);
+
+FILL FILL_0__3310_ (
 );
 
 AOI21X1 _2961_ (
@@ -4734,16 +5043,16 @@ INVX1 _2541_ (
 );
 
 NOR2X1 _2121_ (
-    .A(_1002__bF$buf3),
+    .A(_1002__bF$buf1),
     .B(_818_),
     .Y(_817_)
 );
 
 DFFSR _3746_ (
-    .R(i_rst_n_bF$buf9),
+    .R(i_rst_n_bF$buf10),
     .S(vdd),
     .D(_1106_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
     .Q(ibus_pending_rdt[15])
 );
 
@@ -4757,7 +5066,7 @@ FILL FILL_0__2598_ (
 
 AND2X2 _2770_ (
     .A(_1840_),
-    .B(i_rst_n_bF$buf6),
+    .B(i_rst_n_bF$buf7),
     .Y(_1360_)
 );
 
@@ -4766,9 +5075,12 @@ INVX1 _2350_ (
     .Y(_1478_)
 );
 
+FILL FILL_0__1869_ (
+);
+
 DFFPOSX1 _3975_ (
     .D(_1382_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
     .Q(\u_rf_if.stream_cnt [0])
 );
 
@@ -4782,16 +5094,19 @@ INVX1 _3135_ (
     .Y(_255_)
 );
 
+FILL FILL_0__2810_ (
+);
+
 DFFPOSX1 _4093_ (
     .D(_1448_),
-    .CLK(i_clk_fast_bF$buf6),
+    .CLK(i_clk_fast_bF$buf8),
     .Q(\u_mem_serial.shift_reg [7])
 );
 
 MUX2X1 _2826_ (
     .A(\u_rf_if.read_buf0 [3]),
     .B(\u_rf_if.read_buf0 [4]),
-    .S(\u_rf_if.stream_active_bF$buf2 ),
+    .S(\u_rf_if.stream_active_bF$buf7 ),
     .Y(_29_)
 );
 
@@ -4802,12 +5117,18 @@ OAI21X1 _2406_ (
     .Y(_1529_)
 );
 
+FILL FILL129150x36150 (
+);
+
 DFFSR _3784_ (
-    .R(i_rst_n_bF$buf9),
+    .R(i_rst_n_bF$buf0),
     .S(vdd),
     .D(_1121_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
     .Q(ibus_pending_rdt[30])
+);
+
+FILL FILL129150x118950 (
 );
 
 INVX1 _3364_ (
@@ -4827,14 +5148,14 @@ INVX1 _2215_ (
     .Y(_733_)
 );
 
-FILL FILL127350x108150 (
+FILL FILL128850x18150 (
 );
 
 OAI22X1 _3593_ (
     .A(_588_),
-    .B(_212__bF$buf0),
+    .B(_212__bF$buf1),
     .C(_587_),
-    .D(_570__bF$buf1),
+    .D(_570__bF$buf0),
     .Y(_1139_)
 );
 
@@ -4850,8 +5171,14 @@ OAI21X1 _1906_ (
     .Y(_1004_)
 );
 
+FILL FILL_0__3633_ (
+);
+
+FILL FILL_0__3213_ (
+);
+
 OAI21X1 _2864_ (
-    .A(_22__bF$buf5),
+    .A(_22__bF$buf1),
     .B(_56_),
     .C(_57_),
     .Y(_58_)
@@ -4867,14 +5194,14 @@ OAI21X1 _2444_ (
 MUX2X1 _2024_ (
     .A(\u_mem_serial.shift_reg [15]),
     .B(\u_cpu.bufreg2.dlo [10]),
-    .S(_994__bF$buf2),
+    .S(_994__bF$buf4),
     .Y(_902_)
 );
 
 MUX2X1 _3649_ (
     .A(_280_),
     .B(_974_),
-    .S(_602__bF$buf2),
+    .S(_602__bF$buf3),
     .Y(_1097_)
 );
 
@@ -4885,7 +5212,7 @@ AOI21X1 _3229_ (
     .Y(_1240_)
 );
 
-FILL FILL_0__3442_ (
+FILL FILL_0__3022_ (
 );
 
 NAND2X1 _2673_ (
@@ -4902,16 +5229,16 @@ NAND2X1 _2253_ (
 
 DFFSR _3878_ (
     .R(vdd),
-    .S(i_rst_n_bF$buf2),
+    .S(i_rst_n_bF$buf0),
     .D(_1092_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
     .Q(ibus_pending_rdt[1])
 );
 
 MUX2X1 _3458_ (
     .A(_493_),
     .B(_495_),
-    .S(_450__bF$buf4),
+    .S(_450__bF$buf2),
     .Y(_1181_)
 );
 
@@ -4921,10 +5248,13 @@ NAND2X1 _3038_ (
     .Y(_188_)
 );
 
+FILL FILL_0__2713_ (
+);
+
 MUX2X1 _1944_ (
     .A(\u_mem_serial.shift_reg [5]),
     .B(\u_cpu.bufreg2.dlo [0]),
-    .S(_994__bF$buf0),
+    .S(_994__bF$buf3),
     .Y(_972_)
 );
 
@@ -4932,7 +5262,7 @@ FILL FILL_0__3671_ (
 );
 
 OAI21X1 _2729_ (
-    .A(_1783__bF$buf2),
+    .A(_1783__bF$buf5),
     .B(_1808_),
     .C(_1809_),
     .Y(_1810_)
@@ -4952,7 +5282,7 @@ AND2X2 _2482_ (
 
 AND2X2 _2062_ (
     .A(_869_),
-    .B(i_rst_n_bF$buf7),
+    .B(i_rst_n_bF$buf6),
     .Y(_1435_)
 );
 
@@ -4968,10 +5298,19 @@ AOI21X1 _3267_ (
     .Y(_1232_)
 );
 
+FILL FILL_0__2522_ (
+);
+
+FILL FILL_0__2102_ (
+);
+
+FILL FILL_0__3060_ (
+);
+
 AOI21X1 _2958_ (
     .A(_1681_),
     .B(_126_),
-    .C(_1070__bF$buf3),
+    .C(_1070__bF$buf0),
     .Y(_1312_)
 );
 
@@ -4983,19 +5322,19 @@ AND2X2 _2538_ (
 
 AND2X2 _2118_ (
     .A(_820_),
-    .B(i_rst_n_bF$buf7),
+    .B(i_rst_n_bF$buf6),
     .Y(_1428_)
 );
 
 AOI21X1 _2291_ (
-    .A(_659__bF$buf1),
+    .A(_659__bF$buf4),
     .B(_672_),
     .C(_658_),
     .Y(_657_)
 );
 
 OAI21X1 _3496_ (
-    .A(mem_dbus_ack_bF$buf4),
+    .A(mem_dbus_ack_bF$buf6),
     .B(\u_cpu.bufreg2.dlo [12]),
     .C(_523_),
     .Y(_524_)
@@ -5007,16 +5346,19 @@ AND2X2 _3076_ (
     .Y(_213_)
 );
 
+FILL FILL_0__3536_ (
+);
+
 AND2X2 _1982_ (
     .A(_939_),
-    .B(i_rst_n_bF$buf8),
+    .B(i_rst_n_bF$buf2),
     .Y(_1445_)
 );
 
 MUX2X1 _2767_ (
     .A(\u_rf_if.read_buf1 [19]),
     .B(\u_rf_if.read_buf1 [20]),
-    .S(\u_rf_if.stream_active_bF$buf6 ),
+    .S(\u_rf_if.stream_active_bF$buf4 ),
     .Y(_1838_)
 );
 
@@ -5027,13 +5369,16 @@ NAND3X1 _2347_ (
     .Y(_1475_)
 );
 
-FILL FILL_0__3345_ (
+FILL FILL_0__2980_ (
+);
+
+FILL FILL_0__2560_ (
 );
 
 MUX2X1 _2996_ (
     .A(_155_),
     .B(_910_),
-    .S(ibus_pending_ack_bF$buf0),
+    .S(ibus_pending_ack_bF$buf5),
     .Y(_156_)
 );
 
@@ -5058,7 +5403,16 @@ INVX1 _2385_ (
     .Y(_1508_)
 );
 
+FILL FILL128850x108150 (
+);
+
+FILL FILL_0__2845_ (
+);
+
 FILL FILL_0__2425_ (
+);
+
+FILL FILL_0__3383_ (
 );
 
 INVX8 _3802_ (
@@ -5078,17 +5432,29 @@ NOR2X1 _3399_ (
     .Y(_445_)
 );
 
+FILL FILL_0__3439_ (
+);
+
 INVX1 _1885_ (
     .A(\u_mem_serial.bit_count [5]),
     .Y(_1025_)
 );
 
+FILL FILL_0__1925_ (
+);
+
 OAI22X1 _3611_ (
     .A(_596_),
-    .B(_212__bF$buf1),
+    .B(_212__bF$buf2),
     .C(_211_),
-    .D(_570__bF$buf3),
+    .D(_570__bF$buf2),
     .Y(_1129_)
+);
+
+FILL FILL_0__2883_ (
+);
+
+FILL FILL_0__2463_ (
 );
 
 FILL FILL_0__3248_ (
@@ -5096,7 +5462,7 @@ FILL FILL_0__3248_ (
 
 NAND2X1 _2899_ (
     .A(\u_rf_if.read_buf0 [20]),
-    .B(_22__bF$buf1),
+    .B(_22__bF$buf2),
     .Y(_84_)
 );
 
@@ -5105,18 +5471,15 @@ INVX1 _2479_ (
     .Y(_1602_)
 );
 
-FILL FILL127350x46950 (
-);
-
 NOR2X1 _2059_ (
-    .A(_1023__bF$buf5),
+    .A(_1023__bF$buf2),
     .B(_872_),
     .Y(_871_)
 );
 
 DFFPOSX1 _3840_ (
     .D(_1315_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
     .Q(raddr[0])
 );
 
@@ -5134,12 +5497,12 @@ INVX1 _3000_ (
 FILL FILL_0__2272_ (
 );
 
-FILL FILL_0__3477_ (
+INVX1 _2288_ (
+    .A(_673__bF$buf2),
+    .Y(_660_)
 );
 
-INVX1 _2288_ (
-    .A(_673__bF$buf0),
-    .Y(_660_)
+FILL FILL_0__2748_ (
 );
 
 FILL FILL_0__2328_ (
@@ -5147,18 +5510,18 @@ FILL FILL_0__2328_ (
 
 DFFPOSX1 _4014_ (
     .D(_1406_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
     .Q(\u_rf_if.issue_idx [5])
 );
 
 NOR2X1 _1979_ (
-    .A(_1023__bF$buf4),
+    .A(_1023__bF$buf2),
     .B(_942_),
     .Y(_941_)
 );
 
 OAI21X1 _2920_ (
-    .A(_22__bF$buf6),
+    .A(_22__bF$buf0),
     .B(_98_),
     .C(_99_),
     .Y(_100_)
@@ -5170,6 +5533,9 @@ NOR2X1 _2500_ (
     .Y(_1623_)
 );
 
+FILL FILL_0__3286_ (
+);
+
 OAI21X1 _3705_ (
     .A(_636_),
     .B(_1701_),
@@ -5178,14 +5544,17 @@ OAI21X1 _3705_ (
 );
 
 NOR2X1 _2097_ (
-    .A(_1002__bF$buf3),
+    .A(_1002__bF$buf1),
     .B(_839_),
     .Y(_838_)
 );
 
+FILL FILL_0__2137_ (
+);
+
 DFFPOSX1 _3934_ (
     .D(_1166_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
     .Q(\u_cpu.bufreg2.dlo [6])
 );
 
@@ -5194,23 +5563,29 @@ INVX1 _3514_ (
     .Y(_537_)
 );
 
+FILL FILL_0__2786_ (
+);
+
 DFFPOSX1 _4052_ (
     .D(_1428_),
-    .CLK(i_clk_fast_bF$buf3),
+    .CLK(i_clk_fast_bF$buf7),
     .Q(\u_mem_serial.shift_reg [27])
 );
 
 DFFPOSX1 _3743_ (
     .D(_1264_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
     .Q(\u_cpu.decode.co_mem_word )
 );
 
 MUX2X1 _3323_ (
     .A(_398_),
     .B(_399_),
-    .S(_1536__bF$buf2),
+    .S(_1536__bF$buf4),
     .Y(_1220_)
+);
+
+FILL FILL_0__2595_ (
 );
 
 FILL FILL_0__2175_ (
@@ -5218,12 +5593,12 @@ FILL FILL_0__2175_ (
 
 DFFPOSX1 _3972_ (
     .D(_1185_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
     .Q(\u_cpu.bufreg.i_shamt [2])
 );
 
 AOI21X1 _3552_ (
-    .A(mem_dbus_ack_bF$buf2),
+    .A(mem_dbus_ack_bF$buf1),
     .B(\u_mem_serial.shift_reg [31]),
     .C(_452_),
     .Y(_567_)
@@ -5238,13 +5613,13 @@ OAI21X1 _3132_ (
 
 DFFPOSX1 _4090_ (
     .D(_1238_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [1])
 );
 
 NAND2X1 _2823_ (
     .A(\u_rf_if.read_buf0 [1]),
-    .B(_22__bF$buf3),
+    .B(_22__bF$buf5),
     .Y(_27_)
 );
 
@@ -5261,18 +5636,21 @@ INVX1 _3608_ (
 
 DFFPOSX1 _3781_ (
     .D(_1287_),
-    .CLK(i_clk_fast_bF$buf4),
+    .CLK(i_clk_fast_bF$buf5),
     .Q(\u_rf_if.last_req_key [7])
 );
 
 MUX2X1 _3361_ (
     .A(_417_),
     .B(_418_),
-    .S(_1536__bF$buf4),
+    .S(_1536__bF$buf1),
     .Y(_1201_)
 );
 
 FILL FILL_0__3401_ (
+);
+
+FILL FILL129150x57750 (
 );
 
 INVX2 _2632_ (
@@ -5288,12 +5666,12 @@ NOR2X1 _2212_ (
 
 DFFPOSX1 _3837_ (
     .D(_1082_),
-    .CLK(i_clk_fast_bF$buf8),
+    .CLK(i_clk_fast_bF$buf3),
     .Q(\gen_int_sys_clk.clk_div [2])
 );
 
 NAND2X1 _3417_ (
-    .A(mem_dbus_ack_bF$buf0),
+    .A(mem_dbus_ack_bF$buf3),
     .B(_819_),
     .Y(_461_)
 );
@@ -5304,20 +5682,23 @@ INVX1 _3590_ (
 );
 
 NAND2X1 _3170_ (
-    .A(ibus_pending_ack_bF$buf3),
+    .A(ibus_pending_ack_bF$buf2),
     .B(_280_),
     .Y(_281_)
 );
 
 NOR2X1 _1903_ (
-    .A(_1070__bF$buf1),
+    .A(_1070__bF$buf6),
     .B(_1069_),
     .Y(_1007_)
 );
 
+FILL FILL128850x39750 (
+);
+
 AND2X2 _2861_ (
     .A(_55_),
-    .B(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf8),
     .Y(_1338_)
 );
 
@@ -5330,7 +5711,7 @@ OAI21X1 _2441_ (
 
 OAI21X1 _2021_ (
     .A(_910_),
-    .B(_973__bF$buf2),
+    .B(_973__bF$buf6),
     .C(_905_),
     .Y(_904_)
 );
@@ -5338,29 +5719,32 @@ OAI21X1 _2021_ (
 MUX2X1 _3646_ (
     .A(_356_),
     .B(_952_),
-    .S(_602__bF$buf2),
+    .S(_602__bF$buf1),
     .Y(_1100_)
 );
 
 MUX2X1 _3226_ (
     .A(_322_),
     .B(_819_),
-    .S(ibus_pending_ack_bF$buf2),
+    .S(ibus_pending_ack_bF$buf4),
     .Y(_323_)
 );
 
-FILL FILL_0__2078_ (
+FILL FILL_0__2901_ (
+);
+
+FILL FILL_0__2498_ (
 );
 
 AND2X2 _2917_ (
     .A(_97_),
-    .B(i_rst_n_bF$buf1),
+    .B(i_rst_n_bF$buf4),
     .Y(_1324_)
 );
 
 AOI21X1 _2670_ (
     .A(_1765_),
-    .B(\u_rf_if.stream_active_bF$buf6 ),
+    .B(\u_rf_if.stream_active_bF$buf3 ),
     .C(_1766_),
     .Y(_1386_)
 );
@@ -5372,7 +5756,7 @@ INVX1 _2250_ (
 
 DFFPOSX1 _3875_ (
     .D(_1332_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
     .Q(\u_rf_if.read_buf0 [16])
 );
 
@@ -5384,19 +5768,22 @@ INVX1 _3455_ (
 AOI21X1 _3035_ (
     .A(_184_),
     .B(_185_),
-    .C(_1070__bF$buf6),
+    .C(_1070__bF$buf4),
     .Y(_1294_)
 );
 
+FILL FILL_0__2710_ (
+);
+
 NOR2X1 _1941_ (
-    .A(_1070__bF$buf2),
+    .A(_1070__bF$buf1),
     .B(_975_),
     .Y(_1450_)
 );
 
 AND2X2 _2726_ (
     .A(_1807_),
-    .B(i_rst_n_bF$buf3),
+    .B(i_rst_n_bF$buf7),
     .Y(_1371_)
 );
 
@@ -5404,6 +5791,9 @@ NOR2X1 _2306_ (
     .A(_735_),
     .B(_643_),
     .Y(_642_)
+);
+
+FILL FILL_0__1998_ (
 );
 
 NOR2X1 _3684_ (
@@ -5415,16 +5805,13 @@ NOR2X1 _3684_ (
 MUX2X1 _3264_ (
     .A(_352_),
     .B(_945_),
-    .S(ibus_pending_ack_bF$buf5),
+    .S(ibus_pending_ack_bF$buf4),
     .Y(_353_)
-);
-
-FILL FILL127050x115350 (
 );
 
 DFFPOSX1 _4049_ (
     .D(_1218_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
     .Q(\u_cpu.bufreg.data [24])
 );
 
@@ -5445,7 +5832,7 @@ AOI21X1 _2535_ (
 );
 
 NOR2X1 _2115_ (
-    .A(_1023__bF$buf0),
+    .A(_1023__bF$buf1),
     .B(_823_),
     .Y(_822_)
 );
@@ -5453,20 +5840,23 @@ NOR2X1 _2115_ (
 MUX2X1 _3493_ (
     .A(_519_),
     .B(_521_),
-    .S(_450__bF$buf0),
+    .S(_450__bF$buf2),
     .Y(_1172_)
 );
 
 NOR3X1 _3073_ (
-    .A(_1070__bF$buf6),
+    .A(_1070__bF$buf2),
     .B(_210_),
     .C(_207_),
     .Y(_1281_)
 );
 
+FILL FILL_0__3113_ (
+);
+
 NAND2X1 _2764_ (
     .A(\u_rf_if.read_buf1 [17]),
-    .B(_1783__bF$buf5),
+    .B(_1783__bF$buf0),
     .Y(_1836_)
 );
 
@@ -5476,19 +5866,19 @@ OR2X2 _2344_ (
     .Y(_1472_)
 );
 
-FILL FILL126450x86550 (
+FILL FILL129150x104550 (
 );
 
 DFFPOSX1 _3969_ (
     .D(_1379_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
     .Q(\u_rf_if.stream_cnt [3])
 );
 
 MUX2X1 _3549_ (
     .A(_562_),
     .B(_564_),
-    .S(_450__bF$buf1),
+    .S(_450__bF$buf0),
     .Y(_1159_)
 );
 
@@ -5501,7 +5891,7 @@ AOI21X1 _3129_ (
 
 DFFPOSX1 _4087_ (
     .D(_1445_),
-    .CLK(i_clk_fast_bF$buf6),
+    .CLK(i_clk_fast_bF$buf0),
     .Q(\u_mem_serial.shift_reg [10])
 );
 
@@ -5538,7 +5928,7 @@ CLKBUF1 CLKBUF1_insert185 (
 AOI21X1 _2993_ (
     .A(_153_),
     .B(_150_),
-    .C(_1070__bF$buf0),
+    .C(_1070__bF$buf5),
     .Y(_1304_)
 );
 
@@ -5550,21 +5940,24 @@ INVX1 _2573_ (
 AOI21X1 _2153_ (
     .A(_790_),
     .B(\u_cpu.bufreg.i_shamt [2]),
-    .C(_1002__bF$buf4),
+    .C(_1002__bF$buf3),
     .Y(_789_)
 );
 
 DFFSR _3778_ (
-    .R(i_rst_n_bF$buf9),
+    .R(i_rst_n_bF$buf3),
     .S(vdd),
     .D(_1118_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
     .Q(ibus_pending_rdt[27])
 );
 
 INVX1 _3358_ (
     .A(\u_cpu.bufreg.data [8]),
     .Y(_417_)
+);
+
+FILL FILL_0__2613_ (
 );
 
 CLKBUF1 CLKBUF1_insert50 (
@@ -5597,6 +5990,9 @@ CLKBUF1 CLKBUF1_insert55 (
     .Y(i_clk_fast_bF$buf0)
 );
 
+FILL FILL_0__3571_ (
+);
+
 FILL FILL_0__3151_ (
 );
 
@@ -5620,9 +6016,9 @@ AOI21X1 _2382_ (
 
 OAI22X1 _3587_ (
     .A(_585_),
-    .B(_212__bF$buf0),
+    .B(_212__bF$buf4),
     .C(_584_),
-    .D(_570__bF$buf1),
+    .D(_570__bF$buf3),
     .Y(_1142_)
 );
 
@@ -5636,16 +6032,13 @@ NAND3X1 _3167_ (
 FILL FILL_0__2002_ (
 );
 
-FILL FILL_0__3207_ (
-);
-
-FILL FILL_0__3380_ (
+FILL FILL_0__3627_ (
 );
 
 MUX2X1 _2858_ (
     .A(\u_rf_if.read_buf0 [11]),
     .B(\u_rf_if.read_buf0 [12]),
-    .S(\u_rf_if.stream_active_bF$buf3 ),
+    .S(\u_rf_if.stream_active_bF$buf2 ),
     .Y(_53_)
 );
 
@@ -5665,7 +6058,7 @@ MUX2X1 _2018_ (
 MUX2X1 _2191_ (
     .A(\u_mem_serial.shift_reg [35]),
     .B(\u_cpu.bufreg2.dhi [6]),
-    .S(_994__bF$buf5),
+    .S(_994__bF$buf3),
     .Y(_755_)
 );
 
@@ -5676,7 +6069,13 @@ AOI21X1 _3396_ (
     .Y(_443_)
 );
 
-FILL FILL_0__2231_ (
+FILL FILL_0__2651_ (
+);
+
+FILL FILL_0__3436_ (
+);
+
+FILL FILL_0__3016_ (
 );
 
 OAI21X1 _1882_ (
@@ -5698,15 +6097,24 @@ INVX1 _2247_ (
     .Y(_701_)
 );
 
+FILL FILL_0__1922_ (
+);
+
+FILL FILL_0__2460_ (
+);
+
+FILL FILL_0__2040_ (
+);
+
 NAND3X1 _1938_ (
     .A(\u_mem_serial.shift_reg [4]),
-    .B(_1023__bF$buf0),
-    .C(_994__bF$buf0),
+    .B(_1023__bF$buf4),
+    .C(_994__bF$buf2),
     .Y(_977_)
 );
 
 OAI21X1 _2896_ (
-    .A(_22__bF$buf1),
+    .A(_22__bF$buf3),
     .B(_80_),
     .C(_81_),
     .Y(_82_)
@@ -5721,8 +6129,20 @@ NAND2X1 _2476_ (
 MUX2X1 _2056_ (
     .A(\u_mem_serial.shift_reg [19]),
     .B(\u_cpu.bufreg2.dlo [14]),
-    .S(_994__bF$buf1),
+    .S(_994__bF$buf4),
     .Y(_874_)
+);
+
+FILL FILL128550x115350 (
+);
+
+FILL FILL_0__2936_ (
+);
+
+FILL FILL_0__2516_ (
+);
+
+FILL FILL_0__3474_ (
 );
 
 AOI21X1 _2285_ (
@@ -5732,20 +6152,23 @@ AOI21X1 _2285_ (
     .Y(_663_)
 );
 
+FILL FILL_0__1960_ (
+);
+
+FILL FILL_0__2325_ (
+);
+
 DFFPOSX1 _4011_ (
     .D(_1404_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
     .Q(\u_rf_if.rreg0_latched [4])
 );
 
 MUX2X1 _1976_ (
     .A(\u_mem_serial.shift_reg [9]),
     .B(\u_cpu.bufreg2.dlo [4]),
-    .S(_994__bF$buf4),
+    .S(_994__bF$buf0),
     .Y(_944_)
-);
-
-FILL FILL_0__3283_ (
 );
 
 NOR2X1 _3702_ (
@@ -5756,7 +6179,7 @@ NOR2X1 _3702_ (
 
 AND2X2 _2094_ (
     .A(_841_),
-    .B(i_rst_n_bF$buf7),
+    .B(i_rst_n_bF$buf6),
     .Y(_1431_)
 );
 
@@ -5767,28 +6190,34 @@ OAI21X1 _3299_ (
     .Y(_381_)
 );
 
-FILL FILL_0__2134_ (
+FILL FILL_0__2974_ (
+);
+
+FILL FILL_0__3339_ (
 );
 
 DFFPOSX1 _3931_ (
     .D(_1360_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
     .Q(\u_rf_if.read_buf1 [18])
 );
 
 NAND2X1 _3511_ (
-    .A(mem_dbus_ack_bF$buf3),
+    .A(mem_dbus_ack_bF$buf2),
     .B(_966_),
     .Y(_535_)
 );
 
-FILL FILL127350x150 (
+FILL FILL_0__2783_ (
+);
+
+FILL FILL_0__2363_ (
 );
 
 MUX2X1 _2799_ (
     .A(\u_rf_if.read_buf1 [27]),
     .B(\u_rf_if.read_buf1 [28]),
-    .S(\u_rf_if.stream_active_bF$buf5 ),
+    .S(\u_rf_if.stream_active_bF$buf7 ),
     .Y(_8_)
 );
 
@@ -5800,7 +6229,7 @@ NOR2X1 _2379_ (
 
 DFFPOSX1 _3740_ (
     .D(_1261_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
     .Q(\u_cpu.decode.opcode [2])
 );
 
@@ -5809,11 +6238,26 @@ INVX1 _3320_ (
     .Y(_398_)
 );
 
+FILL FILL_0__2839_ (
+);
+
+FILL FILL_0__3377_ (
+);
+
 OAI21X1 _2188_ (
-    .A(_1002__bF$buf4),
+    .A(_1002__bF$buf2),
     .B(_758_),
     .C(_760_),
     .Y(_757_)
+);
+
+FILL FILL_0__1863_ (
+);
+
+FILL FILL_0__2648_ (
+);
+
+FILL FILL_0__2228_ (
 );
 
 INVX1 _1879_ (
@@ -5821,11 +6265,8 @@ INVX1 _1879_ (
     .Y(_1029_)
 );
 
-FILL FILL127350x32550 (
-);
-
 OAI21X1 _2820_ (
-    .A(_22__bF$buf3),
+    .A(_22__bF$buf5),
     .B(_23_),
     .C(_24_),
     .Y(_25_)
@@ -5839,23 +6280,17 @@ INVX1 _2400_ (
 FILL FILL_0__3186_ (
 );
 
-FILL FILL_0__1919_ (
-);
-
 OAI22X1 _3605_ (
     .A(_594_),
-    .B(_212__bF$buf4),
+    .B(_212__bF$buf2),
     .C(_593_),
-    .D(_570__bF$buf3),
+    .D(_570__bF$buf2),
     .Y(_1133_)
-);
-
-FILL FILL_0__2037_ (
 );
 
 DFFPOSX1 _3834_ (
     .D(_1312_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
     .Q(raddr[3])
 );
 
@@ -5871,10 +6306,19 @@ NAND2X1 _1900_ (
     .Y(_1010_)
 );
 
+FILL FILL_0__2686_ (
+);
+
+FILL FILL_0__2266_ (
+);
+
+FILL FILL128850x93750 (
+);
+
 MUX2X1 _3643_ (
     .A(_255_),
     .B(_931_),
-    .S(_602__bF$buf1),
+    .S(_602__bF$buf2),
     .Y(_1103_)
 );
 
@@ -5886,25 +6330,28 @@ NOR2X1 _3223_ (
 
 DFFPOSX1 _4008_ (
     .D(_1200_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
     .Q(\u_cpu.bufreg.data [6])
+);
+
+FILL FILL_0__2075_ (
 );
 
 MUX2X1 _2914_ (
     .A(\u_rf_if.read_buf0 [25]),
     .B(\u_rf_if.read_buf0 [26]),
-    .S(\u_rf_if.stream_active_bF$buf4 ),
+    .S(\u_rf_if.stream_active_bF$buf6 ),
     .Y(_95_)
 );
 
 DFFPOSX1 _3872_ (
     .D(_1146_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [15])
 );
 
 NAND2X1 _3452_ (
-    .A(mem_dbus_ack_bF$buf0),
+    .A(mem_dbus_ack_bF$buf5),
     .B(_861_),
     .Y(_491_)
 );
@@ -5924,7 +6371,7 @@ MUX2X1 _2723_ (
 );
 
 AOI21X1 _2303_ (
-    .A(_659__bF$buf1),
+    .A(_659__bF$buf4),
     .B(_672_),
     .C(_646_),
     .Y(_645_)
@@ -5935,18 +6382,15 @@ FILL FILL_0__3089_ (
 
 DFFPOSX1 _3928_ (
     .D(_1163_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
     .Q(\u_cpu.bufreg2.dlo [3])
 );
 
 OAI21X1 _3508_ (
-    .A(mem_dbus_ack_bF$buf3),
+    .A(mem_dbus_ack_bF$buf2),
     .B(\u_cpu.bufreg2.dlo [9]),
     .C(_532_),
     .Y(_533_)
-);
-
-FILL FILL_0__1995_ (
 );
 
 INVX1 _3681_ (
@@ -5965,10 +6409,13 @@ DFFPOSX1 _4046_ (
     .Q(\u_mem_serial.shift_reg [30])
 );
 
+FILL FILL_0__3301_ (
+);
+
 OAI21X1 _2952_ (
     .A(raddr[1]),
     .B(_1680_),
-    .C(i_rst_n_bF$buf10),
+    .C(i_rst_n_bF$buf9),
     .Y(_123_)
 );
 
@@ -5982,13 +6429,13 @@ OAI21X1 _2532_ (
 MUX2X1 _2112_ (
     .A(\u_mem_serial.shift_reg [26]),
     .B(\u_cpu.bufreg2.dlo [21]),
-    .S(_994__bF$buf0),
+    .S(_994__bF$buf1),
     .Y(_825_)
 );
 
 DFFPOSX1 _3737_ (
-    .D(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
-    .CLK(i_clk_fast_bF$buf8),
+    .D(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .CLK(i_clk_fast_bF$buf2),
     .Q(\u_mem_serial.clk_sys_prev )
 );
 
@@ -6008,11 +6455,11 @@ NOR2X1 _3070_ (
     .Y(_1283_)
 );
 
-FILL FILL_0__3110_ (
+FILL FILL_0__2589_ (
 );
 
 OAI21X1 _2761_ (
-    .A(_1783__bF$buf3),
+    .A(_1783__bF$buf2),
     .B(_1832_),
     .C(_1833_),
     .Y(_1834_)
@@ -6025,7 +6472,7 @@ INVX1 _2341_ (
 
 DFFPOSX1 _3966_ (
     .D(_1182_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
     .Q(\u_cpu.bufreg2.dlo [22])
 );
 
@@ -6039,50 +6486,56 @@ INVX1 _3126_ (
     .Y(_248_)
 );
 
+FILL FILL_0__2801_ (
+);
+
+FILL FILL_0__2398_ (
+);
+
 DFFPOSX1 _4084_ (
     .D(_1235_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
     .Q(rreg1[2])
 );
 
 NOR2X1 _2817_ (
-    .A(\u_rf_if.stream_active_bF$buf2 ),
+    .A(\u_rf_if.stream_active_bF$buf5 ),
     .B(_1738_),
     .Y(_22_)
 );
 
 CLKBUF1 CLKBUF1_insert150 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf8 )
 );
 
 CLKBUF1 CLKBUF1_insert151 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf7 )
 );
 
 CLKBUF1 CLKBUF1_insert152 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf6 )
 );
 
 CLKBUF1 CLKBUF1_insert153 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf5 )
 );
 
 CLKBUF1 CLKBUF1_insert154 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf4 )
 );
 
 CLKBUF1 CLKBUF1_insert155 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf3 )
 );
 
 CLKBUF1 CLKBUF1_insert156 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf2 )
 );
 
@@ -6092,7 +6545,7 @@ CLKBUF1 CLKBUF1_insert157 (
 );
 
 CLKBUF1 CLKBUF1_insert158 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf0 )
 );
 
@@ -6104,30 +6557,30 @@ INVX1 _2990_ (
 OAI21X1 _2570_ (
     .A(_1686_),
     .B(_1685_),
-    .C(i_rst_n_bF$buf4),
+    .C(i_rst_n_bF$buf9),
     .Y(_1687_)
 );
 
 AND2X2 _2150_ (
     .A(_792_),
-    .B(i_rst_n_bF$buf7),
+    .B(i_rst_n_bF$buf2),
     .Y(_1424_)
 );
 
 DFFPOSX1 _3775_ (
     .D(_1284_),
-    .CLK(i_clk_fast_bF$buf1),
+    .CLK(i_clk_fast_bF$buf3),
     .Q(\u_rf_if.tx_state [0])
 );
 
 MUX2X1 _3355_ (
     .A(_414_),
     .B(_415_),
-    .S(_1536__bF$buf0),
+    .S(_1536__bF$buf2),
     .Y(_1204_)
 );
 
-FILL FILL127350x115350 (
+FILL FILL128850x25350 (
 );
 
 NAND2X1 _2626_ (
@@ -6156,9 +6609,15 @@ INVX1 _3164_ (
     .Y(_276_)
 );
 
+FILL FILL_0__3624_ (
+);
+
+FILL FILL_0__3204_ (
+);
+
 NAND2X1 _2855_ (
     .A(\u_rf_if.read_buf0 [9]),
-    .B(_22__bF$buf0),
+    .B(_22__bF$buf2),
     .Y(_51_)
 );
 
@@ -6181,12 +6640,6 @@ MUX2X1 _3393_ (
     .Y(_1192_)
 );
 
-FILL FILL_0__3853_ (
-);
-
-FILL FILL_0__3013_ (
-);
-
 INVX1 _2664_ (
     .A(_1762_),
     .Y(_1388_)
@@ -6200,7 +6653,7 @@ NAND2X1 _2244_ (
 
 DFFPOSX1 _3869_ (
     .D(_1329_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
     .Q(\u_rf_if.read_buf0 [19])
 );
 
@@ -6218,6 +6671,9 @@ OAI21X1 _3029_ (
     .Y(_182_)
 );
 
+FILL FILL_0__2704_ (
+);
+
 MUX2X1 _1935_ (
     .A(\u_mem_serial.shift_reg [4]),
     .B(_980_),
@@ -6225,9 +6681,15 @@ MUX2X1 _1935_ (
     .Y(_979_)
 );
 
+FILL FILL_0__3662_ (
+);
+
+FILL FILL_0__3242_ (
+);
+
 AND2X2 _2893_ (
     .A(_79_),
-    .B(i_rst_n_bF$buf1),
+    .B(i_rst_n_bF$buf4),
     .Y(_1330_)
 );
 
@@ -6238,7 +6700,7 @@ INVX1 _2473_ (
 
 OAI21X1 _2053_ (
     .A(_882_),
-    .B(_973__bF$buf0),
+    .B(_973__bF$buf2),
     .C(_877_),
     .Y(_876_)
 );
@@ -6257,6 +6719,12 @@ AOI22X1 _3258_ (
     .Y(_1233_)
 );
 
+FILL FILL_0__2513_ (
+);
+
+FILL FILL_0__3051_ (
+);
+
 NAND2X1 _2949_ (
     .A(\u_rf_if.issue_chunk [0]),
     .B(_1680_),
@@ -6273,7 +6741,7 @@ OAI22X1 _2529_ (
 
 OAI21X1 _2109_ (
     .A(_833_),
-    .B(_973__bF$buf4),
+    .B(_973__bF$buf3),
     .C(_828_),
     .Y(_827_)
 );
@@ -6296,16 +6764,22 @@ NAND2X1 _3067_ (
     .Y(_208_)
 );
 
+FILL FILL_0__3527_ (
+);
+
+FILL FILL_0__3107_ (
+);
+
 OAI21X1 _1973_ (
     .A(_952_),
-    .B(_973__bF$buf6),
+    .B(_973__bF$buf2),
     .C(_947_),
     .Y(_946_)
 );
 
 AND2X2 _2758_ (
     .A(_1831_),
-    .B(i_rst_n_bF$buf6),
+    .B(i_rst_n_bF$buf7),
     .Y(_1363_)
 );
 
@@ -6316,7 +6790,7 @@ AND2X2 _2338_ (
 );
 
 NOR2X1 _2091_ (
-    .A(_1023__bF$buf5),
+    .A(_1023__bF$buf2),
     .B(_844_),
     .Y(_843_)
 );
@@ -6328,12 +6802,15 @@ OAI21X1 _3296_ (
     .Y(_1226_)
 );
 
-FILL FILL_0__2971_ (
+FILL FILL_0__2551_ (
+);
+
+FILL FILL_0__2131_ (
 );
 
 NAND2X1 _2987_ (
     .A(_148_),
-    .B(_1692__bF$buf2),
+    .B(_1692__bF$buf3),
     .Y(_149_)
 );
 
@@ -6344,23 +6821,32 @@ NOR2X1 _2567_ (
 );
 
 NOR2X1 _2147_ (
-    .A(_1023__bF$buf2),
+    .A(_1023__bF$buf0),
     .B(_795_),
     .Y(_794_)
 );
 
-FILL FILL_0__3145_ (
+FILL FILL128850x115350 (
+);
+
+FILL FILL_0__3565_ (
 );
 
 NAND2X1 _2796_ (
     .A(\u_rf_if.read_buf1 [25]),
-    .B(_1783__bF$buf0),
+    .B(_1783__bF$buf4),
     .Y(_6_)
 );
 
 INVX1 _2376_ (
     .A(current_wdata0_next_hint),
     .Y(_1499_)
+);
+
+FILL FILL_0__2416_ (
+);
+
+FILL FILL_0__3374_ (
 );
 
 NAND2X1 _2185_ (
@@ -6376,6 +6862,9 @@ OAI21X1 _1876_ (
     .Y(_1031_)
 );
 
+FILL FILL_0__1916_ (
+);
+
 INVX1 _3602_ (
     .A(\u_cpu.ctrl.o_ibus_adr [3]),
     .Y(_593_)
@@ -6389,9 +6878,18 @@ AOI22X1 _3199_ (
     .Y(_1247_)
 );
 
+FILL FILL_0__2874_ (
+);
+
+FILL FILL_0__2454_ (
+);
+
+FILL FILL_0__3239_ (
+);
+
 DFFPOSX1 _3831_ (
     .D(_1136_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [5])
 );
 
@@ -6401,13 +6899,13 @@ NOR2X1 _3411_ (
     .Y(_456_)
 );
 
-FILL FILL_0__3048_ (
+FILL FILL_0__2263_ (
 );
 
 MUX2X1 _2699_ (
     .A(\u_rf_if.read_buf1 [2]),
     .B(\u_rf_if.read_buf1 [3]),
-    .S(\u_rf_if.stream_active_bF$buf5 ),
+    .S(\u_rf_if.stream_active_bF$buf4 ),
     .Y(_1787_)
 );
 
@@ -6417,13 +6915,10 @@ NAND2X1 _2279_ (
     .Y(_669_)
 );
 
-FILL FILL_0__1954_ (
-);
-
 MUX2X1 _3640_ (
     .A(_155_),
     .B(_910_),
-    .S(_602__bF$buf4),
+    .S(_602__bF$buf0),
     .Y(_1106_)
 );
 
@@ -6432,19 +6927,25 @@ INVX1 _3220_ (
     .Y(_318_)
 );
 
-DFFPOSX1 _4005_ (
-    .D(_1401_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
-    .Q(\u_rf_if.wdata0_next_phase )
+FILL FILL_0__2739_ (
 );
 
-FILL FILL_0__2072_ (
+FILL FILL_0__2319_ (
+);
+
+DFFPOSX1 _4005_ (
+    .D(_1401_),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .Q(\u_rf_if.wdata0_next_phase )
 );
 
 NAND2X1 _2911_ (
     .A(\u_rf_if.read_buf0 [23]),
-    .B(_22__bF$buf0),
+    .B(_22__bF$buf6),
     .Y(_93_)
+);
+
+FILL FILL_0__3277_ (
 );
 
 BUFX2 BUFX2_insert0 (
@@ -6500,13 +7001,16 @@ BUFX2 BUFX2_insert9 (
 MUX2X1 _2088_ (
     .A(\u_mem_serial.shift_reg [23]),
     .B(\u_cpu.bufreg2.dlo [18]),
-    .S(_994__bF$buf2),
+    .S(_994__bF$buf1),
     .Y(_846_)
+);
+
+FILL FILL_0__2128_ (
 );
 
 NAND2X1 _2720_ (
     .A(\u_rf_if.read_buf1 [6]),
-    .B(_1783__bF$buf1),
+    .B(_1783__bF$buf6),
     .Y(_1803_)
 );
 
@@ -6518,28 +7022,31 @@ NOR2X1 _2300_ (
 
 DFFPOSX1 _3925_ (
     .D(_1357_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
     .Q(\u_rf_if.read_buf1 [21])
 );
 
 MUX2X1 _3505_ (
     .A(_528_),
     .B(_530_),
-    .S(_450__bF$buf3),
+    .S(_450__bF$buf4),
     .Y(_1169_)
+);
+
+FILL FILL_0__2777_ (
 );
 
 DFFPOSX1 _4043_ (
     .D(_1215_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
     .Q(\u_cpu.bufreg.data [21])
 );
 
 DFFSR _3734_ (
-    .R(i_rst_n_bF$buf11),
+    .R(i_rst_n_bF$buf0),
     .S(vdd),
     .D(_1103_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
     .Q(ibus_pending_rdt[12])
 );
 
@@ -6550,9 +7057,15 @@ MUX2X1 _3314_ (
     .Y(_394_)
 );
 
+FILL FILL_0__2586_ (
+);
+
+FILL FILL_0__2166_ (
+);
+
 DFFPOSX1 _3963_ (
     .D(_1376_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
     .Q(\u_rf_if.read_buf1 [2])
 );
 
@@ -6569,23 +7082,23 @@ INVX1 _3123_ (
 
 DFFPOSX1 _4081_ (
     .D(_1442_),
-    .CLK(i_clk_fast_bF$buf5),
+    .CLK(i_clk_fast_bF$buf0),
     .Q(\u_mem_serial.shift_reg [13])
 );
 
 NAND2X1 _2814_ (
     .A(\u_rf_if.read_buf1 [29]),
-    .B(_1783__bF$buf6),
+    .B(_1783__bF$buf3),
     .Y(_20_)
 );
 
 CLKBUF1 CLKBUF1_insert120 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf38 )
 );
 
 CLKBUF1 CLKBUF1_insert121 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf37 )
 );
 
@@ -6595,7 +7108,7 @@ CLKBUF1 CLKBUF1_insert122 (
 );
 
 CLKBUF1 CLKBUF1_insert123 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf35 )
 );
 
@@ -6605,35 +7118,38 @@ CLKBUF1 CLKBUF1_insert124 (
 );
 
 CLKBUF1 CLKBUF1_insert125 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf33 )
 );
 
 CLKBUF1 CLKBUF1_insert126 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf32 )
 );
 
 CLKBUF1 CLKBUF1_insert127 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf31 )
 );
 
 CLKBUF1 CLKBUF1_insert128 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf30 )
 );
 
 CLKBUF1 CLKBUF1_insert129 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf29 )
 );
 
+FILL FILL129150x64950 (
+);
+
 DFFSR _3772_ (
-    .R(i_rst_n_bF$buf11),
+    .R(i_rst_n_bF$buf3),
     .S(vdd),
     .D(_1115_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
     .Q(ibus_pending_rdt[24])
 );
 
@@ -6644,7 +7160,7 @@ INVX1 _3352_ (
 
 AND2X2 _2623_ (
     .A(_1730_),
-    .B(i_rst_n_bF$buf10),
+    .B(i_rst_n_bF$buf9),
     .Y(_1397_)
 );
 
@@ -6655,14 +7171,17 @@ OAI21X1 _2203_ (
     .Y(_744_)
 );
 
+FILL FILL128850x46950 (
+);
+
 DFFPOSX1 _3828_ (
     .D(_1080_),
-    .CLK(i_clk_fast_bF$buf8),
+    .CLK(i_clk_fast_bF$buf3),
     .Q(\gen_int_sys_clk.clk_div [0])
 );
 
 NAND2X1 _3408_ (
-    .A(mem_dbus_ack_bF$buf2),
+    .A(mem_dbus_ack_bF$buf1),
     .B(_805_),
     .Y(_454_)
 );
@@ -6671,8 +7190,11 @@ OAI22X1 _3581_ (
     .A(_582_),
     .B(_212__bF$buf3),
     .C(_581_),
-    .D(_570__bF$buf2),
+    .D(_570__bF$buf1),
     .Y(_1145_)
+);
+
+FILL FILL129150x7350 (
 );
 
 INVX1 _3161_ (
@@ -6680,11 +7202,17 @@ INVX1 _3161_ (
     .Y(_275_)
 );
 
+FILL FILL_0_CLKBUF1_insert180 (
+);
+
 FILL FILL_0_CLKBUF1_insert182 (
 );
 
+FILL FILL_0_CLKBUF1_insert184 (
+);
+
 OAI21X1 _2852_ (
-    .A(_22__bF$buf2),
+    .A(_22__bF$buf1),
     .B(_47_),
     .C(_48_),
     .Y(_49_)
@@ -6699,7 +7227,7 @@ NAND2X1 _2432_ (
 OAI21X1 _2012_ (
     .A(_915_),
     .B(_913_),
-    .C(_973__bF$buf3),
+    .C(_973__bF$buf4),
     .Y(_912_)
 );
 
@@ -6772,8 +7300,17 @@ BUFX2 BUFX2_insert179 (
     .Y(_22__bF$buf0)
 );
 
+FILL FILL_0__2489_ (
+);
+
+FILL FILL_0__2069_ (
+);
+
+FILL FILL_0__3430_ (
+);
+
 OAI21X1 _2908_ (
-    .A(_22__bF$buf1),
+    .A(_22__bF$buf2),
     .B(_89_),
     .C(_90_),
     .Y(_91_)
@@ -6808,21 +7345,15 @@ NAND2X1 _3026_ (
     .Y(_180_)
 );
 
-FILL FILL_0__2701_ (
-);
-
 MUX2X1 _1932_ (
     .A(\u_cpu.bufreg.data [4]),
     .B(\u_cpu.ctrl.o_ibus_adr [4]),
-    .S(_1006__bF$buf1),
+    .S(_1006__bF$buf0),
     .Y(_982_)
 );
 
-FILL FILL127050x122550 (
-);
-
 OAI21X1 _2717_ (
-    .A(_1783__bF$buf1),
+    .A(_1783__bF$buf2),
     .B(_1799_),
     .C(_1800_),
     .Y(_1801_)
@@ -6831,7 +7362,7 @@ OAI21X1 _2717_ (
 MUX2X1 _2890_ (
     .A(\u_rf_if.read_buf0 [19]),
     .B(\u_rf_if.read_buf0 [20]),
-    .S(\u_rf_if.stream_active_bF$buf4 ),
+    .S(\u_rf_if.stream_active_bF$buf2 ),
     .Y(_77_)
 );
 
@@ -6847,6 +7378,9 @@ MUX2X1 _2050_ (
     .Y(_879_)
 );
 
+FILL FILL_0__1989_ (
+);
+
 NAND2X1 _3675_ (
     .A(\gen_int_sys_clk.clk_div [2]),
     .B(_613_),
@@ -6856,14 +7390,20 @@ NAND2X1 _3675_ (
 OAI21X1 _3255_ (
     .A(rreg1[2]),
     .B(_340_),
-    .C(_659__bF$buf0),
+    .C(_659__bF$buf4),
     .Y(_346_)
 );
 
 FILL FILL_0__2930_ (
 );
 
-FILL FILL_0_BUFX2_insert71 (
+FILL FILL_0_BUFX2_insert72 (
+);
+
+FILL FILL_0_BUFX2_insert74 (
+);
+
+FILL FILL_0_BUFX2_insert76 (
 );
 
 FILL FILL_0_BUFX2_insert78 (
@@ -6884,12 +7424,12 @@ INVX1 _2526_ (
 MUX2X1 _2106_ (
     .A(\u_cpu.bufreg.data [26]),
     .B(\u_cpu.ctrl.o_ibus_adr [26]),
-    .S(_1006__bF$buf1),
+    .S(_1006__bF$buf4),
     .Y(_830_)
 );
 
 OAI21X1 _3484_ (
-    .A(mem_dbus_ack_bF$buf1),
+    .A(mem_dbus_ack_bF$buf4),
     .B(\u_cpu.bufreg2.dlo [15]),
     .C(_514_),
     .Y(_515_)
@@ -6901,17 +7441,23 @@ NAND2X1 _3064_ (
     .Y(_206_)
 );
 
+FILL FILL129150x111750 (
+);
+
+FILL FILL_0__3104_ (
+);
+
 MUX2X1 _1970_ (
     .A(\u_cpu.bufreg.data [9]),
     .B(\u_cpu.ctrl.o_ibus_adr [9]),
-    .S(_1006__bF$buf4),
+    .S(_1006__bF$buf3),
     .Y(_949_)
 );
 
 MUX2X1 _2755_ (
     .A(\u_rf_if.read_buf1 [16]),
     .B(\u_rf_if.read_buf1 [17]),
-    .S(\u_rf_if.stream_active_bF$buf3 ),
+    .S(\u_rf_if.stream_active_bF$buf4 ),
     .Y(_1829_)
 );
 
@@ -6932,13 +7478,13 @@ AOI22X1 _3293_ (
 
 DFFPOSX1 _4078_ (
     .D(_1232_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [3])
 );
 
 OAI21X1 _2984_ (
-    .A(_673__bF$buf0),
-    .B(_674__bF$buf2),
+    .A(_673__bF$buf3),
+    .B(_674__bF$buf3),
     .C(\u_rf_if.rreg1_latched [2]),
     .Y(_146_)
 );
@@ -6958,15 +7504,21 @@ MUX2X1 _2144_ (
 
 DFFPOSX1 _3769_ (
     .D(_1281_),
-    .CLK(i_clk_fast_bF$buf7),
+    .CLK(i_clk_fast_bF$buf4),
     .Q(\u_rf_if.tx_state [3])
 );
 
 MUX2X1 _3349_ (
     .A(_411_),
     .B(_412_),
-    .S(_1536__bF$buf0),
+    .S(_1536__bF$buf4),
     .Y(_1207_)
+);
+
+FILL FILL_0__2604_ (
+);
+
+FILL FILL_0__3142_ (
 );
 
 BUFX2 BUFX2_insert80 (
@@ -7020,21 +7572,21 @@ BUFX2 BUFX2_insert89 (
 );
 
 OAI21X1 _2793_ (
-    .A(_1783__bF$buf0),
+    .A(_1783__bF$buf4),
     .B(_2_),
     .C(_3_),
     .Y(_4_)
 );
 
 NOR2X1 _2373_ (
-    .A(i_clk_fast_bF$buf1),
+    .A(i_clk_fast_bF$buf4),
     .B(_1497_),
     .Y(_1857_)
 );
 
 DFFPOSX1 _3998_ (
     .D(_1397_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
     .Q(\u_rf_if.read_buf0 [30])
 );
 
@@ -7049,12 +7601,12 @@ NOR2X1 _3158_ (
     .Y(_273_)
 );
 
-FILL FILL_0__2833_ (
+FILL FILL_0__3618_ (
 );
 
 AND2X2 _2849_ (
     .A(_46_),
-    .B(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf4),
     .Y(_1341_)
 );
 
@@ -7065,14 +7617,14 @@ NOR2X1 _2429_ (
 );
 
 NOR2X1 _2009_ (
-    .A(_1002__bF$buf0),
+    .A(_1002__bF$buf3),
     .B(_916_),
     .Y(_915_)
 );
 
 OAI21X1 _2182_ (
     .A(_770_),
-    .B(_973__bF$buf1),
+    .B(_973__bF$buf5),
     .C(_763_),
     .Y(_762_)
 );
@@ -7083,15 +7635,24 @@ OR2X2 _3387_ (
     .Y(_436_)
 );
 
+FILL FILL_0__2642_ (
+);
+
+FILL FILL_0__3007_ (
+);
+
 INVX1 _1873_ (
     .A(\u_mem_serial.bit_count [3]),
     .Y(_1034_)
 );
 
+FILL FILL_0__3180_ (
+);
+
 OAI21X1 _2658_ (
     .A(\u_rf_if.stream_cnt [4]),
     .B(_1757_),
-    .C(i_rst_n_bF$buf6),
+    .C(i_rst_n_bF$buf9),
     .Y(_1760_)
 );
 
@@ -7109,6 +7670,12 @@ AOI22X1 _3196_ (
     .Y(_1248_)
 );
 
+FILL FILL_0__2451_ (
+);
+
+FILL FILL_0__2031_ (
+);
+
 OAI21X1 _1929_ (
     .A(_1023__bF$buf0),
     .B(_986_),
@@ -7116,9 +7683,12 @@ OAI21X1 _1929_ (
     .Y(_984_)
 );
 
+FILL FILL128550x122550 (
+);
+
 NAND2X1 _2887_ (
     .A(\u_rf_if.read_buf0 [17]),
-    .B(_22__bF$buf6),
+    .B(_22__bF$buf3),
     .Y(_75_)
 );
 
@@ -7133,9 +7703,21 @@ INVX1 _2047_ (
     .Y(_882_)
 );
 
+FILL FILL_0__2927_ (
+);
+
+FILL FILL_0__2507_ (
+);
+
+FILL FILL_0__3465_ (
+);
+
+FILL FILL_0__3045_ (
+);
+
 NAND2X1 _2696_ (
     .A(\u_rf_if.read_buf1 [0]),
-    .B(_1783__bF$buf1),
+    .B(_1783__bF$buf0),
     .Y(_1785_)
 );
 
@@ -7145,12 +7727,15 @@ AND2X2 _2276_ (
     .Y(_672_)
 );
 
-FILL FILL_0__2736_ (
+FILL FILL_0__1951_ (
+);
+
+FILL FILL_0__2316_ (
 );
 
 DFFPOSX1 _4002_ (
     .D(_1197_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
     .Q(\u_cpu.bufreg.data [3])
 );
 
@@ -7159,12 +7744,9 @@ INVX1 _1967_ (
     .Y(_952_)
 );
 
-FILL FILL127050x86550 (
-);
-
 OAI21X1 _2085_ (
     .A(_854_),
-    .B(_973__bF$buf0),
+    .B(_973__bF$buf1),
     .C(_849_),
     .Y(_848_)
 );
@@ -7172,10 +7754,19 @@ OAI21X1 _2085_ (
 FILL FILL_0__2965_ (
 );
 
-FILL FILL_0_BUFX2_insert161 (
+FILL FILL_0_BUFX2_insert160 (
 );
 
-FILL FILL_0_BUFX2_insert168 (
+FILL FILL_0_BUFX2_insert162 (
+);
+
+FILL FILL_0_BUFX2_insert164 (
+);
+
+FILL FILL_0_BUFX2_insert167 (
+);
+
+FILL FILL_0_BUFX2_insert169 (
 );
 
 DFFPOSX1 _3922_ (
@@ -7192,19 +7783,22 @@ INVX1 _3502_ (
 OAI21X1 _3099_ (
     .A(_703_),
     .B(_720_),
-    .C(i_rst_n_bF$buf5),
+    .C(i_rst_n_bF$buf11),
     .Y(_227_)
+);
+
+FILL FILL_0__2354_ (
 );
 
 DFFPOSX1 _4040_ (
     .D(_1422_),
-    .CLK(i_clk_fast_bF$buf0),
+    .CLK(i_clk_fast_bF$buf8),
     .Q(\u_mem_serial.shift_reg [33])
 );
 
 DFFPOSX1 _3731_ (
     .D(_1252_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
     .Q(\u_cpu.decode.co_ebreak )
 );
 
@@ -7213,6 +7807,9 @@ OAI21X1 _3311_ (
     .B(_390_),
     .C(_391_),
     .Y(_1224_)
+);
+
+FILL FILL_0__3368_ (
 );
 
 NOR2X1 _2599_ (
@@ -7229,12 +7826,12 @@ NAND2X1 _2179_ (
 
 DFFPOSX1 _3960_ (
     .D(_1179_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
     .Q(\u_cpu.bufreg2.dlo [19])
 );
 
 OAI21X1 _3540_ (
-    .A(mem_dbus_ack_bF$buf5),
+    .A(mem_dbus_ack_bF$buf0),
     .B(\u_cpu.bufreg2.dlo [2]),
     .C(_557_),
     .Y(_558_)
@@ -7242,19 +7839,25 @@ OAI21X1 _3540_ (
 
 OAI21X1 _3120_ (
     .A(_227_),
-    .B(_1692__bF$buf3),
-    .C(_212__bF$buf1),
+    .B(_1692__bF$buf2),
+    .C(_212__bF$buf2),
     .Y(_244_)
 );
 
-FILL FILL_0__2639_ (
+FILL FILL_0__2219_ (
+);
+
+FILL FILL_0__2392_ (
 );
 
 OAI21X1 _2811_ (
-    .A(\u_rf_if.stream_active_bF$buf0 ),
+    .A(\u_rf_if.stream_active_bF$buf7 ),
     .B(_1742_),
     .C(_17_),
     .Y(_18_)
+);
+
+FILL FILL_0__3177_ (
 );
 
 FILL FILL_0__2868_ (
@@ -7272,25 +7875,37 @@ OAI21X1 _2200_ (
     .Y(_747_)
 );
 
-FILL FILL127050x18150 (
-);
-
 DFFPOSX1 _3825_ (
     .D(_1135_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [4])
 );
 
 NAND2X1 _3405_ (
     .A(_708_),
-    .B(_450__bF$buf4),
+    .B(_450__bF$buf1),
     .Y(_451_)
 );
 
 FILL FILL_0__1892_ (
 );
 
-FILL FILL_0_CLKBUF1_insert154 (
+FILL FILL_0__2677_ (
+);
+
+FILL FILL_0__2257_ (
+);
+
+FILL FILL_0_CLKBUF1_insert151 (
+);
+
+FILL FILL_0_CLKBUF1_insert153 (
+);
+
+FILL FILL_0_CLKBUF1_insert156 (
+);
+
+FILL FILL_0_CLKBUF1_insert158 (
 );
 
 MUX2X1 _3634_ (
@@ -7308,15 +7923,18 @@ AOI22X1 _3214_ (
     .Y(_1242_)
 );
 
+FILL FILL_0__2066_ (
+);
+
 AND2X2 _2905_ (
     .A(_88_),
-    .B(i_rst_n_bF$buf1),
+    .B(i_rst_n_bF$buf4),
     .Y(_1327_)
 );
 
 DFFPOSX1 _3863_ (
     .D(_1326_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
     .Q(\u_rf_if.read_buf0 [22])
 );
 
@@ -7336,13 +7954,13 @@ OAI21X1 _3023_ (
 
 AND2X2 _2714_ (
     .A(_1798_),
-    .B(i_rst_n_bF$buf8),
+    .B(i_rst_n_bF$buf5),
     .Y(_1374_)
 );
 
 DFFPOSX1 _3919_ (
     .D(_1354_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
     .Q(\u_rf_if.read_buf1 [24])
 );
 
@@ -7355,20 +7973,23 @@ NOR2X1 _3672_ (
 OAI21X1 _3252_ (
     .A(rreg1[3]),
     .B(_340_),
-    .C(_659__bF$buf0),
+    .C(_659__bF$buf4),
     .Y(_344_)
 );
 
 DFFPOSX1 _4037_ (
     .D(_1212_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
     .Q(\u_cpu.bufreg.data [18])
 );
 
-FILL FILL_0__3712_ (
+FILL FILL_0_BUFX2_insert41 (
 );
 
-FILL FILL_0_BUFX2_insert44 (
+FILL FILL_0_BUFX2_insert43 (
+);
+
+FILL FILL_0_BUFX2_insert45 (
 );
 
 AOI21X1 _2943_ (
@@ -7391,10 +8012,10 @@ INVX1 _2103_ (
 );
 
 DFFSR _3728_ (
-    .R(i_rst_n_bF$buf8),
+    .R(i_rst_n_bF$buf3),
     .S(vdd),
     .D(_1102_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
     .Q(ibus_pending_rdt[11])
 );
 
@@ -7408,7 +8029,7 @@ OAI21X1 _3308_ (
 MUX2X1 _3481_ (
     .A(_510_),
     .B(_512_),
-    .S(_450__bF$buf1),
+    .S(_450__bF$buf4),
     .Y(_1175_)
 );
 
@@ -7421,7 +8042,7 @@ NAND3X1 _3061_ (
 
 NAND2X1 _2752_ (
     .A(\u_rf_if.read_buf1 [14]),
-    .B(_1783__bF$buf4),
+    .B(_1783__bF$buf6),
     .Y(_1827_)
 );
 
@@ -7433,7 +8054,7 @@ NAND2X1 _2332_ (
 
 DFFPOSX1 _3957_ (
     .D(_1373_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
     .Q(\u_rf_if.read_buf1 [5])
 );
 
@@ -7451,21 +8072,30 @@ OAI21X1 _3117_ (
 
 OAI21X1 _3290_ (
     .A(\u_cpu.branch_op ),
-    .B(_1692__bF$buf1),
+    .B(_1692__bF$buf0),
     .C(_373_),
     .Y(_374_)
 );
 
+FILL FILL_0__2389_ (
+);
+
 DFFPOSX1 _4075_ (
     .D(_1439_),
-    .CLK(i_clk_fast_bF$buf6),
+    .CLK(i_clk_fast_bF$buf8),
     .Q(\u_mem_serial.shift_reg [16])
+);
+
+FILL FILL128850x32550 (
+);
+
+FILL FILL_0__3330_ (
 );
 
 AOI21X1 _2808_ (
     .A(_15_),
     .B(_14_),
-    .C(_1070__bF$buf2),
+    .C(_1070__bF$buf6),
     .Y(_1351_)
 );
 
@@ -7474,9 +8104,6 @@ MUX2X1 _2981_ (
     .B(_868_),
     .S(ibus_pending_ack_bF$buf4),
     .Y(_144_)
-);
-
-FILL FILL127350x122550 (
 );
 
 NOR2X1 _2561_ (
@@ -7493,10 +8120,10 @@ OAI21X1 _2141_ (
 );
 
 DFFSR _3766_ (
-    .R(i_rst_n_bF$buf7),
+    .R(i_rst_n_bF$buf3),
     .S(vdd),
     .D(_1112_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
     .Q(ibus_pending_rdt[21])
 );
 
@@ -7532,7 +8159,7 @@ BUFX2 BUFX2_insert59 (
 
 AND2X2 _2790_ (
     .A(_1_),
-    .B(i_rst_n_bF$buf6),
+    .B(i_rst_n_bF$buf4),
     .Y(_1355_)
 );
 
@@ -7542,9 +8169,12 @@ NAND2X1 _2370_ (
     .Y(_1496_)
 );
 
+FILL FILL_0__1889_ (
+);
+
 DFFPOSX1 _3995_ (
     .D(_1194_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
     .Q(\u_cpu.bufreg.data [29])
 );
 
@@ -7552,24 +8182,24 @@ OAI22X1 _3575_ (
     .A(_579_),
     .B(_212__bF$buf3),
     .C(_578_),
-    .D(_570__bF$buf2),
+    .D(_570__bF$buf1),
     .Y(_1148_)
 );
 
 OAI21X1 _3155_ (
     .A(\u_mem_serial.shift_reg [2]),
-    .B(ibus_pending_ack_bF$buf4),
+    .B(ibus_pending_ack_bF$buf0),
     .C(_270_),
     .Y(_271_)
 );
 
-FILL FILL_0__3615_ (
+FILL FILL_0__2830_ (
 );
 
 MUX2X1 _2846_ (
     .A(\u_rf_if.read_buf0 [8]),
     .B(\u_rf_if.read_buf0 [9]),
-    .S(\u_rf_if.stream_active_bF$buf7 ),
+    .S(\u_rf_if.stream_active_bF$buf6 ),
     .Y(_44_)
 );
 
@@ -7622,13 +8252,19 @@ AOI22X1 _3193_ (
 );
 
 NOR2X1 _1926_ (
-    .A(_1070__bF$buf2),
+    .A(_1070__bF$buf1),
     .B(_987_),
     .Y(_1453_)
 );
 
+FILL FILL_0__3653_ (
+);
+
+FILL FILL_0__3233_ (
+);
+
 OAI21X1 _2884_ (
-    .A(_22__bF$buf6),
+    .A(_22__bF$buf3),
     .B(_71_),
     .C(_72_),
     .Y(_73_)
@@ -7642,23 +8278,26 @@ INVX1 _2464_ (
 OAI21X1 _2044_ (
     .A(_887_),
     .B(_885_),
-    .C(_973__bF$buf2),
+    .C(_973__bF$buf0),
     .Y(_884_)
 );
 
 NOR2X1 _3669_ (
-    .A(_1070__bF$buf4),
+    .A(_1070__bF$buf3),
     .B(_1051_),
     .Y(_1050_)
 );
 
 AND2X2 _3249_ (
-    .A(_659__bF$buf0),
+    .A(_659__bF$buf5),
     .B(_340_),
     .Y(_342_)
 );
 
-FILL FILL126450x46950 (
+FILL FILL_0__3709_ (
+);
+
+FILL FILL_0__3042_ (
 );
 
 NOR2X1 _2693_ (
@@ -7673,10 +8312,10 @@ INVX1 _2273_ (
 );
 
 DFFSR _3898_ (
-    .R(i_rst_n_bF$buf2),
+    .R(i_rst_n_bF$buf0),
     .S(vdd),
     .D(_1097_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
     .Q(ibus_pending_rdt[6])
 );
 
@@ -7690,6 +8329,9 @@ NAND3X1 _3058_ (
     .B(_1716_),
     .C(_1666_),
     .Y(_202_)
+);
+
+FILL FILL_0__2733_ (
 );
 
 FILL FILL_0__3518_ (
@@ -7706,7 +8348,7 @@ FILL FILL_0__3691_ (
 );
 
 OAI21X1 _2749_ (
-    .A(_1783__bF$buf4),
+    .A(_1783__bF$buf6),
     .B(_1823_),
     .C(_1824_),
     .Y(_1825_)
@@ -7721,12 +8363,12 @@ OR2X2 _2329_ (
 MUX2X1 _2082_ (
     .A(\u_cpu.bufreg.data [23]),
     .B(\u_cpu.ctrl.o_ibus_adr [23]),
-    .S(_1006__bF$buf0),
+    .S(_1006__bF$buf1),
     .Y(_851_)
 );
 
 OAI21X1 _3287_ (
-    .A(_659__bF$buf4),
+    .A(_659__bF$buf2),
     .B(_371_),
     .C(_368_),
     .Y(_1228_)
@@ -7735,24 +8377,33 @@ OAI21X1 _3287_ (
 FILL FILL_0__2542_ (
 );
 
+FILL FILL_0__2122_ (
+);
+
+FILL FILL_0__3080_ (
+);
+
+FILL FILL128850x122550 (
+);
+
 AOI21X1 _2978_ (
     .A(_141_),
     .B(_138_),
-    .C(_1070__bF$buf0),
+    .C(_1070__bF$buf5),
     .Y(_1307_)
 );
 
 AOI21X1 _2558_ (
     .A(_1675_),
     .B(_689_),
-    .C(_1070__bF$buf5),
+    .C(_1070__bF$buf2),
     .Y(_1407_)
 );
 
 MUX2X1 _2138_ (
     .A(\u_cpu.bufreg.data [30]),
     .B(\u_cpu.ctrl.o_ibus_adr [30]),
-    .S(_1006__bF$buf3),
+    .S(_1006__bF$buf0),
     .Y(_802_)
 );
 
@@ -7763,27 +8414,33 @@ AOI21X1 _3096_ (
     .Y(_1273_)
 );
 
-FILL FILL_0__2771_ (
+FILL FILL_0__3556_ (
 );
 
 MUX2X1 _2787_ (
     .A(\u_rf_if.read_buf1 [24]),
     .B(\u_rf_if.read_buf1 [25]),
-    .S(\u_rf_if.stream_active_bF$buf5 ),
+    .S(\u_rf_if.stream_active_bF$buf1 ),
     .Y(_1853_)
 );
 
 OAI21X1 _2367_ (
     .A(ren),
     .B(_1471_),
-    .C(i_rst_n_bF$buf4),
+    .C(i_rst_n_bF$buf10),
     .Y(_1494_)
+);
+
+FILL FILL_0__2407_ (
+);
+
+FILL FILL_0__2580_ (
 );
 
 OAI21X1 _2596_ (
     .A(raddr[8]),
     .B(_1680_),
-    .C(i_rst_n_bF$buf4),
+    .C(i_rst_n_bF$buf1),
     .Y(_1707_)
 );
 
@@ -7801,12 +8458,18 @@ NOR2X1 _1867_ (
 FILL FILL_0__3594_ (
 );
 
+FILL FILL_0__1907_ (
+);
+
+FILL FILL_0__2865_ (
+);
+
 FILL FILL_0__2445_ (
 );
 
 DFFPOSX1 _3822_ (
     .D(_1079_),
-    .CLK(i_clk_fast_bF$buf8),
+    .CLK(i_clk_fast_bF$buf3),
     .Q(\gen_int_sys_clk.clk_sys_r )
 );
 
@@ -7815,13 +8478,25 @@ INVX1 _3402_ (
     .Y(_448_)
 );
 
-FILL FILL_0__2674_ (
+FILL FILL_0__2254_ (
 );
 
 FILL FILL_0_CLKBUF1_insert120 (
 );
 
+FILL FILL_0_CLKBUF1_insert122 (
+);
+
+FILL FILL_0_CLKBUF1_insert125 (
+);
+
 FILL FILL_0_CLKBUF1_insert127 (
+);
+
+FILL FILL_0_CLKBUF1_insert129 (
+);
+
+FILL FILL_0__1945_ (
 );
 
 MUX2X1 _3631_ (
@@ -7867,8 +8542,11 @@ BUFX2 BUFX2_insert114 (
 MUX2X1 _2902_ (
     .A(\u_rf_if.read_buf0 [22]),
     .B(\u_rf_if.read_buf0 [23]),
-    .S(\u_rf_if.stream_active_bF$buf4 ),
+    .S(\u_rf_if.stream_active_bF$buf1 ),
     .Y(_86_)
+);
+
+FILL FILL_0__3268_ (
 );
 
 INVX1 _2499_ (
@@ -7883,7 +8561,7 @@ INVX1 _2079_ (
 
 DFFPOSX1 _3860_ (
     .D(_1325_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
     .Q(\u_rf_if.read_buf0 [23])
 );
 
@@ -7900,26 +8578,38 @@ OAI21X1 _3020_ (
     .Y(_175_)
 );
 
+FILL FILL_0__2119_ (
+);
+
+FILL FILL_0__2292_ (
+);
+
 MUX2X1 _2711_ (
     .A(\u_rf_if.read_buf1 [5]),
     .B(\u_rf_if.read_buf1 [6]),
-    .S(\u_rf_if.stream_active_bF$buf5 ),
+    .S(\u_rf_if.stream_active_bF$buf4 ),
     .Y(_1796_)
 );
 
 DFFPOSX1 _3916_ (
     .D(_1157_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [26])
 );
 
-FILL FILL_0__2348_ (
+FILL FILL_0__2768_ (
 );
 
 DFFPOSX1 _4034_ (
     .D(_1419_),
-    .CLK(i_clk_fast_bF$buf0),
+    .CLK(i_clk_fast_bF$buf6),
     .Q(\u_mem_serial.shift_reg [36])
+);
+
+FILL FILL_0_BUFX2_insert10 (
+);
+
+FILL FILL_0_BUFX2_insert12 (
 );
 
 INVX1 _1999_ (
@@ -7927,12 +8617,18 @@ INVX1 _1999_ (
     .Y(_924_)
 );
 
+FILL FILL_0_BUFX2_insert14 (
+);
+
 FILL FILL_0_BUFX2_insert16 (
+);
+
+FILL FILL_0_BUFX2_insert18 (
 );
 
 AND2X2 _2940_ (
     .A(_115_),
-    .B(i_rst_n_bF$buf10),
+    .B(i_rst_n_bF$buf11),
     .Y(_1319_)
 );
 
@@ -7946,34 +8642,34 @@ OAI21X1 _2520_ (
 OAI21X1 _2100_ (
     .A(_838_),
     .B(_836_),
-    .C(_973__bF$buf5),
+    .C(_973__bF$buf3),
     .Y(_835_)
 );
 
 DFFPOSX1 _3725_ (
     .D(_1458_),
-    .CLK(i_clk_fast_bF$buf1),
+    .CLK(i_clk_fast_bF$buf2),
     .Q(\u_mem_serial.bit_count [3])
 );
 
 OAI21X1 _3305_ (
-    .A(_673__bF$buf2),
-    .B(_674__bF$buf0),
+    .A(_673__bF$buf1),
+    .B(_674__bF$buf2),
     .C(_386_),
     .Y(_387_)
 );
 
-FILL FILL_0__2577_ (
+FILL FILL_0__2157_ (
 );
 
 DFFPOSX1 _3954_ (
     .D(_1176_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
     .Q(\u_cpu.bufreg2.dlo [16])
 );
 
 NAND2X1 _3534_ (
-    .A(mem_dbus_ack_bF$buf1),
+    .A(mem_dbus_ack_bF$buf0),
     .B(_552_),
     .Y(_553_)
 );
@@ -7986,12 +8682,12 @@ NOR2X1 _3114_ (
 
 DFFPOSX1 _4072_ (
     .D(_1229_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [0])
 );
 
 OAI21X1 _2805_ (
-    .A(\u_rf_if.stream_active_bF$buf1 ),
+    .A(\u_rf_if.stream_active_bF$buf7 ),
     .B(_11_),
     .C(_12_),
     .Y(_13_)
@@ -7999,7 +8695,7 @@ OAI21X1 _2805_ (
 
 DFFPOSX1 _3763_ (
     .D(_1278_),
-    .CLK(i_clk_fast_bF$buf2),
+    .CLK(i_clk_fast_bF$buf1),
     .Q(\u_mem_serial.shift_reg [37])
 );
 
@@ -8010,9 +8706,12 @@ MUX2X1 _3343_ (
     .Y(_1210_)
 );
 
+FILL FILL_0__2195_ (
+);
+
 AOI22X1 _2614_ (
     .A(\u_rf_if.read_buf1 [31]),
-    .B(\u_rf_if.stream_active_bF$buf1 ),
+    .B(\u_rf_if.stream_active_bF$buf3 ),
     .C(_1714_),
     .D(_1723_),
     .Y(_1724_)
@@ -8020,7 +8719,7 @@ AOI22X1 _2614_ (
 
 DFFPOSX1 _3819_ (
     .D(_1306_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
     .Q(\u_rf_if.rreg1_latched [1])
 );
 
@@ -8076,7 +8775,7 @@ BUFX2 BUFX2_insert29 (
 
 DFFPOSX1 _3992_ (
     .D(_1394_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
     .Q(\u_rf_if.read_buf1 [31])
 );
 
@@ -8086,15 +8785,15 @@ INVX1 _3572_ (
 );
 
 OAI21X1 _3152_ (
-    .A(_673__bF$buf2),
-    .B(_674__bF$buf0),
+    .A(_673__bF$buf1),
+    .B(_674__bF$buf2),
     .C(\u_cpu.decode.opcode [0]),
     .Y(_268_)
 );
 
 NAND2X1 _2843_ (
     .A(\u_rf_if.read_buf0 [6]),
-    .B(_22__bF$buf2),
+    .B(_22__bF$buf6),
     .Y(_42_)
 );
 
@@ -8104,7 +8803,7 @@ INVX1 _2423_ (
 );
 
 NOR2X1 _2003_ (
-    .A(_1023__bF$buf4),
+    .A(_1023__bF$buf5),
     .B(_921_),
     .Y(_920_)
 );
@@ -8112,7 +8811,7 @@ NOR2X1 _2003_ (
 MUX2X1 _3628_ (
     .A(_326_),
     .B(_826_),
-    .S(_602__bF$buf3),
+    .S(_602__bF$buf1),
     .Y(_1118_)
 );
 
@@ -8171,23 +8870,20 @@ NAND2X1 _3190_ (
 
 NAND3X1 _1923_ (
     .A(\u_mem_serial.shift_reg [1]),
-    .B(_1023__bF$buf3),
-    .C(_994__bF$buf3),
+    .B(_1023__bF$buf4),
+    .C(_994__bF$buf2),
     .Y(_989_)
-);
-
-FILL FILL_0__3650_ (
 );
 
 NAND2X1 _2708_ (
     .A(\u_rf_if.read_buf1 [3]),
-    .B(_1783__bF$buf2),
+    .B(_1783__bF$buf3),
     .Y(_1794_)
 );
 
 AND2X2 _2881_ (
     .A(_70_),
-    .B(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf8),
     .Y(_1333_)
 );
 
@@ -8199,7 +8895,7 @@ NAND3X1 _2461_ (
 );
 
 NOR2X1 _2041_ (
-    .A(_1002__bF$buf2),
+    .A(_1002__bF$buf0),
     .B(_888_),
     .Y(_887_)
 );
@@ -8214,16 +8910,16 @@ INVX1 _3246_ (
     .Y(_339_)
 );
 
-FILL FILL_0__2501_ (
+FILL FILL_0__2921_ (
 );
 
-FILL FILL126750x150 (
+FILL FILL_0__3706_ (
 );
 
 MUX2X1 _2937_ (
     .A(\u_rf_if.read_buf0 [30]),
     .B(\u_rf_if.read_buf0 [31]),
-    .S(\u_rf_if.stream_active_bF$buf1 ),
+    .S(\u_rf_if.stream_active_bF$buf5 ),
     .Y(_113_)
 );
 
@@ -8236,7 +8932,7 @@ AOI22X1 _2690_ (
     .A(\u_rf_if.stream_cnt [3]),
     .B(_1749_),
     .C(_1758_),
-    .D(\u_rf_if.stream_active_bF$buf6 ),
+    .D(\u_rf_if.stream_active_bF$buf3 ),
     .Y(_1780_)
 );
 
@@ -8249,12 +8945,12 @@ OAI21X1 _2270_ (
 
 DFFPOSX1 _3895_ (
     .D(_1342_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
     .Q(\u_rf_if.read_buf0 [6])
 );
 
 NAND2X1 _3475_ (
-    .A(mem_dbus_ack_bF$buf5),
+    .A(mem_dbus_ack_bF$buf4),
     .B(_903_),
     .Y(_508_)
 );
@@ -8266,15 +8962,21 @@ NAND3X1 _3055_ (
     .Y(_200_)
 );
 
+FILL FILL_0__2730_ (
+);
+
+FILL FILL_0__2310_ (
+);
+
 NOR2X1 _1961_ (
-    .A(_1002__bF$buf1),
+    .A(_1002__bF$buf4),
     .B(_958_),
     .Y(_957_)
 );
 
 AND2X2 _2746_ (
     .A(_1822_),
-    .B(i_rst_n_bF$buf3),
+    .B(i_rst_n_bF$buf4),
     .Y(_1366_)
 );
 
@@ -8289,16 +8991,25 @@ INVX1 _3284_ (
     .Y(_369_)
 );
 
-FILL FILL_0_BUFX2_insert106 (
+FILL FILL_0_BUFX2_insert100 (
+);
+
+FILL FILL_0_BUFX2_insert103 (
+);
+
+FILL FILL_0_BUFX2_insert105 (
+);
+
+FILL FILL_0_BUFX2_insert107 (
+);
+
+FILL FILL_0_BUFX2_insert109 (
 );
 
 DFFPOSX1 _4069_ (
     .D(_1436_),
-    .CLK(i_clk_fast_bF$buf5),
+    .CLK(i_clk_fast_bF$buf8),
     .Q(\u_mem_serial.shift_reg [19])
-);
-
-FILL FILL_0__3324_ (
 );
 
 INVX1 _2975_ (
@@ -8322,12 +9033,12 @@ NOR2X1 _3093_ (
     .Y(_223_)
 );
 
-FILL FILL_0__3553_ (
+FILL FILL_0__3133_ (
 );
 
 NAND2X1 _2784_ (
     .A(\u_rf_if.read_buf1 [22]),
-    .B(_1783__bF$buf3),
+    .B(_1783__bF$buf6),
     .Y(_1851_)
 );
 
@@ -8339,25 +9050,25 @@ OR2X2 _2364_ (
 
 DFFPOSX1 _3989_ (
     .D(_1190_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
     .Q(\u_cpu.bufreg.data [31])
 );
 
 OAI22X1 _3569_ (
     .A(_576_),
-    .B(_212__bF$buf2),
+    .B(_212__bF$buf4),
     .C(_575_),
-    .D(_570__bF$buf4),
+    .D(_570__bF$buf3),
     .Y(_1151_)
 );
 
 NAND2X1 _3149_ (
-    .A(ibus_pending_ack_bF$buf3),
+    .A(ibus_pending_ack_bF$buf1),
     .B(_265_),
     .Y(_266_)
 );
 
-FILL FILL_0__2404_ (
+FILL FILL_0__3609_ (
 );
 
 AOI21X1 _2593_ (
@@ -8374,10 +9085,10 @@ AND2X2 _2173_ (
 );
 
 DFFSR _3798_ (
-    .R(i_rst_n_bF$buf11),
+    .R(i_rst_n_bF$buf3),
     .S(vdd),
     .D(_1073_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
     .Q(ibus_pending_ack)
 );
 
@@ -8387,9 +9098,18 @@ NOR2X1 _3378_ (
     .Y(_428_)
 );
 
+FILL FILL_0__2633_ (
+);
+
 BUFX2 _1864_ (
     .A(_1854_),
     .Y(o_mem_sck)
+);
+
+FILL FILL_0__3591_ (
+);
+
+FILL FILL_0__3171_ (
 );
 
 INVX1 _2649_ (
@@ -8407,10 +9127,16 @@ INVX1 _3187_ (
     .Y(_293_)
 );
 
+FILL FILL_0__2022_ (
+);
+
+FILL FILL_0__3647_ (
+);
+
 MUX2X1 _2878_ (
     .A(\u_rf_if.read_buf0 [16]),
     .B(\u_rf_if.read_buf0 [17]),
-    .S(\u_rf_if.stream_active_bF$buf7 ),
+    .S(\u_rf_if.stream_active_bF$buf2 ),
     .Y(_68_)
 );
 
@@ -8423,15 +9149,24 @@ NAND3X1 _2458_ (
 
 AND2X2 _2038_ (
     .A(_890_),
-    .B(i_rst_n_bF$buf8),
+    .B(i_rst_n_bF$buf2),
     .Y(_1438_)
+);
+
+FILL FILL_0__2918_ (
+);
+
+FILL FILL_0__2671_ (
 );
 
 FILL FILL_0__3456_ (
 );
 
+FILL FILL_0__3036_ (
+);
+
 NAND2X1 _2687_ (
-    .A(\u_rf_if.stream_active_bF$buf6 ),
+    .A(\u_rf_if.stream_active_bF$buf4 ),
     .B(_1756_),
     .Y(_1778_)
 );
@@ -8443,13 +9178,13 @@ NAND3X1 _2267_ (
     .Y(_681_)
 );
 
-FILL FILL127050x93750 (
-);
-
-FILL FILL_0__2307_ (
+FILL FILL_0__1942_ (
 );
 
 FILL FILL_0__2480_ (
+);
+
+FILL FILL_0__2060_ (
 );
 
 AND2X2 _1958_ (
@@ -8466,32 +9201,47 @@ INVX1 _2496_ (
 OAI21X1 _2076_ (
     .A(_859_),
     .B(_857_),
-    .C(_973__bF$buf5),
+    .C(_973__bF$buf1),
     .Y(_856_)
+);
+
+FILL FILL_0__2956_ (
+);
+
+FILL FILL_0__2536_ (
+);
+
+FILL FILL_0__3494_ (
 );
 
 DFFPOSX1 _3913_ (
     .D(_1351_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
     .Q(\u_rf_if.read_buf1 [27])
+);
+
+FILL FILL_0__1980_ (
+);
+
+FILL FILL_0__2345_ (
 );
 
 DFFPOSX1 _4031_ (
     .D(_1209_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
     .Q(\u_cpu.bufreg.data [15])
 );
 
 OAI21X1 _1996_ (
     .A(_929_),
     .B(_927_),
-    .C(_973__bF$buf6),
+    .C(_973__bF$buf0),
     .Y(_926_)
 );
 
 DFFPOSX1 _3722_ (
     .D(_1248_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
     .Q(rreg0[2])
 );
 
@@ -8501,12 +9251,15 @@ NAND2X1 _3302_ (
     .Y(_384_)
 );
 
+FILL FILL_0__2994_ (
+);
+
 FILL FILL_0__3359_ (
 );
 
 DFFPOSX1 _3951_ (
     .D(_1370_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
     .Q(\u_rf_if.read_buf1 [8])
 );
 
@@ -8528,11 +9281,8 @@ FILL FILL_0__2383_ (
 
 AND2X2 _2802_ (
     .A(_10_),
-    .B(i_rst_n_bF$buf3),
+    .B(i_rst_n_bF$buf5),
     .Y(_1352_)
-);
-
-FILL FILL_0__3588_ (
 );
 
 INVX1 _2399_ (
@@ -8541,16 +9291,19 @@ INVX1 _2399_ (
 );
 
 DFFSR _3760_ (
-    .R(i_rst_n_bF$buf9),
+    .R(i_rst_n_bF$buf1),
     .S(vdd),
     .D(_1109_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
     .Q(ibus_pending_rdt[18])
 );
 
 INVX1 _3340_ (
     .A(\u_cpu.bufreg.data [17]),
     .Y(_408_)
+);
+
+FILL FILL_0__2859_ (
 );
 
 NAND3X1 _2611_ (
@@ -8560,10 +9313,22 @@ NAND3X1 _2611_ (
     .Y(_1721_)
 );
 
+FILL FILL_0__3397_ (
+);
+
 DFFPOSX1 _3816_ (
     .D(_1133_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [2])
+);
+
+FILL FILL_0__1883_ (
+);
+
+FILL FILL_0__2668_ (
+);
+
+FILL FILL_0__2248_ (
 );
 
 NOR2X1 _1899_ (
@@ -8573,7 +9338,7 @@ NOR2X1 _1899_ (
 );
 
 OAI21X1 _2840_ (
-    .A(_22__bF$buf4),
+    .A(_22__bF$buf0),
     .B(_38_),
     .C(_39_),
     .Y(_40_)
@@ -8588,14 +9353,14 @@ NAND2X1 _2420_ (
 MUX2X1 _2000_ (
     .A(\u_mem_serial.shift_reg [12]),
     .B(\u_cpu.bufreg2.dlo [7]),
-    .S(_994__bF$buf2),
+    .S(_994__bF$buf3),
     .Y(_923_)
 );
 
 MUX2X1 _3625_ (
     .A(_290_),
     .B(_805_),
-    .S(_602__bF$buf4),
+    .S(_602__bF$buf0),
     .Y(_1121_)
 );
 
@@ -8609,7 +9374,7 @@ AOI22X1 _3205_ (
 
 DFFPOSX1 _3854_ (
     .D(_1322_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
     .Q(\u_rf_if.read_buf0 [26])
 );
 
@@ -8633,11 +9398,8 @@ MUX2X1 _1920_ (
     .Y(_991_)
 );
 
-FILL FILL_0__2286_ (
-);
-
 OAI21X1 _2705_ (
-    .A(_1783__bF$buf0),
+    .A(_1783__bF$buf3),
     .B(_1790_),
     .C(_1791_),
     .Y(_1792_)
@@ -8656,8 +9418,11 @@ NOR2X1 _3243_ (
 
 DFFPOSX1 _4028_ (
     .D(_1416_),
-    .CLK(i_clk_fast_bF$buf7),
+    .CLK(i_clk_fast_bF$buf4),
     .Q(\u_rf_if.launch_pending )
+);
+
+FILL FILL_0__2095_ (
 );
 
 OAI21X1 _2934_ (
@@ -8675,18 +9440,18 @@ NOR2X1 _2514_ (
 
 DFFPOSX1 _3719_ (
     .D(_1455_),
-    .CLK(i_clk_fast_bF$buf2),
+    .CLK(i_clk_fast_bF$buf6),
     .Q(\u_mem_serial.shift_reg [0])
 );
 
 DFFPOSX1 _3892_ (
     .D(_1151_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [20])
 );
 
 NAND2X1 _3472_ (
-    .A(mem_dbus_ack_bF$buf6),
+    .A(mem_dbus_ack_bF$buf5),
     .B(_896_),
     .Y(_506_)
 );
@@ -8698,10 +9463,13 @@ NAND3X1 _3052_ (
     .Y(_198_)
 );
 
+FILL FILL_0__3512_ (
+);
+
 MUX2X1 _2743_ (
     .A(\u_rf_if.read_buf1 [13]),
     .B(\u_rf_if.read_buf1 [14]),
-    .S(\u_rf_if.stream_active_bF$buf7 ),
+    .S(\u_rf_if.stream_active_bF$buf0 ),
     .Y(_1820_)
 );
 
@@ -8713,7 +9481,7 @@ NOR2X1 _2323_ (
 
 DFFPOSX1 _3948_ (
     .D(_1173_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
     .Q(\u_cpu.bufreg2.dlo [13])
 );
 
@@ -8731,20 +9499,23 @@ OR2X2 _3108_ (
 OAI21X1 _3281_ (
     .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [1]),
     .B(_349_),
-    .C(_659__bF$buf5),
+    .C(_659__bF$buf4),
     .Y(_367_)
 );
 
 DFFPOSX1 _4066_ (
     .D(_1226_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm7 )
+);
+
+FILL FILL_0__3321_ (
 );
 
 OAI21X1 _2972_ (
     .A(raddr[7]),
     .B(_1680_),
-    .C(i_rst_n_bF$buf4),
+    .C(i_rst_n_bF$buf1),
     .Y(_137_)
 );
 
@@ -8756,20 +9527,20 @@ INVX1 _2552_ (
 OAI21X1 _2132_ (
     .A(_810_),
     .B(_808_),
-    .C(_973__bF$buf4),
+    .C(_973__bF$buf6),
     .Y(_807_)
 );
 
 DFFPOSX1 _3757_ (
     .D(_1274_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
     .Q(\u_cpu.state.cnt_r [0])
 );
 
 MUX2X1 _3337_ (
     .A(_405_),
     .B(_406_),
-    .S(_1536__bF$buf3),
+    .S(_1536__bF$buf4),
     .Y(_1213_)
 );
 
@@ -8780,16 +9551,13 @@ AOI21X1 _3090_ (
     .Y(_221_)
 );
 
-FILL FILL_0__2189_ (
-);
-
 INVX1 _2608_ (
     .A(_654_),
     .Y(_1718_)
 );
 
 OAI21X1 _2781_ (
-    .A(_1783__bF$buf3),
+    .A(_1783__bF$buf6),
     .B(_1847_),
     .C(_1848_),
     .Y(_1849_)
@@ -8802,7 +9570,7 @@ INVX1 _2361_ (
 
 DFFPOSX1 _3986_ (
     .D(_1391_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
     .Q(\u_rf_if.stream_cnt [4])
 );
 
@@ -8813,13 +9581,19 @@ INVX1 _3566_ (
 
 NAND2X1 _3146_ (
     .A(_263_),
-    .B(_1692__bF$buf2),
+    .B(_1692__bF$buf1),
     .Y(_264_)
+);
+
+FILL FILL_0__2821_ (
+);
+
+FILL FILL_0__2401_ (
 );
 
 AND2X2 _2837_ (
     .A(_37_),
-    .B(i_rst_n_bF$buf10),
+    .B(i_rst_n_bF$buf5),
     .Y(_1344_)
 );
 
@@ -8836,13 +9610,13 @@ INVX1 _2590_ (
 OAI21X1 _2170_ (
     .A(_774_),
     .B(_777_),
-    .C(_973__bF$buf1),
+    .C(_973__bF$buf5),
     .Y(_773_)
 );
 
 DFFPOSX1 _3795_ (
     .D(_1294_),
-    .CLK(i_clk_fast_bF$buf4),
+    .CLK(i_clk_fast_bF$buf5),
     .Q(\u_rf_if.last_req_key [0])
 );
 
@@ -8864,7 +9638,7 @@ BUFX2 _1861_ (
 AOI21X1 _2646_ (
     .A(_689_),
     .B(_1748_),
-    .C(_1070__bF$buf5),
+    .C(_1070__bF$buf0),
     .Y(_1392_)
 );
 
@@ -8887,9 +9661,15 @@ NAND2X1 _1917_ (
     .Y(_994_)
 );
 
+FILL FILL_0__3644_ (
+);
+
+FILL FILL_0__3224_ (
+);
+
 NAND2X1 _2875_ (
     .A(\u_rf_if.read_buf0 [14]),
-    .B(_22__bF$buf5),
+    .B(_22__bF$buf4),
     .Y(_66_)
 );
 
@@ -8899,7 +9679,7 @@ INVX1 _2455_ (
 );
 
 NOR2X1 _2035_ (
-    .A(_1023__bF$buf1),
+    .A(_1023__bF$buf5),
     .B(_893_),
     .Y(_892_)
 );
@@ -8907,7 +9687,7 @@ NOR2X1 _2035_ (
 OAI21X1 _2684_ (
     .A(\u_rf_if.stream_cnt [1]),
     .B(\u_rf_if.stream_cnt [0]),
-    .C(i_rst_n_bF$buf8),
+    .C(i_rst_n_bF$buf9),
     .Y(_1776_)
 );
 
@@ -8918,12 +9698,12 @@ INVX1 _2264_ (
 
 DFFPOSX1 _3889_ (
     .D(_1339_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
     .Q(\u_rf_if.read_buf0 [9])
 );
 
 OAI21X1 _3469_ (
-    .A(mem_dbus_ack_bF$buf6),
+    .A(mem_dbus_ack_bF$buf5),
     .B(\u_cpu.bufreg2.dlo [19]),
     .C(_503_),
     .Y(_504_)
@@ -8932,14 +9712,23 @@ OAI21X1 _3469_ (
 AOI21X1 _3049_ (
     .A(_195_),
     .B(_194_),
-    .C(_1070__bF$buf6),
+    .C(_1070__bF$buf2),
     .Y(_1290_)
 );
 
+FILL FILL_0__2724_ (
+);
+
+FILL FILL_0__3509_ (
+);
+
 NOR2X1 _1955_ (
-    .A(_1023__bF$buf5),
+    .A(_1023__bF$buf3),
     .B(_963_),
     .Y(_962_)
+);
+
+FILL FILL_0__3682_ (
 );
 
 FILL FILL_0__3262_ (
@@ -8960,7 +9749,7 @@ NOR2X1 _2073_ (
 
 OAI22X1 _3698_ (
     .A(_1499_),
-    .B(_1692__bF$buf4),
+    .B(_1692__bF$buf1),
     .C(_632_),
     .D(_264_),
     .Y(_1078_)
@@ -8971,19 +9760,19 @@ INVX1 _3278_ (
     .Y(_364_)
 );
 
+FILL FILL_0__2533_ (
+);
+
 FILL FILL_0__2113_ (
 );
 
-FILL FILL_0__3318_ (
-);
-
-FILL FILL_0__3491_ (
+FILL FILL_0__3071_ (
 );
 
 OAI21X1 _2969_ (
     .A(raddr[6]),
     .B(_1680_),
-    .C(i_rst_n_bF$buf4),
+    .C(i_rst_n_bF$buf1),
     .Y(_135_)
 );
 
@@ -8994,37 +9783,40 @@ NAND2X1 _2549_ (
 );
 
 NOR2X1 _2129_ (
-    .A(_1002__bF$buf3),
+    .A(_1002__bF$buf1),
     .B(_811_),
     .Y(_810_)
 );
 
 DFFSR _3910_ (
-    .R(i_rst_n_bF$buf8),
+    .R(i_rst_n_bF$buf3),
     .S(vdd),
     .D(_1100_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
     .Q(ibus_pending_rdt[9])
 );
 
 NOR2X1 _3087_ (
-    .A(_1070__bF$buf4),
+    .A(_1070__bF$buf3),
     .B(_220_),
     .Y(_1277_)
 );
 
-FILL FILL_0__2342_ (
+FILL FILL_0__3547_ (
+);
+
+FILL FILL_0__3127_ (
 );
 
 NOR2X1 _1993_ (
-    .A(_1002__bF$buf2),
+    .A(_1002__bF$buf3),
     .B(_930_),
     .Y(_929_)
 );
 
 AND2X2 _2778_ (
     .A(_1846_),
-    .B(i_rst_n_bF$buf1),
+    .B(i_rst_n_bF$buf5),
     .Y(_1358_)
 );
 
@@ -9032,6 +9824,15 @@ NOR2X1 _2358_ (
     .A(_1477_),
     .B(_1485_),
     .Y(_1486_)
+);
+
+FILL FILL129150x126150 (
+);
+
+FILL FILL_0__2991_ (
+);
+
+FILL FILL_0__2571_ (
 );
 
 NAND3X1 _2587_ (
@@ -9046,7 +9847,7 @@ INVX1 _2167_ (
     .Y(_776_)
 );
 
-FILL FILL_0__3165_ (
+FILL FILL_0__3585_ (
 );
 
 INVX1 _2396_ (
@@ -9054,22 +9855,22 @@ INVX1 _2396_ (
     .Y(_1519_)
 );
 
-FILL FILL_0__2016_ (
+FILL FILL_0__2856_ (
+);
+
+FILL FILL_0__2436_ (
 );
 
 FILL FILL_0__3394_ (
 );
 
-FILL FILL127050x46950 (
-);
-
 DFFPOSX1 _3813_ (
     .D(_1303_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
     .Q(\u_rf_if.rreg0_latched [0])
 );
 
-FILL FILL_0__2245_ (
+FILL FILL_0__1880_ (
 );
 
 NAND3X1 _1896_ (
@@ -9077,6 +9878,9 @@ NAND3X1 _1896_ (
     .B(\u_mem_serial.bit_count [0]),
     .C(_1020_),
     .Y(_1014_)
+);
+
+FILL FILL_0__1936_ (
 );
 
 OAI21X1 _3622_ (
@@ -9094,9 +9898,18 @@ AOI22X1 _3202_ (
     .Y(_1246_)
 );
 
+FILL FILL_0__2894_ (
+);
+
+FILL FILL_0__2474_ (
+);
+
+FILL FILL_0__3259_ (
+);
+
 DFFPOSX1 _3851_ (
     .D(_1141_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [10])
 );
 
@@ -9110,22 +9923,22 @@ MUX2X1 _3431_ (
 MUX2X1 _3011_ (
     .A(_167_),
     .B(_889_),
-    .S(ibus_pending_ack_bF$buf2),
+    .S(ibus_pending_ack_bF$buf1),
     .Y(_168_)
+);
+
+FILL FILL_0__2283_ (
 );
 
 AND2X2 _2702_ (
     .A(_1789_),
-    .B(i_rst_n_bF$buf8),
+    .B(i_rst_n_bF$buf7),
     .Y(_1377_)
-);
-
-FILL FILL_0__3068_ (
 );
 
 DFFPOSX1 _3907_ (
     .D(_1348_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
     .Q(\u_rf_if.read_buf0 [0])
 );
 
@@ -9144,17 +9957,23 @@ INVX1 _3240_ (
     .Y(_334_)
 );
 
+FILL FILL_0__2759_ (
+);
+
+FILL FILL_0__2339_ (
+);
+
 DFFPOSX1 _4025_ (
     .D(_1413_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
     .Q(\u_rf_if.wen0_r )
 );
 
-FILL FILL_0__2092_ (
+FILL FILL_0__3700_ (
 );
 
 OAI21X1 _2931_ (
-    .A(\u_rf_if.stream_active_bF$buf2 ),
+    .A(\u_rf_if.stream_active_bF$buf5 ),
     .B(_1738_),
     .C(_108_),
     .Y(_109_)
@@ -9172,7 +9991,7 @@ FILL FILL_0__3297_ (
 
 DFFPOSX1 _3716_ (
     .D(_1245_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [3])
 );
 
@@ -9181,7 +10000,7 @@ FILL FILL_0__2148_ (
 
 NAND2X1 _2740_ (
     .A(\u_rf_if.read_buf1 [11]),
-    .B(_1783__bF$buf6),
+    .B(_1783__bF$buf5),
     .Y(_1818_)
 );
 
@@ -9194,7 +10013,7 @@ OAI21X1 _2320_ (
 
 DFFPOSX1 _3945_ (
     .D(_1367_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
     .Q(\u_rf_if.read_buf1 [11])
 );
 
@@ -9212,21 +10031,27 @@ OAI21X1 _3105_ (
     .Y(_231_)
 );
 
+FILL FILL_0__2797_ (
+);
+
 DFFPOSX1 _4063_ (
     .D(_1433_),
-    .CLK(i_clk_fast_bF$buf5),
+    .CLK(i_clk_fast_bF$buf0),
     .Q(\u_mem_serial.shift_reg [22])
 );
 
 DFFPOSX1 _3754_ (
     .D(_1271_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
     .Q(\u_cpu.bufreg2.i_bytecnt [1])
 );
 
 INVX1 _3334_ (
     .A(\u_cpu.bufreg.data [20]),
     .Y(_405_)
+);
+
+FILL FILL_0__2186_ (
 );
 
 INVX1 _2605_ (
@@ -9236,13 +10061,13 @@ INVX1 _2605_ (
 
 DFFPOSX1 _3983_ (
     .D(_1389_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
     .Q(\u_rf_if.wdata0_next [0])
 );
 
 OAI22X1 _3563_ (
     .A(_573_),
-    .B(_212__bF$buf2),
+    .B(_212__bF$buf0),
     .C(_572_),
     .D(_570__bF$buf4),
     .Y(_1154_)
@@ -9253,20 +10078,20 @@ INVX1 _3143_ (
     .Y(_261_)
 );
 
-FILL FILL127050x150 (
+FILL FILL128550x39750 (
 );
 
 MUX2X1 _2834_ (
     .A(\u_rf_if.read_buf0 [5]),
     .B(\u_rf_if.read_buf0 [6]),
-    .S(\u_rf_if.stream_active_bF$buf2 ),
+    .S(\u_rf_if.stream_active_bF$buf6 ),
     .Y(_35_)
 );
 
 NAND3X1 _2414_ (
     .A(\u_cpu.bufreg.data [0]),
     .B(_1518_),
-    .C(_1536__bF$buf1),
+    .C(_1536__bF$buf3),
     .Y(_1537_)
 );
 
@@ -9277,23 +10102,23 @@ OAI21X1 _3619_ (
     .Y(_1124_)
 );
 
-FILL FILL127350x54150 (
-);
-
 DFFPOSX1 _3792_ (
     .D(_1124_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
     .Q(\u_cpu.alu.add_cy_r )
 );
 
 INVX2 _3372_ (
-    .A(_1536__bF$buf1),
+    .A(_1536__bF$buf3),
     .Y(_424_)
+);
+
+FILL FILL_0__3412_ (
 );
 
 NAND2X1 _2643_ (
     .A(_1746_),
-    .B(_1692__bF$buf4),
+    .B(_1692__bF$buf3),
     .Y(_1747_)
 );
 
@@ -9304,7 +10129,7 @@ INVX2 _2223_ (
 
 DFFPOSX1 _3848_ (
     .D(_1319_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
     .Q(\u_rf_if.read_buf0 [29])
 );
 
@@ -9317,7 +10142,7 @@ NOR2X1 _3428_ (
 AOI21X1 _3008_ (
     .A(_165_),
     .B(_162_),
-    .C(_1070__bF$buf0),
+    .C(_1070__bF$buf5),
     .Y(_1301_)
 );
 
@@ -9335,11 +10160,11 @@ MUX2X1 _1914_ (
     .Y(_996_)
 );
 
-FILL FILL_0__3221_ (
+FILL FILL129150x10950 (
 );
 
 OAI21X1 _2872_ (
-    .A(_22__bF$buf5),
+    .A(_22__bF$buf4),
     .B(_62_),
     .C(_63_),
     .Y(_64_)
@@ -9361,15 +10186,21 @@ MUX2X1 _2032_ (
 MUX2X1 _3657_ (
     .A(_604_),
     .B(_559_),
-    .S(_602__bF$buf4),
+    .S(_602__bF$buf3),
     .Y(_1091_)
 );
 
 MUX2X1 _3237_ (
     .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [2]),
     .B(_331_),
-    .S(_659__bF$buf4),
+    .S(_659__bF$buf1),
     .Y(_332_)
+);
+
+FILL FILL_0__2912_ (
+);
+
+FILL FILL_0__3450_ (
 );
 
 INVX1 _2928_ (
@@ -9394,40 +10225,43 @@ INVX1 _2261_ (
     .Y(_687_)
 );
 
-FILL FILL127350x3750 (
-);
-
 DFFSR _3886_ (
-    .R(i_rst_n_bF$buf9),
+    .R(i_rst_n_bF$buf0),
     .S(vdd),
     .D(_1094_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
     .Q(ibus_pending_rdt[3])
 );
 
 MUX2X1 _3466_ (
     .A(_499_),
     .B(_501_),
-    .S(_450__bF$buf2),
+    .S(_450__bF$buf1),
     .Y(_1179_)
 );
 
 AOI21X1 _3046_ (
     .A(_192_),
     .B(_193_),
-    .C(_1070__bF$buf6),
+    .C(_1070__bF$buf4),
     .Y(_1291_)
+);
+
+FILL FILL_0__2721_ (
+);
+
+FILL FILL_0__2301_ (
 );
 
 MUX2X1 _1952_ (
     .A(\u_mem_serial.shift_reg [6]),
     .B(\u_cpu.bufreg2.dlo [1]),
-    .S(_994__bF$buf1),
+    .S(_994__bF$buf3),
     .Y(_965_)
 );
 
 OAI21X1 _2737_ (
-    .A(_1783__bF$buf6),
+    .A(_1783__bF$buf5),
     .B(_1814_),
     .C(_1815_),
     .Y(_1816_)
@@ -9447,7 +10281,7 @@ NOR2X1 _2490_ (
 
 AND2X2 _2070_ (
     .A(_862_),
-    .B(i_rst_n_bF$buf7),
+    .B(i_rst_n_bF$buf3),
     .Y(_1434_)
 );
 
@@ -9461,8 +10295,11 @@ NAND3X1 _3695_ (
 NAND3X1 _3275_ (
     .A(_683_),
     .B(_350_),
-    .C(_659__bF$buf5),
+    .C(_659__bF$buf3),
     .Y(_362_)
+);
+
+FILL FILL_0__3315_ (
 );
 
 OAI21X1 _2966_ (
@@ -9480,7 +10317,7 @@ AND2X2 _2546_ (
 
 AND2X2 _2126_ (
     .A(_813_),
-    .B(i_rst_n_bF$buf7),
+    .B(i_rst_n_bF$buf6),
     .Y(_1427_)
 );
 
@@ -9496,14 +10333,14 @@ FILL FILL_0__3124_ (
 
 AND2X2 _1990_ (
     .A(_932_),
-    .B(i_rst_n_bF$buf8),
+    .B(i_rst_n_bF$buf2),
     .Y(_1444_)
 );
 
 MUX2X1 _2775_ (
     .A(\u_rf_if.read_buf1 [21]),
     .B(\u_rf_if.read_buf1 [22]),
-    .S(\u_rf_if.stream_active_bF$buf3 ),
+    .S(\u_rf_if.stream_active_bF$buf1 ),
     .Y(_1844_)
 );
 
@@ -9515,7 +10352,7 @@ NAND2X1 _2355_ (
 
 DFFPOSX1 _4098_ (
     .D(_1242_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [0])
 );
 
@@ -9533,15 +10370,27 @@ OAI21X1 _2164_ (
 
 DFFPOSX1 _3789_ (
     .D(_1291_),
-    .CLK(i_clk_fast_bF$buf4),
+    .CLK(i_clk_fast_bF$buf5),
     .Q(\u_rf_if.last_req_key [3])
 );
 
 MUX2X1 _3369_ (
     .A(_421_),
     .B(_422_),
-    .S(_1536__bF$buf2),
+    .S(_1536__bF$buf3),
     .Y(_1197_)
+);
+
+FILL FILL_0__2624_ (
+);
+
+FILL FILL_0__2204_ (
+);
+
+FILL FILL_0__3582_ (
+);
+
+FILL FILL_0__3162_ (
 );
 
 AOI21X1 _2393_ (
@@ -9563,9 +10412,15 @@ OAI21X1 _3178_ (
     .Y(_1252_)
 );
 
+FILL FILL_0__2013_ (
+);
+
+FILL FILL_0__3638_ (
+);
+
 AND2X2 _2869_ (
     .A(_61_),
-    .B(i_rst_n_bF$buf1),
+    .B(i_rst_n_bF$buf8),
     .Y(_1336_)
 );
 
@@ -9577,7 +10432,7 @@ NAND2X1 _2449_ (
 
 OAI21X1 _2029_ (
     .A(_903_),
-    .B(_973__bF$buf0),
+    .B(_973__bF$buf2),
     .C(_898_),
     .Y(_897_)
 );
@@ -9587,7 +10442,10 @@ INVX1 _3810_ (
     .Y(_1069_)
 );
 
-FILL FILL_0__2909_ (
+FILL FILL_0__2662_ (
+);
+
+FILL FILL_0__3447_ (
 );
 
 FILL FILL_0__3027_ (
@@ -9611,7 +10469,7 @@ OAI21X1 _2258_ (
     .Y(_690_)
 );
 
-FILL FILL_0__1933_ (
+FILL FILL_0__2471_ (
 );
 
 FILL FILL_0__2051_ (
@@ -9619,7 +10477,7 @@ FILL FILL_0__2051_ (
 
 OAI21X1 _1949_ (
     .A(_974_),
-    .B(_973__bF$buf3),
+    .B(_973__bF$buf5),
     .C(_968_),
     .Y(_967_)
 );
@@ -9632,14 +10490,26 @@ NAND3X1 _2487_ (
 );
 
 NOR2X1 _2067_ (
-    .A(_1023__bF$buf5),
+    .A(_1023__bF$buf2),
     .B(_865_),
     .Y(_864_)
 );
 
+FILL FILL_0__2947_ (
+);
+
+FILL FILL_0__2527_ (
+);
+
+FILL FILL_0__3485_ (
+);
+
+FILL FILL_0__3065_ (
+);
+
 DFFPOSX1 _3904_ (
     .D(_1154_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [23])
 );
 
@@ -9650,21 +10520,27 @@ NAND3X1 _2296_ (
     .Y(_652_)
 );
 
+FILL FILL_0__1971_ (
+);
+
+FILL FILL_0__2336_ (
+);
+
 DFFPOSX1 _4022_ (
     .D(_1205_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
     .Q(\u_cpu.bufreg.data [11])
 );
 
 NOR2X1 _1987_ (
-    .A(_1023__bF$buf4),
+    .A(_1023__bF$buf3),
     .B(_935_),
     .Y(_934_)
 );
 
 DFFPOSX1 _3713_ (
     .D(_1452_),
-    .CLK(i_clk_fast_bF$buf3),
+    .CLK(i_clk_fast_bF$buf6),
     .Q(\u_mem_serial.shift_reg [3])
 );
 
@@ -9673,14 +10549,14 @@ FILL FILL_0__2985_ (
 
 DFFPOSX1 _3942_ (
     .D(_1170_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
     .Q(\u_cpu.bufreg2.dlo [10])
 );
 
 MUX2X1 _3522_ (
     .A(_540_),
     .B(_543_),
-    .S(_450__bF$buf3),
+    .S(_450__bF$buf4),
     .Y(_1165_)
 );
 
@@ -9689,14 +10565,20 @@ INVX1 _3102_ (
     .Y(_228_)
 );
 
+FILL FILL_0__2374_ (
+);
+
 DFFPOSX1 _4060_ (
     .D(_1223_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [4])
 );
 
+FILL FILL129150x150 (
+);
+
 DFFSR _3751_ (
-    .R(i_rst_n_bF$buf3),
+    .R(i_rst_n_bF$buf10),
     .S(vdd),
     .D(_1108_),
     .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
@@ -9706,7 +10588,7 @@ DFFSR _3751_ (
 MUX2X1 _3331_ (
     .A(_402_),
     .B(_403_),
-    .S(_1536__bF$buf3),
+    .S(_1536__bF$buf1),
     .Y(_1216_)
 );
 
@@ -9716,9 +10598,12 @@ AND2X2 _2602_ (
     .Y(_1712_)
 );
 
+FILL FILL_0__3388_ (
+);
+
 DFFPOSX1 _3807_ (
     .D(_1300_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
     .Q(\u_rf_if.rreg0_latched [3])
 );
 
@@ -9728,9 +10613,12 @@ NOR2X1 _2199_ (
     .Y(_748_)
 );
 
+FILL FILL_0__1874_ (
+);
+
 DFFPOSX1 _3980_ (
     .D(_1187_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
     .Q(\u_cpu.bufreg2.dhi [4])
 );
 
@@ -9740,14 +10628,20 @@ INVX1 _3560_ (
 );
 
 NAND2X1 _3140_ (
-    .A(ibus_pending_ack_bF$buf5),
+    .A(ibus_pending_ack_bF$buf1),
     .B(_258_),
     .Y(_259_)
 );
 
+FILL FILL_0__2239_ (
+);
+
+FILL FILL_0__3600_ (
+);
+
 NAND2X1 _2831_ (
     .A(\u_rf_if.read_buf0 [3]),
-    .B(_22__bF$buf4),
+    .B(_22__bF$buf6),
     .Y(_33_)
 );
 
@@ -9758,17 +10652,20 @@ AOI21X1 _2411_ (
     .Y(_1534_)
 );
 
+FILL FILL_0__3197_ (
+);
+
+FILL FILL128550x93750 (
+);
+
 INVX1 _3616_ (
     .A(_1607_),
     .Y(_598_)
 );
 
-FILL FILL_0__2888_ (
-);
-
 OAI21X1 _2640_ (
-    .A(_673__bF$buf0),
-    .B(_674__bF$buf2),
+    .A(_673__bF$buf3),
+    .B(_674__bF$buf0),
     .C(\u_rf_if.rreg1_latched [4]),
     .Y(_1744_)
 );
@@ -9779,7 +10676,7 @@ INVX1 _2220_ (
 );
 
 NAND3X1 _3845_ (
-    .A(i_rst_n_bF$buf5),
+    .A(i_rst_n_bF$buf11),
     .B(_1063_),
     .C(_1062_),
     .Y(_1061_)
@@ -9798,11 +10695,14 @@ INVX1 _3005_ (
 
 NOR2X1 _1911_ (
     .A(_1000_),
-    .B(_1002__bF$buf4),
+    .B(_1002__bF$buf2),
     .Y(_999_)
 );
 
-FILL FILL_0__1968_ (
+FILL FILL_0__2697_ (
+);
+
+FILL FILL_0__2277_ (
 );
 
 INVX1 _3654_ (
@@ -9819,12 +10719,15 @@ AOI21X1 _3234_ (
 
 DFFPOSX1 _4019_ (
     .D(_1204_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
     .Q(\u_cpu.bufreg.data [10])
 );
 
+FILL FILL_0__2086_ (
+);
+
 OAI21X1 _2925_ (
-    .A(\u_rf_if.stream_active_bF$buf2 ),
+    .A(\u_rf_if.stream_active_bF$buf5 ),
     .B(_1738_),
     .C(_103_),
     .Y(_104_)
@@ -9837,7 +10740,7 @@ INVX1 _2505_ (
 
 DFFPOSX1 _3883_ (
     .D(_1336_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
     .Q(\u_rf_if.read_buf0 [12])
 );
 
@@ -9851,9 +10754,12 @@ INVX1 _3043_ (
     .Y(_191_)
 );
 
+FILL FILL_0__3503_ (
+);
+
 AND2X2 _2734_ (
     .A(_1813_),
-    .B(i_rst_n_bF$buf3),
+    .B(i_rst_n_bF$buf7),
     .Y(_1369_)
 );
 
@@ -9866,7 +10772,7 @@ NAND3X1 _2314_ (
 
 DFFPOSX1 _3939_ (
     .D(_1364_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
     .Q(\u_rf_if.read_buf1 [14])
 );
 
@@ -9890,8 +10796,11 @@ AOI21X1 _3272_ (
 
 DFFPOSX1 _4057_ (
     .D(_1430_),
-    .CLK(i_clk_fast_bF$buf3),
+    .CLK(i_clk_fast_bF$buf7),
     .Q(\u_mem_serial.shift_reg [25])
+);
+
+FILL FILL_0__3312_ (
 );
 
 INVX1 _2963_ (
@@ -9905,14 +10814,14 @@ INVX1 _2543_ (
 );
 
 NOR2X1 _2123_ (
-    .A(_1023__bF$buf3),
+    .A(_1023__bF$buf1),
     .B(_816_),
     .Y(_815_)
 );
 
 DFFPOSX1 _3748_ (
     .D(_1267_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
     .Q(\u_cpu.state.ibus_cyc )
 );
 
@@ -9921,20 +10830,23 @@ INVX1 _3328_ (
     .Y(_402_)
 );
 
+FILL FILL128550x25350 (
+);
+
 AND2X2 _3081_ (
     .A(_216_),
-    .B(i_rst_n_bF$buf11),
+    .B(i_rst_n_bF$buf8),
     .Y(_1279_)
 );
 
 NAND2X1 _2772_ (
     .A(\u_rf_if.read_buf1 [19]),
-    .B(_1783__bF$buf5),
+    .B(_1783__bF$buf2),
     .Y(_1842_)
 );
 
 AOI21X1 _2352_ (
-    .A(_659__bF$buf1),
+    .A(_659__bF$buf4),
     .B(_672_),
     .C(_1479_),
     .Y(_1480_)
@@ -9942,21 +10854,21 @@ AOI21X1 _2352_ (
 
 DFFPOSX1 _3977_ (
     .D(_1384_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
     .Q(\u_rf_if.rcnt [0])
 );
 
 OAI22X1 _3557_ (
     .A(_568_),
-    .B(_212__bF$buf4),
+    .B(_212__bF$buf0),
     .C(_569_),
-    .D(_570__bF$buf0),
+    .D(_570__bF$buf4),
     .Y(_1157_)
 );
 
 NAND2X1 _3137_ (
     .A(_256_),
-    .B(_1692__bF$buf2),
+    .B(_1692__bF$buf1),
     .Y(_257_)
 );
 
@@ -9965,12 +10877,15 @@ FILL FILL_0__2812_ (
 
 DFFPOSX1 _4095_ (
     .D(_1449_),
-    .CLK(i_clk_fast_bF$buf5),
+    .CLK(i_clk_fast_bF$buf6),
     .Q(\u_mem_serial.shift_reg [6])
 );
 
+FILL FILL_0__3350_ (
+);
+
 OAI21X1 _2828_ (
-    .A(_22__bF$buf4),
+    .A(_22__bF$buf0),
     .B(_29_),
     .C(_30_),
     .Y(_31_)
@@ -9985,26 +10900,32 @@ NAND2X1 _2408_ (
 AOI21X1 _2581_ (
     .A(_1695_),
     .B(_1691_),
-    .C(_1070__bF$buf0),
+    .C(_1070__bF$buf5),
     .Y(_1404_)
 );
 
 OAI21X1 _2161_ (
     .A(_791_),
-    .B(_973__bF$buf1),
+    .B(_973__bF$buf4),
     .C(_782_),
     .Y(_781_)
 );
 
 DFFPOSX1 _3786_ (
     .D(_1122_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
     .Q(\u_cpu.mem_if.signbit )
 );
 
 INVX1 _3366_ (
     .A(\u_cpu.bufreg.data [4]),
     .Y(_421_)
+);
+
+FILL FILL129150x86550 (
+);
+
+FILL FILL_0__2201_ (
 );
 
 INVX2 _2637_ (
@@ -10024,11 +10945,14 @@ AOI21X1 _2390_ (
     .Y(_1513_)
 );
 
+FILL FILL128850x68550 (
+);
+
 OAI22X1 _3595_ (
     .A(_589_),
-    .B(_212__bF$buf3),
+    .B(_212__bF$buf1),
     .C(_588_),
-    .D(_570__bF$buf2),
+    .D(_570__bF$buf0),
     .Y(_1138_)
 );
 
@@ -10039,15 +10963,21 @@ OAI21X1 _3175_ (
     .Y(_285_)
 );
 
+FILL FILL_0__2850_ (
+);
+
 INVX8 _1908_ (
-    .A(_1023__bF$buf1),
+    .A(_1023__bF$buf5),
     .Y(_1002_)
+);
+
+FILL FILL_0__3215_ (
 );
 
 MUX2X1 _2866_ (
     .A(\u_rf_if.read_buf0 [13]),
     .B(\u_rf_if.read_buf0 [14]),
-    .S(\u_rf_if.stream_active_bF$buf3 ),
+    .S(\u_rf_if.stream_active_bF$buf2 ),
     .Y(_59_)
 );
 
@@ -10089,8 +11019,14 @@ FILL FILL_0__2715_ (
 MUX2X1 _1946_ (
     .A(\u_cpu.bufreg.data [6]),
     .B(\u_cpu.ctrl.o_ibus_adr [6]),
-    .S(_1006__bF$buf4),
+    .S(_1006__bF$buf3),
     .Y(_970_)
+);
+
+FILL FILL_0__3673_ (
+);
+
+FILL FILL_0__3253_ (
 );
 
 NOR2X1 _2484_ (
@@ -10102,7 +11038,7 @@ NOR2X1 _2484_ (
 MUX2X1 _2064_ (
     .A(\u_mem_serial.shift_reg [20]),
     .B(\u_cpu.bufreg2.dlo [15]),
-    .S(_994__bF$buf1),
+    .S(_994__bF$buf4),
     .Y(_867_)
 );
 
@@ -10114,16 +11050,19 @@ INVX1 _3689_ (
 MUX2X1 _3269_ (
     .A(_356_),
     .B(_952_),
-    .S(ibus_pending_ack_bF$buf5),
+    .S(ibus_pending_ack_bF$buf3),
     .Y(_357_)
 );
 
-FILL FILL_0__2944_ (
+FILL FILL_0__2104_ (
+);
+
+FILL FILL_0__3062_ (
 );
 
 DFFPOSX1 _3901_ (
     .D(_1345_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
     .Q(\u_rf_if.read_buf0 [3])
 );
 
@@ -10145,15 +11084,24 @@ OAI21X1 _3078_ (
     .Y(_215_)
 );
 
+FILL FILL129150x18150 (
+);
+
+FILL FILL_0__3538_ (
+);
+
+FILL FILL_0__3118_ (
+);
+
 MUX2X1 _1984_ (
     .A(\u_mem_serial.shift_reg [10]),
     .B(\u_cpu.bufreg2.dlo [5]),
-    .S(_994__bF$buf4),
+    .S(_994__bF$buf5),
     .Y(_937_)
 );
 
 OAI21X1 _2769_ (
-    .A(_1783__bF$buf5),
+    .A(_1783__bF$buf0),
     .B(_1838_),
     .C(_1839_),
     .Y(_1840_)
@@ -10170,6 +11118,12 @@ NOR2X1 _3710_ (
     .A(\gen_int_sys_clk.clk_div [3]),
     .B(_615_),
     .Y(_639_)
+);
+
+FILL FILL_0__2562_ (
+);
+
+FILL FILL_0__2142_ (
 );
 
 AOI21X1 _2998_ (
@@ -10189,10 +11143,7 @@ INVX1 _2158_ (
     .Y(_784_)
 );
 
-FILL FILL_0__2618_ (
-);
-
-FILL FILL_0__2791_ (
+FILL FILL_0__3576_ (
 );
 
 NOR2X1 _2387_ (
@@ -10201,12 +11152,18 @@ NOR2X1 _2387_ (
     .Y(_1510_)
 );
 
-FILL FILL_0__2847_ (
+FILL FILL_0__2427_ (
+);
+
+FILL FILL_0__2007_ (
+);
+
+FILL FILL_0__3385_ (
 );
 
 DFFPOSX1 _3804_ (
     .D(_1130_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [27])
 );
 
@@ -10216,31 +11173,37 @@ NAND2X1 _2196_ (
     .Y(_751_)
 );
 
-FILL FILL_0__1871_ (
-);
-
 NOR2X1 _1887_ (
     .A(\u_mem_serial.state [1]),
     .B(_1024_),
     .Y(_1023_)
 );
 
+FILL FILL_0__1927_ (
+);
+
 OAI22X1 _3613_ (
     .A(_597_),
-    .B(_212__bF$buf1),
+    .B(_212__bF$buf4),
     .C(_596_),
     .D(_570__bF$buf3),
     .Y(_1128_)
 );
 
+FILL FILL_0__2885_ (
+);
+
+FILL FILL_0__2465_ (
+);
+
 DFFPOSX1 _3842_ (
     .D(_1316_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
     .Q(\u_rf_if.o_waddr [2])
 );
 
 OAI21X1 _3422_ (
-    .A(mem_dbus_ack_bF$buf2),
+    .A(mem_dbus_ack_bF$buf3),
     .B(_465_),
     .C(_461_),
     .Y(_466_)
@@ -10248,27 +11211,33 @@ OAI21X1 _3422_ (
 
 NAND2X1 _3002_ (
     .A(_160_),
-    .B(_1692__bF$buf4),
+    .B(_1692__bF$buf1),
     .Y(_161_)
+);
+
+FILL FILL_0__2274_ (
+);
+
+FILL FILL_0__1965_ (
 );
 
 MUX2X1 _3651_ (
     .A(_262_),
     .B(_261_),
-    .S(_602__bF$buf0),
+    .S(_602__bF$buf3),
     .Y(_1095_)
 );
 
 MUX2X1 _3231_ (
     .A(_326_),
     .B(_826_),
-    .S(ibus_pending_ack_bF$buf1),
+    .S(ibus_pending_ack_bF$buf3),
     .Y(_327_)
 );
 
 DFFPOSX1 _4016_ (
     .D(_1258_),
-    .CLK(i_clk_fast_bF$buf1),
+    .CLK(i_clk_fast_bF$buf2),
     .Q(\u_mem_serial.bit_count [6])
 );
 
@@ -10284,27 +11253,30 @@ AOI21X1 _2502_ (
     .Y(_1625_)
 );
 
+FILL FILL_0__3288_ (
+);
+
 OAI21X1 _3707_ (
-    .A(_1070__bF$buf4),
+    .A(_1070__bF$buf3),
     .B(_1069_),
     .C(_1060_),
     .Y(_1059_)
 );
 
 NOR2X1 _2099_ (
-    .A(_1023__bF$buf3),
+    .A(_1023__bF$buf1),
     .B(_837_),
     .Y(_836_)
 );
 
 DFFPOSX1 _3880_ (
     .D(_1148_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [17])
 );
 
 NAND2X1 _3460_ (
-    .A(mem_dbus_ack_bF$buf0),
+    .A(mem_dbus_ack_bF$buf5),
     .B(_875_),
     .Y(_497_)
 );
@@ -10314,6 +11286,9 @@ NAND3X1 _3040_ (
     .B(_1640_),
     .C(_1666_),
     .Y(_189_)
+);
+
+FILL FILL_0__2139_ (
 );
 
 MUX2X1 _2731_ (
@@ -10331,27 +11306,30 @@ NAND2X1 _2311_ (
 
 DFFPOSX1 _3936_ (
     .D(_1167_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
     .Q(\u_cpu.bufreg2.dlo [7])
 );
 
 OAI21X1 _3516_ (
-    .A(mem_dbus_ack_bF$buf3),
+    .A(mem_dbus_ack_bF$buf0),
     .B(\u_cpu.bufreg2.dlo [7]),
     .C(_538_),
     .Y(_539_)
 );
 
+FILL FILL_0__2788_ (
+);
+
 DFFPOSX1 _4054_ (
     .D(_1220_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
     .Q(\u_cpu.bufreg.data [26])
 );
 
 OAI21X1 _2960_ (
     .A(raddr[4]),
     .B(_1680_),
-    .C(i_rst_n_bF$buf4),
+    .C(i_rst_n_bF$buf1),
     .Y(_128_)
 );
 
@@ -10364,26 +11342,32 @@ OR2X2 _2540_ (
 MUX2X1 _2120_ (
     .A(\u_mem_serial.shift_reg [27]),
     .B(\u_cpu.bufreg2.dlo [22]),
-    .S(_994__bF$buf0),
+    .S(_994__bF$buf1),
     .Y(_818_)
 );
 
 DFFPOSX1 _3745_ (
     .D(_1265_),
-    .CLK(i_clk_fast_bF$buf8),
+    .CLK(i_clk_fast_bF$buf1),
     .Q(\u_mem_serial.req_pending )
 );
 
 MUX2X1 _3325_ (
     .A(_399_),
     .B(_400_),
-    .S(_1536__bF$buf2),
+    .S(_1536__bF$buf0),
     .Y(_1219_)
+);
+
+FILL FILL_0__2177_ (
+);
+
+FILL FILL128550x46950 (
 );
 
 DFFPOSX1 _3974_ (
     .D(_1186_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
     .Q(\u_cpu.bufreg2.dhi [3])
 );
 
@@ -10394,26 +11378,20 @@ INVX1 _3554_ (
 
 OAI21X1 _3134_ (
     .A(_694_),
-    .B(_1692__bF$buf3),
+    .B(_1692__bF$buf0),
     .C(_254_),
     .Y(_1264_)
 );
 
-FILL FILL127350x61350 (
-);
-
-FILL FILL127350x28950 (
-);
-
 DFFPOSX1 _4092_ (
     .D(_1239_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [2])
 );
 
 AND2X2 _2825_ (
     .A(_28_),
-    .B(i_rst_n_bF$buf10),
+    .B(i_rst_n_bF$buf11),
     .Y(_1347_)
 );
 
@@ -10426,20 +11404,23 @@ OAI21X1 _2405_ (
 
 DFFPOSX1 _3783_ (
     .D(_1288_),
-    .CLK(i_clk_fast_bF$buf7),
+    .CLK(i_clk_fast_bF$buf5),
     .Q(\u_rf_if.last_req_key [6])
 );
 
 MUX2X1 _3363_ (
     .A(_418_),
     .B(_419_),
-    .S(_1536__bF$buf4),
+    .S(_1536__bF$buf1),
     .Y(_1200_)
 );
 
+FILL FILL_0__3403_ (
+);
+
 NOR2X1 _2634_ (
-    .A(\u_rf_if.stream_active_bF$buf1 ),
-    .B(_1070__bF$buf3),
+    .A(\u_rf_if.stream_active_bF$buf5 ),
+    .B(_1070__bF$buf6),
     .Y(_1740_)
 );
 
@@ -10450,7 +11431,7 @@ INVX1 _2214_ (
 
 DFFPOSX1 _3839_ (
     .D(_1138_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [7])
 );
 
@@ -10468,18 +11449,18 @@ INVX1 _3592_ (
 MUX2X1 _3172_ (
     .A(_1063_),
     .B(_282_),
-    .S(_659__bF$buf4),
+    .S(_659__bF$buf2),
     .Y(_1254_)
 );
 
 INVX1 _1905_ (
-    .A(_1006__bF$buf3),
+    .A(_1006__bF$buf0),
     .Y(_1005_)
 );
 
 NAND2X1 _2863_ (
     .A(\u_rf_if.read_buf0 [11]),
-    .B(_22__bF$buf0),
+    .B(_22__bF$buf1),
     .Y(_57_)
 );
 
@@ -10497,7 +11478,7 @@ INVX1 _2023_ (
 MUX2X1 _3648_ (
     .A(_364_),
     .B(_966_),
-    .S(_602__bF$buf3),
+    .S(_602__bF$buf0),
     .Y(_1098_)
 );
 
@@ -10505,6 +11486,12 @@ NOR2X1 _3228_ (
     .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [3]),
     .B(_315_),
     .Y(_325_)
+);
+
+FILL FILL_0__2903_ (
+);
+
+FILL FILL_0__3441_ (
 );
 
 NAND2X1 _2919_ (
@@ -10515,7 +11502,7 @@ NAND2X1 _2919_ (
 
 NOR2X1 _2672_ (
     .A(_1698_),
-    .B(_1692__bF$buf0),
+    .B(_1692__bF$buf4),
     .Y(_1767_)
 );
 
@@ -10526,12 +11513,12 @@ INVX1 _2252_ (
 
 DFFPOSX1 _3877_ (
     .D(_1333_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
     .Q(\u_rf_if.read_buf0 [15])
 );
 
 OAI21X1 _3457_ (
-    .A(mem_dbus_ack_bF$buf0),
+    .A(mem_dbus_ack_bF$buf5),
     .B(\u_cpu.bufreg2.dlo [22]),
     .C(_494_),
     .Y(_495_)
@@ -10549,9 +11536,12 @@ INVX8 _1943_ (
     .Y(_973_)
 );
 
+FILL FILL_0__3250_ (
+);
+
 NAND2X1 _2728_ (
     .A(\u_rf_if.read_buf1 [8]),
-    .B(_1783__bF$buf2),
+    .B(_1783__bF$buf5),
     .Y(_1809_)
 );
 
@@ -10569,7 +11559,7 @@ NAND2X1 _2481_ (
 
 OAI21X1 _2061_ (
     .A(_875_),
-    .B(_973__bF$buf3),
+    .B(_973__bF$buf6),
     .C(_870_),
     .Y(_869_)
 );
@@ -10581,13 +11571,16 @@ AND2X2 _3686_ (
 );
 
 OAI21X1 _3266_ (
-    .A(_659__bF$buf5),
+    .A(_659__bF$buf1),
     .B(_353_),
     .C(_354_),
     .Y(_355_)
 );
 
-FILL FILL_0__2521_ (
+FILL FILL_0__2941_ (
+);
+
+FILL FILL_0__3306_ (
 );
 
 OAI21X1 _2957_ (
@@ -10605,7 +11598,7 @@ NOR2X1 _2537_ (
 
 OAI21X1 _2117_ (
     .A(_826_),
-    .B(_973__bF$buf5),
+    .B(_973__bF$buf3),
     .C(_821_),
     .Y(_820_)
 );
@@ -10616,7 +11609,7 @@ INVX1 _2290_ (
 );
 
 NAND2X1 _3495_ (
-    .A(mem_dbus_ack_bF$buf4),
+    .A(mem_dbus_ack_bF$buf6),
     .B(_938_),
     .Y(_523_)
 );
@@ -10624,23 +11617,29 @@ NAND2X1 _3495_ (
 OAI21X1 _3075_ (
     .A(_1065_),
     .B(_696_),
-    .C(i_rst_n_bF$buf5),
+    .C(i_rst_n_bF$buf11),
     .Y(_212_)
 );
 
 FILL FILL_0__2750_ (
 );
 
+FILL FILL_0__2330_ (
+);
+
+FILL FILL_0__3115_ (
+);
+
 OAI21X1 _1981_ (
     .A(_945_),
-    .B(_973__bF$buf6),
+    .B(_973__bF$buf1),
     .C(_940_),
     .Y(_939_)
 );
 
 AND2X2 _2766_ (
     .A(_1837_),
-    .B(i_rst_n_bF$buf6),
+    .B(i_rst_n_bF$buf7),
     .Y(_1361_)
 );
 
@@ -10652,10 +11651,19 @@ AOI22X1 _2346_ (
     .Y(_1474_)
 );
 
+FILL FILL129150x39750 (
+);
+
+FILL FILL_0__2806_ (
+);
+
 DFFPOSX1 _4089_ (
     .D(_1446_),
-    .CLK(i_clk_fast_bF$buf6),
+    .CLK(i_clk_fast_bF$buf8),
     .Q(\u_mem_serial.shift_reg [9])
+);
+
+FILL FILL128850x54150 (
 );
 
 INVX1 _2995_ (
@@ -10664,7 +11672,7 @@ INVX1 _2995_ (
 );
 
 OAI21X1 _2575_ (
-    .A(_1070__bF$buf3),
+    .A(_1070__bF$buf0),
     .B(_1689_),
     .C(_1690_),
     .Y(_1405_)
@@ -10675,6 +11683,12 @@ INVX2 _2155_ (
     .Y(_787_)
 );
 
+FILL FILL_0__2615_ (
+);
+
+FILL FILL_0__3153_ (
+);
+
 NAND2X1 _2384_ (
     .A(_1499_),
     .B(_1506_),
@@ -10683,9 +11697,9 @@ NAND2X1 _2384_ (
 
 OAI22X1 _3589_ (
     .A(_586_),
-    .B(_212__bF$buf0),
+    .B(_212__bF$buf4),
     .C(_585_),
-    .D(_570__bF$buf1),
+    .D(_570__bF$buf3),
     .Y(_1141_)
 );
 
@@ -10694,18 +11708,21 @@ INVX1 _3169_ (
     .Y(_280_)
 );
 
+FILL FILL_0__2004_ (
+);
+
 FILL FILL_0__3629_ (
 );
 
 DFFPOSX1 _3801_ (
     .D(_1297_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
     .Q(\u_rf_if.issue_chunk [1])
 );
 
 NAND2X1 _2193_ (
     .A(_754_),
-    .B(_973__bF$buf1),
+    .B(_973__bF$buf5),
     .Y(_753_)
 );
 
@@ -10719,15 +11736,21 @@ OAI21X1 _3398_ (
 FILL FILL_0__2653_ (
 );
 
+FILL FILL_0__3018_ (
+);
+
 INVX1 _1884_ (
     .A(\u_mem_serial.bit_count [6]),
     .Y(_1026_)
 );
 
+FILL FILL_0__3191_ (
+);
+
 OAI21X1 _2669_ (
-    .A(\u_rf_if.stream_active_bF$buf6 ),
+    .A(\u_rf_if.stream_active_bF$buf3 ),
     .B(\u_rf_if.ready_pulse ),
-    .C(i_rst_n_bF$buf6),
+    .C(i_rst_n_bF$buf9),
     .Y(_1766_)
 );
 
@@ -10742,10 +11765,16 @@ INVX1 _3610_ (
     .Y(_596_)
 );
 
+FILL FILL_0__2042_ (
+);
+
+FILL FILL_0__3667_ (
+);
+
 MUX2X1 _2898_ (
     .A(\u_rf_if.read_buf0 [21]),
     .B(\u_rf_if.read_buf0 [22]),
-    .S(\u_rf_if.stream_active_bF$buf4 ),
+    .S(\u_rf_if.stream_active_bF$buf1 ),
     .Y(_83_)
 );
 
@@ -10759,8 +11788,20 @@ OAI21X1 _2478_ (
 MUX2X1 _2058_ (
     .A(\u_cpu.bufreg.data [20]),
     .B(\u_cpu.ctrl.o_ibus_adr [20]),
-    .S(_1006__bF$buf0),
+    .S(_1006__bF$buf1),
     .Y(_872_)
+);
+
+FILL FILL_0__2938_ (
+);
+
+FILL FILL_0__2518_ (
+);
+
+FILL FILL_0__3476_ (
+);
+
+FILL FILL_0__3056_ (
 );
 
 OAI21X1 _2287_ (
@@ -10770,16 +11811,22 @@ OAI21X1 _2287_ (
     .Y(_661_)
 );
 
+FILL FILL_0__1962_ (
+);
+
 DFFPOSX1 _4013_ (
     .D(_1202_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
     .Q(\u_cpu.bufreg.data [8])
+);
+
+FILL FILL_0__2080_ (
 );
 
 MUX2X1 _1978_ (
     .A(\u_cpu.bufreg.data [10]),
     .B(\u_cpu.ctrl.o_ibus_adr [10]),
-    .S(_1006__bF$buf2),
+    .S(_1006__bF$buf1),
     .Y(_942_)
 );
 
@@ -10797,12 +11844,12 @@ MUX2X1 _2096_ (
     .Y(_839_)
 );
 
-FILL FILL_0__2556_ (
+FILL FILL_0__2976_ (
 );
 
 DFFPOSX1 _3933_ (
     .D(_1361_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
     .Q(\u_rf_if.read_buf1 [17])
 );
 
@@ -10813,18 +11860,18 @@ MUX2X1 _3513_ (
     .Y(_1167_)
 );
 
-FILL FILL_0__2785_ (
+FILL FILL_0__2365_ (
 );
 
 DFFPOSX1 _4051_ (
     .D(_1219_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
     .Q(\u_cpu.bufreg.data [25])
 );
 
 DFFPOSX1 _3742_ (
     .D(_1263_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
     .Q(\u_cpu.bne_or_bge )
 );
 
@@ -10833,9 +11880,15 @@ INVX1 _3322_ (
     .Y(_399_)
 );
 
+FILL FILL_0__3379_ (
+);
+
+FILL FILL_0__1865_ (
+);
+
 DFFPOSX1 _3971_ (
     .D(_1380_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
     .Q(\u_rf_if.stream_cnt [2])
 );
 
@@ -10854,7 +11907,7 @@ NAND2X1 _3131_ (
 MUX2X1 _2822_ (
     .A(\u_rf_if.read_buf0 [2]),
     .B(\u_rf_if.read_buf0 [3]),
-    .S(\u_rf_if.stream_active_bF$buf2 ),
+    .S(\u_rf_if.stream_active_bF$buf7 ),
     .Y(_26_)
 );
 
@@ -10863,22 +11916,22 @@ INVX1 _2402_ (
     .Y(_1525_)
 );
 
+FILL FILL_0__3188_ (
+);
+
 OAI22X1 _3607_ (
     .A(_1008_),
-    .B(_212__bF$buf1),
+    .B(_212__bF$buf2),
     .C(_995_),
-    .D(_570__bF$buf3),
+    .D(_570__bF$buf2),
     .Y(_1131_)
 );
 
-FILL FILL127350x82950 (
-);
-
 DFFSR _3780_ (
-    .R(i_rst_n_bF$buf11),
+    .R(i_rst_n_bF$buf10),
     .S(vdd),
     .D(_1119_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
     .Q(ibus_pending_rdt[28])
 );
 
@@ -10887,7 +11940,7 @@ INVX1 _3360_ (
     .Y(_418_)
 );
 
-FILL FILL_0__2459_ (
+FILL FILL_0__2879_ (
 );
 
 AOI21X1 _2631_ (
@@ -10905,12 +11958,12 @@ NAND2X1 _2211_ (
 
 DFFPOSX1 _3836_ (
     .D(_1313_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
     .Q(raddr[2])
 );
 
 AOI22X1 _3416_ (
-    .A(_450__bF$buf4),
+    .A(_450__bF$buf1),
     .B(_456_),
     .C(_460_),
     .D(_459_),
@@ -10925,8 +11978,11 @@ INVX1 _1902_ (
 FILL FILL_0__2688_ (
 );
 
+FILL FILL_0__2268_ (
+);
+
 OAI21X1 _2860_ (
-    .A(_22__bF$buf0),
+    .A(_22__bF$buf1),
     .B(_53_),
     .C(_54_),
     .Y(_55_)
@@ -10940,14 +11996,14 @@ INVX1 _2440_ (
 OAI21X1 _2020_ (
     .A(_908_),
     .B(_906_),
-    .C(_973__bF$buf2),
+    .C(_973__bF$buf0),
     .Y(_905_)
 );
 
 MUX2X1 _3645_ (
     .A(_352_),
     .B(_945_),
-    .S(_602__bF$buf2),
+    .S(_602__bF$buf4),
     .Y(_1101_)
 );
 
@@ -10956,8 +12012,11 @@ INVX1 _3225_ (
     .Y(_322_)
 );
 
+FILL FILL_0__2077_ (
+);
+
 OAI21X1 _2916_ (
-    .A(_22__bF$buf5),
+    .A(_22__bF$buf0),
     .B(_95_),
     .C(_96_),
     .Y(_97_)
@@ -10965,16 +12024,16 @@ OAI21X1 _2916_ (
 
 DFFSR _3874_ (
     .R(vdd),
-    .S(i_rst_n_bF$buf2),
+    .S(i_rst_n_bF$buf0),
     .D(_1091_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
     .Q(ibus_pending_rdt[0])
 );
 
 MUX2X1 _3454_ (
     .A(_490_),
     .B(_492_),
-    .S(_450__bF$buf4),
+    .S(_450__bF$buf0),
     .Y(_1182_)
 );
 
@@ -10992,7 +12051,7 @@ MUX2X1 _1940_ (
 );
 
 OAI21X1 _2725_ (
-    .A(_1783__bF$buf2),
+    .A(_1783__bF$buf5),
     .B(_1805_),
     .C(_1806_),
     .Y(_1807_)
@@ -11017,8 +12076,11 @@ INVX1 _3263_ (
 
 DFFPOSX1 _4048_ (
     .D(_1426_),
-    .CLK(i_clk_fast_bF$buf0),
+    .CLK(i_clk_fast_bF$buf7),
     .Q(\u_mem_serial.shift_reg [29])
+);
+
+FILL FILL128550x32550 (
 );
 
 OAI21X1 _2954_ (
@@ -11037,24 +12099,21 @@ NAND2X1 _2534_ (
 MUX2X1 _2114_ (
     .A(\u_cpu.bufreg.data [27]),
     .B(\u_cpu.ctrl.o_ibus_adr [27]),
-    .S(_1006__bF$buf1),
+    .S(_1006__bF$buf4),
     .Y(_823_)
 );
 
 DFFPOSX1 _3739_ (
     .D(_1260_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
     .Q(\u_cpu.decode.opcode [1])
 );
 
 MUX2X1 _3319_ (
     .A(_397_),
     .B(_396_),
-    .S(_1536__bF$buf2),
+    .S(_1536__bF$buf0),
     .Y(_1222_)
-);
-
-FILL FILL127350x14550 (
 );
 
 OAI21X1 _3492_ (
@@ -11075,7 +12134,7 @@ FILL FILL_0__3532_ (
 MUX2X1 _2763_ (
     .A(\u_rf_if.read_buf1 [18]),
     .B(\u_rf_if.read_buf1 [19]),
-    .S(\u_rf_if.stream_active_bF$buf6 ),
+    .S(\u_rf_if.stream_active_bF$buf4 ),
     .Y(_1835_)
 );
 
@@ -11087,12 +12146,12 @@ NOR2X1 _2343_ (
 
 DFFPOSX1 _3968_ (
     .D(_1183_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
     .Q(\u_cpu.bufreg.i_shamt [0])
 );
 
 OAI21X1 _3548_ (
-    .A(mem_dbus_ack_bF$buf0),
+    .A(mem_dbus_ack_bF$buf6),
     .B(\u_cpu.bufreg.i_shamt [0]),
     .C(_563_),
     .Y(_564_)
@@ -11101,25 +12160,34 @@ OAI21X1 _3548_ (
 OAI21X1 _3128_ (
     .A(_1057_),
     .B(_1054_),
-    .C(i_rst_n_bF$buf11),
+    .C(i_rst_n_bF$buf8),
     .Y(_250_)
+);
+
+FILL FILL_0__2803_ (
 );
 
 DFFPOSX1 _4086_ (
     .D(_1236_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
     .Q(rreg1[3])
+);
+
+FILL FILL129150x93750 (
+);
+
+FILL FILL_0__3341_ (
 );
 
 NAND2X1 _2819_ (
     .A(\u_rf_if.read_buf0 [0]),
-    .B(_22__bF$buf3),
+    .B(_22__bF$buf5),
     .Y(_24_)
 );
 
 NAND2X1 _2992_ (
     .A(_152_),
-    .B(_1692__bF$buf0),
+    .B(_1692__bF$buf3),
     .Y(_153_)
 );
 
@@ -11130,21 +12198,24 @@ NOR2X1 _2572_ (
 );
 
 INVX1 _2152_ (
-    .A(_994__bF$buf5),
+    .A(_994__bF$buf3),
     .Y(_790_)
 );
 
 DFFPOSX1 _3777_ (
     .D(_1285_),
-    .CLK(i_clk_fast_bF$buf4),
+    .CLK(i_clk_fast_bF$buf5),
     .Q(\u_rf_if.last_req_key [9])
 );
 
 MUX2X1 _3357_ (
     .A(_415_),
     .B(_416_),
-    .S(_1536__bF$buf0),
+    .S(_1536__bF$buf2),
     .Y(_1203_)
+);
+
+FILL FILL128850x75750 (
 );
 
 CLKBUF1 CLKBUF1_insert47 (
@@ -11190,25 +12261,31 @@ INVX1 _3166_ (
     .Y(_278_)
 );
 
+FILL FILL_0__2841_ (
+);
+
+FILL FILL_0__3206_ (
+);
+
 AND2X2 _2857_ (
     .A(_52_),
-    .B(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf4),
     .Y(_1339_)
 );
 
 INVX2 _2437_ (
-    .A(\u_rf_if.stream_active_bF$buf0 ),
+    .A(\u_rf_if.stream_active_bF$buf7 ),
     .Y(_1560_)
 );
 
 NOR2X1 _2017_ (
-    .A(_1002__bF$buf1),
+    .A(_1002__bF$buf4),
     .B(_909_),
     .Y(_908_)
 );
 
 AOI21X1 _2190_ (
-    .A(_973__bF$buf1),
+    .A(_973__bF$buf5),
     .B(_757_),
     .C(_756_),
     .Y(_1420_)
@@ -11220,7 +12297,7 @@ AND2X2 _3395_ (
     .Y(_442_)
 );
 
-FILL FILL_0__3435_ (
+FILL FILL_0__2230_ (
 );
 
 AOI21X1 _1881_ (
@@ -11243,7 +12320,7 @@ NOR2X1 _2246_ (
     .Y(_702_)
 );
 
-FILL FILL127050x118950 (
+FILL FILL_0__2706_ (
 );
 
 MUX2X1 _1937_ (
@@ -11256,9 +12333,12 @@ MUX2X1 _1937_ (
 FILL FILL_0__3664_ (
 );
 
+FILL FILL_0__3244_ (
+);
+
 NAND2X1 _2895_ (
     .A(\u_rf_if.read_buf0 [19]),
-    .B(_22__bF$buf1),
+    .B(_22__bF$buf3),
     .Y(_81_)
 );
 
@@ -11273,7 +12353,10 @@ INVX1 _2055_ (
     .Y(_875_)
 );
 
-FILL FILL_0__2515_ (
+FILL FILL_0__3053_ (
+);
+
+FILL FILL129150x25350 (
 );
 
 AOI21X1 _2284_ (
@@ -11297,10 +12380,19 @@ OAI21X1 _3069_ (
     .Y(_209_)
 );
 
+FILL FILL_0__2744_ (
+);
+
 DFFPOSX1 _4010_ (
     .D(_1201_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
     .Q(\u_cpu.bufreg.data [7])
+);
+
+FILL FILL_0__3529_ (
+);
+
+FILL FILL_0__3109_ (
 );
 
 INVX1 _1975_ (
@@ -11315,7 +12407,7 @@ INVX1 _3701_ (
 
 OAI21X1 _2093_ (
     .A(_847_),
-    .B(_973__bF$buf5),
+    .B(_973__bF$buf6),
     .C(_842_),
     .Y(_841_)
 );
@@ -11326,12 +12418,18 @@ NAND2X1 _3298_ (
     .Y(_380_)
 );
 
-FILL FILL_0__3338_ (
+FILL FILL_0__2553_ (
+);
+
+FILL FILL_0__2133_ (
+);
+
+FILL FILL_0__3091_ (
 );
 
 OAI21X1 _2989_ (
-    .A(_673__bF$buf1),
-    .B(_674__bF$buf1),
+    .A(_673__bF$buf3),
+    .B(_674__bF$buf0),
     .C(\u_rf_if.rreg1_latched [3]),
     .Y(_150_)
 );
@@ -11344,14 +12442,14 @@ NAND2X1 _2569_ (
 
 OAI21X1 _2149_ (
     .A(_798_),
-    .B(_973__bF$buf1),
+    .B(_973__bF$buf4),
     .C(_793_),
     .Y(_792_)
 );
 
 DFFPOSX1 _3930_ (
     .D(_1164_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
     .Q(\u_cpu.bufreg2.dlo [4])
 );
 
@@ -11360,7 +12458,7 @@ INVX1 _3510_ (
     .Y(_534_)
 );
 
-FILL FILL_0__2362_ (
+FILL FILL_0__2609_ (
 );
 
 FILL FILL_0__3567_ (
@@ -11368,7 +12466,7 @@ FILL FILL_0__3567_ (
 
 AND2X2 _2798_ (
     .A(_7_),
-    .B(i_rst_n_bF$buf6),
+    .B(i_rst_n_bF$buf5),
     .Y(_1353_)
 );
 
@@ -11387,7 +12485,7 @@ FILL FILL_0__2591_ (
 MUX2X1 _2187_ (
     .A(_770_),
     .B(_759_),
-    .S(_994__bF$buf5),
+    .S(_994__bF$buf0),
     .Y(_758_)
 );
 
@@ -11397,14 +12495,23 @@ NOR2X1 _1878_ (
     .Y(_1030_)
 );
 
+FILL FILL_0__1918_ (
+);
+
 INVX1 _3604_ (
     .A(\u_cpu.ctrl.o_ibus_adr [2]),
     .Y(_594_)
 );
 
+FILL FILL_0__2876_ (
+);
+
+FILL FILL_0__2456_ (
+);
+
 DFFPOSX1 _3833_ (
     .D(_1081_),
-    .CLK(i_clk_fast_bF$buf8),
+    .CLK(i_clk_fast_bF$buf3),
     .Q(\gen_int_sys_clk.clk_div [1])
 );
 
@@ -11415,21 +12522,18 @@ OAI21X1 _3413_ (
     .Y(_458_)
 );
 
-FILL FILL126150x115350 (
-);
-
-FILL FILL_0__2265_ (
+FILL FILL_0__1956_ (
 );
 
 MUX2X1 _3642_ (
     .A(_251_),
     .B(_924_),
-    .S(_602__bF$buf2),
+    .S(_602__bF$buf1),
     .Y(_1104_)
 );
 
 OAI21X1 _3222_ (
-    .A(_659__bF$buf2),
+    .A(_659__bF$buf3),
     .B(_317_),
     .C(_319_),
     .Y(_320_)
@@ -11437,7 +12541,7 @@ OAI21X1 _3222_ (
 
 DFFPOSX1 _4007_ (
     .D(_1402_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
     .Q(\u_rf_if.write_wait [0])
 );
 
@@ -11446,13 +12550,16 @@ FILL FILL_0__2494_ (
 
 AND2X2 _2913_ (
     .A(_94_),
-    .B(i_rst_n_bF$buf1),
+    .B(i_rst_n_bF$buf5),
     .Y(_1325_)
+);
+
+FILL FILL_0__3279_ (
 );
 
 DFFPOSX1 _3871_ (
     .D(_1330_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
     .Q(\u_rf_if.read_buf0 [18])
 );
 
@@ -11468,12 +12575,9 @@ OAI21X1 _3031_ (
     .Y(_183_)
 );
 
-FILL FILL126750x97350 (
-);
-
 AND2X2 _2722_ (
     .A(_1804_),
-    .B(i_rst_n_bF$buf3),
+    .B(i_rst_n_bF$buf7),
     .Y(_1372_)
 );
 
@@ -11484,12 +12588,12 @@ INVX1 _2302_ (
 
 DFFPOSX1 _3927_ (
     .D(_1358_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
     .Q(\u_rf_if.read_buf1 [20])
 );
 
 NAND2X1 _3507_ (
-    .A(mem_dbus_ack_bF$buf3),
+    .A(mem_dbus_ack_bF$buf2),
     .B(_959_),
     .Y(_532_)
 );
@@ -11506,9 +12610,15 @@ NAND2X1 _3260_ (
     .Y(_349_)
 );
 
+FILL FILL_0__2779_ (
+);
+
+FILL FILL_0__2359_ (
+);
+
 DFFPOSX1 _4045_ (
     .D(_1216_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
     .Q(\u_cpu.bufreg.data [22])
 );
 
@@ -11531,10 +12641,10 @@ INVX1 _2111_ (
 );
 
 DFFSR _3736_ (
-    .R(i_rst_n_bF$buf2),
+    .R(i_rst_n_bF$buf3),
     .S(vdd),
     .D(_1104_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
     .Q(ibus_pending_rdt[13])
 );
 
@@ -11550,7 +12660,7 @@ FILL FILL_0__2168_ (
 
 NAND2X1 _2760_ (
     .A(\u_rf_if.read_buf1 [16]),
-    .B(_1783__bF$buf3),
+    .B(_1783__bF$buf2),
     .Y(_1833_)
 );
 
@@ -11562,14 +12672,14 @@ NOR2X1 _2340_ (
 
 DFFPOSX1 _3965_ (
     .D(_1377_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
     .Q(\u_rf_if.read_buf1 [1])
 );
 
 MUX2X1 _3545_ (
     .A(_1596_),
     .B(_561_),
-    .S(_450__bF$buf4),
+    .S(_450__bF$buf3),
     .Y(_1160_)
 );
 
@@ -11580,48 +12690,45 @@ AOI21X1 _3125_ (
     .Y(_1266_)
 );
 
-FILL FILL_0__2397_ (
-);
-
 DFFPOSX1 _4083_ (
     .D(_1443_),
-    .CLK(i_clk_fast_bF$buf6),
+    .CLK(i_clk_fast_bF$buf0),
     .Q(\u_mem_serial.shift_reg [12])
 );
 
 AND2X2 _2816_ (
     .A(_21_),
-    .B(i_rst_n_bF$buf3),
+    .B(i_rst_n_bF$buf9),
     .Y(_1349_)
 );
 
 CLKBUF1 CLKBUF1_insert140 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf18 )
 );
 
 CLKBUF1 CLKBUF1_insert141 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf17 )
 );
 
 CLKBUF1 CLKBUF1_insert142 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf16 )
 );
 
 CLKBUF1 CLKBUF1_insert143 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf15 )
 );
 
 CLKBUF1 CLKBUF1_insert144 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf14 )
 );
 
 CLKBUF1 CLKBUF1_insert145 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf13 )
 );
 
@@ -11636,26 +12743,29 @@ CLKBUF1 CLKBUF1_insert147 (
 );
 
 CLKBUF1 CLKBUF1_insert148 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf10 )
 );
 
 CLKBUF1 CLKBUF1_insert149 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf9 )
 );
 
 DFFSR _3774_ (
-    .R(i_rst_n_bF$buf5),
+    .R(i_rst_n_bF$buf3),
     .S(vdd),
     .D(_1116_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
     .Q(ibus_pending_rdt[25])
 );
 
 INVX1 _3354_ (
     .A(\u_cpu.bufreg.data [10]),
     .Y(_415_)
+);
+
+FILL FILL_0__3814_ (
 );
 
 INVX1 _2625_ (
@@ -11666,13 +12776,13 @@ INVX1 _2625_ (
 OAI21X1 _2205_ (
     .A(_1058_),
     .B(_743_),
-    .C(i_rst_n_bF$buf11),
+    .C(i_rst_n_bF$buf8),
     .Y(_742_)
 );
 
 OAI22X1 _3583_ (
     .A(_583_),
-    .B(_212__bF$buf0),
+    .B(_212__bF$buf3),
     .C(_582_),
     .D(_570__bF$buf1),
     .Y(_1144_)
@@ -11687,7 +12797,7 @@ AND2X2 _3163_ (
 MUX2X1 _2854_ (
     .A(\u_rf_if.read_buf0 [10]),
     .B(\u_rf_if.read_buf0 [11]),
-    .S(\u_rf_if.stream_active_bF$buf3 ),
+    .S(\u_rf_if.stream_active_bF$buf2 ),
     .Y(_50_)
 );
 
@@ -11714,7 +12824,7 @@ MUX2X1 _3639_ (
 MUX2X1 _3219_ (
     .A(_316_),
     .B(_812_),
-    .S(ibus_pending_ack_bF$buf0),
+    .S(ibus_pending_ack_bF$buf4),
     .Y(_317_)
 );
 
@@ -11725,8 +12835,11 @@ AOI21X1 _3392_ (
     .Y(_441_)
 );
 
+FILL FILL_0__3432_ (
+);
+
 NAND3X1 _2663_ (
-    .A(i_rst_n_bF$buf4),
+    .A(i_rst_n_bF$buf9),
     .B(\u_rf_if.issue_idx [5]),
     .C(\u_rf_if.prefetch_active ),
     .Y(_1762_)
@@ -11739,7 +12852,7 @@ INVX1 _2243_ (
 
 DFFPOSX1 _3868_ (
     .D(_1145_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [14])
 );
 
@@ -11757,13 +12870,10 @@ AND2X2 _3028_ (
 );
 
 OAI21X1 _1934_ (
-    .A(_1023__bF$buf0),
+    .A(_1023__bF$buf4),
     .B(_982_),
     .C(_981_),
     .Y(_980_)
-);
-
-FILL FILL_0__3241_ (
 );
 
 MUX2X1 _2719_ (
@@ -11774,7 +12884,7 @@ MUX2X1 _2719_ (
 );
 
 OAI21X1 _2892_ (
-    .A(_22__bF$buf6),
+    .A(_22__bF$buf3),
     .B(_77_),
     .C(_78_),
     .Y(_79_)
@@ -11790,7 +12900,7 @@ OAI21X1 _2472_ (
 OAI21X1 _2052_ (
     .A(_880_),
     .B(_878_),
-    .C(_973__bF$buf0),
+    .C(_973__bF$buf2),
     .Y(_877_)
 );
 
@@ -11803,17 +12913,29 @@ NOR2X1 _3677_ (
 OAI21X1 _3257_ (
     .A(rreg1[1]),
     .B(_340_),
-    .C(_659__bF$buf0),
+    .C(_659__bF$buf5),
     .Y(_347_)
 );
 
-FILL FILL_0_BUFX2_insert92 (
+FILL FILL_0__2932_ (
+);
+
+FILL FILL_0_BUFX2_insert91 (
+);
+
+FILL FILL128550x150 (
 );
 
 FILL FILL_0__3470_ (
 );
 
-FILL FILL_0_BUFX2_insert99 (
+FILL FILL_0_BUFX2_insert94 (
+);
+
+FILL FILL_0_BUFX2_insert96 (
+);
+
+FILL FILL_0_BUFX2_insert98 (
 );
 
 OAI21X1 _2948_ (
@@ -11832,7 +12954,7 @@ NOR2X1 _2528_ (
 OAI21X1 _2108_ (
     .A(_831_),
     .B(_829_),
-    .C(_973__bF$buf5),
+    .C(_973__bF$buf3),
     .Y(_828_)
 );
 
@@ -11853,18 +12975,24 @@ AOI21X1 _3066_ (
     .Y(_207_)
 );
 
+FILL FILL_0__2741_ (
+);
+
 FILL FILL_0__2321_ (
+);
+
+FILL FILL129150x46950 (
 );
 
 OAI21X1 _1972_ (
     .A(_950_),
     .B(_948_),
-    .C(_973__bF$buf6),
+    .C(_973__bF$buf2),
     .Y(_947_)
 );
 
 OAI21X1 _2757_ (
-    .A(_1783__bF$buf3),
+    .A(_1783__bF$buf2),
     .B(_1829_),
     .C(_1830_),
     .Y(_1831_)
@@ -11880,25 +13008,28 @@ OAI21X1 _2337_ (
 MUX2X1 _2090_ (
     .A(\u_cpu.bufreg.data [24]),
     .B(\u_cpu.ctrl.o_ibus_adr [24]),
-    .S(_1006__bF$buf0),
+    .S(_1006__bF$buf2),
     .Y(_844_)
 );
 
 AOI22X1 _3295_ (
-    .A(_1692__bF$buf1),
+    .A(_1692__bF$buf2),
     .B(_365_),
     .C(_377_),
     .D(\u_cpu.immdec.gen_immdec_w_eq_1.imm7 ),
     .Y(_378_)
 );
 
-FILL FILL127350x118950 (
+FILL FILL128850x28950 (
+);
+
+FILL FILL_0__3335_ (
 );
 
 MUX2X1 _2986_ (
     .A(_147_),
     .B(_861_),
-    .S(ibus_pending_ack_bF$buf1),
+    .S(ibus_pending_ack_bF$buf5),
     .Y(_148_)
 );
 
@@ -11912,24 +13043,27 @@ AOI21X1 _2566_ (
 MUX2X1 _2146_ (
     .A(\u_cpu.bufreg.data [31]),
     .B(\u_cpu.ctrl.o_ibus_adr [31]),
-    .S(_1006__bF$buf3),
+    .S(_1006__bF$buf0),
     .Y(_795_)
+);
+
+FILL FILL_0__2606_ (
+);
+
+FILL FILL_0__3144_ (
 );
 
 MUX2X1 _2795_ (
     .A(\u_rf_if.read_buf1 [26]),
     .B(\u_rf_if.read_buf1 [27]),
-    .S(\u_rf_if.stream_active_bF$buf5 ),
+    .S(\u_rf_if.stream_active_bF$buf7 ),
     .Y(_5_)
 );
 
 NOR2X1 _2375_ (
-    .A(_1070__bF$buf5),
+    .A(_1070__bF$buf0),
     .B(_1498_),
     .Y(_1413_)
-);
-
-FILL FILL_0__3373_ (
 );
 
 OAI21X1 _2184_ (
@@ -11939,16 +13073,16 @@ OAI21X1 _2184_ (
     .Y(_761_)
 );
 
-FILL FILL127050x104550 (
-);
-
 OR2X2 _3389_ (
     .A(_432_),
     .B(_437_),
     .Y(_438_)
 );
 
-FILL FILL_0__2224_ (
+FILL FILL_0__2644_ (
+);
+
+FILL FILL_0__3009_ (
 );
 
 NAND2X1 _1875_ (
@@ -11957,24 +13091,33 @@ NAND2X1 _1875_ (
     .Y(_1032_)
 );
 
+FILL FILL_0__3182_ (
+);
+
 OAI22X1 _3601_ (
     .A(_592_),
     .B(_212__bF$buf4),
     .C(_591_),
-    .D(_570__bF$buf0),
+    .D(_570__bF$buf2),
     .Y(_1135_)
 );
 
 OAI21X1 _3198_ (
     .A(rreg0[2]),
     .B(_296_),
-    .C(_659__bF$buf3),
+    .C(_659__bF$buf0),
     .Y(_302_)
+);
+
+FILL FILL_0__2033_ (
+);
+
+FILL FILL_0__3658_ (
 );
 
 AND2X2 _2889_ (
     .A(_76_),
-    .B(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf4),
     .Y(_1331_)
 );
 
@@ -11986,14 +13129,14 @@ OAI21X1 _2469_ (
 );
 
 NOR2X1 _2049_ (
-    .A(_1002__bF$buf2),
+    .A(_1002__bF$buf4),
     .B(_881_),
     .Y(_880_)
 );
 
 DFFPOSX1 _3830_ (
     .D(_1127_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [28])
 );
 
@@ -12004,9 +13147,21 @@ OAI21X1 _3410_ (
     .Y(_1189_)
 );
 
+FILL FILL_0__2509_ (
+);
+
+FILL FILL_0__2682_ (
+);
+
+FILL FILL_0__3467_ (
+);
+
+FILL FILL_0__3047_ (
+);
+
 AND2X2 _2698_ (
     .A(_1786_),
-    .B(i_rst_n_bF$buf3),
+    .B(i_rst_n_bF$buf9),
     .Y(_1378_)
 );
 
@@ -12016,14 +13171,23 @@ NOR2X1 _2278_ (
     .Y(_670_)
 );
 
+FILL FILL_0__1953_ (
+);
+
 DFFPOSX1 _4004_ (
     .D(_1198_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
     .Q(\u_cpu.bufreg.data [4])
 );
 
+FILL FILL_0__2491_ (
+);
+
+FILL FILL_0__2071_ (
+);
+
 NOR2X1 _1969_ (
-    .A(_1002__bF$buf1),
+    .A(_1002__bF$buf4),
     .B(_951_),
     .Y(_950_)
 );
@@ -12031,11 +13195,8 @@ NOR2X1 _1969_ (
 MUX2X1 _2910_ (
     .A(\u_rf_if.read_buf0 [24]),
     .B(\u_rf_if.read_buf0 [25]),
-    .S(\u_rf_if.stream_active_bF$buf4 ),
+    .S(\u_rf_if.stream_active_bF$buf6 ),
     .Y(_92_)
-);
-
-FILL FILL_0__3276_ (
 );
 
 INVX1 _2087_ (
@@ -12043,47 +13204,53 @@ INVX1 _2087_ (
     .Y(_847_)
 );
 
-FILL FILL_0__2127_ (
+FILL FILL_0__2967_ (
+);
+
+FILL FILL_0__2547_ (
 );
 
 DFFPOSX1 _3924_ (
     .D(_1161_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
     .Q(\u_cpu.bufreg2.dlo [1])
 );
 
 OAI21X1 _3504_ (
-    .A(mem_dbus_ack_bF$buf3),
+    .A(mem_dbus_ack_bF$buf4),
     .B(\u_cpu.bufreg2.dlo [10]),
     .C(_529_),
     .Y(_530_)
 );
 
-FILL FILL126450x115350 (
+FILL FILL_0__1991_ (
+);
+
+FILL FILL_0__2356_ (
 );
 
 DFFPOSX1 _4042_ (
     .D(_1423_),
-    .CLK(i_clk_fast_bF$buf0),
+    .CLK(i_clk_fast_bF$buf8),
     .Q(\u_mem_serial.shift_reg [32])
 );
 
 DFFPOSX1 _3733_ (
     .D(_1254_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
     .Q(\u_cpu.branch_op )
 );
 
 MUX2X1 _3313_ (
     .A(_392_),
     .B(_938_),
-    .S(ibus_pending_ack_bF$buf5),
+    .S(ibus_pending_ack_bF$buf3),
     .Y(_393_)
 );
 
 DFFPOSX1 _3962_ (
     .D(_1180_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
     .Q(\u_cpu.bufreg2.dlo [20])
 );
 
@@ -12097,20 +13264,20 @@ INVX1 _3122_ (
     .Y(_245_)
 );
 
+FILL FILL_0__2394_ (
+);
+
 DFFPOSX1 _4080_ (
     .D(_1233_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
     .Q(rreg1[0])
 );
 
 MUX2X1 _2813_ (
     .A(\u_rf_if.read_buf1 [30]),
     .B(\u_rf_if.read_buf1 [31]),
-    .S(\u_rf_if.stream_active_bF$buf1 ),
+    .S(\u_rf_if.stream_active_bF$buf3 ),
     .Y(_19_)
-);
-
-FILL FILL_0__3179_ (
 );
 
 CLKBUF1 CLKBUF1_insert115 (
@@ -12119,28 +13286,28 @@ CLKBUF1 CLKBUF1_insert115 (
 );
 
 CLKBUF1 CLKBUF1_insert116 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf42 )
 );
 
 CLKBUF1 CLKBUF1_insert117 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf41 )
 );
 
 CLKBUF1 CLKBUF1_insert118 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf40 )
 );
 
 CLKBUF1 CLKBUF1_insert119 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf39 )
 );
 
 DFFPOSX1 _3771_ (
     .D(_1282_),
-    .CLK(i_clk_fast_bF$buf7),
+    .CLK(i_clk_fast_bF$buf4),
     .Q(\u_rf_if.tx_state [2])
 );
 
@@ -12166,7 +13333,7 @@ NOR2X1 _2202_ (
 
 DFFPOSX1 _3827_ (
     .D(_1461_),
-    .CLK(i_clk_fast_bF$buf8),
+    .CLK(i_clk_fast_bF$buf2),
     .Q(\u_mem_serial.bit_count [0])
 );
 
@@ -12174,6 +13341,9 @@ NAND2X1 _3407_ (
     .A(\u_cpu.bufreg2.dhi [6]),
     .B(_452_),
     .Y(_453_)
+);
+
+FILL FILL_0__1894_ (
 );
 
 INVX1 _3580_ (
@@ -12184,8 +13354,17 @@ INVX1 _3580_ (
 AOI21X1 _3160_ (
     .A(_274_),
     .B(_272_),
-    .C(_1070__bF$buf4),
+    .C(_1070__bF$buf3),
     .Y(_1258_)
+);
+
+FILL FILL_0__2679_ (
+);
+
+FILL FILL_0__2259_ (
+);
+
+FILL FILL_0__3620_ (
 );
 
 FILL FILL_0__3200_ (
@@ -12193,7 +13372,7 @@ FILL FILL_0__3200_ (
 
 NAND2X1 _2851_ (
     .A(\u_rf_if.read_buf0 [8]),
-    .B(_22__bF$buf2),
+    .B(_22__bF$buf1),
     .Y(_48_)
 );
 
@@ -12204,7 +13383,7 @@ NOR2X1 _2431_ (
 );
 
 NOR2X1 _2011_ (
-    .A(_1023__bF$buf1),
+    .A(_1023__bF$buf3),
     .B(_914_),
     .Y(_913_)
 );
@@ -12212,7 +13391,7 @@ NOR2X1 _2011_ (
 MUX2X1 _3636_ (
     .A(_1693_),
     .B(_882_),
-    .S(_602__bF$buf0),
+    .S(_602__bF$buf2),
     .Y(_1110_)
 );
 
@@ -12220,7 +13399,7 @@ OAI22X1 _3216_ (
     .A(_313_),
     .B(_268_),
     .C(_1066_),
-    .D(_1692__bF$buf1),
+    .D(_1692__bF$buf2),
     .Y(_314_)
 );
 
@@ -12276,12 +13455,12 @@ BUFX2 BUFX2_insert169 (
 
 NAND2X1 _2907_ (
     .A(\u_rf_if.read_buf0 [22]),
-    .B(_22__bF$buf1),
+    .B(_22__bF$buf2),
     .Y(_90_)
 );
 
 NAND2X1 _2660_ (
-    .A(i_rst_n_bF$buf4),
+    .A(i_rst_n_bF$buf10),
     .B(_1702_),
     .Y(_1761_)
 );
@@ -12294,7 +13473,7 @@ NAND2X1 _2240_ (
 
 DFFPOSX1 _3865_ (
     .D(_1327_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
     .Q(\u_rf_if.read_buf0 [21])
 );
 
@@ -12313,18 +13492,18 @@ NOR2X1 _3025_ (
 );
 
 NOR2X1 _1931_ (
-    .A(_1070__bF$buf2),
+    .A(_1070__bF$buf1),
     .B(_983_),
     .Y(_1452_)
 );
 
-NAND2X1 _2716_ (
-    .A(\u_rf_if.read_buf1 [5]),
-    .B(_1783__bF$buf1),
-    .Y(_1800_)
+FILL FILL_0__2297_ (
 );
 
-FILL FILL_0__1988_ (
+NAND2X1 _2716_ (
+    .A(\u_rf_if.read_buf1 [5]),
+    .B(_1783__bF$buf2),
+    .Y(_1800_)
 );
 
 AND2X2 _3674_ (
@@ -12340,14 +13519,23 @@ INVX1 _3254_ (
 
 DFFPOSX1 _4039_ (
     .D(_1213_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
     .Q(\u_cpu.bufreg.data [19])
 );
 
-FILL FILL127350x21750 (
+FILL FILL_0_BUFX2_insert60 (
 );
 
-FILL FILL_0_BUFX2_insert64 (
+FILL FILL_0_BUFX2_insert63 (
+);
+
+FILL FILL_0_BUFX2_insert65 (
+);
+
+FILL FILL_0_BUFX2_insert67 (
+);
+
+FILL FILL_0_BUFX2_insert69 (
 );
 
 INVX1 _2945_ (
@@ -12362,13 +13550,13 @@ NAND2X1 _2525_ (
 );
 
 NOR2X1 _2105_ (
-    .A(_1002__bF$buf3),
+    .A(_1002__bF$buf1),
     .B(_832_),
     .Y(_831_)
 );
 
 NAND2X1 _3483_ (
-    .A(mem_dbus_ack_bF$buf1),
+    .A(mem_dbus_ack_bF$buf4),
     .B(_917_),
     .Y(_514_)
 );
@@ -12380,12 +13568,12 @@ NAND3X1 _3063_ (
     .Y(_205_)
 );
 
-FILL FILL_0__3103_ (
+FILL FILL_0__3523_ (
 );
 
 AND2X2 _2754_ (
     .A(_1828_),
-    .B(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf7),
     .Y(_1364_)
 );
 
@@ -12398,24 +13586,24 @@ OAI21X1 _2334_ (
 
 DFFPOSX1 _3959_ (
     .D(_1374_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
     .Q(\u_rf_if.read_buf1 [4])
 );
 
 NAND2X1 _3539_ (
-    .A(mem_dbus_ack_bF$buf5),
+    .A(mem_dbus_ack_bF$buf1),
     .B(_556_),
     .Y(_557_)
 );
 
 OR2X2 _3119_ (
-    .A(_1692__bF$buf3),
+    .A(_1692__bF$buf2),
     .B(_227_),
     .Y(_243_)
 );
 
 AOI21X1 _3292_ (
-    .A(_1692__bF$buf0),
+    .A(_1692__bF$buf4),
     .B(_1694_),
     .C(_298_),
     .Y(_376_)
@@ -12423,14 +13611,20 @@ AOI21X1 _3292_ (
 
 DFFPOSX1 _4077_ (
     .D(_1440_),
-    .CLK(i_clk_fast_bF$buf5),
+    .CLK(i_clk_fast_bF$buf8),
     .Q(\u_mem_serial.shift_reg [15])
+);
+
+FILL FILL_0__3332_ (
+);
+
+FILL FILL128850x82950 (
 );
 
 AOI21X1 _2983_ (
     .A(_145_),
     .B(_142_),
-    .C(_1070__bF$buf4),
+    .C(_1070__bF$buf5),
     .Y(_1306_)
 );
 
@@ -12446,10 +13640,10 @@ INVX1 _2143_ (
 );
 
 DFFSR _3768_ (
-    .R(i_rst_n_bF$buf9),
+    .R(i_rst_n_bF$buf3),
     .S(vdd),
     .D(_1113_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
     .Q(ibus_pending_rdt[22])
 );
 
@@ -12516,7 +13710,7 @@ BUFX2 BUFX2_insert79 (
 
 NAND2X1 _2792_ (
     .A(\u_rf_if.read_buf1 [24]),
-    .B(_1783__bF$buf0),
+    .B(_1783__bF$buf1),
     .Y(_3_)
 );
 
@@ -12527,15 +13721,15 @@ INVX1 _2372_ (
 
 DFFPOSX1 _3997_ (
     .D(_1195_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
     .Q(\u_cpu.bufreg.data [0])
 );
 
 OAI22X1 _3577_ (
     .A(_580_),
-    .B(_212__bF$buf3),
+    .B(_212__bF$buf0),
     .C(_579_),
-    .D(_570__bF$buf2),
+    .D(_570__bF$buf1),
     .Y(_1147_)
 );
 
@@ -12546,8 +13740,17 @@ OAI21X1 _3157_ (
     .Y(_272_)
 );
 
+FILL FILL_0__2832_ (
+);
+
+FILL FILL_0__2412_ (
+);
+
+FILL FILL_0__3370_ (
+);
+
 OAI21X1 _2848_ (
-    .A(_22__bF$buf2),
+    .A(_22__bF$buf1),
     .B(_44_),
     .C(_45_),
     .Y(_46_)
@@ -12563,7 +13766,7 @@ NAND3X1 _2428_ (
 MUX2X1 _2008_ (
     .A(\u_mem_serial.shift_reg [13]),
     .B(\u_cpu.bufreg2.dlo [8]),
-    .S(_994__bF$buf1),
+    .S(_994__bF$buf5),
     .Y(_916_)
 );
 
@@ -12580,7 +13783,7 @@ NAND2X1 _3386_ (
     .Y(_435_)
 );
 
-FILL FILL_0__3006_ (
+FILL FILL_0__2221_ (
 );
 
 NOR2X1 _1872_ (
@@ -12592,7 +13795,7 @@ NOR2X1 _1872_ (
 OAI21X1 _2657_ (
     .A(_1751_),
     .B(_1758_),
-    .C(\u_rf_if.stream_active_bF$buf6 ),
+    .C(\u_rf_if.stream_active_bF$buf3 ),
     .Y(_1759_)
 );
 
@@ -12603,24 +13806,24 @@ NAND3X1 _2237_ (
     .Y(_711_)
 );
 
-FILL FILL_0__1912_ (
-);
-
 OAI21X1 _3195_ (
     .A(rreg0[3]),
     .B(_296_),
-    .C(_659__bF$buf3),
+    .C(_659__bF$buf0),
     .Y(_300_)
 );
 
-FILL FILL_0__2030_ (
+FILL FILL_0__2870_ (
 );
 
 NAND3X1 _1928_ (
     .A(\u_mem_serial.shift_reg [2]),
-    .B(_1023__bF$buf3),
-    .C(_994__bF$buf3),
+    .B(_1023__bF$buf4),
+    .C(_994__bF$buf2),
     .Y(_985_)
+);
+
+FILL FILL_0__3655_ (
 );
 
 FILL FILL_0__3235_ (
@@ -12629,7 +13832,7 @@ FILL FILL_0__3235_ (
 MUX2X1 _2886_ (
     .A(\u_rf_if.read_buf0 [18]),
     .B(\u_rf_if.read_buf0 [19]),
-    .S(\u_rf_if.stream_active_bF$buf4 ),
+    .S(\u_rf_if.stream_active_bF$buf2 ),
     .Y(_74_)
 );
 
@@ -12646,46 +13849,61 @@ AND2X2 _2046_ (
     .Y(_1437_)
 );
 
+FILL FILL129150x32550 (
+);
+
 MUX2X1 _2695_ (
     .A(\u_rf_if.read_buf1 [1]),
     .B(\u_rf_if.read_buf1 [2]),
-    .S(\u_rf_if.stream_active_bF$buf5 ),
+    .S(\u_rf_if.stream_active_bF$buf4 ),
     .Y(_1784_)
 );
 
 NOR2X1 _2275_ (
     .A(mem_ibus_ack),
-    .B(ibus_pending_ack_bF$buf2),
+    .B(ibus_pending_ack_bF$buf1),
     .Y(_673_)
+);
+
+FILL FILL_0__2735_ (
 );
 
 DFFPOSX1 _4001_ (
     .D(_1399_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
     .Q(\u_rf_if.read_buf1 [30])
-);
-
-FILL FILL127350x104550 (
 );
 
 AND2X2 _1966_ (
     .A(_953_),
-    .B(i_rst_n_bF$buf2),
+    .B(i_rst_n_bF$buf6),
     .Y(_1447_)
+);
+
+FILL FILL_0__3693_ (
+);
+
+FILL FILL_0__3273_ (
 );
 
 OAI21X1 _2084_ (
     .A(_852_),
     .B(_850_),
-    .C(_973__bF$buf3),
+    .C(_973__bF$buf1),
     .Y(_849_)
 );
 
 NAND3X1 _3289_ (
     .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm31 ),
     .B(_1543_),
-    .C(_659__bF$buf4),
+    .C(_659__bF$buf2),
     .Y(_373_)
+);
+
+FILL FILL_0__2544_ (
+);
+
+FILL FILL_0__2124_ (
 );
 
 FILL FILL_0__3082_ (
@@ -12693,7 +13911,7 @@ FILL FILL_0__3082_ (
 
 DFFPOSX1 _3921_ (
     .D(_1355_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
     .Q(\u_rf_if.read_buf1 [23])
 );
 
@@ -12711,11 +13929,14 @@ AOI21X1 _3098_ (
     .Y(_1272_)
 );
 
+FILL FILL_0__3558_ (
+);
+
 FILL FILL_0__3138_ (
 );
 
 OAI21X1 _2789_ (
-    .A(_1783__bF$buf3),
+    .A(_1783__bF$buf1),
     .B(_1853_),
     .C(_1859_),
     .Y(_1_)
@@ -12729,7 +13950,7 @@ NOR2X1 _2369_ (
 
 DFFPOSX1 _3730_ (
     .D(_1251_),
-    .CLK(i_clk_fast_bF$buf2),
+    .CLK(i_clk_fast_bF$buf1),
     .Q(mem_dbus_ack)
 );
 
@@ -12737,6 +13958,12 @@ NAND2X1 _3310_ (
     .A(rreg1[4]),
     .B(_342_),
     .Y(_391_)
+);
+
+FILL FILL_0__2409_ (
+);
+
+FILL FILL_0__2582_ (
 );
 
 FILL FILL_0__2162_ (
@@ -12765,29 +13992,44 @@ OAI21X1 _2810_ (
     .Y(_17_)
 );
 
-FILL FILL126150x122550 (
+FILL FILL_0__3596_ (
 );
 
-FILL FILL126750x115350 (
+FILL FILL_0__1909_ (
+);
+
+FILL FILL_0__2447_ (
+);
+
+FILL FILL_0__2027_ (
 );
 
 DFFPOSX1 _3824_ (
     .D(_1308_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
     .Q(raddr[7])
 );
 
 AOI21X1 _3404_ (
     .A(_449_),
     .B(_448_),
-    .C(mem_dbus_ack_bF$buf2),
+    .C(mem_dbus_ack_bF$buf1),
     .Y(_450_)
 );
 
-FILL FILL_0_CLKBUF1_insert141 (
+FILL FILL_0_CLKBUF1_insert140 (
+);
+
+FILL FILL_0_CLKBUF1_insert142 (
+);
+
+FILL FILL_0_CLKBUF1_insert145 (
 );
 
 FILL FILL_0_CLKBUF1_insert147 (
+);
+
+FILL FILL_0_CLKBUF1_insert149 (
 );
 
 FILL FILL_0__1947_ (
@@ -12796,7 +14038,7 @@ FILL FILL_0__1947_ (
 MUX2X1 _3633_ (
     .A(_147_),
     .B(_861_),
-    .S(_602__bF$buf3),
+    .S(_602__bF$buf4),
     .Y(_1113_)
 );
 
@@ -12807,11 +14049,14 @@ OAI21X1 _3213_ (
     .Y(_312_)
 );
 
-FILL FILL_0__2065_ (
+FILL FILL128250x111750 (
+);
+
+FILL FILL_0__2485_ (
 );
 
 OAI21X1 _2904_ (
-    .A(_22__bF$buf1),
+    .A(_22__bF$buf2),
     .B(_86_),
     .C(_87_),
     .Y(_88_)
@@ -12835,8 +14080,11 @@ INVX1 _3022_ (
     .Y(_176_)
 );
 
+FILL FILL_0__2294_ (
+);
+
 OAI21X1 _2713_ (
-    .A(_1783__bF$buf1),
+    .A(_1783__bF$buf4),
     .B(_1796_),
     .C(_1797_),
     .Y(_1798_)
@@ -12844,7 +14092,7 @@ OAI21X1 _2713_ (
 
 DFFPOSX1 _3918_ (
     .D(_1158_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
     .Q(\u_cpu.bufreg2.cnt_next [6])
 );
 
@@ -12861,14 +14109,23 @@ INVX1 _3251_ (
 
 DFFPOSX1 _4036_ (
     .D(_1420_),
-    .CLK(i_clk_fast_bF$buf0),
+    .CLK(i_clk_fast_bF$buf6),
     .Q(\u_mem_serial.shift_reg [35])
 );
 
-FILL FILL_0_BUFX2_insert30 (
+FILL FILL_0__3711_ (
 );
 
-FILL FILL_0_BUFX2_insert37 (
+FILL FILL_0_BUFX2_insert32 (
+);
+
+FILL FILL_0_BUFX2_insert34 (
+);
+
+FILL FILL_0_BUFX2_insert36 (
+);
+
+FILL FILL_0_BUFX2_insert38 (
 );
 
 AOI21X1 _2942_ (
@@ -12887,13 +14144,13 @@ OAI21X1 _2522_ (
 
 AND2X2 _2102_ (
     .A(_834_),
-    .B(i_rst_n_bF$buf7),
+    .B(i_rst_n_bF$buf6),
     .Y(_1430_)
 );
 
 DFFPOSX1 _3727_ (
     .D(_1459_),
-    .CLK(i_clk_fast_bF$buf8),
+    .CLK(i_clk_fast_bF$buf2),
     .Q(\u_mem_serial.bit_count [2])
 );
 
@@ -12904,7 +14161,7 @@ NAND2X1 _3307_ (
 );
 
 OAI21X1 _3480_ (
-    .A(mem_dbus_ack_bF$buf1),
+    .A(mem_dbus_ack_bF$buf2),
     .B(\u_cpu.bufreg2.dlo [16]),
     .C(_511_),
     .Y(_512_)
@@ -12916,13 +14173,19 @@ NAND2X1 _3060_ (
     .Y(_203_)
 );
 
-FILL FILL_0__2999_ (
+FILL FILL_0__2159_ (
+);
+
+FILL FILL_0__3520_ (
+);
+
+FILL FILL_0__3100_ (
 );
 
 MUX2X1 _2751_ (
     .A(\u_rf_if.read_buf1 [15]),
     .B(\u_rf_if.read_buf1 [16]),
-    .S(\u_rf_if.stream_active_bF$buf5 ),
+    .S(\u_rf_if.stream_active_bF$buf0 ),
     .Y(_1826_)
 );
 
@@ -12933,14 +14196,14 @@ INVX1 _2331_ (
 
 DFFPOSX1 _3956_ (
     .D(_1177_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
     .Q(\u_cpu.bufreg2.dlo [17])
 );
 
 MUX2X1 _3536_ (
     .A(_551_),
     .B(_554_),
-    .S(_450__bF$buf2),
+    .S(_450__bF$buf3),
     .Y(_1162_)
 );
 
@@ -12951,19 +14214,19 @@ OAI21X1 _3116_ (
     .Y(_1269_)
 );
 
+FILL FILL128250x39750 (
+);
+
 DFFPOSX1 _4074_ (
     .D(_1230_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [1])
 );
 
 NAND2X1 _2807_ (
     .A(\u_rf_if.read_buf1 [27]),
-    .B(_1783__bF$buf6),
+    .B(_1783__bF$buf3),
     .Y(_15_)
-);
-
-FILL FILL127050x54150 (
 );
 
 INVX1 _2980_ (
@@ -12986,7 +14249,7 @@ OAI21X1 _2140_ (
 
 DFFPOSX1 _3765_ (
     .D(_1279_),
-    .CLK(i_clk_fast_bF$buf2),
+    .CLK(i_clk_fast_bF$buf1),
     .Q(\u_mem_serial.state [1])
 );
 
@@ -12997,12 +14260,15 @@ MUX2X1 _3345_ (
     .Y(_1209_)
 );
 
-FILL FILL127050x7350 (
+FILL FILL_0__2600_ (
+);
+
+FILL FILL_0__2197_ (
 );
 
 AND2X2 _2616_ (
     .A(_1725_),
-    .B(i_rst_n_bF$buf10),
+    .B(i_rst_n_bF$buf9),
     .Y(_1399_)
 );
 
@@ -13043,7 +14309,7 @@ BUFX2 BUFX2_insert46 (
 
 DFFPOSX1 _3994_ (
     .D(_1395_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
     .Q(\u_rf_if.read_buf0 [31])
 );
 
@@ -13053,14 +14319,14 @@ INVX1 _3574_ (
 );
 
 NAND2X1 _3154_ (
-    .A(ibus_pending_ack_bF$buf4),
+    .A(ibus_pending_ack_bF$buf0),
     .B(_269_),
     .Y(_270_)
 );
 
 AND2X2 _2845_ (
     .A(_43_),
-    .B(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf5),
     .Y(_1342_)
 );
 
@@ -13084,7 +14350,10 @@ NAND2X1 _3383_ (
     .Y(_432_)
 );
 
-FILL FILL127350x97350 (
+FILL FILL_0__3423_ (
+);
+
+FILL FILL_0__3003_ (
 );
 
 NAND2X1 _2654_ (
@@ -13102,7 +14371,7 @@ NAND3X1 _2234_ (
 
 DFFPOSX1 _3859_ (
     .D(_1143_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [12])
 );
 
@@ -13118,7 +14387,7 @@ INVX1 _3019_ (
 );
 
 AND2X2 _3192_ (
-    .A(_659__bF$buf3),
+    .A(_659__bF$buf0),
     .B(_296_),
     .Y(_298_)
 );
@@ -13132,7 +14401,7 @@ MUX2X1 _1925_ (
 
 NAND2X1 _2883_ (
     .A(\u_rf_if.read_buf0 [16]),
-    .B(_22__bF$buf6),
+    .B(_22__bF$buf3),
     .Y(_72_)
 );
 
@@ -13143,7 +14412,7 @@ NAND2X1 _2463_ (
 );
 
 NOR2X1 _2043_ (
-    .A(_1023__bF$buf1),
+    .A(_1023__bF$buf5),
     .B(_886_),
     .Y(_885_)
 );
@@ -13156,18 +14425,18 @@ INVX1 _3668_ (
 OAI21X1 _3248_ (
     .A(rreg1[4]),
     .B(_340_),
-    .C(_659__bF$buf0),
+    .C(_659__bF$buf3),
     .Y(_341_)
 );
 
 FILL FILL_0__2923_ (
 );
 
-FILL FILL_0__3041_ (
+FILL FILL_0__3461_ (
 );
 
 OAI21X1 _2939_ (
-    .A(_22__bF$buf3),
+    .A(_22__bF$buf5),
     .B(_113_),
     .C(_114_),
     .Y(_115_)
@@ -13182,7 +14451,7 @@ NAND2X1 _2519_ (
 OAI21X1 _2692_ (
     .A(\u_rf_if.stream_cnt [3]),
     .B(_1781_),
-    .C(i_rst_n_bF$buf6),
+    .C(i_rst_n_bF$buf9),
     .Y(_1782_)
 );
 
@@ -13194,7 +14463,7 @@ NOR2X1 _2272_ (
 
 DFFPOSX1 _3897_ (
     .D(_1343_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
     .Q(\u_rf_if.read_buf0 [5])
 );
 
@@ -13211,15 +14480,21 @@ NAND2X1 _3057_ (
     .Y(_201_)
 );
 
+FILL FILL_0__2312_ (
+);
+
 NOR2X1 _1963_ (
-    .A(_1023__bF$buf4),
+    .A(_1023__bF$buf1),
     .B(_956_),
     .Y(_955_)
 );
 
+FILL FILL_0__3270_ (
+);
+
 NAND2X1 _2748_ (
     .A(\u_rf_if.read_buf1 [13]),
-    .B(_1783__bF$buf4),
+    .B(_1783__bF$buf6),
     .Y(_1824_)
 );
 
@@ -13238,21 +14513,27 @@ NOR2X1 _2081_ (
 
 OAI21X1 _3286_ (
     .A(\u_mem_serial.shift_reg [31]),
-    .B(ibus_pending_ack_bF$buf1),
+    .B(ibus_pending_ack_bF$buf2),
     .C(_370_),
     .Y(_371_)
 );
 
+FILL FILL_0__2961_ (
+);
+
+FILL FILL_0__3326_ (
+);
+
 NAND2X1 _2977_ (
     .A(_140_),
-    .B(_1692__bF$buf3),
+    .B(_1692__bF$buf4),
     .Y(_141_)
 );
 
 NAND3X1 _2557_ (
     .A(_1673_),
     .B(_1674_),
-    .C(_659__bF$buf1),
+    .C(_659__bF$buf4),
     .Y(_1675_)
 );
 
@@ -13265,20 +14546,29 @@ NOR2X1 _2137_ (
 OAI21X1 _3095_ (
     .A(_1546_),
     .B(_224_),
-    .C(i_rst_n_bF$buf5),
+    .C(i_rst_n_bF$buf11),
     .Y(_225_)
+);
+
+FILL FILL_0__2770_ (
+);
+
+FILL FILL_0__2350_ (
+);
+
+FILL FILL_0__3135_ (
 );
 
 AND2X2 _2786_ (
     .A(_1852_),
-    .B(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf4),
     .Y(_1356_)
 );
 
 AOI21X1 _2366_ (
     .A(_1488_),
     .B(_1493_),
-    .C(_1070__bF$buf5),
+    .C(_1070__bF$buf2),
     .Y(_1417_)
 );
 
@@ -13298,11 +14588,23 @@ NOR2X1 _2175_ (
     .Y(_769_)
 );
 
+FILL FILL_0__2635_ (
+);
+
+FILL FILL_0__2215_ (
+);
+
 AOI21X1 _1866_ (
     .A(\u_mem_serial.bit_count [1]),
     .B(_1041_),
     .C(_1040_),
     .Y(_1039_)
+);
+
+FILL FILL_0__3173_ (
+);
+
+FILL FILL129150x100950 (
 );
 
 OAI21X1 _3189_ (
@@ -13312,9 +14614,15 @@ OAI21X1 _3189_ (
     .Y(_295_)
 );
 
+FILL FILL_0__2024_ (
+);
+
+FILL FILL_0__3649_ (
+);
+
 DFFPOSX1 _3821_ (
     .D(_1307_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
     .Q(\u_rf_if.rreg1_latched [0])
 );
 
@@ -13323,6 +14631,21 @@ OAI21X1 _3401_ (
     .B(_446_),
     .C(_1066_),
     .Y(_447_)
+);
+
+FILL FILL_0__2673_ (
+);
+
+FILL FILL_0__3458_ (
+);
+
+FILL FILL_0__3038_ (
+);
+
+FILL FILL_0_CLKBUF1_insert116 (
+);
+
+FILL FILL_0_CLKBUF1_insert118 (
 );
 
 AOI21X1 _2689_ (
@@ -13341,7 +14664,7 @@ NOR2X1 _2269_ (
 MUX2X1 _3630_ (
     .A(_334_),
     .B(_840_),
-    .S(_602__bF$buf3),
+    .S(_602__bF$buf2),
     .Y(_1116_)
 );
 
@@ -13350,9 +14673,6 @@ OAI21X1 _3210_ (
     .B(_296_),
     .C(_659__bF$buf0),
     .Y(_310_)
-);
-
-FILL FILL_0__2729_ (
 );
 
 BUFX2 BUFX2_insert100 (
@@ -13405,9 +14725,15 @@ BUFX2 BUFX2_insert109 (
     .Y(_659__bF$buf0)
 );
 
+FILL FILL_0__2482_ (
+);
+
+FILL FILL_0__2062_ (
+);
+
 AND2X2 _2901_ (
     .A(_85_),
-    .B(i_rst_n_bF$buf1),
+    .B(i_rst_n_bF$buf4),
     .Y(_1328_)
 );
 
@@ -13420,46 +14746,55 @@ AOI21X1 _2498_ (
 
 AND2X2 _2078_ (
     .A(_855_),
-    .B(i_rst_n_bF$buf7),
+    .B(i_rst_n_bF$buf2),
     .Y(_1433_)
 );
 
 FILL FILL_0__2958_ (
 );
 
+FILL FILL_0__2538_ (
+);
+
 AND2X2 _2710_ (
     .A(_1795_),
-    .B(i_rst_n_bF$buf3),
+    .B(i_rst_n_bF$buf5),
     .Y(_1375_)
 );
 
-FILL FILL126450x122550 (
+FILL FILL_0__3496_ (
+);
+
+FILL FILL_0__3076_ (
 );
 
 DFFPOSX1 _3915_ (
     .D(_1352_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
     .Q(\u_rf_if.read_buf1 [26])
 );
 
 FILL FILL_0__1982_ (
 );
 
+FILL FILL_0__2347_ (
+);
+
 DFFPOSX1 _4033_ (
     .D(_1210_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
     .Q(\u_cpu.bufreg.data [16])
 );
 
 AND2X2 _1998_ (
     .A(_925_),
-    .B(i_rst_n_bF$buf8),
+    .B(i_rst_n_bF$buf2),
     .Y(_1443_)
 );
 
 DFFPOSX1 _3724_ (
     .D(_1249_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
     .Q(rreg0[3])
 );
 
@@ -13471,9 +14806,15 @@ OAI22X1 _3304_ (
     .Y(_386_)
 );
 
+FILL FILL128550x111750 (
+);
+
+FILL FILL_0__2996_ (
+);
+
 DFFPOSX1 _3953_ (
     .D(_1371_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
     .Q(\u_rf_if.read_buf1 [7])
 );
 
@@ -13483,28 +14824,37 @@ INVX1 _3533_ (
 );
 
 NAND2X1 _3113_ (
-    .A(i_rst_n_bF$buf5),
+    .A(i_rst_n_bF$buf11),
     .B(\u_cpu.branch_op ),
     .Y(_239_)
 );
 
+FILL FILL_0__2385_ (
+);
+
 DFFPOSX1 _4071_ (
     .D(_1437_),
-    .CLK(i_clk_fast_bF$buf6),
+    .CLK(i_clk_fast_bF$buf8),
     .Q(\u_mem_serial.shift_reg [18])
+);
+
+FILL FILL128850x150 (
 );
 
 NAND2X1 _2804_ (
     .A(\u_rf_if.read_buf1 [28]),
-    .B(\u_rf_if.stream_active_bF$buf1 ),
+    .B(\u_rf_if.stream_active_bF$buf7 ),
     .Y(_12_)
 );
 
+FILL FILL128250x93750 (
+);
+
 DFFSR _3762_ (
-    .R(i_rst_n_bF$buf11),
+    .R(i_rst_n_bF$buf3),
     .S(vdd),
     .D(_1110_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
     .Q(ibus_pending_rdt[19])
 );
 
@@ -13513,16 +14863,22 @@ INVX1 _3342_ (
     .Y(_409_)
 );
 
+FILL FILL_0__3802_ (
+);
+
 INVX1 _2613_ (
     .A(_1722_),
     .Y(_1723_)
 );
 
+FILL FILL_0__3399_ (
+);
+
 DFFSR _3818_ (
-    .R(i_rst_n_bF$buf11),
+    .R(i_rst_n_bF$buf1),
     .S(vdd),
     .D(_1078_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
     .Q(current_wdata0_next_hint)
 );
 
@@ -13581,13 +14937,13 @@ FILL FILL_0__1885_ (
 
 DFFPOSX1 _3991_ (
     .D(_1191_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
     .Q(\u_cpu.bufreg.c_r )
 );
 
 OAI22X1 _3571_ (
     .A(_577_),
-    .B(_212__bF$buf2),
+    .B(_212__bF$buf3),
     .C(_576_),
     .D(_570__bF$buf4),
     .Y(_1150_)
@@ -13596,14 +14952,17 @@ OAI22X1 _3571_ (
 MUX2X1 _3151_ (
     .A(_1520_),
     .B(_267_),
-    .S(_659__bF$buf4),
+    .S(_659__bF$buf2),
     .Y(_1260_)
+);
+
+FILL FILL_0__3611_ (
 );
 
 MUX2X1 _2842_ (
     .A(\u_rf_if.read_buf0 [7]),
     .B(\u_rf_if.read_buf0 [8]),
-    .S(\u_rf_if.stream_active_bF$buf7 ),
+    .S(\u_rf_if.stream_active_bF$buf6 ),
     .Y(_41_)
 );
 
@@ -13623,14 +14982,14 @@ MUX2X1 _2002_ (
 MUX2X1 _3627_ (
     .A(_322_),
     .B(_819_),
-    .S(_602__bF$buf1),
+    .S(_602__bF$buf4),
     .Y(_1119_)
 );
 
 OAI21X1 _3207_ (
     .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [3]),
     .B(_296_),
-    .C(_659__bF$buf3),
+    .C(_659__bF$buf0),
     .Y(_308_)
 );
 
@@ -13638,6 +14997,12 @@ NAND2X1 _3380_ (
     .A(\u_cpu.decode.opcode [0]),
     .B(\u_cpu.decode.opcode [1]),
     .Y(_429_)
+);
+
+FILL FILL_0__2899_ (
+);
+
+FILL FILL_0__3000_ (
 );
 
 INVX1 _2651_ (
@@ -13654,7 +15019,7 @@ NAND3X1 _2231_ (
 
 DFFPOSX1 _3856_ (
     .D(_1323_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
     .Q(\u_rf_if.read_buf0 [25])
 );
 
@@ -13671,25 +15036,31 @@ NAND2X1 _3016_ (
     .Y(_172_)
 );
 
-FILL FILL_0_CLKBUF1_insert51 (
+FILL FILL_0_CLKBUF1_insert52 (
+);
+
+FILL FILL_0_CLKBUF1_insert54 (
 );
 
 MUX2X1 _1922_ (
     .A(\u_cpu.bufreg.data [2]),
     .B(\u_cpu.ctrl.o_ibus_adr [2]),
-    .S(_1006__bF$buf3),
+    .S(_1006__bF$buf0),
     .Y(_990_)
+);
+
+FILL FILL_0__2288_ (
 );
 
 MUX2X1 _2707_ (
     .A(\u_rf_if.read_buf1 [4]),
     .B(\u_rf_if.read_buf1 [5]),
-    .S(\u_rf_if.stream_active_bF$buf5 ),
+    .S(\u_rf_if.stream_active_bF$buf4 ),
     .Y(_1793_)
 );
 
 OAI21X1 _2880_ (
-    .A(_22__bF$buf6),
+    .A(_22__bF$buf4),
     .B(_68_),
     .C(_69_),
     .Y(_70_)
@@ -13720,12 +15091,15 @@ INVX1 _3245_ (
     .Y(_338_)
 );
 
-FILL FILL_0__3705_ (
+FILL FILL_0__2500_ (
+);
+
+FILL FILL_0__2097_ (
 );
 
 AOI21X1 _2936_ (
     .A(_101_),
-    .B(_22__bF$buf3),
+    .B(_22__bF$buf5),
     .C(_112_),
     .Y(_1320_)
 );
@@ -13736,18 +15110,21 @@ NOR2X1 _2516_ (
     .Y(_1639_)
 );
 
+FILL FILL128250x25350 (
+);
+
 DFFSR _3894_ (
-    .R(i_rst_n_bF$buf8),
+    .R(i_rst_n_bF$buf0),
     .S(vdd),
     .D(_1096_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
     .Q(ibus_pending_rdt[5])
 );
 
 MUX2X1 _3474_ (
     .A(_505_),
     .B(_507_),
-    .S(_450__bF$buf1),
+    .S(_450__bF$buf0),
     .Y(_1177_)
 );
 
@@ -13757,15 +15134,18 @@ NAND2X1 _3054_ (
     .Y(_199_)
 );
 
+FILL FILL_0__3514_ (
+);
+
 MUX2X1 _1960_ (
     .A(\u_mem_serial.shift_reg [7]),
     .B(\u_cpu.bufreg2.dlo [2]),
-    .S(_994__bF$buf2),
+    .S(_994__bF$buf0),
     .Y(_958_)
 );
 
 OAI21X1 _2745_ (
-    .A(_1783__bF$buf4),
+    .A(_1783__bF$buf1),
     .B(_1820_),
     .C(_1821_),
     .Y(_1822_)
@@ -13779,20 +15159,23 @@ OAI21X1 _2325_ (
 );
 
 OAI21X1 _3283_ (
-    .A(_673__bF$buf2),
-    .B(_674__bF$buf0),
+    .A(_673__bF$buf1),
+    .B(_674__bF$buf2),
     .C(\u_cpu.immdec.gen_immdec_w_eq_1.imm31 ),
     .Y(_368_)
 );
 
 DFFPOSX1 _4068_ (
     .D(_1227_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
     .Q(rreg0[4])
 );
 
+FILL FILL_0__3323_ (
+);
+
 OAI21X1 _2974_ (
-    .A(_673__bF$buf1),
+    .A(_673__bF$buf2),
     .B(_674__bF$buf1),
     .C(\u_rf_if.rreg1_latched [0]),
     .Y(_138_)
@@ -13806,20 +15189,20 @@ NOR2X1 _2554_ (
 
 AND2X2 _2134_ (
     .A(_806_),
-    .B(i_rst_n_bF$buf7),
+    .B(i_rst_n_bF$buf6),
     .Y(_1426_)
 );
 
 DFFPOSX1 _3759_ (
     .D(_1276_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
     .Q(\u_cpu.state.cnt_r [2])
 );
 
 MUX2X1 _3339_ (
     .A(_406_),
     .B(_407_),
-    .S(_1536__bF$buf3),
+    .S(_1536__bF$buf0),
     .Y(_1212_)
 );
 
@@ -13831,7 +15214,7 @@ INVX1 _3092_ (
 MUX2X1 _2783_ (
     .A(\u_rf_if.read_buf1 [23]),
     .B(\u_rf_if.read_buf1 [24]),
-    .S(\u_rf_if.stream_active_bF$buf7 ),
+    .S(\u_rf_if.stream_active_bF$buf1 ),
     .Y(_1850_)
 );
 
@@ -13843,7 +15226,7 @@ NAND2X1 _2363_ (
 
 DFFPOSX1 _3988_ (
     .D(_1392_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
     .Q(\u_rf_if.write_wait [1])
 );
 
@@ -13857,12 +15240,18 @@ INVX1 _3148_ (
     .Y(_265_)
 );
 
-FILL FILL_0__3608_ (
+FILL FILL_0__2823_ (
+);
+
+FILL FILL_0__2403_ (
+);
+
+FILL FILL_0__3361_ (
 );
 
 NAND2X1 _2839_ (
     .A(\u_rf_if.read_buf0 [5]),
-    .B(_22__bF$buf4),
+    .B(_22__bF$buf6),
     .Y(_39_)
 );
 
@@ -13888,18 +15277,18 @@ AOI21X1 _2172_ (
 
 DFFPOSX1 _3797_ (
     .D(_1295_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
     .Q(\u_rf_if.issue_chunk [3])
 );
 
 MUX2X1 _3377_ (
     .A(_427_),
     .B(_397_),
-    .S(_1536__bF$buf1),
+    .S(_1536__bF$buf2),
     .Y(_1194_)
 );
 
-FILL FILL_0__2632_ (
+FILL FILL_0__2212_ (
 );
 
 BUFX2 _1863_ (
@@ -13920,8 +15309,11 @@ NAND3X1 _2228_ (
     .Y(_720_)
 );
 
+FILL FILL_0__1903_ (
+);
+
 OAI21X1 _3186_ (
-    .A(_659__bF$buf2),
+    .A(_659__bF$buf5),
     .B(_292_),
     .C(_289_),
     .Y(_1250_)
@@ -13937,9 +15329,12 @@ OAI21X1 _1919_ (
     .Y(_992_)
 );
 
+FILL FILL_0__3226_ (
+);
+
 AND2X2 _2877_ (
     .A(_67_),
-    .B(i_rst_n_bF$buf1),
+    .B(i_rst_n_bF$buf8),
     .Y(_1334_)
 );
 
@@ -13952,12 +15347,15 @@ NAND3X1 _2457_ (
 
 OAI21X1 _2037_ (
     .A(_896_),
-    .B(_973__bF$buf2),
+    .B(_973__bF$buf0),
     .C(_891_),
     .Y(_890_)
 );
 
-FILL FILL127350x111750 (
+FILL FILL128850x21750 (
+);
+
+FILL FILL_0__2250_ (
 );
 
 NAND2X1 _2686_ (
@@ -13971,14 +15369,20 @@ INVX1 _2266_ (
     .Y(_682_)
 );
 
+FILL FILL_0__2726_ (
+);
+
 OAI21X1 _1957_ (
     .A(_966_),
-    .B(_973__bF$buf0),
+    .B(_973__bF$buf4),
     .C(_961_),
     .Y(_960_)
 );
 
 FILL FILL_0__3684_ (
+);
+
+FILL FILL_0__3264_ (
 );
 
 INVX1 _2495_ (
@@ -13987,22 +15391,25 @@ INVX1 _2495_ (
 );
 
 NOR2X1 _2075_ (
-    .A(_1023__bF$buf5),
+    .A(_1023__bF$buf3),
     .B(_858_),
     .Y(_857_)
 );
 
-FILL FILL_0__2535_ (
+FILL FILL_0__2115_ (
+);
+
+FILL FILL_0__3073_ (
 );
 
 DFFPOSX1 _3912_ (
     .D(_1156_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [25])
 );
 
 AND2X2 _3089_ (
-    .A(i_rst_n_bF$buf5),
+    .A(i_rst_n_bF$buf8),
     .B(\u_cpu.state.cnt_r [0]),
     .Y(_1275_)
 );
@@ -14012,19 +15419,25 @@ FILL FILL_0__2764_ (
 
 DFFPOSX1 _4030_ (
     .D(_1417_),
-    .CLK(i_clk_fast_bF$buf7),
+    .CLK(i_clk_fast_bF$buf4),
     .Q(_1858_)
 );
 
+FILL FILL_0__3549_ (
+);
+
+FILL FILL_0__3129_ (
+);
+
 NOR2X1 _1995_ (
-    .A(_1023__bF$buf4),
+    .A(_1023__bF$buf3),
     .B(_928_),
     .Y(_927_)
 );
 
 DFFPOSX1 _3721_ (
     .D(_1456_),
-    .CLK(i_clk_fast_bF$buf1),
+    .CLK(i_clk_fast_bF$buf2),
     .Q(\u_mem_serial.bit_count [5])
 );
 
@@ -14035,25 +15448,31 @@ AOI21X1 _3301_ (
     .Y(_383_)
 );
 
+FILL FILL_0__2573_ (
+);
+
+FILL FILL_0__2153_ (
+);
+
 INVX1 _2589_ (
     .A(_1471_),
     .Y(_1701_)
 );
 
 NOR2X1 _2169_ (
-    .A(_1002__bF$buf4),
+    .A(_1002__bF$buf3),
     .B(_775_),
     .Y(_774_)
 );
 
 DFFPOSX1 _3950_ (
     .D(_1174_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
     .Q(\u_cpu.bufreg2.dlo [14])
 );
 
 OAI21X1 _3530_ (
-    .A(mem_dbus_ack_bF$buf6),
+    .A(mem_dbus_ack_bF$buf0),
     .B(\u_cpu.bufreg2.dlo [4]),
     .C(_549_),
     .Y(_550_)
@@ -14067,6 +15486,9 @@ AOI22X1 _3110_ (
     .Y(_236_)
 );
 
+FILL FILL_0__2629_ (
+);
+
 OAI21X1 _2801_ (
     .A(_1783__bF$buf4),
     .B(_8_),
@@ -14074,7 +15496,7 @@ OAI21X1 _2801_ (
     .Y(_10_)
 );
 
-FILL FILL126750x122550 (
+FILL FILL_0__3587_ (
 );
 
 NAND3X1 _2398_ (
@@ -14087,6 +15509,9 @@ NAND3X1 _2398_ (
 FILL FILL_0__2438_ (
 );
 
+FILL FILL_0__2018_ (
+);
+
 NAND3X1 _2610_ (
     .A(_1639_),
     .B(_1717_),
@@ -14096,11 +15521,11 @@ NAND3X1 _2610_ (
 
 DFFPOSX1 _3815_ (
     .D(_1304_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
     .Q(\u_rf_if.rreg1_latched [3])
 );
 
-FILL FILL_0__2667_ (
+FILL FILL128850x111750 (
 );
 
 NOR2X1 _1898_ (
@@ -14109,9 +15534,12 @@ NOR2X1 _1898_ (
     .Y(_1012_)
 );
 
+FILL FILL_0__1938_ (
+);
+
 OAI21X1 _3624_ (
-    .A(ibus_pending_ack_bF$buf2),
-    .B(_674__bF$buf2),
+    .A(ibus_pending_ack_bF$buf5),
+    .B(_674__bF$buf0),
     .C(mem_ibus_ack),
     .Y(_602_)
 );
@@ -14119,8 +15547,14 @@ OAI21X1 _3624_ (
 OAI21X1 _3204_ (
     .A(\u_cpu.csr_imm ),
     .B(_296_),
-    .C(_659__bF$buf3),
+    .C(_659__bF$buf2),
     .Y(_306_)
+);
+
+FILL FILL_0__2896_ (
+);
+
+FILL FILL_0__2476_ (
 );
 
 INVX2 _3853_ (
@@ -14137,20 +15571,29 @@ NOR2X1 _3433_ (
 AOI21X1 _3013_ (
     .A(_169_),
     .B(_166_),
-    .C(_1070__bF$buf0),
+    .C(_1070__bF$buf5),
     .Y(_1300_)
+);
+
+FILL FILL_0__2285_ (
 );
 
 NAND2X1 _2704_ (
     .A(\u_rf_if.read_buf1 [2]),
-    .B(_1783__bF$buf0),
+    .B(_1783__bF$buf3),
     .Y(_1791_)
+);
+
+FILL FILL129150x108150 (
 );
 
 DFFPOSX1 _3909_ (
     .D(_1349_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
     .Q(\u_rf_if.read_buf1 [29])
+);
+
+FILL FILL_0__1976_ (
 );
 
 NOR2X1 _3662_ (
@@ -14162,20 +15605,23 @@ NOR2X1 _3662_ (
 MUX2X1 _3242_ (
     .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [1]),
     .B(_335_),
-    .S(_659__bF$buf4),
+    .S(_659__bF$buf1),
     .Y(_336_)
 );
 
 DFFPOSX1 _4027_ (
     .D(_1415_),
-    .CLK(i_clk_fast_bF$buf7),
+    .CLK(i_clk_fast_bF$buf4),
     .Q(\u_rf_if.tx_state [4])
+);
+
+FILL FILL_0__3702_ (
 );
 
 AOI21X1 _2933_ (
     .A(_110_),
     .B(_109_),
-    .C(_1070__bF$buf2),
+    .C(_1070__bF$buf6),
     .Y(_1321_)
 );
 
@@ -14185,15 +15631,18 @@ NAND2X1 _2513_ (
     .Y(_1636_)
 );
 
+FILL FILL_0__3299_ (
+);
+
 DFFPOSX1 _3718_ (
     .D(_1246_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
     .Q(\u_cpu.csr_imm )
 );
 
 DFFPOSX1 _3891_ (
     .D(_1340_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
     .Q(\u_rf_if.read_buf0 [8])
 );
 
@@ -14207,12 +15656,12 @@ INVX1 _3051_ (
     .Y(_197_)
 );
 
-FILL FILL_0__3511_ (
+FILL FILL128250x46950 (
 );
 
 AND2X2 _2742_ (
     .A(_1819_),
-    .B(i_rst_n_bF$buf3),
+    .B(i_rst_n_bF$buf7),
     .Y(_1367_)
 );
 
@@ -14224,7 +15673,7 @@ AND2X2 _2322_ (
 
 DFFPOSX1 _3947_ (
     .D(_1368_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
     .Q(\u_rf_if.read_buf1 [10])
 );
 
@@ -14240,21 +15689,18 @@ AOI21X1 _3107_ (
     .Y(_233_)
 );
 
-FILL FILL127050x61350 (
-);
-
 NAND2X1 _3280_ (
     .A(_365_),
-    .B(_1692__bF$buf2),
+    .B(_1692__bF$buf1),
     .Y(_366_)
 );
 
-FILL FILL127050x28950 (
+FILL FILL_0__2799_ (
 );
 
 DFFPOSX1 _4065_ (
     .D(_1434_),
-    .CLK(i_clk_fast_bF$buf3),
+    .CLK(i_clk_fast_bF$buf0),
     .Q(\u_mem_serial.shift_reg [21])
 );
 
@@ -14268,25 +15714,28 @@ MUX2X1 _2971_ (
 AOI21X1 _2551_ (
     .A(_1052_),
     .B(_1669_),
-    .C(_1070__bF$buf4),
+    .C(_1070__bF$buf3),
     .Y(_1408_)
 );
 
 NOR2X1 _2131_ (
-    .A(_1023__bF$buf3),
+    .A(_1023__bF$buf5),
     .B(_809_),
     .Y(_808_)
 );
 
 DFFPOSX1 _3756_ (
     .D(_1273_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
     .Q(\u_cpu.bufreg2.i_bytecnt [0])
 );
 
 INVX1 _3336_ (
     .A(\u_cpu.bufreg.data [19]),
     .Y(_406_)
+);
+
+FILL FILL_0__2188_ (
 );
 
 NOR2X1 _2607_ (
@@ -14297,7 +15746,7 @@ NOR2X1 _2607_ (
 
 NAND2X1 _2780_ (
     .A(\u_rf_if.read_buf1 [21]),
-    .B(_1783__bF$buf5),
+    .B(_1783__bF$buf1),
     .Y(_1848_)
 );
 
@@ -14310,27 +15759,30 @@ NAND3X1 _2360_ (
 
 DFFPOSX1 _3985_ (
     .D(_1188_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
     .Q(\u_cpu.bufreg2.dhi [5])
 );
 
 OAI22X1 _3565_ (
     .A(_574_),
-    .B(_212__bF$buf2),
+    .B(_212__bF$buf1),
     .C(_573_),
-    .D(_570__bF$buf4),
+    .D(_570__bF$buf0),
     .Y(_1153_)
 );
 
 MUX2X1 _3145_ (
     .A(_262_),
     .B(_261_),
-    .S(ibus_pending_ack_bF$buf0),
+    .S(ibus_pending_ack_bF$buf1),
     .Y(_263_)
 );
 
+FILL FILL_0__3605_ (
+);
+
 OAI21X1 _2836_ (
-    .A(_22__bF$buf4),
+    .A(_22__bF$buf6),
     .B(_35_),
     .C(_36_),
     .Y(_37_)
@@ -14345,7 +15797,7 @@ NAND3X1 _2416_ (
 
 DFFPOSX1 _3794_ (
     .D(_1072_),
-    .CLK(i_clk_fast_bF$buf8),
+    .CLK(i_clk_fast_bF$buf3),
     .Q(\gen_int_sys_clk.clk_div [3])
 );
 
@@ -14376,6 +15828,9 @@ NAND2X1 _2225_ (
     .Y(_723_)
 );
 
+FILL FILL_0__1900_ (
+);
+
 INVX1 _3183_ (
     .A(ibus_pending_rdt[30]),
     .Y(_290_)
@@ -14386,13 +15841,10 @@ INVX1 _1916_ (
     .Y(_995_)
 );
 
-FILL FILL_0__3643_ (
-);
-
 MUX2X1 _2874_ (
     .A(\u_rf_if.read_buf0 [15]),
     .B(\u_rf_if.read_buf0 [16]),
-    .S(\u_rf_if.stream_active_bF$buf4 ),
+    .S(\u_rf_if.stream_active_bF$buf2 ),
     .Y(_65_)
 );
 
@@ -14423,10 +15875,16 @@ AOI21X1 _3239_ (
     .Y(_1238_)
 );
 
+FILL FILL_0__2914_ (
+);
+
+FILL FILL_0__3452_ (
+);
+
 OAI21X1 _2683_ (
     .A(_1753_),
     .B(_1754_),
-    .C(\u_rf_if.stream_active_bF$buf6 ),
+    .C(\u_rf_if.stream_active_bF$buf3 ),
     .Y(_1775_)
 );
 
@@ -14438,12 +15896,12 @@ NAND2X1 _2263_ (
 
 DFFPOSX1 _3888_ (
     .D(_1150_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [19])
 );
 
 NAND2X1 _3468_ (
-    .A(mem_dbus_ack_bF$buf6),
+    .A(mem_dbus_ack_bF$buf5),
     .B(_889_),
     .Y(_503_)
 );
@@ -14455,17 +15913,23 @@ NAND3X1 _3048_ (
     .Y(_195_)
 );
 
+FILL FILL_0__2303_ (
+);
+
+FILL FILL129150x3750 (
+);
+
 MUX2X1 _1954_ (
     .A(\u_cpu.bufreg.data [7]),
     .B(\u_cpu.ctrl.o_ibus_adr [7]),
-    .S(_1006__bF$buf4),
+    .S(_1006__bF$buf3),
     .Y(_963_)
 );
 
 MUX2X1 _2739_ (
     .A(\u_rf_if.read_buf1 [12]),
     .B(\u_rf_if.read_buf1 [13]),
-    .S(\u_rf_if.stream_active_bF$buf7 ),
+    .S(\u_rf_if.stream_active_bF$buf0 ),
     .Y(_1817_)
 );
 
@@ -14485,7 +15949,7 @@ OAI21X1 _2492_ (
 MUX2X1 _2072_ (
     .A(\u_mem_serial.shift_reg [21]),
     .B(\u_cpu.bufreg2.dlo [16]),
-    .S(_994__bF$buf0),
+    .S(_994__bF$buf5),
     .Y(_860_)
 );
 
@@ -14503,6 +15967,15 @@ AOI21X1 _3277_ (
     .Y(_1230_)
 );
 
+FILL FILL_0__2952_ (
+);
+
+FILL FILL_0__3317_ (
+);
+
+FILL FILL128550x54150 (
+);
+
 MUX2X1 _2968_ (
     .A(\u_rf_if.rreg1_latched [2]),
     .B(\u_rf_if.rreg0_latched [2]),
@@ -14513,14 +15986,14 @@ MUX2X1 _2968_ (
 AOI21X1 _2548_ (
     .A(_1667_),
     .B(_1665_),
-    .C(_1070__bF$buf6),
+    .C(_1070__bF$buf4),
     .Y(_1409_)
 );
 
 MUX2X1 _2128_ (
     .A(\u_mem_serial.shift_reg [28]),
     .B(\u_cpu.bufreg2.dlo [23]),
-    .S(_994__bF$buf3),
+    .S(_994__bF$buf1),
     .Y(_811_)
 );
 
@@ -14531,21 +16004,21 @@ MUX2X1 _3086_ (
     .Y(_220_)
 );
 
-FILL FILL127350x36150 (
+FILL FILL_0__2761_ (
 );
 
-FILL FILL_0__3546_ (
+FILL FILL_0__2341_ (
 );
 
 MUX2X1 _1992_ (
     .A(\u_mem_serial.shift_reg [11]),
     .B(\u_cpu.bufreg2.dlo [6]),
-    .S(_994__bF$buf4),
+    .S(_994__bF$buf5),
     .Y(_930_)
 );
 
 OAI21X1 _2777_ (
-    .A(_1783__bF$buf5),
+    .A(_1783__bF$buf4),
     .B(_1844_),
     .C(_1845_),
     .Y(_1846_)
@@ -14557,7 +16030,10 @@ NAND2X1 _2357_ (
     .Y(_1485_)
 );
 
-FILL FILL_0__2570_ (
+FILL FILL_0__2817_ (
+);
+
+FILL FILL_0__2150_ (
 );
 
 INVX1 _2586_ (
@@ -14571,19 +16047,34 @@ AND2X2 _2166_ (
     .Y(_777_)
 );
 
+FILL FILL_0__2626_ (
+);
+
+FILL FILL_0__2206_ (
+);
+
+FILL FILL_0__3164_ (
+);
+
 NAND2X1 _2395_ (
     .A(\u_cpu.decode.opcode [2]),
     .B(_680_),
     .Y(_1518_)
 );
 
+FILL FILL_0__2015_ (
+);
+
 DFFPOSX1 _3812_ (
     .D(_1132_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [1])
 );
 
-FILL FILL_0__3449_ (
+FILL FILL_0__2664_ (
+);
+
+FILL FILL_0__3029_ (
 );
 
 NAND2X1 _1895_ (
@@ -14601,11 +16092,11 @@ NAND2X1 _3621_ (
 OAI21X1 _3201_ (
     .A(rreg0[1]),
     .B(_296_),
-    .C(_659__bF$buf3),
+    .C(_659__bF$buf0),
     .Y(_304_)
 );
 
-FILL FILL_0__2473_ (
+FILL FILL_0__2053_ (
 );
 
 FILL FILL_0__3678_ (
@@ -14620,19 +16111,19 @@ AOI21X1 _2489_ (
 
 OAI21X1 _2069_ (
     .A(_868_),
-    .B(_973__bF$buf5),
+    .B(_973__bF$buf1),
     .C(_863_),
     .Y(_862_)
 );
 
 DFFPOSX1 _3850_ (
     .D(_1320_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
     .Q(\u_rf_if.read_buf0 [28])
 );
 
 OAI21X1 _3430_ (
-    .A(mem_dbus_ack_bF$buf2),
+    .A(mem_dbus_ack_bF$buf3),
     .B(_472_),
     .C(_467_),
     .Y(_473_)
@@ -14643,6 +16134,12 @@ INVX1 _3010_ (
     .Y(_167_)
 );
 
+FILL FILL_0__2949_ (
+);
+
+FILL FILL_0__2529_ (
+);
+
 OAI21X1 _2701_ (
     .A(_1783__bF$buf0),
     .B(_1787_),
@@ -14650,11 +16147,17 @@ OAI21X1 _2701_ (
     .Y(_1789_)
 );
 
+FILL FILL_0__3487_ (
+);
+
+FILL FILL_0__3067_ (
+);
+
 DFFSR _3906_ (
-    .R(i_rst_n_bF$buf9),
+    .R(i_rst_n_bF$buf0),
     .S(vdd),
     .D(_1099_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
     .Q(ibus_pending_rdt[8])
 );
 
@@ -14663,21 +16166,27 @@ INVX1 _2298_ (
     .Y(_650_)
 );
 
+FILL FILL_0__1973_ (
+);
+
 DFFPOSX1 _4024_ (
     .D(_1206_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
     .Q(\u_cpu.bufreg.data [12])
+);
+
+FILL FILL_0__2091_ (
 );
 
 OAI21X1 _1989_ (
     .A(_938_),
-    .B(_973__bF$buf6),
+    .B(_973__bF$buf1),
     .C(_933_),
     .Y(_932_)
 );
 
 OAI21X1 _2930_ (
-    .A(\u_rf_if.stream_active_bF$buf2 ),
+    .A(\u_rf_if.stream_active_bF$buf5 ),
     .B(_106_),
     .C(_107_),
     .Y(_108_)
@@ -14692,18 +16201,24 @@ AOI21X1 _2510_ (
 
 DFFPOSX1 _3715_ (
     .D(_1453_),
-    .CLK(i_clk_fast_bF$buf3),
+    .CLK(i_clk_fast_bF$buf6),
     .Q(\u_mem_serial.shift_reg [2])
+);
+
+FILL FILL_0__2987_ (
+);
+
+FILL FILL_0__2567_ (
 );
 
 DFFPOSX1 _3944_ (
     .D(_1171_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
     .Q(\u_cpu.bufreg2.dlo [11])
 );
 
 NAND2X1 _3524_ (
-    .A(mem_dbus_ack_bF$buf4),
+    .A(mem_dbus_ack_bF$buf0),
     .B(_261_),
     .Y(_545_)
 );
@@ -14719,20 +16234,20 @@ FILL FILL_0__2376_ (
 
 DFFPOSX1 _4062_ (
     .D(_1224_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
     .Q(rreg1[4])
 );
 
 DFFPOSX1 _3753_ (
     .D(_1270_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
     .Q(\u_cpu.state.cnt_r [3])
 );
 
 MUX2X1 _3333_ (
     .A(_403_),
     .B(_404_),
-    .S(_1536__bF$buf3),
+    .S(_1536__bF$buf1),
     .Y(_1215_)
 );
 
@@ -14744,13 +16259,16 @@ NAND2X1 _2604_ (
 
 DFFPOSX1 _3809_ (
     .D(_1301_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
     .Q(\u_rf_if.rreg0_latched [2])
+);
+
+FILL FILL_0__1876_ (
 );
 
 DFFPOSX1 _3982_ (
     .D(_1388_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
     .Q(\u_rf_if.ready_pulse )
 );
 
@@ -14766,9 +16284,12 @@ MUX2X1 _3142_ (
     .Y(_1262_)
 );
 
+FILL FILL_0__3602_ (
+);
+
 AND2X2 _2833_ (
     .A(_34_),
-    .B(i_rst_n_bF$buf10),
+    .B(i_rst_n_bF$buf5),
     .Y(_1345_)
 );
 
@@ -14786,13 +16307,13 @@ NAND2X1 _3618_ (
 
 DFFPOSX1 _3791_ (
     .D(_1292_),
-    .CLK(i_clk_fast_bF$buf4),
+    .CLK(i_clk_fast_bF$buf5),
     .Q(\u_rf_if.last_req_key [2])
 );
 
 AOI21X1 _3371_ (
     .A(_422_),
-    .B(_1536__bF$buf1),
+    .B(_1536__bF$buf3),
     .C(_423_),
     .Y(_1196_)
 );
@@ -14800,7 +16321,7 @@ AOI21X1 _3371_ (
 MUX2X1 _2642_ (
     .A(_1745_),
     .B(_847_),
-    .S(ibus_pending_ack_bF$buf5),
+    .S(ibus_pending_ack_bF$buf4),
     .Y(_1746_)
 );
 
@@ -14811,7 +16332,7 @@ INVX1 _2222_ (
 
 DFFPOSX1 _3847_ (
     .D(_1140_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [9])
 );
 
@@ -14823,14 +16344,14 @@ NOR2X1 _3427_ (
 
 NAND2X1 _3007_ (
     .A(_164_),
-    .B(_1692__bF$buf4),
+    .B(_1692__bF$buf3),
     .Y(_165_)
 );
 
 AOI21X1 _3180_ (
     .A(_278_),
     .B(_1024_),
-    .C(mem_dbus_ack_bF$buf6),
+    .C(mem_dbus_ack_bF$buf1),
     .Y(_288_)
 );
 
@@ -14841,12 +16362,18 @@ OAI21X1 _1913_ (
     .Y(_997_)
 );
 
+FILL FILL_0__2699_ (
+);
+
 FILL FILL_0__2279_ (
+);
+
+FILL FILL_0__3640_ (
 );
 
 NAND2X1 _2871_ (
     .A(\u_rf_if.read_buf0 [13]),
-    .B(_22__bF$buf5),
+    .B(_22__bF$buf4),
     .Y(_63_)
 );
 
@@ -14870,14 +16397,17 @@ INVX1 _3656_ (
 MUX2X1 _3236_ (
     .A(_330_),
     .B(_833_),
-    .S(ibus_pending_ack_bF$buf4),
+    .S(ibus_pending_ack_bF$buf3),
     .Y(_331_)
+);
+
+FILL FILL_0__2088_ (
 );
 
 AOI21X1 _2927_ (
     .A(_105_),
     .B(_104_),
-    .C(_1070__bF$buf2),
+    .C(_1070__bF$buf6),
     .Y(_1322_)
 );
 
@@ -14887,10 +16417,13 @@ NAND2X1 _2507_ (
     .Y(_1630_)
 );
 
+FILL FILL128250x126150 (
+);
+
 OAI21X1 _2680_ (
     .A(\u_rf_if.stream_cnt [0]),
-    .B(\u_rf_if.stream_active_bF$buf6 ),
-    .C(i_rst_n_bF$buf6),
+    .B(\u_rf_if.stream_active_bF$buf3 ),
+    .C(i_rst_n_bF$buf9),
     .Y(_1773_)
 );
 
@@ -14900,17 +16433,14 @@ NAND2X1 _2260_ (
     .Y(_688_)
 );
 
-FILL FILL127050x14550 (
-);
-
 DFFPOSX1 _3885_ (
     .D(_1337_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
     .Q(\u_rf_if.read_buf0 [11])
 );
 
 OAI21X1 _3465_ (
-    .A(mem_dbus_ack_bF$buf6),
+    .A(mem_dbus_ack_bF$buf3),
     .B(\u_cpu.bufreg2.dlo [20]),
     .C(_500_),
     .Y(_501_)
@@ -14922,7 +16452,7 @@ NAND2X1 _3045_ (
     .Y(_193_)
 );
 
-FILL FILL_0__2300_ (
+FILL FILL_0__3505_ (
 );
 
 INVX1 _1951_ (
@@ -14932,7 +16462,7 @@ INVX1 _1951_ (
 
 NAND2X1 _2736_ (
     .A(\u_rf_if.read_buf1 [10]),
-    .B(_1783__bF$buf2),
+    .B(_1783__bF$buf5),
     .Y(_1815_)
 );
 
@@ -14943,7 +16473,7 @@ NOR2X1 _2316_ (
 );
 
 OAI21X1 _3694_ (
-    .A(ibus_pending_ack_bF$buf4),
+    .A(ibus_pending_ack_bF$buf2),
     .B(_627_),
     .C(_628_),
     .Y(_629_)
@@ -14952,13 +16482,13 @@ OAI21X1 _3694_ (
 MUX2X1 _3274_ (
     .A(_360_),
     .B(_959_),
-    .S(ibus_pending_ack_bF$buf0),
+    .S(ibus_pending_ack_bF$buf5),
     .Y(_361_)
 );
 
 DFFPOSX1 _4059_ (
     .D(_1431_),
-    .CLK(i_clk_fast_bF$buf5),
+    .CLK(i_clk_fast_bF$buf7),
     .Q(\u_mem_serial.shift_reg [24])
 );
 
@@ -14977,21 +16507,27 @@ NAND2X1 _2545_ (
 
 OAI21X1 _2125_ (
     .A(_819_),
-    .B(_973__bF$buf4),
+    .B(_973__bF$buf3),
     .C(_814_),
     .Y(_813_)
 );
 
 OAI21X1 _3083_ (
-    .A(_1002__bF$buf4),
+    .A(_1002__bF$buf2),
     .B(_217_),
     .C(_785_),
     .Y(_218_)
 );
 
+FILL FILL128550x75750 (
+);
+
+FILL FILL_0__3543_ (
+);
+
 AND2X2 _2774_ (
     .A(_1843_),
-    .B(i_rst_n_bF$buf6),
+    .B(i_rst_n_bF$buf7),
     .Y(_1359_)
 );
 
@@ -15003,15 +16539,15 @@ NAND2X1 _2354_ (
 
 DFFPOSX1 _3979_ (
     .D(_1386_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
     .Q(\u_rf_if.stream_active )
 );
 
 OAI22X1 _3559_ (
     .A(_571_),
-    .B(_212__bF$buf4),
+    .B(_212__bF$buf0),
     .C(_568_),
-    .D(_570__bF$buf0),
+    .D(_570__bF$buf1),
     .Y(_1156_)
 );
 
@@ -15020,9 +16556,12 @@ INVX1 _3139_ (
     .Y(_258_)
 );
 
+FILL FILL_0__2814_ (
+);
+
 DFFPOSX1 _4097_ (
     .D(_1450_),
-    .CLK(i_clk_fast_bF$buf3),
+    .CLK(i_clk_fast_bF$buf6),
     .Q(\u_mem_serial.shift_reg [5])
 );
 
@@ -15030,7 +16569,7 @@ FILL FILL_0__3352_ (
 );
 
 AOI21X1 _2583_ (
-    .A(_659__bF$buf1),
+    .A(_659__bF$buf4),
     .B(_1696_),
     .C(_1687_),
     .Y(_1403_)
@@ -15043,7 +16582,7 @@ INVX1 _2163_ (
 
 DFFPOSX1 _3788_ (
     .D(_1123_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
     .Q(\u_cpu.alu.cmp_r )
 );
 
@@ -15052,13 +16591,7 @@ INVX1 _3368_ (
     .Y(_422_)
 );
 
-FILL FILL_0__2203_ (
-);
-
 FILL FILL_0__3408_ (
-);
-
-FILL FILL_0__3581_ (
 );
 
 AOI21X1 _2639_ (
@@ -15080,24 +16613,33 @@ INVX1 _2392_ (
 
 OAI22X1 _3597_ (
     .A(_590_),
-    .B(_212__bF$buf3),
+    .B(_212__bF$buf4),
     .C(_589_),
-    .D(_570__bF$buf2),
+    .D(_570__bF$buf3),
     .Y(_1137_)
 );
 
 OAI21X1 _3177_ (
     .A(_705_),
-    .B(_1692__bF$buf1),
+    .B(_1692__bF$buf0),
     .C(_286_),
     .Y(_1253_)
+);
+
+FILL FILL_0__2852_ (
 );
 
 FILL FILL_0__2432_ (
 );
 
+FILL FILL_0__3217_ (
+);
+
+FILL FILL_0__3390_ (
+);
+
 OAI21X1 _2868_ (
-    .A(_22__bF$buf5),
+    .A(_22__bF$buf4),
     .B(_59_),
     .C(_60_),
     .Y(_61_)
@@ -15112,8 +16654,14 @@ NAND2X1 _2448_ (
 OAI21X1 _2028_ (
     .A(_901_),
     .B(_899_),
-    .C(_973__bF$buf0),
+    .C(_973__bF$buf2),
     .Y(_898_)
+);
+
+FILL FILL_0__2241_ (
+);
+
+FILL FILL_0__3866_ (
 );
 
 INVX1 _1892_ (
@@ -15135,11 +16683,20 @@ AOI21X1 _2257_ (
     .Y(_691_)
 );
 
+FILL FILL_0__2717_ (
+);
+
+FILL FILL_0__2890_ (
+);
+
 OAI21X1 _1948_ (
     .A(_971_),
     .B(_969_),
-    .C(_973__bF$buf3),
+    .C(_973__bF$buf5),
     .Y(_968_)
+);
+
+FILL FILL_0__3675_ (
 );
 
 FILL FILL_0__3255_ (
@@ -15154,19 +16711,16 @@ NOR2X1 _2486_ (
 MUX2X1 _2066_ (
     .A(\u_cpu.bufreg.data [21]),
     .B(\u_cpu.ctrl.o_ibus_adr [21]),
-    .S(_1006__bF$buf0),
+    .S(_1006__bF$buf3),
     .Y(_865_)
 );
 
 FILL FILL_0__2106_ (
 );
 
-FILL FILL_0__3484_ (
-);
-
 DFFPOSX1 _3903_ (
     .D(_1346_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
     .Q(\u_rf_if.read_buf0 [2])
 );
 
@@ -15176,20 +16730,26 @@ NAND2X1 _2295_ (
     .Y(_653_)
 );
 
-FILL FILL_0__2335_ (
+FILL FILL_0__2755_ (
 );
 
 DFFPOSX1 _4021_ (
     .D(_1410_),
-    .CLK(i_clk_fast_bF$buf7),
+    .CLK(i_clk_fast_bF$buf5),
     .Q(\u_rf_if.req_seen )
 );
 
 MUX2X1 _1986_ (
     .A(\u_cpu.bufreg.data [11]),
     .B(\u_cpu.ctrl.o_ibus_adr [11]),
-    .S(_1006__bF$buf2),
+    .S(_1006__bF$buf1),
     .Y(_935_)
+);
+
+FILL FILL129150x68550 (
+);
+
+FILL FILL_0__3293_ (
 );
 
 MUX2X1 _3712_ (
@@ -15199,26 +16759,32 @@ MUX2X1 _3712_ (
     .Y(_1071_)
 );
 
+FILL FILL_0__2564_ (
+);
+
+FILL FILL_0__2144_ (
+);
+
 DFFPOSX1 _3941_ (
     .D(_1365_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
     .Q(\u_rf_if.read_buf1 [13])
 );
 
 OAI21X1 _3521_ (
-    .A(mem_dbus_ack_bF$buf4),
+    .A(mem_dbus_ack_bF$buf2),
     .B(\u_cpu.bufreg2.dlo [6]),
     .C(_542_),
     .Y(_543_)
 );
 
 AND2X2 _3101_ (
-    .A(i_rst_n_bF$buf5),
+    .A(i_rst_n_bF$buf8),
     .B(\u_cpu.state.cnt_r [2]),
     .Y(_1270_)
 );
 
-FILL FILL_0__3158_ (
+FILL FILL_0__3578_ (
 );
 
 OR2X2 _2389_ (
@@ -15229,7 +16795,7 @@ OR2X2 _2389_ (
 
 DFFPOSX1 _3750_ (
     .D(_1268_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
     .Q(\u_cpu.state.init_done )
 );
 
@@ -15238,10 +16804,10 @@ INVX1 _3330_ (
     .Y(_403_)
 );
 
-FILL FILL_0__2009_ (
+FILL FILL_0__2429_ (
 );
 
-FILL FILL_0__2182_ (
+FILL FILL_0__2009_ (
 );
 
 NOR2X1 _2601_ (
@@ -15250,25 +16816,19 @@ NOR2X1 _2601_ (
     .Y(_1711_)
 );
 
-FILL FILL_0__3387_ (
-);
-
 DFFSR _3806_ (
-    .R(i_rst_n_bF$buf4),
+    .R(i_rst_n_bF$buf1),
     .S(vdd),
     .D(_1075_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
     .Q(rf_write_drain_busy)
 );
 
 OAI21X1 _2198_ (
     .A(_1014_),
     .B(_750_),
-    .C(_1023__bF$buf2),
+    .C(_1023__bF$buf0),
     .Y(_749_)
-);
-
-FILL FILL_0__2238_ (
 );
 
 INVX1 _1889_ (
@@ -15279,7 +16839,7 @@ INVX1 _1889_ (
 MUX2X1 _2830_ (
     .A(\u_rf_if.read_buf0 [4]),
     .B(\u_rf_if.read_buf0 [5]),
-    .S(\u_rf_if.stream_active_bF$buf2 ),
+    .S(\u_rf_if.stream_active_bF$buf6 ),
     .Y(_32_)
 );
 
@@ -15290,6 +16850,9 @@ NAND3X1 _2410_ (
     .Y(_1533_)
 );
 
+FILL FILL_0__1929_ (
+);
+
 AOI21X1 _3615_ (
     .A(_1551_),
     .B(_1530_),
@@ -15297,20 +16860,29 @@ AOI21X1 _3615_ (
     .Y(_1126_)
 );
 
+FILL FILL_0__2887_ (
+);
+
+FILL FILL_0__2467_ (
+);
+
 DFFPOSX1 _3844_ (
     .D(_1317_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
     .Q(\u_rf_if.o_waddr [1])
 );
 
 NAND2X1 _3424_ (
-    .A(mem_dbus_ack_bF$buf2),
+    .A(mem_dbus_ack_bF$buf3),
     .B(_826_),
     .Y(_467_)
 );
 
+FILL FILL129150x115350 (
+);
+
 OAI21X1 _3004_ (
-    .A(_673__bF$buf3),
+    .A(_673__bF$buf0),
     .B(_674__bF$buf3),
     .C(\u_rf_if.rreg0_latched [2]),
     .Y(_162_)
@@ -15322,10 +16894,13 @@ NAND2X1 _1910_ (
     .Y(_1000_)
 );
 
+FILL FILL_0__1967_ (
+);
+
 MUX2X1 _3653_ (
     .A(_269_),
     .B(_552_),
-    .S(_602__bF$buf4),
+    .S(_602__bF$buf2),
     .Y(_1093_)
 );
 
@@ -15337,15 +16912,12 @@ NOR2X1 _3233_ (
 
 DFFPOSX1 _4018_ (
     .D(_1408_),
-    .CLK(i_clk_fast_bF$buf2),
+    .CLK(i_clk_fast_bF$buf1),
     .Q(_1855_)
 );
 
-FILL FILL_0__2085_ (
-);
-
 OAI21X1 _2924_ (
-    .A(\u_rf_if.stream_active_bF$buf2 ),
+    .A(\u_rf_if.stream_active_bF$buf5 ),
     .B(_101_),
     .C(_102_),
     .Y(_103_)
@@ -15360,15 +16932,15 @@ NAND3X1 _2504_ (
 
 NAND2X1 _3709_ (
     .A(_638_),
-    .B(_602__bF$buf1),
+    .B(_602__bF$buf4),
     .Y(_1073_)
 );
 
 DFFSR _3882_ (
-    .R(i_rst_n_bF$buf7),
+    .R(i_rst_n_bF$buf3),
     .S(vdd),
     .D(_1093_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
     .Q(ibus_pending_rdt[2])
 );
 
@@ -15382,12 +16954,12 @@ MUX2X1 _3462_ (
 AOI21X1 _3042_ (
     .A(_189_),
     .B(_190_),
-    .C(_1070__bF$buf6),
+    .C(_1070__bF$buf4),
     .Y(_1292_)
 );
 
 OAI21X1 _2733_ (
-    .A(_1783__bF$buf6),
+    .A(_1783__bF$buf5),
     .B(_1811_),
     .C(_1812_),
     .Y(_1813_)
@@ -15401,7 +16973,7 @@ NAND2X1 _2313_ (
 
 DFFPOSX1 _3938_ (
     .D(_1168_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
     .Q(\u_cpu.bufreg2.dlo [8])
 );
 
@@ -15419,7 +16991,7 @@ AOI22X1 _3691_ (
 );
 
 OAI21X1 _3271_ (
-    .A(_659__bF$buf1),
+    .A(_659__bF$buf3),
     .B(_357_),
     .C(_358_),
     .Y(_359_)
@@ -15427,18 +16999,12 @@ OAI21X1 _3271_ (
 
 DFFPOSX1 _4056_ (
     .D(_1221_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
     .Q(\u_cpu.bufreg.data [27])
 );
 
-FILL FILL126750x50550 (
-);
-
-FILL FILL_0__3311_ (
-);
-
 NAND2X1 _2962_ (
-    .A(i_rst_n_bF$buf4),
+    .A(i_rst_n_bF$buf1),
     .B(raddr[5]),
     .Y(_129_)
 );
@@ -15451,34 +17017,43 @@ INVX1 _2542_ (
 MUX2X1 _2122_ (
     .A(\u_cpu.bufreg.data [28]),
     .B(\u_cpu.ctrl.o_ibus_adr [28]),
-    .S(_1006__bF$buf3),
+    .S(_1006__bF$buf4),
     .Y(_816_)
 );
 
 DFFPOSX1 _3747_ (
     .D(_1266_),
-    .CLK(i_clk_fast_bF$buf2),
+    .CLK(i_clk_fast_bF$buf1),
     .Q(\u_mem_serial.active_ibus )
 );
 
 MUX2X1 _3327_ (
     .A(_400_),
     .B(_401_),
-    .S(_1536__bF$buf4),
+    .S(_1536__bF$buf0),
     .Y(_1218_)
 );
 
 OAI21X1 _3080_ (
-    .A(_1002__bF$buf4),
+    .A(_1002__bF$buf2),
     .B(_743_),
     .C(_747_),
     .Y(_216_)
 );
 
+FILL FILL_0__2179_ (
+);
+
+FILL FILL_0__3540_ (
+);
+
+FILL FILL_0__3120_ (
+);
+
 MUX2X1 _2771_ (
     .A(\u_rf_if.read_buf1 [20]),
     .B(\u_rf_if.read_buf1 [21]),
-    .S(\u_rf_if.stream_active_bF$buf3 ),
+    .S(\u_rf_if.stream_active_bF$buf1 ),
     .Y(_1841_)
 );
 
@@ -15489,7 +17064,7 @@ INVX1 _2351_ (
 
 DFFPOSX1 _3976_ (
     .D(_1383_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
     .Q(\u_rf_if.rcnt [2])
 );
 
@@ -15501,19 +17076,22 @@ INVX8 _3556_ (
 MUX2X1 _3136_ (
     .A(_255_),
     .B(_931_),
-    .S(ibus_pending_ack_bF$buf5),
+    .S(ibus_pending_ack_bF$buf0),
     .Y(_256_)
+);
+
+FILL FILL128550x126150 (
 );
 
 DFFPOSX1 _4094_ (
     .D(_1240_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [3])
 );
 
 NAND2X1 _2827_ (
     .A(\u_rf_if.read_buf0 [2]),
-    .B(_22__bF$buf4),
+    .B(_22__bF$buf0),
     .Y(_30_)
 );
 
@@ -15532,21 +17110,27 @@ NAND2X1 _2580_ (
 NAND3X1 _2160_ (
     .A(_788_),
     .B(_783_),
-    .C(_973__bF$buf1),
+    .C(_973__bF$buf4),
     .Y(_782_)
 );
 
 DFFPOSX1 _3785_ (
     .D(_1289_),
-    .CLK(i_clk_fast_bF$buf7),
+    .CLK(i_clk_fast_bF$buf3),
     .Q(\u_rf_if.last_req_key [5])
 );
 
 MUX2X1 _3365_ (
     .A(_419_),
     .B(_420_),
-    .S(_1536__bF$buf4),
+    .S(_1536__bF$buf1),
     .Y(_1199_)
+);
+
+FILL FILL_0__2620_ (
+);
+
+FILL FILL_0__3405_ (
 );
 
 AOI21X1 _2636_ (
@@ -15569,7 +17153,7 @@ INVX1 _3594_ (
 );
 
 NAND2X1 _3174_ (
-    .A(ibus_pending_ack_bF$buf4),
+    .A(ibus_pending_ack_bF$buf0),
     .B(_283_),
     .Y(_284_)
 );
@@ -15581,12 +17165,9 @@ OAI21X1 _1907_ (
     .Y(_1003_)
 );
 
-FILL FILL_0__3214_ (
-);
-
 AND2X2 _2865_ (
     .A(_58_),
-    .B(i_rst_n_bF$buf1),
+    .B(i_rst_n_bF$buf8),
     .Y(_1337_)
 );
 
@@ -15598,9 +17179,15 @@ OAI21X1 _2445_ (
 );
 
 NOR2X1 _2025_ (
-    .A(_1002__bF$buf1),
+    .A(_1002__bF$buf4),
     .B(_902_),
     .Y(_901_)
+);
+
+FILL FILL_0__2905_ (
+);
+
+FILL FILL_0__3443_ (
 );
 
 INVX1 _2674_ (
@@ -15615,7 +17202,7 @@ INVX1 _2254_ (
 
 DFFPOSX1 _3879_ (
     .D(_1334_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
     .Q(\u_rf_if.read_buf0 [14])
 );
 
@@ -15627,12 +17214,12 @@ INVX1 _3459_ (
 AOI21X1 _3039_ (
     .A(_187_),
     .B(_188_),
-    .C(_1070__bF$buf6),
+    .C(_1070__bF$buf4),
     .Y(_1293_)
 );
 
 NOR2X1 _1945_ (
-    .A(_1002__bF$buf0),
+    .A(_1002__bF$buf2),
     .B(_972_),
     .Y(_971_)
 );
@@ -15657,7 +17244,16 @@ INVX1 _3268_ (
     .Y(_356_)
 );
 
-FILL FILL_0__3061_ (
+FILL FILL_0__2943_ (
+);
+
+FILL FILL128550x28950 (
+);
+
+FILL FILL_0__3308_ (
+);
+
+FILL FILL_0__3481_ (
 );
 
 MUX2X1 _2959_ (
@@ -15679,12 +17275,9 @@ INVX1 _2119_ (
     .Y(_819_)
 );
 
-FILL FILL127350x43350 (
-);
-
 DFFPOSX1 _3900_ (
     .D(_1153_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [22])
 );
 
@@ -15703,12 +17296,15 @@ MUX2X1 _3497_ (
 );
 
 NOR2X1 _3077_ (
-    .A(_1070__bF$buf1),
+    .A(_1070__bF$buf6),
     .B(_688_),
     .Y(_214_)
 );
 
-FILL FILL_0__3117_ (
+FILL FILL_0__2752_ (
+);
+
+FILL FILL_0__2332_ (
 );
 
 INVX1 _1983_ (
@@ -15721,7 +17317,7 @@ FILL FILL_0__3290_ (
 
 NAND2X1 _2768_ (
     .A(\u_rf_if.read_buf1 [18]),
-    .B(_1783__bF$buf5),
+    .B(_1783__bF$buf0),
     .Y(_1839_)
 );
 
@@ -15731,12 +17327,15 @@ NOR2X1 _2348_ (
     .Y(_1476_)
 );
 
-FILL FILL_0__2141_ (
+FILL FILL_0__2808_ (
+);
+
+FILL FILL_0__3346_ (
 );
 
 NAND2X1 _2997_ (
     .A(_156_),
-    .B(_1692__bF$buf2),
+    .B(_1692__bF$buf4),
     .Y(_157_)
 );
 
@@ -15752,6 +17351,18 @@ OAI21X1 _2157_ (
     .Y(_785_)
 );
 
+FILL FILL_0__2617_ (
+);
+
+FILL FILL_0__2790_ (
+);
+
+FILL FILL_0__2370_ (
+);
+
+FILL FILL_0__3155_ (
+);
+
 NOR2X1 _2386_ (
     .A(\u_rf_if.o_waddr [2]),
     .B(\u_rf_if.o_waddr [1]),
@@ -15760,7 +17371,7 @@ NOR2X1 _2386_ (
 
 DFFPOSX1 _3803_ (
     .D(_1298_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
     .Q(\u_rf_if.issue_chunk [0])
 );
 
@@ -15771,6 +17382,12 @@ AOI21X1 _2195_ (
     .Y(_1419_)
 );
 
+FILL FILL_0__2655_ (
+);
+
+FILL FILL_0__2235_ (
+);
+
 INVX2 _1886_ (
     .A(\u_mem_serial.state [0]),
     .Y(_1024_)
@@ -15779,15 +17396,15 @@ INVX2 _1886_ (
 FILL FILL_0__3193_ (
 );
 
-FILL FILL_0__1926_ (
-);
-
 INVX1 _3612_ (
     .A(\u_cpu.ctrl.o_ibus_adr [29]),
     .Y(_597_)
 );
 
 FILL FILL_0__2044_ (
+);
+
+FILL FILL_0__3669_ (
 );
 
 OR2X2 _3841_ (
@@ -15806,8 +17423,20 @@ AOI21X1 _3421_ (
 MUX2X1 _3001_ (
     .A(_159_),
     .B(_903_),
-    .S(ibus_pending_ack_bF$buf2),
+    .S(ibus_pending_ack_bF$buf5),
     .Y(_160_)
+);
+
+FILL FILL129150x54150 (
+);
+
+FILL FILL_0__2693_ (
+);
+
+FILL FILL_0__3478_ (
+);
+
+FILL FILL_0__3058_ (
 );
 
 NAND3X1 _2289_ (
@@ -15820,7 +17449,7 @@ NAND3X1 _2289_ (
 MUX2X1 _3650_ (
     .A(_258_),
     .B(_541_),
-    .S(_602__bF$buf2),
+    .S(_602__bF$buf0),
     .Y(_1096_)
 );
 
@@ -15831,13 +17460,19 @@ INVX1 _3230_ (
 
 DFFPOSX1 _4015_ (
     .D(_1407_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
     .Q(\u_rf_if.rcnt [1])
+);
+
+FILL FILL128850x36150 (
+);
+
+FILL FILL_0__2082_ (
 );
 
 AND2X2 _2921_ (
     .A(_100_),
-    .B(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf11),
     .Y(_1323_)
 );
 
@@ -15857,16 +17492,19 @@ OAI21X1 _3706_ (
 MUX2X1 _2098_ (
     .A(\u_cpu.bufreg.data [25]),
     .B(\u_cpu.ctrl.o_ibus_adr [25]),
-    .S(_1006__bF$buf1),
+    .S(_1006__bF$buf4),
     .Y(_837_)
 );
 
 FILL FILL_0__2978_ (
 );
 
+FILL FILL_0__2558_ (
+);
+
 AND2X2 _2730_ (
     .A(_1810_),
-    .B(i_rst_n_bF$buf3),
+    .B(i_rst_n_bF$buf7),
     .Y(_1370_)
 );
 
@@ -15882,27 +17520,30 @@ FILL FILL_0__3096_ (
 
 DFFPOSX1 _3935_ (
     .D(_1362_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
     .Q(\u_rf_if.read_buf1 [16])
 );
 
 NAND2X1 _3515_ (
-    .A(mem_dbus_ack_bF$buf3),
+    .A(mem_dbus_ack_bF$buf0),
     .B(_974_),
     .Y(_538_)
 );
 
+FILL FILL_0__2367_ (
+);
+
 DFFPOSX1 _4053_ (
     .D(_1125_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
     .Q(\u_cpu.ctrl.pc_plus_4_cy_r_w )
 );
 
 DFFSR _3744_ (
-    .R(i_rst_n_bF$buf9),
+    .R(i_rst_n_bF$buf0),
     .S(vdd),
     .D(_1105_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
     .Q(ibus_pending_rdt[14])
 );
 
@@ -15911,9 +17552,12 @@ INVX1 _3324_ (
     .Y(_400_)
 );
 
+FILL FILL_0__1867_ (
+);
+
 DFFPOSX1 _3973_ (
     .D(_1381_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
     .Q(\u_rf_if.stream_cnt [1])
 );
 
@@ -15926,19 +17570,19 @@ AOI22X1 _3553_ (
 );
 
 OR2X2 _3133_ (
-    .A(_659__bF$buf2),
+    .A(_659__bF$buf5),
     .B(_253_),
     .Y(_254_)
 );
 
 DFFPOSX1 _4091_ (
     .D(_1447_),
-    .CLK(i_clk_fast_bF$buf5),
+    .CLK(i_clk_fast_bF$buf8),
     .Q(\u_mem_serial.shift_reg [8])
 );
 
 OAI21X1 _2824_ (
-    .A(_22__bF$buf3),
+    .A(_22__bF$buf5),
     .B(_26_),
     .C(_27_),
     .Y(_28_)
@@ -15953,17 +17597,17 @@ AOI21X1 _2404_ (
 
 OAI22X1 _3609_ (
     .A(_569_),
-    .B(_212__bF$buf4),
+    .B(_212__bF$buf0),
     .C(_595_),
-    .D(_570__bF$buf0),
+    .D(_570__bF$buf4),
     .Y(_1130_)
 );
 
 DFFSR _3782_ (
-    .R(i_rst_n_bF$buf9),
+    .R(i_rst_n_bF$buf10),
     .S(vdd),
     .D(_1120_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
     .Q(ibus_pending_rdt[29])
 );
 
@@ -15985,7 +17629,7 @@ INVX2 _2213_ (
 
 DFFPOSX1 _3838_ (
     .D(_1314_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
     .Q(raddr[1])
 );
 
@@ -15997,15 +17641,15 @@ NOR2X1 _3418_ (
 
 OAI22X1 _3591_ (
     .A(_587_),
-    .B(_212__bF$buf0),
+    .B(_212__bF$buf1),
     .C(_586_),
-    .D(_570__bF$buf1),
+    .D(_570__bF$buf0),
     .Y(_1140_)
 );
 
 OAI21X1 _3171_ (
     .A(\u_mem_serial.shift_reg [6]),
-    .B(ibus_pending_ack_bF$buf3),
+    .B(ibus_pending_ack_bF$buf2),
     .C(_281_),
     .Y(_282_)
 );
@@ -16017,10 +17661,16 @@ OAI21X1 _1904_ (
     .Y(_1006_)
 );
 
+FILL FILL_0__3631_ (
+);
+
+FILL FILL_0__3211_ (
+);
+
 MUX2X1 _2862_ (
     .A(\u_rf_if.read_buf0 [12]),
     .B(\u_rf_if.read_buf0 [13]),
-    .S(\u_rf_if.stream_active_bF$buf3 ),
+    .S(\u_rf_if.stream_active_bF$buf2 ),
     .Y(_56_)
 );
 
@@ -16032,59 +17682,56 @@ AND2X2 _2442_ (
 
 AND2X2 _2022_ (
     .A(_904_),
-    .B(i_rst_n_bF$buf2),
+    .B(i_rst_n_bF$buf6),
     .Y(_1440_)
 );
 
 MUX2X1 _3647_ (
     .A(_360_),
     .B(_959_),
-    .S(_602__bF$buf0),
+    .S(_602__bF$buf2),
     .Y(_1099_)
 );
 
 MUX2X1 _3227_ (
     .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [4]),
     .B(_323_),
-    .S(_659__bF$buf2),
+    .S(_659__bF$buf1),
     .Y(_324_)
-);
-
-FILL FILL_0__2902_ (
-);
-
-FILL FILL127050x21750 (
 );
 
 FILL FILL_0__3020_ (
 );
 
+FILL FILL128850x126150 (
+);
+
 MUX2X1 _2918_ (
     .A(\u_rf_if.read_buf0 [26]),
     .B(\u_rf_if.read_buf0 [27]),
-    .S(\u_rf_if.stream_active_bF$buf7 ),
+    .S(\u_rf_if.stream_active_bF$buf6 ),
     .Y(_98_)
 );
 
 NOR2X1 _2671_ (
-    .A(_1070__bF$buf3),
+    .A(_1070__bF$buf2),
     .B(_1619_),
     .Y(_1385_)
 );
 
 INVX2 _2251_ (
-    .A(mem_dbus_ack_bF$buf2),
+    .A(mem_dbus_ack_bF$buf3),
     .Y(_697_)
 );
 
 DFFPOSX1 _3876_ (
     .D(_1147_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [16])
 );
 
 NAND2X1 _3456_ (
-    .A(mem_dbus_ack_bF$buf0),
+    .A(mem_dbus_ack_bF$buf6),
     .B(_868_),
     .Y(_494_)
 );
@@ -16120,12 +17767,12 @@ NOR2X1 _2480_ (
 OAI21X1 _2060_ (
     .A(_873_),
     .B(_871_),
-    .C(_973__bF$buf3),
+    .C(_973__bF$buf6),
     .Y(_870_)
 );
 
 NAND2X1 _3685_ (
-    .A(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .A(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
     .B(_620_),
     .Y(_621_)
 );
@@ -16133,14 +17780,23 @@ NAND2X1 _3685_ (
 NAND3X1 _3265_ (
     .A(_687_),
     .B(_350_),
-    .C(_659__bF$buf5),
+    .C(_659__bF$buf3),
     .Y(_354_)
+);
+
+FILL FILL_0__2520_ (
+);
+
+FILL FILL_0__2100_ (
+);
+
+FILL FILL128550x82950 (
 );
 
 AOI21X1 _2956_ (
     .A(_125_),
     .B(_124_),
-    .C(_1070__bF$buf3),
+    .C(_1070__bF$buf0),
     .Y(_1313_)
 );
 
@@ -16152,7 +17808,7 @@ INVX1 _2536_ (
 OAI21X1 _2116_ (
     .A(_824_),
     .B(_822_),
-    .C(_973__bF$buf5),
+    .C(_973__bF$buf3),
     .Y(_821_)
 );
 
@@ -16166,18 +17822,18 @@ INVX1 _3074_ (
     .Y(_211_)
 );
 
-FILL FILL127350x64950 (
+FILL FILL_0__3534_ (
 );
 
 OAI21X1 _1980_ (
     .A(_943_),
     .B(_941_),
-    .C(_973__bF$buf6),
+    .C(_973__bF$buf0),
     .Y(_940_)
 );
 
 OAI21X1 _2765_ (
-    .A(_1783__bF$buf5),
+    .A(_1783__bF$buf0),
     .B(_1835_),
     .C(_1836_),
     .Y(_1837_)
@@ -16189,24 +17845,24 @@ NAND2X1 _2345_ (
     .Y(_1473_)
 );
 
-FILL FILL_0__2805_ (
-);
-
 DFFPOSX1 _4088_ (
     .D(_1237_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [0])
 );
 
+FILL FILL_0__3343_ (
+);
+
 OAI21X1 _2994_ (
-    .A(_673__bF$buf1),
+    .A(_673__bF$buf2),
     .B(_674__bF$buf1),
     .C(\u_rf_if.rreg0_latched [0]),
     .Y(_154_)
 );
 
 NAND2X1 _2574_ (
-    .A(i_rst_n_bF$buf4),
+    .A(i_rst_n_bF$buf1),
     .B(_1680_),
     .Y(_1690_)
 );
@@ -16220,14 +17876,14 @@ OAI21X1 _2154_ (
 
 DFFPOSX1 _3779_ (
     .D(_1286_),
-    .CLK(i_clk_fast_bF$buf7),
+    .CLK(i_clk_fast_bF$buf3),
     .Q(\u_rf_if.last_req_key [8])
 );
 
 MUX2X1 _3359_ (
     .A(_416_),
     .B(_417_),
-    .S(_1536__bF$buf4),
+    .S(_1536__bF$buf1),
     .Y(_1202_)
 );
 
@@ -16250,33 +17906,45 @@ AOI21X1 _3168_ (
     .Y(_1255_)
 );
 
+FILL FILL_0__2843_ (
+);
+
+FILL FILL_0__2423_ (
+);
+
+FILL FILL_0__3208_ (
+);
+
+FILL FILL_0__3381_ (
+);
+
 NAND2X1 _2859_ (
     .A(\u_rf_if.read_buf0 [10]),
-    .B(_22__bF$buf0),
+    .B(_22__bF$buf1),
     .Y(_54_)
 );
 
 AOI21X1 _2439_ (
     .A(\u_rf_if.read_buf1 [0]),
-    .B(\u_rf_if.stream_active_bF$buf0 ),
+    .B(\u_rf_if.stream_active_bF$buf6 ),
     .C(_787_),
     .Y(_1562_)
 );
 
 NOR2X1 _2019_ (
-    .A(_1023__bF$buf4),
+    .A(_1023__bF$buf5),
     .B(_907_),
     .Y(_906_)
 );
 
 DFFPOSX1 _3800_ (
     .D(_1129_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [30])
 );
 
 OAI21X1 _2192_ (
-    .A(_1002__bF$buf4),
+    .A(_1002__bF$buf2),
     .B(_755_),
     .C(_1004_),
     .Y(_754_)
@@ -16286,6 +17954,12 @@ NAND2X1 _3397_ (
     .A(\u_cpu.bufreg.data [31]),
     .B(_424_),
     .Y(_444_)
+);
+
+FILL FILL_0__2232_ (
+);
+
+FILL FILL_0__3857_ (
 );
 
 AOI21X1 _1883_ (
@@ -16322,9 +17996,12 @@ OAI21X1 _1939_ (
     .Y(_976_)
 );
 
+FILL FILL_0__3246_ (
+);
+
 AND2X2 _2897_ (
     .A(_82_),
-    .B(i_rst_n_bF$buf1),
+    .B(i_rst_n_bF$buf4),
     .Y(_1329_)
 );
 
@@ -16337,15 +18014,15 @@ OAI22X1 _2477_ (
 );
 
 NOR2X1 _2057_ (
-    .A(_1002__bF$buf1),
+    .A(_1002__bF$buf0),
     .B(_874_),
     .Y(_873_)
 );
 
-FILL FILL_0__2937_ (
+FILL FILL_0__2690_ (
 );
 
-FILL FILL_0__3055_ (
+FILL FILL_0__2270_ (
 );
 
 AOI21X1 _2286_ (
@@ -16355,19 +18032,25 @@ AOI21X1 _2286_ (
     .Y(_662_)
 );
 
-FILL FILL_0__1961_ (
+FILL FILL129150x75750 (
+);
+
+FILL FILL_0__2746_ (
 );
 
 DFFPOSX1 _4012_ (
     .D(_1405_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
     .Q(\u_rf_if.prefetch_active )
 );
 
 NOR2X1 _1977_ (
-    .A(_1002__bF$buf2),
+    .A(_1002__bF$buf4),
     .B(_944_),
     .Y(_943_)
+);
+
+FILL FILL_0__3284_ (
 );
 
 AND2X2 _3703_ (
@@ -16376,19 +18059,31 @@ AND2X2 _3703_ (
     .Y(_635_)
 );
 
+FILL FILL128850x57750 (
+);
+
 INVX1 _2095_ (
     .A(\u_mem_serial.shift_reg [25]),
     .Y(_840_)
 );
 
+FILL FILL_0__2555_ (
+);
+
+FILL FILL_0__2135_ (
+);
+
+FILL FILL_0__3093_ (
+);
+
 DFFPOSX1 _3932_ (
     .D(_1165_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
     .Q(\u_cpu.bufreg2.dlo [5])
 );
 
 OAI21X1 _3512_ (
-    .A(mem_dbus_ack_bF$buf3),
+    .A(mem_dbus_ack_bF$buf2),
     .B(\u_cpu.bufreg2.dlo [8]),
     .C(_535_),
     .Y(_536_)
@@ -16396,36 +18091,45 @@ OAI21X1 _3512_ (
 
 DFFPOSX1 _4050_ (
     .D(_1427_),
-    .CLK(i_clk_fast_bF$buf3),
+    .CLK(i_clk_fast_bF$buf7),
     .Q(\u_mem_serial.shift_reg [28])
+);
+
+FILL FILL_0__3569_ (
+);
+
+FILL FILL_0__3149_ (
 );
 
 DFFPOSX1 _3741_ (
     .D(_1262_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
     .Q(\u_cpu.bufreg2.i_op_b_sel )
 );
 
 MUX2X1 _3321_ (
     .A(_396_),
     .B(_398_),
-    .S(_1536__bF$buf2),
+    .S(_1536__bF$buf0),
     .Y(_1221_)
+);
+
+FILL FILL_0__2593_ (
+);
+
+FILL FILL_0__2173_ (
 );
 
 OAI21X1 _2189_ (
     .A(\u_mem_serial.shift_reg [35]),
-    .B(_973__bF$buf1),
-    .C(i_rst_n_bF$buf5),
+    .B(_973__bF$buf5),
+    .C(i_rst_n_bF$buf2),
     .Y(_756_)
-);
-
-FILL FILL_0__1864_ (
 );
 
 DFFPOSX1 _3970_ (
     .D(_1184_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
     .Q(\u_cpu.bufreg.i_shamt [1])
 );
 
@@ -16441,7 +18145,7 @@ INVX1 _3130_ (
 
 AND2X2 _2821_ (
     .A(_25_),
-    .B(i_rst_n_bF$buf3),
+    .B(i_rst_n_bF$buf11),
     .Y(_1348_)
 );
 
@@ -16453,10 +18157,19 @@ NOR2X1 _2401_ (
 
 OAI22X1 _3606_ (
     .A(_995_),
-    .B(_212__bF$buf1),
+    .B(_212__bF$buf2),
     .C(_594_),
-    .D(_570__bF$buf3),
+    .D(_570__bF$buf2),
     .Y(_1132_)
+);
+
+FILL FILL_0__2458_ (
+);
+
+FILL FILL_0__2038_ (
+);
+
+FILL FILL129150x122550 (
 );
 
 OAI21X1 _2630_ (
@@ -16474,18 +18187,15 @@ NOR2X1 _2210_ (
 
 DFFPOSX1 _3835_ (
     .D(_1137_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [6])
 );
 
 AOI21X1 _3415_ (
-    .A(mem_dbus_ack_bF$buf0),
+    .A(mem_dbus_ack_bF$buf3),
     .B(\u_mem_serial.shift_reg [29]),
     .C(_452_),
     .Y(_460_)
-);
-
-FILL FILL126750x3750 (
 );
 
 NAND2X1 _1901_ (
@@ -16494,10 +18204,13 @@ NAND2X1 _1901_ (
     .Y(_1009_)
 );
 
+FILL FILL_0__1958_ (
+);
+
 MUX2X1 _3644_ (
     .A(_392_),
     .B(_938_),
-    .S(_602__bF$buf2),
+    .S(_602__bF$buf1),
     .Y(_1102_)
 );
 
@@ -16510,24 +18223,27 @@ AOI21X1 _3224_ (
 
 DFFPOSX1 _4009_ (
     .D(_1403_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
     .Q(\u_rf_if.pending_read )
+);
+
+FILL FILL_0__2496_ (
 );
 
 NAND2X1 _2915_ (
     .A(\u_rf_if.read_buf0 [24]),
-    .B(_22__bF$buf5),
+    .B(_22__bF$buf0),
     .Y(_96_)
 );
 
 DFFPOSX1 _3873_ (
     .D(_1331_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
     .Q(\u_rf_if.read_buf0 [17])
 );
 
 OAI21X1 _3453_ (
-    .A(mem_dbus_ack_bF$buf0),
+    .A(mem_dbus_ack_bF$buf6),
     .B(\u_cpu.bufreg2.dlo [23]),
     .C(_491_),
     .Y(_492_)
@@ -16542,7 +18258,7 @@ NAND3X1 _3033_ (
 
 NAND2X1 _2724_ (
     .A(\u_rf_if.read_buf1 [7]),
-    .B(_1783__bF$buf2),
+    .B(_1783__bF$buf6),
     .Y(_1806_)
 );
 
@@ -16555,15 +18271,18 @@ OAI21X1 _2304_ (
 
 DFFPOSX1 _3929_ (
     .D(_1359_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
     .Q(\u_rf_if.read_buf1 [19])
 );
 
 MUX2X1 _3509_ (
     .A(_531_),
     .B(_533_),
-    .S(_450__bF$buf3),
+    .S(_450__bF$buf4),
     .Y(_1168_)
+);
+
+FILL FILL_0__1996_ (
 );
 
 INVX1 _3682_ (
@@ -16573,13 +18292,13 @@ INVX1 _3682_ (
 
 NOR2X1 _3262_ (
     .A(_350_),
-    .B(_1692__bF$buf0),
+    .B(_1692__bF$buf3),
     .Y(_351_)
 );
 
 DFFPOSX1 _4047_ (
     .D(_1217_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
     .Q(\u_cpu.bufreg.data [23])
 );
 
@@ -16598,14 +18317,14 @@ OAI21X1 _2533_ (
 );
 
 NOR2X1 _2113_ (
-    .A(_1002__bF$buf3),
+    .A(_1002__bF$buf1),
     .B(_825_),
     .Y(_824_)
 );
 
 DFFPOSX1 _3738_ (
     .D(_1259_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
     .Q(\u_cpu.decode.opcode [0])
 );
 
@@ -16621,15 +18340,18 @@ NAND2X1 _3491_ (
 );
 
 NOR3X1 _3071_ (
-    .A(_1070__bF$buf6),
+    .A(_1070__bF$buf2),
     .B(_1631_),
     .C(_207_),
     .Y(_1282_)
 );
 
+FILL FILL_0__3111_ (
+);
+
 AND2X2 _2762_ (
     .A(_1834_),
-    .B(i_rst_n_bF$buf6),
+    .B(i_rst_n_bF$buf5),
     .Y(_1362_)
 );
 
@@ -16640,12 +18362,12 @@ INVX1 _2342_ (
 
 DFFPOSX1 _3967_ (
     .D(_1378_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
     .Q(\u_rf_if.read_buf1 [0])
 );
 
 NAND2X1 _3547_ (
-    .A(mem_dbus_ack_bF$buf1),
+    .A(mem_dbus_ack_bF$buf6),
     .B(_854_),
     .Y(_563_)
 );
@@ -16659,14 +18381,14 @@ NAND3X1 _3127_ (
 
 DFFPOSX1 _4085_ (
     .D(_1444_),
-    .CLK(i_clk_fast_bF$buf6),
+    .CLK(i_clk_fast_bF$buf0),
     .Q(\u_mem_serial.shift_reg [11])
 );
 
 MUX2X1 _2818_ (
     .A(\u_rf_if.read_buf0 [1]),
     .B(\u_rf_if.read_buf0 [2]),
-    .S(\u_rf_if.stream_active_bF$buf1 ),
+    .S(\u_rf_if.stream_active_bF$buf7 ),
     .Y(_23_)
 );
 
@@ -16689,10 +18411,10 @@ INVX1 _2151_ (
 );
 
 DFFSR _3776_ (
-    .R(i_rst_n_bF$buf9),
+    .R(i_rst_n_bF$buf3),
     .S(vdd),
     .D(_1117_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
     .Q(ibus_pending_rdt[26])
 );
 
@@ -16715,9 +18437,6 @@ INVX1 _2207_ (
     .Y(_741_)
 );
 
-FILL FILL127050x97350 (
-);
-
 AND2X2 _2380_ (
     .A(_692_),
     .B(_1063_),
@@ -16726,24 +18445,27 @@ AND2X2 _2380_ (
 
 OAI22X1 _3585_ (
     .A(_584_),
-    .B(_212__bF$buf0),
+    .B(_212__bF$buf3),
     .C(_583_),
-    .D(_570__bF$buf1),
+    .D(_570__bF$buf4),
     .Y(_1143_)
 );
 
 OAI21X1 _3165_ (
     .A(\u_mem_serial.state [0]),
     .B(_746_),
-    .C(i_rst_n_bF$buf11),
+    .C(i_rst_n_bF$buf8),
     .Y(_277_)
 );
 
-FILL FILL_0__2840_ (
+FILL FILL_0__2420_ (
+);
+
+FILL FILL_0__2000_ (
 );
 
 OAI21X1 _2856_ (
-    .A(_22__bF$buf0),
+    .A(_22__bF$buf2),
     .B(_50_),
     .C(_51_),
     .Y(_52_)
@@ -16757,7 +18479,7 @@ INVX1 _2436_ (
 MUX2X1 _2016_ (
     .A(\u_mem_serial.shift_reg [14]),
     .B(\u_cpu.bufreg2.dlo [9]),
-    .S(_994__bF$buf2),
+    .S(_994__bF$buf5),
     .Y(_909_)
 );
 
@@ -16766,6 +18488,12 @@ AOI21X1 _3394_ (
     .B(_435_),
     .C(_424_),
     .Y(_1191_)
+);
+
+FILL FILL_0__3434_ (
+);
+
+FILL FILL_0__3014_ (
 );
 
 NAND2X1 _1880_ (
@@ -16785,8 +18513,11 @@ INVX1 _2245_ (
     .Y(_703_)
 );
 
+FILL FILL_0__1920_ (
+);
+
 NOR2X1 _1936_ (
-    .A(_1070__bF$buf2),
+    .A(_1070__bF$buf1),
     .B(_979_),
     .Y(_1451_)
 );
@@ -16794,7 +18525,7 @@ NOR2X1 _1936_ (
 MUX2X1 _2894_ (
     .A(\u_rf_if.read_buf0 [20]),
     .B(\u_rf_if.read_buf0 [21]),
-    .S(\u_rf_if.stream_active_bF$buf4 ),
+    .S(\u_rf_if.stream_active_bF$buf1 ),
     .Y(_80_)
 );
 
@@ -16805,7 +18536,7 @@ INVX1 _2474_ (
 
 AND2X2 _2054_ (
     .A(_876_),
-    .B(i_rst_n_bF$buf8),
+    .B(i_rst_n_bF$buf6),
     .Y(_1436_)
 );
 
@@ -16820,7 +18551,10 @@ INVX1 _3259_ (
     .Y(_348_)
 );
 
-FILL FILL127350x50550 (
+FILL FILL_0__2934_ (
+);
+
+FILL FILL_0__3472_ (
 );
 
 INVX1 _2283_ (
@@ -16829,7 +18563,7 @@ INVX1 _2283_ (
 );
 
 OAI21X1 _3488_ (
-    .A(mem_dbus_ack_bF$buf6),
+    .A(mem_dbus_ack_bF$buf5),
     .B(\u_cpu.bufreg2.dlo [14]),
     .C(_517_),
     .Y(_518_)
@@ -16841,19 +18575,22 @@ NOR2X1 _3068_ (
     .Y(_1284_)
 );
 
-FILL FILL_0__2743_ (
+FILL FILL_0__2323_ (
 );
 
 AND2X2 _1974_ (
     .A(_946_),
-    .B(i_rst_n_bF$buf8),
+    .B(i_rst_n_bF$buf6),
     .Y(_1446_)
+);
+
+FILL FILL_0__3281_ (
 );
 
 MUX2X1 _2759_ (
     .A(\u_rf_if.read_buf1 [17]),
     .B(\u_rf_if.read_buf1 [18]),
-    .S(\u_rf_if.stream_active_bF$buf3 ),
+    .S(\u_rf_if.stream_active_bF$buf4 ),
     .Y(_1832_)
 );
 
@@ -16864,14 +18601,14 @@ NOR2X1 _2339_ (
 );
 
 INVX1 _3700_ (
-    .A(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
+    .A(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
     .Y(_1056_)
 );
 
 OAI21X1 _2092_ (
     .A(_845_),
     .B(_843_),
-    .C(_973__bF$buf3),
+    .C(_973__bF$buf6),
     .Y(_842_)
 );
 
@@ -16880,10 +18617,16 @@ INVX1 _3297_ (
     .Y(_379_)
 );
 
+FILL FILL_0__2972_ (
+);
+
+FILL FILL_0__3337_ (
+);
+
 AOI21X1 _2988_ (
     .A(_149_),
     .B(_146_),
-    .C(_1070__bF$buf4),
+    .C(_1070__bF$buf5),
     .Y(_1305_)
 );
 
@@ -16895,12 +18638,21 @@ INVX1 _2568_ (
 OAI21X1 _2148_ (
     .A(_796_),
     .B(_794_),
-    .C(_973__bF$buf4),
+    .C(_973__bF$buf5),
     .Y(_793_)
 );
 
+FILL FILL_0__2781_ (
+);
+
+FILL FILL_0__2361_ (
+);
+
+FILL FILL_0__3146_ (
+);
+
 OAI21X1 _2797_ (
-    .A(_1783__bF$buf0),
+    .A(_1783__bF$buf4),
     .B(_5_),
     .C(_6_),
     .Y(_7_)
@@ -16911,12 +18663,24 @@ INVX2 _2377_ (
     .Y(_1500_)
 );
 
+FILL FILL_0__2837_ (
+);
+
+FILL FILL_0__2170_ (
+);
+
 INVX1 _2186_ (
     .A(\u_cpu.bufreg2.dhi [5]),
     .Y(_759_)
 );
 
+FILL FILL_0__1861_ (
+);
+
 FILL FILL_0__2646_ (
+);
+
+FILL FILL_0__2226_ (
 );
 
 AOI21X1 _1877_ (
@@ -16926,20 +18690,26 @@ AOI21X1 _1877_ (
     .Y(_1458_)
 );
 
+FILL FILL_0__3184_ (
+);
+
 OAI22X1 _3603_ (
     .A(_593_),
-    .B(_212__bF$buf4),
+    .B(_212__bF$buf2),
     .C(_592_),
-    .D(_570__bF$buf0),
+    .D(_570__bF$buf2),
     .Y(_1134_)
 );
 
-FILL FILL_0__2875_ (
+FILL FILL_0__2035_ (
+);
+
+FILL FILL129150x28950 (
 );
 
 DFFPOSX1 _3832_ (
     .D(_1311_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
     .Q(raddr[4])
 );
 
@@ -16950,15 +18720,21 @@ NAND3X1 _3412_ (
     .Y(_457_)
 );
 
+FILL FILL_0__2684_ (
+);
+
+FILL FILL_0__3049_ (
+);
+
 MUX2X1 _3641_ (
     .A(_283_),
     .B(_917_),
-    .S(_602__bF$buf4),
+    .S(_602__bF$buf3),
     .Y(_1105_)
 );
 
 OAI21X1 _3221_ (
-    .A(_673__bF$buf0),
+    .A(_673__bF$buf3),
     .B(_674__bF$buf2),
     .C(_318_),
     .Y(_319_)
@@ -16966,12 +18742,15 @@ OAI21X1 _3221_ (
 
 DFFPOSX1 _4006_ (
     .D(_1199_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
     .Q(\u_cpu.bufreg.data [5])
 );
 
+FILL FILL_0__2073_ (
+);
+
 OAI21X1 _2912_ (
-    .A(_22__bF$buf0),
+    .A(_22__bF$buf6),
     .B(_92_),
     .C(_93_),
     .Y(_94_)
@@ -16981,7 +18760,7 @@ FILL FILL_0__3698_ (
 );
 
 NOR2X1 _2089_ (
-    .A(_1002__bF$buf0),
+    .A(_1002__bF$buf1),
     .B(_846_),
     .Y(_845_)
 );
@@ -17005,11 +18784,14 @@ NOR2X1 _3030_ (
     .Y(_1296_)
 );
 
+FILL FILL_0__2969_ (
+);
+
 FILL FILL_0__2549_ (
 );
 
 OAI21X1 _2721_ (
-    .A(_1783__bF$buf1),
+    .A(_1783__bF$buf6),
     .B(_1802_),
     .C(_1803_),
     .Y(_1804_)
@@ -17021,9 +18803,12 @@ NOR2X1 _2301_ (
     .Y(_647_)
 );
 
+FILL FILL_0__3087_ (
+);
+
 DFFPOSX1 _3926_ (
     .D(_1162_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
     .Q(\u_cpu.bufreg2.dlo [2])
 );
 
@@ -17032,7 +18817,7 @@ INVX1 _3506_ (
     .Y(_531_)
 );
 
-FILL FILL_0__2778_ (
+FILL FILL_0__1993_ (
 );
 
 DFFPOSX1 _4044_ (
@@ -17044,7 +18829,7 @@ DFFPOSX1 _4044_ (
 AOI21X1 _2950_ (
     .A(_121_),
     .B(_120_),
-    .C(_1070__bF$buf3),
+    .C(_1070__bF$buf0),
     .Y(_1315_)
 );
 
@@ -17055,13 +18840,13 @@ INVX1 _2530_ (
 
 AND2X2 _2110_ (
     .A(_827_),
-    .B(i_rst_n_bF$buf7),
+    .B(i_rst_n_bF$buf6),
     .Y(_1429_)
 );
 
 DFFPOSX1 _3735_ (
     .D(_1255_),
-    .CLK(i_clk_fast_bF$buf2),
+    .CLK(i_clk_fast_bF$buf1),
     .Q(mem_ibus_ack)
 );
 
@@ -17073,12 +18858,12 @@ NAND2X1 _3315_ (
 
 DFFPOSX1 _3964_ (
     .D(_1181_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
     .Q(\u_cpu.bufreg2.dlo [21])
 );
 
 OAI21X1 _3544_ (
-    .A(mem_dbus_ack_bF$buf5),
+    .A(mem_dbus_ack_bF$buf1),
     .B(\u_cpu.bufreg2.dlo [1]),
     .C(_560_),
     .Y(_561_)
@@ -17087,50 +18872,53 @@ OAI21X1 _3544_ (
 OAI21X1 _3124_ (
     .A(_246_),
     .B(_1060_),
-    .C(i_rst_n_bF$buf11),
+    .C(i_rst_n_bF$buf8),
     .Y(_247_)
+);
+
+FILL FILL_0__2396_ (
 );
 
 DFFPOSX1 _4082_ (
     .D(_1234_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
     .Q(rreg1[1])
 );
 
 OAI21X1 _2815_ (
-    .A(_1783__bF$buf6),
+    .A(_1783__bF$buf3),
     .B(_19_),
     .C(_20_),
     .Y(_21_)
 );
 
 CLKBUF1 CLKBUF1_insert130 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf28 )
 );
 
 CLKBUF1 CLKBUF1_insert131 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf27 )
 );
 
 CLKBUF1 CLKBUF1_insert132 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf26 )
 );
 
 CLKBUF1 CLKBUF1_insert133 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf25 )
 );
 
 CLKBUF1 CLKBUF1_insert134 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf24 )
 );
 
 CLKBUF1 CLKBUF1_insert135 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf23 )
 );
 
@@ -17140,7 +18928,7 @@ CLKBUF1 CLKBUF1_insert136 (
 );
 
 CLKBUF1 CLKBUF1_insert137 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf21 )
 );
 
@@ -17150,20 +18938,20 @@ CLKBUF1 CLKBUF1_insert138 (
 );
 
 CLKBUF1 CLKBUF1_insert139 (
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
+    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf19 )
 );
 
 DFFPOSX1 _3773_ (
     .D(_1283_),
-    .CLK(i_clk_fast_bF$buf1),
+    .CLK(i_clk_fast_bF$buf4),
     .Q(\u_rf_if.tx_state [1])
 );
 
 MUX2X1 _3353_ (
     .A(_413_),
     .B(_414_),
-    .S(_1536__bF$buf0),
+    .S(_1536__bF$buf2),
     .Y(_1205_)
 );
 
@@ -17179,15 +18967,18 @@ INVX1 _2204_ (
 
 DFFPOSX1 _3829_ (
     .D(_1310_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
     .Q(raddr[5])
 );
 
 OAI21X1 _3409_ (
-    .A(mem_dbus_ack_bF$buf2),
+    .A(mem_dbus_ack_bF$buf1),
     .B(\u_cpu.bufreg2.cnt_next [6]),
     .C(_454_),
     .Y(_455_)
+);
+
+FILL FILL_0__1896_ (
 );
 
 INVX1 _3582_ (
@@ -17196,7 +18987,7 @@ INVX1 _3582_ (
 );
 
 NOR2X1 _3162_ (
-    .A(i_clk_fast_bF$buf4),
+    .A(i_clk_fast_bF$buf1),
     .B(_275_),
     .Y(_1854_)
 );
@@ -17204,9 +18995,12 @@ NOR2X1 _3162_ (
 FILL FILL_0__3622_ (
 );
 
+FILL FILL_0__3202_ (
+);
+
 AND2X2 _2853_ (
     .A(_49_),
-    .B(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf4),
     .Y(_1340_)
 );
 
@@ -17218,21 +19012,27 @@ NAND2X1 _2433_ (
 
 OAI21X1 _2013_ (
     .A(_917_),
-    .B(_973__bF$buf3),
+    .B(_973__bF$buf4),
     .C(_912_),
     .Y(_911_)
 );
 
-FILL FILL_0_BUFX2_insert2 (
+FILL FILL_0_BUFX2_insert1 (
 );
 
-FILL FILL_0_BUFX2_insert9 (
+FILL FILL_0_BUFX2_insert3 (
+);
+
+FILL FILL_0_BUFX2_insert5 (
+);
+
+FILL FILL_0_BUFX2_insert7 (
 );
 
 MUX2X1 _3638_ (
     .A(_163_),
     .B(_896_),
-    .S(_602__bF$buf1),
+    .S(_602__bF$buf2),
     .Y(_1108_)
 );
 
@@ -17247,15 +19047,18 @@ AND2X2 _3391_ (
     .Y(_440_)
 );
 
+FILL FILL_0__3011_ (
+);
+
 AND2X2 _2909_ (
     .A(_91_),
-    .B(i_rst_n_bF$buf1),
+    .B(i_rst_n_bF$buf5),
     .Y(_1326_)
 );
 
 AND2X2 _2662_ (
     .A(_1617_),
-    .B(i_rst_n_bF$buf4),
+    .B(i_rst_n_bF$buf1),
     .Y(_1389_)
 );
 
@@ -17268,7 +19071,7 @@ NAND3X1 _2242_ (
 
 DFFPOSX1 _3867_ (
     .D(_1328_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
     .Q(\u_rf_if.read_buf0 [20])
 );
 
@@ -17283,22 +19086,31 @@ INVX1 _3027_ (
     .Y(_1297_)
 );
 
+FILL FILL_0__2702_ (
+);
+
 NAND3X1 _1933_ (
     .A(\u_mem_serial.shift_reg [3]),
-    .B(_1023__bF$buf0),
-    .C(_994__bF$buf0),
+    .B(_1023__bF$buf4),
+    .C(_994__bF$buf2),
     .Y(_981_)
+);
+
+FILL FILL_0__2299_ (
+);
+
+FILL FILL_0__3660_ (
 );
 
 AND2X2 _2718_ (
     .A(_1801_),
-    .B(i_rst_n_bF$buf8),
+    .B(i_rst_n_bF$buf5),
     .Y(_1373_)
 );
 
 NAND2X1 _2891_ (
     .A(\u_rf_if.read_buf0 [18]),
-    .B(_22__bF$buf6),
+    .B(_22__bF$buf3),
     .Y(_78_)
 );
 
@@ -17310,7 +19122,7 @@ NAND3X1 _2471_ (
 );
 
 NOR2X1 _2051_ (
-    .A(_1023__bF$buf1),
+    .A(_1023__bF$buf2),
     .B(_879_),
     .Y(_878_)
 );
@@ -17328,7 +19140,22 @@ AOI22X1 _3256_ (
     .Y(_1234_)
 );
 
+FILL FILL_0__2511_ (
+);
+
+FILL FILL_0_BUFX2_insert80 (
+);
+
+FILL FILL_0_BUFX2_insert83 (
+);
+
 FILL FILL_0_BUFX2_insert85 (
+);
+
+FILL FILL_0_BUFX2_insert87 (
+);
+
+FILL FILL_0_BUFX2_insert89 (
 );
 
 AOI21X1 _2947_ (
@@ -17345,7 +19172,7 @@ NAND2X1 _2527_ (
 );
 
 NOR2X1 _2107_ (
-    .A(_1023__bF$buf3),
+    .A(_1023__bF$buf1),
     .B(_830_),
     .Y(_829_)
 );
@@ -17360,14 +19187,14 @@ NAND3X1 _2280_ (
 MUX2X1 _3485_ (
     .A(_513_),
     .B(_515_),
-    .S(_450__bF$buf1),
+    .S(_450__bF$buf2),
     .Y(_1174_)
 );
 
 AOI21X1 _3065_ (
     .A(_205_),
     .B(_206_),
-    .C(_1070__bF$buf6),
+    .C(_1070__bF$buf2),
     .Y(_1285_)
 );
 
@@ -17375,14 +19202,14 @@ FILL FILL_0__3525_ (
 );
 
 NOR2X1 _1971_ (
-    .A(_1023__bF$buf4),
+    .A(_1023__bF$buf5),
     .B(_949_),
     .Y(_948_)
 );
 
 NAND2X1 _2756_ (
     .A(\u_rf_if.read_buf1 [15]),
-    .B(_1783__bF$buf4),
+    .B(_1783__bF$buf2),
     .Y(_1830_)
 );
 
@@ -17394,13 +19221,13 @@ OR2X2 _2336_ (
 
 NOR2X1 _3294_ (
     .A(_1066_),
-    .B(_1692__bF$buf1),
+    .B(_1692__bF$buf2),
     .Y(_377_)
 );
 
 DFFPOSX1 _4079_ (
     .D(_1441_),
-    .CLK(i_clk_fast_bF$buf5),
+    .CLK(i_clk_fast_bF$buf0),
     .Q(\u_mem_serial.shift_reg [14])
 );
 
@@ -17420,7 +19247,7 @@ NOR2X1 _2145_ (
     .Y(_796_)
 );
 
-FILL FILL_0__2605_ (
+FILL FILL_0__3563_ (
 );
 
 BUFX2 BUFX2_insert90 (
@@ -17475,7 +19302,7 @@ BUFX2 BUFX2_insert99 (
 
 AND2X2 _2794_ (
     .A(_4_),
-    .B(i_rst_n_bF$buf6),
+    .B(i_rst_n_bF$buf5),
     .Y(_1354_)
 );
 
@@ -17488,7 +19315,7 @@ MUX2X1 _2374_ (
 
 DFFPOSX1 _3999_ (
     .D(_1398_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
     .Q(ren)
 );
 
@@ -17496,7 +19323,7 @@ OAI22X1 _3579_ (
     .A(_581_),
     .B(_212__bF$buf3),
     .C(_580_),
-    .D(_570__bF$buf2),
+    .D(_570__bF$buf1),
     .Y(_1146_)
 );
 
@@ -17507,15 +19334,24 @@ AOI21X1 _3159_ (
     .Y(_274_)
 );
 
+FILL FILL_0__2834_ (
+);
+
+FILL FILL_0__2414_ (
+);
+
 DFFPOSX1 _4100_ (
     .D(_1243_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [1])
+);
+
+FILL FILL_0__3372_ (
 );
 
 AND2X2 _2183_ (
     .A(_762_),
-    .B(i_rst_n_bF$buf5),
+    .B(i_rst_n_bF$buf2),
     .Y(_1421_)
 );
 
@@ -17523,6 +19359,9 @@ NAND2X1 _3388_ (
     .A(_435_),
     .B(_436_),
     .Y(_437_)
+);
+
+FILL FILL_0__2223_ (
 );
 
 FILL FILL_0__3428_ (
@@ -17548,6 +19387,9 @@ NAND3X1 _2239_ (
     .Y(_709_)
 );
 
+FILL FILL_0__1914_ (
+);
+
 INVX1 _3600_ (
     .A(\u_cpu.ctrl.o_ibus_adr [4]),
     .Y(_592_)
@@ -17558,14 +19400,14 @@ INVX1 _3197_ (
     .Y(_301_)
 );
 
-FILL FILL_0__2452_ (
+FILL FILL_0__2872_ (
 );
 
-FILL FILL_0__3657_ (
+FILL FILL_0__3237_ (
 );
 
 OAI21X1 _2888_ (
-    .A(_22__bF$buf6),
+    .A(_22__bF$buf3),
     .B(_74_),
     .C(_75_),
     .Y(_76_)
@@ -17584,72 +19426,96 @@ MUX2X1 _2048_ (
     .Y(_881_)
 );
 
-FILL FILL_0__2508_ (
+FILL FILL129150x82950 (
 );
 
-FILL FILL_0__2681_ (
+FILL FILL_0__2261_ (
 );
 
 OAI21X1 _2697_ (
-    .A(_1783__bF$buf1),
+    .A(_1783__bF$buf0),
     .B(_1784_),
     .C(_1785_),
     .Y(_1786_)
 );
 
 OAI21X1 _2277_ (
-    .A(_673__bF$buf1),
-    .B(_674__bF$buf1),
+    .A(_673__bF$buf0),
+    .B(_674__bF$buf3),
     .C(_672_),
     .Y(_671_)
 );
 
+FILL FILL_0__2737_ (
+);
+
 DFFPOSX1 _4003_ (
     .D(_1400_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
     .Q(raddr[8])
 );
 
 MUX2X1 _1968_ (
     .A(\u_mem_serial.shift_reg [8]),
     .B(\u_cpu.bufreg2.dlo [3]),
-    .S(_994__bF$buf2),
+    .S(_994__bF$buf0),
     .Y(_951_)
+);
+
+FILL FILL_0__3695_ (
+);
+
+FILL FILL_0__3275_ (
 );
 
 AND2X2 _2086_ (
     .A(_848_),
-    .B(i_rst_n_bF$buf2),
+    .B(i_rst_n_bF$buf6),
     .Y(_1432_)
 );
 
-FILL FILL_0_BUFX2_insert175 (
+FILL FILL_0__2126_ (
+);
+
+FILL FILL_0_BUFX2_insert171 (
+);
+
+FILL FILL_0_BUFX2_insert173 (
+);
+
+FILL FILL_0_BUFX2_insert176 (
+);
+
+FILL FILL_0_BUFX2_insert178 (
+);
+
+FILL FILL_0__3084_ (
 );
 
 DFFPOSX1 _3923_ (
     .D(_1356_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
     .Q(\u_rf_if.read_buf1 [22])
 );
 
 NAND2X1 _3503_ (
-    .A(mem_dbus_ack_bF$buf3),
+    .A(mem_dbus_ack_bF$buf4),
     .B(_952_),
     .Y(_529_)
 );
 
-FILL FILL_0__2355_ (
+FILL FILL_0__2775_ (
 );
 
 DFFPOSX1 _4041_ (
     .D(_1214_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
     .Q(\u_cpu.bufreg.data [20])
 );
 
 DFFPOSX1 _3732_ (
     .D(_1253_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
     .Q(\u_cpu.bufreg.i_right_shift_op )
 );
 
@@ -17661,16 +19527,19 @@ INVX1 _3312_ (
 FILL FILL_0__2584_ (
 );
 
+FILL FILL_0__2164_ (
+);
+
 DFFPOSX1 _3961_ (
     .D(_1375_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
     .Q(\u_rf_if.read_buf1 [3])
 );
 
 MUX2X1 _3541_ (
     .A(_555_),
     .B(_558_),
-    .S(_450__bF$buf2),
+    .S(_450__bF$buf3),
     .Y(_1161_)
 );
 
@@ -17684,12 +19553,15 @@ OAI21X1 _3121_ (
 AOI21X1 _2812_ (
     .A(_16_),
     .B(_18_),
-    .C(_1070__bF$buf2),
+    .C(_1070__bF$buf6),
     .Y(_1350_)
 );
 
+FILL FILL_0__3598_ (
+);
+
 DFFSR _3770_ (
-    .R(i_rst_n_bF$buf11),
+    .R(i_rst_n_bF$buf10),
     .S(vdd),
     .D(_1114_),
     .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
@@ -17701,9 +19573,15 @@ INVX1 _3350_ (
     .Y(_413_)
 );
 
+FILL FILL_0__2449_ (
+);
+
+FILL FILL_0__2029_ (
+);
+
 AOI22X1 _2621_ (
     .A(\u_rf_if.read_buf0 [31]),
-    .B(\u_rf_if.stream_active_bF$buf1 ),
+    .B(\u_rf_if.stream_active_bF$buf5 ),
     .C(_1726_),
     .D(_1728_),
     .Y(_1729_)
@@ -17715,12 +19593,9 @@ NAND2X1 _2201_ (
     .Y(_746_)
 );
 
-FILL FILL127350x7350 (
-);
-
 DFFPOSX1 _3826_ (
     .D(_1309_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
     .Q(raddr[6])
 );
 
@@ -17729,13 +19604,10 @@ INVX2 _3406_ (
     .Y(_452_)
 );
 
-FILL FILL_0__2258_ (
-);
-
 MUX2X1 _2850_ (
     .A(\u_rf_if.read_buf0 [9]),
     .B(\u_rf_if.read_buf0 [10]),
-    .S(\u_rf_if.stream_active_bF$buf7 ),
+    .S(\u_rf_if.stream_active_bF$buf6 ),
     .Y(_47_)
 );
 
@@ -17751,10 +19623,13 @@ MUX2X1 _2010_ (
     .Y(_914_)
 );
 
+FILL FILL_0__1949_ (
+);
+
 MUX2X1 _3635_ (
     .A(_139_),
     .B(_875_),
-    .S(_602__bF$buf3),
+    .S(_602__bF$buf2),
     .Y(_1111_)
 );
 
@@ -17775,7 +19650,7 @@ FILL FILL_0__2487_ (
 MUX2X1 _2906_ (
     .A(\u_rf_if.read_buf0 [23]),
     .B(\u_rf_if.read_buf0 [24]),
-    .S(\u_rf_if.stream_active_bF$buf4 ),
+    .S(\u_rf_if.stream_active_bF$buf1 ),
     .Y(_89_)
 );
 
@@ -17805,14 +19680,14 @@ MUX2X1 _1930_ (
     .Y(_983_)
 );
 
-FILL FILL126450x118950 (
-);
-
 MUX2X1 _2715_ (
     .A(\u_rf_if.read_buf1 [6]),
     .B(\u_rf_if.read_buf1 [7]),
     .S(\u_rf_if.stream_active_bF$buf0 ),
     .Y(_1799_)
+);
+
+FILL FILL_0__1987_ (
 );
 
 NAND2X1 _3673_ (
@@ -17831,11 +19706,14 @@ AOI22X1 _3253_ (
 
 DFFPOSX1 _4038_ (
     .D(_1421_),
-    .CLK(i_clk_fast_bF$buf0),
+    .CLK(i_clk_fast_bF$buf8),
     .Q(\u_mem_serial.shift_reg [34])
 );
 
-FILL FILL_0_BUFX2_insert57 (
+FILL FILL_0_BUFX2_insert56 (
+);
+
+FILL FILL_0_BUFX2_insert58 (
 );
 
 OAI21X1 _2944_ (
@@ -17854,20 +19732,20 @@ NOR2X1 _2524_ (
 MUX2X1 _2104_ (
     .A(\u_mem_serial.shift_reg [25]),
     .B(\u_cpu.bufreg2.dlo [20]),
-    .S(_994__bF$buf3),
+    .S(_994__bF$buf1),
     .Y(_832_)
 );
 
 DFFPOSX1 _3729_ (
     .D(_1460_),
-    .CLK(i_clk_fast_bF$buf8),
+    .CLK(i_clk_fast_bF$buf2),
     .Q(\u_mem_serial.bit_count [1])
 );
 
 MUX2X1 _3309_ (
     .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [0]),
     .B(_1746_),
-    .S(_659__bF$buf5),
+    .S(_659__bF$buf1),
     .Y(_390_)
 );
 
@@ -17879,12 +19757,15 @@ INVX1 _3482_ (
 AOI21X1 _3062_ (
     .A(_204_),
     .B(_203_),
-    .C(_1070__bF$buf5),
+    .C(_1070__bF$buf4),
     .Y(_1286_)
 );
 
+FILL FILL_0__3102_ (
+);
+
 OAI21X1 _2753_ (
-    .A(_1783__bF$buf4),
+    .A(_1783__bF$buf6),
     .B(_1826_),
     .C(_1827_),
     .Y(_1828_)
@@ -17899,7 +19780,7 @@ AOI21X1 _2333_ (
 
 DFFPOSX1 _3958_ (
     .D(_1178_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
     .Q(\u_cpu.bufreg2.dlo [18])
 );
 
@@ -17911,7 +19792,7 @@ INVX1 _3538_ (
 AOI21X1 _3118_ (
     .A(_695_),
     .B(_242_),
-    .C(_1070__bF$buf1),
+    .C(_1070__bF$buf6),
     .Y(_1268_)
 );
 
@@ -17924,22 +19805,19 @@ OAI21X1 _3291_ (
 
 DFFPOSX1 _4076_ (
     .D(_1231_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [2])
-);
-
-FILL FILL_0__3331_ (
 );
 
 NAND2X1 _2809_ (
     .A(\u_rf_if.read_buf1 [28]),
-    .B(_1783__bF$buf6),
+    .B(_1783__bF$buf3),
     .Y(_16_)
 );
 
 NAND2X1 _2982_ (
     .A(_144_),
-    .B(_1692__bF$buf2),
+    .B(_1692__bF$buf3),
     .Y(_145_)
 );
 
@@ -17950,24 +19828,33 @@ INVX2 _2562_ (
 
 AND2X2 _2142_ (
     .A(_799_),
-    .B(i_rst_n_bF$buf7),
+    .B(i_rst_n_bF$buf0),
     .Y(_1425_)
 );
 
 DFFPOSX1 _3767_ (
     .D(_1280_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
     .Q(\u_cpu.ctrl.o_ibus_adr [31])
 );
 
 MUX2X1 _3347_ (
     .A(_410_),
     .B(_411_),
-    .S(_1536__bF$buf3),
+    .S(_1536__bF$buf4),
     .Y(_1208_)
 );
 
+FILL FILL_0__2602_ (
+);
+
+FILL FILL_0__2199_ (
+);
+
 FILL FILL_0__3560_ (
+);
+
+FILL FILL_0__3140_ (
 );
 
 NAND2X1 _2618_ (
@@ -18029,7 +19916,7 @@ BUFX2 BUFX2_insert69 (
 MUX2X1 _2791_ (
     .A(\u_rf_if.read_buf1 [25]),
     .B(\u_rf_if.read_buf1 [26]),
-    .S(\u_rf_if.stream_active_bF$buf5 ),
+    .S(\u_rf_if.stream_active_bF$buf1 ),
     .Y(_2_)
 );
 
@@ -18040,12 +19927,9 @@ AOI21X1 _2371_ (
     .Y(_1415_)
 );
 
-FILL FILL126750x86550 (
-);
-
 DFFPOSX1 _3996_ (
     .D(_1396_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
     .Q(\u_rf_if.o_waddr [3])
 );
 
@@ -18055,18 +19939,18 @@ INVX1 _3576_ (
 );
 
 OAI21X1 _3156_ (
-    .A(_659__bF$buf4),
+    .A(_659__bF$buf5),
     .B(_271_),
     .C(_268_),
     .Y(_1259_)
 );
 
-FILL FILL_0__2411_ (
+FILL FILL_0__3616_ (
 );
 
 NAND2X1 _2847_ (
     .A(\u_rf_if.read_buf0 [7]),
-    .B(_22__bF$buf2),
+    .B(_22__bF$buf1),
     .Y(_45_)
 );
 
@@ -18095,6 +19979,18 @@ AOI21X1 _3385_ (
     .Y(_434_)
 );
 
+FILL FILL_0__2640_ (
+);
+
+FILL FILL_0__3845_ (
+);
+
+FILL FILL_0__3425_ (
+);
+
+FILL FILL_0__3005_ (
+);
+
 AOI21X1 _1871_ (
     .A(\u_mem_serial.bit_count [2]),
     .B(_1037_),
@@ -18112,6 +20008,9 @@ INVX1 _2236_ (
     .Y(_712_)
 );
 
+FILL FILL_0__1911_ (
+);
+
 INVX1 _3194_ (
     .A(rreg0[2]),
     .Y(_299_)
@@ -18120,36 +20019,45 @@ INVX1 _3194_ (
 MUX2X1 _1927_ (
     .A(\u_cpu.bufreg.data [3]),
     .B(\u_cpu.ctrl.o_ibus_adr [3]),
-    .S(_1006__bF$buf1),
+    .S(_1006__bF$buf0),
     .Y(_986_)
 );
 
 AND2X2 _2885_ (
     .A(_73_),
-    .B(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf4),
     .Y(_1332_)
 );
 
 AOI22X1 _2465_ (
     .A(_1585_),
     .B(_1587_),
-    .C(_1536__bF$buf1),
+    .C(_1536__bF$buf3),
     .D(\u_cpu.bufreg.data [0]),
     .Y(_1588_)
 );
 
 OAI21X1 _2045_ (
     .A(_889_),
-    .B(_973__bF$buf2),
+    .B(_973__bF$buf0),
     .C(_884_),
     .Y(_883_)
+);
+
+FILL FILL_0__2925_ (
+);
+
+FILL FILL_0__2505_ (
 );
 
 FILL FILL_0__3463_ (
 );
 
+FILL FILL128250x54150 (
+);
+
 NOR2X1 _2694_ (
-    .A(\u_rf_if.stream_active_bF$buf0 ),
+    .A(\u_rf_if.stream_active_bF$buf3 ),
     .B(_1742_),
     .Y(_1783_)
 );
@@ -18163,12 +20071,12 @@ OAI21X1 _2274_ (
 
 DFFPOSX1 _3899_ (
     .D(_1344_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
     .Q(\u_rf_if.read_buf0 [4])
 );
 
 NAND2X1 _3479_ (
-    .A(mem_dbus_ack_bF$buf1),
+    .A(mem_dbus_ack_bF$buf2),
     .B(_910_),
     .Y(_511_)
 );
@@ -18176,7 +20084,7 @@ NAND2X1 _3479_ (
 AOI21X1 _3059_ (
     .A(_202_),
     .B(_201_),
-    .C(_1070__bF$buf5),
+    .C(_1070__bF$buf4),
     .Y(_1287_)
 );
 
@@ -18185,7 +20093,7 @@ FILL FILL_0__2314_ (
 
 DFFPOSX1 _4000_ (
     .D(_1196_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
     .Q(\u_cpu.bufreg.data [2])
 );
 
@@ -18197,7 +20105,7 @@ OAI21X1 _1965_ (
 );
 
 NOR2X1 _2083_ (
-    .A(_1023__bF$buf5),
+    .A(_1023__bF$buf3),
     .B(_851_),
     .Y(_850_)
 );
@@ -18207,8 +20115,14 @@ INVX1 _3288_ (
     .Y(_372_)
 );
 
+FILL FILL_0__2963_ (
+);
+
+FILL FILL_0__3328_ (
+);
+
 OAI21X1 _2979_ (
-    .A(_673__bF$buf3),
+    .A(_673__bF$buf0),
     .B(_674__bF$buf3),
     .C(\u_rf_if.rreg1_latched [1]),
     .Y(_142_)
@@ -18221,19 +20135,19 @@ NAND2X1 _2559_ (
 );
 
 NOR2X1 _2139_ (
-    .A(_1023__bF$buf2),
+    .A(_1023__bF$buf0),
     .B(_802_),
     .Y(_801_)
 );
 
 DFFPOSX1 _3920_ (
     .D(_1159_),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
     .Q(\u_cpu.bufreg2.dlo [23])
 );
 
 OAI21X1 _3500_ (
-    .A(mem_dbus_ack_bF$buf4),
+    .A(mem_dbus_ack_bF$buf6),
     .B(\u_cpu.bufreg2.dlo [11]),
     .C(_526_),
     .Y(_527_)
@@ -18242,13 +20156,19 @@ OAI21X1 _3500_ (
 OAI21X1 _3097_ (
     .A(_222_),
     .B(_1547_),
-    .C(i_rst_n_bF$buf5),
+    .C(i_rst_n_bF$buf11),
     .Y(_226_)
+);
+
+FILL FILL_0__2772_ (
+);
+
+FILL FILL_0__2352_ (
 );
 
 NAND2X1 _2788_ (
     .A(\u_rf_if.read_buf1 [23]),
-    .B(_1783__bF$buf3),
+    .B(_1783__bF$buf1),
     .Y(_1859_)
 );
 
@@ -18258,7 +20178,7 @@ OR2X2 _2368_ (
     .Y(_1495_)
 );
 
-FILL FILL127350x79350 (
+FILL FILL_0__2828_ (
 );
 
 FILL FILL_0__3366_ (
@@ -18273,20 +20193,23 @@ AOI21X1 _2597_ (
 
 OAI21X1 _2177_ (
     .A(_768_),
-    .B(_994__bF$buf5),
+    .B(_994__bF$buf0),
     .C(_1023__bF$buf2),
     .Y(_767_)
+);
+
+FILL FILL_0__2637_ (
 );
 
 FILL FILL_0__2217_ (
 );
 
-FILL FILL_0__2390_ (
-);
-
 INVX1 _1868_ (
     .A(\u_mem_serial.bit_count [1]),
     .Y(_1038_)
+);
+
+FILL FILL_0__3175_ (
 );
 
 endmodule
