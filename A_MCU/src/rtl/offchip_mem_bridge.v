@@ -45,7 +45,7 @@ module offchip_mem_bridge #(
     localparam [1:0] ST_ACK_HOLD = 2'd2;
 
     reg [1:0] state = ST_IDLE;
-    reg [31:0] shift_reg = 32'b0;
+    reg [37:0] shift_reg = 38'b0;
     reg [6:0] bit_count = 7'b0;
     reg active_ibus = 1'b0;
     reg active_we = 1'b0;
@@ -62,22 +62,18 @@ module offchip_mem_bridge #(
     wire        next_we   = dbus_req && i_dbus_we;
     wire [3:0]  active_sel = active_we ? i_dbus_sel : 4'b1111;
 
-    assign o_ibus_rdt = shift_reg;
-    assign o_dbus_rdt = shift_reg;
+    assign o_ibus_rdt = shift_reg[31:0];
+    assign o_dbus_rdt = shift_reg[31:0];
 
     assign o_mem_sck = o_mem_sync ? ~i_clk_fast : 1'b0;
-    assign o_mem_mosi = !o_mem_sync ? 1'b0 :
-                        (bit_count == 7'd70) ? active_we :
-                        (bit_count == 7'd69) ? active_ibus :
-                        (bit_count >= 7'd65 && bit_count <= 7'd68) ? active_sel[(bit_count - 7'd65) & 2'b11] :
-                        shift_reg[31];
+    assign o_mem_mosi = o_mem_sync ? shift_reg[37] : 1'b0;
 
     always @(posedge i_clk_fast) begin
         clk_sys_prev <= i_clk_sys;
 
         if (i_rst) begin
             state <= ST_IDLE;
-            shift_reg <= 32'b0;
+            shift_reg <= 38'b0;
             bit_count <= 7'd0;
             active_ibus <= 1'b0;
             active_we <= 1'b0;
@@ -97,7 +93,8 @@ module offchip_mem_bridge #(
                             if ((SYS_CLK_EQUALS_FAST != 0) || req_pending) begin
                                 active_ibus <= next_ibus;
                                 active_we <= next_we;
-                                shift_reg <= next_ibus ? i_ibus_adr : i_dbus_adr;
+                                // 38비트 shift_reg에 {WE, IBUS, SEL[3:0], ADR[31:0]}을 일괄 로드
+                                shift_reg <= {next_we, next_ibus, (next_we ? i_dbus_sel : 4'b1111), (next_ibus ? i_ibus_adr : i_dbus_adr)};
                                 bit_count <= 7'd70;
                                 o_mem_sync <= 1'b1;
                                 req_pending <= 1'b0;
@@ -112,24 +109,23 @@ module offchip_mem_bridge #(
                 end
 
                 ST_SHIFT: begin
-                    if (bit_count >= 7'd65) begin
-                        // Keep address loaded in shift_reg until bit_count reaches 64
-                    end else if (bit_count >= 7'd34) begin
-                        shift_reg <= {shift_reg[30:0], 1'b0};
+                    if (bit_count >= 7'd34) begin
+                        // 상위 비트 시프트
+                        shift_reg <= {shift_reg[36:0], 1'b0};
                     end else if (bit_count == 7'd33) begin
                         if (active_we) begin
-                            shift_reg <= i_dbus_dat;
+                            // Write data를 shift_reg[37:6]에 로드
+                            shift_reg <= {i_dbus_dat, 6'b0};
                         end else begin
-                            shift_reg <= {31'b0, i_mem_miso};
+                            shift_reg <= {shift_reg[36:0], i_mem_miso};
                         end
                     end else if (bit_count >= 7'd2) begin
                         if (active_we) begin
-                            shift_reg <= {shift_reg[30:0], 1'b0};
+                            shift_reg <= {shift_reg[36:0], 1'b0};
                         end else begin
-                            shift_reg <= {shift_reg[30:0], i_mem_miso};
+                            shift_reg <= {shift_reg[36:0], i_mem_miso};
                         end
                     end else begin
-                        // bit_count가 1 이하일 때는 추가 쉬프트 없이 수신 값을 그대로 보존합니다.
                         shift_reg <= shift_reg;
                     end
 

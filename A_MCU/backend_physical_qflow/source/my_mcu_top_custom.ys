@@ -2,7 +2,6 @@
 read_liberty -lib -ignore_miss_dir -setattr blackbox /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
 read_verilog  /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/backend_physical_qflow/source/my_mcu_top.v
 read_verilog  offchip_mem_bridge.v
-read_verilog  serv_rf_ram.v
 read_verilog  serv_rf_ram_if.v
 read_verilog  serv_top.v
 read_verilog  serv_csr.v

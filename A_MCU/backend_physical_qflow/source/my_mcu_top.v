@@ -245,7 +245,7 @@ module my_mcu_top #(
         .i_ext_rd(32'b0)
     );
 
-    // 6. RF 어댑터 + 외부 4핀 시리얼 RF
+    // 6. 통합 RF 어댑터 및 외부 4핀 시리얼 RF
     serv_rf_ram_if #(
         .width(RF_WIDTH),
         .reset_strategy("MINI"),
@@ -273,27 +273,12 @@ module my_mcu_top #(
         .o_wen(wen),
         .o_raddr(raddr),
         .o_ren(ren),
-        .i_rdata(rdata)
-    );
-
-    serv_rf_ram #(
-        .width(RF_WIDTH),
-        .csr_regs(CSR_REGS),
-        .depth(RF_DEPTH)
-    ) u_rf_serial (
-        .i_clk(clk_sys),
-        .i_waddr(waddr),
-        .i_wdata(wdata),
-        .i_wen(wen),
-        .i_raddr(raddr),
-        .i_ren(ren),
-        .o_rdata(rdata),
+        
         .i_clk_fast(i_clk_fast),
-        .i_rst(rst),
-        .o_ext_rf_sync(o_rf_sync),
-        .o_ext_rf_sck(o_rf_sck),
-        .o_ext_rf_mosi(o_rf_mosi),
-        .i_ext_rf_miso(i_rf_miso)
+        .o_rf_sync(o_rf_sync),
+        .o_rf_sck(o_rf_sck),
+        .o_rf_mosi(o_rf_mosi),
+        .i_rf_miso(i_rf_miso)
     );
 
     // -----------------------------------------------------------------

@@ -13,8 +13,7 @@ VERILOG_SRCS = \
 	../src/rtl/serv/serv_alu.v \
 	../src/rtl/serv/serv_rf_if.v \
 	../src/rtl/serv/serv_mem_if.v \
-	../src/rtl/serv/serv_rf_ram_if.v \
-	../src/rtl/serv/serv_rf_ram.v
+	../src/rtl/serv/serv_rf_ram_if.v
 
 all:
 	@echo ''

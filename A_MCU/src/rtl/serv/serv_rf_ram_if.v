@@ -32,12 +32,23 @@ module serv_rf_ram_if
    input wire [raw-1:0]	   i_rreg1,
    output wire [B:0]	   o_rdata0,
    output wire [B:0]	   o_rdata1,
-   output wire [aw-1:0]   o_waddr,
+   
+   // 보존되는 출력 포트 (my_mcu_top의 rf_write_done 등에서 참조함)
+   output wire [aw-1:0]    o_waddr,
    output wire [width-1:0] o_wdata,
-   output wire		   o_wen,
-   output reg [aw-1:0]	   o_raddr,
-   output reg		   o_ren,
-   input wire [width-1:0]  i_rdata);
+   output wire             o_wen,
+   output reg [aw-1:0]     o_raddr,
+   output reg              o_ren,
+
+   // 패스트 클럭 및 외부 RF 핀 직결 포트
+   input wire              i_clk_fast,
+   output reg              o_rf_sync,
+   output wire             o_rf_sck,
+   output wire             o_rf_mosi,
+   input wire              i_rf_miso
+  );
+
+   localparam depth = 32 * (32 + csr_regs) / width;
 
    reg ready_pulse;
    assign o_ready = i_wreq | ready_pulse;
@@ -63,7 +74,7 @@ module serv_rf_ram_if
    reg          wen1_r;
    reg [3:0]    write_chunk;
    reg          wdata0_next_phase;
-   reg [5:0]    write_wait;
+   reg [1:0]    write_wait;
    wire [CMSB:0] rcnt_eff = (i_rreq | i_wreq) ? {{CMSB-1{1'b0}}, i_wreq, 1'b0} : rcnt;
    wire [CMSB:0] wcnt = rcnt_eff-4;
    wire          rtrig0 = (rcnt_eff[l2r-1:0] == 1);
@@ -78,10 +89,15 @@ module serv_rf_ram_if
    wire          use_wdata0_next = i_wdata0_next &
                                    ((write_chunk == 4'd0) ? rcnt[2] : wdata0_next_phase);
 
-   assign o_wdata = wtrig1 ? wdata1_sel :
-                    use_wdata0_next ? wdata0_next : wdata0_r;
-   assign o_waddr = {wreg, write_chunk};
-   assign o_wen = (wtrig0 & wen0_r) | (wtrig1 & wen1_r);
+   // 내부 연결 와이어 선언 및 출력 매핑
+   wire [width-1:0]  wdata_w = wtrig1 ? wdata1_sel :
+                               use_wdata0_next ? wdata0_next : wdata0_r;
+   wire [aw-1:0]     waddr_w = {wreg, write_chunk};
+   wire              wen_w   = (wtrig0 & wen0_r) | (wtrig1 & wen1_r);
+
+   assign o_wdata = wdata_w;
+   assign o_waddr = waddr_w;
+   assign o_wen   = wen_w;
 
    reg        prefetch_active;
    reg        pending_read;
@@ -95,14 +111,83 @@ module serv_rf_ram_if
    wire       prev_valid = prefetch_active && (issue_idx != 6'd0);
    wire [4:0] prev_issue_idx = issue_idx[4:0] - 5'd1;
    wire       prev_sel = prev_issue_idx[0];
-   wire [3:0] prev_chunk = prev_issue_idx[4:1];
-   wire [raw-1:0] prev_reg = prev_sel ? rreg1_latched : rreg0_latched;
+   wire [aw-1:0] raddr_w = o_raddr;
+   wire          ren_w   = o_ren;
 
-    always @(posedge i_clk) begin
-       ready_pulse <= 1'b0;
-       o_ren <= 1'b0;
+   // ----------------------------------------------------------------
+   // serv_rf_ram 모듈 내부에서 이식한 통합 FSM 및 시리얼 전송 로직
+   // ----------------------------------------------------------------
+   localparam FRAME_BITS = raw + 8;
+   localparam KEY_BITS = FRAME_BITS - width;
 
-       if (stream_pending) begin
+   wire [raw-1:0] ram_rreg = raddr_w[aw-1 : 4];
+   wire [3:0] ram_rbit = raddr_w[3:0];
+   wire [raw-1:0] ram_wreg = waddr_w[aw-1 : 4];
+   wire [3:0] ram_wbit = waddr_w[3:0];
+
+   wire [raw-1:0] target_reg = ren_w ? ram_rreg : ram_wreg;
+   wire [3:0] target_bit = ren_w ? ram_rbit : ram_wbit;
+   wire [FRAME_BITS-1:0] req_key = {wen_w, ren_w, target_reg, target_bit, wdata_w};
+   wire [KEY_BITS-1:0] req_seen_key = {wen_w, ren_w, target_reg, target_bit};
+
+   reg [4:0] tx_state;
+   reg [width-1:0] shift_rx;
+   reg [KEY_BITS-1:0] last_req_key;
+   reg        req_seen;
+   reg        launch_pending;
+
+   assign o_rf_sck = (o_rf_sync) ? ~i_clk_fast : 1'b0;
+   assign o_rf_mosi = o_rf_sync ? req_key[tx_state - 1'b1] : 1'b0;
+
+   always @(posedge i_clk_fast) begin
+      if (i_rst) begin
+         tx_state <= 0;
+         o_rf_sync <= 0;
+         shift_rx <= 0;
+         last_req_key <= {KEY_BITS{1'b0}};
+         req_seen <= 1'b0;
+         launch_pending <= 1'b0;
+      end else begin
+         if (!(wen_w || ren_w)) begin
+            req_seen <= 1'b0;
+            launch_pending <= 1'b0;
+         end
+
+         if (tx_state == 0) begin
+            if (launch_pending && (wen_w || ren_w)) begin
+               last_req_key <= req_seen_key;
+               req_seen <= 1'b1;
+               launch_pending <= 1'b0;
+               tx_state <= FRAME_BITS;
+               o_rf_sync <= 1'b1;
+            end else if ((wen_w || ren_w) && (!req_seen || (req_seen_key != last_req_key))) begin
+               last_req_key <= req_seen_key;
+               req_seen <= 1'b1;
+               tx_state <= FRAME_BITS;
+               o_rf_sync <= 1'b1;
+            end
+         end 
+         else begin
+            if (tx_state == 3) shift_rx[1] <= i_rf_miso;
+            if (tx_state == 2) shift_rx[0] <= i_rf_miso;
+
+            tx_state <= tx_state - 1;
+
+            if (tx_state == 1) begin
+               o_rf_sync <= 1'b0;
+            end
+         end
+      end
+   end
+
+   // 0번 레지스터(x0)는 RISC-V 스펙상 항상 0을 반환하도록 마스킹
+   wire [width-1:0] rdata_w = (target_reg == 5'd0) ? {width{1'b0}} : shift_rx;
+
+   always @(posedge i_clk) begin
+      ready_pulse <= 1'b0;
+      o_ren <= 1'b0;
+
+      if (stream_pending) begin
          stream_pending <= 1'b0;
          stream_active <= 1'b1;
          stream_cnt <= 5'd0;
@@ -122,9 +207,9 @@ module serv_rf_ram_if
          rcnt <= {{CMSB-1{1'b0}}, i_wreq, 1'b0};
 
       if (i_wreq) begin
-         write_wait <= 6'd63;
-      end else if (write_wait != 6'd0) begin
-         write_wait <= write_wait - 6'd1;
+         write_wait <= 2'd2;
+      end else if (write_wait != 2'd0) begin
+         write_wait <= write_wait - 2'd1;
       end
 
       if (i_wreq)
@@ -134,7 +219,7 @@ module serv_rf_ram_if
 
       if (i_wreq)
          wdata0_next_phase <= 1'b0;
-      else if (o_wen && !wtrig1 && (write_chunk == 4'd0))
+      else if (wen_w && !wtrig1 && (write_chunk == 4'd0))
          wdata0_next_phase <= i_wdata0_next & rcnt[2];
 
       if (i_rreq) begin
@@ -143,16 +228,16 @@ module serv_rf_ram_if
          rreg1_latched <= i_rreg1;
       end
 
-      if (!prefetch_active && (write_wait == 6'd0) && pending_read) begin
+      if (!prefetch_active && (write_wait == 2'd0) && pending_read) begin
          prefetch_active <= 1'b1;
          pending_read <= 1'b0;
          issue_idx <= 6'd0;
       end else if (prefetch_active) begin
          if (prev_valid) begin
             if (prev_sel)
-               read_buf1 <= {(prev_reg[4:0] == 5'd0) ? {width{1'b0}} : i_rdata, read_buf1[31:2]};
+               read_buf1 <= {rdata_w, read_buf1[31:2]};
             else
-               read_buf0 <= {(prev_reg[4:0] == 5'd0) ? {width{1'b0}} : i_rdata, read_buf0[31:2]};
+               read_buf0 <= {rdata_w, read_buf0[31:2]};
          end
 
          if (issue_idx < 6'd32) begin
@@ -189,7 +274,7 @@ module serv_rf_ram_if
             wen1_r <= 1'b0;
             write_chunk <= 4'b0;
             wdata0_next_phase <= 1'b0;
-            write_wait <= 6'b0;
+            write_wait <= 2'b0;
             prefetch_active <= 1'b0;
             pending_read <= 1'b0;
             issue_idx <= 6'b0;

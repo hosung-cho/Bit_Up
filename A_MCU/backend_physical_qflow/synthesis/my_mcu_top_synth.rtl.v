@@ -21,12 +21,7 @@ wire o_mem_sck ;
 wire _1677_ ;
 wire _1257_ ;
 wire _588_ ;
-wire _661__bF$buf0 ;
 wire _168_ ;
-wire _661__bF$buf1 ;
-wire _661__bF$buf2 ;
-wire _661__bF$buf3 ;
-wire _661__bF$buf4 ;
 wire _800_ ;
 wire _60_ ;
 wire _1486_ ;
@@ -73,8 +68,14 @@ wire _682_ ;
 wire _262_ ;
 wire _1827_ ;
 wire _1407_ ;
+wire _1023__bF$buf0 ;
+wire _1023__bF$buf1 ;
+wire _1023__bF$buf2 ;
 wire _738_ ;
+wire _1023__bF$buf3 ;
 wire _318_ ;
+wire _1023__bF$buf4 ;
+wire _1023__bF$buf5 ;
 wire _1580_ ;
 wire _1160_ ;
 wire _491_ ;
@@ -83,7 +84,6 @@ wire _1216_ ;
 wire _967_ ;
 wire _547_ ;
 wire _127_ ;
-wire _1865_ ;
 wire _1445_ ;
 wire _1025_ ;
 wire _776_ ;
@@ -135,7 +135,6 @@ wire _1213_ ;
 wire _964_ ;
 wire _544_ ;
 wire _124_ ;
-wire _1862_ ;
 wire _1442_ ;
 wire _1022_ ;
 wire _773_ ;
@@ -154,6 +153,11 @@ wire _218_ ;
 wire _1480_ ;
 wire _1060_ ;
 wire _391_ ;
+wire _1692__bF$buf0 ;
+wire _1692__bF$buf1 ;
+wire _1692__bF$buf2 ;
+wire _1692__bF$buf3 ;
+wire _1692__bF$buf4 ;
 wire _1536_ ;
 wire _1116_ ;
 wire _867_ ;
@@ -180,7 +184,6 @@ wire _999_ ;
 wire _579_ ;
 wire _159_ ;
 wire _51_ ;
-wire _1897_ ;
 wire _1477_ ;
 wire _1057_ ;
 wire _388_ ;
@@ -206,7 +209,6 @@ wire _541_ ;
 wire _121_ ;
 wire _770_ ;
 wire _350_ ;
-wire [10:0] \u_rf_serial.last_req_key  ;
 wire _826_ ;
 wire _406_ ;
 wire _86_ ;
@@ -248,7 +250,6 @@ wire _1245_ ;
 wire _996_ ;
 wire _576_ ;
 wire _156_ ;
-wire _1894_ ;
 wire _1474_ ;
 wire _1054_ ;
 wire _385_ ;
@@ -262,6 +263,10 @@ wire _1568_ ;
 wire _1148_ ;
 wire _899_ ;
 wire _479_ ;
+wire _674__bF$buf0 ;
+wire _674__bF$buf1 ;
+wire _674__bF$buf2 ;
+wire _674__bF$buf3 ;
 wire _1797_ ;
 wire _1377_ ;
 wire _288_ ;
@@ -293,13 +298,19 @@ wire _1204_ ;
 wire _955_ ;
 wire _535_ ;
 wire _115_ ;
+wire _973__bF$buf0 ;
+wire _973__bF$buf1 ;
+wire _973__bF$buf2 ;
+wire _973__bF$buf3 ;
+wire _973__bF$buf4 ;
+wire _973__bF$buf5 ;
+wire _973__bF$buf6 ;
 wire _1853_ ;
 wire _1433_ ;
 wire _1013_ ;
 wire i_mem_miso ;
 wire _764_ ;
 wire _344_ ;
-wire _1909_ ;
 wire _1662_ ;
 wire _1242_ ;
 wire _993_ ;
@@ -308,30 +319,17 @@ wire _153_ ;
 wire _1718_ ;
 wire _629_ ;
 wire _209_ ;
-wire _1891_ ;
 wire _1471_ ;
 wire _1051_ ;
 wire _382_ ;
 wire _1527_ ;
 wire _1107_ ;
-wire _1040__bF$buf0 ;
-wire _1040__bF$buf1 ;
-wire _1040__bF$buf2 ;
-wire _1040__bF$buf3 ;
-wire _1040__bF$buf4 ;
 wire _858_ ;
 wire _438_ ;
 wire _1280_ ;
 wire _191_ ;
-wire _12__bF$buf0 ;
-wire _12__bF$buf1 ;
-wire _12__bF$buf2 ;
-wire _12__bF$buf3 ;
 wire _1756_ ;
-wire _12__bF$buf4 ;
 wire _1336_ ;
-wire _12__bF$buf5 ;
-wire _12__bF$buf6 ;
 wire _667_ ;
 wire _247_ ;
 wire \gen_int_sys_clk.clk_sys_r_bF$buf34  ;
@@ -349,7 +347,6 @@ wire _1659_ ;
 wire _1239_ ;
 wire \u_cpu.bne_or_bge  ;
 wire _42_ ;
-wire _1888_ ;
 wire _1468_ ;
 wire _1048_ ;
 wire _799_ ;
@@ -378,7 +375,6 @@ wire _1430_ ;
 wire _1010_ ;
 wire _761_ ;
 wire _341_ ;
-wire _1906_ ;
 wire _817_ ;
 wire _77_ ;
 wire _990_ ;
@@ -419,12 +415,10 @@ wire _1236_ ;
 wire _987_ ;
 wire _567_ ;
 wire _147_ ;
-wire _1885_ ;
 wire _1465_ ;
 wire _1045_ ;
 wire _796_ ;
 wire _376_ ;
-wire \u_mem_serial.active_we_bF$buf4  ;
 wire _1694_ ;
 wire _1274_ ;
 wire _185_ ;
@@ -443,19 +437,12 @@ wire \u_rf_if.stream_active_bF$buf6  ;
 wire _720_ ;
 wire _300_ ;
 wire _36_ ;
-wire _1903_ ;
 wire _814_ ;
 wire _74_ ;
 wire \gen_int_sys_clk.clk_sys_r_bF$buf7  ;
 wire _1712_ ;
 wire _623_ ;
 wire _203_ ;
-wire _1693__bF$buf0 ;
-wire _1693__bF$buf1 ;
-wire _1693__bF$buf2 ;
-wire _1693__bF$buf3 ;
-wire _1693__bF$buf4 ;
-wire _1693__bF$buf5 ;
 wire _1521_ ;
 wire _1101_ ;
 wire _852_ ;
@@ -485,7 +472,6 @@ wire _984_ ;
 wire _564_ ;
 wire _144_ ;
 wire _1709_ ;
-wire _1882_ ;
 wire _1462_ ;
 wire _1042_ ;
 wire _793_ ;
@@ -493,7 +479,6 @@ wire _373_ ;
 wire _1518_ ;
 wire _849_ ;
 wire _429_ ;
-wire \u_mem_serial.active_we_bF$buf1  ;
 wire _1691_ ;
 wire _1271_ ;
 wire _182_ ;
@@ -503,6 +488,13 @@ wire _1327_ ;
 wire _658_ ;
 wire _238_ ;
 wire _1080_ ;
+wire _22__bF$buf0 ;
+wire _22__bF$buf1 ;
+wire _22__bF$buf2 ;
+wire _22__bF$buf3 ;
+wire _22__bF$buf4 ;
+wire _22__bF$buf5 ;
+wire _22__bF$buf6 ;
 wire \gen_int_sys_clk.clk_sys_r_bF$buf25  ;
 wire _1556_ ;
 wire _1136_ ;
@@ -517,29 +509,24 @@ wire _1594_ ;
 wire _1174_ ;
 wire \u_rf_if.stream_active_bF$buf3  ;
 wire _33_ ;
-wire _1879_ ;
 wire _1459_ ;
 wire _1039_ ;
 wire _1688_ ;
 wire _1268_ ;
 wire _599_ ;
 wire _179_ ;
-wire _1900_ ;
 wire _811_ ;
 wire _71_ ;
 wire _1497_ ;
 wire _1077_ ;
 wire \gen_int_sys_clk.clk_sys_r_bF$buf4  ;
-wire _1704__bF$buf0 ;
-wire _1704__bF$buf1 ;
-wire _1704__bF$buf2 ;
-wire _1704__bF$buf3 ;
 wire _620_ ;
 wire _200_ ;
 wire \gen_int_sys_clk.clk_sys_r_hier0_bF$buf5  ;
+wire [1:0] \u_rf_if.shift_rx  ;
 wire _905_ ;
 wire _1803_ ;
-wire [31:0] \u_mem_serial.shift_reg  ;
+wire [37:0] \u_mem_serial.shift_reg  ;
 wire _714_ ;
 wire _1612_ ;
 wire _943_ ;
@@ -573,7 +560,6 @@ wire ibus_pending_ack_bF$buf2 ;
 wire ibus_pending_ack_bF$buf3 ;
 wire ibus_pending_ack_bF$buf4 ;
 wire ibus_pending_ack_bF$buf5 ;
-wire ibus_pending_ack_bF$buf6 ;
 wire _655_ ;
 wire _235_ ;
 wire \gen_int_sys_clk.clk_sys_r_bF$buf22  ;
@@ -599,13 +585,7 @@ wire _1227_ ;
 wire _978_ ;
 wire _558_ ;
 wire _138_ ;
-wire _556__bF$buf0 ;
-wire _556__bF$buf1 ;
-wire _556__bF$buf2 ;
-wire _556__bF$buf3 ;
-wire _556__bF$buf4 ;
 wire _30_ ;
-wire _1876_ ;
 wire _1456_ ;
 wire _1036_ ;
 wire ren ;
@@ -666,7 +646,6 @@ wire _1224_ ;
 wire _975_ ;
 wire _555_ ;
 wire _135_ ;
-wire _1873_ ;
 wire [1:0] \u_mem_serial.state  ;
 wire _1453_ ;
 wire _1033_ ;
@@ -698,7 +677,6 @@ wire _496_ ;
 wire _1394_ ;
 wire \u_rf_if.wen0_r  ;
 wire _24_ ;
-wire [4:0] \u_rf_serial.tx_state  ;
 wire _1679_ ;
 wire _1259_ ;
 wire _802_ ;
@@ -727,7 +705,6 @@ wire _972_ ;
 wire _552_ ;
 wire _132_ ;
 wire _608_ ;
-wire _1870_ ;
 wire _1450_ ;
 wire _1030_ ;
 wire _781_ ;
@@ -763,7 +740,6 @@ wire _549_ ;
 wire _129_ ;
 wire _1391_ ;
 wire _21_ ;
-wire _1867_ ;
 wire _1447_ ;
 wire _1027_ ;
 wire _778_ ;
@@ -772,18 +748,15 @@ wire _1676_ ;
 wire _1256_ ;
 wire _587_ ;
 wire _167_ ;
+wire _570__bF$buf0 ;
+wire _570__bF$buf1 ;
+wire _570__bF$buf2 ;
+wire _570__bF$buf3 ;
+wire _570__bF$buf4 ;
 wire _1485_ ;
 wire _1065_ ;
 wire _396_ ;
 wire _1294_ ;
-wire _1126__bF$buf0 ;
-wire _1126__bF$buf1 ;
-wire _1126__bF$buf2 ;
-wire _1126__bF$buf3 ;
-wire _1126__bF$buf4 ;
-wire _1126__bF$buf5 ;
-wire _1126__bF$buf6 ;
-wire _1126__bF$buf7 ;
 wire _1579_ ;
 wire _1159_ ;
 wire _702_ ;
@@ -795,7 +768,6 @@ wire _931_ ;
 wire _511_ ;
 wire [5:0] \u_rf_if.issue_idx  ;
 wire _1197_ ;
-wire \u_rf_serial.req_seen  ;
 wire _740_ ;
 wire _320_ ;
 wire [6:0] \u_mem_serial.bit_count  ;
@@ -831,7 +803,6 @@ wire _1215_ ;
 wire _966_ ;
 wire _546_ ;
 wire _126_ ;
-wire _1864_ ;
 wire _1444_ ;
 wire _1024_ ;
 wire _775_ ;
@@ -847,6 +818,13 @@ wire _1062_ ;
 wire _393_ ;
 wire _1538_ ;
 wire _1118_ ;
+wire _1070__bF$buf0 ;
+wire _1070__bF$buf1 ;
+wire _1070__bF$buf2 ;
+wire _1070__bF$buf3 ;
+wire _1070__bF$buf4 ;
+wire _1070__bF$buf5 ;
+wire _1070__bF$buf6 ;
 wire _869_ ;
 wire _449_ ;
 wire _1291_ ;
@@ -862,7 +840,6 @@ wire _296_ ;
 wire _15_ ;
 wire _1194_ ;
 wire _53_ ;
-wire _1899_ ;
 wire _1479_ ;
 wire _1059_ ;
 wire _602_ ;
@@ -889,7 +866,6 @@ wire _1212_ ;
 wire _963_ ;
 wire _543_ ;
 wire _123_ ;
-wire _1861_ ;
 wire _1441_ ;
 wire _1021_ ;
 wire _772_ ;
@@ -934,8 +910,12 @@ wire _1247_ ;
 wire _998_ ;
 wire _578_ ;
 wire _158_ ;
+wire _1002__bF$buf0 ;
+wire _1002__bF$buf1 ;
+wire _1002__bF$buf2 ;
+wire _1002__bF$buf3 ;
+wire _1002__bF$buf4 ;
 wire _50_ ;
-wire _1896_ ;
 wire _1476_ ;
 wire _1056_ ;
 wire _387_ ;
@@ -986,6 +966,7 @@ wire _537_ ;
 wire _117_ ;
 wire _290_ ;
 wire i_rst_n_bF$buf10 ;
+wire i_rst_n_bF$buf11 ;
 wire _1855_ ;
 wire _1435_ ;
 wire _1015_ ;
@@ -996,7 +977,6 @@ wire _1244_ ;
 wire _995_ ;
 wire _575_ ;
 wire _155_ ;
-wire _1893_ ;
 wire _1473_ ;
 wire _1053_ ;
 wire _384_ ;
@@ -1023,7 +1003,6 @@ wire _1185_ ;
 wire _44_ ;
 wire _1699_ ;
 wire _1279_ ;
-wire _1911_ ;
 wire _822_ ;
 wire _402_ ;
 wire _82_ ;
@@ -1053,7 +1032,6 @@ wire _1432_ ;
 wire _1012_ ;
 wire _763_ ;
 wire _343_ ;
-wire _1908_ ;
 wire _819_ ;
 wire _79_ ;
 wire _1661_ ;
@@ -1064,7 +1042,6 @@ wire _152_ ;
 wire _1717_ ;
 wire _628_ ;
 wire _208_ ;
-wire _1890_ ;
 wire _1470_ ;
 wire _1050_ ;
 wire _381_ ;
@@ -1077,6 +1054,11 @@ wire _1755_ ;
 wire _1335_ ;
 wire _666_ ;
 wire _246_ ;
+wire _1536__bF$buf0 ;
+wire _1536__bF$buf1 ;
+wire _1536__bF$buf2 ;
+wire _1536__bF$buf3 ;
+wire _1536__bF$buf4 ;
 wire \gen_int_sys_clk.clk_sys_r_bF$buf33  ;
 wire _1564_ ;
 wire _1144_ ;
@@ -1098,7 +1080,6 @@ wire _989_ ;
 wire _569_ ;
 wire _149_ ;
 wire _41_ ;
-wire _1887_ ;
 wire _1467_ ;
 wire _1047_ ;
 wire _798_ ;
@@ -1122,16 +1103,9 @@ wire _531_ ;
 wire _111_ ;
 wire _760_ ;
 wire _340_ ;
-wire _1905_ ;
 wire _816_ ;
 wire _76_ ;
 wire \gen_int_sys_clk.clk_sys_r_bF$buf9  ;
-wire _440__bF$buf0 ;
-wire _440__bF$buf1 ;
-wire _440__bF$buf2 ;
-wire _440__bF$buf3 ;
-wire _440__bF$buf4 ;
-wire _440__bF$buf5 ;
 wire _1714_ ;
 wire _625_ ;
 wire _205_ ;
@@ -1170,12 +1144,10 @@ wire _1235_ ;
 wire _986_ ;
 wire _566_ ;
 wire _146_ ;
-wire _1884_ ;
 wire _1464_ ;
 wire _1044_ ;
 wire _795_ ;
 wire _375_ ;
-wire \u_mem_serial.active_we_bF$buf3  ;
 wire _1693_ ;
 wire _1273_ ;
 wire _184_ ;
@@ -1196,7 +1168,6 @@ wire _1596_ ;
 wire _1176_ ;
 wire \u_rf_if.stream_active_bF$buf5  ;
 wire _35_ ;
-wire _1902_ ;
 wire _813_ ;
 wire _73_ ;
 wire _1499_ ;
@@ -1230,7 +1201,6 @@ wire _563_ ;
 wire _143_ ;
 wire _1708_ ;
 wire _619_ ;
-wire _1881_ ;
 wire _1461_ ;
 wire _1041_ ;
 wire _792_ ;
@@ -1238,7 +1208,6 @@ wire _372_ ;
 wire _1517_ ;
 wire _848_ ;
 wire _428_ ;
-wire \u_mem_serial.active_we_bF$buf0  ;
 wire _1690_ ;
 wire _1270_ ;
 wire _181_ ;
@@ -1262,7 +1231,6 @@ wire \u_rf_if.stream_active_bF$buf2  ;
 wire _1649_ ;
 wire _1229_ ;
 wire _32_ ;
-wire _1878_ ;
 wire _1458_ ;
 wire _1038_ ;
 wire _789_ ;
@@ -1285,10 +1253,17 @@ wire i_clk_fast_bF$buf4 ;
 wire i_clk_fast_bF$buf5 ;
 wire i_clk_fast_bF$buf6 ;
 wire i_clk_fast_bF$buf7 ;
+wire i_clk_fast_bF$buf8 ;
 wire [3:0] \u_cpu.state.cnt_r  ;
 wire _904_ ;
 wire _1802_ ;
 wire _713_ ;
+wire _659__bF$buf0 ;
+wire _659__bF$buf1 ;
+wire _659__bF$buf2 ;
+wire _659__bF$buf3 ;
+wire _659__bF$buf4 ;
+wire _659__bF$buf5 ;
 wire _1399_ ;
 wire _29_ ;
 wire _1611_ ;
@@ -1308,6 +1283,11 @@ wire _140_ ;
 wire [31:0] \u_cpu.ctrl.o_ibus_adr  ;
 wire _1705_ ;
 wire _616_ ;
+wire _450__bF$buf0 ;
+wire _450__bF$buf1 ;
+wire _450__bF$buf2 ;
+wire _450__bF$buf3 ;
+wire _450__bF$buf4 ;
 wire _1514_ ;
 wire _845_ ;
 wire _425_ ;
@@ -1338,7 +1318,6 @@ wire _1226_ ;
 wire _977_ ;
 wire _557_ ;
 wire _137_ ;
-wire _1875_ ;
 wire _1455_ ;
 wire _1035_ ;
 wire _786_ ;
@@ -1373,6 +1352,7 @@ wire _1299_ ;
 wire _1511_ ;
 wire _842_ ;
 wire _422_ ;
+wire [4:0] \u_rf_if.tx_state  ;
 wire _1740_ ;
 wire _1320_ ;
 wire _651_ ;
@@ -1395,7 +1375,6 @@ wire _1223_ ;
 wire _974_ ;
 wire _554_ ;
 wire _134_ ;
-wire _1872_ ;
 wire _1452_ ;
 wire _1032_ ;
 wire _783_ ;
@@ -1429,7 +1408,6 @@ wire _1164_ ;
 wire _495_ ;
 wire _1393_ ;
 wire _23_ ;
-wire _1869_ ;
 wire _1449_ ;
 wire _1029_ ;
 wire _1678_ ;
@@ -1452,6 +1430,10 @@ wire _933_ ;
 wire _513_ ;
 wire \u_rf_if.issue_sel  ;
 wire _1199_ ;
+wire _673__bF$buf0 ;
+wire _673__bF$buf1 ;
+wire _673__bF$buf2 ;
+wire _673__bF$buf3 ;
 wire _1831_ ;
 wire _1411_ ;
 wire _742_ ;
@@ -1462,6 +1444,11 @@ wire _1220_ ;
 wire _971_ ;
 wire _551_ ;
 wire _131_ ;
+wire _602__bF$buf0 ;
+wire _602__bF$buf1 ;
+wire _602__bF$buf2 ;
+wire _602__bF$buf3 ;
+wire _602__bF$buf4 ;
 wire _607_ ;
 wire _780_ ;
 wire _360_ ;
@@ -1473,6 +1460,7 @@ wire _1734_ ;
 wire _1314_ ;
 wire _645_ ;
 wire _225_ ;
+wire \u_rf_if.req_seen  ;
 wire \gen_int_sys_clk.clk_sys_r_bF$buf12  ;
 wire _1543_ ;
 wire _1123_ ;
@@ -1496,7 +1484,6 @@ wire _548_ ;
 wire _128_ ;
 wire _1390_ ;
 wire _20_ ;
-wire _1866_ ;
 wire _1446_ ;
 wire _1026_ ;
 wire _777_ ;
@@ -1546,13 +1533,11 @@ wire _1825_ ;
 wire _1405_ ;
 wire _736_ ;
 wire _316_ ;
-wire \u_rf_serial.launch_pending  ;
 wire _1634_ ;
 wire _1214_ ;
 wire _965_ ;
 wire _545_ ;
 wire _125_ ;
-wire _1863_ ;
 wire _1443_ ;
 wire _1023_ ;
 wire _774_ ;
@@ -1567,6 +1552,13 @@ wire _639_ ;
 wire _219_ ;
 wire _1481_ ;
 wire _1061_ ;
+wire _1783__bF$buf0 ;
+wire _1783__bF$buf1 ;
+wire _1783__bF$buf2 ;
+wire _1783__bF$buf3 ;
+wire _1783__bF$buf4 ;
+wire _1783__bF$buf5 ;
+wire _1783__bF$buf6 ;
 wire _392_ ;
 wire _1537_ ;
 wire _1117_ ;
@@ -1577,7 +1569,6 @@ wire _1766_ ;
 wire _1346_ ;
 wire _677_ ;
 wire _257_ ;
-wire \gen_int_sys_clk.clk_sys_r_bF$buf44  ;
 wire _1575_ ;
 wire _1155_ ;
 wire _486_ ;
@@ -1590,7 +1581,6 @@ wire _1669_ ;
 wire _1249_ ;
 wire \u_cpu.alu.cmp_r  ;
 wire _52_ ;
-wire _1898_ ;
 wire _1478_ ;
 wire _1058_ ;
 wire _389_ ;
@@ -1603,13 +1593,14 @@ wire _410_ ;
 wire _90_ ;
 wire _1096_ ;
 wire _8_ ;
+wire _994__bF$buf0 ;
+wire _994__bF$buf1 ;
+wire _994__bF$buf2 ;
+wire _994__bF$buf3 ;
+wire _994__bF$buf4 ;
+wire _994__bF$buf5 ;
 wire _924_ ;
 wire _504_ ;
-wire _190__bF$buf0 ;
-wire _190__bF$buf1 ;
-wire _190__bF$buf2 ;
-wire _190__bF$buf3 ;
-wire _190__bF$buf4 ;
 wire _1822_ ;
 wire _1402_ ;
 wire _733_ ;
@@ -1620,7 +1611,6 @@ wire _1211_ ;
 wire _962_ ;
 wire _542_ ;
 wire _122_ ;
-wire _1860_ ;
 wire _1440_ ;
 wire _1020_ ;
 wire _771_ ;
@@ -1667,7 +1657,7 @@ wire _1246_ ;
 wire _997_ ;
 wire _577_ ;
 wire _157_ ;
-wire _1895_ ;
+wire \u_rf_if.launch_pending  ;
 wire _1475_ ;
 wire _1055_ ;
 wire _386_ ;
@@ -1691,7 +1681,7 @@ wire _46_ ;
 wire _824_ ;
 wire _404_ ;
 wire _84_ ;
-wire [5:0] \u_rf_if.write_wait  ;
+wire [1:0] \u_rf_if.write_wait  ;
 wire _1722_ ;
 wire _1302_ ;
 wire _633_ ;
@@ -1700,11 +1690,6 @@ wire _1531_ ;
 wire _1111_ ;
 wire _862_ ;
 wire _442_ ;
-wire _615__bF$buf0 ;
-wire _615__bF$buf1 ;
-wire _615__bF$buf2 ;
-wire _615__bF$buf3 ;
-wire _615__bF$buf4 ;
 wire _918_ ;
 wire _1760_ ;
 wire _1340_ ;
@@ -1732,7 +1717,6 @@ wire _994_ ;
 wire _574_ ;
 wire _154_ ;
 wire _1719_ ;
-wire _1892_ ;
 wire _1472_ ;
 wire _1052_ ;
 wire _383_ ;
@@ -1769,19 +1753,12 @@ wire i_rst_n_bF$buf7 ;
 wire i_rst_n_bF$buf8 ;
 wire i_rst_n_bF$buf9 ;
 wire _43_ ;
-wire _1889_ ;
 wire _1469_ ;
 wire _1049_ ;
-wire _1052__bF$buf0 ;
-wire _1052__bF$buf1 ;
 wire i_rf_miso ;
-wire _1052__bF$buf2 ;
-wire _1052__bF$buf3 ;
-wire _1052__bF$buf4 ;
 wire _1698_ ;
 wire _1278_ ;
 wire _189_ ;
-wire _1910_ ;
 wire _821_ ;
 wire _401_ ;
 wire _81_ ;
@@ -1799,17 +1776,11 @@ wire _1202_ ;
 wire _953_ ;
 wire _533_ ;
 wire _113_ ;
-wire _1067__bF$buf0 ;
-wire _1067__bF$buf1 ;
-wire _1067__bF$buf2 ;
-wire _1067__bF$buf3 ;
-wire _1067__bF$buf4 ;
 wire _1851_ ;
 wire _1431_ ;
 wire _1011_ ;
 wire _762_ ;
 wire _342_ ;
-wire _1907_ ;
 wire _818_ ;
 wire _78_ ;
 wire _1660_ ;
@@ -1851,7 +1822,6 @@ wire _988_ ;
 wire _568_ ;
 wire _148_ ;
 wire _40_ ;
-wire _1886_ ;
 wire _1466_ ;
 wire _1046_ ;
 wire _797_ ;
@@ -1875,7 +1845,6 @@ wire _37_ ;
 wire _950_ ;
 wire _530_ ;
 wire _110_ ;
-wire _1904_ ;
 wire _815_ ;
 wire _75_ ;
 wire \gen_int_sys_clk.clk_sys_r_bF$buf8  ;
@@ -1912,17 +1881,11 @@ wire _1234_ ;
 wire _985_ ;
 wire _565_ ;
 wire _145_ ;
-wire ren_bF$buf0 ;
-wire ren_bF$buf1 ;
-wire ren_bF$buf2 ;
-wire ren_bF$buf3 ;
-wire _1883_ ;
 wire _1463_ ;
 wire _1043_ ;
 wire _794_ ;
 wire _374_ ;
 wire _1519_ ;
-wire \u_mem_serial.active_we_bF$buf2  ;
 wire _1692_ ;
 wire _1272_ ;
 wire _183_ ;
@@ -1946,23 +1909,11 @@ wire _1175_ ;
 wire \u_rf_if.stream_active_bF$buf4  ;
 wire [0:0] \u_cpu.ctrl.pc  ;
 wire _34_ ;
-wire _1058__bF$buf0 ;
-wire _1058__bF$buf1 ;
-wire _1058__bF$buf2 ;
-wire _1058__bF$buf3 ;
-wire _1058__bF$buf4 ;
-wire _1058__bF$buf5 ;
-wire _1058__bF$buf6 ;
 wire _1689_ ;
 wire _1269_ ;
-wire _1062__bF$buf0 ;
-wire _1062__bF$buf1 ;
-wire _1062__bF$buf2 ;
-wire _1062__bF$buf3 ;
-wire _1062__bF$buf4 ;
-wire _1901_ ;
 wire _812_ ;
 wire _72_ ;
+wire [10:0] \u_rf_if.last_req_key  ;
 wire _1498_ ;
 wire _1078_ ;
 wire \gen_int_sys_clk.clk_sys_r_bF$buf5  ;
@@ -1993,7 +1944,11 @@ wire _562_ ;
 wire _142_ ;
 wire _1707_ ;
 wire _618_ ;
-wire _1880_ ;
+wire _1006__bF$buf0 ;
+wire _1006__bF$buf1 ;
+wire _1006__bF$buf2 ;
+wire _1006__bF$buf3 ;
+wire _1006__bF$buf4 ;
 wire _1460_ ;
 wire _1040_ ;
 wire _791_ ;
@@ -2026,9 +1981,7 @@ wire _1228_ ;
 wire _979_ ;
 wire _559_ ;
 wire _139_ ;
-wire [1:0] \u_rf_serial.shift_rx  ;
 wire _31_ ;
-wire _1877_ ;
 wire _1457_ ;
 wire _1037_ ;
 wire _788_ ;
@@ -2087,12 +2040,6 @@ wire _938_ ;
 wire _518_ ;
 wire _1780_ ;
 wire _1360_ ;
-wire _733__bF$buf0 ;
-wire _733__bF$buf1 ;
-wire _733__bF$buf2 ;
-wire _733__bF$buf3 ;
-wire _733__bF$buf4 ;
-wire _733__bF$buf5 ;
 wire _691_ ;
 wire _271_ ;
 wire _1836_ ;
@@ -2105,7 +2052,6 @@ wire _1225_ ;
 wire _976_ ;
 wire _556_ ;
 wire _136_ ;
-wire _1874_ ;
 wire _1454_ ;
 wire _1034_ ;
 wire _785_ ;
@@ -2163,18 +2109,10 @@ wire _973_ ;
 wire _553_ ;
 wire _133_ ;
 wire _609_ ;
-wire _1871_ ;
 wire _1451_ ;
 wire _1031_ ;
 wire _782_ ;
 wire _362_ ;
-wire _1824__bF$buf0 ;
-wire _1824__bF$buf1 ;
-wire _1824__bF$buf2 ;
-wire _1824__bF$buf3 ;
-wire _1824__bF$buf4 ;
-wire _1824__bF$buf5 ;
-wire _1824__bF$buf6 ;
 wire _1507_ ;
 wire _838_ ;
 wire _418_ ;
@@ -2200,20368 +2138,19919 @@ wire _685_ ;
 wire _265_ ;
 wire _1583_ ;
 wire _1163_ ;
+wire _212__bF$buf0 ;
+wire _212__bF$buf1 ;
+wire _212__bF$buf2 ;
+wire _212__bF$buf3 ;
+wire _212__bF$buf4 ;
 wire _494_ ;
 wire _1639_ ;
 wire _1219_ ;
 wire _1392_ ;
 wire _22_ ;
-wire _1868_ ;
 wire _1448_ ;
 wire _1028_ ;
 wire _779_ ;
 wire _359_ ;
 
-CLKBUF1 CLKBUF1_insert191 (
+CLKBUF1 CLKBUF1_insert185 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r ),
     .Y(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 )
 );
 
-CLKBUF1 CLKBUF1_insert190 (
+CLKBUF1 CLKBUF1_insert184 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r ),
     .Y(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 )
 );
 
-CLKBUF1 CLKBUF1_insert189 (
+CLKBUF1 CLKBUF1_insert183 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r ),
     .Y(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 )
 );
 
-CLKBUF1 CLKBUF1_insert188 (
+CLKBUF1 CLKBUF1_insert182 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r ),
     .Y(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 )
 );
 
-CLKBUF1 CLKBUF1_insert187 (
+CLKBUF1 CLKBUF1_insert181 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r ),
     .Y(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 )
 );
 
-CLKBUF1 CLKBUF1_insert186 (
+CLKBUF1 CLKBUF1_insert180 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r ),
     .Y(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 )
 );
 
-BUFX2 BUFX2_insert185 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_556_),
-    .Y(_556__bF$buf0)
-);
-
-BUFX2 BUFX2_insert184 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_556_),
-    .Y(_556__bF$buf1)
-);
-
-BUFX2 BUFX2_insert183 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_556_),
-    .Y(_556__bF$buf2)
-);
-
-BUFX2 BUFX2_insert182 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_556_),
-    .Y(_556__bF$buf3)
-);
-
-BUFX2 BUFX2_insert181 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_556_),
-    .Y(_556__bF$buf4)
-);
-
-BUFX2 BUFX2_insert180 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_615_),
-    .Y(_615__bF$buf0)
-);
-
 BUFX2 BUFX2_insert179 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_615_),
-    .Y(_615__bF$buf1)
+    .A(_22_),
+    .Y(_22__bF$buf0)
 );
 
 BUFX2 BUFX2_insert178 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_615_),
-    .Y(_615__bF$buf2)
+    .A(_22_),
+    .Y(_22__bF$buf1)
 );
 
 BUFX2 BUFX2_insert177 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_615_),
-    .Y(_615__bF$buf3)
+    .A(_22_),
+    .Y(_22__bF$buf2)
 );
 
 BUFX2 BUFX2_insert176 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_615_),
-    .Y(_615__bF$buf4)
+    .A(_22_),
+    .Y(_22__bF$buf3)
 );
 
 BUFX2 BUFX2_insert175 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1704_),
-    .Y(_1704__bF$buf0)
+    .A(_22_),
+    .Y(_22__bF$buf4)
 );
 
 BUFX2 BUFX2_insert174 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1704_),
-    .Y(_1704__bF$buf1)
+    .A(_22_),
+    .Y(_22__bF$buf5)
 );
 
 BUFX2 BUFX2_insert173 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1704_),
-    .Y(_1704__bF$buf2)
+    .A(_22_),
+    .Y(_22__bF$buf6)
 );
 
 BUFX2 BUFX2_insert172 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1704_),
-    .Y(_1704__bF$buf3)
+    .A(_973_),
+    .Y(_973__bF$buf0)
 );
 
-CLKBUF1 CLKBUF1_insert171 (
+BUFX2 BUFX2_insert171 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_973_),
+    .Y(_973__bF$buf1)
+);
+
+BUFX2 BUFX2_insert170 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_973_),
+    .Y(_973__bF$buf2)
+);
+
+BUFX2 BUFX2_insert169 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_973_),
+    .Y(_973__bF$buf3)
+);
+
+BUFX2 BUFX2_insert168 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_973_),
+    .Y(_973__bF$buf4)
+);
+
+BUFX2 BUFX2_insert167 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_973_),
+    .Y(_973__bF$buf5)
+);
+
+BUFX2 BUFX2_insert166 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_973_),
+    .Y(_973__bF$buf6)
+);
+
+BUFX2 BUFX2_insert165 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1783_),
+    .Y(_1783__bF$buf0)
+);
+
+BUFX2 BUFX2_insert164 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1783_),
+    .Y(_1783__bF$buf1)
+);
+
+BUFX2 BUFX2_insert163 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1783_),
+    .Y(_1783__bF$buf2)
+);
+
+BUFX2 BUFX2_insert162 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1783_),
+    .Y(_1783__bF$buf3)
+);
+
+BUFX2 BUFX2_insert161 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1783_),
+    .Y(_1783__bF$buf4)
+);
+
+BUFX2 BUFX2_insert160 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1783_),
+    .Y(_1783__bF$buf5)
+);
+
+BUFX2 BUFX2_insert159 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1783_),
+    .Y(_1783__bF$buf6)
+);
+
+CLKBUF1 CLKBUF1_insert158 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf0 )
 );
 
-CLKBUF1 CLKBUF1_insert170 (
+CLKBUF1 CLKBUF1_insert157 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf1 )
 );
 
-CLKBUF1 CLKBUF1_insert169 (
+CLKBUF1 CLKBUF1_insert156 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf2 )
 );
 
-CLKBUF1 CLKBUF1_insert168 (
+CLKBUF1 CLKBUF1_insert155 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf3 )
 );
 
-CLKBUF1 CLKBUF1_insert167 (
+CLKBUF1 CLKBUF1_insert154 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf4 )
 );
 
-CLKBUF1 CLKBUF1_insert166 (
+CLKBUF1 CLKBUF1_insert153 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf5 )
 );
 
-CLKBUF1 CLKBUF1_insert165 (
+CLKBUF1 CLKBUF1_insert152 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf6 )
 );
 
-CLKBUF1 CLKBUF1_insert164 (
+CLKBUF1 CLKBUF1_insert151 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf7 )
 );
 
-CLKBUF1 CLKBUF1_insert163 (
+CLKBUF1 CLKBUF1_insert150 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf8 )
 );
 
-CLKBUF1 CLKBUF1_insert162 (
+CLKBUF1 CLKBUF1_insert149 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf9 )
 );
 
-CLKBUF1 CLKBUF1_insert161 (
+CLKBUF1 CLKBUF1_insert148 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf10 )
 );
 
-CLKBUF1 CLKBUF1_insert160 (
+CLKBUF1 CLKBUF1_insert147 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf11 )
 );
 
-CLKBUF1 CLKBUF1_insert159 (
+CLKBUF1 CLKBUF1_insert146 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf12 )
 );
 
-CLKBUF1 CLKBUF1_insert158 (
+CLKBUF1 CLKBUF1_insert145 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf13 )
 );
 
-CLKBUF1 CLKBUF1_insert157 (
+CLKBUF1 CLKBUF1_insert144 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf14 )
 );
 
-CLKBUF1 CLKBUF1_insert156 (
+CLKBUF1 CLKBUF1_insert143 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf15 )
 );
 
-CLKBUF1 CLKBUF1_insert155 (
+CLKBUF1 CLKBUF1_insert142 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf16 )
 );
 
-CLKBUF1 CLKBUF1_insert154 (
+CLKBUF1 CLKBUF1_insert141 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf17 )
 );
 
-CLKBUF1 CLKBUF1_insert153 (
+CLKBUF1 CLKBUF1_insert140 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf18 )
 );
 
-CLKBUF1 CLKBUF1_insert152 (
+CLKBUF1 CLKBUF1_insert139 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf19 )
 );
 
-CLKBUF1 CLKBUF1_insert151 (
+CLKBUF1 CLKBUF1_insert138 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf20 )
 );
 
-CLKBUF1 CLKBUF1_insert150 (
+CLKBUF1 CLKBUF1_insert137 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf21 )
 );
 
-CLKBUF1 CLKBUF1_insert149 (
+CLKBUF1 CLKBUF1_insert136 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf22 )
 );
 
-CLKBUF1 CLKBUF1_insert148 (
+CLKBUF1 CLKBUF1_insert135 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf23 )
 );
 
-CLKBUF1 CLKBUF1_insert147 (
+CLKBUF1 CLKBUF1_insert134 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf24 )
 );
 
-CLKBUF1 CLKBUF1_insert146 (
+CLKBUF1 CLKBUF1_insert133 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf25 )
 );
 
-CLKBUF1 CLKBUF1_insert145 (
+CLKBUF1 CLKBUF1_insert132 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf26 )
 );
 
-CLKBUF1 CLKBUF1_insert144 (
+CLKBUF1 CLKBUF1_insert131 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf27 )
 );
 
-CLKBUF1 CLKBUF1_insert143 (
+CLKBUF1 CLKBUF1_insert130 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf28 )
 );
 
-CLKBUF1 CLKBUF1_insert142 (
+CLKBUF1 CLKBUF1_insert129 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf29 )
 );
 
-CLKBUF1 CLKBUF1_insert141 (
+CLKBUF1 CLKBUF1_insert128 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf30 )
 );
 
-CLKBUF1 CLKBUF1_insert140 (
+CLKBUF1 CLKBUF1_insert127 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf31 )
 );
 
-CLKBUF1 CLKBUF1_insert139 (
+CLKBUF1 CLKBUF1_insert126 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf32 )
 );
 
-CLKBUF1 CLKBUF1_insert138 (
+CLKBUF1 CLKBUF1_insert125 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf33 )
 );
 
-CLKBUF1 CLKBUF1_insert137 (
+CLKBUF1 CLKBUF1_insert124 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf34 )
 );
 
-CLKBUF1 CLKBUF1_insert136 (
+CLKBUF1 CLKBUF1_insert123 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf35 )
 );
 
-CLKBUF1 CLKBUF1_insert135 (
+CLKBUF1 CLKBUF1_insert122 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf36 )
 );
 
-CLKBUF1 CLKBUF1_insert134 (
+CLKBUF1 CLKBUF1_insert121 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf37 )
 );
 
-CLKBUF1 CLKBUF1_insert133 (
+CLKBUF1 CLKBUF1_insert120 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf38 )
 );
 
-CLKBUF1 CLKBUF1_insert132 (
+CLKBUF1 CLKBUF1_insert119 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf2 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf39 )
 );
 
-CLKBUF1 CLKBUF1_insert131 (
+CLKBUF1 CLKBUF1_insert118 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf1 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf40 )
 );
 
-CLKBUF1 CLKBUF1_insert130 (
+CLKBUF1 CLKBUF1_insert117 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf0 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf41 )
 );
 
-CLKBUF1 CLKBUF1_insert129 (
+CLKBUF1 CLKBUF1_insert116 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf5 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf42 )
 );
 
-CLKBUF1 CLKBUF1_insert128 (
+CLKBUF1 CLKBUF1_insert115 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf4 ),
     .Y(\gen_int_sys_clk.clk_sys_r_bF$buf43 )
 );
 
-CLKBUF1 CLKBUF1_insert127 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\gen_int_sys_clk.clk_sys_r_hier0_bF$buf3 ),
-    .Y(\gen_int_sys_clk.clk_sys_r_bF$buf44 )
-);
-
-BUFX2 BUFX2_insert126 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1040_),
-    .Y(_1040__bF$buf0)
-);
-
-BUFX2 BUFX2_insert125 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1040_),
-    .Y(_1040__bF$buf1)
-);
-
-BUFX2 BUFX2_insert124 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1040_),
-    .Y(_1040__bF$buf2)
-);
-
-BUFX2 BUFX2_insert123 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1040_),
-    .Y(_1040__bF$buf3)
-);
-
-BUFX2 BUFX2_insert122 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1040_),
-    .Y(_1040__bF$buf4)
-);
-
-BUFX2 BUFX2_insert121 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1052_),
-    .Y(_1052__bF$buf0)
-);
-
-BUFX2 BUFX2_insert120 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1052_),
-    .Y(_1052__bF$buf1)
-);
-
-BUFX2 BUFX2_insert119 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1052_),
-    .Y(_1052__bF$buf2)
-);
-
-BUFX2 BUFX2_insert118 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1052_),
-    .Y(_1052__bF$buf3)
-);
-
-BUFX2 BUFX2_insert117 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1052_),
-    .Y(_1052__bF$buf4)
-);
-
-BUFX2 BUFX2_insert116 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_733_),
-    .Y(_733__bF$buf0)
-);
-
-BUFX2 BUFX2_insert115 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_733_),
-    .Y(_733__bF$buf1)
-);
-
 BUFX2 BUFX2_insert114 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_733_),
-    .Y(_733__bF$buf2)
+    .A(_1002_),
+    .Y(_1002__bF$buf0)
 );
 
 BUFX2 BUFX2_insert113 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_733_),
-    .Y(_733__bF$buf3)
+    .A(_1002_),
+    .Y(_1002__bF$buf1)
 );
 
 BUFX2 BUFX2_insert112 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_733_),
-    .Y(_733__bF$buf4)
+    .A(_1002_),
+    .Y(_1002__bF$buf2)
 );
 
 BUFX2 BUFX2_insert111 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_733_),
-    .Y(_733__bF$buf5)
+    .A(_1002_),
+    .Y(_1002__bF$buf3)
 );
 
 BUFX2 BUFX2_insert110 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058_),
-    .Y(_1058__bF$buf0)
+    .A(_1002_),
+    .Y(_1002__bF$buf4)
 );
 
 BUFX2 BUFX2_insert109 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058_),
-    .Y(_1058__bF$buf1)
+    .A(_659_),
+    .Y(_659__bF$buf0)
 );
 
 BUFX2 BUFX2_insert108 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058_),
-    .Y(_1058__bF$buf2)
+    .A(_659_),
+    .Y(_659__bF$buf1)
 );
 
 BUFX2 BUFX2_insert107 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058_),
-    .Y(_1058__bF$buf3)
+    .A(_659_),
+    .Y(_659__bF$buf2)
 );
 
 BUFX2 BUFX2_insert106 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058_),
-    .Y(_1058__bF$buf4)
+    .A(_659_),
+    .Y(_659__bF$buf3)
 );
 
 BUFX2 BUFX2_insert105 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058_),
-    .Y(_1058__bF$buf5)
+    .A(_659_),
+    .Y(_659__bF$buf4)
 );
 
 BUFX2 BUFX2_insert104 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058_),
-    .Y(_1058__bF$buf6)
+    .A(_659_),
+    .Y(_659__bF$buf5)
 );
 
 BUFX2 BUFX2_insert103 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1067_),
-    .Y(_1067__bF$buf0)
+    .A(_1692_),
+    .Y(_1692__bF$buf0)
 );
 
 BUFX2 BUFX2_insert102 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1067_),
-    .Y(_1067__bF$buf1)
+    .A(_1692_),
+    .Y(_1692__bF$buf1)
 );
 
 BUFX2 BUFX2_insert101 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1067_),
-    .Y(_1067__bF$buf2)
+    .A(_1692_),
+    .Y(_1692__bF$buf2)
 );
 
 BUFX2 BUFX2_insert100 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1067_),
-    .Y(_1067__bF$buf3)
+    .A(_1692_),
+    .Y(_1692__bF$buf3)
 );
 
 BUFX2 BUFX2_insert99 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1067_),
-    .Y(_1067__bF$buf4)
+    .A(_1692_),
+    .Y(_1692__bF$buf4)
 );
 
 BUFX2 BUFX2_insert98 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126_),
-    .Y(_1126__bF$buf0)
+    .A(_994_),
+    .Y(_994__bF$buf0)
 );
 
 BUFX2 BUFX2_insert97 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126_),
-    .Y(_1126__bF$buf1)
+    .A(_994_),
+    .Y(_994__bF$buf1)
 );
 
 BUFX2 BUFX2_insert96 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126_),
-    .Y(_1126__bF$buf2)
+    .A(_994_),
+    .Y(_994__bF$buf2)
 );
 
 BUFX2 BUFX2_insert95 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126_),
-    .Y(_1126__bF$buf3)
+    .A(_994_),
+    .Y(_994__bF$buf3)
 );
 
 BUFX2 BUFX2_insert94 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126_),
-    .Y(_1126__bF$buf4)
+    .A(_994_),
+    .Y(_994__bF$buf4)
 );
 
 BUFX2 BUFX2_insert93 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126_),
-    .Y(_1126__bF$buf5)
+    .A(_994_),
+    .Y(_994__bF$buf5)
 );
 
 BUFX2 BUFX2_insert92 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126_),
-    .Y(_1126__bF$buf6)
+    .A(_674_),
+    .Y(_674__bF$buf0)
 );
 
 BUFX2 BUFX2_insert91 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126_),
-    .Y(_1126__bF$buf7)
+    .A(_674_),
+    .Y(_674__bF$buf1)
 );
 
 BUFX2 BUFX2_insert90 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_674_),
+    .Y(_674__bF$buf2)
+);
+
+BUFX2 BUFX2_insert89 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_674_),
+    .Y(_674__bF$buf3)
+);
+
+BUFX2 BUFX2_insert88 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1023_),
+    .Y(_1023__bF$buf0)
+);
+
+BUFX2 BUFX2_insert87 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1023_),
+    .Y(_1023__bF$buf1)
+);
+
+BUFX2 BUFX2_insert86 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1023_),
+    .Y(_1023__bF$buf2)
+);
+
+BUFX2 BUFX2_insert85 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1023_),
+    .Y(_1023__bF$buf3)
+);
+
+BUFX2 BUFX2_insert84 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1023_),
+    .Y(_1023__bF$buf4)
+);
+
+BUFX2 BUFX2_insert83 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1023_),
+    .Y(_1023__bF$buf5)
+);
+
+BUFX2 BUFX2_insert82 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1070_),
+    .Y(_1070__bF$buf0)
+);
+
+BUFX2 BUFX2_insert81 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1070_),
+    .Y(_1070__bF$buf1)
+);
+
+BUFX2 BUFX2_insert80 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1070_),
+    .Y(_1070__bF$buf2)
+);
+
+BUFX2 BUFX2_insert79 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1070_),
+    .Y(_1070__bF$buf3)
+);
+
+BUFX2 BUFX2_insert78 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1070_),
+    .Y(_1070__bF$buf4)
+);
+
+BUFX2 BUFX2_insert77 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1070_),
+    .Y(_1070__bF$buf5)
+);
+
+BUFX2 BUFX2_insert76 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1070_),
+    .Y(_1070__bF$buf6)
+);
+
+BUFX2 BUFX2_insert75 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.stream_active ),
     .Y(\u_rf_if.stream_active_bF$buf0 )
 );
 
-BUFX2 BUFX2_insert89 (
+BUFX2 BUFX2_insert74 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.stream_active ),
     .Y(\u_rf_if.stream_active_bF$buf1 )
 );
 
-BUFX2 BUFX2_insert88 (
+BUFX2 BUFX2_insert73 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.stream_active ),
     .Y(\u_rf_if.stream_active_bF$buf2 )
 );
 
-BUFX2 BUFX2_insert87 (
+BUFX2 BUFX2_insert72 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.stream_active ),
     .Y(\u_rf_if.stream_active_bF$buf3 )
 );
 
-BUFX2 BUFX2_insert86 (
+BUFX2 BUFX2_insert71 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.stream_active ),
     .Y(\u_rf_if.stream_active_bF$buf4 )
 );
 
-BUFX2 BUFX2_insert85 (
+BUFX2 BUFX2_insert70 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.stream_active ),
     .Y(\u_rf_if.stream_active_bF$buf5 )
 );
 
-BUFX2 BUFX2_insert84 (
+BUFX2 BUFX2_insert69 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.stream_active ),
     .Y(\u_rf_if.stream_active_bF$buf6 )
 );
 
-BUFX2 BUFX2_insert83 (
+BUFX2 BUFX2_insert68 (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.stream_active ),
     .Y(\u_rf_if.stream_active_bF$buf7 )
 );
 
-BUFX2 BUFX2_insert82 (
+BUFX2 BUFX2_insert67 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1693_),
-    .Y(_1693__bF$buf0)
+    .A(_1006_),
+    .Y(_1006__bF$buf0)
 );
 
-BUFX2 BUFX2_insert81 (
+BUFX2 BUFX2_insert66 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1693_),
-    .Y(_1693__bF$buf1)
+    .A(_1006_),
+    .Y(_1006__bF$buf1)
 );
 
-BUFX2 BUFX2_insert80 (
+BUFX2 BUFX2_insert65 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1693_),
-    .Y(_1693__bF$buf2)
+    .A(_1006_),
+    .Y(_1006__bF$buf2)
 );
 
-BUFX2 BUFX2_insert79 (
+BUFX2 BUFX2_insert64 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1693_),
-    .Y(_1693__bF$buf3)
+    .A(_1006_),
+    .Y(_1006__bF$buf3)
 );
 
-BUFX2 BUFX2_insert78 (
+BUFX2 BUFX2_insert63 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1693_),
-    .Y(_1693__bF$buf4)
+    .A(_1006_),
+    .Y(_1006__bF$buf4)
 );
 
-BUFX2 BUFX2_insert77 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1693_),
-    .Y(_1693__bF$buf5)
-);
-
-BUFX2 BUFX2_insert76 (
+BUFX2 BUFX2_insert62 (
     .vdd(vdd),
     .gnd(gnd),
     .A(mem_dbus_ack),
     .Y(mem_dbus_ack_bF$buf0)
 );
 
-BUFX2 BUFX2_insert75 (
+BUFX2 BUFX2_insert61 (
     .vdd(vdd),
     .gnd(gnd),
     .A(mem_dbus_ack),
     .Y(mem_dbus_ack_bF$buf1)
 );
 
-BUFX2 BUFX2_insert74 (
+BUFX2 BUFX2_insert60 (
     .vdd(vdd),
     .gnd(gnd),
     .A(mem_dbus_ack),
     .Y(mem_dbus_ack_bF$buf2)
 );
 
-BUFX2 BUFX2_insert73 (
+BUFX2 BUFX2_insert59 (
     .vdd(vdd),
     .gnd(gnd),
     .A(mem_dbus_ack),
     .Y(mem_dbus_ack_bF$buf3)
 );
 
-BUFX2 BUFX2_insert72 (
+BUFX2 BUFX2_insert58 (
     .vdd(vdd),
     .gnd(gnd),
     .A(mem_dbus_ack),
     .Y(mem_dbus_ack_bF$buf4)
 );
 
-BUFX2 BUFX2_insert71 (
+BUFX2 BUFX2_insert57 (
     .vdd(vdd),
     .gnd(gnd),
     .A(mem_dbus_ack),
     .Y(mem_dbus_ack_bF$buf5)
 );
 
-BUFX2 BUFX2_insert70 (
+BUFX2 BUFX2_insert56 (
     .vdd(vdd),
     .gnd(gnd),
     .A(mem_dbus_ack),
     .Y(mem_dbus_ack_bF$buf6)
 );
 
-CLKBUF1 CLKBUF1_insert69 (
+CLKBUF1 CLKBUF1_insert55 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_clk_fast),
     .Y(i_clk_fast_bF$buf0)
 );
 
-CLKBUF1 CLKBUF1_insert68 (
+CLKBUF1 CLKBUF1_insert54 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_clk_fast),
     .Y(i_clk_fast_bF$buf1)
 );
 
-CLKBUF1 CLKBUF1_insert67 (
+CLKBUF1 CLKBUF1_insert53 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_clk_fast),
     .Y(i_clk_fast_bF$buf2)
 );
 
-CLKBUF1 CLKBUF1_insert66 (
+CLKBUF1 CLKBUF1_insert52 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_clk_fast),
     .Y(i_clk_fast_bF$buf3)
 );
 
-CLKBUF1 CLKBUF1_insert65 (
+CLKBUF1 CLKBUF1_insert51 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_clk_fast),
     .Y(i_clk_fast_bF$buf4)
 );
 
-CLKBUF1 CLKBUF1_insert64 (
+CLKBUF1 CLKBUF1_insert50 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_clk_fast),
     .Y(i_clk_fast_bF$buf5)
 );
 
-CLKBUF1 CLKBUF1_insert63 (
+CLKBUF1 CLKBUF1_insert49 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_clk_fast),
     .Y(i_clk_fast_bF$buf6)
 );
 
-CLKBUF1 CLKBUF1_insert62 (
+CLKBUF1 CLKBUF1_insert48 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_clk_fast),
     .Y(i_clk_fast_bF$buf7)
 );
 
-BUFX2 BUFX2_insert61 (
+CLKBUF1 CLKBUF1_insert47 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_190_),
-    .Y(_190__bF$buf0)
+    .A(i_clk_fast),
+    .Y(i_clk_fast_bF$buf8)
 );
 
-BUFX2 BUFX2_insert60 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_190_),
-    .Y(_190__bF$buf1)
-);
-
-BUFX2 BUFX2_insert59 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_190_),
-    .Y(_190__bF$buf2)
-);
-
-BUFX2 BUFX2_insert58 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_190_),
-    .Y(_190__bF$buf3)
-);
-
-BUFX2 BUFX2_insert57 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_190_),
-    .Y(_190__bF$buf4)
-);
-
-BUFX2 BUFX2_insert56 (
+BUFX2 BUFX2_insert46 (
     .vdd(vdd),
     .gnd(gnd),
     .A(ibus_pending_ack),
     .Y(ibus_pending_ack_bF$buf0)
 );
 
-BUFX2 BUFX2_insert55 (
+BUFX2 BUFX2_insert45 (
     .vdd(vdd),
     .gnd(gnd),
     .A(ibus_pending_ack),
     .Y(ibus_pending_ack_bF$buf1)
 );
 
-BUFX2 BUFX2_insert54 (
+BUFX2 BUFX2_insert44 (
     .vdd(vdd),
     .gnd(gnd),
     .A(ibus_pending_ack),
     .Y(ibus_pending_ack_bF$buf2)
 );
 
-BUFX2 BUFX2_insert53 (
+BUFX2 BUFX2_insert43 (
     .vdd(vdd),
     .gnd(gnd),
     .A(ibus_pending_ack),
     .Y(ibus_pending_ack_bF$buf3)
 );
 
-BUFX2 BUFX2_insert52 (
+BUFX2 BUFX2_insert42 (
     .vdd(vdd),
     .gnd(gnd),
     .A(ibus_pending_ack),
     .Y(ibus_pending_ack_bF$buf4)
 );
 
-BUFX2 BUFX2_insert51 (
+BUFX2 BUFX2_insert41 (
     .vdd(vdd),
     .gnd(gnd),
     .A(ibus_pending_ack),
     .Y(ibus_pending_ack_bF$buf5)
 );
 
-BUFX2 BUFX2_insert50 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(ibus_pending_ack),
-    .Y(ibus_pending_ack_bF$buf6)
-);
-
-BUFX2 BUFX2_insert49 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440_),
-    .Y(_440__bF$buf0)
-);
-
-BUFX2 BUFX2_insert48 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440_),
-    .Y(_440__bF$buf1)
-);
-
-BUFX2 BUFX2_insert47 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440_),
-    .Y(_440__bF$buf2)
-);
-
-BUFX2 BUFX2_insert46 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440_),
-    .Y(_440__bF$buf3)
-);
-
-BUFX2 BUFX2_insert45 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440_),
-    .Y(_440__bF$buf4)
-);
-
-BUFX2 BUFX2_insert44 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440_),
-    .Y(_440__bF$buf5)
-);
-
-BUFX2 BUFX2_insert43 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_12_),
-    .Y(_12__bF$buf0)
-);
-
-BUFX2 BUFX2_insert42 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_12_),
-    .Y(_12__bF$buf1)
-);
-
-BUFX2 BUFX2_insert41 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_12_),
-    .Y(_12__bF$buf2)
-);
-
 BUFX2 BUFX2_insert40 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12_),
-    .Y(_12__bF$buf3)
+    .A(_602_),
+    .Y(_602__bF$buf0)
 );
 
 BUFX2 BUFX2_insert39 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12_),
-    .Y(_12__bF$buf4)
+    .A(_602_),
+    .Y(_602__bF$buf1)
 );
 
 BUFX2 BUFX2_insert38 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12_),
-    .Y(_12__bF$buf5)
+    .A(_602_),
+    .Y(_602__bF$buf2)
 );
 
 BUFX2 BUFX2_insert37 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12_),
-    .Y(_12__bF$buf6)
+    .A(_602_),
+    .Y(_602__bF$buf3)
 );
 
 BUFX2 BUFX2_insert36 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1062_),
-    .Y(_1062__bF$buf0)
+    .A(_602_),
+    .Y(_602__bF$buf4)
 );
 
 BUFX2 BUFX2_insert35 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1062_),
-    .Y(_1062__bF$buf1)
-);
-
-BUFX2 BUFX2_insert34 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1062_),
-    .Y(_1062__bF$buf2)
-);
-
-BUFX2 BUFX2_insert33 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1062_),
-    .Y(_1062__bF$buf3)
-);
-
-BUFX2 BUFX2_insert32 (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1062_),
-    .Y(_1062__bF$buf4)
-);
-
-BUFX2 BUFX2_insert31 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_rst_n),
     .Y(i_rst_n_bF$buf0)
 );
 
-BUFX2 BUFX2_insert30 (
+BUFX2 BUFX2_insert34 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_rst_n),
     .Y(i_rst_n_bF$buf1)
 );
 
-BUFX2 BUFX2_insert29 (
+BUFX2 BUFX2_insert33 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_rst_n),
     .Y(i_rst_n_bF$buf2)
 );
 
-BUFX2 BUFX2_insert28 (
+BUFX2 BUFX2_insert32 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_rst_n),
     .Y(i_rst_n_bF$buf3)
 );
 
-BUFX2 BUFX2_insert27 (
+BUFX2 BUFX2_insert31 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_rst_n),
     .Y(i_rst_n_bF$buf4)
 );
 
-BUFX2 BUFX2_insert26 (
+BUFX2 BUFX2_insert30 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_rst_n),
     .Y(i_rst_n_bF$buf5)
 );
 
-BUFX2 BUFX2_insert25 (
+BUFX2 BUFX2_insert29 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_rst_n),
     .Y(i_rst_n_bF$buf6)
 );
 
-BUFX2 BUFX2_insert24 (
+BUFX2 BUFX2_insert28 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_rst_n),
     .Y(i_rst_n_bF$buf7)
 );
 
-BUFX2 BUFX2_insert23 (
+BUFX2 BUFX2_insert27 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_rst_n),
     .Y(i_rst_n_bF$buf8)
 );
 
-BUFX2 BUFX2_insert22 (
+BUFX2 BUFX2_insert26 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_rst_n),
     .Y(i_rst_n_bF$buf9)
 );
 
-BUFX2 BUFX2_insert21 (
+BUFX2 BUFX2_insert25 (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_rst_n),
     .Y(i_rst_n_bF$buf10)
 );
 
+BUFX2 BUFX2_insert24 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(i_rst_n),
+    .Y(i_rst_n_bF$buf11)
+);
+
+BUFX2 BUFX2_insert23 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_570_),
+    .Y(_570__bF$buf0)
+);
+
+BUFX2 BUFX2_insert22 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_570_),
+    .Y(_570__bF$buf1)
+);
+
+BUFX2 BUFX2_insert21 (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_570_),
+    .Y(_570__bF$buf2)
+);
+
 BUFX2 BUFX2_insert20 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ren),
-    .Y(ren_bF$buf0)
+    .A(_570_),
+    .Y(_570__bF$buf3)
 );
 
 BUFX2 BUFX2_insert19 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ren),
-    .Y(ren_bF$buf1)
+    .A(_570_),
+    .Y(_570__bF$buf4)
 );
 
 BUFX2 BUFX2_insert18 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ren),
-    .Y(ren_bF$buf2)
+    .A(_212_),
+    .Y(_212__bF$buf0)
 );
 
 BUFX2 BUFX2_insert17 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ren),
-    .Y(ren_bF$buf3)
+    .A(_212_),
+    .Y(_212__bF$buf1)
 );
 
 BUFX2 BUFX2_insert16 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we ),
-    .Y(\u_mem_serial.active_we_bF$buf0 )
+    .A(_212_),
+    .Y(_212__bF$buf2)
 );
 
 BUFX2 BUFX2_insert15 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we ),
-    .Y(\u_mem_serial.active_we_bF$buf1 )
+    .A(_212_),
+    .Y(_212__bF$buf3)
 );
 
 BUFX2 BUFX2_insert14 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we ),
-    .Y(\u_mem_serial.active_we_bF$buf2 )
+    .A(_212_),
+    .Y(_212__bF$buf4)
 );
 
 BUFX2 BUFX2_insert13 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we ),
-    .Y(\u_mem_serial.active_we_bF$buf3 )
+    .A(_673_),
+    .Y(_673__bF$buf0)
 );
 
 BUFX2 BUFX2_insert12 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we ),
-    .Y(\u_mem_serial.active_we_bF$buf4 )
+    .A(_673_),
+    .Y(_673__bF$buf1)
 );
 
 BUFX2 BUFX2_insert11 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_661_),
-    .Y(_661__bF$buf0)
+    .A(_673_),
+    .Y(_673__bF$buf2)
 );
 
 BUFX2 BUFX2_insert10 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_661_),
-    .Y(_661__bF$buf1)
+    .A(_673_),
+    .Y(_673__bF$buf3)
 );
 
 BUFX2 BUFX2_insert9 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_661_),
-    .Y(_661__bF$buf2)
+    .A(_1536_),
+    .Y(_1536__bF$buf0)
 );
 
 BUFX2 BUFX2_insert8 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_661_),
-    .Y(_661__bF$buf3)
+    .A(_1536_),
+    .Y(_1536__bF$buf1)
 );
 
 BUFX2 BUFX2_insert7 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_661_),
-    .Y(_661__bF$buf4)
+    .A(_1536_),
+    .Y(_1536__bF$buf2)
 );
 
 BUFX2 BUFX2_insert6 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824_),
-    .Y(_1824__bF$buf0)
+    .A(_1536_),
+    .Y(_1536__bF$buf3)
 );
 
 BUFX2 BUFX2_insert5 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824_),
-    .Y(_1824__bF$buf1)
+    .A(_1536_),
+    .Y(_1536__bF$buf4)
 );
 
 BUFX2 BUFX2_insert4 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824_),
-    .Y(_1824__bF$buf2)
+    .A(_450_),
+    .Y(_450__bF$buf0)
 );
 
 BUFX2 BUFX2_insert3 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824_),
-    .Y(_1824__bF$buf3)
+    .A(_450_),
+    .Y(_450__bF$buf1)
 );
 
 BUFX2 BUFX2_insert2 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824_),
-    .Y(_1824__bF$buf4)
+    .A(_450_),
+    .Y(_450__bF$buf2)
 );
 
 BUFX2 BUFX2_insert1 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824_),
-    .Y(_1824__bF$buf5)
+    .A(_450_),
+    .Y(_450__bF$buf3)
 );
 
 BUFX2 BUFX2_insert0 (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824_),
-    .Y(_1824__bF$buf6)
+    .A(_450_),
+    .Y(_450__bF$buf4)
 );
 
-BUFX2 _1912_ (
+BUFX2 _1860_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1910_),
+    .A(_1858_),
     .Y(o_rf_sync)
 );
 
-BUFX2 _1913_ (
+BUFX2 _1861_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1909_),
+    .A(_1857_),
     .Y(o_rf_sck)
 );
 
-BUFX2 _1914_ (
+BUFX2 _1862_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1908_),
+    .A(_1856_),
     .Y(o_rf_mosi)
 );
 
-BUFX2 _1915_ (
+BUFX2 _1863_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1907_),
+    .A(_1855_),
     .Y(o_mem_sync)
 );
 
-BUFX2 _1916_ (
+BUFX2 _1864_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1906_),
+    .A(_1854_),
     .Y(o_mem_sck)
 );
 
-BUFX2 _1917_ (
+BUFX2 _1865_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(_0_),
     .Y(o_mem_mosi)
 );
 
-OAI21X1 _1918_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.bit_count [0]),
-    .B(_1098_),
-    .C(\u_mem_serial.bit_count [1]),
-    .Y(_1095_)
-);
-
-INVX2 _1919_ (
+AOI21X1 _1866_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_mem_serial.bit_count [1]),
-    .Y(_1094_)
+    .B(_1041_),
+    .C(_1040_),
+    .Y(_1039_)
 );
 
-AOI21X1 _1920_ (
+NOR2X1 _1867_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1097_),
-    .B(_1094_),
-    .C(_1106_),
-    .Y(_1093_)
+    .A(_1070__bF$buf6),
+    .B(_1039_),
+    .Y(_1460_)
 );
 
-AOI21X1 _1921_ (
+INVX1 _1868_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1093_),
-    .B(_1095_),
-    .C(_1126__bF$buf7),
-    .Y(_1514_)
+    .A(\u_mem_serial.bit_count [1]),
+    .Y(_1038_)
 );
 
-NAND2X1 _1922_ (
+NAND2X1 _1869_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1094_),
-    .B(_1097_),
-    .Y(_1092_)
+    .A(_1038_),
+    .B(_1042_),
+    .Y(_1037_)
 );
 
-OAI21X1 _1923_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.bit_count [2]),
-    .B(_1092_),
-    .C(_1107_),
-    .Y(_1091_)
-);
-
-AOI21X1 _1924_ (
+OAI21X1 _1870_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_mem_serial.bit_count [2]),
-    .B(_1092_),
-    .C(_1091_),
-    .Y(_1090_)
+    .B(_1037_),
+    .C(_1052_),
+    .Y(_1036_)
 );
 
-NOR2X1 _1925_ (
+AOI21X1 _1871_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf6),
-    .B(_1090_),
-    .Y(_1513_)
+    .A(\u_mem_serial.bit_count [2]),
+    .B(_1037_),
+    .C(_1036_),
+    .Y(_1035_)
+);
+
+NOR2X1 _1872_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1070__bF$buf5),
+    .B(_1035_),
+    .Y(_1459_)
+);
+
+INVX1 _1873_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [3]),
+    .Y(_1034_)
+);
+
+NOR2X1 _1874_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [2]),
+    .B(_1037_),
+    .Y(_1033_)
+);
+
+NAND2X1 _1875_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1034_),
+    .B(_1033_),
+    .Y(_1032_)
+);
+
+OAI21X1 _1876_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [2]),
+    .B(_1037_),
+    .C(\u_mem_serial.bit_count [3]),
+    .Y(_1031_)
+);
+
+AOI21X1 _1877_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1032_),
+    .B(_1031_),
+    .C(_1049_),
+    .Y(_1458_)
+);
+
+NOR2X1 _1878_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [4]),
+    .B(_1032_),
+    .Y(_1030_)
+);
+
+INVX1 _1879_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1030_),
+    .Y(_1029_)
+);
+
+NAND2X1 _1880_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [4]),
+    .B(_1032_),
+    .Y(_1028_)
+);
+
+AOI21X1 _1881_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1029_),
+    .B(_1028_),
+    .C(_1049_),
+    .Y(_1457_)
+);
+
+OAI21X1 _1882_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [5]),
+    .B(_1030_),
+    .C(_1050_),
+    .Y(_1027_)
+);
+
+AOI21X1 _1883_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [5]),
+    .B(_1030_),
+    .C(_1027_),
+    .Y(_1456_)
+);
+
+INVX1 _1884_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [6]),
+    .Y(_1026_)
+);
+
+INVX1 _1885_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [5]),
+    .Y(_1025_)
+);
+
+INVX2 _1886_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.state [0]),
+    .Y(_1024_)
+);
+
+NOR2X1 _1887_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.state [1]),
+    .B(_1024_),
+    .Y(_1023_)
+);
+
+NAND3X1 _1888_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1026_),
+    .B(_1025_),
+    .C(_1023__bF$buf5),
+    .Y(_1022_)
+);
+
+INVX1 _1889_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [4]),
+    .Y(_1021_)
+);
+
+NOR2X1 _1890_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [3]),
+    .B(\u_mem_serial.bit_count [2]),
+    .Y(_1020_)
+);
+
+NAND2X1 _1891_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1021_),
+    .B(_1020_),
+    .Y(_1019_)
+);
+
+INVX1 _1892_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1019_),
+    .Y(_1018_)
+);
+
+NOR2X1 _1893_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [0]),
+    .B(_1038_),
+    .Y(_1017_)
+);
+
+AOI21X1 _1894_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1018_),
+    .B(_1017_),
+    .C(_1022_),
+    .Y(_1016_)
+);
+
+NAND2X1 _1895_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1038_),
+    .B(_1018_),
+    .Y(_1015_)
+);
+
+NAND3X1 _1896_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1038_),
+    .B(\u_mem_serial.bit_count [0]),
+    .C(_1020_),
+    .Y(_1014_)
+);
+
+NAND3X1 _1897_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [5]),
+    .B(_1026_),
+    .C(_1021_),
+    .Y(_1013_)
+);
+
+NOR2X1 _1898_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1013_),
+    .B(_1014_),
+    .Y(_1012_)
+);
+
+NOR2X1 _1899_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1012_),
+    .B(_1015_),
+    .Y(_1011_)
+);
+
+NAND2X1 _1900_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1016_),
+    .B(_1011_),
+    .Y(_1010_)
+);
+
+NAND2X1 _1901_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1010_),
+    .B(_1043_),
+    .Y(_1009_)
+);
+
+INVX1 _1902_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.pc ),
+    .Y(_1008_)
+);
+
+NOR2X1 _1903_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1070__bF$buf4),
+    .B(_1069_),
+    .Y(_1007_)
+);
+
+OAI21X1 _1904_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1061_),
+    .B(_1064_),
+    .C(_1007_),
+    .Y(_1006_)
+);
+
+INVX1 _1905_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1006__bF$buf4),
+    .Y(_1005_)
+);
+
+OAI21X1 _1906_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.state [1]),
+    .B(_1024_),
+    .C(_1005_),
+    .Y(_1004_)
+);
+
+OAI21X1 _1907_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [1]),
+    .B(_1019_),
+    .C(\u_mem_serial.bit_count [5]),
+    .Y(_1003_)
+);
+
+INVX8 _1908_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1023__bF$buf4),
+    .Y(_1002_)
+);
+
+INVX1 _1909_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.active_we ),
+    .Y(_1001_)
+);
+
+NAND2X1 _1910_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(i_mem_miso),
+    .B(_1001_),
+    .Y(_1000_)
+);
+
+NOR2X1 _1911_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1000_),
+    .B(_1002__bF$buf4),
+    .Y(_999_)
+);
+
+NAND3X1 _1912_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1026_),
+    .B(_1003_),
+    .C(_999_),
+    .Y(_998_)
+);
+
+OAI21X1 _1913_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1008_),
+    .B(_1004_),
+    .C(_998_),
+    .Y(_997_)
+);
+
+MUX2X1 _1914_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.shift_reg [0]),
+    .B(_997_),
+    .S(_1009_),
+    .Y(_996_)
+);
+
+NOR2X1 _1915_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1070__bF$buf3),
+    .B(_996_),
+    .Y(_1455_)
+);
+
+INVX1 _1916_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [1]),
+    .Y(_995_)
+);
+
+NAND2X1 _1917_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.active_we ),
+    .B(_1012_),
+    .Y(_994_)
+);
+
+NAND3X1 _1918_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.shift_reg [0]),
+    .B(_1023__bF$buf3),
+    .C(_994__bF$buf5),
+    .Y(_993_)
+);
+
+OAI21X1 _1919_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_995_),
+    .B(_1004_),
+    .C(_993_),
+    .Y(_992_)
+);
+
+MUX2X1 _1920_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.shift_reg [1]),
+    .B(_992_),
+    .S(_1009_),
+    .Y(_991_)
+);
+
+NOR2X1 _1921_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1070__bF$buf2),
+    .B(_991_),
+    .Y(_1454_)
+);
+
+MUX2X1 _1922_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.data [2]),
+    .B(\u_cpu.ctrl.o_ibus_adr [2]),
+    .S(_1006__bF$buf3),
+    .Y(_990_)
+);
+
+NAND3X1 _1923_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.shift_reg [1]),
+    .B(_1023__bF$buf2),
+    .C(_994__bF$buf4),
+    .Y(_989_)
+);
+
+OAI21X1 _1924_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1023__bF$buf1),
+    .B(_990_),
+    .C(_989_),
+    .Y(_988_)
+);
+
+MUX2X1 _1925_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.shift_reg [2]),
+    .B(_988_),
+    .S(_1009_),
+    .Y(_987_)
 );
 
 NOR2X1 _1926_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [2]),
-    .B(_1092_),
-    .Y(_1089_)
+    .A(_1070__bF$buf1),
+    .B(_987_),
+    .Y(_1453_)
 );
 
-OAI21X1 _1927_ (
+MUX2X1 _1927_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [3]),
-    .B(_1089_),
-    .C(_1105_),
-    .Y(_1088_)
+    .A(\u_cpu.bufreg.data [3]),
+    .B(\u_cpu.ctrl.o_ibus_adr [3]),
+    .S(_1006__bF$buf2),
+    .Y(_986_)
 );
 
-AOI21X1 _1928_ (
+NAND3X1 _1928_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [3]),
-    .B(_1089_),
-    .C(_1088_),
-    .Y(_1512_)
+    .A(\u_mem_serial.shift_reg [2]),
+    .B(_1023__bF$buf0),
+    .C(_994__bF$buf3),
+    .Y(_985_)
 );
 
-INVX1 _1929_ (
+OAI21X1 _1929_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [4]),
-    .Y(_1087_)
+    .A(_1023__bF$buf5),
+    .B(_986_),
+    .C(_985_),
+    .Y(_984_)
 );
 
-INVX1 _1930_ (
+MUX2X1 _1930_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [3]),
-    .Y(_1086_)
+    .A(\u_mem_serial.shift_reg [3]),
+    .B(_984_),
+    .S(_1009_),
+    .Y(_983_)
 );
 
-INVX1 _1931_ (
+NOR2X1 _1931_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [2]),
-    .Y(_1085_)
+    .A(_1070__bF$buf0),
+    .B(_983_),
+    .Y(_1452_)
 );
 
-NOR2X1 _1932_ (
+MUX2X1 _1932_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [1]),
-    .B(\u_mem_serial.bit_count [0]),
-    .Y(_1084_)
+    .A(\u_cpu.bufreg.data [4]),
+    .B(\u_cpu.ctrl.o_ibus_adr [4]),
+    .S(_1006__bF$buf1),
+    .Y(_982_)
 );
 
 NAND3X1 _1933_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1086_),
-    .B(_1085_),
-    .C(_1084_),
-    .Y(_1083_)
+    .A(\u_mem_serial.shift_reg [3]),
+    .B(_1023__bF$buf4),
+    .C(_994__bF$buf2),
+    .Y(_981_)
 );
 
-NOR2X1 _1934_ (
+OAI21X1 _1934_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1083_),
-    .B(_1098_),
-    .Y(_1082_)
+    .A(_1023__bF$buf3),
+    .B(_982_),
+    .C(_981_),
+    .Y(_980_)
 );
 
-NAND2X1 _1935_ (
+MUX2X1 _1935_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1087_),
-    .B(_1082_),
-    .Y(_1081_)
+    .A(\u_mem_serial.shift_reg [4]),
+    .B(_980_),
+    .S(_1009_),
+    .Y(_979_)
 );
 
-OAI21X1 _1936_ (
+NOR2X1 _1936_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1083_),
-    .B(_1098_),
-    .C(\u_mem_serial.bit_count [4]),
-    .Y(_1080_)
+    .A(_1070__bF$buf6),
+    .B(_979_),
+    .Y(_1451_)
 );
 
-AOI21X1 _1937_ (
+MUX2X1 _1937_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1081_),
-    .B(_1080_),
-    .C(_1104_),
-    .Y(_1511_)
+    .A(\u_cpu.bufreg.data [5]),
+    .B(\u_cpu.ctrl.o_ibus_adr [5]),
+    .S(_1006__bF$buf0),
+    .Y(_978_)
 );
 
-INVX1 _1938_ (
+NAND3X1 _1938_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [5]),
-    .Y(_1079_)
+    .A(\u_mem_serial.shift_reg [4]),
+    .B(_1023__bF$buf2),
+    .C(_994__bF$buf1),
+    .Y(_977_)
 );
 
-INVX1 _1939_ (
+OAI21X1 _1939_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1081_),
-    .Y(_1078_)
+    .A(_1023__bF$buf1),
+    .B(_978_),
+    .C(_977_),
+    .Y(_976_)
 );
 
-NOR2X1 _1940_ (
+MUX2X1 _1940_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [5]),
-    .B(\u_mem_serial.bit_count [4]),
-    .Y(_1077_)
+    .A(\u_mem_serial.shift_reg [5]),
+    .B(_976_),
+    .S(_1009_),
+    .Y(_975_)
 );
 
-NAND2X1 _1941_ (
+NOR2X1 _1941_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1077_),
-    .B(_1082_),
-    .Y(_1076_)
+    .A(_1070__bF$buf5),
+    .B(_975_),
+    .Y(_1450_)
 );
 
-OAI21X1 _1942_ (
+INVX1 _1942_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1079_),
-    .B(_1078_),
-    .C(_1076_),
-    .Y(_1075_)
+    .A(\u_mem_serial.shift_reg [6]),
+    .Y(_974_)
 );
 
-AND2X2 _1943_ (
+INVX8 _1943_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1075_),
-    .B(_1105_),
-    .Y(_1510_)
+    .A(_1009_),
+    .Y(_973_)
 );
 
-NOR2X1 _1944_ (
+MUX2X1 _1944_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [6]),
-    .B(\u_mem_serial.bit_count [5]),
-    .Y(_1074_)
+    .A(\u_mem_serial.shift_reg [5]),
+    .B(\u_cpu.bufreg2.dlo [0]),
+    .S(_994__bF$buf0),
+    .Y(_972_)
 );
 
-NAND3X1 _1945_ (
+NOR2X1 _1945_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1087_),
-    .B(_1086_),
-    .C(_1085_),
-    .Y(_1073_)
+    .A(_1002__bF$buf3),
+    .B(_972_),
+    .Y(_971_)
 );
 
-INVX1 _1946_ (
+MUX2X1 _1946_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1073_),
-    .Y(_1072_)
+    .A(\u_cpu.bufreg.data [6]),
+    .B(\u_cpu.ctrl.o_ibus_adr [6]),
+    .S(_1006__bF$buf4),
+    .Y(_970_)
 );
 
-NAND3X1 _1947_ (
+NOR2X1 _1947_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1094_),
-    .B(_1074_),
-    .C(_1072_),
-    .Y(_1071_)
+    .A(_1023__bF$buf0),
+    .B(_970_),
+    .Y(_969_)
 );
 
-OR2X2 _1948_ (
+OAI21X1 _1948_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1083_),
-    .B(\u_mem_serial.bit_count [4]),
-    .Y(_1070_)
+    .A(_971_),
+    .B(_969_),
+    .C(_973__bF$buf6),
+    .Y(_968_)
 );
 
 OAI21X1 _1949_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [5]),
-    .B(_1070_),
-    .C(\u_mem_serial.bit_count [6]),
-    .Y(_1069_)
+    .A(_974_),
+    .B(_973__bF$buf5),
+    .C(_968_),
+    .Y(_967_)
 );
 
-NAND2X1 _1950_ (
+AND2X2 _1950_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1071_),
-    .B(_1069_),
-    .Y(_1068_)
+    .A(_967_),
+    .B(i_rst_n_bF$buf11),
+    .Y(_1449_)
 );
 
-OAI21X1 _1951_ (
+INVX1 _1951_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1068_),
-    .B(_1098_),
-    .C(_1107_),
-    .Y(_1067_)
+    .A(\u_mem_serial.shift_reg [7]),
+    .Y(_966_)
 );
 
-INVX1 _1952_ (
+MUX2X1 _1952_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [0]),
-    .Y(_1066_)
+    .A(\u_mem_serial.shift_reg [6]),
+    .B(\u_cpu.bufreg2.dlo [1]),
+    .S(_994__bF$buf5),
+    .Y(_965_)
 );
 
 NOR2X1 _1953_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [6]),
-    .B(_1079_),
-    .Y(_1065_)
+    .A(_1002__bF$buf2),
+    .B(_965_),
+    .Y(_964_)
 );
 
-INVX1 _1954_ (
+MUX2X1 _1954_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [0]),
-    .Y(_1064_)
+    .A(\u_cpu.bufreg.data [7]),
+    .B(\u_cpu.ctrl.o_ibus_adr [7]),
+    .S(_1006__bF$buf3),
+    .Y(_963_)
 );
 
 NOR2X1 _1955_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.bit_count [1]),
-    .B(_1064_),
-    .Y(_1063_)
+    .A(_1023__bF$buf5),
+    .B(_963_),
+    .Y(_962_)
 );
 
-NAND3X1 _1956_ (
+OAI21X1 _1956_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1065_),
-    .B(_1063_),
-    .C(_1072_),
-    .Y(_1062_)
+    .A(_964_),
+    .B(_962_),
+    .C(_973__bF$buf4),
+    .Y(_961_)
 );
 
 OAI21X1 _1957_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1066_),
-    .B(_1062__bF$buf4),
-    .C(\u_mem_serial.active_we_bF$buf4 ),
-    .Y(_1061_)
+    .A(_966_),
+    .B(_973__bF$buf3),
+    .C(_961_),
+    .Y(_960_)
 );
 
-AOI21X1 _1958_ (
+AND2X2 _1958_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1072_),
-    .B(_1094_),
-    .C(_1079_),
-    .Y(_1060_)
+    .A(_960_),
+    .B(i_rst_n_bF$buf10),
+    .Y(_1448_)
 );
 
 INVX1 _1959_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.state [0]),
-    .Y(_1059_)
+    .A(\u_mem_serial.shift_reg [8]),
+    .Y(_959_)
 );
 
-NOR2X1 _1960_ (
+MUX2X1 _1960_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.state [1]),
-    .B(_1059_),
-    .Y(_1058_)
-);
-
-INVX1 _1961_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1058__bF$buf6),
-    .Y(_1057_)
-);
-
-NOR2X1 _1962_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.bit_count [6]),
-    .B(_1057_),
-    .Y(_1056_)
-);
-
-OAI21X1 _1963_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf3 ),
-    .B(i_mem_miso),
-    .C(_1056_),
-    .Y(_1055_)
-);
-
-NOR2X1 _1964_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1060_),
-    .B(_1055_),
-    .Y(_1054_)
-);
-
-NAND2X1 _1965_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1061_),
-    .B(_1054_),
-    .Y(_1053_)
-);
-
-OAI21X1 _1966_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1117_),
-    .B(_1120_),
-    .C(_1124_),
-    .Y(_1052_)
-);
-
-OAI21X1 _1967_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.state [1]),
-    .B(_1059_),
-    .C(\u_cpu.ctrl.pc ),
-    .Y(_1051_)
-);
-
-OAI21X1 _1968_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1051_),
-    .B(_1052__bF$buf4),
-    .C(_1053_),
-    .Y(_1050_)
-);
-
-MUX2X1 _1969_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1050_),
-    .B(\u_mem_serial.shift_reg [0]),
-    .S(_1067__bF$buf4),
-    .Y(_1049_)
-);
-
-NOR2X1 _1970_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1126__bF$buf5),
-    .B(_1049_),
-    .Y(_1509_)
-);
-
-INVX1 _1971_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf2 ),
-    .Y(_1048_)
-);
-
-INVX1 _1972_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [1]),
-    .Y(_1047_)
-);
-
-NOR2X1 _1973_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1048_),
-    .B(_1047_),
-    .Y(_1046_)
-);
-
-MUX2X1 _1974_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [0]),
-    .B(_1046_),
-    .S(_1062__bF$buf3),
-    .Y(_1045_)
-);
-
-OAI21X1 _1975_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.state [1]),
-    .B(_1059_),
-    .C(\u_cpu.ctrl.o_ibus_adr [1]),
-    .Y(_1044_)
-);
-
-OAI22X1 _1976_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1052__bF$buf3),
-    .B(_1044_),
-    .C(_1057_),
-    .D(_1045_),
-    .Y(_1043_)
-);
-
-MUX2X1 _1977_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1043_),
-    .B(\u_mem_serial.shift_reg [1]),
-    .S(_1067__bF$buf3),
-    .Y(_1042_)
-);
-
-NOR2X1 _1978_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1126__bF$buf4),
-    .B(_1042_),
-    .Y(_1508_)
-);
-
-INVX1 _1979_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [1]),
-    .Y(_1041_)
-);
-
-INVX8 _1980_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1062__bF$buf2),
-    .Y(_1040_)
-);
-
-NOR2X1 _1981_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1041_),
-    .B(_1040__bF$buf4),
-    .Y(_1039_)
-);
-
-NAND2X1 _1982_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf1 ),
+    .A(\u_mem_serial.shift_reg [7]),
     .B(\u_cpu.bufreg2.dlo [2]),
-    .Y(_1038_)
+    .S(_994__bF$buf4),
+    .Y(_958_)
 );
 
-NOR2X1 _1983_ (
+NOR2X1 _1961_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1038_),
-    .B(_1062__bF$buf1),
-    .Y(_1037_)
+    .A(_1002__bF$buf1),
+    .B(_958_),
+    .Y(_957_)
 );
 
-OAI21X1 _1984_ (
+MUX2X1 _1962_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1037_),
-    .B(_1039_),
-    .C(_1058__bF$buf5),
-    .Y(_1036_)
+    .A(\u_cpu.bufreg.data [8]),
+    .B(\u_cpu.ctrl.o_ibus_adr [8]),
+    .S(_1006__bF$buf2),
+    .Y(_956_)
 );
 
-MUX2X1 _1985_ (
+NOR2X1 _1963_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [2]),
-    .B(\u_cpu.ctrl.o_ibus_adr [2]),
-    .S(_1052__bF$buf2),
-    .Y(_1035_)
+    .A(_1023__bF$buf4),
+    .B(_956_),
+    .Y(_955_)
 );
 
-OAI21X1 _1986_ (
+OAI21X1 _1964_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf4),
-    .B(_1035_),
-    .C(_1036_),
-    .Y(_1034_)
+    .A(_957_),
+    .B(_955_),
+    .C(_973__bF$buf2),
+    .Y(_954_)
 );
 
-MUX2X1 _1987_ (
+OAI21X1 _1965_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1034_),
-    .B(\u_mem_serial.shift_reg [2]),
-    .S(_1067__bF$buf2),
-    .Y(_1033_)
+    .A(_959_),
+    .B(_973__bF$buf1),
+    .C(_954_),
+    .Y(_953_)
 );
 
-NOR2X1 _1988_ (
+AND2X2 _1966_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf3),
-    .B(_1033_),
-    .Y(_1507_)
+    .A(_953_),
+    .B(i_rst_n_bF$buf9),
+    .Y(_1447_)
 );
 
-INVX1 _1989_ (
+INVX1 _1967_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [2]),
-    .Y(_1032_)
+    .A(\u_mem_serial.shift_reg [9]),
+    .Y(_952_)
 );
 
-NOR2X1 _1990_ (
+MUX2X1 _1968_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1032_),
-    .B(_1040__bF$buf3),
-    .Y(_1031_)
-);
-
-NAND2X1 _1991_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf0 ),
+    .A(\u_mem_serial.shift_reg [8]),
     .B(\u_cpu.bufreg2.dlo [3]),
-    .Y(_1030_)
+    .S(_994__bF$buf3),
+    .Y(_951_)
 );
 
-NOR2X1 _1992_ (
+NOR2X1 _1969_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1030_),
-    .B(_1062__bF$buf0),
-    .Y(_1029_)
+    .A(_1002__bF$buf0),
+    .B(_951_),
+    .Y(_950_)
 );
 
-OAI21X1 _1993_ (
+MUX2X1 _1970_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1029_),
-    .B(_1031_),
-    .C(_1058__bF$buf3),
-    .Y(_1028_)
+    .A(\u_cpu.bufreg.data [9]),
+    .B(\u_cpu.ctrl.o_ibus_adr [9]),
+    .S(_1006__bF$buf1),
+    .Y(_949_)
+);
+
+NOR2X1 _1971_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1023__bF$buf3),
+    .B(_949_),
+    .Y(_948_)
+);
+
+OAI21X1 _1972_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_950_),
+    .B(_948_),
+    .C(_973__bF$buf0),
+    .Y(_947_)
+);
+
+OAI21X1 _1973_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_952_),
+    .B(_973__bF$buf6),
+    .C(_947_),
+    .Y(_946_)
+);
+
+AND2X2 _1974_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_946_),
+    .B(i_rst_n_bF$buf8),
+    .Y(_1446_)
+);
+
+INVX1 _1975_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.shift_reg [10]),
+    .Y(_945_)
+);
+
+MUX2X1 _1976_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.shift_reg [9]),
+    .B(\u_cpu.bufreg2.dlo [4]),
+    .S(_994__bF$buf2),
+    .Y(_944_)
+);
+
+NOR2X1 _1977_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1002__bF$buf4),
+    .B(_944_),
+    .Y(_943_)
+);
+
+MUX2X1 _1978_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.data [10]),
+    .B(\u_cpu.ctrl.o_ibus_adr [10]),
+    .S(_1006__bF$buf0),
+    .Y(_942_)
+);
+
+NOR2X1 _1979_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1023__bF$buf2),
+    .B(_942_),
+    .Y(_941_)
+);
+
+OAI21X1 _1980_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_943_),
+    .B(_941_),
+    .C(_973__bF$buf5),
+    .Y(_940_)
+);
+
+OAI21X1 _1981_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_945_),
+    .B(_973__bF$buf4),
+    .C(_940_),
+    .Y(_939_)
+);
+
+AND2X2 _1982_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_939_),
+    .B(i_rst_n_bF$buf7),
+    .Y(_1445_)
+);
+
+INVX1 _1983_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.shift_reg [11]),
+    .Y(_938_)
+);
+
+MUX2X1 _1984_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.shift_reg [10]),
+    .B(\u_cpu.bufreg2.dlo [5]),
+    .S(_994__bF$buf1),
+    .Y(_937_)
+);
+
+NOR2X1 _1985_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1002__bF$buf3),
+    .B(_937_),
+    .Y(_936_)
+);
+
+MUX2X1 _1986_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.data [11]),
+    .B(\u_cpu.ctrl.o_ibus_adr [11]),
+    .S(_1006__bF$buf4),
+    .Y(_935_)
+);
+
+NOR2X1 _1987_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1023__bF$buf1),
+    .B(_935_),
+    .Y(_934_)
+);
+
+OAI21X1 _1988_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_936_),
+    .B(_934_),
+    .C(_973__bF$buf3),
+    .Y(_933_)
+);
+
+OAI21X1 _1989_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_938_),
+    .B(_973__bF$buf2),
+    .C(_933_),
+    .Y(_932_)
+);
+
+AND2X2 _1990_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_932_),
+    .B(i_rst_n_bF$buf6),
+    .Y(_1444_)
+);
+
+INVX1 _1991_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.shift_reg [12]),
+    .Y(_931_)
+);
+
+MUX2X1 _1992_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.shift_reg [11]),
+    .B(\u_cpu.bufreg2.dlo [6]),
+    .S(_994__bF$buf0),
+    .Y(_930_)
+);
+
+NOR2X1 _1993_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1002__bF$buf2),
+    .B(_930_),
+    .Y(_929_)
 );
 
 MUX2X1 _1994_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [3]),
-    .B(\u_cpu.ctrl.o_ibus_adr [3]),
-    .S(_1052__bF$buf1),
-    .Y(_1027_)
+    .A(\u_cpu.bufreg.data [12]),
+    .B(\u_cpu.ctrl.o_ibus_adr [12]),
+    .S(_1006__bF$buf3),
+    .Y(_928_)
 );
 
-OAI21X1 _1995_ (
+NOR2X1 _1995_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf2),
-    .B(_1027_),
-    .C(_1028_),
-    .Y(_1026_)
+    .A(_1023__bF$buf0),
+    .B(_928_),
+    .Y(_927_)
 );
 
-MUX2X1 _1996_ (
+OAI21X1 _1996_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1026_),
-    .B(\u_mem_serial.shift_reg [3]),
-    .S(_1067__bF$buf1),
-    .Y(_1025_)
+    .A(_929_),
+    .B(_927_),
+    .C(_973__bF$buf1),
+    .Y(_926_)
 );
 
-NOR2X1 _1997_ (
+OAI21X1 _1997_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf2),
-    .B(_1025_),
-    .Y(_1506_)
+    .A(_931_),
+    .B(_973__bF$buf0),
+    .C(_926_),
+    .Y(_925_)
 );
 
-INVX1 _1998_ (
+AND2X2 _1998_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [3]),
-    .Y(_1024_)
+    .A(_925_),
+    .B(i_rst_n_bF$buf5),
+    .Y(_1443_)
 );
 
-NOR2X1 _1999_ (
+INVX1 _1999_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1024_),
-    .B(_1040__bF$buf2),
-    .Y(_1023_)
+    .A(\u_mem_serial.shift_reg [13]),
+    .Y(_924_)
 );
 
-NAND2X1 _2000_ (
+MUX2X1 _2000_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf4 ),
-    .B(\u_cpu.bufreg2.dlo [4]),
-    .Y(_1022_)
+    .A(\u_mem_serial.shift_reg [12]),
+    .B(\u_cpu.bufreg2.dlo [7]),
+    .S(_994__bF$buf5),
+    .Y(_923_)
 );
 
 NOR2X1 _2001_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1022_),
-    .B(_1062__bF$buf4),
-    .Y(_1021_)
+    .A(_1002__bF$buf1),
+    .B(_923_),
+    .Y(_922_)
 );
 
-OAI21X1 _2002_ (
+MUX2X1 _2002_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1021_),
-    .B(_1023_),
-    .C(_1058__bF$buf1),
-    .Y(_1020_)
+    .A(\u_cpu.bufreg.data [13]),
+    .B(\u_cpu.ctrl.o_ibus_adr [13]),
+    .S(_1006__bF$buf2),
+    .Y(_921_)
 );
 
-MUX2X1 _2003_ (
+NOR2X1 _2003_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [4]),
-    .B(\u_cpu.ctrl.o_ibus_adr [4]),
-    .S(_1052__bF$buf0),
-    .Y(_1019_)
+    .A(_1023__bF$buf5),
+    .B(_921_),
+    .Y(_920_)
 );
 
 OAI21X1 _2004_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf0),
-    .B(_1019_),
-    .C(_1020_),
-    .Y(_1018_)
+    .A(_922_),
+    .B(_920_),
+    .C(_973__bF$buf6),
+    .Y(_919_)
 );
 
-MUX2X1 _2005_ (
+OAI21X1 _2005_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1018_),
-    .B(\u_mem_serial.shift_reg [4]),
-    .S(_1067__bF$buf0),
-    .Y(_1017_)
+    .A(_924_),
+    .B(_973__bF$buf5),
+    .C(_919_),
+    .Y(_918_)
 );
 
-NOR2X1 _2006_ (
+AND2X2 _2006_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf1),
-    .B(_1017_),
-    .Y(_1505_)
+    .A(_918_),
+    .B(i_rst_n_bF$buf4),
+    .Y(_1442_)
 );
 
 INVX1 _2007_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [4]),
-    .Y(_1016_)
+    .A(\u_mem_serial.shift_reg [14]),
+    .Y(_917_)
 );
 
-NOR2X1 _2008_ (
+MUX2X1 _2008_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1016_),
-    .B(_1040__bF$buf1),
-    .Y(_1015_)
+    .A(\u_mem_serial.shift_reg [13]),
+    .B(\u_cpu.bufreg2.dlo [8]),
+    .S(_994__bF$buf4),
+    .Y(_916_)
 );
 
-NAND2X1 _2009_ (
+NOR2X1 _2009_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf3 ),
-    .B(\u_cpu.bufreg2.dlo [5]),
-    .Y(_1014_)
+    .A(_1002__bF$buf0),
+    .B(_916_),
+    .Y(_915_)
 );
 
-NOR2X1 _2010_ (
+MUX2X1 _2010_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1014_),
-    .B(_1062__bF$buf3),
-    .Y(_1013_)
+    .A(\u_cpu.bufreg.data [14]),
+    .B(\u_cpu.ctrl.o_ibus_adr [14]),
+    .S(_1006__bF$buf1),
+    .Y(_914_)
 );
 
-OAI21X1 _2011_ (
+NOR2X1 _2011_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1013_),
-    .B(_1015_),
-    .C(_1058__bF$buf6),
-    .Y(_1012_)
+    .A(_1023__bF$buf4),
+    .B(_914_),
+    .Y(_913_)
 );
 
-MUX2X1 _2012_ (
+OAI21X1 _2012_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [5]),
-    .B(\u_cpu.ctrl.o_ibus_adr [5]),
-    .S(_1052__bF$buf4),
-    .Y(_1011_)
+    .A(_915_),
+    .B(_913_),
+    .C(_973__bF$buf4),
+    .Y(_912_)
 );
 
 OAI21X1 _2013_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf5),
-    .B(_1011_),
-    .C(_1012_),
-    .Y(_1010_)
+    .A(_917_),
+    .B(_973__bF$buf3),
+    .C(_912_),
+    .Y(_911_)
 );
 
-MUX2X1 _2014_ (
+AND2X2 _2014_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1010_),
-    .B(\u_mem_serial.shift_reg [5]),
-    .S(_1067__bF$buf4),
-    .Y(_1009_)
+    .A(_911_),
+    .B(i_rst_n_bF$buf3),
+    .Y(_1441_)
 );
 
-NOR2X1 _2015_ (
+INVX1 _2015_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf0),
-    .B(_1009_),
-    .Y(_1504_)
+    .A(\u_mem_serial.shift_reg [15]),
+    .Y(_910_)
 );
 
-INVX1 _2016_ (
+MUX2X1 _2016_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [5]),
-    .Y(_1008_)
+    .A(\u_mem_serial.shift_reg [14]),
+    .B(\u_cpu.bufreg2.dlo [9]),
+    .S(_994__bF$buf3),
+    .Y(_909_)
 );
 
 NOR2X1 _2017_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1008_),
-    .B(_1040__bF$buf0),
-    .Y(_1007_)
+    .A(_1002__bF$buf4),
+    .B(_909_),
+    .Y(_908_)
 );
 
-NAND2X1 _2018_ (
+MUX2X1 _2018_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf2 ),
-    .B(\u_cpu.bufreg2.dlo [6]),
-    .Y(_1006_)
+    .A(\u_cpu.bufreg.data [15]),
+    .B(\u_cpu.ctrl.o_ibus_adr [15]),
+    .S(_1006__bF$buf0),
+    .Y(_907_)
 );
 
 NOR2X1 _2019_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1006_),
-    .B(_1062__bF$buf2),
-    .Y(_1005_)
+    .A(_1023__bF$buf3),
+    .B(_907_),
+    .Y(_906_)
 );
 
 OAI21X1 _2020_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1005_),
-    .B(_1007_),
-    .C(_1058__bF$buf4),
-    .Y(_1004_)
+    .A(_908_),
+    .B(_906_),
+    .C(_973__bF$buf2),
+    .Y(_905_)
 );
 
-MUX2X1 _2021_ (
+OAI21X1 _2021_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [6]),
-    .B(\u_cpu.ctrl.o_ibus_adr [6]),
-    .S(_1052__bF$buf3),
-    .Y(_1003_)
+    .A(_910_),
+    .B(_973__bF$buf1),
+    .C(_905_),
+    .Y(_904_)
 );
 
-OAI21X1 _2022_ (
+AND2X2 _2022_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf3),
-    .B(_1003_),
-    .C(_1004_),
-    .Y(_1002_)
+    .A(_904_),
+    .B(i_rst_n_bF$buf2),
+    .Y(_1440_)
 );
 
-MUX2X1 _2023_ (
+INVX1 _2023_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1002_),
-    .B(\u_mem_serial.shift_reg [6]),
-    .S(_1067__bF$buf3),
-    .Y(_1001_)
+    .A(\u_mem_serial.shift_reg [16]),
+    .Y(_903_)
 );
 
-NOR2X1 _2024_ (
+MUX2X1 _2024_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf7),
-    .B(_1001_),
-    .Y(_1503_)
+    .A(\u_mem_serial.shift_reg [15]),
+    .B(\u_cpu.bufreg2.dlo [10]),
+    .S(_994__bF$buf2),
+    .Y(_902_)
 );
 
-INVX1 _2025_ (
+NOR2X1 _2025_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [6]),
-    .Y(_1000_)
+    .A(_1002__bF$buf3),
+    .B(_902_),
+    .Y(_901_)
 );
 
-NOR2X1 _2026_ (
+MUX2X1 _2026_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1000_),
-    .B(_1040__bF$buf4),
-    .Y(_999_)
+    .A(\u_cpu.bufreg.data [16]),
+    .B(\u_cpu.ctrl.o_ibus_adr [16]),
+    .S(_1006__bF$buf4),
+    .Y(_900_)
 );
 
-NAND2X1 _2027_ (
+NOR2X1 _2027_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf1 ),
-    .B(\u_cpu.bufreg2.dlo [7]),
-    .Y(_998_)
+    .A(_1023__bF$buf2),
+    .B(_900_),
+    .Y(_899_)
 );
 
-NOR2X1 _2028_ (
+OAI21X1 _2028_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_998_),
-    .B(_1062__bF$buf1),
-    .Y(_997_)
+    .A(_901_),
+    .B(_899_),
+    .C(_973__bF$buf0),
+    .Y(_898_)
 );
 
 OAI21X1 _2029_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_997_),
-    .B(_999_),
-    .C(_1058__bF$buf2),
-    .Y(_996_)
+    .A(_903_),
+    .B(_973__bF$buf6),
+    .C(_898_),
+    .Y(_897_)
 );
 
-MUX2X1 _2030_ (
+AND2X2 _2030_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [7]),
-    .B(\u_cpu.ctrl.o_ibus_adr [7]),
-    .S(_1052__bF$buf2),
-    .Y(_995_)
+    .A(_897_),
+    .B(i_rst_n_bF$buf1),
+    .Y(_1439_)
 );
 
-OAI21X1 _2031_ (
+INVX1 _2031_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf1),
-    .B(_995_),
-    .C(_996_),
-    .Y(_994_)
+    .A(\u_mem_serial.shift_reg [17]),
+    .Y(_896_)
 );
 
 MUX2X1 _2032_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_994_),
-    .B(\u_mem_serial.shift_reg [7]),
-    .S(_1067__bF$buf2),
-    .Y(_993_)
+    .A(\u_mem_serial.shift_reg [16]),
+    .B(\u_cpu.bufreg2.dlo [11]),
+    .S(_994__bF$buf1),
+    .Y(_895_)
 );
 
 NOR2X1 _2033_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf6),
-    .B(_993_),
-    .Y(_1502_)
+    .A(_1002__bF$buf2),
+    .B(_895_),
+    .Y(_894_)
 );
 
-INVX1 _2034_ (
+MUX2X1 _2034_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [7]),
-    .Y(_992_)
+    .A(\u_cpu.bufreg.data [17]),
+    .B(\u_cpu.ctrl.o_ibus_adr [17]),
+    .S(_1006__bF$buf3),
+    .Y(_893_)
 );
 
 NOR2X1 _2035_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_992_),
-    .B(_1040__bF$buf3),
-    .Y(_991_)
+    .A(_1023__bF$buf1),
+    .B(_893_),
+    .Y(_892_)
 );
 
-NAND2X1 _2036_ (
+OAI21X1 _2036_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf0 ),
-    .B(\u_cpu.bufreg2.dlo [8]),
-    .Y(_990_)
+    .A(_894_),
+    .B(_892_),
+    .C(_973__bF$buf5),
+    .Y(_891_)
 );
 
-NOR2X1 _2037_ (
+OAI21X1 _2037_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_990_),
-    .B(_1062__bF$buf0),
-    .Y(_989_)
+    .A(_896_),
+    .B(_973__bF$buf4),
+    .C(_891_),
+    .Y(_890_)
 );
 
-OAI21X1 _2038_ (
+AND2X2 _2038_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_989_),
-    .B(_991_),
-    .C(_1058__bF$buf0),
-    .Y(_988_)
+    .A(_890_),
+    .B(i_rst_n_bF$buf0),
+    .Y(_1438_)
 );
 
-MUX2X1 _2039_ (
+INVX1 _2039_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [8]),
-    .B(\u_cpu.ctrl.o_ibus_adr [8]),
-    .S(_1052__bF$buf1),
-    .Y(_987_)
+    .A(\u_mem_serial.shift_reg [18]),
+    .Y(_889_)
 );
 
-OAI21X1 _2040_ (
+MUX2X1 _2040_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf6),
-    .B(_987_),
-    .C(_988_),
-    .Y(_986_)
+    .A(\u_mem_serial.shift_reg [17]),
+    .B(\u_cpu.bufreg2.dlo [12]),
+    .S(_994__bF$buf0),
+    .Y(_888_)
 );
 
-MUX2X1 _2041_ (
+NOR2X1 _2041_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_986_),
-    .B(\u_mem_serial.shift_reg [8]),
-    .S(_1067__bF$buf1),
-    .Y(_985_)
+    .A(_1002__bF$buf1),
+    .B(_888_),
+    .Y(_887_)
 );
 
-NOR2X1 _2042_ (
+MUX2X1 _2042_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf5),
-    .B(_985_),
-    .Y(_1501_)
+    .A(\u_cpu.bufreg.data [18]),
+    .B(\u_cpu.ctrl.o_ibus_adr [18]),
+    .S(_1006__bF$buf2),
+    .Y(_886_)
 );
 
-INVX1 _2043_ (
+NOR2X1 _2043_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [8]),
-    .Y(_984_)
+    .A(_1023__bF$buf0),
+    .B(_886_),
+    .Y(_885_)
 );
 
-NOR2X1 _2044_ (
+OAI21X1 _2044_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_984_),
-    .B(_1040__bF$buf2),
-    .Y(_983_)
+    .A(_887_),
+    .B(_885_),
+    .C(_973__bF$buf3),
+    .Y(_884_)
 );
 
-NAND2X1 _2045_ (
+OAI21X1 _2045_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf4 ),
-    .B(\u_cpu.bufreg2.dlo [9]),
-    .Y(_982_)
+    .A(_889_),
+    .B(_973__bF$buf2),
+    .C(_884_),
+    .Y(_883_)
 );
 
-NOR2X1 _2046_ (
+AND2X2 _2046_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_982_),
-    .B(_1062__bF$buf4),
-    .Y(_981_)
+    .A(_883_),
+    .B(i_rst_n_bF$buf11),
+    .Y(_1437_)
 );
 
-OAI21X1 _2047_ (
+INVX1 _2047_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_981_),
-    .B(_983_),
-    .C(_1058__bF$buf5),
-    .Y(_980_)
+    .A(\u_mem_serial.shift_reg [19]),
+    .Y(_882_)
 );
 
 MUX2X1 _2048_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [9]),
-    .B(\u_cpu.ctrl.o_ibus_adr [9]),
-    .S(_1052__bF$buf0),
-    .Y(_979_)
+    .A(\u_mem_serial.shift_reg [18]),
+    .B(\u_cpu.bufreg2.dlo [13]),
+    .S(_994__bF$buf5),
+    .Y(_881_)
 );
 
-OAI21X1 _2049_ (
+NOR2X1 _2049_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf4),
-    .B(_979_),
-    .C(_980_),
-    .Y(_978_)
+    .A(_1002__bF$buf0),
+    .B(_881_),
+    .Y(_880_)
 );
 
 MUX2X1 _2050_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_978_),
-    .B(\u_mem_serial.shift_reg [9]),
-    .S(_1067__bF$buf0),
-    .Y(_977_)
+    .A(\u_cpu.bufreg.data [19]),
+    .B(\u_cpu.ctrl.o_ibus_adr [19]),
+    .S(_1006__bF$buf1),
+    .Y(_879_)
 );
 
 NOR2X1 _2051_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf4),
-    .B(_977_),
-    .Y(_1500_)
+    .A(_1023__bF$buf5),
+    .B(_879_),
+    .Y(_878_)
 );
 
-INVX1 _2052_ (
+OAI21X1 _2052_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [9]),
-    .Y(_976_)
+    .A(_880_),
+    .B(_878_),
+    .C(_973__bF$buf1),
+    .Y(_877_)
 );
 
-NOR2X1 _2053_ (
+OAI21X1 _2053_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_976_),
-    .B(_1040__bF$buf1),
-    .Y(_975_)
+    .A(_882_),
+    .B(_973__bF$buf0),
+    .C(_877_),
+    .Y(_876_)
 );
 
-NAND2X1 _2054_ (
+AND2X2 _2054_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf3 ),
-    .B(\u_cpu.bufreg2.dlo [10]),
-    .Y(_974_)
+    .A(_876_),
+    .B(i_rst_n_bF$buf10),
+    .Y(_1436_)
 );
 
-NOR2X1 _2055_ (
+INVX1 _2055_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_974_),
-    .B(_1062__bF$buf3),
-    .Y(_973_)
+    .A(\u_mem_serial.shift_reg [20]),
+    .Y(_875_)
 );
 
-OAI21X1 _2056_ (
+MUX2X1 _2056_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_973_),
-    .B(_975_),
-    .C(_1058__bF$buf3),
-    .Y(_972_)
+    .A(\u_mem_serial.shift_reg [19]),
+    .B(\u_cpu.bufreg2.dlo [14]),
+    .S(_994__bF$buf4),
+    .Y(_874_)
 );
 
-MUX2X1 _2057_ (
+NOR2X1 _2057_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [10]),
-    .B(\u_cpu.ctrl.o_ibus_adr [10]),
-    .S(_1052__bF$buf4),
-    .Y(_971_)
+    .A(_1002__bF$buf4),
+    .B(_874_),
+    .Y(_873_)
 );
 
-OAI21X1 _2058_ (
+MUX2X1 _2058_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf2),
-    .B(_971_),
-    .C(_972_),
-    .Y(_970_)
+    .A(\u_cpu.bufreg.data [20]),
+    .B(\u_cpu.ctrl.o_ibus_adr [20]),
+    .S(_1006__bF$buf0),
+    .Y(_872_)
 );
 
-MUX2X1 _2059_ (
+NOR2X1 _2059_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_970_),
-    .B(\u_mem_serial.shift_reg [10]),
-    .S(_1067__bF$buf4),
-    .Y(_969_)
+    .A(_1023__bF$buf4),
+    .B(_872_),
+    .Y(_871_)
 );
 
-NOR2X1 _2060_ (
+OAI21X1 _2060_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf3),
-    .B(_969_),
-    .Y(_1499_)
+    .A(_873_),
+    .B(_871_),
+    .C(_973__bF$buf6),
+    .Y(_870_)
 );
 
-INVX1 _2061_ (
+OAI21X1 _2061_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [10]),
-    .Y(_968_)
+    .A(_875_),
+    .B(_973__bF$buf5),
+    .C(_870_),
+    .Y(_869_)
 );
 
-NOR2X1 _2062_ (
+AND2X2 _2062_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_968_),
-    .B(_1040__bF$buf0),
-    .Y(_967_)
+    .A(_869_),
+    .B(i_rst_n_bF$buf9),
+    .Y(_1435_)
 );
 
-NAND2X1 _2063_ (
+INVX1 _2063_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf2 ),
-    .B(\u_cpu.bufreg2.dlo [11]),
-    .Y(_966_)
+    .A(\u_mem_serial.shift_reg [21]),
+    .Y(_868_)
 );
 
-NOR2X1 _2064_ (
+MUX2X1 _2064_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_966_),
-    .B(_1062__bF$buf2),
-    .Y(_965_)
+    .A(\u_mem_serial.shift_reg [20]),
+    .B(\u_cpu.bufreg2.dlo [15]),
+    .S(_994__bF$buf3),
+    .Y(_867_)
 );
 
-OAI21X1 _2065_ (
+NOR2X1 _2065_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_965_),
-    .B(_967_),
-    .C(_1058__bF$buf1),
-    .Y(_964_)
+    .A(_1002__bF$buf3),
+    .B(_867_),
+    .Y(_866_)
 );
 
 MUX2X1 _2066_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [11]),
-    .B(\u_cpu.ctrl.o_ibus_adr [11]),
-    .S(_1052__bF$buf3),
-    .Y(_963_)
+    .A(\u_cpu.bufreg.data [21]),
+    .B(\u_cpu.ctrl.o_ibus_adr [21]),
+    .S(_1006__bF$buf4),
+    .Y(_865_)
 );
 
-OAI21X1 _2067_ (
+NOR2X1 _2067_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf0),
-    .B(_963_),
-    .C(_964_),
-    .Y(_962_)
+    .A(_1023__bF$buf3),
+    .B(_865_),
+    .Y(_864_)
 );
 
-MUX2X1 _2068_ (
+OAI21X1 _2068_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_962_),
-    .B(\u_mem_serial.shift_reg [11]),
-    .S(_1067__bF$buf3),
-    .Y(_961_)
+    .A(_866_),
+    .B(_864_),
+    .C(_973__bF$buf4),
+    .Y(_863_)
 );
 
-NOR2X1 _2069_ (
+OAI21X1 _2069_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf2),
-    .B(_961_),
-    .Y(_1498_)
+    .A(_868_),
+    .B(_973__bF$buf3),
+    .C(_863_),
+    .Y(_862_)
 );
 
-INVX1 _2070_ (
+AND2X2 _2070_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [11]),
-    .Y(_960_)
+    .A(_862_),
+    .B(i_rst_n_bF$buf8),
+    .Y(_1434_)
 );
 
-NOR2X1 _2071_ (
+INVX1 _2071_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_960_),
-    .B(_1040__bF$buf4),
-    .Y(_959_)
+    .A(\u_mem_serial.shift_reg [22]),
+    .Y(_861_)
 );
 
-NAND2X1 _2072_ (
+MUX2X1 _2072_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf1 ),
-    .B(\u_cpu.bufreg2.dlo [12]),
-    .Y(_958_)
+    .A(\u_mem_serial.shift_reg [21]),
+    .B(\u_cpu.bufreg2.dlo [16]),
+    .S(_994__bF$buf2),
+    .Y(_860_)
 );
 
 NOR2X1 _2073_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_958_),
-    .B(_1062__bF$buf1),
-    .Y(_957_)
+    .A(_1002__bF$buf2),
+    .B(_860_),
+    .Y(_859_)
 );
 
-OAI21X1 _2074_ (
+MUX2X1 _2074_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_957_),
-    .B(_959_),
-    .C(_1058__bF$buf6),
-    .Y(_956_)
+    .A(\u_cpu.bufreg.data [22]),
+    .B(\u_cpu.ctrl.o_ibus_adr [22]),
+    .S(_1006__bF$buf3),
+    .Y(_858_)
 );
 
-MUX2X1 _2075_ (
+NOR2X1 _2075_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [12]),
-    .B(\u_cpu.ctrl.o_ibus_adr [12]),
-    .S(_1052__bF$buf2),
-    .Y(_955_)
+    .A(_1023__bF$buf2),
+    .B(_858_),
+    .Y(_857_)
 );
 
 OAI21X1 _2076_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf5),
-    .B(_955_),
-    .C(_956_),
-    .Y(_954_)
+    .A(_859_),
+    .B(_857_),
+    .C(_973__bF$buf2),
+    .Y(_856_)
 );
 
-MUX2X1 _2077_ (
+OAI21X1 _2077_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_954_),
-    .B(\u_mem_serial.shift_reg [12]),
-    .S(_1067__bF$buf2),
-    .Y(_953_)
+    .A(_861_),
+    .B(_973__bF$buf1),
+    .C(_856_),
+    .Y(_855_)
 );
 
-NOR2X1 _2078_ (
+AND2X2 _2078_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf1),
-    .B(_953_),
-    .Y(_1497_)
+    .A(_855_),
+    .B(i_rst_n_bF$buf7),
+    .Y(_1433_)
 );
 
 INVX1 _2079_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [12]),
-    .Y(_952_)
+    .A(\u_mem_serial.shift_reg [23]),
+    .Y(_854_)
 );
 
-NOR2X1 _2080_ (
+MUX2X1 _2080_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_952_),
-    .B(_1040__bF$buf3),
-    .Y(_951_)
+    .A(\u_mem_serial.shift_reg [22]),
+    .B(\u_cpu.bufreg2.dlo [17]),
+    .S(_994__bF$buf1),
+    .Y(_853_)
 );
 
-NAND2X1 _2081_ (
+NOR2X1 _2081_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf0 ),
-    .B(\u_cpu.bufreg2.dlo [13]),
-    .Y(_950_)
+    .A(_1002__bF$buf1),
+    .B(_853_),
+    .Y(_852_)
 );
 
-NOR2X1 _2082_ (
+MUX2X1 _2082_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_950_),
-    .B(_1062__bF$buf0),
-    .Y(_949_)
+    .A(\u_cpu.bufreg.data [23]),
+    .B(\u_cpu.ctrl.o_ibus_adr [23]),
+    .S(_1006__bF$buf2),
+    .Y(_851_)
 );
 
-OAI21X1 _2083_ (
+NOR2X1 _2083_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_949_),
-    .B(_951_),
-    .C(_1058__bF$buf4),
-    .Y(_948_)
+    .A(_1023__bF$buf1),
+    .B(_851_),
+    .Y(_850_)
 );
 
-MUX2X1 _2084_ (
+OAI21X1 _2084_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [13]),
-    .B(\u_cpu.ctrl.o_ibus_adr [13]),
-    .S(_1052__bF$buf1),
-    .Y(_947_)
+    .A(_852_),
+    .B(_850_),
+    .C(_973__bF$buf0),
+    .Y(_849_)
 );
 
 OAI21X1 _2085_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf3),
-    .B(_947_),
-    .C(_948_),
-    .Y(_946_)
+    .A(_854_),
+    .B(_973__bF$buf6),
+    .C(_849_),
+    .Y(_848_)
 );
 
-MUX2X1 _2086_ (
+AND2X2 _2086_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_946_),
-    .B(\u_mem_serial.shift_reg [13]),
-    .S(_1067__bF$buf1),
-    .Y(_945_)
+    .A(_848_),
+    .B(i_rst_n_bF$buf6),
+    .Y(_1432_)
 );
 
-NOR2X1 _2087_ (
+INVX1 _2087_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf0),
-    .B(_945_),
-    .Y(_1496_)
+    .A(\u_mem_serial.shift_reg [24]),
+    .Y(_847_)
 );
 
-INVX1 _2088_ (
+MUX2X1 _2088_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [13]),
-    .Y(_944_)
+    .A(\u_mem_serial.shift_reg [23]),
+    .B(\u_cpu.bufreg2.dlo [18]),
+    .S(_994__bF$buf0),
+    .Y(_846_)
 );
 
 NOR2X1 _2089_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_944_),
-    .B(_1040__bF$buf2),
-    .Y(_943_)
+    .A(_1002__bF$buf0),
+    .B(_846_),
+    .Y(_845_)
 );
 
-NAND2X1 _2090_ (
+MUX2X1 _2090_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf4 ),
-    .B(\u_cpu.bufreg2.dlo [14]),
-    .Y(_942_)
+    .A(\u_cpu.bufreg.data [24]),
+    .B(\u_cpu.ctrl.o_ibus_adr [24]),
+    .S(_1006__bF$buf1),
+    .Y(_844_)
 );
 
 NOR2X1 _2091_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_942_),
-    .B(_1062__bF$buf4),
-    .Y(_941_)
+    .A(_1023__bF$buf0),
+    .B(_844_),
+    .Y(_843_)
 );
 
 OAI21X1 _2092_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_941_),
-    .B(_943_),
-    .C(_1058__bF$buf2),
-    .Y(_940_)
+    .A(_845_),
+    .B(_843_),
+    .C(_973__bF$buf5),
+    .Y(_842_)
 );
 
-MUX2X1 _2093_ (
+OAI21X1 _2093_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [14]),
-    .B(\u_cpu.ctrl.o_ibus_adr [14]),
-    .S(_1052__bF$buf0),
-    .Y(_939_)
+    .A(_847_),
+    .B(_973__bF$buf4),
+    .C(_842_),
+    .Y(_841_)
 );
 
-OAI21X1 _2094_ (
+AND2X2 _2094_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf1),
-    .B(_939_),
-    .C(_940_),
-    .Y(_938_)
+    .A(_841_),
+    .B(i_rst_n_bF$buf5),
+    .Y(_1431_)
 );
 
-MUX2X1 _2095_ (
+INVX1 _2095_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_938_),
-    .B(\u_mem_serial.shift_reg [14]),
-    .S(_1067__bF$buf0),
-    .Y(_937_)
+    .A(\u_mem_serial.shift_reg [25]),
+    .Y(_840_)
 );
 
-NOR2X1 _2096_ (
+MUX2X1 _2096_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf7),
-    .B(_937_),
-    .Y(_1495_)
+    .A(\u_mem_serial.shift_reg [24]),
+    .B(\u_cpu.bufreg2.dlo [19]),
+    .S(_994__bF$buf5),
+    .Y(_839_)
 );
 
-INVX1 _2097_ (
+NOR2X1 _2097_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [14]),
-    .Y(_936_)
+    .A(_1002__bF$buf4),
+    .B(_839_),
+    .Y(_838_)
 );
 
-NOR2X1 _2098_ (
+MUX2X1 _2098_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_936_),
-    .B(_1040__bF$buf1),
-    .Y(_935_)
+    .A(\u_cpu.bufreg.data [25]),
+    .B(\u_cpu.ctrl.o_ibus_adr [25]),
+    .S(_1006__bF$buf0),
+    .Y(_837_)
 );
 
-NAND2X1 _2099_ (
+NOR2X1 _2099_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf3 ),
-    .B(\u_cpu.bufreg2.dlo [15]),
-    .Y(_934_)
+    .A(_1023__bF$buf5),
+    .B(_837_),
+    .Y(_836_)
 );
 
-NOR2X1 _2100_ (
+OAI21X1 _2100_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_934_),
-    .B(_1062__bF$buf3),
-    .Y(_933_)
+    .A(_838_),
+    .B(_836_),
+    .C(_973__bF$buf3),
+    .Y(_835_)
 );
 
 OAI21X1 _2101_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_933_),
-    .B(_935_),
-    .C(_1058__bF$buf0),
-    .Y(_932_)
+    .A(_840_),
+    .B(_973__bF$buf2),
+    .C(_835_),
+    .Y(_834_)
 );
 
-MUX2X1 _2102_ (
+AND2X2 _2102_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [15]),
-    .B(\u_cpu.ctrl.o_ibus_adr [15]),
-    .S(_1052__bF$buf4),
-    .Y(_931_)
+    .A(_834_),
+    .B(i_rst_n_bF$buf4),
+    .Y(_1430_)
 );
 
-OAI21X1 _2103_ (
+INVX1 _2103_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf6),
-    .B(_931_),
-    .C(_932_),
-    .Y(_930_)
+    .A(\u_mem_serial.shift_reg [26]),
+    .Y(_833_)
 );
 
 MUX2X1 _2104_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_930_),
-    .B(\u_mem_serial.shift_reg [15]),
-    .S(_1067__bF$buf4),
-    .Y(_929_)
+    .A(\u_mem_serial.shift_reg [25]),
+    .B(\u_cpu.bufreg2.dlo [20]),
+    .S(_994__bF$buf4),
+    .Y(_832_)
 );
 
 NOR2X1 _2105_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf6),
-    .B(_929_),
-    .Y(_1494_)
+    .A(_1002__bF$buf3),
+    .B(_832_),
+    .Y(_831_)
 );
 
-INVX1 _2106_ (
+MUX2X1 _2106_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [15]),
-    .Y(_928_)
+    .A(\u_cpu.bufreg.data [26]),
+    .B(\u_cpu.ctrl.o_ibus_adr [26]),
+    .S(_1006__bF$buf4),
+    .Y(_830_)
 );
 
 NOR2X1 _2107_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_928_),
-    .B(_1040__bF$buf0),
-    .Y(_927_)
+    .A(_1023__bF$buf4),
+    .B(_830_),
+    .Y(_829_)
 );
 
-NAND2X1 _2108_ (
+OAI21X1 _2108_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf2 ),
-    .B(\u_cpu.bufreg2.dlo [16]),
-    .Y(_926_)
+    .A(_831_),
+    .B(_829_),
+    .C(_973__bF$buf1),
+    .Y(_828_)
 );
 
-NOR2X1 _2109_ (
+OAI21X1 _2109_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_926_),
-    .B(_1062__bF$buf2),
-    .Y(_925_)
+    .A(_833_),
+    .B(_973__bF$buf0),
+    .C(_828_),
+    .Y(_827_)
 );
 
-OAI21X1 _2110_ (
+AND2X2 _2110_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_925_),
-    .B(_927_),
-    .C(_1058__bF$buf5),
-    .Y(_924_)
+    .A(_827_),
+    .B(i_rst_n_bF$buf3),
+    .Y(_1429_)
 );
 
-MUX2X1 _2111_ (
+INVX1 _2111_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [16]),
-    .B(\u_cpu.ctrl.o_ibus_adr [16]),
-    .S(_1052__bF$buf3),
-    .Y(_923_)
+    .A(\u_mem_serial.shift_reg [27]),
+    .Y(_826_)
 );
 
-OAI21X1 _2112_ (
+MUX2X1 _2112_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf4),
-    .B(_923_),
-    .C(_924_),
-    .Y(_922_)
+    .A(\u_mem_serial.shift_reg [26]),
+    .B(\u_cpu.bufreg2.dlo [21]),
+    .S(_994__bF$buf3),
+    .Y(_825_)
 );
 
-MUX2X1 _2113_ (
+NOR2X1 _2113_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_922_),
-    .B(\u_mem_serial.shift_reg [16]),
-    .S(_1067__bF$buf3),
-    .Y(_921_)
+    .A(_1002__bF$buf2),
+    .B(_825_),
+    .Y(_824_)
 );
 
-NOR2X1 _2114_ (
+MUX2X1 _2114_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf5),
-    .B(_921_),
-    .Y(_1493_)
+    .A(\u_cpu.bufreg.data [27]),
+    .B(\u_cpu.ctrl.o_ibus_adr [27]),
+    .S(_1006__bF$buf3),
+    .Y(_823_)
 );
 
-INVX1 _2115_ (
+NOR2X1 _2115_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [16]),
-    .Y(_920_)
+    .A(_1023__bF$buf3),
+    .B(_823_),
+    .Y(_822_)
 );
 
-NOR2X1 _2116_ (
+OAI21X1 _2116_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_920_),
-    .B(_1040__bF$buf4),
-    .Y(_919_)
+    .A(_824_),
+    .B(_822_),
+    .C(_973__bF$buf6),
+    .Y(_821_)
 );
 
-NAND2X1 _2117_ (
+OAI21X1 _2117_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf1 ),
-    .B(\u_cpu.bufreg2.dlo [17]),
-    .Y(_918_)
+    .A(_826_),
+    .B(_973__bF$buf5),
+    .C(_821_),
+    .Y(_820_)
 );
 
-NOR2X1 _2118_ (
+AND2X2 _2118_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_918_),
-    .B(_1062__bF$buf1),
-    .Y(_917_)
+    .A(_820_),
+    .B(i_rst_n_bF$buf2),
+    .Y(_1428_)
 );
 
-OAI21X1 _2119_ (
+INVX1 _2119_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_917_),
-    .B(_919_),
-    .C(_1058__bF$buf3),
-    .Y(_916_)
+    .A(\u_mem_serial.shift_reg [28]),
+    .Y(_819_)
 );
 
 MUX2X1 _2120_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [17]),
-    .B(\u_cpu.ctrl.o_ibus_adr [17]),
-    .S(_1052__bF$buf2),
-    .Y(_915_)
+    .A(\u_mem_serial.shift_reg [27]),
+    .B(\u_cpu.bufreg2.dlo [22]),
+    .S(_994__bF$buf2),
+    .Y(_818_)
 );
 
-OAI21X1 _2121_ (
+NOR2X1 _2121_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf2),
-    .B(_915_),
-    .C(_916_),
-    .Y(_914_)
+    .A(_1002__bF$buf1),
+    .B(_818_),
+    .Y(_817_)
 );
 
 MUX2X1 _2122_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_914_),
-    .B(\u_mem_serial.shift_reg [17]),
-    .S(_1067__bF$buf2),
-    .Y(_913_)
+    .A(\u_cpu.bufreg.data [28]),
+    .B(\u_cpu.ctrl.o_ibus_adr [28]),
+    .S(_1006__bF$buf2),
+    .Y(_816_)
 );
 
 NOR2X1 _2123_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf4),
-    .B(_913_),
-    .Y(_1492_)
+    .A(_1023__bF$buf2),
+    .B(_816_),
+    .Y(_815_)
 );
 
-INVX1 _2124_ (
+OAI21X1 _2124_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [17]),
-    .Y(_912_)
+    .A(_817_),
+    .B(_815_),
+    .C(_973__bF$buf4),
+    .Y(_814_)
 );
 
-NOR2X1 _2125_ (
+OAI21X1 _2125_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_912_),
-    .B(_1040__bF$buf3),
-    .Y(_911_)
+    .A(_819_),
+    .B(_973__bF$buf3),
+    .C(_814_),
+    .Y(_813_)
 );
 
-NAND2X1 _2126_ (
+AND2X2 _2126_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf0 ),
-    .B(\u_cpu.bufreg2.dlo [18]),
-    .Y(_910_)
+    .A(_813_),
+    .B(i_rst_n_bF$buf1),
+    .Y(_1427_)
 );
 
-NOR2X1 _2127_ (
+INVX1 _2127_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_910_),
-    .B(_1062__bF$buf0),
-    .Y(_909_)
+    .A(\u_mem_serial.shift_reg [29]),
+    .Y(_812_)
 );
 
-OAI21X1 _2128_ (
+MUX2X1 _2128_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_909_),
-    .B(_911_),
-    .C(_1058__bF$buf1),
-    .Y(_908_)
+    .A(\u_mem_serial.shift_reg [28]),
+    .B(\u_cpu.bufreg2.dlo [23]),
+    .S(_994__bF$buf1),
+    .Y(_811_)
 );
 
-MUX2X1 _2129_ (
+NOR2X1 _2129_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [18]),
-    .B(\u_cpu.ctrl.o_ibus_adr [18]),
-    .S(_1052__bF$buf1),
-    .Y(_907_)
+    .A(_1002__bF$buf0),
+    .B(_811_),
+    .Y(_810_)
 );
 
-OAI21X1 _2130_ (
+MUX2X1 _2130_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf0),
-    .B(_907_),
-    .C(_908_),
-    .Y(_906_)
+    .A(\u_cpu.bufreg.data [29]),
+    .B(\u_cpu.ctrl.o_ibus_adr [29]),
+    .S(_1006__bF$buf1),
+    .Y(_809_)
 );
 
-MUX2X1 _2131_ (
+NOR2X1 _2131_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_906_),
-    .B(\u_mem_serial.shift_reg [18]),
-    .S(_1067__bF$buf1),
-    .Y(_905_)
+    .A(_1023__bF$buf1),
+    .B(_809_),
+    .Y(_808_)
 );
 
-NOR2X1 _2132_ (
+OAI21X1 _2132_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf3),
-    .B(_905_),
-    .Y(_1491_)
+    .A(_810_),
+    .B(_808_),
+    .C(_973__bF$buf2),
+    .Y(_807_)
 );
 
-INVX1 _2133_ (
+OAI21X1 _2133_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [18]),
-    .Y(_904_)
+    .A(_812_),
+    .B(_973__bF$buf1),
+    .C(_807_),
+    .Y(_806_)
 );
 
-NOR2X1 _2134_ (
+AND2X2 _2134_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_904_),
-    .B(_1040__bF$buf2),
-    .Y(_903_)
+    .A(_806_),
+    .B(i_rst_n_bF$buf0),
+    .Y(_1426_)
 );
 
-NAND2X1 _2135_ (
+INVX1 _2135_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf4 ),
-    .B(\u_cpu.bufreg2.dlo [19]),
-    .Y(_902_)
+    .A(\u_mem_serial.shift_reg [30]),
+    .Y(_805_)
 );
 
-NOR2X1 _2136_ (
+MUX2X1 _2136_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_902_),
-    .B(_1062__bF$buf4),
-    .Y(_901_)
+    .A(\u_mem_serial.shift_reg [29]),
+    .B(\u_cpu.bufreg.i_shamt [0]),
+    .S(_994__bF$buf0),
+    .Y(_804_)
 );
 
-OAI21X1 _2137_ (
+NOR2X1 _2137_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_901_),
-    .B(_903_),
-    .C(_1058__bF$buf6),
-    .Y(_900_)
+    .A(_1002__bF$buf4),
+    .B(_804_),
+    .Y(_803_)
 );
 
 MUX2X1 _2138_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [19]),
-    .B(\u_cpu.ctrl.o_ibus_adr [19]),
-    .S(_1052__bF$buf0),
-    .Y(_899_)
+    .A(\u_cpu.bufreg.data [30]),
+    .B(\u_cpu.ctrl.o_ibus_adr [30]),
+    .S(_1006__bF$buf0),
+    .Y(_802_)
 );
 
-OAI21X1 _2139_ (
+NOR2X1 _2139_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf5),
-    .B(_899_),
-    .C(_900_),
-    .Y(_898_)
+    .A(_1023__bF$buf0),
+    .B(_802_),
+    .Y(_801_)
 );
 
-MUX2X1 _2140_ (
+OAI21X1 _2140_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_898_),
-    .B(\u_mem_serial.shift_reg [19]),
-    .S(_1067__bF$buf0),
-    .Y(_897_)
+    .A(_803_),
+    .B(_801_),
+    .C(_973__bF$buf0),
+    .Y(_800_)
 );
 
-NOR2X1 _2141_ (
+OAI21X1 _2141_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf2),
-    .B(_897_),
-    .Y(_1490_)
+    .A(_805_),
+    .B(_973__bF$buf6),
+    .C(_800_),
+    .Y(_799_)
 );
 
-INVX1 _2142_ (
+AND2X2 _2142_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [19]),
-    .Y(_896_)
+    .A(_799_),
+    .B(i_rst_n_bF$buf11),
+    .Y(_1425_)
 );
 
-NOR2X1 _2143_ (
+INVX1 _2143_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_896_),
-    .B(_1040__bF$buf1),
-    .Y(_895_)
+    .A(\u_mem_serial.shift_reg [31]),
+    .Y(_798_)
 );
 
-NAND2X1 _2144_ (
+MUX2X1 _2144_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf3 ),
-    .B(\u_cpu.bufreg2.dlo [20]),
-    .Y(_894_)
+    .A(\u_mem_serial.shift_reg [30]),
+    .B(\u_cpu.bufreg.i_shamt [1]),
+    .S(_994__bF$buf5),
+    .Y(_797_)
 );
 
 NOR2X1 _2145_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_894_),
-    .B(_1062__bF$buf3),
-    .Y(_893_)
+    .A(_1002__bF$buf3),
+    .B(_797_),
+    .Y(_796_)
 );
 
-OAI21X1 _2146_ (
+MUX2X1 _2146_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_893_),
-    .B(_895_),
-    .C(_1058__bF$buf4),
-    .Y(_892_)
+    .A(\u_cpu.bufreg.data [31]),
+    .B(\u_cpu.ctrl.o_ibus_adr [31]),
+    .S(_1006__bF$buf4),
+    .Y(_795_)
 );
 
-MUX2X1 _2147_ (
+NOR2X1 _2147_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [20]),
-    .B(\u_cpu.ctrl.o_ibus_adr [20]),
-    .S(_1052__bF$buf4),
-    .Y(_891_)
+    .A(_1023__bF$buf5),
+    .B(_795_),
+    .Y(_794_)
 );
 
 OAI21X1 _2148_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf3),
-    .B(_891_),
-    .C(_892_),
-    .Y(_890_)
+    .A(_796_),
+    .B(_794_),
+    .C(_973__bF$buf5),
+    .Y(_793_)
 );
 
-MUX2X1 _2149_ (
+OAI21X1 _2149_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_890_),
-    .B(\u_mem_serial.shift_reg [20]),
-    .S(_1067__bF$buf4),
-    .Y(_889_)
+    .A(_798_),
+    .B(_973__bF$buf4),
+    .C(_793_),
+    .Y(_792_)
 );
 
-NOR2X1 _2150_ (
+AND2X2 _2150_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf1),
-    .B(_889_),
-    .Y(_1489_)
+    .A(_792_),
+    .B(i_rst_n_bF$buf10),
+    .Y(_1424_)
 );
 
 INVX1 _2151_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [20]),
-    .Y(_888_)
+    .A(\u_mem_serial.shift_reg [32]),
+    .Y(_791_)
 );
 
-NOR2X1 _2152_ (
+INVX1 _2152_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_888_),
-    .B(_1040__bF$buf0),
-    .Y(_887_)
+    .A(_994__bF$buf4),
+    .Y(_790_)
 );
 
-NAND2X1 _2153_ (
+AOI21X1 _2153_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf2 ),
-    .B(\u_cpu.bufreg2.dlo [21]),
-    .Y(_886_)
+    .A(_790_),
+    .B(\u_cpu.bufreg.i_shamt [2]),
+    .C(_1002__bF$buf2),
+    .Y(_789_)
 );
 
-NOR2X1 _2154_ (
+OAI21X1 _2154_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_886_),
-    .B(_1062__bF$buf2),
-    .Y(_885_)
+    .A(_798_),
+    .B(_790_),
+    .C(_789_),
+    .Y(_788_)
 );
 
-OAI21X1 _2155_ (
+INVX2 _2155_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_885_),
-    .B(_887_),
-    .C(_1058__bF$buf2),
-    .Y(_884_)
+    .A(\u_cpu.bufreg2.i_op_b_sel ),
+    .Y(_787_)
 );
 
-MUX2X1 _2156_ (
+NOR2X1 _2156_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [21]),
-    .B(\u_cpu.ctrl.o_ibus_adr [21]),
-    .S(_1052__bF$buf3),
-    .Y(_883_)
+    .A(_787_),
+    .B(_1060_),
+    .Y(_786_)
 );
 
 OAI21X1 _2157_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf1),
-    .B(_883_),
-    .C(_884_),
-    .Y(_882_)
+    .A(\u_mem_serial.state [1]),
+    .B(_1024_),
+    .C(_786_),
+    .Y(_785_)
 );
 
-MUX2X1 _2158_ (
+INVX1 _2158_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_882_),
-    .B(\u_mem_serial.shift_reg [21]),
-    .S(_1067__bF$buf3),
-    .Y(_881_)
+    .A(_785_),
+    .Y(_784_)
 );
 
-NOR2X1 _2159_ (
+OAI21X1 _2159_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf0),
-    .B(_881_),
-    .Y(_1488_)
+    .A(\u_cpu.bufreg.data [0]),
+    .B(\u_cpu.state.i_ctrl_misalign ),
+    .C(_784_),
+    .Y(_783_)
 );
 
-INVX1 _2160_ (
+NAND3X1 _2160_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [21]),
-    .Y(_880_)
+    .A(_788_),
+    .B(_783_),
+    .C(_973__bF$buf3),
+    .Y(_782_)
 );
 
-NOR2X1 _2161_ (
+OAI21X1 _2161_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_880_),
-    .B(_1040__bF$buf4),
-    .Y(_879_)
+    .A(_791_),
+    .B(_973__bF$buf2),
+    .C(_782_),
+    .Y(_781_)
 );
 
-NAND2X1 _2162_ (
+AND2X2 _2162_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf1 ),
-    .B(\u_cpu.bufreg2.dlo [22]),
-    .Y(_878_)
+    .A(_781_),
+    .B(i_rst_n_bF$buf9),
+    .Y(_1423_)
 );
 
-NOR2X1 _2163_ (
+INVX1 _2163_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_878_),
-    .B(_1062__bF$buf1),
-    .Y(_877_)
+    .A(\u_cpu.state.i_ctrl_misalign ),
+    .Y(_780_)
 );
 
 OAI21X1 _2164_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_877_),
-    .B(_879_),
-    .C(_1058__bF$buf0),
-    .Y(_876_)
+    .A(\u_cpu.bne_or_bge ),
+    .B(\u_cpu.bufreg.data [0]),
+    .C(_780_),
+    .Y(_779_)
 );
 
-MUX2X1 _2165_ (
+NOR2X1 _2165_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [22]),
-    .B(\u_cpu.ctrl.o_ibus_adr [22]),
-    .S(_1052__bF$buf2),
-    .Y(_875_)
+    .A(\u_cpu.decode.co_mem_word ),
+    .B(_785_),
+    .Y(_778_)
 );
 
-OAI21X1 _2166_ (
+AND2X2 _2166_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf6),
-    .B(_875_),
-    .C(_876_),
-    .Y(_874_)
+    .A(_778_),
+    .B(_779_),
+    .Y(_777_)
 );
 
-MUX2X1 _2167_ (
+INVX1 _2167_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_874_),
-    .B(\u_mem_serial.shift_reg [22]),
-    .S(_1067__bF$buf2),
-    .Y(_873_)
+    .A(\u_cpu.bufreg2.dhi [3]),
+    .Y(_776_)
 );
 
-NOR2X1 _2168_ (
+MUX2X1 _2168_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf7),
-    .B(_873_),
-    .Y(_1487_)
+    .A(_791_),
+    .B(_776_),
+    .S(_994__bF$buf3),
+    .Y(_775_)
 );
 
-INVX1 _2169_ (
+NOR2X1 _2169_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [22]),
-    .Y(_872_)
+    .A(_1002__bF$buf1),
+    .B(_775_),
+    .Y(_774_)
 );
 
-NOR2X1 _2170_ (
+OAI21X1 _2170_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_872_),
-    .B(_1040__bF$buf3),
-    .Y(_871_)
+    .A(_774_),
+    .B(_777_),
+    .C(_973__bF$buf1),
+    .Y(_773_)
 );
 
-NAND2X1 _2171_ (
+INVX1 _2171_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf0 ),
-    .B(\u_cpu.bufreg2.dlo [23]),
-    .Y(_870_)
+    .A(\u_mem_serial.shift_reg [33]),
+    .Y(_772_)
 );
 
-NOR2X1 _2172_ (
+AOI21X1 _2172_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_870_),
-    .B(_1062__bF$buf0),
-    .Y(_869_)
+    .A(_1009_),
+    .B(_772_),
+    .C(_1070__bF$buf4),
+    .Y(_771_)
 );
 
-OAI21X1 _2173_ (
+AND2X2 _2173_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_869_),
-    .B(_871_),
-    .C(_1058__bF$buf5),
-    .Y(_868_)
+    .A(_773_),
+    .B(_771_),
+    .Y(_1422_)
 );
 
-MUX2X1 _2174_ (
+INVX1 _2174_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [23]),
-    .B(\u_cpu.ctrl.o_ibus_adr [23]),
-    .S(_1052__bF$buf1),
-    .Y(_867_)
+    .A(\u_mem_serial.shift_reg [34]),
+    .Y(_770_)
 );
 
-OAI21X1 _2175_ (
+NOR2X1 _2175_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf4),
-    .B(_867_),
-    .C(_868_),
-    .Y(_866_)
+    .A(_772_),
+    .B(_790_),
+    .Y(_769_)
 );
 
-MUX2X1 _2176_ (
+INVX2 _2176_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_866_),
-    .B(\u_mem_serial.shift_reg [23]),
-    .S(_1067__bF$buf1),
-    .Y(_865_)
+    .A(\u_cpu.bufreg2.dhi [4]),
+    .Y(_768_)
 );
 
-NOR2X1 _2177_ (
+OAI21X1 _2177_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf6),
-    .B(_865_),
-    .Y(_1486_)
+    .A(_768_),
+    .B(_994__bF$buf2),
+    .C(_1023__bF$buf4),
+    .Y(_767_)
 );
 
 INVX1 _2178_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [23]),
-    .Y(_864_)
+    .A(\u_cpu.bufreg.data [0]),
+    .Y(_766_)
 );
 
-NOR2X1 _2179_ (
+NAND2X1 _2179_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_864_),
-    .B(_1040__bF$buf2),
-    .Y(_863_)
+    .A(\u_cpu.state.i_ctrl_misalign ),
+    .B(_766_),
+    .Y(_765_)
 );
 
-NAND2X1 _2180_ (
+AOI21X1 _2180_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf4 ),
-    .B(\u_cpu.bufreg.i_shamt [0]),
-    .Y(_862_)
+    .A(_778_),
+    .B(_765_),
+    .C(_1009_),
+    .Y(_764_)
 );
 
-NOR2X1 _2181_ (
+OAI21X1 _2181_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_862_),
-    .B(_1062__bF$buf4),
-    .Y(_861_)
+    .A(_769_),
+    .B(_767_),
+    .C(_764_),
+    .Y(_763_)
 );
 
 OAI21X1 _2182_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_861_),
-    .B(_863_),
-    .C(_1058__bF$buf3),
-    .Y(_860_)
+    .A(_770_),
+    .B(_973__bF$buf0),
+    .C(_763_),
+    .Y(_762_)
 );
 
-MUX2X1 _2183_ (
+AND2X2 _2183_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [24]),
-    .B(\u_cpu.ctrl.o_ibus_adr [24]),
-    .S(_1052__bF$buf0),
-    .Y(_859_)
+    .A(_762_),
+    .B(i_rst_n_bF$buf8),
+    .Y(_1421_)
 );
 
 OAI21X1 _2184_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf2),
-    .B(_859_),
-    .C(_860_),
-    .Y(_858_)
+    .A(\u_cpu.bne_or_bge ),
+    .B(\u_cpu.bufreg.data [0]),
+    .C(\u_cpu.state.i_ctrl_misalign ),
+    .Y(_761_)
 );
 
-MUX2X1 _2185_ (
+NAND2X1 _2185_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_858_),
-    .B(\u_mem_serial.shift_reg [24]),
-    .S(_1067__bF$buf0),
-    .Y(_857_)
+    .A(_761_),
+    .B(_778_),
+    .Y(_760_)
 );
 
-NOR2X1 _2186_ (
+INVX1 _2186_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf5),
-    .B(_857_),
-    .Y(_1485_)
+    .A(\u_cpu.bufreg2.dhi [5]),
+    .Y(_759_)
 );
 
-INVX1 _2187_ (
+MUX2X1 _2187_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [24]),
-    .Y(_856_)
+    .A(_770_),
+    .B(_759_),
+    .S(_994__bF$buf1),
+    .Y(_758_)
 );
 
-NOR2X1 _2188_ (
+OAI21X1 _2188_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_856_),
-    .B(_1040__bF$buf1),
-    .Y(_855_)
+    .A(_1002__bF$buf0),
+    .B(_758_),
+    .C(_760_),
+    .Y(_757_)
 );
 
-NAND2X1 _2189_ (
+OAI21X1 _2189_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf3 ),
-    .B(\u_cpu.bufreg.i_shamt [1]),
-    .Y(_854_)
+    .A(\u_mem_serial.shift_reg [35]),
+    .B(_973__bF$buf6),
+    .C(i_rst_n_bF$buf7),
+    .Y(_756_)
 );
 
-NOR2X1 _2190_ (
+AOI21X1 _2190_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_854_),
-    .B(_1062__bF$buf3),
-    .Y(_853_)
+    .A(_973__bF$buf5),
+    .B(_757_),
+    .C(_756_),
+    .Y(_1420_)
 );
 
-OAI21X1 _2191_ (
+MUX2X1 _2191_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_853_),
-    .B(_855_),
-    .C(_1058__bF$buf1),
-    .Y(_852_)
+    .A(\u_mem_serial.shift_reg [35]),
+    .B(\u_cpu.bufreg2.dhi [6]),
+    .S(_994__bF$buf0),
+    .Y(_755_)
 );
 
-MUX2X1 _2192_ (
+OAI21X1 _2192_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [25]),
-    .B(\u_cpu.ctrl.o_ibus_adr [25]),
-    .S(_1052__bF$buf4),
-    .Y(_851_)
+    .A(_1002__bF$buf4),
+    .B(_755_),
+    .C(_1004_),
+    .Y(_754_)
 );
 
-OAI21X1 _2193_ (
+NAND2X1 _2193_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf0),
-    .B(_851_),
-    .C(_852_),
-    .Y(_850_)
+    .A(_754_),
+    .B(_973__bF$buf4),
+    .Y(_753_)
 );
 
-MUX2X1 _2194_ (
+NAND2X1 _2194_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_850_),
-    .B(\u_mem_serial.shift_reg [25]),
-    .S(_1067__bF$buf4),
-    .Y(_849_)
+    .A(\u_mem_serial.shift_reg [36]),
+    .B(_1009_),
+    .Y(_752_)
 );
 
-NOR2X1 _2195_ (
+AOI21X1 _2195_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf4),
-    .B(_849_),
-    .Y(_1484_)
+    .A(_753_),
+    .B(_752_),
+    .C(_1070__bF$buf3),
+    .Y(_1419_)
 );
 
-INVX1 _2196_ (
+NAND2X1 _2196_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [25]),
-    .Y(_848_)
+    .A(_1025_),
+    .B(_1021_),
+    .Y(_751_)
 );
 
-NOR2X1 _2197_ (
+OR2X2 _2197_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_848_),
-    .B(_1040__bF$buf0),
-    .Y(_847_)
+    .A(_751_),
+    .B(\u_mem_serial.bit_count [6]),
+    .Y(_750_)
 );
 
-NAND2X1 _2198_ (
+OAI21X1 _2198_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf2 ),
-    .B(\u_cpu.bufreg.i_shamt [2]),
-    .Y(_846_)
+    .A(_1014_),
+    .B(_750_),
+    .C(_1023__bF$buf3),
+    .Y(_749_)
 );
 
 NOR2X1 _2199_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_846_),
-    .B(_1062__bF$buf2),
-    .Y(_845_)
+    .A(\u_mem_serial.state [0]),
+    .B(_1047_),
+    .Y(_748_)
 );
 
 OAI21X1 _2200_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_845_),
-    .B(_847_),
-    .C(_1058__bF$buf6),
-    .Y(_844_)
+    .A(_1056_),
+    .B(\u_mem_serial.clk_sys_prev ),
+    .C(_748_),
+    .Y(_747_)
 );
 
-MUX2X1 _2201_ (
+NAND2X1 _2201_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [26]),
-    .B(\u_cpu.ctrl.o_ibus_adr [26]),
-    .S(_1052__bF$buf3),
-    .Y(_843_)
+    .A(_747_),
+    .B(_749_),
+    .Y(_746_)
 );
 
-OAI21X1 _2202_ (
+NOR2X1 _2202_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf5),
-    .B(_843_),
-    .C(_844_),
-    .Y(_842_)
+    .A(_746_),
+    .B(_1048_),
+    .Y(_745_)
 );
 
-MUX2X1 _2203_ (
+OAI21X1 _2203_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_842_),
-    .B(\u_mem_serial.shift_reg [26]),
-    .S(_1067__bF$buf3),
-    .Y(_841_)
+    .A(\u_mem_serial.req_pending ),
+    .B(_1057_),
+    .C(_745_),
+    .Y(_744_)
 );
 
-NOR2X1 _2204_ (
+INVX1 _2204_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf3),
-    .B(_841_),
-    .Y(_1483_)
+    .A(_745_),
+    .Y(_743_)
 );
 
-INVX1 _2205_ (
+OAI21X1 _2205_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [26]),
-    .Y(_840_)
+    .A(_1058_),
+    .B(_743_),
+    .C(i_rst_n_bF$buf6),
+    .Y(_742_)
 );
 
-NOR2X1 _2206_ (
+AOI21X1 _2206_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_840_),
-    .B(_1040__bF$buf4),
-    .Y(_839_)
+    .A(_1024_),
+    .B(_744_),
+    .C(_742_),
+    .Y(_1418_)
 );
 
-NAND2X1 _2207_ (
+INVX1 _2207_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf1 ),
-    .B(\u_cpu.bufreg2.dhi [3]),
-    .Y(_838_)
+    .A(\u_rf_if.tx_state [3]),
+    .Y(_741_)
 );
 
 NOR2X1 _2208_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_838_),
-    .B(_1062__bF$buf1),
-    .Y(_837_)
+    .A(\u_rf_if.tx_state [1]),
+    .B(\u_rf_if.tx_state [0]),
+    .Y(_740_)
 );
 
-OAI21X1 _2209_ (
+INVX2 _2209_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_837_),
-    .B(_839_),
-    .C(_1058__bF$buf4),
-    .Y(_836_)
+    .A(_740_),
+    .Y(_739_)
 );
 
-MUX2X1 _2210_ (
+NOR2X1 _2210_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [27]),
-    .B(\u_cpu.ctrl.o_ibus_adr [27]),
-    .S(_1052__bF$buf2),
-    .Y(_835_)
+    .A(\u_rf_if.tx_state [2]),
+    .B(_739_),
+    .Y(_738_)
 );
 
-OAI21X1 _2211_ (
+NAND2X1 _2211_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf3),
-    .B(_835_),
-    .C(_836_),
-    .Y(_834_)
+    .A(_741_),
+    .B(_738_),
+    .Y(_737_)
 );
 
-MUX2X1 _2212_ (
+NOR2X1 _2212_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_834_),
-    .B(\u_mem_serial.shift_reg [27]),
-    .S(_1067__bF$buf2),
-    .Y(_833_)
+    .A(\u_rf_if.tx_state [4]),
+    .B(_737_),
+    .Y(_736_)
 );
 
-NOR2X1 _2213_ (
+INVX2 _2213_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf2),
-    .B(_833_),
-    .Y(_1482_)
+    .A(ren),
+    .Y(_735_)
 );
 
 INVX1 _2214_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [27]),
-    .Y(_832_)
+    .A(\u_rf_if.wen0_r ),
+    .Y(_734_)
 );
 
-NOR2X1 _2215_ (
+INVX1 _2215_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_832_),
-    .B(_1040__bF$buf3),
-    .Y(_831_)
+    .A(\u_rf_if.rtrig1 ),
+    .Y(_733_)
 );
 
-NAND2X1 _2216_ (
+OAI21X1 _2216_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf0 ),
-    .B(\u_cpu.bufreg2.dhi [4]),
-    .Y(_830_)
+    .A(_734_),
+    .B(_733_),
+    .C(_735_),
+    .Y(_732_)
 );
 
-NOR2X1 _2217_ (
+INVX1 _2217_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_830_),
-    .B(_1062__bF$buf0),
-    .Y(_829_)
+    .A(raddr[5]),
+    .Y(_731_)
 );
 
-OAI21X1 _2218_ (
+NOR2X1 _2218_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_829_),
-    .B(_831_),
-    .C(_1058__bF$buf2),
-    .Y(_828_)
+    .A(_735_),
+    .B(_731_),
+    .Y(_730_)
 );
 
-MUX2X1 _2219_ (
+INVX1 _2219_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [28]),
-    .B(\u_cpu.ctrl.o_ibus_adr [28]),
-    .S(_1052__bF$buf1),
-    .Y(_827_)
+    .A(_730_),
+    .Y(_729_)
 );
 
-OAI21X1 _2220_ (
+INVX1 _2220_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf1),
-    .B(_827_),
-    .C(_828_),
-    .Y(_826_)
+    .A(rf_write_drain_busy),
+    .Y(_728_)
 );
 
-MUX2X1 _2221_ (
+NOR2X1 _2221_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_826_),
-    .B(\u_mem_serial.shift_reg [28]),
-    .S(_1067__bF$buf1),
-    .Y(_825_)
+    .A(\u_cpu.decode.co_mem_word ),
+    .B(_1062_),
+    .Y(_727_)
 );
 
-NOR2X1 _2222_ (
+INVX1 _2222_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf1),
-    .B(_825_),
-    .Y(_1481_)
+    .A(\u_cpu.state.init_done ),
+    .Y(_726_)
 );
 
-INVX1 _2223_ (
+INVX2 _2223_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [28]),
-    .Y(_824_)
+    .A(\u_cpu.decode.opcode [0]),
+    .Y(_725_)
 );
 
-NOR2X1 _2224_ (
+NAND2X1 _2224_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_824_),
-    .B(_1040__bF$buf2),
-    .Y(_823_)
+    .A(_1063_),
+    .B(_725_),
+    .Y(_724_)
 );
 
 NAND2X1 _2225_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf4 ),
-    .B(\u_cpu.bufreg2.dhi [5]),
-    .Y(_822_)
+    .A(\u_cpu.bufreg.i_right_shift_op ),
+    .B(\u_cpu.decode.co_mem_word ),
+    .Y(_723_)
 );
 
-NOR2X1 _2226_ (
+OAI21X1 _2226_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_822_),
-    .B(_1062__bF$buf4),
-    .Y(_821_)
+    .A(\u_cpu.bne_or_bge ),
+    .B(\u_cpu.decode.co_mem_word ),
+    .C(_723_),
+    .Y(_722_)
 );
 
 OAI21X1 _2227_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_821_),
-    .B(_823_),
-    .C(_1058__bF$buf0),
-    .Y(_820_)
+    .A(_724_),
+    .B(_722_),
+    .C(\u_cpu.decode.opcode [2]),
+    .Y(_721_)
 );
 
-MUX2X1 _2228_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [29]),
-    .B(\u_cpu.ctrl.o_ibus_adr [29]),
-    .S(_1052__bF$buf0),
-    .Y(_819_)
-);
-
-OAI21X1 _2229_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1058__bF$buf6),
-    .B(_819_),
-    .C(_820_),
-    .Y(_818_)
-);
-
-MUX2X1 _2230_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_818_),
-    .B(\u_mem_serial.shift_reg [29]),
-    .S(_1067__bF$buf0),
-    .Y(_817_)
-);
-
-NOR2X1 _2231_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1126__bF$buf0),
-    .B(_817_),
-    .Y(_1480_)
-);
-
-INVX1 _2232_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [29]),
-    .Y(_816_)
-);
-
-NOR2X1 _2233_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_816_),
-    .B(_1040__bF$buf1),
-    .Y(_815_)
-);
-
-NAND2X1 _2234_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf3 ),
-    .B(\u_cpu.bufreg2.dhi [6]),
-    .Y(_814_)
-);
-
-NOR2X1 _2235_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_814_),
-    .B(_1062__bF$buf3),
-    .Y(_813_)
-);
-
-OAI21X1 _2236_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_813_),
-    .B(_815_),
-    .C(_1058__bF$buf5),
-    .Y(_812_)
-);
-
-MUX2X1 _2237_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [30]),
-    .B(\u_cpu.ctrl.o_ibus_adr [30]),
-    .S(_1052__bF$buf4),
-    .Y(_811_)
-);
-
-OAI21X1 _2238_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1058__bF$buf4),
-    .B(_811_),
-    .C(_812_),
-    .Y(_810_)
-);
-
-MUX2X1 _2239_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_810_),
-    .B(\u_mem_serial.shift_reg [30]),
-    .S(_1067__bF$buf4),
-    .Y(_809_)
-);
-
-NOR2X1 _2240_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1126__bF$buf7),
-    .B(_809_),
-    .Y(_1479_)
-);
-
-OAI21X1 _2241_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1064_),
-    .B(_1071_),
-    .C(_1058__bF$buf3),
-    .Y(_808_)
-);
-
-AOI21X1 _2242_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1107_),
-    .B(_808_),
-    .C(_1126__bF$buf6),
-    .Y(_1478_)
-);
-
-INVX1 _2243_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1910_),
-    .Y(_807_)
-);
-
-NOR2X1 _2244_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(i_clk_fast_bF$buf7),
-    .B(_807_),
-    .Y(_1909_)
-);
-
-INVX1 _2245_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.tx_state [3]),
-    .Y(_806_)
-);
-
-NOR2X1 _2246_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.tx_state [1]),
-    .B(\u_rf_serial.tx_state [0]),
-    .Y(_805_)
-);
-
-INVX1 _2247_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_805_),
-    .Y(_804_)
-);
-
-NOR2X1 _2248_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.tx_state [2]),
-    .B(_804_),
-    .Y(_803_)
-);
-
-NOR2X1 _2249_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.tx_state [3]),
-    .B(\u_rf_serial.tx_state [2]),
-    .Y(_802_)
-);
-
-NAND2X1 _2250_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_805_),
-    .B(_802_),
-    .Y(_801_)
-);
-
-OAI21X1 _2251_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_806_),
-    .B(_803_),
-    .C(_801_),
-    .Y(_800_)
-);
-
-INVX1 _2252_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_803_),
-    .Y(_799_)
-);
-
-OAI21X1 _2253_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.tx_state [1]),
-    .B(\u_rf_serial.tx_state [0]),
-    .C(\u_rf_serial.tx_state [2]),
-    .Y(_798_)
-);
-
-NAND2X1 _2254_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_798_),
-    .B(_799_),
-    .Y(_797_)
-);
-
-INVX1 _2255_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_797_),
-    .Y(_796_)
-);
-
-INVX2 _2256_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(ren_bF$buf3),
-    .Y(_795_)
-);
-
-NOR2X1 _2257_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.decode.co_mem_word ),
-    .B(_1118_),
-    .Y(_794_)
-);
-
-INVX1 _2258_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_794_),
-    .Y(_793_)
-);
-
-NAND2X1 _2259_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.i_right_shift_op ),
-    .B(\u_cpu.decode.co_mem_word ),
-    .Y(_792_)
-);
-
-NOR2X1 _2260_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.branch_op ),
-    .B(\u_cpu.decode.opcode [0]),
-    .Y(_791_)
-);
-
-INVX1 _2261_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bne_or_bge ),
-    .Y(_790_)
-);
-
-INVX2 _2262_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.decode.co_mem_word ),
-    .Y(_789_)
-);
-
-NAND2X1 _2263_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_790_),
-    .B(_789_),
-    .Y(_788_)
-);
-
-NAND3X1 _2264_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_792_),
-    .B(_791_),
-    .C(_788_),
-    .Y(_787_)
-);
-
-AOI21X1 _2265_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_787_),
-    .B(\u_cpu.decode.opcode [2]),
-    .C(\u_cpu.state.init_done ),
-    .Y(_786_)
-);
-
-INVX2 _2266_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.i_bytecnt [1]),
-    .Y(_785_)
-);
-
-NAND3X1 _2267_ (
+NAND3X1 _2228_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_cpu.state.cnt_r [3]),
     .B(\u_cpu.bufreg2.i_bytecnt [0]),
     .C(\u_cpu.state.o_cnt [2]),
-    .Y(_784_)
-);
-
-NOR2X1 _2268_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_785_),
-    .B(_784_),
-    .Y(_783_)
-);
-
-NAND2X1 _2269_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.i_right_shift_op ),
-    .B(_783_),
-    .Y(_782_)
-);
-
-AOI21X1 _2270_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_786_),
-    .B(_782_),
-    .C(_793_),
-    .Y(_781_)
-);
-
-INVX1 _2271_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.i_right_shift_op ),
-    .Y(_780_)
-);
-
-INVX1 _2272_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_783_),
-    .Y(_779_)
-);
-
-OAI21X1 _2273_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_780_),
-    .B(_779_),
-    .C(_786_),
-    .Y(_778_)
-);
-
-INVX1 _2274_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dhi [5]),
-    .Y(_777_)
-);
-
-INVX1 _2275_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.i_shamt [2]),
-    .Y(_776_)
-);
-
-INVX1 _2276_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dhi [3]),
-    .Y(_775_)
-);
-
-NOR2X1 _2277_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.i_shamt [0]),
-    .B(\u_cpu.bufreg.i_shamt [1]),
-    .Y(_774_)
-);
-
-NAND3X1 _2278_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_776_),
-    .B(_775_),
-    .C(_774_),
-    .Y(_773_)
-);
-
-OAI21X1 _2279_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dhi [4]),
-    .B(_773_),
-    .C(_777_),
-    .Y(_772_)
-);
-
-INVX1 _2280_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dhi [4]),
-    .Y(_771_)
-);
-
-INVX1 _2281_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_773_),
-    .Y(_770_)
-);
-
-NAND3X1 _2282_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_771_),
-    .B(\u_cpu.bufreg2.dhi [5]),
-    .C(_770_),
-    .Y(_769_)
-);
-
-NAND2X1 _2283_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_772_),
-    .B(_769_),
-    .Y(_768_)
-);
-
-NAND3X1 _2284_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_794_),
-    .B(_778_),
-    .C(_768_),
-    .Y(_767_)
-);
-
-OAI21X1 _2285_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dhi [6]),
-    .B(_781_),
-    .C(_767_),
-    .Y(_766_)
-);
-
-NAND2X1 _2286_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_783_),
-    .B(_786_),
-    .Y(_765_)
-);
-
-OAI21X1 _2287_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_780_),
-    .B(_1120_),
-    .C(_765_),
-    .Y(_764_)
-);
-
-NAND2X1 _2288_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_794_),
-    .B(_764_),
-    .Y(_763_)
-);
-
-AOI21X1 _2289_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_766_),
-    .B(\u_cpu.bufreg.i_right_shift_op ),
-    .C(_763_),
-    .Y(_762_)
-);
-
-INVX2 _2290_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf6),
-    .Y(_761_)
-);
-
-NOR2X1 _2291_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.i_right_shift_op ),
-    .B(_789_),
-    .Y(_760_)
-);
-
-NOR2X1 _2292_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.decode.opcode [0]),
-    .B(_1118_),
-    .Y(_759_)
-);
-
-AOI21X1 _2293_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_760_),
-    .B(_759_),
-    .C(\u_cpu.branch_op ),
-    .Y(_758_)
-);
-
-OAI21X1 _2294_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_758_),
-    .B(_765_),
-    .C(_761_),
-    .Y(_757_)
-);
-
-NOR2X1 _2295_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_757_),
-    .B(_762_),
-    .Y(_756_)
-);
-
-INVX1 _2296_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(rf_write_drain_busy),
-    .Y(_755_)
-);
-
-INVX2 _2297_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1121_),
-    .Y(_754_)
-);
-
-INVX1 _2298_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_786_),
-    .Y(_753_)
-);
-
-NAND2X1 _2299_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_754_),
-    .B(_753_),
-    .Y(_752_)
-);
-
-INVX1 _2300_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [4]),
-    .Y(_751_)
-);
-
-INVX1 _2301_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [0]),
-    .Y(_750_)
-);
-
-NAND2X1 _2302_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_751_),
-    .B(_750_),
-    .Y(_749_)
-);
-
-INVX1 _2303_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [1]),
-    .Y(_748_)
-);
-
-INVX1 _2304_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [2]),
-    .Y(_747_)
-);
-
-INVX1 _2305_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [3]),
-    .Y(_746_)
-);
-
-NAND3X1 _2306_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_748_),
-    .B(_747_),
-    .C(_746_),
-    .Y(_745_)
-);
-
-INVX2 _2307_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.decode.opcode [0]),
-    .Y(_744_)
-);
-
-NOR2X1 _2308_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.branch_op ),
-    .B(_744_),
-    .Y(_743_)
-);
-
-INVX1 _2309_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.i_op_b_sel ),
-    .Y(_742_)
-);
-
-NOR2X1 _2310_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.decode.opcode [0]),
-    .B(_742_),
-    .Y(_741_)
-);
-
-OAI21X1 _2311_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_743_),
-    .B(_741_),
-    .C(_1118_),
-    .Y(_740_)
-);
-
-OAI21X1 _2312_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_749_),
-    .B(_745_),
-    .C(_740_),
-    .Y(_739_)
-);
-
-NOR2X1 _2313_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_739_),
-    .B(_752_),
-    .Y(_738_)
-);
-
-OAI21X1 _2314_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_757_),
-    .B(_762_),
-    .C(_738_),
-    .Y(_737_)
-);
-
-INVX1 _2315_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_ibus_ack),
-    .Y(_736_)
-);
-
-INVX1 _2316_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf6),
-    .Y(_735_)
-);
-
-NAND2X1 _2317_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_736_),
-    .B(_735_),
-    .Y(_734_)
-);
-
-NAND3X1 _2318_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_755_),
-    .B(_734_),
-    .C(_737_),
-    .Y(_733_)
-);
-
-NAND3X1 _2319_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.rcnt [0]),
-    .B(_756_),
-    .C(_733__bF$buf5),
-    .Y(_732_)
-);
-
-NOR2X1 _2320_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(ren_bF$buf2),
-    .B(_746_),
-    .Y(_731_)
-);
-
-AOI22X1 _2321_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(raddr[7]),
-    .B(ren_bF$buf1),
-    .C(_732_),
-    .D(_731_),
-    .Y(_730_)
-);
-
-INVX1 _2322_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.tx_state [1]),
-    .Y(_729_)
-);
-
-NOR2X1 _2323_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.tx_state [0]),
-    .B(_729_),
-    .Y(_728_)
-);
-
-INVX1 _2324_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_728_),
-    .Y(_727_)
-);
-
-OAI22X1 _2325_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_795_),
-    .B(_804_),
-    .C(_727_),
-    .D(_730_),
-    .Y(_726_)
-);
-
-INVX1 _2326_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.tx_state [0]),
-    .Y(_725_)
-);
-
-NOR2X1 _2327_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.tx_state [1]),
-    .B(_725_),
-    .Y(_724_)
-);
-
-INVX1 _2328_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_724_),
-    .Y(_723_)
-);
-
-NOR2X1 _2329_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(ren_bF$buf0),
-    .B(_747_),
-    .Y(_722_)
-);
-
-AOI22X1 _2330_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(raddr[6]),
-    .B(ren_bF$buf3),
-    .C(_732_),
-    .D(_722_),
-    .Y(_721_)
-);
-
-NOR2X1 _2331_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_729_),
-    .B(_725_),
     .Y(_720_)
 );
 
-INVX1 _2332_ (
+INVX1 _2229_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(_720_),
     .Y(_719_)
 );
 
-NOR2X1 _2333_ (
+NAND3X1 _2230_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ren_bF$buf2),
-    .B(_751_),
+    .A(\u_cpu.bufreg2.i_bytecnt [1]),
+    .B(\u_cpu.bufreg.i_right_shift_op ),
+    .C(_719_),
     .Y(_718_)
 );
 
-AOI22X1 _2334_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(raddr[8]),
-    .B(ren_bF$buf1),
-    .C(_732_),
-    .D(_718_),
-    .Y(_717_)
-);
-
-OAI22X1 _2335_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_723_),
-    .B(_721_),
-    .C(_719_),
-    .D(_717_),
-    .Y(_716_)
-);
-
-OAI21X1 _2336_ (
+NAND3X1 _2231_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(_726_),
-    .B(_716_),
-    .C(_796_),
+    .B(_718_),
+    .C(_721_),
+    .Y(_717_)
+);
+
+INVX1 _2232_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.i_shamt [2]),
+    .Y(_716_)
+);
+
+NOR2X1 _2233_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.i_shamt [0]),
+    .B(\u_cpu.bufreg.i_shamt [1]),
     .Y(_715_)
 );
 
-INVX1 _2337_ (
+NAND3X1 _2234_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.wen0_r ),
+    .A(_716_),
+    .B(_776_),
+    .C(_715_),
     .Y(_714_)
 );
 
-INVX1 _2338_ (
+OAI21X1 _2235_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rtrig1 ),
+    .A(\u_cpu.bufreg2.dhi [4]),
+    .B(_714_),
+    .C(\u_cpu.bufreg2.dhi [5]),
     .Y(_713_)
+);
+
+INVX1 _2236_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_714_),
+    .Y(_712_)
+);
+
+NAND3X1 _2237_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_768_),
+    .B(_759_),
+    .C(_712_),
+    .Y(_711_)
+);
+
+NAND2X1 _2238_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_713_),
+    .B(_711_),
+    .Y(_710_)
+);
+
+NAND3X1 _2239_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_727_),
+    .B(_717_),
+    .C(_710_),
+    .Y(_709_)
+);
+
+NAND2X1 _2240_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_727_),
+    .B(_717_),
+    .Y(_708_)
+);
+
+NAND2X1 _2241_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dhi [6]),
+    .B(_708_),
+    .Y(_707_)
+);
+
+NAND3X1 _2242_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.i_right_shift_op ),
+    .B(_707_),
+    .C(_709_),
+    .Y(_706_)
+);
+
+INVX1 _2243_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.i_right_shift_op ),
+    .Y(_705_)
+);
+
+NAND2X1 _2244_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_726_),
+    .B(_721_),
+    .Y(_704_)
+);
+
+INVX1 _2245_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.i_bytecnt [1]),
+    .Y(_703_)
+);
+
+NOR2X1 _2246_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_703_),
+    .B(_720_),
+    .Y(_702_)
+);
+
+INVX1 _2247_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_702_),
+    .Y(_701_)
+);
+
+OAI22X1 _2248_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_705_),
+    .B(_1064_),
+    .C(_701_),
+    .D(_704_),
+    .Y(_700_)
+);
+
+NAND2X1 _2249_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_727_),
+    .B(_700_),
+    .Y(_699_)
+);
+
+INVX1 _2250_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_699_),
+    .Y(_698_)
+);
+
+INVX2 _2251_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf6),
+    .Y(_697_)
+);
+
+INVX1 _2252_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_704_),
+    .Y(_696_)
+);
+
+NAND2X1 _2253_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_702_),
+    .B(_696_),
+    .Y(_695_)
+);
+
+INVX1 _2254_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.decode.co_mem_word ),
+    .Y(_694_)
+);
+
+NOR2X1 _2255_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.i_right_shift_op ),
+    .B(_694_),
+    .Y(_693_)
+);
+
+NOR2X1 _2256_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.decode.opcode [0]),
+    .B(_1062_),
+    .Y(_692_)
+);
+
+AOI21X1 _2257_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_693_),
+    .B(_692_),
+    .C(\u_cpu.branch_op ),
+    .Y(_691_)
+);
+
+OAI21X1 _2258_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_691_),
+    .B(_695_),
+    .C(_697_),
+    .Y(_690_)
+);
+
+AOI21X1 _2259_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_706_),
+    .B(_698_),
+    .C(_690_),
+    .Y(_689_)
+);
+
+NAND2X1 _2260_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1066_),
+    .B(_704_),
+    .Y(_688_)
+);
+
+INVX1 _2261_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [4]),
+    .Y(_687_)
+);
+
+INVX1 _2262_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [0]),
+    .Y(_686_)
+);
+
+NAND2X1 _2263_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_687_),
+    .B(_686_),
+    .Y(_685_)
+);
+
+INVX1 _2264_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [1]),
+    .Y(_684_)
+);
+
+INVX1 _2265_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [2]),
+    .Y(_683_)
+);
+
+INVX1 _2266_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [3]),
+    .Y(_682_)
+);
+
+NAND3X1 _2267_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_684_),
+    .B(_683_),
+    .C(_682_),
+    .Y(_681_)
+);
+
+NOR2X1 _2268_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.branch_op ),
+    .B(_725_),
+    .Y(_680_)
+);
+
+NOR2X1 _2269_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.decode.opcode [0]),
+    .B(_787_),
+    .Y(_679_)
+);
+
+OAI21X1 _2270_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_680_),
+    .B(_679_),
+    .C(_1062_),
+    .Y(_678_)
+);
+
+OAI21X1 _2271_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_685_),
+    .B(_681_),
+    .C(_678_),
+    .Y(_677_)
+);
+
+NOR2X1 _2272_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_677_),
+    .B(_688_),
+    .Y(_676_)
+);
+
+INVX1 _2273_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_676_),
+    .Y(_675_)
+);
+
+OAI21X1 _2274_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_675_),
+    .B(_689_),
+    .C(_728_),
+    .Y(_674_)
+);
+
+NOR2X1 _2275_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_ibus_ack),
+    .B(ibus_pending_ack_bF$buf5),
+    .Y(_673_)
+);
+
+AND2X2 _2276_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_689_),
+    .B(\u_rf_if.rcnt [0]),
+    .Y(_672_)
+);
+
+OAI21X1 _2277_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_673__bF$buf3),
+    .B(_674__bF$buf3),
+    .C(_672_),
+    .Y(_671_)
+);
+
+NOR2X1 _2278_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ren),
+    .B(_684_),
+    .Y(_670_)
+);
+
+NAND2X1 _2279_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_670_),
+    .B(_671_),
+    .Y(_669_)
+);
+
+NAND3X1 _2280_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [5]),
+    .B(_729_),
+    .C(_669_),
+    .Y(_668_)
+);
+
+INVX1 _2281_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [5]),
+    .Y(_667_)
+);
+
+AND2X2 _2282_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_717_),
+    .B(_727_),
+    .Y(_666_)
+);
+
+INVX1 _2283_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dhi [6]),
+    .Y(_665_)
+);
+
+AOI21X1 _2284_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_717_),
+    .B(_727_),
+    .C(_665_),
+    .Y(_664_)
+);
+
+AOI21X1 _2285_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_666_),
+    .B(_710_),
+    .C(_664_),
+    .Y(_663_)
+);
+
+AOI21X1 _2286_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_663_),
+    .B(\u_cpu.bufreg.i_right_shift_op ),
+    .C(_699_),
+    .Y(_662_)
+);
+
+OAI21X1 _2287_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_690_),
+    .B(_662_),
+    .C(_676_),
+    .Y(_661_)
+);
+
+INVX1 _2288_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_673__bF$buf2),
+    .Y(_660_)
+);
+
+NAND3X1 _2289_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_728_),
+    .B(_660_),
+    .C(_661_),
+    .Y(_659_)
+);
+
+INVX1 _2290_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_670_),
+    .Y(_658_)
+);
+
+AOI21X1 _2291_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_659__bF$buf5),
+    .B(_672_),
+    .C(_658_),
+    .Y(_657_)
+);
+
+OAI21X1 _2292_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_730_),
+    .B(_657_),
+    .C(_667_),
+    .Y(_656_)
+);
+
+NOR2X1 _2293_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ren),
+    .B(_687_),
+    .Y(_655_)
+);
+
+AOI22X1 _2294_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ren),
+    .B(raddr[8]),
+    .C(_671_),
+    .D(_655_),
+    .Y(_654_)
+);
+
+NAND2X1 _2295_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [8]),
+    .B(_654_),
+    .Y(_653_)
+);
+
+NAND3X1 _2296_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_656_),
+    .B(_668_),
+    .C(_653_),
+    .Y(_652_)
+);
+
+INVX1 _2297_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_652_),
+    .Y(_651_)
+);
+
+INVX1 _2298_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [4]),
+    .Y(_650_)
+);
+
+INVX1 _2299_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(raddr[4]),
+    .Y(_649_)
+);
+
+NOR2X1 _2300_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_735_),
+    .B(_649_),
+    .Y(_648_)
+);
+
+NOR2X1 _2301_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ren),
+    .B(_686_),
+    .Y(_647_)
+);
+
+INVX1 _2302_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_647_),
+    .Y(_646_)
+);
+
+AOI21X1 _2303_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_659__bF$buf4),
+    .B(_672_),
+    .C(_646_),
+    .Y(_645_)
+);
+
+OAI21X1 _2304_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_648_),
+    .B(_645_),
+    .C(_650_),
+    .Y(_644_)
+);
+
+INVX1 _2305_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(raddr[6]),
+    .Y(_643_)
+);
+
+NOR2X1 _2306_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_735_),
+    .B(_643_),
+    .Y(_642_)
+);
+
+INVX1 _2307_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_642_),
+    .Y(_641_)
+);
+
+NOR2X1 _2308_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ren),
+    .B(_683_),
+    .Y(_640_)
+);
+
+NAND2X1 _2309_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_640_),
+    .B(_671_),
+    .Y(_634_)
+);
+
+NAND3X1 _2310_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [6]),
+    .B(_641_),
+    .C(_634_),
+    .Y(_633_)
+);
+
+NAND2X1 _2311_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_644_),
+    .B(_633_),
+    .Y(_612_)
+);
+
+INVX1 _2312_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_648_),
+    .Y(_611_)
+);
+
+NAND2X1 _2313_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_647_),
+    .B(_671_),
+    .Y(_610_)
+);
+
+NAND3X1 _2314_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [4]),
+    .B(_611_),
+    .C(_610_),
+    .Y(_609_)
+);
+
+OAI21X1 _2315_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [8]),
+    .B(_654_),
+    .C(_609_),
+    .Y(_608_)
+);
+
+NOR2X1 _2316_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_612_),
+    .B(_608_),
+    .Y(_607_)
+);
+
+NOR2X1 _2317_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ren),
+    .B(_682_),
+    .Y(_606_)
+);
+
+AOI22X1 _2318_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ren),
+    .B(raddr[7]),
+    .C(_671_),
+    .D(_606_),
+    .Y(_605_)
+);
+
+OR2X2 _2319_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_735_),
+    .B(raddr[3]),
+    .Y(_1074_)
+);
+
+OAI21X1 _2320_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ren),
+    .B(\u_rf_if.o_waddr [3]),
+    .C(_1074_),
+    .Y(_1076_)
+);
+
+NOR2X1 _2321_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [3]),
+    .B(_1076_),
+    .Y(_1077_)
+);
+
+AND2X2 _2322_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1076_),
+    .B(\u_rf_if.last_req_key [3]),
+    .Y(_1083_)
+);
+
+NOR2X1 _2323_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1077_),
+    .B(_1083_),
+    .Y(_1084_)
+);
+
+OR2X2 _2324_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_735_),
+    .B(raddr[1]),
+    .Y(_1085_)
+);
+
+OAI21X1 _2325_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ren),
+    .B(\u_rf_if.o_waddr [1]),
+    .C(_1085_),
+    .Y(_1086_)
+);
+
+NAND2X1 _2326_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [1]),
+    .B(_1086_),
+    .Y(_1087_)
+);
+
+OR2X2 _2327_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1086_),
+    .B(\u_rf_if.last_req_key [1]),
+    .Y(_1088_)
+);
+
+NAND3X1 _2328_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1087_),
+    .B(_1088_),
+    .C(_1084_),
+    .Y(_1089_)
+);
+
+OR2X2 _2329_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_735_),
+    .B(raddr[0]),
+    .Y(_1090_)
+);
+
+OAI21X1 _2330_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ren),
+    .B(\u_rf_if.o_waddr [0]),
+    .C(_1090_),
+    .Y(_1256_)
+);
+
+INVX1 _2331_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.launch_pending ),
+    .Y(_1257_)
+);
+
+NAND2X1 _2332_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.req_seen ),
+    .B(_1257_),
+    .Y(_1412_)
+);
+
+AOI21X1 _2333_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [9]),
+    .B(_735_),
+    .C(_1412_),
+    .Y(_1414_)
+);
+
+OAI21X1 _2334_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [9]),
+    .B(_735_),
+    .C(_1414_),
+    .Y(_1462_)
+);
+
+AOI21X1 _2335_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [0]),
+    .B(_1256_),
+    .C(_1462_),
+    .Y(_1463_)
+);
+
+OR2X2 _2336_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_735_),
+    .B(raddr[2]),
+    .Y(_1464_)
+);
+
+OAI21X1 _2337_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ren),
+    .B(\u_rf_if.o_waddr [2]),
+    .C(_1464_),
+    .Y(_1465_)
+);
+
+AND2X2 _2338_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1465_),
+    .B(\u_rf_if.last_req_key [2]),
+    .Y(_1466_)
 );
 
 NOR2X1 _2339_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_714_),
-    .B(_713_),
-    .Y(_712_)
+    .A(\u_rf_if.last_req_key [2]),
+    .B(_1465_),
+    .Y(_1467_)
 );
 
-INVX2 _2340_ (
+NOR2X1 _2340_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_712_),
-    .Y(_711_)
+    .A(_1467_),
+    .B(_1466_),
+    .Y(_1468_)
 );
 
-NAND2X1 _2341_ (
+INVX1 _2341_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.tx_state [2]),
-    .B(_724_),
-    .Y(_710_)
+    .A(\u_rf_if.last_req_key [0]),
+    .Y(_1469_)
 );
 
-OAI21X1 _2342_ (
+INVX1 _2342_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_711_),
-    .B(_710_),
-    .C(_715_),
-    .Y(_709_)
+    .A(_1256_),
+    .Y(_1470_)
 );
 
-NAND2X1 _2343_ (
+NOR2X1 _2343_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_800_),
-    .B(_709_),
-    .Y(_708_)
+    .A(_734_),
+    .B(_733_),
+    .Y(_1471_)
 );
 
-INVX1 _2344_ (
+OR2X2 _2344_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(current_wdata0_next_hint),
-    .Y(_707_)
+    .A(_1471_),
+    .B(\u_rf_if.last_req_key [10]),
+    .Y(_1472_)
 );
 
-NOR2X1 _2345_ (
+NAND2X1 _2345_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.i_right_shift_op ),
-    .B(_788_),
-    .Y(_706_)
+    .A(\u_rf_if.last_req_key [10]),
+    .B(_1471_),
+    .Y(_1473_)
 );
 
-AND2X2 _2346_ (
+AOI22X1 _2346_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_791_),
-    .B(\u_cpu.decode.opcode [2]),
-    .Y(_705_)
+    .A(_1472_),
+    .B(_1473_),
+    .C(_1470_),
+    .D(_1469_),
+    .Y(_1474_)
 );
 
-AOI21X1 _2347_ (
+NAND3X1 _2347_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg2.i_op_b_sel ),
-    .B(\u_cpu.bufreg.i_sh_signed ),
-    .C(_788_),
-    .Y(_704_)
+    .A(_1463_),
+    .B(_1474_),
+    .C(_1468_),
+    .Y(_1475_)
 );
 
-NAND3X1 _2348_ (
+NOR2X1 _2348_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_705_),
-    .B(_706_),
-    .C(_704_),
-    .Y(_703_)
+    .A(_1089_),
+    .B(_1475_),
+    .Y(_1476_)
 );
 
-NAND2X1 _2349_ (
+OAI21X1 _2349_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_707_),
-    .B(_703_),
-    .Y(_702_)
+    .A(\u_rf_if.last_req_key [7]),
+    .B(_605_),
+    .C(_1476_),
+    .Y(_1477_)
 );
 
 INVX1 _2350_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rcnt [2]),
-    .Y(_701_)
+    .A(\u_rf_if.last_req_key [6]),
+    .Y(_1478_)
 );
 
-NOR2X1 _2351_ (
+INVX1 _2351_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.o_waddr [2]),
-    .B(\u_rf_if.o_waddr [1]),
-    .Y(_700_)
+    .A(_640_),
+    .Y(_1479_)
 );
 
-NOR2X1 _2352_ (
+AOI21X1 _2352_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.o_waddr [0]),
-    .B(\u_rf_if.o_waddr [3]),
-    .Y(_699_)
+    .A(_659__bF$buf3),
+    .B(_672_),
+    .C(_1479_),
+    .Y(_1480_)
 );
 
-NAND2X1 _2353_ (
+OAI21X1 _2353_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_700_),
-    .B(_699_),
-    .Y(_698_)
+    .A(_642_),
+    .B(_1480_),
+    .C(_1478_),
+    .Y(_1481_)
 );
 
 NAND2X1 _2354_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.wdata0_next_phase ),
-    .B(_698_),
-    .Y(_697_)
+    .A(ren),
+    .B(raddr[7]),
+    .Y(_1482_)
 );
 
-OAI21X1 _2355_ (
+NAND2X1 _2355_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_701_),
-    .B(_698_),
-    .C(_697_),
-    .Y(_696_)
+    .A(_606_),
+    .B(_671_),
+    .Y(_1483_)
 );
 
-NAND2X1 _2356_ (
+NAND3X1 _2356_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_696_),
-    .B(_702_),
-    .Y(_695_)
+    .A(\u_rf_if.last_req_key [7]),
+    .B(_1482_),
+    .C(_1483_),
+    .Y(_1484_)
 );
 
-INVX1 _2357_ (
+NAND2X1 _2357_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_695_),
-    .Y(_694_)
+    .A(_1481_),
+    .B(_1484_),
+    .Y(_1485_)
 );
 
-NAND2X1 _2358_ (
+NOR2X1 _2358_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.decode.opcode [2]),
-    .B(_743_),
-    .Y(_693_)
+    .A(_1477_),
+    .B(_1485_),
+    .Y(_1486_)
 );
 
-INVX1 _2359_ (
+NAND3X1 _2359_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.pc_plus_offset_cy_r_w ),
-    .Y(_692_)
+    .A(_651_),
+    .B(_1486_),
+    .C(_607_),
+    .Y(_1487_)
 );
 
-INVX1 _2360_ (
+NAND3X1 _2360_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.decode.opcode [1]),
-    .Y(_691_)
+    .A(_736_),
+    .B(_732_),
+    .C(_1487_),
+    .Y(_1488_)
 );
 
-NAND3X1 _2361_ (
+INVX1 _2361_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_744_),
-    .B(_1118_),
-    .C(_691_),
-    .Y(_690_)
+    .A(\u_rf_if.tx_state [4]),
+    .Y(_1489_)
 );
 
-INVX1 _2362_ (
+NOR2X1 _2362_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_690_),
-    .Y(_689_)
+    .A(\u_rf_if.tx_state [3]),
+    .B(\u_rf_if.tx_state [2]),
+    .Y(_1490_)
 );
 
-INVX1 _2363_ (
+NAND2X1 _2363_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.decode.co_ebreak ),
-    .Y(_688_)
+    .A(_1489_),
+    .B(_1490_),
+    .Y(_1491_)
 );
 
-NAND2X1 _2364_ (
+OR2X2 _2364_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.branch_op ),
-    .B(\u_cpu.decode.opcode [2]),
-    .Y(_687_)
+    .A(_1491_),
+    .B(\u_rf_if.tx_state [1]),
+    .Y(_1492_)
 );
 
-NOR2X1 _2365_ (
+OAI21X1 _2365_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.branch_op ),
-    .B(\u_cpu.bufreg2.i_op_b_sel ),
-    .Y(_686_)
+    .A(_1492_),
+    .B(_736_),
+    .C(_1858_),
+    .Y(_1493_)
 );
 
 AOI21X1 _2366_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.decode.opcode [0]),
-    .B(\u_cpu.decode.opcode [1]),
-    .C(_686_),
-    .Y(_685_)
+    .A(_1488_),
+    .B(_1493_),
+    .C(_1070__bF$buf2),
+    .Y(_1417_)
 );
 
 OAI21X1 _2367_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_688_),
-    .B(_687_),
-    .C(_685_),
-    .Y(_684_)
+    .A(ren),
+    .B(_1471_),
+    .C(i_rst_n_bF$buf5),
+    .Y(_1494_)
 );
 
-OAI21X1 _2368_ (
+OR2X2 _2368_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_689_),
-    .B(_684_),
-    .C(\u_cpu.ctrl.pc ),
-    .Y(_683_)
+    .A(_1494_),
+    .B(_1257_),
+    .Y(_1495_)
 );
 
-OR2X2 _2369_ (
+NOR2X1 _2369_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_683_),
-    .B(_692_),
-    .Y(_682_)
+    .A(_1495_),
+    .B(_736_),
+    .Y(_1416_)
 );
 
 NAND2X1 _2370_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_692_),
-    .B(_683_),
-    .Y(_681_)
+    .A(i_rst_n_bF$buf4),
+    .B(\u_rf_if.tx_state [4]),
+    .Y(_1496_)
 );
 
-NAND2X1 _2371_ (
+AOI21X1 _2371_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_681_),
-    .B(_682_),
-    .Y(_680_)
+    .A(_738_),
+    .B(_741_),
+    .C(_1496_),
+    .Y(_1415_)
 );
 
 INVX1 _2372_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_680_),
-    .Y(_679_)
+    .A(_1858_),
+    .Y(_1497_)
 );
 
-INVX1 _2373_ (
+NOR2X1 _2373_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg1[0]),
-    .Y(_678_)
+    .A(i_clk_fast_bF$buf8),
+    .B(_1497_),
+    .Y(_1857_)
 );
 
-OAI21X1 _2374_ (
+MUX2X1 _2374_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_742_),
-    .B(_690_),
-    .C(_678_),
-    .Y(_677_)
+    .A(\u_rf_if.wen0_r ),
+    .B(_676_),
+    .S(_671_),
+    .Y(_1498_)
 );
 
-NAND3X1 _2375_ (
+NOR2X1 _2375_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_750_),
-    .B(\u_cpu.bufreg2.i_op_b_sel ),
-    .C(_689_),
-    .Y(_676_)
+    .A(_1070__bF$buf1),
+    .B(_1498_),
+    .Y(_1413_)
 );
 
-NAND3X1 _2376_ (
+INVX1 _2376_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_779_),
-    .B(_677_),
-    .C(_676_),
-    .Y(_675_)
+    .A(current_wdata0_next_hint),
+    .Y(_1499_)
 );
 
-OR2X2 _2377_ (
+INVX2 _2377_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_687_),
-    .B(_780_),
-    .Y(_674_)
+    .A(\u_cpu.bne_or_bge ),
+    .Y(_1500_)
 );
 
-NAND3X1 _2378_ (
+NAND2X1 _2378_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm31 ),
-    .B(_783_),
-    .C(_674_),
-    .Y(_673_)
+    .A(_705_),
+    .B(_1500_),
+    .Y(_1501_)
 );
 
-NAND2X1 _2379_ (
+NOR2X1 _2379_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_673_),
-    .B(_675_),
-    .Y(_672_)
+    .A(\u_cpu.decode.co_mem_word ),
+    .B(_1501_),
+    .Y(_1502_)
 );
 
-INVX1 _2380_ (
+AND2X2 _2380_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg2.i_bytecnt [0]),
-    .Y(_671_)
+    .A(_692_),
+    .B(_1063_),
+    .Y(_1503_)
 );
 
-INVX1 _2381_ (
+NAND2X1 _2381_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.state.o_cnt [2]),
-    .Y(_670_)
+    .A(_1500_),
+    .B(_694_),
+    .Y(_1504_)
 );
 
-OAI21X1 _2382_ (
+AOI21X1 _2382_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_671_),
-    .B(_670_),
-    .C(_785_),
-    .Y(_669_)
+    .A(\u_cpu.bufreg2.i_op_b_sel ),
+    .B(\u_cpu.bufreg.i_sh_signed ),
+    .C(_1504_),
+    .Y(_1505_)
 );
 
-AOI21X1 _2383_ (
+NAND3X1 _2383_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_672_),
-    .B(_669_),
-    .C(_693_),
-    .Y(_668_)
+    .A(_1502_),
+    .B(_1505_),
+    .C(_1503_),
+    .Y(_1506_)
 );
 
-INVX1 _2384_ (
+NAND2X1 _2384_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_668_),
-    .Y(_667_)
+    .A(_1499_),
+    .B(_1506_),
+    .Y(_1507_)
 );
 
 INVX1 _2385_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [0]),
-    .Y(_666_)
+    .A(\u_rf_if.rcnt [2]),
+    .Y(_1508_)
 );
 
-OAI21X1 _2386_ (
+NOR2X1 _2386_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1119_),
-    .B(\u_cpu.decode.opcode [2]),
-    .C(_753_),
-    .Y(_665_)
+    .A(\u_rf_if.o_waddr [2]),
+    .B(\u_rf_if.o_waddr [1]),
+    .Y(_1509_)
 );
 
-NAND2X1 _2387_ (
+NOR2X1 _2387_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_780_),
-    .B(_766_),
-    .Y(_664_)
+    .A(\u_rf_if.o_waddr [0]),
+    .B(\u_rf_if.o_waddr [3]),
+    .Y(_1510_)
 );
 
 NAND2X1 _2388_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.state.init_done ),
-    .B(_794_),
-    .Y(_663_)
+    .A(_1509_),
+    .B(_1510_),
+    .Y(_1511_)
 );
 
-INVX1 _2389_ (
+OR2X2 _2389_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_663_),
-    .Y(_662_)
+    .A(_1511_),
+    .B(_1508_),
+    .Y(_1512_)
 );
 
-AOI22X1 _2390_ (
+AOI21X1 _2390_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_754_),
-    .B(_665_),
-    .C(_664_),
-    .D(_662_),
-    .Y(_661_)
+    .A(_1506_),
+    .B(_1499_),
+    .C(_1512_),
+    .Y(_1513_)
 );
 
-OAI21X1 _2391_ (
+NAND2X1 _2391_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_666_),
-    .B(_661__bF$buf4),
-    .C(_693_),
-    .Y(_660_)
+    .A(\u_rf_if.wdata0_next_phase ),
+    .B(_1511_),
+    .Y(_1514_)
 );
 
-NAND3X1 _2392_ (
+INVX1 _2392_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_679_),
-    .B(_667_),
-    .C(_660_),
-    .Y(_659_)
+    .A(_1514_),
+    .Y(_1515_)
 );
 
-NOR2X1 _2393_ (
+AOI21X1 _2393_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg2.i_bytecnt [0]),
-    .B(\u_cpu.bufreg2.i_bytecnt [1]),
-    .Y(_658_)
+    .A(_1507_),
+    .B(_1515_),
+    .C(_1513_),
+    .Y(_1516_)
 );
 
 INVX1 _2394_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_658_),
-    .Y(_657_)
+    .A(_1516_),
+    .Y(_1517_)
 );
 
-NOR2X1 _2395_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.state.o_cnt [2]),
-    .B(_657_),
-    .Y(_656_)
-);
-
-NAND2X1 _2396_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.state.cnt_r [0]),
-    .B(_656_),
-    .Y(_655_)
-);
-
-NAND2X1 _2397_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_754_),
-    .B(_665_),
-    .Y(_649_)
-);
-
-INVX1 _2398_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dhi [6]),
-    .Y(_648_)
-);
-
-MUX2X1 _2399_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_768_),
-    .B(_648_),
-    .S(_781_),
-    .Y(_626_)
-);
-
-OAI21X1 _2400_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.i_right_shift_op ),
-    .B(_626_),
-    .C(_662_),
-    .Y(_625_)
-);
-
-NAND2X1 _2401_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_649_),
-    .B(_625_),
-    .Y(_624_)
-);
-
-AOI22X1 _2402_ (
+NAND2X1 _2395_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_cpu.decode.opcode [2]),
-    .B(_743_),
-    .C(_624_),
-    .D(\u_cpu.bufreg.data [0]),
-    .Y(_623_)
+    .B(_680_),
+    .Y(_1518_)
 );
 
-OAI21X1 _2403_ (
+INVX1 _2396_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_668_),
-    .B(_623_),
-    .C(_680_),
-    .Y(_622_)
+    .A(\u_cpu.ctrl.pc_plus_offset_cy_r_w ),
+    .Y(_1519_)
 );
 
-NAND3X1 _2404_ (
+INVX1 _2397_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_659_),
-    .B(_655_),
-    .C(_622_),
-    .Y(_621_)
+    .A(\u_cpu.decode.opcode [1]),
+    .Y(_1520_)
 );
 
-INVX1 _2405_ (
+NAND3X1 _2398_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.read_buf0 [0]),
-    .Y(_620_)
+    .A(_725_),
+    .B(_1062_),
+    .C(_1520_),
+    .Y(_1521_)
 );
 
-INVX2 _2406_ (
+INVX1 _2399_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.stream_active_bF$buf7 ),
-    .Y(_619_)
+    .A(_1521_),
+    .Y(_1522_)
 );
 
-NOR2X1 _2407_ (
+INVX1 _2400_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_620_),
-    .B(_619_),
-    .Y(_1130_)
+    .A(\u_cpu.decode.co_ebreak ),
+    .Y(_1523_)
+);
+
+NOR2X1 _2401_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1063_),
+    .B(_1062_),
+    .Y(_1524_)
+);
+
+INVX1 _2402_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1524_),
+    .Y(_1525_)
+);
+
+NOR2X1 _2403_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.branch_op ),
+    .B(\u_cpu.bufreg2.i_op_b_sel ),
+    .Y(_1526_)
+);
+
+AOI21X1 _2404_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.decode.opcode [0]),
+    .B(\u_cpu.decode.opcode [1]),
+    .C(_1526_),
+    .Y(_1527_)
+);
+
+OAI21X1 _2405_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1523_),
+    .B(_1525_),
+    .C(_1527_),
+    .Y(_1528_)
+);
+
+OAI21X1 _2406_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1522_),
+    .B(_1528_),
+    .C(\u_cpu.ctrl.pc ),
+    .Y(_1529_)
+);
+
+OR2X2 _2407_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1529_),
+    .B(_1519_),
+    .Y(_1530_)
 );
 
 NAND2X1 _2408_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.alu.add_cy_r ),
-    .B(_1130_),
-    .Y(_1132_)
+    .A(_1519_),
+    .B(_1529_),
+    .Y(_1531_)
 );
 
-OR2X2 _2409_ (
+NAND2X1 _2409_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1130_),
-    .B(\u_cpu.alu.add_cy_r ),
-    .Y(_1133_)
+    .A(_705_),
+    .B(_663_),
+    .Y(_1532_)
 );
 
-NAND2X1 _2410_ (
+NAND3X1 _2410_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1132_),
-    .B(_1133_),
-    .Y(_1139_)
+    .A(\u_cpu.state.init_done ),
+    .B(_727_),
+    .C(_1532_),
+    .Y(_1533_)
 );
 
-INVX1 _2411_ (
+AOI21X1 _2411_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1139_),
-    .Y(_1140_)
+    .A(\u_cpu.state.init_done ),
+    .B(_1063_),
+    .C(_1065_),
+    .Y(_1534_)
 );
 
 NAND2X1 _2412_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1119_),
-    .B(_704_),
-    .Y(_1141_)
+    .A(_721_),
+    .B(_1534_),
+    .Y(_1535_)
 );
 
-INVX1 _2413_ (
+NAND2X1 _2413_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [0]),
-    .Y(_1142_)
+    .A(_1535_),
+    .B(_1533_),
+    .Y(_1536_)
 );
 
-OAI21X1 _2414_ (
+NAND3X1 _2414_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1142_),
-    .B(_619_),
-    .C(\u_cpu.bufreg2.i_op_b_sel ),
-    .Y(_1143_)
+    .A(\u_cpu.bufreg.data [0]),
+    .B(_1518_),
+    .C(_1536__bF$buf4),
+    .Y(_1537_)
 );
 
-NAND3X1 _2415_ (
+INVX1 _2415_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_742_),
-    .B(_673_),
-    .C(_675_),
-    .Y(_1144_)
+    .A(_1518_),
+    .Y(_1538_)
 );
 
-AOI21X1 _2416_ (
+NAND3X1 _2416_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1144_),
-    .B(_1143_),
-    .C(_1141_),
-    .Y(_1145_)
+    .A(_686_),
+    .B(\u_cpu.bufreg2.i_op_b_sel ),
+    .C(_1522_),
+    .Y(_1539_)
 );
 
-NAND3X1 _2417_ (
+INVX1 _2417_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1141_),
-    .B(_1143_),
-    .C(_1144_),
-    .Y(_1146_)
+    .A(rreg1[0]),
+    .Y(_1540_)
 );
 
-INVX1 _2418_ (
+OAI21X1 _2418_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1146_),
-    .Y(_1180_)
+    .A(_787_),
+    .B(_1521_),
+    .C(_1540_),
+    .Y(_1541_)
 );
 
-NOR2X1 _2419_ (
+AOI21X1 _2419_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1145_),
-    .B(_1180_),
-    .Y(_1317_)
+    .A(_1539_),
+    .B(_1541_),
+    .C(_702_),
+    .Y(_1542_)
 );
 
 NAND2X1 _2420_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1140_),
-    .B(_1317_),
-    .Y(_1476_)
+    .A(\u_cpu.bufreg.i_right_shift_op ),
+    .B(_1524_),
+    .Y(_1543_)
 );
 
-OAI21X1 _2421_ (
+AOI21X1 _2421_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1145_),
-    .B(_1180_),
-    .C(_1139_),
-    .Y(_1477_)
+    .A(_1543_),
+    .B(\u_cpu.immdec.gen_immdec_w_eq_1.imm31 ),
+    .C(_701_),
+    .Y(_1544_)
 );
 
-NAND3X1 _2422_ (
+NOR2X1 _2422_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_706_),
-    .B(_1477_),
-    .C(_1476_),
-    .Y(_1516_)
+    .A(_1544_),
+    .B(_1542_),
+    .Y(_1545_)
 );
 
 INVX1 _2423_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1130_),
-    .Y(_1517_)
+    .A(\u_cpu.bufreg2.i_bytecnt [0]),
+    .Y(_1546_)
 );
 
-OAI21X1 _2424_ (
+INVX1 _2424_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg2.i_op_b_sel ),
-    .B(_672_),
-    .C(_1143_),
-    .Y(_1518_)
+    .A(\u_cpu.state.o_cnt [2]),
+    .Y(_1547_)
 );
 
-OR2X2 _2425_ (
+OAI21X1 _2425_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1518_),
-    .B(_1517_),
-    .Y(_1519_)
+    .A(_1546_),
+    .B(_1547_),
+    .C(_703_),
+    .Y(_1548_)
 );
 
-OAI21X1 _2426_ (
+NAND3X1 _2426_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1517_),
-    .B(_1518_),
-    .C(_790_),
-    .Y(_1520_)
+    .A(_1538_),
+    .B(_1548_),
+    .C(_1545_),
+    .Y(_1549_)
 );
 
-OAI21X1 _2427_ (
+NAND2X1 _2427_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_789_),
-    .B(_1519_),
-    .C(_1520_),
-    .Y(_1521_)
+    .A(_1549_),
+    .B(_1537_),
+    .Y(_1550_)
 );
 
-OAI21X1 _2428_ (
+NAND3X1 _2428_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_620_),
-    .B(_619_),
-    .C(_1518_),
-    .Y(_1522_)
+    .A(_1530_),
+    .B(_1531_),
+    .C(_1550_),
+    .Y(_1551_)
 );
 
-NAND3X1 _2429_ (
+NOR2X1 _2429_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.i_right_shift_op ),
-    .B(_1522_),
-    .C(_1521_),
-    .Y(_1523_)
+    .A(\u_cpu.bufreg2.i_bytecnt [0]),
+    .B(\u_cpu.bufreg2.i_bytecnt [1]),
+    .Y(_1552_)
 );
 
 INVX1 _2430_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_655_),
-    .Y(_1524_)
+    .A(_1552_),
+    .Y(_1553_)
 );
 
-NAND2X1 _2431_ (
+NOR2X1 _2431_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.alu.cmp_r ),
-    .B(_760_),
-    .Y(_1525_)
+    .A(\u_cpu.state.o_cnt [2]),
+    .B(_1553_),
+    .Y(_1554_)
 );
 
-INVX1 _2432_ (
+NAND2X1 _2432_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1525_),
-    .Y(_1526_)
+    .A(\u_cpu.state.cnt_r [0]),
+    .B(_1554_),
+    .Y(_1555_)
 );
 
-AOI22X1 _2433_ (
+NAND2X1 _2433_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1524_),
-    .B(_1526_),
-    .C(_624_),
-    .D(\u_cpu.bufreg.data [0]),
-    .Y(_1527_)
+    .A(_1531_),
+    .B(_1530_),
+    .Y(_1556_)
 );
 
 NAND3X1 _2434_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1527_),
-    .B(_1523_),
-    .C(_1516_),
-    .Y(_1528_)
+    .A(_1556_),
+    .B(_1549_),
+    .C(_1537_),
+    .Y(_1557_)
 );
 
-OAI21X1 _2435_ (
+NAND3X1 _2435_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg2.i_bytecnt [0]),
-    .B(\u_cpu.bufreg2.i_bytecnt [1]),
-    .C(_789_),
-    .Y(_1529_)
+    .A(_1555_),
+    .B(_1557_),
+    .C(_1551_),
+    .Y(_1558_)
 );
 
-AOI21X1 _2436_ (
+INVX1 _2436_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_785_),
-    .B(\u_cpu.bne_or_bge ),
-    .C(_1529_),
-    .Y(_1530_)
+    .A(\u_rf_if.read_buf0 [0]),
+    .Y(_1559_)
 );
 
-INVX1 _2437_ (
+INVX2 _2437_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1530_),
-    .Y(_1531_)
+    .A(\u_rf_if.stream_active_bF$buf7 ),
+    .Y(_1560_)
 );
 
-NAND2X1 _2438_ (
+NOR2X1 _2438_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [8]),
-    .B(\u_cpu.bufreg.data [0]),
-    .Y(_1532_)
+    .A(_1559_),
+    .B(_1560_),
+    .Y(_1561_)
 );
 
-NAND3X1 _2439_ (
+AOI21X1 _2439_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [16]),
-    .B(\u_cpu.state.i_ctrl_misalign ),
-    .C(_666_),
-    .Y(_1533_)
+    .A(\u_rf_if.read_buf1 [0]),
+    .B(\u_rf_if.stream_active_bF$buf6 ),
+    .C(_787_),
+    .Y(_1562_)
 );
 
-OAI21X1 _2440_ (
+INVX1 _2440_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.state.i_ctrl_misalign ),
-    .B(_1532_),
-    .C(_1533_),
-    .Y(_1534_)
+    .A(_1562_),
+    .Y(_1563_)
 );
 
-INVX1 _2441_ (
+OAI21X1 _2441_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.state.i_ctrl_misalign ),
-    .Y(_1535_)
+    .A(_1544_),
+    .B(_1542_),
+    .C(_787_),
+    .Y(_1564_)
 );
 
-NAND3X1 _2442_ (
+AND2X2 _2442_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [0]),
-    .B(_666_),
-    .C(_1535_),
-    .Y(_1536_)
+    .A(_1564_),
+    .B(_1563_),
+    .Y(_1565_)
 );
 
 NAND2X1 _2443_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.i_shamt [0]),
-    .B(\u_cpu.bufreg.data [0]),
-    .Y(_1537_)
+    .A(_1561_),
+    .B(_1565_),
+    .Y(_1566_)
 );
 
 OAI21X1 _2444_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1535_),
-    .B(_1537_),
-    .C(_1536_),
-    .Y(_1538_)
+    .A(\u_cpu.bufreg2.i_op_b_sel ),
+    .B(_1545_),
+    .C(_1563_),
+    .Y(_1567_)
 );
 
 OAI21X1 _2445_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1534_),
-    .B(_1538_),
-    .C(_1531_),
-    .Y(_1539_)
+    .A(_1559_),
+    .B(_1560_),
+    .C(_1567_),
+    .Y(_1568_)
 );
 
 NAND2X1 _2446_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.mem_if.signbit ),
-    .B(_1530_),
-    .Y(_1540_)
+    .A(_1568_),
+    .B(_1566_),
+    .Y(_1569_)
 );
 
-OAI21X1 _2447_ (
+OAI22X1 _2447_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_694_),
+    .B(_1566_),
+    .C(\u_cpu.bne_or_bge ),
+    .D(_1569_),
+    .Y(_1570_)
+);
+
+NAND2X1 _2448_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_cpu.bufreg.i_right_shift_op ),
-    .B(_1540_),
-    .C(_1539_),
-    .Y(_1541_)
-);
-
-NAND3X1 _2448_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_744_),
-    .B(_1118_),
-    .C(_1541_),
-    .Y(_1542_)
+    .B(_1570_),
+    .Y(_1571_)
 );
 
 NAND2X1 _2449_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.state.cnt_r [2]),
-    .B(_656_),
-    .Y(_1543_)
+    .A(\u_cpu.alu.add_cy_r ),
+    .B(_1561_),
+    .Y(_1572_)
 );
 
 INVX1 _2450_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.pc ),
-    .Y(_1544_)
+    .A(\u_cpu.alu.add_cy_r ),
+    .Y(_1573_)
 );
 
-INVX1 _2451_ (
+OAI21X1 _2451_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.pc_plus_4_cy_r_w ),
-    .Y(_1545_)
+    .A(_1559_),
+    .B(_1560_),
+    .C(_1573_),
+    .Y(_1574_)
 );
 
-NOR2X1 _2452_ (
+NAND2X1 _2452_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1544_),
-    .B(_1545_),
-    .Y(_1546_)
+    .A(_1574_),
+    .B(_1572_),
+    .Y(_1575_)
 );
 
-NOR2X1 _2453_ (
+INVX1 _2453_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.pc ),
-    .B(\u_cpu.ctrl.pc_plus_4_cy_r_w ),
-    .Y(_1547_)
+    .A(_1575_),
+    .Y(_1576_)
 );
 
-NOR2X1 _2454_ (
+NAND2X1 _2454_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1547_),
-    .B(_1546_),
-    .Y(_1548_)
+    .A(_1063_),
+    .B(_1505_),
+    .Y(_1577_)
 );
 
 INVX1 _2455_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1548_),
-    .Y(_1549_)
+    .A(_1577_),
+    .Y(_1578_)
 );
 
-NOR2X1 _2456_ (
+NAND2X1 _2456_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1549_),
-    .B(_1543_),
-    .Y(_1550_)
+    .A(_1578_),
+    .B(_1567_),
+    .Y(_1579_)
 );
 
-INVX1 _2457_ (
+NAND3X1 _2457_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1550_),
-    .Y(_1551_)
+    .A(_1563_),
+    .B(_1577_),
+    .C(_1564_),
+    .Y(_1580_)
 );
 
-OAI21X1 _2458_ (
+NAND3X1 _2458_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1546_),
-    .B(_1547_),
-    .C(_1543_),
-    .Y(_1552_)
+    .A(_1576_),
+    .B(_1580_),
+    .C(_1579_),
+    .Y(_1581_)
 );
 
 NAND2X1 _2459_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1552_),
-    .B(_1551_),
-    .Y(_1553_)
+    .A(_1580_),
+    .B(_1579_),
+    .Y(_1582_)
 );
 
 NAND2X1 _2460_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.branch_op ),
-    .B(\u_cpu.decode.opcode [0]),
-    .Y(_1554_)
+    .A(_1575_),
+    .B(_1582_),
+    .Y(_1583_)
 );
 
-OAI21X1 _2461_ (
+NAND3X1 _2461_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1554_),
-    .B(_1553_),
-    .C(_1542_),
-    .Y(_1555_)
+    .A(_1502_),
+    .B(_1581_),
+    .C(_1583_),
+    .Y(_1584_)
 );
 
-AOI21X1 _2462_ (
+INVX1 _2462_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1528_),
-    .B(_705_),
-    .C(_1555_),
-    .Y(_1556_)
+    .A(_1555_),
+    .Y(_1585_)
 );
 
-OAI21X1 _2463_ (
+NAND2X1 _2463_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_693_),
-    .B(_621_),
-    .C(_1556_),
-    .Y(_1557_)
+    .A(\u_cpu.alu.cmp_r ),
+    .B(_693_),
+    .Y(_1586_)
 );
 
 INVX1 _2464_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.wdata0_next [0]),
-    .Y(_1558_)
+    .A(_1586_),
+    .Y(_1587_)
 );
 
-OAI21X1 _2465_ (
+AOI22X1 _2465_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1558_),
-    .B(_694_),
-    .C(_725_),
-    .Y(_1559_)
+    .A(_1585_),
+    .B(_1587_),
+    .C(_1536__bF$buf3),
+    .D(\u_cpu.bufreg.data [0]),
+    .Y(_1588_)
 );
 
-AOI21X1 _2466_ (
+NAND3X1 _2466_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1557_),
-    .B(_694_),
-    .C(_1559_),
-    .Y(_1560_)
+    .A(_1584_),
+    .B(_1588_),
+    .C(_1571_),
+    .Y(_1589_)
 );
 
-NOR2X1 _2467_ (
+NAND2X1 _2467_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_805_),
-    .B(_720_),
-    .Y(_1561_)
+    .A(_725_),
+    .B(_1062_),
+    .Y(_1590_)
 );
 
-AOI21X1 _2468_ (
+NOR2X1 _2468_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_695_),
-    .B(\u_rf_if.wdata0_r [0]),
-    .C(_725_),
-    .Y(_1562_)
+    .A(\u_cpu.decode.co_mem_word ),
+    .B(_1552_),
+    .Y(_1591_)
 );
 
 OAI21X1 _2469_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1558_),
-    .B(_695_),
-    .C(_1562_),
-    .Y(_1563_)
+    .A(\u_cpu.bufreg2.i_bytecnt [1]),
+    .B(_1500_),
+    .C(_1591_),
+    .Y(_1592_)
 );
 
-NAND3X1 _2470_ (
+INVX1 _2470_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1561_),
-    .B(_1563_),
-    .C(_732_),
-    .Y(_1564_)
+    .A(\u_cpu.bufreg2.dlo [16]),
+    .Y(_1593_)
 );
 
-OR2X2 _2471_ (
+NAND3X1 _2471_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_795_),
-    .B(raddr[1]),
-    .Y(_1565_)
+    .A(\u_cpu.bufreg2.dlo [8]),
+    .B(\u_cpu.bufreg.data [0]),
+    .C(_780_),
+    .Y(_1594_)
 );
 
 OAI21X1 _2472_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.o_waddr [1]),
-    .B(ren_bF$buf0),
-    .C(_1565_),
-    .Y(_1566_)
+    .A(_1593_),
+    .B(_765_),
+    .C(_1594_),
+    .Y(_1595_)
 );
 
 INVX1 _2473_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1566_),
-    .Y(_1567_)
+    .A(\u_cpu.bufreg2.dlo [0]),
+    .Y(_1596_)
 );
 
 INVX1 _2474_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.o_waddr [0]),
-    .Y(_1568_)
+    .A(\u_cpu.bufreg.i_shamt [0]),
+    .Y(_1597_)
 );
 
 NAND2X1 _2475_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1568_),
-    .B(_795_),
-    .Y(_1569_)
+    .A(_766_),
+    .B(_780_),
+    .Y(_1598_)
 );
 
-OAI21X1 _2476_ (
+NAND2X1 _2476_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(raddr[0]),
-    .B(_795_),
-    .C(_1569_),
-    .Y(_1570_)
+    .A(\u_cpu.bufreg.data [0]),
+    .B(\u_cpu.state.i_ctrl_misalign ),
+    .Y(_1599_)
 );
 
-OAI21X1 _2477_ (
+OAI22X1 _2477_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_719_),
-    .B(_1570_),
-    .C(_796_),
-    .Y(_1571_)
+    .A(_1597_),
+    .B(_1599_),
+    .C(_1596_),
+    .D(_1598_),
+    .Y(_1600_)
 );
 
-AOI21X1 _2478_ (
+OAI21X1 _2478_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_805_),
-    .B(_1567_),
-    .C(_1571_),
-    .Y(_1572_)
+    .A(_1595_),
+    .B(_1600_),
+    .C(_1592_),
+    .Y(_1601_)
 );
 
-OAI21X1 _2479_ (
+INVX1 _2479_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1564_),
-    .B(_1560_),
-    .C(_1572_),
-    .Y(_1573_)
+    .A(\u_cpu.mem_if.signbit ),
+    .Y(_1602_)
 );
 
 NOR2X1 _2480_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ren_bF$buf3),
-    .B(_748_),
-    .Y(_1574_)
+    .A(_1602_),
+    .B(_1592_),
+    .Y(_1603_)
 );
 
-AOI22X1 _2481_ (
+NAND2X1 _2481_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(raddr[5]),
-    .B(ren_bF$buf2),
-    .C(_732_),
-    .D(_1574_),
-    .Y(_1575_)
+    .A(_705_),
+    .B(_1603_),
+    .Y(_1604_)
 );
 
-OR2X2 _2482_ (
+AND2X2 _2482_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1575_),
-    .B(_804_),
-    .Y(_1576_)
+    .A(_1604_),
+    .B(_1601_),
+    .Y(_1605_)
 );
 
-NOR2X1 _2483_ (
+INVX1 _2483_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ren_bF$buf1),
-    .B(_750_),
-    .Y(_1577_)
+    .A(\u_cpu.ctrl.pc_plus_4_cy_r_w ),
+    .Y(_1606_)
 );
 
-AOI22X1 _2484_ (
+NOR2X1 _2484_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(raddr[4]),
-    .B(ren_bF$buf0),
-    .C(_732_),
-    .D(_1577_),
-    .Y(_1578_)
+    .A(_1008_),
+    .B(_1606_),
+    .Y(_1607_)
 );
 
 NOR2X1 _2485_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_719_),
-    .B(_1578_),
-    .Y(_1579_)
+    .A(\u_cpu.ctrl.pc ),
+    .B(\u_cpu.ctrl.pc_plus_4_cy_r_w ),
+    .Y(_1608_)
 );
 
-INVX1 _2486_ (
+NOR2X1 _2486_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.o_waddr [2]),
-    .Y(_1580_)
+    .A(_1608_),
+    .B(_1607_),
+    .Y(_1609_)
 );
 
-NAND2X1 _2487_ (
+NAND3X1 _2487_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1580_),
-    .B(_795_),
-    .Y(_1581_)
+    .A(\u_cpu.state.cnt_r [2]),
+    .B(_1554_),
+    .C(_1609_),
+    .Y(_1610_)
 );
 
-OAI21X1 _2488_ (
+INVX1 _2488_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(raddr[2]),
-    .B(_795_),
-    .C(_1581_),
-    .Y(_1582_)
+    .A(_1610_),
+    .Y(_1611_)
 );
 
-INVX1 _2489_ (
+AOI21X1 _2489_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.o_waddr [3]),
-    .Y(_1583_)
+    .A(_1554_),
+    .B(\u_cpu.state.cnt_r [2]),
+    .C(_1609_),
+    .Y(_1612_)
 );
 
-NAND2X1 _2490_ (
+NOR2X1 _2490_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1583_),
-    .B(_795_),
-    .Y(_1584_)
+    .A(_1612_),
+    .B(_1611_),
+    .Y(_1613_)
 );
 
-OAI21X1 _2491_ (
+NAND3X1 _2491_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(raddr[3]),
-    .B(_795_),
-    .C(_1584_),
-    .Y(_1585_)
+    .A(\u_cpu.branch_op ),
+    .B(\u_cpu.decode.opcode [0]),
+    .C(_1613_),
+    .Y(_1614_)
 );
 
-INVX1 _2492_ (
+OAI21X1 _2492_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1585_),
-    .Y(_1586_)
+    .A(_1590_),
+    .B(_1605_),
+    .C(_1614_),
+    .Y(_1615_)
 );
 
 AOI21X1 _2493_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_728_),
-    .B(_1586_),
-    .C(_796_),
-    .Y(_1587_)
+    .A(_1589_),
+    .B(_1503_),
+    .C(_1615_),
+    .Y(_1616_)
 );
 
 OAI21X1 _2494_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_723_),
-    .B(_1582_),
-    .C(_1587_),
-    .Y(_1588_)
+    .A(_1518_),
+    .B(_1558_),
+    .C(_1616_),
+    .Y(_1617_)
 );
 
-NOR2X1 _2495_ (
+INVX1 _2495_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1588_),
-    .B(_1579_),
-    .Y(_1589_)
+    .A(\u_rf_if.tx_state [0]),
+    .Y(_1618_)
 );
 
-AOI21X1 _2496_ (
+INVX1 _2496_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1589_),
-    .B(_1576_),
-    .C(_800_),
-    .Y(_1590_)
+    .A(\u_rf_if.wdata0_next [0]),
+    .Y(_1619_)
 );
 
-NAND2X1 _2497_ (
+OAI21X1 _2497_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1590_),
-    .B(_1573_),
-    .Y(_1591_)
+    .A(_1619_),
+    .B(_1517_),
+    .C(_1618_),
+    .Y(_1620_)
 );
 
 AOI21X1 _2498_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1591_),
-    .B(_708_),
-    .C(_807_),
-    .Y(_1908_)
+    .A(_1617_),
+    .B(_1517_),
+    .C(_1620_),
+    .Y(_1621_)
 );
 
 INVX1 _2499_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.tx_state [4]),
-    .Y(_1592_)
+    .A(\u_rf_if.tx_state [1]),
+    .Y(_1622_)
 );
 
-INVX1 _2500_ (
+NOR2X1 _2500_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_801_),
-    .Y(_1593_)
+    .A(_1622_),
+    .B(_1618_),
+    .Y(_1623_)
 );
 
-NAND2X1 _2501_ (
+NOR2X1 _2501_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1592_),
-    .B(_1593_),
-    .Y(_1594_)
+    .A(_740_),
+    .B(_1623_),
+    .Y(_1624_)
 );
 
-OAI21X1 _2502_ (
+AOI21X1 _2502_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ren_bF$buf3),
-    .B(_712_),
-    .C(\u_rf_serial.launch_pending ),
-    .Y(_1595_)
+    .A(_1516_),
+    .B(\u_rf_if.wdata0_r [0]),
+    .C(\u_rf_if.tx_state [1]),
+    .Y(_1625_)
 );
 
-NOR2X1 _2503_ (
+OAI21X1 _2503_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1595_),
-    .B(_1594_),
-    .Y(_1596_)
+    .A(_1619_),
+    .B(_1516_),
+    .C(_1625_),
+    .Y(_1626_)
 );
 
-INVX2 _2504_ (
+NAND3X1 _2504_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1596_),
-    .Y(_1597_)
+    .A(_1624_),
+    .B(_1626_),
+    .C(_671_),
+    .Y(_1627_)
 );
 
-OAI21X1 _2505_ (
+INVX1 _2505_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1595_),
-    .B(_1594_),
-    .C(\u_rf_serial.last_req_key [10]),
-    .Y(_1598_)
+    .A(_738_),
+    .Y(_1628_)
 );
 
 OAI21X1 _2506_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_711_),
-    .B(_1597_),
-    .C(_1598_),
-    .Y(_1599_)
+    .A(\u_rf_if.tx_state [1]),
+    .B(\u_rf_if.tx_state [0]),
+    .C(\u_rf_if.tx_state [2]),
+    .Y(_1629_)
 );
 
-AND2X2 _2507_ (
+NAND2X1 _2507_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1599_),
-    .B(i_rst_n_bF$buf10),
-    .Y(_1475_)
+    .A(_1629_),
+    .B(_1628_),
+    .Y(_1630_)
 );
 
 INVX1 _2508_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1594_),
-    .Y(_1600_)
+    .A(_1630_),
+    .Y(_1631_)
 );
 
-AOI21X1 _2509_ (
+OAI21X1 _2509_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_711_),
-    .B(_795_),
-    .C(\u_rf_serial.launch_pending ),
-    .Y(_1601_)
+    .A(_739_),
+    .B(_1086_),
+    .C(_1631_),
+    .Y(_1632_)
 );
 
-NOR2X1 _2510_ (
+AOI21X1 _2510_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [6]),
-    .B(_721_),
-    .Y(_1602_)
+    .A(_1470_),
+    .B(_1623_),
+    .C(_1632_),
+    .Y(_1633_)
 );
 
-NAND2X1 _2511_ (
+OAI21X1 _2511_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(raddr[4]),
-    .B(ren_bF$buf2),
-    .Y(_1603_)
+    .A(_1627_),
+    .B(_1621_),
+    .C(_1633_),
+    .Y(_1634_)
 );
 
-NAND2X1 _2512_ (
+OAI21X1 _2512_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1577_),
-    .B(_732_),
-    .Y(_1604_)
+    .A(\u_rf_if.tx_state [2]),
+    .B(_739_),
+    .C(\u_rf_if.tx_state [3]),
+    .Y(_1635_)
 );
 
-NAND3X1 _2513_ (
+NAND2X1 _2513_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [4]),
-    .B(_1603_),
-    .C(_1604_),
-    .Y(_1605_)
+    .A(_1635_),
+    .B(_737_),
+    .Y(_1636_)
 );
 
-OAI21X1 _2514_ (
+NOR2X1 _2514_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [5]),
-    .B(_1575_),
-    .C(_1605_),
-    .Y(_1606_)
+    .A(_648_),
+    .B(_645_),
+    .Y(_1637_)
 );
 
-NOR2X1 _2515_ (
+INVX1 _2515_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1602_),
-    .B(_1606_),
-    .Y(_1607_)
+    .A(_1637_),
+    .Y(_1638_)
 );
 
-NAND2X1 _2516_ (
+NOR2X1 _2516_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(raddr[8]),
-    .B(ren_bF$buf1),
-    .Y(_1608_)
+    .A(_730_),
+    .B(_657_),
+    .Y(_1639_)
 );
 
-NAND2X1 _2517_ (
+INVX1 _2517_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_718_),
-    .B(_732_),
-    .Y(_1609_)
+    .A(_1465_),
+    .Y(_1640_)
 );
 
-NAND3X1 _2518_ (
+NOR2X1 _2518_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [8]),
-    .B(_1608_),
-    .C(_1609_),
-    .Y(_1610_)
+    .A(\u_rf_if.tx_state [1]),
+    .B(_1618_),
+    .Y(_1641_)
 );
 
-OAI21X1 _2519_ (
+NAND2X1 _2519_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [7]),
-    .B(_730_),
-    .C(_1610_),
-    .Y(_1611_)
+    .A(\u_rf_if.tx_state [1]),
+    .B(_1618_),
+    .Y(_1642_)
 );
 
-NAND2X1 _2520_ (
+OAI21X1 _2520_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(raddr[6]),
-    .B(ren_bF$buf0),
-    .Y(_1612_)
+    .A(_1076_),
+    .B(_1642_),
+    .C(_1630_),
+    .Y(_1643_)
 );
 
-NAND2X1 _2521_ (
+AOI21X1 _2521_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_722_),
-    .B(_732_),
-    .Y(_1613_)
+    .A(_1640_),
+    .B(_1641_),
+    .C(_1643_),
+    .Y(_1644_)
 );
 
-NAND3X1 _2522_ (
+OAI21X1 _2522_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [6]),
-    .B(_1612_),
-    .C(_1613_),
-    .Y(_1614_)
+    .A(_739_),
+    .B(_1639_),
+    .C(_1644_),
+    .Y(_1645_)
 );
 
-OAI21X1 _2523_ (
+AOI21X1 _2523_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [4]),
-    .B(_1578_),
-    .C(_1614_),
-    .Y(_1615_)
+    .A(_1638_),
+    .B(_1623_),
+    .C(_1645_),
+    .Y(_1646_)
 );
 
 NOR2X1 _2524_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1611_),
-    .B(_1615_),
-    .Y(_1616_)
+    .A(_1636_),
+    .B(_1646_),
+    .Y(_1647_)
 );
 
 NAND2X1 _2525_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [2]),
-    .B(_1582_),
-    .Y(_1617_)
+    .A(_1647_),
+    .B(_1634_),
+    .Y(_1648_)
 );
 
-OR2X2 _2526_ (
+INVX1 _2526_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1582_),
-    .B(\u_rf_serial.last_req_key [2]),
-    .Y(_1618_)
+    .A(_1641_),
+    .Y(_1649_)
 );
 
-INVX1 _2527_ (
+NAND2X1 _2527_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [3]),
-    .Y(_1619_)
+    .A(\u_rf_if.tx_state [2]),
+    .B(_1471_),
+    .Y(_1650_)
 );
 
-AOI22X1 _2528_ (
+NOR2X1 _2528_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [0]),
-    .B(_1570_),
-    .C(_1586_),
-    .D(_1619_),
-    .Y(_1620_)
+    .A(_642_),
+    .B(_1480_),
+    .Y(_1651_)
 );
 
-NAND3X1 _2529_ (
+OAI22X1 _2529_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1617_),
-    .B(_1618_),
-    .C(_1620_),
-    .Y(_1621_)
+    .A(_735_),
+    .B(_739_),
+    .C(_1649_),
+    .D(_1651_),
+    .Y(_1652_)
 );
 
-OAI21X1 _2530_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_714_),
-    .B(_713_),
-    .C(\u_rf_serial.last_req_key [10]),
-    .Y(_1622_)
-);
-
-OR2X2 _2531_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_711_),
-    .B(\u_rf_serial.last_req_key [10]),
-    .Y(_1623_)
-);
-
-AND2X2 _2532_ (
+INVX1 _2530_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(_1623_),
-    .B(_1622_),
-    .Y(_1624_)
+    .Y(_1653_)
 );
 
-INVX1 _2533_ (
+OAI22X1 _2531_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [9]),
-    .Y(_1625_)
+    .A(_1653_),
+    .B(_654_),
+    .C(_605_),
+    .D(_1642_),
+    .Y(_1654_)
 );
 
-OAI21X1 _2534_ (
+OAI21X1 _2532_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ren_bF$buf3),
-    .B(_1625_),
-    .C(\u_rf_serial.req_seen ),
-    .Y(_1626_)
+    .A(_1654_),
+    .B(_1652_),
+    .C(_1631_),
+    .Y(_1655_)
+);
+
+OAI21X1 _2533_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1649_),
+    .B(_1650_),
+    .C(_1655_),
+    .Y(_1656_)
+);
+
+NAND2X1 _2534_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1636_),
+    .B(_1656_),
+    .Y(_1657_)
 );
 
 AOI21X1 _2535_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1625_),
-    .B(ren_bF$buf2),
-    .C(_1626_),
-    .Y(_1627_)
+    .A(_1648_),
+    .B(_1657_),
+    .C(_1497_),
+    .Y(_1856_)
 );
 
-NAND2X1 _2536_ (
+INVX1 _2536_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [1]),
-    .B(_1566_),
-    .Y(_1628_)
+    .A(i_rf_miso),
+    .Y(_1658_)
 );
 
-OAI21X1 _2537_ (
+NOR2X1 _2537_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [0]),
-    .B(_1570_),
-    .C(_1628_),
-    .Y(_1629_)
+    .A(_1642_),
+    .B(_1491_),
+    .Y(_1659_)
 );
 
-OAI22X1 _2538_ (
+AND2X2 _2538_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [1]),
-    .B(_1566_),
-    .C(_1619_),
-    .D(_1586_),
-    .Y(_1630_)
+    .A(_1659_),
+    .B(_1658_),
+    .Y(_1660_)
 );
 
-NOR2X1 _2539_ (
+OAI21X1 _2539_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1630_),
-    .B(_1629_),
-    .Y(_1631_)
+    .A(\u_rf_if.shift_rx [0]),
+    .B(_1659_),
+    .C(i_rst_n_bF$buf3),
+    .Y(_1661_)
 );
 
-NAND3X1 _2540_ (
+OR2X2 _2540_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1624_),
-    .B(_1627_),
-    .C(_1631_),
-    .Y(_1632_)
+    .A(_1660_),
+    .B(_1661_),
+    .Y(_1662_)
 );
 
-NOR2X1 _2541_ (
+INVX1 _2541_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1621_),
-    .B(_1632_),
-    .Y(_1633_)
+    .A(_1662_),
+    .Y(_1411_)
 );
 
-OAI21X1 _2542_ (
+INVX1 _2542_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [8]),
-    .B(_717_),
-    .C(_1633_),
-    .Y(_1634_)
+    .A(\u_rf_if.req_seen ),
+    .Y(_1663_)
 );
 
-NAND2X1 _2543_ (
+INVX1 _2543_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(raddr[5]),
-    .B(ren_bF$buf1),
-    .Y(_1635_)
+    .A(_736_),
+    .Y(_1664_)
 );
 
-NAND2X1 _2544_ (
+AOI21X1 _2544_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1574_),
+    .A(_1664_),
+    .B(_1663_),
+    .C(_1494_),
+    .Y(_1410_)
+);
+
+NAND2X1 _2545_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [10]),
+    .B(_1488_),
+    .Y(_1665_)
+);
+
+AND2X2 _2546_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1487_),
     .B(_732_),
-    .Y(_1636_)
+    .Y(_1666_)
 );
 
-NAND3X1 _2545_ (
+NAND3X1 _2547_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [5]),
-    .B(_1635_),
-    .C(_1636_),
-    .Y(_1637_)
+    .A(_736_),
+    .B(_1471_),
+    .C(_1666_),
+    .Y(_1667_)
 );
 
-NAND2X1 _2546_ (
+AOI21X1 _2548_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(raddr[7]),
-    .B(ren_bF$buf0),
-    .Y(_1638_)
-);
-
-NAND2X1 _2547_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_731_),
-    .B(_732_),
-    .Y(_1639_)
-);
-
-NAND3X1 _2548_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [7]),
-    .B(_1638_),
-    .C(_1639_),
-    .Y(_1640_)
+    .A(_1667_),
+    .B(_1665_),
+    .C(_1070__bF$buf0),
+    .Y(_1409_)
 );
 
 NAND2X1 _2549_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1637_),
-    .B(_1640_),
-    .Y(_1641_)
+    .A(_1047_),
+    .B(_749_),
+    .Y(_1668_)
 );
 
-NOR2X1 _2550_ (
+NAND2X1 _2550_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1634_),
-    .B(_1641_),
-    .Y(_1642_)
+    .A(_1855_),
+    .B(_1668_),
+    .Y(_1669_)
 );
 
-NAND3X1 _2551_ (
+AOI21X1 _2551_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1642_),
-    .B(_1607_),
-    .C(_1616_),
-    .Y(_1643_)
+    .A(_1052_),
+    .B(_1669_),
+    .C(_1070__bF$buf6),
+    .Y(_1408_)
 );
 
-NAND2X1 _2552_ (
+INVX1 _2552_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1601_),
-    .B(_1643_),
-    .Y(_1644_)
+    .A(\u_rf_if.rcnt [0]),
+    .Y(_1670_)
 );
 
 INVX1 _2553_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1595_),
-    .Y(_1645_)
+    .A(\u_rf_if.rcnt [1]),
+    .Y(_1671_)
 );
 
-OAI21X1 _2554_ (
+NOR2X1 _2554_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1645_),
-    .B(_1600_),
-    .C(i_rst_n_bF$buf9),
-    .Y(_1646_)
+    .A(_1670_),
+    .B(_1671_),
+    .Y(_1672_)
 );
 
-AOI21X1 _2555_ (
+INVX1 _2555_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1644_),
-    .B(_1600_),
-    .C(_1646_),
-    .Y(_1474_)
+    .A(_1672_),
+    .Y(_1673_)
 );
 
-OAI21X1 _2556_ (
+NAND2X1 _2556_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ren_bF$buf3),
-    .B(_712_),
-    .C(\u_rf_serial.req_seen ),
-    .Y(_1647_)
+    .A(_1670_),
+    .B(_1671_),
+    .Y(_1674_)
 );
 
-AOI21X1 _2557_ (
+NAND3X1 _2557_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1597_),
-    .B(_1647_),
-    .C(_1126__bF$buf5),
-    .Y(_1473_)
+    .A(_1673_),
+    .B(_1674_),
+    .C(_659__bF$buf2),
+    .Y(_1675_)
 );
 
-NAND2X1 _2558_ (
+AOI21X1 _2558_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_rst_n_bF$buf8),
-    .B(\u_rf_serial.tx_state [4]),
-    .Y(_1648_)
+    .A(_1675_),
+    .B(_689_),
+    .C(_1070__bF$buf5),
+    .Y(_1407_)
 );
 
-NOR2X1 _2559_ (
+NAND2X1 _2559_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1648_),
-    .B(_1593_),
-    .Y(_1472_)
+    .A(\u_rf_if.issue_chunk [1]),
+    .B(\u_rf_if.issue_chunk [0]),
+    .Y(_1676_)
 );
 
-INVX1 _2560_ (
+NAND2X1 _2560_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_rf_miso),
-    .Y(_1649_)
+    .A(\u_rf_if.issue_chunk [2]),
+    .B(\u_rf_if.issue_sel ),
+    .Y(_1677_)
 );
 
-INVX1 _2561_ (
+NOR2X1 _2561_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.tx_state [2]),
-    .Y(_1650_)
+    .A(_1676_),
+    .B(_1677_),
+    .Y(_1678_)
 );
 
-NAND3X1 _2562_ (
+INVX2 _2562_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_806_),
-    .B(_1650_),
-    .C(_1592_),
-    .Y(_1651_)
+    .A(\u_rf_if.prefetch_active ),
+    .Y(_1679_)
 );
 
 NOR2X1 _2563_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1651_),
-    .B(_719_),
-    .Y(_1652_)
+    .A(\u_rf_if.issue_idx [5]),
+    .B(_1679_),
+    .Y(_1680_)
 );
 
-OAI21X1 _2564_ (
+NAND2X1 _2564_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.shift_rx [1]),
-    .B(_1652_),
-    .C(i_rst_n_bF$buf7),
-    .Y(_1653_)
+    .A(\u_rf_if.issue_chunk [3]),
+    .B(_1680_),
+    .Y(_1681_)
 );
 
-AOI21X1 _2565_ (
+INVX1 _2565_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1649_),
-    .B(_1652_),
-    .C(_1653_),
-    .Y(_1471_)
+    .A(_1681_),
+    .Y(_1682_)
 );
 
-NOR2X1 _2566_ (
+AOI21X1 _2566_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1594_),
-    .B(_1645_),
-    .Y(_1654_)
+    .A(_1682_),
+    .B(_1678_),
+    .C(\u_rf_if.issue_idx [5]),
+    .Y(_1683_)
 );
 
-OR2X2 _2567_ (
+NOR2X1 _2567_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1651_),
-    .B(\u_rf_serial.tx_state [1]),
-    .Y(_1655_)
+    .A(\u_rf_if.write_wait [1]),
+    .B(\u_rf_if.write_wait [0]),
+    .Y(_1684_)
 );
 
-OAI21X1 _2568_ (
+INVX1 _2568_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1655_),
-    .B(_1654_),
-    .C(_1910_),
-    .Y(_1656_)
+    .A(_1684_),
+    .Y(_1685_)
 );
 
-AOI21X1 _2569_ (
+NAND2X1 _2569_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1656_),
-    .B(_1597_),
-    .C(_1126__bF$buf4),
-    .Y(_1470_)
+    .A(\u_rf_if.pending_read ),
+    .B(_1679_),
+    .Y(_1686_)
 );
 
-NOR2X1 _2570_ (
+OAI21X1 _2570_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1651_),
-    .B(_727_),
-    .Y(_1657_)
+    .A(_1686_),
+    .B(_1685_),
+    .C(i_rst_n_bF$buf2),
+    .Y(_1687_)
 );
 
-NAND2X1 _2571_ (
+NOR2X1 _2571_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1649_),
-    .B(_1657_),
-    .Y(_1658_)
+    .A(_1687_),
+    .B(_1683_),
+    .Y(_1406_)
 );
 
-INVX1 _2572_ (
+NOR2X1 _2572_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.shift_rx [0]),
-    .Y(_1659_)
+    .A(_1686_),
+    .B(_1685_),
+    .Y(_1688_)
 );
 
-OAI21X1 _2573_ (
+INVX1 _2573_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1651_),
-    .B(_727_),
-    .C(_1659_),
-    .Y(_1660_)
+    .A(_1688_),
+    .Y(_1689_)
 );
 
-NAND3X1 _2574_ (
+NAND2X1 _2574_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_rst_n_bF$buf6),
-    .B(_1660_),
-    .C(_1658_),
-    .Y(_1661_)
+    .A(i_rst_n_bF$buf1),
+    .B(_1680_),
+    .Y(_1690_)
 );
 
-INVX1 _2575_ (
+OAI21X1 _2575_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1661_),
-    .Y(_1469_)
+    .A(_1070__bF$buf4),
+    .B(_1689_),
+    .C(_1690_),
+    .Y(_1405_)
 );
 
-NOR2X1 _2576_ (
+OAI21X1 _2576_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_serial.tx_state [0]),
-    .B(_1126__bF$buf3),
-    .Y(_1662_)
+    .A(_673__bF$buf1),
+    .B(_674__bF$buf2),
+    .C(\u_rf_if.rreg0_latched [4]),
+    .Y(_1691_)
 );
 
-OAI21X1 _2577_ (
+INVX8 _2577_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1594_),
-    .B(_1645_),
-    .C(_1662_),
-    .Y(_1663_)
+    .A(_659__bF$buf1),
+    .Y(_1692_)
 );
 
 INVX1 _2578_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1663_),
-    .Y(_1468_)
+    .A(ibus_pending_rdt[19]),
+    .Y(_1693_)
 );
 
-OAI21X1 _2579_ (
+MUX2X1 _2579_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_805_),
-    .B(_720_),
-    .C(i_rst_n_bF$buf5),
-    .Y(_1664_)
+    .A(_1693_),
+    .B(_882_),
+    .S(ibus_pending_ack_bF$buf4),
+    .Y(_1694_)
 );
 
-NOR2X1 _2580_ (
+NAND2X1 _2580_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1664_),
-    .B(_1600_),
-    .Y(_1467_)
+    .A(_1694_),
+    .B(_1692__bF$buf4),
+    .Y(_1695_)
 );
 
-OAI21X1 _2581_ (
+AOI21X1 _2581_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1594_),
-    .B(_1645_),
-    .C(_797_),
-    .Y(_1665_)
+    .A(_1695_),
+    .B(_1691_),
+    .C(_1070__bF$buf3),
+    .Y(_1404_)
 );
 
-NOR2X1 _2582_ (
+INVX1 _2582_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf2),
-    .B(_1665_),
-    .Y(_1466_)
+    .A(\u_rf_if.pending_read ),
+    .Y(_1696_)
 );
 
-NAND2X1 _2583_ (
+AOI21X1 _2583_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_rst_n_bF$buf4),
-    .B(_800_),
-    .Y(_1666_)
+    .A(_659__bF$buf0),
+    .B(_1696_),
+    .C(_1687_),
+    .Y(_1403_)
 );
 
-NOR2X1 _2584_ (
+INVX1 _2584_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1654_),
-    .B(_1666_),
-    .Y(_1465_)
+    .A(\u_rf_if.write_wait [0]),
+    .Y(_1697_)
 );
 
-OAI21X1 _2585_ (
+NAND2X1 _2585_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1595_),
-    .B(_1594_),
-    .C(\u_rf_serial.last_req_key [0]),
-    .Y(_1667_)
+    .A(i_rst_n_bF$buf0),
+    .B(_689_),
+    .Y(_1698_)
 );
 
-OAI21X1 _2586_ (
+INVX1 _2586_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1570_),
-    .B(_1597_),
-    .C(_1667_),
-    .Y(_1668_)
+    .A(_1698_),
+    .Y(_1699_)
 );
 
-AND2X2 _2587_ (
+NAND3X1 _2587_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1668_),
-    .B(i_rst_n_bF$buf3),
-    .Y(_1464_)
+    .A(\u_rf_if.write_wait [1]),
+    .B(_1697_),
+    .C(_1699_),
+    .Y(_1700_)
 );
 
-OAI21X1 _2588_ (
+INVX1 _2588_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1595_),
-    .B(_1594_),
-    .C(\u_rf_serial.last_req_key [1]),
-    .Y(_1669_)
+    .A(_1700_),
+    .Y(_1402_)
 );
 
-OAI21X1 _2589_ (
+INVX1 _2589_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1566_),
-    .B(_1597_),
-    .C(_1669_),
-    .Y(_1670_)
+    .A(_1471_),
+    .Y(_1701_)
 );
 
-AND2X2 _2590_ (
+INVX1 _2590_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1670_),
-    .B(i_rst_n_bF$buf2),
-    .Y(_1463_)
+    .A(_671_),
+    .Y(_1702_)
 );
 
 OAI21X1 _2591_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1595_),
-    .B(_1594_),
-    .C(\u_rf_serial.last_req_key [2]),
-    .Y(_1671_)
+    .A(_1701_),
+    .B(_1702_),
+    .C(\u_rf_if.wdata0_next_phase ),
+    .Y(_1703_)
 );
 
-OAI21X1 _2592_ (
+NOR2X1 _2592_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1582_),
-    .B(_1597_),
-    .C(_1671_),
-    .Y(_1672_)
+    .A(_1701_),
+    .B(_1702_),
+    .Y(_1704_)
 );
 
-AND2X2 _2593_ (
+AOI21X1 _2593_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1672_),
-    .B(i_rst_n_bF$buf1),
-    .Y(_1462_)
+    .A(_1704_),
+    .B(_1513_),
+    .C(_1515_),
+    .Y(_1705_)
 );
 
-NAND2X1 _2594_ (
+AOI21X1 _2594_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1586_),
-    .B(_1596_),
-    .Y(_1673_)
+    .A(_1705_),
+    .B(_1703_),
+    .C(_1698_),
+    .Y(_1401_)
 );
 
-OAI21X1 _2595_ (
+MUX2X1 _2595_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1595_),
-    .B(_1594_),
-    .C(\u_rf_serial.last_req_key [3]),
-    .Y(_1674_)
+    .A(\u_rf_if.rreg1_latched [4]),
+    .B(\u_rf_if.rreg0_latched [4]),
+    .S(\u_rf_if.issue_sel ),
+    .Y(_1706_)
 );
 
-AOI21X1 _2596_ (
+OAI21X1 _2596_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1673_),
-    .B(_1674_),
-    .C(_1126__bF$buf1),
-    .Y(_1461_)
+    .A(raddr[8]),
+    .B(_1680_),
+    .C(i_rst_n_bF$buf11),
+    .Y(_1707_)
 );
 
-OAI21X1 _2597_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [4]),
-    .B(_1596_),
-    .C(i_rst_n_bF$buf0),
-    .Y(_1675_)
-);
-
-AOI21X1 _2598_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1578_),
-    .B(_1596_),
-    .C(_1675_),
-    .Y(_1460_)
-);
-
-OAI21X1 _2599_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [5]),
-    .B(_1596_),
-    .C(i_rst_n_bF$buf10),
-    .Y(_1676_)
-);
-
-AOI21X1 _2600_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1575_),
-    .B(_1596_),
-    .C(_1676_),
-    .Y(_1459_)
-);
-
-OAI21X1 _2601_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [6]),
-    .B(_1596_),
-    .C(i_rst_n_bF$buf9),
-    .Y(_1677_)
-);
-
-AOI21X1 _2602_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_721_),
-    .B(_1596_),
-    .C(_1677_),
-    .Y(_1458_)
-);
-
-OAI21X1 _2603_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [7]),
-    .B(_1596_),
-    .C(i_rst_n_bF$buf8),
-    .Y(_1678_)
-);
-
-AOI21X1 _2604_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_730_),
-    .B(_1596_),
-    .C(_1678_),
-    .Y(_1457_)
-);
-
-OAI21X1 _2605_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_serial.last_req_key [8]),
-    .B(_1596_),
-    .C(i_rst_n_bF$buf7),
-    .Y(_1679_)
-);
-
-AOI21X1 _2606_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_717_),
-    .B(_1596_),
-    .C(_1679_),
-    .Y(_1456_)
-);
-
-NAND2X1 _2607_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(ren_bF$buf2),
-    .B(_1596_),
-    .Y(_1680_)
-);
-
-OAI21X1 _2608_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1595_),
-    .B(_1594_),
-    .C(\u_rf_serial.last_req_key [9]),
-    .Y(_1681_)
-);
-
-AOI21X1 _2609_ (
+AOI21X1 _2597_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(_1680_),
-    .B(_1681_),
-    .C(_1126__bF$buf0),
-    .Y(_1455_)
+    .B(_1706_),
+    .C(_1707_),
+    .Y(_1400_)
 );
 
-INVX1 _2610_ (
+INVX1 _2598_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.pending_read ),
-    .Y(_1682_)
+    .A(\u_rf_if.issue_sel ),
+    .Y(_1708_)
 );
 
-INVX2 _2611_ (
+NOR2X1 _2599_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.prefetch_active ),
-    .Y(_1683_)
+    .A(\u_rf_if.issue_chunk [3]),
+    .B(\u_rf_if.issue_chunk [2]),
+    .Y(_1709_)
 );
 
-INVX1 _2612_ (
+NOR2X1 _2600_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.write_wait [4]),
-    .Y(_1684_)
+    .A(\u_rf_if.issue_chunk [1]),
+    .B(\u_rf_if.issue_chunk [0]),
+    .Y(_1710_)
 );
 
-NOR2X1 _2613_ (
+NOR2X1 _2601_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.write_wait [3]),
-    .B(\u_rf_if.write_wait [2]),
-    .Y(_1685_)
+    .A(\u_rf_if.issue_sel ),
+    .B(\u_rf_if.issue_idx [5]),
+    .Y(_1711_)
 );
 
-NOR2X1 _2614_ (
+AND2X2 _2602_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.write_wait [1]),
-    .B(\u_rf_if.write_wait [0]),
-    .Y(_1686_)
+    .A(_1710_),
+    .B(_1711_),
+    .Y(_1712_)
 );
 
-AND2X2 _2615_ (
+AOI21X1 _2603_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1685_),
-    .B(_1686_),
-    .Y(_1687_)
+    .A(_1712_),
+    .B(_1709_),
+    .C(_1679_),
+    .Y(_1713_)
 );
 
-NAND2X1 _2616_ (
+NAND2X1 _2604_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1684_),
-    .B(_1687_),
-    .Y(_1688_)
+    .A(_1708_),
+    .B(_1713_),
+    .Y(_1714_)
 );
 
-NOR2X1 _2617_ (
+INVX1 _2605_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.write_wait [5]),
-    .B(_1688_),
-    .Y(_1689_)
+    .A(_1651_),
+    .Y(_1715_)
 );
 
-NAND3X1 _2618_ (
+INVX1 _2606_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.pending_read ),
-    .B(_1683_),
-    .C(_1689_),
-    .Y(_1690_)
+    .A(_605_),
+    .Y(_1716_)
+);
+
+NOR2X1 _2607_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1716_),
+    .B(_1715_),
+    .Y(_1717_)
+);
+
+INVX1 _2608_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_654_),
+    .Y(_1718_)
+);
+
+NOR2X1 _2609_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1718_),
+    .B(_1638_),
+    .Y(_1719_)
+);
+
+NAND3X1 _2610_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1639_),
+    .B(_1717_),
+    .C(_1719_),
+    .Y(_1720_)
+);
+
+NAND3X1 _2611_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.shift_rx [0]),
+    .B(_1560_),
+    .C(_1720_),
+    .Y(_1721_)
+);
+
+NAND2X1 _2612_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf1 [30]),
+    .B(_1560_),
+    .Y(_1722_)
+);
+
+INVX1 _2613_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1722_),
+    .Y(_1723_)
+);
+
+AOI22X1 _2614_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf1 [31]),
+    .B(\u_rf_if.stream_active_bF$buf5 ),
+    .C(_1714_),
+    .D(_1723_),
+    .Y(_1724_)
+);
+
+OAI21X1 _2615_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1714_),
+    .B(_1721_),
+    .C(_1724_),
+    .Y(_1725_)
+);
+
+AND2X2 _2616_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1725_),
+    .B(i_rst_n_bF$buf10),
+    .Y(_1399_)
+);
+
+INVX1 _2617_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1690_),
+    .Y(_1398_)
+);
+
+NAND2X1 _2618_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.issue_sel ),
+    .B(_1713_),
+    .Y(_1726_)
 );
 
 NAND2X1 _2619_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_rst_n_bF$buf6),
-    .B(_1690_),
-    .Y(_1691_)
+    .A(\u_rf_if.read_buf0 [30]),
+    .B(_1560_),
+    .Y(_1727_)
 );
 
-AOI21X1 _2620_ (
+INVX1 _2620_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_733__bF$buf4),
-    .B(_1682_),
-    .C(_1691_),
-    .Y(_1454_)
+    .A(_1727_),
+    .Y(_1728_)
 );
 
-NAND2X1 _2621_ (
+AOI22X1 _2621_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg1_latched [4]),
-    .B(_733__bF$buf3),
-    .Y(_1692_)
+    .A(\u_rf_if.read_buf0 [31]),
+    .B(\u_rf_if.stream_active_bF$buf4 ),
+    .C(_1726_),
+    .D(_1728_),
+    .Y(_1729_)
 );
 
-INVX8 _2622_ (
+OAI21X1 _2622_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_733__bF$buf2),
-    .Y(_1693_)
+    .A(_1726_),
+    .B(_1721_),
+    .C(_1729_),
+    .Y(_1730_)
 );
 
-INVX1 _2623_ (
+AND2X2 _2623_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[24]),
-    .Y(_1694_)
+    .A(_1730_),
+    .B(i_rst_n_bF$buf9),
+    .Y(_1397_)
 );
 
-MUX2X1 _2624_ (
+INVX1 _2624_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1694_),
-    .B(_856_),
-    .S(ibus_pending_ack_bF$buf5),
-    .Y(_1695_)
+    .A(\u_rf_if.o_waddr [2]),
+    .Y(_1731_)
 );
 
-NAND2X1 _2625_ (
+INVX1 _2625_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1695_),
-    .B(_1693__bF$buf5),
-    .Y(_1696_)
+    .A(\u_rf_if.o_waddr [0]),
+    .Y(_1732_)
 );
 
-AOI21X1 _2626_ (
+NAND2X1 _2626_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1696_),
-    .B(_1692_),
-    .C(_1126__bF$buf7),
-    .Y(_1453_)
-);
-
-INVX1 _2627_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.issue_idx [5]),
-    .Y(_1697_)
-);
-
-INVX1 _2628_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.issue_chunk [1]),
-    .Y(_1698_)
-);
-
-INVX1 _2629_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.issue_chunk [0]),
-    .Y(_1699_)
-);
-
-NOR2X1 _2630_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1698_),
-    .B(_1699_),
-    .Y(_1700_)
-);
-
-INVX1 _2631_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.issue_chunk [2]),
-    .Y(_1701_)
-);
-
-INVX1 _2632_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.issue_sel ),
-    .Y(_1702_)
-);
-
-NOR2X1 _2633_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1701_),
+    .A(\u_rf_if.wen0_r ),
     .B(_1702_),
-    .Y(_1703_)
+    .Y(_1733_)
+);
+
+NOR2X1 _2627_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1732_),
+    .B(_1733_),
+    .Y(_1734_)
+);
+
+NAND2X1 _2628_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.o_waddr [1]),
+    .B(_1734_),
+    .Y(_1735_)
+);
+
+NOR2X1 _2629_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1731_),
+    .B(_1735_),
+    .Y(_1736_)
+);
+
+OAI21X1 _2630_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.o_waddr [3]),
+    .B(_1736_),
+    .C(_1699_),
+    .Y(_1737_)
+);
+
+AOI21X1 _2631_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.o_waddr [3]),
+    .B(_1736_),
+    .C(_1737_),
+    .Y(_1396_)
+);
+
+INVX2 _2632_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1726_),
+    .Y(_1738_)
+);
+
+NAND2X1 _2633_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.shift_rx [1]),
+    .B(_1720_),
+    .Y(_1739_)
 );
 
 NOR2X1 _2634_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.issue_idx [5]),
-    .B(_1683_),
-    .Y(_1704_)
+    .A(\u_rf_if.stream_active_bF$buf3 ),
+    .B(_1070__bF$buf2),
+    .Y(_1740_)
 );
 
-NAND2X1 _2635_ (
+OAI21X1 _2635_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.issue_chunk [3]),
-    .B(_1704__bF$buf3),
-    .Y(_1705_)
+    .A(\u_rf_if.read_buf0 [31]),
+    .B(_1738_),
+    .C(_1740_),
+    .Y(_1741_)
 );
 
-INVX1 _2636_ (
+AOI21X1 _2636_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1705_),
-    .Y(_1706_)
+    .A(_1739_),
+    .B(_1738_),
+    .C(_1741_),
+    .Y(_1395_)
 );
 
-NAND3X1 _2637_ (
+INVX2 _2637_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1700_),
-    .B(_1703_),
-    .C(_1706_),
-    .Y(_1707_)
+    .A(_1714_),
+    .Y(_1742_)
 );
 
-AOI21X1 _2638_ (
+OAI21X1 _2638_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1697_),
-    .B(_1707_),
-    .C(_1691_),
-    .Y(_1452_)
+    .A(\u_rf_if.read_buf1 [31]),
+    .B(_1742_),
+    .C(_1740_),
+    .Y(_1743_)
 );
 
-OAI21X1 _2639_ (
+AOI21X1 _2639_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.clk_sys_prev ),
-    .B(_1114_),
-    .C(\u_mem_serial.state [1]),
-    .Y(_1708_)
+    .A(_1739_),
+    .B(_1742_),
+    .C(_1743_),
+    .Y(_1394_)
 );
 
-NOR2X1 _2640_ (
+OAI21X1 _2640_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.state [0]),
-    .B(_1708_),
-    .Y(_1709_)
+    .A(_673__bF$buf0),
+    .B(_674__bF$buf1),
+    .C(\u_rf_if.rreg1_latched [4]),
+    .Y(_1744_)
 );
 
 INVX1 _2641_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1709_),
-    .Y(_1710_)
+    .A(ibus_pending_rdt[24]),
+    .Y(_1745_)
 );
 
-NOR2X1 _2642_ (
+MUX2X1 _2642_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1709_),
-    .B(_1102_),
-    .Y(_1711_)
+    .A(_1745_),
+    .B(_847_),
+    .S(ibus_pending_ack_bF$buf3),
+    .Y(_1746_)
 );
 
-INVX1 _2643_ (
+NAND2X1 _2643_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_808_),
-    .Y(_1712_)
+    .A(_1746_),
+    .B(_1692__bF$buf3),
+    .Y(_1747_)
 );
 
 AOI21X1 _2644_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1112_),
-    .B(_1111_),
-    .C(_1712_),
-    .Y(_1713_)
+    .A(_1747_),
+    .B(_1744_),
+    .C(_1070__bF$buf1),
+    .Y(_1393_)
 );
 
-NAND3X1 _2645_ (
+NAND2X1 _2645_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf2),
-    .B(_1713_),
-    .C(_1711_),
-    .Y(_1714_)
+    .A(\u_rf_if.write_wait [1]),
+    .B(\u_rf_if.write_wait [0]),
+    .Y(_1748_)
 );
 
 AOI21X1 _2646_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1714_),
-    .B(_1710_),
-    .C(_1126__bF$buf6),
-    .Y(_1451_)
+    .A(_689_),
+    .B(_1748_),
+    .C(_1070__bF$buf0),
+    .Y(_1392_)
 );
 
-INVX1 _2647_ (
+NOR2X1 _2647_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [30]),
-    .Y(_1715_)
+    .A(\u_rf_if.stream_active_bF$buf2 ),
+    .B(\u_rf_if.ready_pulse ),
+    .Y(_1749_)
 );
 
-NOR2X1 _2648_ (
+NAND2X1 _2648_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1715_),
-    .B(_1040__bF$buf0),
-    .Y(_1716_)
+    .A(\u_rf_if.stream_cnt [4]),
+    .B(_1749_),
+    .Y(_1750_)
 );
 
-NAND2X1 _2649_ (
+INVX1 _2649_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf2 ),
-    .B(\u_cpu.bufreg2.cnt_next [6]),
-    .Y(_1717_)
+    .A(\u_rf_if.stream_cnt [4]),
+    .Y(_1751_)
 );
 
-NOR2X1 _2650_ (
+INVX1 _2650_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1717_),
-    .B(_1062__bF$buf2),
-    .Y(_1718_)
+    .A(\u_rf_if.stream_cnt [3]),
+    .Y(_1752_)
 );
 
-OAI21X1 _2651_ (
+INVX1 _2651_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1718_),
-    .B(_1716_),
-    .C(_1058__bF$buf1),
-    .Y(_1719_)
+    .A(\u_rf_if.stream_cnt [1]),
+    .Y(_1753_)
 );
 
-MUX2X1 _2652_ (
+INVX1 _2652_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [31]),
-    .B(\u_cpu.ctrl.o_ibus_adr [31]),
-    .S(_1052__bF$buf3),
-    .Y(_1720_)
+    .A(\u_rf_if.stream_cnt [0]),
+    .Y(_1754_)
 );
 
-OAI21X1 _2653_ (
+NOR2X1 _2653_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1058__bF$buf0),
-    .B(_1720_),
-    .C(_1719_),
-    .Y(_1721_)
+    .A(_1753_),
+    .B(_1754_),
+    .Y(_1755_)
 );
 
-MUX2X1 _2654_ (
+NAND2X1 _2654_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1721_),
-    .B(\u_mem_serial.shift_reg [31]),
-    .S(_1067__bF$buf3),
-    .Y(_1722_)
+    .A(\u_rf_if.stream_cnt [2]),
+    .B(_1755_),
+    .Y(_1756_)
 );
 
 NOR2X1 _2655_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf5),
-    .B(_1722_),
-    .Y(_1450_)
+    .A(_1752_),
+    .B(_1756_),
+    .Y(_1757_)
 );
 
-NAND2X1 _2656_ (
+INVX1 _2656_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg0_latched [4]),
-    .B(_733__bF$buf1),
-    .Y(_1723_)
+    .A(_1757_),
+    .Y(_1758_)
 );
 
-INVX1 _2657_ (
+OAI21X1 _2657_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[19]),
-    .Y(_1724_)
+    .A(_1751_),
+    .B(_1758_),
+    .C(\u_rf_if.stream_active_bF$buf1 ),
+    .Y(_1759_)
 );
 
-MUX2X1 _2658_ (
+OAI21X1 _2658_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1724_),
-    .B(_896_),
-    .S(ibus_pending_ack_bF$buf4),
-    .Y(_1725_)
+    .A(\u_rf_if.stream_cnt [4]),
+    .B(_1757_),
+    .C(i_rst_n_bF$buf8),
+    .Y(_1760_)
 );
 
-NAND2X1 _2659_ (
+AOI21X1 _2659_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1725_),
-    .B(_1693__bF$buf4),
-    .Y(_1726_)
+    .A(_1759_),
+    .B(_1750_),
+    .C(_1760_),
+    .Y(_1391_)
 );
 
-AOI21X1 _2660_ (
+NAND2X1 _2660_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1726_),
-    .B(_1723_),
-    .C(_1126__bF$buf4),
-    .Y(_1449_)
+    .A(i_rst_n_bF$buf7),
+    .B(_1702_),
+    .Y(_1761_)
 );
 
-NAND2X1 _2661_ (
+INVX1 _2661_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1761_),
+    .Y(_1390_)
+);
+
+AND2X2 _2662_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1617_),
+    .B(i_rst_n_bF$buf6),
+    .Y(_1389_)
+);
+
+NAND3X1 _2663_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(i_rst_n_bF$buf5),
-    .B(_756_),
-    .Y(_1727_)
+    .B(\u_rf_if.issue_idx [5]),
+    .C(\u_rf_if.prefetch_active ),
+    .Y(_1762_)
 );
 
-INVX1 _2662_ (
+INVX1 _2664_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_732_),
-    .Y(_1728_)
+    .A(_1762_),
+    .Y(_1388_)
 );
 
-NAND2X1 _2663_ (
+NOR2X1 _2665_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.wen0_r ),
-    .B(_1728_),
-    .Y(_1729_)
-);
-
-NOR2X1 _2664_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1568_),
-    .B(_1729_),
-    .Y(_1730_)
-);
-
-NAND2X1 _2665_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.o_waddr [1]),
-    .B(_1730_),
-    .Y(_1731_)
+    .A(_1491_),
+    .B(_1653_),
+    .Y(_1763_)
 );
 
 OAI21X1 _2666_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1580_),
-    .B(_1731_),
-    .C(\u_rf_if.o_waddr [3]),
-    .Y(_1732_)
+    .A(\u_rf_if.shift_rx [1]),
+    .B(_1763_),
+    .C(i_rst_n_bF$buf4),
+    .Y(_1764_)
 );
 
-NOR2X1 _2667_ (
+AOI21X1 _2667_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1580_),
-    .B(_1731_),
-    .Y(_1733_)
+    .A(_1658_),
+    .B(_1763_),
+    .C(_1764_),
+    .Y(_1387_)
 );
 
-NAND2X1 _2668_ (
+NOR2X1 _2668_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1583_),
-    .B(_1733_),
-    .Y(_1734_)
+    .A(_1751_),
+    .B(_1758_),
+    .Y(_1765_)
 );
 
-AOI21X1 _2669_ (
+OAI21X1 _2669_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1734_),
-    .B(_1732_),
-    .C(_1727_),
-    .Y(_1448_)
+    .A(\u_rf_if.stream_active_bF$buf0 ),
+    .B(\u_rf_if.ready_pulse ),
+    .C(i_rst_n_bF$buf3),
+    .Y(_1766_)
 );
 
-INVX1 _2670_ (
+AOI21X1 _2670_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rcnt [0]),
-    .Y(_1735_)
+    .A(_1765_),
+    .B(\u_rf_if.stream_active_bF$buf7 ),
+    .C(_1766_),
+    .Y(_1386_)
 );
 
-INVX1 _2671_ (
+NOR2X1 _2671_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rcnt [1]),
-    .Y(_1736_)
+    .A(_1070__bF$buf6),
+    .B(_1619_),
+    .Y(_1385_)
 );
 
 NOR2X1 _2672_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1735_),
-    .B(_1736_),
-    .Y(_1737_)
+    .A(_1698_),
+    .B(_1692__bF$buf2),
+    .Y(_1767_)
 );
 
-INVX1 _2673_ (
+NAND2X1 _2673_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1737_),
-    .Y(_1738_)
+    .A(_1670_),
+    .B(_1767_),
+    .Y(_1768_)
 );
 
-NAND2X1 _2674_ (
+INVX1 _2674_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1735_),
-    .B(_1736_),
-    .Y(_1739_)
+    .A(_1768_),
+    .Y(_1384_)
 );
 
-NAND3X1 _2675_ (
+OAI21X1 _2675_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1738_),
-    .B(_1739_),
-    .C(_733__bF$buf0),
-    .Y(_1740_)
+    .A(_1670_),
+    .B(_1671_),
+    .C(_1508_),
+    .Y(_1769_)
 );
 
-AOI21X1 _2676_ (
+NAND2X1 _2676_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1740_),
-    .B(_756_),
-    .C(_1126__bF$buf3),
-    .Y(_1447_)
+    .A(\u_rf_if.rcnt [2]),
+    .B(_1672_),
+    .Y(_1770_)
 );
 
-OR2X2 _2677_ (
+NAND3X1 _2677_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_711_),
-    .B(_698_),
-    .Y(_1741_)
+    .A(_1769_),
+    .B(_1770_),
+    .C(_1767_),
+    .Y(_1771_)
 );
 
-NOR2X1 _2678_ (
+INVX1 _2678_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1741_),
-    .B(_1728_),
-    .Y(_1742_)
+    .A(_1771_),
+    .Y(_1383_)
 );
 
-NOR2X1 _2679_ (
+INVX1 _2679_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.wdata0_next_phase ),
-    .B(_1742_),
-    .Y(_1743_)
+    .A(_1749_),
+    .Y(_1772_)
 );
 
-INVX1 _2680_ (
+OAI21X1 _2680_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1727_),
-    .Y(_1744_)
+    .A(\u_rf_if.stream_cnt [0]),
+    .B(\u_rf_if.stream_active_bF$buf6 ),
+    .C(i_rst_n_bF$buf2),
+    .Y(_1773_)
 );
 
-INVX1 _2681_ (
+AOI21X1 _2681_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_702_),
-    .Y(_1745_)
+    .A(_1772_),
+    .B(\u_rf_if.stream_cnt [0]),
+    .C(_1773_),
+    .Y(_1382_)
 );
 
-OAI21X1 _2682_ (
+NAND2X1 _2682_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_701_),
-    .B(_1745_),
-    .C(_1742_),
-    .Y(_1746_)
+    .A(\u_rf_if.stream_cnt [1]),
+    .B(_1749_),
+    .Y(_1774_)
 );
 
-NAND2X1 _2683_ (
+OAI21X1 _2683_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1744_),
-    .B(_1746_),
-    .Y(_1747_)
+    .A(_1753_),
+    .B(_1754_),
+    .C(\u_rf_if.stream_active_bF$buf5 ),
+    .Y(_1775_)
 );
 
-NOR2X1 _2684_ (
+OAI21X1 _2684_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1743_),
-    .B(_1747_),
-    .Y(_1446_)
+    .A(\u_rf_if.stream_cnt [1]),
+    .B(\u_rf_if.stream_cnt [0]),
+    .C(i_rst_n_bF$buf1),
+    .Y(_1776_)
 );
 
-MUX2X1 _2685_ (
+AOI21X1 _2685_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.wen0_r ),
-    .B(_738_),
-    .S(_732_),
-    .Y(_1748_)
+    .A(_1774_),
+    .B(_1775_),
+    .C(_1776_),
+    .Y(_1381_)
 );
 
-NOR2X1 _2686_ (
+NAND2X1 _2686_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf2),
-    .B(_1748_),
-    .Y(_1445_)
+    .A(\u_rf_if.stream_cnt [2]),
+    .B(_1749_),
+    .Y(_1777_)
 );
 
 NAND2X1 _2687_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.write_wait [5]),
-    .B(_1688_),
-    .Y(_1749_)
+    .A(\u_rf_if.stream_active_bF$buf4 ),
+    .B(_1756_),
+    .Y(_1778_)
 );
 
-AOI21X1 _2688_ (
+OAI21X1 _2688_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_756_),
-    .B(_1749_),
-    .C(_1126__bF$buf1),
-    .Y(_1444_)
+    .A(\u_rf_if.stream_cnt [2]),
+    .B(_1755_),
+    .C(i_rst_n_bF$buf0),
+    .Y(_1779_)
 );
 
-AND2X2 _2689_ (
+AOI21X1 _2689_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1557_),
-    .B(i_rst_n_bF$buf4),
-    .Y(_1443_)
+    .A(_1778_),
+    .B(_1777_),
+    .C(_1779_),
+    .Y(_1380_)
 );
 
-INVX1 _2690_ (
+AOI22X1 _2690_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.stream_cnt [3]),
-    .Y(_1750_)
+    .B(_1749_),
+    .C(_1758_),
+    .D(\u_rf_if.stream_active_bF$buf3 ),
+    .Y(_1780_)
 );
 
 INVX1 _2691_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.stream_cnt [1]),
-    .Y(_1751_)
+    .A(_1756_),
+    .Y(_1781_)
 );
 
-INVX1 _2692_ (
+OAI21X1 _2692_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.stream_cnt [0]),
-    .Y(_1752_)
+    .A(\u_rf_if.stream_cnt [3]),
+    .B(_1781_),
+    .C(i_rst_n_bF$buf11),
+    .Y(_1782_)
 );
 
 NOR2X1 _2693_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1751_),
-    .B(_1752_),
-    .Y(_1753_)
+    .A(_1782_),
+    .B(_1780_),
+    .Y(_1379_)
 );
 
-NAND2X1 _2694_ (
+NOR2X1 _2694_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.stream_cnt [2]),
-    .B(_1753_),
-    .Y(_1754_)
+    .A(\u_rf_if.stream_active_bF$buf2 ),
+    .B(_1742_),
+    .Y(_1783_)
 );
 
-NOR2X1 _2695_ (
+MUX2X1 _2695_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1750_),
-    .B(_1754_),
-    .Y(_1755_)
+    .A(\u_rf_if.read_buf1 [1]),
+    .B(\u_rf_if.read_buf1 [2]),
+    .S(\u_rf_if.stream_active_bF$buf1 ),
+    .Y(_1784_)
 );
 
-INVX1 _2696_ (
+NAND2X1 _2696_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.stream_cnt [4]),
-    .Y(_1756_)
+    .A(\u_rf_if.read_buf1 [0]),
+    .B(_1783__bF$buf6),
+    .Y(_1785_)
 );
 
-NOR2X1 _2697_ (
+OAI21X1 _2697_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1756_),
-    .B(_619_),
-    .Y(_1757_)
+    .A(_1783__bF$buf5),
+    .B(_1784_),
+    .C(_1785_),
+    .Y(_1786_)
 );
 
-OAI21X1 _2698_ (
+AND2X2 _2698_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.stream_active_bF$buf6 ),
-    .B(\u_rf_if.ready_pulse ),
-    .C(i_rst_n_bF$buf3),
-    .Y(_1758_)
+    .A(_1786_),
+    .B(i_rst_n_bF$buf10),
+    .Y(_1378_)
 );
 
-AOI21X1 _2699_ (
+MUX2X1 _2699_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1755_),
-    .B(_1757_),
-    .C(_1758_),
-    .Y(_1442_)
+    .A(\u_rf_if.read_buf1 [2]),
+    .B(\u_rf_if.read_buf1 [3]),
+    .S(\u_rf_if.stream_active_bF$buf0 ),
+    .Y(_1787_)
 );
 
-NAND3X1 _2700_ (
+NAND2X1 _2700_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_rst_n_bF$buf2),
-    .B(\u_rf_if.issue_idx [5]),
-    .C(\u_rf_if.prefetch_active ),
-    .Y(_1759_)
+    .A(\u_rf_if.read_buf1 [1]),
+    .B(_1783__bF$buf4),
+    .Y(_1788_)
 );
 
-INVX1 _2701_ (
+OAI21X1 _2701_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1759_),
-    .Y(_1441_)
+    .A(_1783__bF$buf3),
+    .B(_1787_),
+    .C(_1788_),
+    .Y(_1789_)
 );
 
-NAND3X1 _2702_ (
+AND2X2 _2702_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1756_),
-    .B(\u_rf_if.stream_active_bF$buf5 ),
-    .C(_1755_),
-    .Y(_1760_)
+    .A(_1789_),
+    .B(i_rst_n_bF$buf9),
+    .Y(_1377_)
 );
 
-NOR2X1 _2703_ (
+MUX2X1 _2703_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.stream_active_bF$buf4 ),
-    .B(\u_rf_if.ready_pulse ),
-    .Y(_1761_)
+    .A(\u_rf_if.read_buf1 [3]),
+    .B(\u_rf_if.read_buf1 [4]),
+    .S(\u_rf_if.stream_active_bF$buf7 ),
+    .Y(_1790_)
 );
 
-INVX1 _2704_ (
+NAND2X1 _2704_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1761_),
-    .Y(_1762_)
+    .A(\u_rf_if.read_buf1 [2]),
+    .B(_1783__bF$buf2),
+    .Y(_1791_)
 );
 
 OAI21X1 _2705_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_619_),
-    .B(_1755_),
-    .C(_1762_),
-    .Y(_1763_)
+    .A(_1783__bF$buf1),
+    .B(_1790_),
+    .C(_1791_),
+    .Y(_1792_)
 );
 
-INVX1 _2706_ (
+AND2X2 _2706_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1763_),
-    .Y(_1764_)
+    .A(_1792_),
+    .B(i_rst_n_bF$buf8),
+    .Y(_1376_)
 );
 
-OAI21X1 _2707_ (
+MUX2X1 _2707_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1756_),
-    .B(_1764_),
-    .C(_1760_),
-    .Y(_1765_)
+    .A(\u_rf_if.read_buf1 [4]),
+    .B(\u_rf_if.read_buf1 [5]),
+    .S(\u_rf_if.stream_active_bF$buf6 ),
+    .Y(_1793_)
 );
 
-AND2X2 _2708_ (
+NAND2X1 _2708_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1765_),
-    .B(i_rst_n_bF$buf1),
-    .Y(_1440_)
+    .A(\u_rf_if.read_buf1 [3]),
+    .B(_1783__bF$buf0),
+    .Y(_1794_)
 );
 
-NAND2X1 _2709_ (
+OAI21X1 _2709_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_rst_n_bF$buf0),
-    .B(_619_),
-    .Y(_1766_)
+    .A(_1783__bF$buf6),
+    .B(_1793_),
+    .C(_1794_),
+    .Y(_1795_)
 );
 
-NOR2X1 _2710_ (
+AND2X2 _2710_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.issue_chunk [3]),
-    .B(\u_rf_if.issue_chunk [2]),
-    .Y(_1767_)
+    .A(_1795_),
+    .B(i_rst_n_bF$buf7),
+    .Y(_1375_)
 );
 
-NAND2X1 _2711_ (
+MUX2X1 _2711_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1698_),
-    .B(_1699_),
-    .Y(_1768_)
+    .A(\u_rf_if.read_buf1 [5]),
+    .B(\u_rf_if.read_buf1 [6]),
+    .S(\u_rf_if.stream_active_bF$buf5 ),
+    .Y(_1796_)
 );
 
 NAND2X1 _2712_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1702_),
-    .B(_1697_),
-    .Y(_1769_)
+    .A(\u_rf_if.read_buf1 [4]),
+    .B(_1783__bF$buf5),
+    .Y(_1797_)
 );
 
-NOR2X1 _2713_ (
+OAI21X1 _2713_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1768_),
-    .B(_1769_),
-    .Y(_1770_)
+    .A(_1783__bF$buf4),
+    .B(_1796_),
+    .C(_1797_),
+    .Y(_1798_)
 );
 
-AOI21X1 _2714_ (
+AND2X2 _2714_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1770_),
-    .B(_1767_),
-    .C(_1683_),
-    .Y(_1771_)
+    .A(_1798_),
+    .B(i_rst_n_bF$buf6),
+    .Y(_1374_)
 );
 
-NAND2X1 _2715_ (
+MUX2X1 _2715_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1702_),
-    .B(_1771_),
-    .Y(_1772_)
+    .A(\u_rf_if.read_buf1 [6]),
+    .B(\u_rf_if.read_buf1 [7]),
+    .S(\u_rf_if.stream_active_bF$buf4 ),
+    .Y(_1799_)
 );
 
 NAND2X1 _2716_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [31]),
-    .B(_1772_),
-    .Y(_1773_)
+    .A(\u_rf_if.read_buf1 [5]),
+    .B(_1783__bF$buf3),
+    .Y(_1800_)
 );
 
-INVX2 _2717_ (
+OAI21X1 _2717_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1772_),
-    .Y(_1774_)
+    .A(_1783__bF$buf2),
+    .B(_1799_),
+    .C(_1800_),
+    .Y(_1801_)
 );
 
-NOR2X1 _2718_ (
+AND2X2 _2718_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg0_latched [3]),
-    .B(_1702_),
-    .Y(_1775_)
+    .A(_1801_),
+    .B(i_rst_n_bF$buf5),
+    .Y(_1373_)
 );
 
-NOR2X1 _2719_ (
+MUX2X1 _2719_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg0_latched [2]),
-    .B(\u_rf_if.rreg0_latched [1]),
-    .Y(_1776_)
+    .A(\u_rf_if.read_buf1 [7]),
+    .B(\u_rf_if.read_buf1 [8]),
+    .S(\u_rf_if.stream_active_bF$buf3 ),
+    .Y(_1802_)
 );
 
-NOR2X1 _2720_ (
+NAND2X1 _2720_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg0_latched [0]),
-    .B(\u_rf_if.rreg0_latched [4]),
-    .Y(_1777_)
+    .A(\u_rf_if.read_buf1 [6]),
+    .B(_1783__bF$buf1),
+    .Y(_1803_)
 );
 
-AND2X2 _2721_ (
+OAI21X1 _2721_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1776_),
-    .B(_1777_),
-    .Y(_1778_)
+    .A(_1783__bF$buf0),
+    .B(_1802_),
+    .C(_1803_),
+    .Y(_1804_)
 );
 
-NOR2X1 _2722_ (
+AND2X2 _2722_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg1_latched [3]),
-    .B(\u_rf_if.rreg1_latched [2]),
-    .Y(_1779_)
+    .A(_1804_),
+    .B(i_rst_n_bF$buf4),
+    .Y(_1372_)
 );
 
-NOR2X1 _2723_ (
+MUX2X1 _2723_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg1_latched [1]),
-    .B(\u_rf_if.rreg1_latched [0]),
-    .Y(_1780_)
+    .A(\u_rf_if.read_buf1 [8]),
+    .B(\u_rf_if.read_buf1 [9]),
+    .S(\u_rf_if.stream_active_bF$buf2 ),
+    .Y(_1805_)
 );
 
-NOR2X1 _2724_ (
+NAND2X1 _2724_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.issue_sel ),
-    .B(\u_rf_if.rreg1_latched [4]),
-    .Y(_1781_)
+    .A(\u_rf_if.read_buf1 [7]),
+    .B(_1783__bF$buf6),
+    .Y(_1806_)
 );
 
-AND2X2 _2725_ (
+OAI21X1 _2725_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1780_),
-    .B(_1781_),
-    .Y(_1782_)
+    .A(_1783__bF$buf5),
+    .B(_1805_),
+    .C(_1806_),
+    .Y(_1807_)
 );
 
-AOI22X1 _2726_ (
+AND2X2 _2726_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1778_),
-    .B(_1775_),
-    .C(_1779_),
-    .D(_1782_),
-    .Y(_1783_)
+    .A(_1807_),
+    .B(i_rst_n_bF$buf3),
+    .Y(_1371_)
 );
 
-INVX1 _2727_ (
+MUX2X1 _2727_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(raddr[8]),
-    .Y(_1784_)
+    .A(\u_rf_if.read_buf1 [9]),
+    .B(\u_rf_if.read_buf1 [10]),
+    .S(\u_rf_if.stream_active_bF$buf1 ),
+    .Y(_1808_)
 );
 
-NOR2X1 _2728_ (
+NAND2X1 _2728_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(raddr[7]),
-    .B(raddr[6]),
-    .Y(_1785_)
+    .A(\u_rf_if.read_buf1 [8]),
+    .B(_1783__bF$buf4),
+    .Y(_1809_)
 );
 
-NOR2X1 _2729_ (
+OAI21X1 _2729_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(raddr[5]),
-    .B(raddr[4]),
-    .Y(_1786_)
+    .A(_1783__bF$buf3),
+    .B(_1808_),
+    .C(_1809_),
+    .Y(_1810_)
 );
 
-NAND3X1 _2730_ (
+AND2X2 _2730_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1784_),
-    .B(_1785_),
-    .C(_1786_),
-    .Y(_1787_)
+    .A(_1810_),
+    .B(i_rst_n_bF$buf2),
+    .Y(_1370_)
 );
 
-AND2X2 _2731_ (
+MUX2X1 _2731_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1787_),
-    .B(\u_rf_serial.shift_rx [1]),
-    .Y(_1788_)
+    .A(\u_rf_if.read_buf1 [10]),
+    .B(\u_rf_if.read_buf1 [11]),
+    .S(\u_rf_if.stream_active_bF$buf0 ),
+    .Y(_1811_)
 );
 
-AND2X2 _2732_ (
+NAND2X1 _2732_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1783_),
-    .B(_1788_),
-    .Y(_1789_)
+    .A(\u_rf_if.read_buf1 [9]),
+    .B(_1783__bF$buf2),
+    .Y(_1812_)
 );
 
-NAND2X1 _2733_ (
+OAI21X1 _2733_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1789_),
-    .B(_1774_),
-    .Y(_1790_)
+    .A(_1783__bF$buf1),
+    .B(_1811_),
+    .C(_1812_),
+    .Y(_1813_)
 );
 
-AOI21X1 _2734_ (
+AND2X2 _2734_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1790_),
-    .B(_1773_),
-    .C(_1766_),
-    .Y(_1439_)
+    .A(_1813_),
+    .B(i_rst_n_bF$buf1),
+    .Y(_1369_)
 );
 
-NOR2X1 _2735_ (
+MUX2X1 _2735_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.stream_active_bF$buf3 ),
-    .B(_1659_),
-    .Y(_1791_)
+    .A(\u_rf_if.read_buf1 [11]),
+    .B(\u_rf_if.read_buf1 [12]),
+    .S(\u_rf_if.stream_active_bF$buf7 ),
+    .Y(_1814_)
 );
 
-AND2X2 _2736_ (
+NAND2X1 _2736_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1787_),
-    .B(_1791_),
-    .Y(_1792_)
+    .A(\u_rf_if.read_buf1 [10]),
+    .B(_1783__bF$buf0),
+    .Y(_1815_)
 );
 
-AND2X2 _2737_ (
+OAI21X1 _2737_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1783_),
-    .B(_1792_),
-    .Y(_1793_)
+    .A(_1783__bF$buf6),
+    .B(_1814_),
+    .C(_1815_),
+    .Y(_1816_)
 );
 
-OAI21X1 _2738_ (
+AND2X2 _2738_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.stream_active_bF$buf2 ),
-    .B(_1774_),
-    .C(_1793_),
-    .Y(_1794_)
+    .A(_1816_),
+    .B(i_rst_n_bF$buf0),
+    .Y(_1368_)
 );
 
-NAND2X1 _2739_ (
+MUX2X1 _2739_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [30]),
-    .B(_619_),
-    .Y(_1795_)
+    .A(\u_rf_if.read_buf1 [12]),
+    .B(\u_rf_if.read_buf1 [13]),
+    .S(\u_rf_if.stream_active_bF$buf6 ),
+    .Y(_1817_)
 );
 
-INVX1 _2740_ (
+NAND2X1 _2740_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1795_),
-    .Y(_1796_)
+    .A(\u_rf_if.read_buf1 [11]),
+    .B(_1783__bF$buf5),
+    .Y(_1818_)
 );
 
-AOI22X1 _2741_ (
+OAI21X1 _2741_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [31]),
-    .B(\u_rf_if.stream_active_bF$buf1 ),
-    .C(_1772_),
-    .D(_1796_),
-    .Y(_1797_)
+    .A(_1783__bF$buf4),
+    .B(_1817_),
+    .C(_1818_),
+    .Y(_1819_)
 );
 
-AOI21X1 _2742_ (
+AND2X2 _2742_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1794_),
-    .B(_1797_),
-    .C(_1126__bF$buf0),
-    .Y(_1438_)
+    .A(_1819_),
+    .B(i_rst_n_bF$buf11),
+    .Y(_1367_)
 );
 
-NAND2X1 _2743_ (
+MUX2X1 _2743_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.issue_sel ),
-    .B(_1771_),
-    .Y(_1798_)
+    .A(\u_rf_if.read_buf1 [13]),
+    .B(\u_rf_if.read_buf1 [14]),
+    .S(\u_rf_if.stream_active_bF$buf5 ),
+    .Y(_1820_)
 );
 
 NAND2X1 _2744_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.read_buf0 [31]),
-    .B(_1798_),
-    .Y(_1799_)
+    .A(\u_rf_if.read_buf1 [12]),
+    .B(_1783__bF$buf3),
+    .Y(_1821_)
 );
 
-INVX2 _2745_ (
+OAI21X1 _2745_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1798_),
-    .Y(_1800_)
+    .A(_1783__bF$buf2),
+    .B(_1820_),
+    .C(_1821_),
+    .Y(_1822_)
 );
 
-NAND2X1 _2746_ (
+AND2X2 _2746_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1789_),
-    .B(_1800_),
-    .Y(_1801_)
+    .A(_1822_),
+    .B(i_rst_n_bF$buf10),
+    .Y(_1366_)
 );
 
-AOI21X1 _2747_ (
+MUX2X1 _2747_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1801_),
-    .B(_1799_),
-    .C(_1766_),
-    .Y(_1437_)
+    .A(\u_rf_if.read_buf1 [14]),
+    .B(\u_rf_if.read_buf1 [15]),
+    .S(\u_rf_if.stream_active_bF$buf4 ),
+    .Y(_1823_)
 );
 
-OAI21X1 _2748_ (
+NAND2X1 _2748_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.stream_active_bF$buf0 ),
-    .B(_1800_),
-    .C(_1793_),
-    .Y(_1802_)
+    .A(\u_rf_if.read_buf1 [13]),
+    .B(_1783__bF$buf1),
+    .Y(_1824_)
 );
 
-NAND2X1 _2749_ (
+OAI21X1 _2749_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.read_buf0 [30]),
-    .B(_619_),
-    .Y(_1803_)
+    .A(_1783__bF$buf0),
+    .B(_1823_),
+    .C(_1824_),
+    .Y(_1825_)
 );
 
-INVX1 _2750_ (
+AND2X2 _2750_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1803_),
-    .Y(_1804_)
+    .A(_1825_),
+    .B(i_rst_n_bF$buf9),
+    .Y(_1365_)
 );
 
-AOI22X1 _2751_ (
+MUX2X1 _2751_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.read_buf0 [31]),
-    .B(\u_rf_if.stream_active_bF$buf7 ),
-    .C(_1798_),
-    .D(_1804_),
-    .Y(_1805_)
+    .A(\u_rf_if.read_buf1 [15]),
+    .B(\u_rf_if.read_buf1 [16]),
+    .S(\u_rf_if.stream_active_bF$buf3 ),
+    .Y(_1826_)
 );
 
-AOI21X1 _2752_ (
+NAND2X1 _2752_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1802_),
-    .B(_1805_),
-    .C(_1126__bF$buf7),
-    .Y(_1436_)
+    .A(\u_rf_if.read_buf1 [14]),
+    .B(_1783__bF$buf6),
+    .Y(_1827_)
 );
 
-NAND3X1 _2753_ (
+OAI21X1 _2753_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rcnt [0]),
-    .B(_733__bF$buf5),
-    .C(_1744_),
-    .Y(_1806_)
+    .A(_1783__bF$buf5),
+    .B(_1826_),
+    .C(_1827_),
+    .Y(_1828_)
 );
 
-INVX1 _2754_ (
+AND2X2 _2754_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1806_),
-    .Y(_1435_)
+    .A(_1828_),
+    .B(i_rst_n_bF$buf8),
+    .Y(_1364_)
 );
 
 MUX2X1 _2755_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg1_latched [4]),
-    .B(\u_rf_if.rreg0_latched [4]),
-    .S(\u_rf_if.issue_sel ),
-    .Y(_1807_)
-);
-
-OAI21X1 _2756_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(raddr[8]),
-    .B(_1704__bF$buf2),
-    .C(i_rst_n_bF$buf10),
-    .Y(_1808_)
-);
-
-AOI21X1 _2757_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1704__bF$buf1),
-    .B(_1807_),
-    .C(_1808_),
-    .Y(_1434_)
-);
-
-NAND2X1 _2758_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(i_rst_n_bF$buf9),
-    .B(_1704__bF$buf0),
-    .Y(_1809_)
-);
-
-OAI21X1 _2759_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1126__bF$buf6),
-    .B(_1690_),
-    .C(_1809_),
-    .Y(_1433_)
-);
-
-INVX1 _2760_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1809_),
-    .Y(_1432_)
-);
-
-NOR2X1 _2761_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1727_),
-    .B(_1693__bF$buf3),
-    .Y(_1810_)
-);
-
-NAND2X1 _2762_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1735_),
-    .B(_1810_),
-    .Y(_1811_)
-);
-
-INVX1 _2763_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1811_),
-    .Y(_1431_)
-);
-
-OAI21X1 _2764_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1735_),
-    .B(_1736_),
-    .C(_701_),
-    .Y(_1812_)
-);
-
-NAND2X1 _2765_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.rcnt [2]),
-    .B(_1737_),
-    .Y(_1813_)
-);
-
-NAND3X1 _2766_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1812_),
-    .B(_1813_),
-    .C(_1810_),
-    .Y(_1814_)
-);
-
-INVX1 _2767_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1814_),
-    .Y(_1430_)
-);
-
-OAI21X1 _2768_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.stream_cnt [0]),
-    .B(\u_rf_if.stream_active_bF$buf6 ),
-    .C(i_rst_n_bF$buf8),
-    .Y(_1815_)
-);
-
-AOI21X1 _2769_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1762_),
-    .B(\u_rf_if.stream_cnt [0]),
-    .C(_1815_),
-    .Y(_1429_)
-);
-
-NAND2X1 _2770_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.stream_cnt [1]),
-    .B(_1761_),
-    .Y(_1816_)
-);
-
-OAI21X1 _2771_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1751_),
-    .B(_1752_),
-    .C(\u_rf_if.stream_active_bF$buf5 ),
-    .Y(_1817_)
-);
-
-OAI21X1 _2772_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.stream_cnt [1]),
-    .B(\u_rf_if.stream_cnt [0]),
-    .C(i_rst_n_bF$buf7),
-    .Y(_1818_)
-);
-
-AOI21X1 _2773_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1816_),
-    .B(_1817_),
-    .C(_1818_),
-    .Y(_1428_)
-);
-
-NAND2X1 _2774_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.stream_cnt [2]),
-    .B(_1761_),
-    .Y(_1819_)
-);
-
-NAND2X1 _2775_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.stream_active_bF$buf4 ),
-    .B(_1754_),
-    .Y(_1820_)
-);
-
-OAI21X1 _2776_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.stream_cnt [2]),
-    .B(_1753_),
-    .C(i_rst_n_bF$buf6),
-    .Y(_1821_)
-);
-
-AOI21X1 _2777_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1820_),
-    .B(_1819_),
-    .C(_1821_),
-    .Y(_1427_)
-);
-
-OAI21X1 _2778_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_619_),
-    .B(_1754_),
-    .C(_1750_),
-    .Y(_1822_)
-);
-
-NAND2X1 _2779_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(i_rst_n_bF$buf5),
-    .B(_1822_),
-    .Y(_1823_)
-);
-
-NOR2X1 _2780_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1823_),
-    .B(_1764_),
-    .Y(_1426_)
-);
-
-NOR2X1 _2781_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.stream_active_bF$buf3 ),
-    .B(_1774_),
-    .Y(_1824_)
-);
-
-MUX2X1 _2782_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [1]),
-    .B(\u_rf_if.read_buf1 [2]),
+    .A(\u_rf_if.read_buf1 [16]),
+    .B(\u_rf_if.read_buf1 [17]),
     .S(\u_rf_if.stream_active_bF$buf2 ),
-    .Y(_1825_)
-);
-
-NAND2X1 _2783_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [0]),
-    .B(_1824__bF$buf6),
-    .Y(_1826_)
-);
-
-OAI21X1 _2784_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf5),
-    .B(_1825_),
-    .C(_1826_),
-    .Y(_1827_)
-);
-
-AND2X2 _2785_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1827_),
-    .B(i_rst_n_bF$buf4),
-    .Y(_1425_)
-);
-
-MUX2X1 _2786_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [2]),
-    .B(\u_rf_if.read_buf1 [3]),
-    .S(\u_rf_if.stream_active_bF$buf1 ),
-    .Y(_1828_)
-);
-
-NAND2X1 _2787_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [1]),
-    .B(_1824__bF$buf4),
     .Y(_1829_)
 );
 
-OAI21X1 _2788_ (
+NAND2X1 _2756_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824__bF$buf3),
-    .B(_1828_),
-    .C(_1829_),
+    .A(\u_rf_if.read_buf1 [15]),
+    .B(_1783__bF$buf4),
     .Y(_1830_)
 );
 
-AND2X2 _2789_ (
+OAI21X1 _2757_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1830_),
-    .B(i_rst_n_bF$buf3),
-    .Y(_1424_)
-);
-
-MUX2X1 _2790_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [3]),
-    .B(\u_rf_if.read_buf1 [4]),
-    .S(\u_rf_if.stream_active_bF$buf0 ),
+    .A(_1783__bF$buf3),
+    .B(_1829_),
+    .C(_1830_),
     .Y(_1831_)
 );
 
-NAND2X1 _2791_ (
+AND2X2 _2758_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [2]),
-    .B(_1824__bF$buf2),
-    .Y(_1832_)
-);
-
-OAI21X1 _2792_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf1),
-    .B(_1831_),
-    .C(_1832_),
-    .Y(_1833_)
-);
-
-AND2X2 _2793_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1833_),
-    .B(i_rst_n_bF$buf2),
-    .Y(_1423_)
-);
-
-MUX2X1 _2794_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [4]),
-    .B(\u_rf_if.read_buf1 [5]),
-    .S(\u_rf_if.stream_active_bF$buf7 ),
-    .Y(_1834_)
-);
-
-NAND2X1 _2795_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [3]),
-    .B(_1824__bF$buf0),
-    .Y(_1835_)
-);
-
-OAI21X1 _2796_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf6),
-    .B(_1834_),
-    .C(_1835_),
-    .Y(_1836_)
-);
-
-AND2X2 _2797_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1836_),
-    .B(i_rst_n_bF$buf1),
-    .Y(_1422_)
-);
-
-MUX2X1 _2798_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [5]),
-    .B(\u_rf_if.read_buf1 [6]),
-    .S(\u_rf_if.stream_active_bF$buf6 ),
-    .Y(_1837_)
-);
-
-NAND2X1 _2799_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [4]),
-    .B(_1824__bF$buf5),
-    .Y(_1838_)
-);
-
-OAI21X1 _2800_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf4),
-    .B(_1837_),
-    .C(_1838_),
-    .Y(_1839_)
-);
-
-AND2X2 _2801_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1839_),
-    .B(i_rst_n_bF$buf0),
-    .Y(_1421_)
-);
-
-MUX2X1 _2802_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [6]),
-    .B(\u_rf_if.read_buf1 [7]),
-    .S(\u_rf_if.stream_active_bF$buf5 ),
-    .Y(_1840_)
-);
-
-NAND2X1 _2803_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [5]),
-    .B(_1824__bF$buf3),
-    .Y(_1841_)
-);
-
-OAI21X1 _2804_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf2),
-    .B(_1840_),
-    .C(_1841_),
-    .Y(_1842_)
-);
-
-AND2X2 _2805_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1842_),
-    .B(i_rst_n_bF$buf10),
-    .Y(_1420_)
-);
-
-MUX2X1 _2806_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [7]),
-    .B(\u_rf_if.read_buf1 [8]),
-    .S(\u_rf_if.stream_active_bF$buf4 ),
-    .Y(_1843_)
-);
-
-NAND2X1 _2807_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [6]),
-    .B(_1824__bF$buf1),
-    .Y(_1844_)
-);
-
-OAI21X1 _2808_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf0),
-    .B(_1843_),
-    .C(_1844_),
-    .Y(_1845_)
-);
-
-AND2X2 _2809_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1845_),
-    .B(i_rst_n_bF$buf9),
-    .Y(_1419_)
-);
-
-MUX2X1 _2810_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [8]),
-    .B(\u_rf_if.read_buf1 [9]),
-    .S(\u_rf_if.stream_active_bF$buf3 ),
-    .Y(_1846_)
-);
-
-NAND2X1 _2811_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [7]),
-    .B(_1824__bF$buf6),
-    .Y(_1847_)
-);
-
-OAI21X1 _2812_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf5),
-    .B(_1846_),
-    .C(_1847_),
-    .Y(_1848_)
-);
-
-AND2X2 _2813_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1848_),
-    .B(i_rst_n_bF$buf8),
-    .Y(_1418_)
-);
-
-MUX2X1 _2814_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [9]),
-    .B(\u_rf_if.read_buf1 [10]),
-    .S(\u_rf_if.stream_active_bF$buf2 ),
-    .Y(_1849_)
-);
-
-NAND2X1 _2815_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [8]),
-    .B(_1824__bF$buf4),
-    .Y(_1850_)
-);
-
-OAI21X1 _2816_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf3),
-    .B(_1849_),
-    .C(_1850_),
-    .Y(_1851_)
-);
-
-AND2X2 _2817_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1851_),
+    .A(_1831_),
     .B(i_rst_n_bF$buf7),
-    .Y(_1417_)
+    .Y(_1363_)
 );
 
-MUX2X1 _2818_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [10]),
-    .B(\u_rf_if.read_buf1 [11]),
-    .S(\u_rf_if.stream_active_bF$buf1 ),
-    .Y(_1852_)
-);
-
-NAND2X1 _2819_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [9]),
-    .B(_1824__bF$buf2),
-    .Y(_1853_)
-);
-
-OAI21X1 _2820_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf1),
-    .B(_1852_),
-    .C(_1853_),
-    .Y(_1854_)
-);
-
-AND2X2 _2821_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1854_),
-    .B(i_rst_n_bF$buf6),
-    .Y(_1416_)
-);
-
-MUX2X1 _2822_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [11]),
-    .B(\u_rf_if.read_buf1 [12]),
-    .S(\u_rf_if.stream_active_bF$buf0 ),
-    .Y(_1855_)
-);
-
-NAND2X1 _2823_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [10]),
-    .B(_1824__bF$buf0),
-    .Y(_1856_)
-);
-
-OAI21X1 _2824_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf6),
-    .B(_1855_),
-    .C(_1856_),
-    .Y(_1857_)
-);
-
-AND2X2 _2825_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1857_),
-    .B(i_rst_n_bF$buf5),
-    .Y(_1415_)
-);
-
-MUX2X1 _2826_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [12]),
-    .B(\u_rf_if.read_buf1 [13]),
-    .S(\u_rf_if.stream_active_bF$buf7 ),
-    .Y(_1858_)
-);
-
-NAND2X1 _2827_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [11]),
-    .B(_1824__bF$buf5),
-    .Y(_1859_)
-);
-
-OAI21X1 _2828_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf4),
-    .B(_1858_),
-    .C(_1859_),
-    .Y(_1860_)
-);
-
-AND2X2 _2829_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1860_),
-    .B(i_rst_n_bF$buf4),
-    .Y(_1414_)
-);
-
-MUX2X1 _2830_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [13]),
-    .B(\u_rf_if.read_buf1 [14]),
-    .S(\u_rf_if.stream_active_bF$buf6 ),
-    .Y(_1861_)
-);
-
-NAND2X1 _2831_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [12]),
-    .B(_1824__bF$buf3),
-    .Y(_1862_)
-);
-
-OAI21X1 _2832_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf2),
-    .B(_1861_),
-    .C(_1862_),
-    .Y(_1863_)
-);
-
-AND2X2 _2833_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1863_),
-    .B(i_rst_n_bF$buf3),
-    .Y(_1413_)
-);
-
-MUX2X1 _2834_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [14]),
-    .B(\u_rf_if.read_buf1 [15]),
-    .S(\u_rf_if.stream_active_bF$buf5 ),
-    .Y(_1864_)
-);
-
-NAND2X1 _2835_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [13]),
-    .B(_1824__bF$buf1),
-    .Y(_1865_)
-);
-
-OAI21X1 _2836_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf0),
-    .B(_1864_),
-    .C(_1865_),
-    .Y(_1866_)
-);
-
-AND2X2 _2837_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1866_),
-    .B(i_rst_n_bF$buf2),
-    .Y(_1412_)
-);
-
-MUX2X1 _2838_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [15]),
-    .B(\u_rf_if.read_buf1 [16]),
-    .S(\u_rf_if.stream_active_bF$buf4 ),
-    .Y(_1867_)
-);
-
-NAND2X1 _2839_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [14]),
-    .B(_1824__bF$buf6),
-    .Y(_1868_)
-);
-
-OAI21X1 _2840_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf5),
-    .B(_1867_),
-    .C(_1868_),
-    .Y(_1869_)
-);
-
-AND2X2 _2841_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1869_),
-    .B(i_rst_n_bF$buf1),
-    .Y(_1411_)
-);
-
-MUX2X1 _2842_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [16]),
-    .B(\u_rf_if.read_buf1 [17]),
-    .S(\u_rf_if.stream_active_bF$buf3 ),
-    .Y(_1870_)
-);
-
-NAND2X1 _2843_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [15]),
-    .B(_1824__bF$buf4),
-    .Y(_1871_)
-);
-
-OAI21X1 _2844_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf3),
-    .B(_1870_),
-    .C(_1871_),
-    .Y(_1872_)
-);
-
-AND2X2 _2845_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1872_),
-    .B(i_rst_n_bF$buf0),
-    .Y(_1410_)
-);
-
-MUX2X1 _2846_ (
+MUX2X1 _2759_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [17]),
     .B(\u_rf_if.read_buf1 [18]),
-    .S(\u_rf_if.stream_active_bF$buf2 ),
-    .Y(_1873_)
+    .S(\u_rf_if.stream_active_bF$buf1 ),
+    .Y(_1832_)
 );
 
-NAND2X1 _2847_ (
+NAND2X1 _2760_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [16]),
-    .B(_1824__bF$buf2),
-    .Y(_1874_)
+    .B(_1783__bF$buf2),
+    .Y(_1833_)
 );
 
-OAI21X1 _2848_ (
+OAI21X1 _2761_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824__bF$buf1),
-    .B(_1873_),
-    .C(_1874_),
-    .Y(_1875_)
+    .A(_1783__bF$buf1),
+    .B(_1832_),
+    .C(_1833_),
+    .Y(_1834_)
 );
 
-AND2X2 _2849_ (
+AND2X2 _2762_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1875_),
-    .B(i_rst_n_bF$buf10),
-    .Y(_1409_)
+    .A(_1834_),
+    .B(i_rst_n_bF$buf6),
+    .Y(_1362_)
 );
 
-MUX2X1 _2850_ (
+MUX2X1 _2763_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [18]),
     .B(\u_rf_if.read_buf1 [19]),
-    .S(\u_rf_if.stream_active_bF$buf1 ),
-    .Y(_1876_)
+    .S(\u_rf_if.stream_active_bF$buf0 ),
+    .Y(_1835_)
 );
 
-NAND2X1 _2851_ (
+NAND2X1 _2764_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [17]),
-    .B(_1824__bF$buf0),
-    .Y(_1877_)
+    .B(_1783__bF$buf0),
+    .Y(_1836_)
 );
 
-OAI21X1 _2852_ (
+OAI21X1 _2765_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824__bF$buf6),
-    .B(_1876_),
-    .C(_1877_),
-    .Y(_1878_)
+    .A(_1783__bF$buf6),
+    .B(_1835_),
+    .C(_1836_),
+    .Y(_1837_)
 );
 
-AND2X2 _2853_ (
+AND2X2 _2766_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1878_),
-    .B(i_rst_n_bF$buf9),
-    .Y(_1408_)
+    .A(_1837_),
+    .B(i_rst_n_bF$buf5),
+    .Y(_1361_)
 );
 
-MUX2X1 _2854_ (
+MUX2X1 _2767_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [19]),
     .B(\u_rf_if.read_buf1 [20]),
-    .S(\u_rf_if.stream_active_bF$buf0 ),
-    .Y(_1879_)
+    .S(\u_rf_if.stream_active_bF$buf7 ),
+    .Y(_1838_)
 );
 
-NAND2X1 _2855_ (
+NAND2X1 _2768_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [18]),
-    .B(_1824__bF$buf5),
-    .Y(_1880_)
+    .B(_1783__bF$buf5),
+    .Y(_1839_)
 );
 
-OAI21X1 _2856_ (
+OAI21X1 _2769_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824__bF$buf4),
-    .B(_1879_),
-    .C(_1880_),
-    .Y(_1881_)
+    .A(_1783__bF$buf4),
+    .B(_1838_),
+    .C(_1839_),
+    .Y(_1840_)
 );
 
-AND2X2 _2857_ (
+AND2X2 _2770_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1881_),
-    .B(i_rst_n_bF$buf8),
-    .Y(_1407_)
+    .A(_1840_),
+    .B(i_rst_n_bF$buf4),
+    .Y(_1360_)
 );
 
-MUX2X1 _2858_ (
+MUX2X1 _2771_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [20]),
     .B(\u_rf_if.read_buf1 [21]),
-    .S(\u_rf_if.stream_active_bF$buf7 ),
-    .Y(_1882_)
+    .S(\u_rf_if.stream_active_bF$buf6 ),
+    .Y(_1841_)
 );
 
-NAND2X1 _2859_ (
+NAND2X1 _2772_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [19]),
-    .B(_1824__bF$buf3),
-    .Y(_1883_)
+    .B(_1783__bF$buf3),
+    .Y(_1842_)
 );
 
-OAI21X1 _2860_ (
+OAI21X1 _2773_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824__bF$buf2),
-    .B(_1882_),
-    .C(_1883_),
-    .Y(_1884_)
+    .A(_1783__bF$buf2),
+    .B(_1841_),
+    .C(_1842_),
+    .Y(_1843_)
 );
 
-AND2X2 _2861_ (
+AND2X2 _2774_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1884_),
-    .B(i_rst_n_bF$buf7),
-    .Y(_1406_)
+    .A(_1843_),
+    .B(i_rst_n_bF$buf3),
+    .Y(_1359_)
 );
 
-MUX2X1 _2862_ (
+MUX2X1 _2775_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [21]),
     .B(\u_rf_if.read_buf1 [22]),
-    .S(\u_rf_if.stream_active_bF$buf6 ),
-    .Y(_1885_)
+    .S(\u_rf_if.stream_active_bF$buf5 ),
+    .Y(_1844_)
 );
 
-NAND2X1 _2863_ (
+NAND2X1 _2776_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [20]),
-    .B(_1824__bF$buf1),
-    .Y(_1886_)
+    .B(_1783__bF$buf1),
+    .Y(_1845_)
 );
 
-OAI21X1 _2864_ (
+OAI21X1 _2777_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824__bF$buf0),
-    .B(_1885_),
-    .C(_1886_),
-    .Y(_1887_)
+    .A(_1783__bF$buf0),
+    .B(_1844_),
+    .C(_1845_),
+    .Y(_1846_)
 );
 
-AND2X2 _2865_ (
+AND2X2 _2778_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1887_),
-    .B(i_rst_n_bF$buf6),
-    .Y(_1405_)
+    .A(_1846_),
+    .B(i_rst_n_bF$buf2),
+    .Y(_1358_)
 );
 
-MUX2X1 _2866_ (
+MUX2X1 _2779_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [22]),
     .B(\u_rf_if.read_buf1 [23]),
-    .S(\u_rf_if.stream_active_bF$buf5 ),
-    .Y(_1888_)
+    .S(\u_rf_if.stream_active_bF$buf4 ),
+    .Y(_1847_)
 );
 
-NAND2X1 _2867_ (
+NAND2X1 _2780_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [21]),
-    .B(_1824__bF$buf6),
-    .Y(_1889_)
+    .B(_1783__bF$buf6),
+    .Y(_1848_)
 );
 
-OAI21X1 _2868_ (
+OAI21X1 _2781_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824__bF$buf5),
-    .B(_1888_),
-    .C(_1889_),
-    .Y(_1890_)
+    .A(_1783__bF$buf5),
+    .B(_1847_),
+    .C(_1848_),
+    .Y(_1849_)
 );
 
-AND2X2 _2869_ (
+AND2X2 _2782_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1890_),
-    .B(i_rst_n_bF$buf5),
-    .Y(_1404_)
+    .A(_1849_),
+    .B(i_rst_n_bF$buf1),
+    .Y(_1357_)
 );
 
-MUX2X1 _2870_ (
+MUX2X1 _2783_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [23]),
     .B(\u_rf_if.read_buf1 [24]),
-    .S(\u_rf_if.stream_active_bF$buf4 ),
-    .Y(_1891_)
+    .S(\u_rf_if.stream_active_bF$buf3 ),
+    .Y(_1850_)
 );
 
-NAND2X1 _2871_ (
+NAND2X1 _2784_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [22]),
-    .B(_1824__bF$buf4),
-    .Y(_1892_)
+    .B(_1783__bF$buf4),
+    .Y(_1851_)
 );
 
-OAI21X1 _2872_ (
+OAI21X1 _2785_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824__bF$buf3),
-    .B(_1891_),
-    .C(_1892_),
-    .Y(_1893_)
+    .A(_1783__bF$buf3),
+    .B(_1850_),
+    .C(_1851_),
+    .Y(_1852_)
 );
 
-AND2X2 _2873_ (
+AND2X2 _2786_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1893_),
-    .B(i_rst_n_bF$buf4),
-    .Y(_1403_)
+    .A(_1852_),
+    .B(i_rst_n_bF$buf0),
+    .Y(_1356_)
 );
 
-MUX2X1 _2874_ (
+MUX2X1 _2787_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [24]),
     .B(\u_rf_if.read_buf1 [25]),
-    .S(\u_rf_if.stream_active_bF$buf3 ),
-    .Y(_1894_)
+    .S(\u_rf_if.stream_active_bF$buf2 ),
+    .Y(_1853_)
 );
 
-NAND2X1 _2875_ (
+NAND2X1 _2788_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [23]),
-    .B(_1824__bF$buf2),
-    .Y(_1895_)
+    .B(_1783__bF$buf2),
+    .Y(_1859_)
 );
 
-OAI21X1 _2876_ (
+OAI21X1 _2789_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1824__bF$buf1),
-    .B(_1894_),
-    .C(_1895_),
-    .Y(_1896_)
+    .A(_1783__bF$buf1),
+    .B(_1853_),
+    .C(_1859_),
+    .Y(_1_)
 );
 
-AND2X2 _2877_ (
+AND2X2 _2790_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1896_),
-    .B(i_rst_n_bF$buf3),
-    .Y(_1402_)
+    .A(_1_),
+    .B(i_rst_n_bF$buf11),
+    .Y(_1355_)
 );
 
-MUX2X1 _2878_ (
+MUX2X1 _2791_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [25]),
     .B(\u_rf_if.read_buf1 [26]),
-    .S(\u_rf_if.stream_active_bF$buf2 ),
-    .Y(_1897_)
-);
-
-NAND2X1 _2879_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [24]),
-    .B(_1824__bF$buf0),
-    .Y(_1898_)
-);
-
-OAI21X1 _2880_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf6),
-    .B(_1897_),
-    .C(_1898_),
-    .Y(_1899_)
-);
-
-AND2X2 _2881_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1899_),
-    .B(i_rst_n_bF$buf2),
-    .Y(_1401_)
-);
-
-MUX2X1 _2882_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [26]),
-    .B(\u_rf_if.read_buf1 [27]),
     .S(\u_rf_if.stream_active_bF$buf1 ),
-    .Y(_1900_)
-);
-
-NAND2X1 _2883_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [25]),
-    .B(_1824__bF$buf5),
-    .Y(_1901_)
-);
-
-OAI21X1 _2884_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf4),
-    .B(_1900_),
-    .C(_1901_),
-    .Y(_1902_)
-);
-
-AND2X2 _2885_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1902_),
-    .B(i_rst_n_bF$buf1),
-    .Y(_1400_)
-);
-
-INVX1 _2886_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [28]),
-    .Y(_1903_)
-);
-
-NAND2X1 _2887_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [27]),
-    .B(\u_rf_if.stream_active_bF$buf0 ),
-    .Y(_1904_)
-);
-
-OAI21X1 _2888_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.stream_active_bF$buf7 ),
-    .B(_1903_),
-    .C(_1904_),
-    .Y(_1905_)
-);
-
-OAI21X1 _2889_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.stream_active_bF$buf6 ),
-    .B(_1774_),
-    .C(_1905_),
-    .Y(_1911_)
-);
-
-NAND2X1 _2890_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [26]),
-    .B(_1824__bF$buf3),
-    .Y(_1_)
-);
-
-AOI21X1 _2891_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1_),
-    .B(_1911_),
-    .C(_1126__bF$buf5),
-    .Y(_1399_)
-);
-
-INVX1 _2892_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [29]),
     .Y(_2_)
 );
 
-NAND2X1 _2893_ (
+NAND2X1 _2792_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [28]),
-    .B(\u_rf_if.stream_active_bF$buf5 ),
+    .A(\u_rf_if.read_buf1 [24]),
+    .B(_1783__bF$buf0),
     .Y(_3_)
 );
 
-OAI21X1 _2894_ (
+OAI21X1 _2793_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.stream_active_bF$buf4 ),
+    .A(_1783__bF$buf6),
     .B(_2_),
     .C(_3_),
     .Y(_4_)
 );
 
-OAI21X1 _2895_ (
+AND2X2 _2794_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.stream_active_bF$buf3 ),
-    .B(_1774_),
-    .C(_4_),
+    .A(_4_),
+    .B(i_rst_n_bF$buf10),
+    .Y(_1354_)
+);
+
+MUX2X1 _2795_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf1 [26]),
+    .B(\u_rf_if.read_buf1 [27]),
+    .S(\u_rf_if.stream_active_bF$buf0 ),
     .Y(_5_)
 );
 
-NAND2X1 _2896_ (
+NAND2X1 _2796_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [27]),
-    .B(_1824__bF$buf2),
+    .A(\u_rf_if.read_buf1 [25]),
+    .B(_1783__bF$buf5),
     .Y(_6_)
 );
 
-AOI21X1 _2897_ (
+OAI21X1 _2797_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_6_),
+    .A(_1783__bF$buf4),
     .B(_5_),
-    .C(_1126__bF$buf4),
-    .Y(_1398_)
-);
-
-OAI21X1 _2898_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_2_),
-    .B(_619_),
-    .C(_1795_),
+    .C(_6_),
     .Y(_7_)
 );
 
-OAI21X1 _2899_ (
+AND2X2 _2798_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(_7_),
-    .B(_1824__bF$buf1),
-    .C(i_rst_n_bF$buf0),
+    .B(i_rst_n_bF$buf9),
+    .Y(_1353_)
+);
+
+MUX2X1 _2799_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf1 [27]),
+    .B(\u_rf_if.read_buf1 [28]),
+    .S(\u_rf_if.stream_active_bF$buf7 ),
     .Y(_8_)
 );
 
-AOI21X1 _2900_ (
+NAND2X1 _2800_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1903_),
-    .B(_1824__bF$buf0),
-    .C(_8_),
-    .Y(_1397_)
+    .A(\u_rf_if.read_buf1 [26]),
+    .B(_1783__bF$buf3),
+    .Y(_9_)
 );
 
-MUX2X1 _2901_ (
+OAI21X1 _2801_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1783__bF$buf2),
+    .B(_8_),
+    .C(_9_),
+    .Y(_10_)
+);
+
+AND2X2 _2802_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_10_),
+    .B(i_rst_n_bF$buf8),
+    .Y(_1352_)
+);
+
+INVX1 _2803_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf1 [29]),
+    .Y(_11_)
+);
+
+NAND2X1 _2804_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf1 [28]),
+    .B(\u_rf_if.stream_active_bF$buf6 ),
+    .Y(_12_)
+);
+
+OAI21X1 _2805_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.stream_active_bF$buf5 ),
+    .B(_11_),
+    .C(_12_),
+    .Y(_13_)
+);
+
+OAI21X1 _2806_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.stream_active_bF$buf4 ),
+    .B(_1742_),
+    .C(_13_),
+    .Y(_14_)
+);
+
+NAND2X1 _2807_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf1 [27]),
+    .B(_1783__bF$buf1),
+    .Y(_15_)
+);
+
+AOI21X1 _2808_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_15_),
+    .B(_14_),
+    .C(_1070__bF$buf5),
+    .Y(_1351_)
+);
+
+NAND2X1 _2809_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf1 [28]),
+    .B(_1783__bF$buf0),
+    .Y(_16_)
+);
+
+OAI21X1 _2810_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_11_),
+    .B(_1560_),
+    .C(_1722_),
+    .Y(_17_)
+);
+
+OAI21X1 _2811_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.stream_active_bF$buf3 ),
+    .B(_1742_),
+    .C(_17_),
+    .Y(_18_)
+);
+
+AOI21X1 _2812_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_16_),
+    .B(_18_),
+    .C(_1070__bF$buf4),
+    .Y(_1350_)
+);
+
+MUX2X1 _2813_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf1 [30]),
     .B(\u_rf_if.read_buf1 [31]),
     .S(\u_rf_if.stream_active_bF$buf2 ),
-    .Y(_9_)
-);
-
-NAND2X1 _2902_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf1 [29]),
-    .B(_1824__bF$buf6),
-    .Y(_10_)
-);
-
-OAI21X1 _2903_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1824__bF$buf5),
-    .B(_9_),
-    .C(_10_),
-    .Y(_11_)
-);
-
-AND2X2 _2904_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_11_),
-    .B(i_rst_n_bF$buf10),
-    .Y(_1396_)
-);
-
-NOR2X1 _2905_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.stream_active_bF$buf1 ),
-    .B(_1800_),
-    .Y(_12_)
-);
-
-MUX2X1 _2906_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf0 [1]),
-    .B(\u_rf_if.read_buf0 [2]),
-    .S(\u_rf_if.stream_active_bF$buf0 ),
-    .Y(_13_)
-);
-
-NAND2X1 _2907_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf0 [0]),
-    .B(_12__bF$buf6),
-    .Y(_14_)
-);
-
-OAI21X1 _2908_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_12__bF$buf5),
-    .B(_13_),
-    .C(_14_),
-    .Y(_15_)
-);
-
-AND2X2 _2909_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_15_),
-    .B(i_rst_n_bF$buf9),
-    .Y(_1395_)
-);
-
-MUX2X1 _2910_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf0 [2]),
-    .B(\u_rf_if.read_buf0 [3]),
-    .S(\u_rf_if.stream_active_bF$buf7 ),
-    .Y(_16_)
-);
-
-NAND2X1 _2911_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf0 [1]),
-    .B(_12__bF$buf4),
-    .Y(_17_)
-);
-
-OAI21X1 _2912_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_12__bF$buf3),
-    .B(_16_),
-    .C(_17_),
-    .Y(_18_)
-);
-
-AND2X2 _2913_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_18_),
-    .B(i_rst_n_bF$buf8),
-    .Y(_1394_)
-);
-
-MUX2X1 _2914_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.read_buf0 [3]),
-    .B(\u_rf_if.read_buf0 [4]),
-    .S(\u_rf_if.stream_active_bF$buf6 ),
     .Y(_19_)
 );
 
-NAND2X1 _2915_ (
+NAND2X1 _2814_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.read_buf0 [2]),
-    .B(_12__bF$buf2),
+    .A(\u_rf_if.read_buf1 [29]),
+    .B(_1783__bF$buf6),
     .Y(_20_)
 );
 
-OAI21X1 _2916_ (
+OAI21X1 _2815_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf1),
+    .A(_1783__bF$buf5),
     .B(_19_),
     .C(_20_),
     .Y(_21_)
 );
 
-AND2X2 _2917_ (
+AND2X2 _2816_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(_21_),
     .B(i_rst_n_bF$buf7),
-    .Y(_1393_)
+    .Y(_1349_)
 );
 
-MUX2X1 _2918_ (
+NOR2X1 _2817_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.stream_active_bF$buf1 ),
+    .B(_1738_),
+    .Y(_22_)
+);
+
+MUX2X1 _2818_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf0 [1]),
+    .B(\u_rf_if.read_buf0 [2]),
+    .S(\u_rf_if.stream_active_bF$buf0 ),
+    .Y(_23_)
+);
+
+NAND2X1 _2819_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf0 [0]),
+    .B(_22__bF$buf6),
+    .Y(_24_)
+);
+
+OAI21X1 _2820_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_22__bF$buf5),
+    .B(_23_),
+    .C(_24_),
+    .Y(_25_)
+);
+
+AND2X2 _2821_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_25_),
+    .B(i_rst_n_bF$buf6),
+    .Y(_1348_)
+);
+
+MUX2X1 _2822_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf0 [2]),
+    .B(\u_rf_if.read_buf0 [3]),
+    .S(\u_rf_if.stream_active_bF$buf7 ),
+    .Y(_26_)
+);
+
+NAND2X1 _2823_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf0 [1]),
+    .B(_22__bF$buf4),
+    .Y(_27_)
+);
+
+OAI21X1 _2824_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_22__bF$buf3),
+    .B(_26_),
+    .C(_27_),
+    .Y(_28_)
+);
+
+AND2X2 _2825_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_28_),
+    .B(i_rst_n_bF$buf5),
+    .Y(_1347_)
+);
+
+MUX2X1 _2826_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf0 [3]),
+    .B(\u_rf_if.read_buf0 [4]),
+    .S(\u_rf_if.stream_active_bF$buf6 ),
+    .Y(_29_)
+);
+
+NAND2X1 _2827_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.read_buf0 [2]),
+    .B(_22__bF$buf2),
+    .Y(_30_)
+);
+
+OAI21X1 _2828_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_22__bF$buf1),
+    .B(_29_),
+    .C(_30_),
+    .Y(_31_)
+);
+
+AND2X2 _2829_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_31_),
+    .B(i_rst_n_bF$buf4),
+    .Y(_1346_)
+);
+
+MUX2X1 _2830_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [4]),
     .B(\u_rf_if.read_buf0 [5]),
     .S(\u_rf_if.stream_active_bF$buf5 ),
-    .Y(_22_)
+    .Y(_32_)
 );
 
-NAND2X1 _2919_ (
+NAND2X1 _2831_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [3]),
-    .B(_12__bF$buf0),
-    .Y(_23_)
+    .B(_22__bF$buf0),
+    .Y(_33_)
 );
 
-OAI21X1 _2920_ (
+OAI21X1 _2832_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf6),
-    .B(_22_),
-    .C(_23_),
-    .Y(_24_)
+    .A(_22__bF$buf6),
+    .B(_32_),
+    .C(_33_),
+    .Y(_34_)
 );
 
-AND2X2 _2921_ (
+AND2X2 _2833_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_24_),
-    .B(i_rst_n_bF$buf6),
-    .Y(_1392_)
+    .A(_34_),
+    .B(i_rst_n_bF$buf3),
+    .Y(_1345_)
 );
 
-MUX2X1 _2922_ (
+MUX2X1 _2834_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [5]),
     .B(\u_rf_if.read_buf0 [6]),
     .S(\u_rf_if.stream_active_bF$buf4 ),
-    .Y(_25_)
+    .Y(_35_)
 );
 
-NAND2X1 _2923_ (
+NAND2X1 _2835_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [4]),
-    .B(_12__bF$buf5),
-    .Y(_26_)
+    .B(_22__bF$buf5),
+    .Y(_36_)
 );
 
-OAI21X1 _2924_ (
+OAI21X1 _2836_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf4),
-    .B(_25_),
-    .C(_26_),
-    .Y(_27_)
+    .A(_22__bF$buf4),
+    .B(_35_),
+    .C(_36_),
+    .Y(_37_)
 );
 
-AND2X2 _2925_ (
+AND2X2 _2837_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_27_),
-    .B(i_rst_n_bF$buf5),
-    .Y(_1391_)
+    .A(_37_),
+    .B(i_rst_n_bF$buf2),
+    .Y(_1344_)
 );
 
-MUX2X1 _2926_ (
+MUX2X1 _2838_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [6]),
     .B(\u_rf_if.read_buf0 [7]),
     .S(\u_rf_if.stream_active_bF$buf3 ),
-    .Y(_28_)
+    .Y(_38_)
 );
 
-NAND2X1 _2927_ (
+NAND2X1 _2839_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [5]),
-    .B(_12__bF$buf3),
-    .Y(_29_)
+    .B(_22__bF$buf3),
+    .Y(_39_)
 );
 
-OAI21X1 _2928_ (
+OAI21X1 _2840_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf2),
-    .B(_28_),
-    .C(_29_),
-    .Y(_30_)
+    .A(_22__bF$buf2),
+    .B(_38_),
+    .C(_39_),
+    .Y(_40_)
 );
 
-AND2X2 _2929_ (
+AND2X2 _2841_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_30_),
-    .B(i_rst_n_bF$buf4),
-    .Y(_1390_)
+    .A(_40_),
+    .B(i_rst_n_bF$buf1),
+    .Y(_1343_)
 );
 
-MUX2X1 _2930_ (
+MUX2X1 _2842_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [7]),
     .B(\u_rf_if.read_buf0 [8]),
     .S(\u_rf_if.stream_active_bF$buf2 ),
-    .Y(_31_)
+    .Y(_41_)
 );
 
-NAND2X1 _2931_ (
+NAND2X1 _2843_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [6]),
-    .B(_12__bF$buf1),
-    .Y(_32_)
+    .B(_22__bF$buf1),
+    .Y(_42_)
 );
 
-OAI21X1 _2932_ (
+OAI21X1 _2844_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf0),
-    .B(_31_),
-    .C(_32_),
-    .Y(_33_)
+    .A(_22__bF$buf0),
+    .B(_41_),
+    .C(_42_),
+    .Y(_43_)
 );
 
-AND2X2 _2933_ (
+AND2X2 _2845_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_33_),
-    .B(i_rst_n_bF$buf3),
-    .Y(_1389_)
+    .A(_43_),
+    .B(i_rst_n_bF$buf0),
+    .Y(_1342_)
 );
 
-MUX2X1 _2934_ (
+MUX2X1 _2846_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [8]),
     .B(\u_rf_if.read_buf0 [9]),
     .S(\u_rf_if.stream_active_bF$buf1 ),
-    .Y(_34_)
+    .Y(_44_)
 );
 
-NAND2X1 _2935_ (
+NAND2X1 _2847_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [7]),
-    .B(_12__bF$buf6),
-    .Y(_35_)
+    .B(_22__bF$buf6),
+    .Y(_45_)
 );
 
-OAI21X1 _2936_ (
+OAI21X1 _2848_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf5),
-    .B(_34_),
-    .C(_35_),
-    .Y(_36_)
+    .A(_22__bF$buf5),
+    .B(_44_),
+    .C(_45_),
+    .Y(_46_)
 );
 
-AND2X2 _2937_ (
+AND2X2 _2849_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_36_),
-    .B(i_rst_n_bF$buf2),
-    .Y(_1388_)
+    .A(_46_),
+    .B(i_rst_n_bF$buf11),
+    .Y(_1341_)
 );
 
-MUX2X1 _2938_ (
+MUX2X1 _2850_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [9]),
     .B(\u_rf_if.read_buf0 [10]),
     .S(\u_rf_if.stream_active_bF$buf0 ),
-    .Y(_37_)
+    .Y(_47_)
 );
 
-NAND2X1 _2939_ (
+NAND2X1 _2851_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [8]),
-    .B(_12__bF$buf4),
-    .Y(_38_)
+    .B(_22__bF$buf4),
+    .Y(_48_)
 );
 
-OAI21X1 _2940_ (
+OAI21X1 _2852_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf3),
-    .B(_37_),
-    .C(_38_),
-    .Y(_39_)
+    .A(_22__bF$buf3),
+    .B(_47_),
+    .C(_48_),
+    .Y(_49_)
 );
 
-AND2X2 _2941_ (
+AND2X2 _2853_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_39_),
-    .B(i_rst_n_bF$buf1),
-    .Y(_1387_)
+    .A(_49_),
+    .B(i_rst_n_bF$buf10),
+    .Y(_1340_)
 );
 
-MUX2X1 _2942_ (
+MUX2X1 _2854_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [10]),
     .B(\u_rf_if.read_buf0 [11]),
     .S(\u_rf_if.stream_active_bF$buf7 ),
-    .Y(_40_)
+    .Y(_50_)
 );
 
-NAND2X1 _2943_ (
+NAND2X1 _2855_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [9]),
-    .B(_12__bF$buf2),
-    .Y(_41_)
+    .B(_22__bF$buf2),
+    .Y(_51_)
 );
 
-OAI21X1 _2944_ (
+OAI21X1 _2856_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf1),
-    .B(_40_),
-    .C(_41_),
-    .Y(_42_)
+    .A(_22__bF$buf1),
+    .B(_50_),
+    .C(_51_),
+    .Y(_52_)
 );
 
-AND2X2 _2945_ (
+AND2X2 _2857_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_42_),
-    .B(i_rst_n_bF$buf0),
-    .Y(_1386_)
+    .A(_52_),
+    .B(i_rst_n_bF$buf9),
+    .Y(_1339_)
 );
 
-MUX2X1 _2946_ (
+MUX2X1 _2858_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [11]),
     .B(\u_rf_if.read_buf0 [12]),
     .S(\u_rf_if.stream_active_bF$buf6 ),
-    .Y(_43_)
+    .Y(_53_)
 );
 
-NAND2X1 _2947_ (
+NAND2X1 _2859_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [10]),
-    .B(_12__bF$buf0),
-    .Y(_44_)
+    .B(_22__bF$buf0),
+    .Y(_54_)
 );
 
-OAI21X1 _2948_ (
+OAI21X1 _2860_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf6),
-    .B(_43_),
-    .C(_44_),
-    .Y(_45_)
+    .A(_22__bF$buf6),
+    .B(_53_),
+    .C(_54_),
+    .Y(_55_)
 );
 
-AND2X2 _2949_ (
+AND2X2 _2861_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_45_),
-    .B(i_rst_n_bF$buf10),
-    .Y(_1385_)
+    .A(_55_),
+    .B(i_rst_n_bF$buf8),
+    .Y(_1338_)
 );
 
-MUX2X1 _2950_ (
+MUX2X1 _2862_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [12]),
     .B(\u_rf_if.read_buf0 [13]),
     .S(\u_rf_if.stream_active_bF$buf5 ),
-    .Y(_46_)
+    .Y(_56_)
 );
 
-NAND2X1 _2951_ (
+NAND2X1 _2863_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [11]),
-    .B(_12__bF$buf5),
-    .Y(_47_)
+    .B(_22__bF$buf5),
+    .Y(_57_)
 );
 
-OAI21X1 _2952_ (
+OAI21X1 _2864_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf4),
-    .B(_46_),
-    .C(_47_),
-    .Y(_48_)
+    .A(_22__bF$buf4),
+    .B(_56_),
+    .C(_57_),
+    .Y(_58_)
 );
 
-AND2X2 _2953_ (
+AND2X2 _2865_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_48_),
-    .B(i_rst_n_bF$buf9),
-    .Y(_1384_)
+    .A(_58_),
+    .B(i_rst_n_bF$buf7),
+    .Y(_1337_)
 );
 
-MUX2X1 _2954_ (
+MUX2X1 _2866_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [13]),
     .B(\u_rf_if.read_buf0 [14]),
     .S(\u_rf_if.stream_active_bF$buf4 ),
-    .Y(_49_)
+    .Y(_59_)
 );
 
-NAND2X1 _2955_ (
+NAND2X1 _2867_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [12]),
-    .B(_12__bF$buf3),
-    .Y(_50_)
+    .B(_22__bF$buf3),
+    .Y(_60_)
 );
 
-OAI21X1 _2956_ (
+OAI21X1 _2868_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf2),
-    .B(_49_),
-    .C(_50_),
-    .Y(_51_)
+    .A(_22__bF$buf2),
+    .B(_59_),
+    .C(_60_),
+    .Y(_61_)
 );
 
-AND2X2 _2957_ (
+AND2X2 _2869_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_51_),
-    .B(i_rst_n_bF$buf8),
-    .Y(_1383_)
+    .A(_61_),
+    .B(i_rst_n_bF$buf6),
+    .Y(_1336_)
 );
 
-MUX2X1 _2958_ (
+MUX2X1 _2870_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [14]),
     .B(\u_rf_if.read_buf0 [15]),
     .S(\u_rf_if.stream_active_bF$buf3 ),
-    .Y(_52_)
+    .Y(_62_)
 );
 
-NAND2X1 _2959_ (
+NAND2X1 _2871_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [13]),
-    .B(_12__bF$buf1),
-    .Y(_53_)
+    .B(_22__bF$buf1),
+    .Y(_63_)
 );
 
-OAI21X1 _2960_ (
+OAI21X1 _2872_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf0),
-    .B(_52_),
-    .C(_53_),
-    .Y(_54_)
+    .A(_22__bF$buf0),
+    .B(_62_),
+    .C(_63_),
+    .Y(_64_)
 );
 
-AND2X2 _2961_ (
+AND2X2 _2873_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_54_),
-    .B(i_rst_n_bF$buf7),
-    .Y(_1382_)
+    .A(_64_),
+    .B(i_rst_n_bF$buf5),
+    .Y(_1335_)
 );
 
-MUX2X1 _2962_ (
+MUX2X1 _2874_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [15]),
     .B(\u_rf_if.read_buf0 [16]),
     .S(\u_rf_if.stream_active_bF$buf2 ),
-    .Y(_55_)
+    .Y(_65_)
 );
 
-NAND2X1 _2963_ (
+NAND2X1 _2875_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [14]),
-    .B(_12__bF$buf6),
-    .Y(_56_)
+    .B(_22__bF$buf6),
+    .Y(_66_)
 );
 
-OAI21X1 _2964_ (
+OAI21X1 _2876_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf5),
-    .B(_55_),
-    .C(_56_),
-    .Y(_57_)
+    .A(_22__bF$buf5),
+    .B(_65_),
+    .C(_66_),
+    .Y(_67_)
 );
 
-AND2X2 _2965_ (
+AND2X2 _2877_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_57_),
-    .B(i_rst_n_bF$buf6),
-    .Y(_1381_)
+    .A(_67_),
+    .B(i_rst_n_bF$buf4),
+    .Y(_1334_)
 );
 
-MUX2X1 _2966_ (
+MUX2X1 _2878_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [16]),
     .B(\u_rf_if.read_buf0 [17]),
     .S(\u_rf_if.stream_active_bF$buf1 ),
-    .Y(_58_)
+    .Y(_68_)
 );
 
-NAND2X1 _2967_ (
+NAND2X1 _2879_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [15]),
-    .B(_12__bF$buf4),
-    .Y(_59_)
+    .B(_22__bF$buf4),
+    .Y(_69_)
 );
 
-OAI21X1 _2968_ (
+OAI21X1 _2880_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf3),
-    .B(_58_),
-    .C(_59_),
-    .Y(_60_)
+    .A(_22__bF$buf3),
+    .B(_68_),
+    .C(_69_),
+    .Y(_70_)
 );
 
-AND2X2 _2969_ (
+AND2X2 _2881_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_60_),
-    .B(i_rst_n_bF$buf5),
-    .Y(_1380_)
+    .A(_70_),
+    .B(i_rst_n_bF$buf3),
+    .Y(_1333_)
 );
 
-MUX2X1 _2970_ (
+MUX2X1 _2882_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [17]),
     .B(\u_rf_if.read_buf0 [18]),
     .S(\u_rf_if.stream_active_bF$buf0 ),
-    .Y(_61_)
+    .Y(_71_)
 );
 
-NAND2X1 _2971_ (
+NAND2X1 _2883_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [16]),
-    .B(_12__bF$buf2),
-    .Y(_62_)
+    .B(_22__bF$buf2),
+    .Y(_72_)
 );
 
-OAI21X1 _2972_ (
+OAI21X1 _2884_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf1),
-    .B(_61_),
-    .C(_62_),
-    .Y(_63_)
+    .A(_22__bF$buf1),
+    .B(_71_),
+    .C(_72_),
+    .Y(_73_)
 );
 
-AND2X2 _2973_ (
+AND2X2 _2885_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_63_),
-    .B(i_rst_n_bF$buf4),
-    .Y(_1379_)
+    .A(_73_),
+    .B(i_rst_n_bF$buf2),
+    .Y(_1332_)
 );
 
-MUX2X1 _2974_ (
+MUX2X1 _2886_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [18]),
     .B(\u_rf_if.read_buf0 [19]),
     .S(\u_rf_if.stream_active_bF$buf7 ),
-    .Y(_64_)
+    .Y(_74_)
 );
 
-NAND2X1 _2975_ (
+NAND2X1 _2887_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [17]),
-    .B(_12__bF$buf0),
-    .Y(_65_)
+    .B(_22__bF$buf0),
+    .Y(_75_)
 );
 
-OAI21X1 _2976_ (
+OAI21X1 _2888_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf6),
-    .B(_64_),
-    .C(_65_),
-    .Y(_66_)
+    .A(_22__bF$buf6),
+    .B(_74_),
+    .C(_75_),
+    .Y(_76_)
 );
 
-AND2X2 _2977_ (
+AND2X2 _2889_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_66_),
-    .B(i_rst_n_bF$buf3),
-    .Y(_1378_)
+    .A(_76_),
+    .B(i_rst_n_bF$buf1),
+    .Y(_1331_)
 );
 
-MUX2X1 _2978_ (
+MUX2X1 _2890_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [19]),
     .B(\u_rf_if.read_buf0 [20]),
     .S(\u_rf_if.stream_active_bF$buf6 ),
-    .Y(_67_)
+    .Y(_77_)
 );
 
-NAND2X1 _2979_ (
+NAND2X1 _2891_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [18]),
-    .B(_12__bF$buf5),
-    .Y(_68_)
+    .B(_22__bF$buf5),
+    .Y(_78_)
 );
 
-OAI21X1 _2980_ (
+OAI21X1 _2892_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf4),
-    .B(_67_),
-    .C(_68_),
-    .Y(_69_)
+    .A(_22__bF$buf4),
+    .B(_77_),
+    .C(_78_),
+    .Y(_79_)
 );
 
-AND2X2 _2981_ (
+AND2X2 _2893_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_69_),
-    .B(i_rst_n_bF$buf2),
-    .Y(_1377_)
+    .A(_79_),
+    .B(i_rst_n_bF$buf0),
+    .Y(_1330_)
 );
 
-MUX2X1 _2982_ (
+MUX2X1 _2894_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [20]),
     .B(\u_rf_if.read_buf0 [21]),
     .S(\u_rf_if.stream_active_bF$buf5 ),
-    .Y(_70_)
+    .Y(_80_)
 );
 
-NAND2X1 _2983_ (
+NAND2X1 _2895_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [19]),
-    .B(_12__bF$buf3),
-    .Y(_71_)
+    .B(_22__bF$buf3),
+    .Y(_81_)
 );
 
-OAI21X1 _2984_ (
+OAI21X1 _2896_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf2),
-    .B(_70_),
-    .C(_71_),
-    .Y(_72_)
+    .A(_22__bF$buf2),
+    .B(_80_),
+    .C(_81_),
+    .Y(_82_)
 );
 
-AND2X2 _2985_ (
+AND2X2 _2897_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_72_),
-    .B(i_rst_n_bF$buf1),
-    .Y(_1376_)
+    .A(_82_),
+    .B(i_rst_n_bF$buf11),
+    .Y(_1329_)
 );
 
-MUX2X1 _2986_ (
+MUX2X1 _2898_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [21]),
     .B(\u_rf_if.read_buf0 [22]),
     .S(\u_rf_if.stream_active_bF$buf4 ),
-    .Y(_73_)
+    .Y(_83_)
 );
 
-NAND2X1 _2987_ (
+NAND2X1 _2899_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [20]),
-    .B(_12__bF$buf1),
-    .Y(_74_)
+    .B(_22__bF$buf1),
+    .Y(_84_)
 );
 
-OAI21X1 _2988_ (
+OAI21X1 _2900_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf0),
-    .B(_73_),
-    .C(_74_),
-    .Y(_75_)
+    .A(_22__bF$buf0),
+    .B(_83_),
+    .C(_84_),
+    .Y(_85_)
 );
 
-AND2X2 _2989_ (
+AND2X2 _2901_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_75_),
-    .B(i_rst_n_bF$buf0),
-    .Y(_1375_)
+    .A(_85_),
+    .B(i_rst_n_bF$buf10),
+    .Y(_1328_)
 );
 
-MUX2X1 _2990_ (
+MUX2X1 _2902_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [22]),
     .B(\u_rf_if.read_buf0 [23]),
     .S(\u_rf_if.stream_active_bF$buf3 ),
-    .Y(_76_)
+    .Y(_86_)
 );
 
-NAND2X1 _2991_ (
+NAND2X1 _2903_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [21]),
-    .B(_12__bF$buf6),
-    .Y(_77_)
+    .B(_22__bF$buf6),
+    .Y(_87_)
 );
 
-OAI21X1 _2992_ (
+OAI21X1 _2904_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf5),
-    .B(_76_),
-    .C(_77_),
-    .Y(_78_)
+    .A(_22__bF$buf5),
+    .B(_86_),
+    .C(_87_),
+    .Y(_88_)
 );
 
-AND2X2 _2993_ (
+AND2X2 _2905_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_78_),
-    .B(i_rst_n_bF$buf10),
-    .Y(_1374_)
+    .A(_88_),
+    .B(i_rst_n_bF$buf9),
+    .Y(_1327_)
 );
 
-MUX2X1 _2994_ (
+MUX2X1 _2906_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [23]),
     .B(\u_rf_if.read_buf0 [24]),
     .S(\u_rf_if.stream_active_bF$buf2 ),
-    .Y(_79_)
+    .Y(_89_)
 );
 
-NAND2X1 _2995_ (
+NAND2X1 _2907_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [22]),
-    .B(_12__bF$buf4),
-    .Y(_80_)
+    .B(_22__bF$buf4),
+    .Y(_90_)
 );
 
-OAI21X1 _2996_ (
+OAI21X1 _2908_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf3),
-    .B(_79_),
-    .C(_80_),
-    .Y(_81_)
+    .A(_22__bF$buf3),
+    .B(_89_),
+    .C(_90_),
+    .Y(_91_)
 );
 
-AND2X2 _2997_ (
+AND2X2 _2909_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_81_),
-    .B(i_rst_n_bF$buf9),
-    .Y(_1373_)
+    .A(_91_),
+    .B(i_rst_n_bF$buf8),
+    .Y(_1326_)
 );
 
-MUX2X1 _2998_ (
+MUX2X1 _2910_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [24]),
     .B(\u_rf_if.read_buf0 [25]),
     .S(\u_rf_if.stream_active_bF$buf1 ),
-    .Y(_82_)
+    .Y(_92_)
 );
 
-NAND2X1 _2999_ (
+NAND2X1 _2911_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [23]),
-    .B(_12__bF$buf2),
-    .Y(_83_)
+    .B(_22__bF$buf2),
+    .Y(_93_)
 );
 
-OAI21X1 _3000_ (
+OAI21X1 _2912_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf1),
-    .B(_82_),
-    .C(_83_),
-    .Y(_84_)
+    .A(_22__bF$buf1),
+    .B(_92_),
+    .C(_93_),
+    .Y(_94_)
 );
 
-AND2X2 _3001_ (
+AND2X2 _2913_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_84_),
-    .B(i_rst_n_bF$buf8),
-    .Y(_1372_)
+    .A(_94_),
+    .B(i_rst_n_bF$buf7),
+    .Y(_1325_)
 );
 
-MUX2X1 _3002_ (
+MUX2X1 _2914_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [25]),
     .B(\u_rf_if.read_buf0 [26]),
     .S(\u_rf_if.stream_active_bF$buf0 ),
-    .Y(_85_)
+    .Y(_95_)
 );
 
-NAND2X1 _3003_ (
+NAND2X1 _2915_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [24]),
-    .B(_12__bF$buf0),
-    .Y(_86_)
+    .B(_22__bF$buf0),
+    .Y(_96_)
 );
 
-OAI21X1 _3004_ (
+OAI21X1 _2916_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf6),
-    .B(_85_),
-    .C(_86_),
-    .Y(_87_)
+    .A(_22__bF$buf6),
+    .B(_95_),
+    .C(_96_),
+    .Y(_97_)
 );
 
-AND2X2 _3005_ (
+AND2X2 _2917_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_87_),
-    .B(i_rst_n_bF$buf7),
-    .Y(_1371_)
+    .A(_97_),
+    .B(i_rst_n_bF$buf6),
+    .Y(_1324_)
 );
 
-MUX2X1 _3006_ (
+MUX2X1 _2918_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [26]),
     .B(\u_rf_if.read_buf0 [27]),
     .S(\u_rf_if.stream_active_bF$buf7 ),
-    .Y(_88_)
+    .Y(_98_)
 );
 
-NAND2X1 _3007_ (
+NAND2X1 _2919_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [25]),
-    .B(_12__bF$buf5),
-    .Y(_89_)
+    .B(_22__bF$buf5),
+    .Y(_99_)
 );
 
-OAI21X1 _3008_ (
+OAI21X1 _2920_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf4),
-    .B(_88_),
-    .C(_89_),
-    .Y(_90_)
+    .A(_22__bF$buf4),
+    .B(_98_),
+    .C(_99_),
+    .Y(_100_)
 );
 
-AND2X2 _3009_ (
+AND2X2 _2921_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_90_),
-    .B(i_rst_n_bF$buf6),
-    .Y(_1370_)
+    .A(_100_),
+    .B(i_rst_n_bF$buf5),
+    .Y(_1323_)
 );
 
-INVX1 _3010_ (
+INVX1 _2922_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [28]),
-    .Y(_91_)
+    .Y(_101_)
 );
 
-NAND2X1 _3011_ (
+NAND2X1 _2923_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [27]),
     .B(\u_rf_if.stream_active_bF$buf6 ),
-    .Y(_92_)
+    .Y(_102_)
 );
 
-OAI21X1 _3012_ (
+OAI21X1 _2924_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.stream_active_bF$buf5 ),
-    .B(_91_),
-    .C(_92_),
-    .Y(_93_)
+    .B(_101_),
+    .C(_102_),
+    .Y(_103_)
 );
 
-OAI21X1 _3013_ (
+OAI21X1 _2925_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.stream_active_bF$buf4 ),
-    .B(_1800_),
-    .C(_93_),
-    .Y(_94_)
+    .B(_1738_),
+    .C(_103_),
+    .Y(_104_)
 );
 
-NAND2X1 _3014_ (
+NAND2X1 _2926_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [26]),
-    .B(_12__bF$buf3),
-    .Y(_95_)
+    .B(_22__bF$buf3),
+    .Y(_105_)
 );
 
-AOI21X1 _3015_ (
+AOI21X1 _2927_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_95_),
-    .B(_94_),
-    .C(_1126__bF$buf3),
-    .Y(_1369_)
+    .A(_105_),
+    .B(_104_),
+    .C(_1070__bF$buf3),
+    .Y(_1322_)
 );
 
-INVX1 _3016_ (
+INVX1 _2928_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [29]),
-    .Y(_96_)
+    .Y(_106_)
 );
 
-NAND2X1 _3017_ (
+NAND2X1 _2929_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [28]),
     .B(\u_rf_if.stream_active_bF$buf3 ),
-    .Y(_97_)
+    .Y(_107_)
 );
 
-OAI21X1 _3018_ (
+OAI21X1 _2930_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.stream_active_bF$buf2 ),
-    .B(_96_),
-    .C(_97_),
-    .Y(_98_)
+    .B(_106_),
+    .C(_107_),
+    .Y(_108_)
 );
 
-OAI21X1 _3019_ (
+OAI21X1 _2931_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.stream_active_bF$buf1 ),
-    .B(_1800_),
-    .C(_98_),
-    .Y(_99_)
+    .B(_1738_),
+    .C(_108_),
+    .Y(_109_)
 );
 
-NAND2X1 _3020_ (
+NAND2X1 _2932_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [27]),
-    .B(_12__bF$buf2),
-    .Y(_100_)
+    .B(_22__bF$buf2),
+    .Y(_110_)
 );
 
-AOI21X1 _3021_ (
+AOI21X1 _2933_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_100_),
-    .B(_99_),
-    .C(_1126__bF$buf2),
-    .Y(_1368_)
+    .A(_110_),
+    .B(_109_),
+    .C(_1070__bF$buf2),
+    .Y(_1321_)
 );
 
-OAI21X1 _3022_ (
+OAI21X1 _2934_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_96_),
-    .B(_619_),
-    .C(_1803_),
-    .Y(_101_)
+    .A(_106_),
+    .B(_1560_),
+    .C(_1727_),
+    .Y(_111_)
 );
 
-OAI21X1 _3023_ (
+OAI21X1 _2935_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_111_),
+    .B(_22__bF$buf1),
+    .C(i_rst_n_bF$buf4),
+    .Y(_112_)
+);
+
+AOI21X1 _2936_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(_101_),
-    .B(_12__bF$buf1),
-    .C(i_rst_n_bF$buf5),
-    .Y(_102_)
+    .B(_22__bF$buf0),
+    .C(_112_),
+    .Y(_1320_)
 );
 
-AOI21X1 _3024_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_91_),
-    .B(_12__bF$buf0),
-    .C(_102_),
-    .Y(_1367_)
-);
-
-MUX2X1 _3025_ (
+MUX2X1 _2937_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [30]),
     .B(\u_rf_if.read_buf0 [31]),
     .S(\u_rf_if.stream_active_bF$buf0 ),
-    .Y(_103_)
+    .Y(_113_)
 );
 
-NAND2X1 _3026_ (
+NAND2X1 _2938_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.read_buf0 [29]),
-    .B(_12__bF$buf6),
-    .Y(_104_)
+    .B(_22__bF$buf6),
+    .Y(_114_)
 );
 
-OAI21X1 _3027_ (
+OAI21X1 _2939_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_12__bF$buf5),
-    .B(_103_),
-    .C(_104_),
-    .Y(_105_)
+    .A(_22__bF$buf5),
+    .B(_113_),
+    .C(_114_),
+    .Y(_115_)
 );
 
-AND2X2 _3028_ (
+AND2X2 _2940_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_105_),
-    .B(i_rst_n_bF$buf4),
-    .Y(_1366_)
+    .A(_115_),
+    .B(i_rst_n_bF$buf3),
+    .Y(_1319_)
 );
 
-OAI21X1 _3029_ (
+OAI21X1 _2941_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1732_),
+    .B(_1733_),
+    .C(_1699_),
+    .Y(_116_)
+);
+
+AOI21X1 _2942_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1732_),
+    .B(_1733_),
+    .C(_116_),
+    .Y(_1318_)
+);
+
+AOI21X1 _2943_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1734_),
+    .B(\u_rf_if.o_waddr [1]),
+    .C(_1698_),
+    .Y(_117_)
+);
+
+OAI21X1 _2944_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.o_waddr [1]),
+    .B(_1734_),
+    .C(_117_),
+    .Y(_118_)
+);
+
+INVX1 _2945_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_118_),
+    .Y(_1317_)
+);
+
+OAI21X1 _2946_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1731_),
+    .B(_1735_),
+    .C(_1699_),
+    .Y(_119_)
+);
+
+AOI21X1 _2947_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1731_),
+    .B(_1735_),
+    .C(_119_),
+    .Y(_1316_)
+);
+
+OAI21X1 _2948_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.issue_idx [5]),
-    .B(_1683_),
+    .B(_1679_),
     .C(raddr[0]),
-    .Y(_106_)
+    .Y(_120_)
 );
 
-NAND2X1 _3030_ (
+NAND2X1 _2949_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.issue_chunk [0]),
-    .B(_1704__bF$buf3),
-    .Y(_107_)
+    .B(_1680_),
+    .Y(_121_)
 );
 
-AOI21X1 _3031_ (
+AOI21X1 _2950_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_107_),
-    .B(_106_),
-    .C(_1126__bF$buf1),
-    .Y(_1365_)
+    .A(_121_),
+    .B(_120_),
+    .C(_1070__bF$buf1),
+    .Y(_1315_)
 );
 
-OAI21X1 _3032_ (
+INVX1 _2951_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.issue_chunk [1]),
+    .Y(_122_)
+);
+
+OAI21X1 _2952_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(raddr[1]),
-    .B(_1704__bF$buf2),
-    .C(i_rst_n_bF$buf3),
-    .Y(_108_)
+    .B(_1680_),
+    .C(i_rst_n_bF$buf2),
+    .Y(_123_)
 );
 
-AOI21X1 _3033_ (
+AOI21X1 _2953_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1698_),
-    .B(_1704__bF$buf1),
-    .C(_108_),
-    .Y(_1364_)
+    .A(_122_),
+    .B(_1680_),
+    .C(_123_),
+    .Y(_1314_)
 );
 
-OAI21X1 _3034_ (
+OAI21X1 _2954_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.issue_idx [5]),
-    .B(_1683_),
+    .B(_1679_),
     .C(raddr[2]),
-    .Y(_109_)
+    .Y(_124_)
 );
 
-NAND2X1 _3035_ (
+NAND2X1 _2955_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.issue_chunk [2]),
-    .B(_1704__bF$buf0),
-    .Y(_110_)
+    .B(_1680_),
+    .Y(_125_)
 );
 
-AOI21X1 _3036_ (
+AOI21X1 _2956_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_110_),
-    .B(_109_),
-    .C(_1126__bF$buf0),
-    .Y(_1363_)
+    .A(_125_),
+    .B(_124_),
+    .C(_1070__bF$buf0),
+    .Y(_1313_)
 );
 
-OAI21X1 _3037_ (
+OAI21X1 _2957_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.issue_idx [5]),
-    .B(_1683_),
+    .B(_1679_),
     .C(raddr[3]),
-    .Y(_111_)
+    .Y(_126_)
 );
 
-AOI21X1 _3038_ (
+AOI21X1 _2958_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1705_),
-    .B(_111_),
-    .C(_1126__bF$buf7),
-    .Y(_1362_)
+    .A(_1681_),
+    .B(_126_),
+    .C(_1070__bF$buf6),
+    .Y(_1312_)
 );
 
-MUX2X1 _3039_ (
+MUX2X1 _2959_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.rreg1_latched [0]),
     .B(\u_rf_if.rreg0_latched [0]),
     .S(\u_rf_if.issue_sel ),
-    .Y(_112_)
+    .Y(_127_)
 );
 
-OAI21X1 _3040_ (
+OAI21X1 _2960_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(raddr[4]),
-    .B(_1704__bF$buf3),
-    .C(i_rst_n_bF$buf2),
-    .Y(_113_)
+    .B(_1680_),
+    .C(i_rst_n_bF$buf1),
+    .Y(_128_)
 );
 
-AOI21X1 _3041_ (
+AOI21X1 _2961_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1704__bF$buf2),
-    .B(_112_),
-    .C(_113_),
-    .Y(_1361_)
+    .A(_1680_),
+    .B(_127_),
+    .C(_128_),
+    .Y(_1311_)
 );
 
-MUX2X1 _3042_ (
+NAND2X1 _2962_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(i_rst_n_bF$buf0),
+    .B(raddr[5]),
+    .Y(_129_)
+);
+
+INVX1 _2963_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.rreg1_latched [1]),
-    .B(\u_rf_if.rreg0_latched [1]),
-    .S(\u_rf_if.issue_sel ),
-    .Y(_114_)
+    .Y(_130_)
 );
 
-OAI21X1 _3043_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(raddr[5]),
-    .B(_1704__bF$buf1),
-    .C(i_rst_n_bF$buf1),
-    .Y(_115_)
-);
-
-AOI21X1 _3044_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1704__bF$buf0),
-    .B(_114_),
-    .C(_115_),
-    .Y(_1360_)
-);
-
-INVX1 _3045_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_rf_if.rreg1_latched [2]),
-    .Y(_116_)
-);
-
-NOR2X1 _3046_ (
+NOR2X1 _2964_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.issue_sel ),
+    .B(\u_rf_if.rreg0_latched [1]),
+    .Y(_131_)
+);
+
+AOI21X1 _2965_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.issue_sel ),
+    .B(_130_),
+    .C(_131_),
+    .Y(_132_)
+);
+
+OAI21X1 _2966_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1685_),
+    .B(_1686_),
+    .C(_132_),
+    .Y(_133_)
+);
+
+OAI22X1 _2967_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1680_),
+    .B(_129_),
+    .C(_1690_),
+    .D(_133_),
+    .Y(_1310_)
+);
+
+MUX2X1 _2968_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.rreg1_latched [2]),
     .B(\u_rf_if.rreg0_latched [2]),
-    .Y(_117_)
+    .S(\u_rf_if.issue_sel ),
+    .Y(_134_)
 );
 
-AOI21X1 _3047_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_116_),
-    .B(\u_rf_if.issue_sel ),
-    .C(_117_),
-    .Y(_118_)
-);
-
-NAND2X1 _3048_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_118_),
-    .B(_1690_),
-    .Y(_119_)
-);
-
-OAI21X1 _3049_ (
+OAI21X1 _2969_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(raddr[6]),
-    .B(_1704__bF$buf3),
-    .C(i_rst_n_bF$buf0),
-    .Y(_120_)
+    .B(_1680_),
+    .C(i_rst_n_bF$buf11),
+    .Y(_135_)
 );
 
-AOI21X1 _3050_ (
+AOI21X1 _2970_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_119_),
-    .B(_1704__bF$buf2),
-    .C(_120_),
-    .Y(_1359_)
+    .A(_1680_),
+    .B(_134_),
+    .C(_135_),
+    .Y(_1309_)
 );
 
-MUX2X1 _3051_ (
+MUX2X1 _2971_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.rreg1_latched [3]),
     .B(\u_rf_if.rreg0_latched [3]),
     .S(\u_rf_if.issue_sel ),
-    .Y(_121_)
+    .Y(_136_)
 );
 
-OAI21X1 _3052_ (
+OAI21X1 _2972_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(raddr[7]),
-    .B(_1704__bF$buf1),
+    .B(_1680_),
     .C(i_rst_n_bF$buf10),
-    .Y(_122_)
+    .Y(_137_)
+);
+
+AOI21X1 _2973_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1680_),
+    .B(_136_),
+    .C(_137_),
+    .Y(_1308_)
+);
+
+OAI21X1 _2974_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_673__bF$buf3),
+    .B(_674__bF$buf0),
+    .C(\u_rf_if.rreg1_latched [0]),
+    .Y(_138_)
+);
+
+INVX1 _2975_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ibus_pending_rdt[20]),
+    .Y(_139_)
+);
+
+MUX2X1 _2976_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_139_),
+    .B(_875_),
+    .S(ibus_pending_ack_bF$buf2),
+    .Y(_140_)
+);
+
+NAND2X1 _2977_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_140_),
+    .B(_1692__bF$buf1),
+    .Y(_141_)
+);
+
+AOI21X1 _2978_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_141_),
+    .B(_138_),
+    .C(_1070__bF$buf5),
+    .Y(_1307_)
+);
+
+OAI21X1 _2979_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_673__bF$buf2),
+    .B(_674__bF$buf3),
+    .C(\u_rf_if.rreg1_latched [1]),
+    .Y(_142_)
+);
+
+INVX1 _2980_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ibus_pending_rdt[21]),
+    .Y(_143_)
+);
+
+MUX2X1 _2981_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_143_),
+    .B(_868_),
+    .S(ibus_pending_ack_bF$buf1),
+    .Y(_144_)
+);
+
+NAND2X1 _2982_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_144_),
+    .B(_1692__bF$buf0),
+    .Y(_145_)
+);
+
+AOI21X1 _2983_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_145_),
+    .B(_142_),
+    .C(_1070__bF$buf4),
+    .Y(_1306_)
+);
+
+OAI21X1 _2984_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_673__bF$buf1),
+    .B(_674__bF$buf2),
+    .C(\u_rf_if.rreg1_latched [2]),
+    .Y(_146_)
+);
+
+INVX1 _2985_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ibus_pending_rdt[22]),
+    .Y(_147_)
+);
+
+MUX2X1 _2986_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_147_),
+    .B(_861_),
+    .S(ibus_pending_ack_bF$buf0),
+    .Y(_148_)
+);
+
+NAND2X1 _2987_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_148_),
+    .B(_1692__bF$buf4),
+    .Y(_149_)
+);
+
+AOI21X1 _2988_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_149_),
+    .B(_146_),
+    .C(_1070__bF$buf3),
+    .Y(_1305_)
+);
+
+OAI21X1 _2989_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_673__bF$buf0),
+    .B(_674__bF$buf1),
+    .C(\u_rf_if.rreg1_latched [3]),
+    .Y(_150_)
+);
+
+INVX1 _2990_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ibus_pending_rdt[23]),
+    .Y(_151_)
+);
+
+MUX2X1 _2991_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_151_),
+    .B(_854_),
+    .S(ibus_pending_ack_bF$buf5),
+    .Y(_152_)
+);
+
+NAND2X1 _2992_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_152_),
+    .B(_1692__bF$buf3),
+    .Y(_153_)
+);
+
+AOI21X1 _2993_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_153_),
+    .B(_150_),
+    .C(_1070__bF$buf2),
+    .Y(_1304_)
+);
+
+OAI21X1 _2994_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_673__bF$buf3),
+    .B(_674__bF$buf0),
+    .C(\u_rf_if.rreg0_latched [0]),
+    .Y(_154_)
+);
+
+INVX1 _2995_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ibus_pending_rdt[15]),
+    .Y(_155_)
+);
+
+MUX2X1 _2996_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_155_),
+    .B(_910_),
+    .S(ibus_pending_ack_bF$buf4),
+    .Y(_156_)
+);
+
+NAND2X1 _2997_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_156_),
+    .B(_1692__bF$buf2),
+    .Y(_157_)
+);
+
+AOI21X1 _2998_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_157_),
+    .B(_154_),
+    .C(_1070__bF$buf1),
+    .Y(_1303_)
+);
+
+OAI21X1 _2999_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_673__bF$buf2),
+    .B(_674__bF$buf3),
+    .C(\u_rf_if.rreg0_latched [1]),
+    .Y(_158_)
+);
+
+INVX1 _3000_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ibus_pending_rdt[16]),
+    .Y(_159_)
+);
+
+MUX2X1 _3001_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_159_),
+    .B(_903_),
+    .S(ibus_pending_ack_bF$buf3),
+    .Y(_160_)
+);
+
+NAND2X1 _3002_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_160_),
+    .B(_1692__bF$buf1),
+    .Y(_161_)
+);
+
+AOI21X1 _3003_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_161_),
+    .B(_158_),
+    .C(_1070__bF$buf0),
+    .Y(_1302_)
+);
+
+OAI21X1 _3004_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_673__bF$buf1),
+    .B(_674__bF$buf2),
+    .C(\u_rf_if.rreg0_latched [2]),
+    .Y(_162_)
+);
+
+INVX1 _3005_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ibus_pending_rdt[17]),
+    .Y(_163_)
+);
+
+MUX2X1 _3006_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_163_),
+    .B(_896_),
+    .S(ibus_pending_ack_bF$buf2),
+    .Y(_164_)
+);
+
+NAND2X1 _3007_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_164_),
+    .B(_1692__bF$buf0),
+    .Y(_165_)
+);
+
+AOI21X1 _3008_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_165_),
+    .B(_162_),
+    .C(_1070__bF$buf6),
+    .Y(_1301_)
+);
+
+OAI21X1 _3009_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_673__bF$buf0),
+    .B(_674__bF$buf1),
+    .C(\u_rf_if.rreg0_latched [3]),
+    .Y(_166_)
+);
+
+INVX1 _3010_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ibus_pending_rdt[18]),
+    .Y(_167_)
+);
+
+MUX2X1 _3011_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_167_),
+    .B(_889_),
+    .S(ibus_pending_ack_bF$buf1),
+    .Y(_168_)
+);
+
+NAND2X1 _3012_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_168_),
+    .B(_1692__bF$buf4),
+    .Y(_169_)
+);
+
+AOI21X1 _3013_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_169_),
+    .B(_166_),
+    .C(_1070__bF$buf5),
+    .Y(_1300_)
+);
+
+NAND2X1 _3014_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.issue_sel ),
+    .B(_1680_),
+    .Y(_170_)
+);
+
+OAI21X1 _3015_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.issue_idx [5]),
+    .B(_1679_),
+    .C(_1708_),
+    .Y(_171_)
+);
+
+NAND2X1 _3016_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_171_),
+    .B(_170_),
+    .Y(_172_)
+);
+
+NOR2X1 _3017_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1687_),
+    .B(_172_),
+    .Y(_1299_)
+);
+
+INVX1 _3018_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_170_),
+    .Y(_173_)
+);
+
+INVX1 _3019_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1687_),
+    .Y(_174_)
+);
+
+OAI21X1 _3020_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.issue_chunk [0]),
+    .B(_173_),
+    .C(_174_),
+    .Y(_175_)
+);
+
+AOI21X1 _3021_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.issue_chunk [0]),
+    .B(_173_),
+    .C(_175_),
+    .Y(_1298_)
+);
+
+INVX1 _3022_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.issue_chunk [0]),
+    .Y(_176_)
+);
+
+OAI21X1 _3023_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_176_),
+    .B(_170_),
+    .C(_122_),
+    .Y(_177_)
+);
+
+NOR2X1 _3024_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1676_),
+    .B(_170_),
+    .Y(_178_)
+);
+
+NOR2X1 _3025_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1687_),
+    .B(_178_),
+    .Y(_179_)
+);
+
+NAND2X1 _3026_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_177_),
+    .B(_179_),
+    .Y(_180_)
+);
+
+INVX1 _3027_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_180_),
+    .Y(_1297_)
+);
+
+AND2X2 _3028_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_178_),
+    .B(\u_rf_if.issue_chunk [2]),
+    .Y(_181_)
+);
+
+OAI21X1 _3029_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.issue_chunk [2]),
+    .B(_178_),
+    .C(_174_),
+    .Y(_182_)
+);
+
+NOR2X1 _3030_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_182_),
+    .B(_181_),
+    .Y(_1296_)
+);
+
+OAI21X1 _3031_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.issue_chunk [3]),
+    .B(_181_),
+    .C(_174_),
+    .Y(_183_)
+);
+
+AOI21X1 _3032_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1678_),
+    .B(_1682_),
+    .C(_183_),
+    .Y(_1295_)
+);
+
+NAND3X1 _3033_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_736_),
+    .B(_1470_),
+    .C(_1666_),
+    .Y(_184_)
+);
+
+NAND2X1 _3034_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [0]),
+    .B(_1488_),
+    .Y(_185_)
+);
+
+AOI21X1 _3035_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_184_),
+    .B(_185_),
+    .C(_1070__bF$buf4),
+    .Y(_1294_)
+);
+
+INVX1 _3036_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1086_),
+    .Y(_186_)
+);
+
+NAND3X1 _3037_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_736_),
+    .B(_186_),
+    .C(_1666_),
+    .Y(_187_)
+);
+
+NAND2X1 _3038_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [1]),
+    .B(_1488_),
+    .Y(_188_)
+);
+
+AOI21X1 _3039_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_187_),
+    .B(_188_),
+    .C(_1070__bF$buf3),
+    .Y(_1293_)
+);
+
+NAND3X1 _3040_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_736_),
+    .B(_1640_),
+    .C(_1666_),
+    .Y(_189_)
+);
+
+NAND2X1 _3041_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [2]),
+    .B(_1488_),
+    .Y(_190_)
+);
+
+AOI21X1 _3042_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_189_),
+    .B(_190_),
+    .C(_1070__bF$buf2),
+    .Y(_1292_)
+);
+
+INVX1 _3043_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1076_),
+    .Y(_191_)
+);
+
+NAND3X1 _3044_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_736_),
+    .B(_191_),
+    .C(_1666_),
+    .Y(_192_)
+);
+
+NAND2X1 _3045_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [3]),
+    .B(_1488_),
+    .Y(_193_)
+);
+
+AOI21X1 _3046_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_192_),
+    .B(_193_),
+    .C(_1070__bF$buf1),
+    .Y(_1291_)
+);
+
+NAND2X1 _3047_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [4]),
+    .B(_1488_),
+    .Y(_194_)
+);
+
+NAND3X1 _3048_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_736_),
+    .B(_1638_),
+    .C(_1666_),
+    .Y(_195_)
+);
+
+AOI21X1 _3049_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_195_),
+    .B(_194_),
+    .C(_1070__bF$buf0),
+    .Y(_1290_)
+);
+
+NAND2X1 _3050_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_rf_if.last_req_key [5]),
+    .B(_1488_),
+    .Y(_196_)
+);
+
+INVX1 _3051_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1639_),
+    .Y(_197_)
+);
+
+NAND3X1 _3052_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_736_),
+    .B(_197_),
+    .C(_1666_),
+    .Y(_198_)
 );
 
 AOI21X1 _3053_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1704__bF$buf0),
-    .B(_121_),
-    .C(_122_),
-    .Y(_1358_)
+    .A(_198_),
+    .B(_196_),
+    .C(_1070__bF$buf6),
+    .Y(_1289_)
 );
 
-NOR2X1 _3054_ (
+NAND2X1 _3054_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf6),
-    .B(_1558_),
-    .Y(_1357_)
+    .A(\u_rf_if.last_req_key [6]),
+    .B(_1488_),
+    .Y(_199_)
 );
 
-INVX1 _3055_ (
+NAND3X1 _3055_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.write_wait [0]),
-    .Y(_123_)
+    .A(_736_),
+    .B(_1715_),
+    .C(_1666_),
+    .Y(_200_)
 );
 
-OAI21X1 _3056_ (
+AOI21X1 _3056_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.write_wait [5]),
-    .B(_1688_),
-    .C(_123_),
-    .Y(_124_)
+    .A(_200_),
+    .B(_199_),
+    .C(_1070__bF$buf5),
+    .Y(_1288_)
 );
 
-AOI21X1 _3057_ (
+NAND2X1 _3057_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_756_),
-    .B(_124_),
-    .C(_1126__bF$buf5),
-    .Y(_1356_)
+    .A(\u_rf_if.last_req_key [7]),
+    .B(_1488_),
+    .Y(_201_)
 );
 
-OAI21X1 _3058_ (
+NAND3X1 _3058_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.write_wait [0]),
-    .B(_1689_),
-    .C(\u_rf_if.write_wait [1]),
-    .Y(_125_)
+    .A(_736_),
+    .B(_1716_),
+    .C(_1666_),
+    .Y(_202_)
 );
 
-OR2X2 _3059_ (
+AOI21X1 _3059_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_124_),
-    .B(\u_rf_if.write_wait [1]),
-    .Y(_126_)
+    .A(_202_),
+    .B(_201_),
+    .C(_1070__bF$buf4),
+    .Y(_1287_)
 );
 
-AND2X2 _3060_ (
+NAND2X1 _3060_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_126_),
-    .B(_125_),
-    .Y(_127_)
+    .A(\u_rf_if.last_req_key [8]),
+    .B(_1488_),
+    .Y(_203_)
 );
 
-AOI21X1 _3061_ (
+NAND3X1 _3061_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_756_),
-    .B(_127_),
-    .C(_1126__bF$buf4),
-    .Y(_1355_)
+    .A(_736_),
+    .B(_1718_),
+    .C(_1666_),
+    .Y(_204_)
 );
 
-OAI21X1 _3062_ (
+AOI21X1 _3062_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.write_wait [1]),
-    .B(_124_),
-    .C(\u_rf_if.write_wait [2]),
-    .Y(_128_)
+    .A(_204_),
+    .B(_203_),
+    .C(_1070__bF$buf3),
+    .Y(_1286_)
 );
 
-INVX1 _3063_ (
+NAND3X1 _3063_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_128_),
-    .Y(_129_)
+    .A(ren),
+    .B(_736_),
+    .C(_1666_),
+    .Y(_205_)
 );
 
-NOR2X1 _3064_ (
+NAND2X1 _3064_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.write_wait [2]),
-    .B(_126_),
-    .Y(_130_)
+    .A(\u_rf_if.last_req_key [9]),
+    .B(_1488_),
+    .Y(_206_)
 );
 
-NOR2X1 _3065_ (
+AOI21X1 _3065_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_129_),
-    .B(_130_),
-    .Y(_131_)
+    .A(_205_),
+    .B(_206_),
+    .C(_1070__bF$buf2),
+    .Y(_1285_)
 );
 
 AOI21X1 _3066_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_756_),
-    .B(_131_),
-    .C(_1126__bF$buf3),
-    .Y(_1354_)
+    .A(_1487_),
+    .B(_732_),
+    .C(_1664_),
+    .Y(_207_)
 );
 
-OAI21X1 _3067_ (
+NAND2X1 _3067_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.write_wait [2]),
-    .B(_126_),
-    .C(\u_rf_if.write_wait [3]),
-    .Y(_132_)
+    .A(i_rst_n_bF$buf9),
+    .B(_1618_),
+    .Y(_208_)
 );
 
-INVX1 _3068_ (
+NOR2X1 _3068_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.write_wait [3]),
-    .Y(_133_)
+    .A(_208_),
+    .B(_207_),
+    .Y(_1284_)
 );
 
-NAND2X1 _3069_ (
+OAI21X1 _3069_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_133_),
-    .B(_130_),
-    .Y(_134_)
+    .A(_740_),
+    .B(_1623_),
+    .C(i_rst_n_bF$buf8),
+    .Y(_209_)
 );
 
-AND2X2 _3070_ (
+NOR2X1 _3070_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_134_),
-    .B(_132_),
-    .Y(_135_)
+    .A(_209_),
+    .B(_736_),
+    .Y(_1283_)
 );
 
-AOI21X1 _3071_ (
+NOR3X1 _3071_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_135_),
-    .B(_756_),
-    .C(_1126__bF$buf2),
-    .Y(_1353_)
+    .A(_1070__bF$buf1),
+    .B(_1631_),
+    .C(_207_),
+    .Y(_1282_)
 );
 
-NOR2X1 _3072_ (
+INVX1 _3072_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1684_),
-    .B(_1687_),
-    .Y(_136_)
+    .A(_1636_),
+    .Y(_210_)
 );
 
-MUX2X1 _3073_ (
+NOR3X1 _3073_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_136_),
-    .B(\u_rf_if.write_wait [5]),
-    .S(_1688_),
-    .Y(_137_)
+    .A(_1070__bF$buf0),
+    .B(_210_),
+    .C(_207_),
+    .Y(_1281_)
 );
 
-AOI21X1 _3074_ (
+INVX1 _3074_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_756_),
-    .B(_137_),
-    .C(_1126__bF$buf1),
-    .Y(_1352_)
+    .A(\u_cpu.ctrl.o_ibus_adr [31]),
+    .Y(_211_)
 );
 
 OAI21X1 _3075_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1568_),
-    .B(_1729_),
-    .C(_1744_),
-    .Y(_138_)
+    .A(_1065_),
+    .B(_696_),
+    .C(i_rst_n_bF$buf7),
+    .Y(_212_)
 );
 
-AOI21X1 _3076_ (
+AND2X2 _3076_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1568_),
-    .B(_1729_),
-    .C(_138_),
-    .Y(_1351_)
+    .A(_1558_),
+    .B(\u_cpu.ctrl.i_jump ),
+    .Y(_213_)
 );
 
-AOI21X1 _3077_ (
+NOR2X1 _3077_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1730_),
-    .B(\u_rf_if.o_waddr [1]),
-    .C(_1727_),
-    .Y(_139_)
+    .A(_1070__bF$buf6),
+    .B(_688_),
+    .Y(_214_)
 );
 
 OAI21X1 _3078_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.o_waddr [1]),
-    .B(_1730_),
-    .C(_139_),
-    .Y(_140_)
+    .A(\u_cpu.ctrl.i_jump ),
+    .B(_1613_),
+    .C(_214_),
+    .Y(_215_)
 );
 
-INVX1 _3079_ (
+OAI22X1 _3079_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_140_),
-    .Y(_1350_)
+    .A(_211_),
+    .B(_212__bF$buf4),
+    .C(_215_),
+    .D(_213_),
+    .Y(_1280_)
 );
 
 OAI21X1 _3080_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1580_),
-    .B(_1731_),
-    .C(_1744_),
-    .Y(_141_)
+    .A(_1002__bF$buf3),
+    .B(_743_),
+    .C(_747_),
+    .Y(_216_)
 );
 
-AOI21X1 _3081_ (
+AND2X2 _3081_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1580_),
-    .B(_1731_),
-    .C(_141_),
-    .Y(_1349_)
+    .A(_216_),
+    .B(i_rst_n_bF$buf6),
+    .Y(_1279_)
 );
 
-NAND2X1 _3082_ (
+MUX2X1 _3082_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg0_latched [0]),
-    .B(_733__bF$buf4),
-    .Y(_142_)
+    .A(\u_mem_serial.shift_reg [36]),
+    .B(\u_cpu.bufreg2.cnt_next [6]),
+    .S(_994__bF$buf5),
+    .Y(_217_)
 );
 
-INVX1 _3083_ (
+OAI21X1 _3083_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[15]),
-    .Y(_143_)
+    .A(_1002__bF$buf2),
+    .B(_217_),
+    .C(_785_),
+    .Y(_218_)
 );
 
 MUX2X1 _3084_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_143_),
-    .B(_928_),
-    .S(ibus_pending_ack_bF$buf3),
-    .Y(_144_)
+    .A(\u_mem_serial.shift_reg [37]),
+    .B(_218_),
+    .S(_1009_),
+    .Y(_219_)
 );
 
-NAND2X1 _3085_ (
+NOR2X1 _3085_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_144_),
-    .B(_1693__bF$buf2),
-    .Y(_145_)
+    .A(_1070__bF$buf5),
+    .B(_219_),
+    .Y(_1278_)
 );
 
-AOI21X1 _3086_ (
+MUX2X1 _3086_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_145_),
-    .B(_142_),
-    .C(_1126__bF$buf0),
-    .Y(_1348_)
+    .A(\u_mem_serial.active_we ),
+    .B(_786_),
+    .S(_1052_),
+    .Y(_220_)
 );
 
-NAND2X1 _3087_ (
+NOR2X1 _3087_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg0_latched [1]),
-    .B(_733__bF$buf3),
-    .Y(_146_)
+    .A(_1070__bF$buf4),
+    .B(_220_),
+    .Y(_1277_)
 );
 
-INVX1 _3088_ (
+AND2X2 _3088_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[16]),
-    .Y(_147_)
+    .A(i_rst_n_bF$buf5),
+    .B(\u_cpu.state.cnt_r [1]),
+    .Y(_1276_)
 );
 
-MUX2X1 _3089_ (
+AND2X2 _3089_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_147_),
-    .B(_920_),
-    .S(ibus_pending_ack_bF$buf2),
-    .Y(_148_)
+    .A(i_rst_n_bF$buf4),
+    .B(\u_cpu.state.cnt_r [0]),
+    .Y(_1275_)
 );
 
-NAND2X1 _3090_ (
+AOI21X1 _3090_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_148_),
-    .B(_1693__bF$buf1),
-    .Y(_149_)
+    .A(_701_),
+    .B(\u_cpu.state.cnt_r [3]),
+    .C(\u_rf_if.ready_pulse ),
+    .Y(_221_)
 );
 
 AOI21X1 _3091_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_149_),
-    .B(_146_),
-    .C(_1126__bF$buf7),
-    .Y(_1347_)
+    .A(_689_),
+    .B(_221_),
+    .C(_1070__bF$buf3),
+    .Y(_1274_)
 );
 
-NAND2X1 _3092_ (
+INVX1 _3092_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg0_latched [2]),
-    .B(_733__bF$buf2),
-    .Y(_150_)
+    .A(\u_cpu.state.cnt_r [3]),
+    .Y(_222_)
 );
 
-INVX1 _3093_ (
+NOR2X1 _3093_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[17]),
-    .Y(_151_)
+    .A(_222_),
+    .B(_1547_),
+    .Y(_223_)
 );
 
-MUX2X1 _3094_ (
+INVX1 _3094_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_151_),
-    .B(_912_),
-    .S(ibus_pending_ack_bF$buf1),
-    .Y(_152_)
+    .A(_223_),
+    .Y(_224_)
 );
 
-NAND2X1 _3095_ (
+OAI21X1 _3095_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_152_),
-    .B(_1693__bF$buf0),
-    .Y(_153_)
+    .A(_1546_),
+    .B(_224_),
+    .C(i_rst_n_bF$buf3),
+    .Y(_225_)
 );
 
 AOI21X1 _3096_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_153_),
-    .B(_150_),
-    .C(_1126__bF$buf6),
-    .Y(_1346_)
+    .A(_1546_),
+    .B(_224_),
+    .C(_225_),
+    .Y(_1273_)
 );
 
-NAND2X1 _3097_ (
+OAI21X1 _3097_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg0_latched [3]),
-    .B(_733__bF$buf1),
-    .Y(_154_)
+    .A(_222_),
+    .B(_1547_),
+    .C(i_rst_n_bF$buf2),
+    .Y(_226_)
 );
 
-INVX1 _3098_ (
+AOI21X1 _3098_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[18]),
-    .Y(_155_)
+    .A(_222_),
+    .B(_1547_),
+    .C(_226_),
+    .Y(_1272_)
 );
 
-MUX2X1 _3099_ (
+OAI21X1 _3099_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_155_),
-    .B(_904_),
-    .S(ibus_pending_ack_bF$buf0),
-    .Y(_156_)
+    .A(_703_),
+    .B(_720_),
+    .C(i_rst_n_bF$buf1),
+    .Y(_227_)
 );
 
-NAND2X1 _3100_ (
+AOI21X1 _3100_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_156_),
-    .B(_1693__bF$buf5),
-    .Y(_157_)
+    .A(_703_),
+    .B(_720_),
+    .C(_227_),
+    .Y(_1271_)
 );
 
-AOI21X1 _3101_ (
+AND2X2 _3101_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_157_),
-    .B(_154_),
-    .C(_1126__bF$buf5),
-    .Y(_1345_)
+    .A(i_rst_n_bF$buf0),
+    .B(\u_cpu.state.cnt_r [2]),
+    .Y(_1270_)
 );
 
-NAND2X1 _3102_ (
+INVX1 _3102_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.issue_sel ),
-    .B(_1704__bF$buf3),
-    .Y(_158_)
+    .A(\u_cpu.ctrl.i_jump ),
+    .Y(_228_)
 );
 
-OAI21X1 _3103_ (
+NOR2X1 _3103_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.issue_idx [5]),
-    .B(_1683_),
-    .C(_1702_),
-    .Y(_159_)
+    .A(\u_cpu.bufreg.i_right_shift_op ),
+    .B(\u_cpu.decode.co_mem_word ),
+    .Y(_229_)
 );
 
 NAND2X1 _3104_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_159_),
-    .B(_158_),
-    .Y(_160_)
+    .A(_1581_),
+    .B(_1583_),
+    .Y(_230_)
 );
 
-NOR2X1 _3105_ (
+OAI21X1 _3105_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_160_),
-    .B(_1691_),
-    .Y(_1344_)
+    .A(\u_cpu.alu.cmp_r ),
+    .B(_1585_),
+    .C(_230_),
+    .Y(_231_)
 );
 
-NOR2X1 _3106_ (
+OAI21X1 _3106_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1699_),
-    .B(_158_),
-    .Y(_161_)
+    .A(_1575_),
+    .B(_1582_),
+    .C(_1572_),
+    .Y(_232_)
 );
 
 AOI21X1 _3107_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1704__bF$buf2),
-    .B(\u_rf_if.issue_sel ),
-    .C(\u_rf_if.issue_chunk [0]),
-    .Y(_162_)
+    .A(\u_cpu.decode.co_mem_word ),
+    .B(_1501_),
+    .C(_1569_),
+    .Y(_233_)
 );
 
 OR2X2 _3108_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_161_),
-    .B(_162_),
-    .Y(_163_)
+    .A(_233_),
+    .B(_232_),
+    .Y(_234_)
 );
 
-NOR2X1 _3109_ (
+AOI21X1 _3109_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_163_),
-    .B(_1691_),
-    .Y(_1343_)
+    .A(_233_),
+    .B(_232_),
+    .C(_229_),
+    .Y(_235_)
 );
 
-INVX1 _3110_ (
+AOI22X1 _3110_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1700_),
-    .Y(_164_)
+    .A(_229_),
+    .B(_231_),
+    .C(_234_),
+    .D(_235_),
+    .Y(_236_)
 );
 
-NOR2X1 _3111_ (
+AND2X2 _3111_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_158_),
-    .B(_164_),
-    .Y(_165_)
+    .A(_236_),
+    .B(_1500_),
+    .Y(_237_)
 );
 
-INVX1 _3112_ (
+OAI21X1 _3112_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_165_),
-    .Y(_166_)
+    .A(_1500_),
+    .B(_236_),
+    .C(_725_),
+    .Y(_238_)
 );
 
-OAI21X1 _3113_ (
+NAND2X1 _3113_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.issue_chunk [1]),
-    .B(_161_),
-    .C(_166_),
-    .Y(_167_)
+    .A(i_rst_n_bF$buf11),
+    .B(\u_cpu.branch_op ),
+    .Y(_239_)
 );
 
 NOR2X1 _3114_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_167_),
-    .B(_1691_),
-    .Y(_1342_)
+    .A(_239_),
+    .B(_695_),
+    .Y(_240_)
 );
 
-NOR2X1 _3115_ (
+OAI21X1 _3115_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1701_),
-    .B(_166_),
-    .Y(_168_)
+    .A(_238_),
+    .B(_237_),
+    .C(_240_),
+    .Y(_241_)
 );
 
-INVX1 _3116_ (
+OAI21X1 _3116_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_168_),
-    .Y(_169_)
+    .A(_228_),
+    .B(_227_),
+    .C(_241_),
+    .Y(_1269_)
 );
 
 OAI21X1 _3117_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_158_),
-    .B(_164_),
-    .C(_1701_),
-    .Y(_170_)
+    .A(_703_),
+    .B(_720_),
+    .C(\u_cpu.state.init_done ),
+    .Y(_242_)
 );
 
-NAND2X1 _3118_ (
+AOI21X1 _3118_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_170_),
-    .B(_169_),
-    .Y(_171_)
+    .A(_695_),
+    .B(_242_),
+    .C(_1070__bF$buf2),
+    .Y(_1268_)
 );
 
-NOR2X1 _3119_ (
+OR2X2 _3119_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1691_),
-    .B(_171_),
-    .Y(_1341_)
+    .A(_1692__bF$buf3),
+    .B(_227_),
+    .Y(_243_)
 );
 
 OAI21X1 _3120_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.issue_chunk [3]),
-    .B(_168_),
-    .C(_1707_),
-    .Y(_172_)
+    .A(_227_),
+    .B(_1692__bF$buf2),
+    .C(_212__bF$buf3),
+    .Y(_244_)
 );
 
-NOR2X1 _3121_ (
+OAI21X1 _3121_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1691_),
-    .B(_172_),
-    .Y(_1340_)
+    .A(_1069_),
+    .B(_243_),
+    .C(_244_),
+    .Y(_1267_)
 );
 
-NAND2X1 _3122_ (
+INVX1 _3122_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg1_latched [0]),
-    .B(_733__bF$buf0),
-    .Y(_173_)
+    .A(\u_mem_serial.active_ibus ),
+    .Y(_245_)
 );
 
 INVX1 _3123_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[20]),
-    .Y(_174_)
+    .A(_1053_),
+    .Y(_246_)
 );
 
-MUX2X1 _3124_ (
+OAI21X1 _3124_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_174_),
-    .B(_888_),
-    .S(ibus_pending_ack_bF$buf6),
-    .Y(_175_)
+    .A(_246_),
+    .B(_1060_),
+    .C(i_rst_n_bF$buf10),
+    .Y(_247_)
 );
 
-NAND2X1 _3125_ (
+AOI21X1 _3125_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_175_),
-    .B(_1693__bF$buf4),
-    .Y(_176_)
+    .A(_1052_),
+    .B(_245_),
+    .C(_247_),
+    .Y(_1266_)
 );
 
-AOI21X1 _3126_ (
+INVX1 _3126_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_176_),
-    .B(_173_),
-    .C(_1126__bF$buf4),
-    .Y(_1339_)
+    .A(\u_mem_serial.req_pending ),
+    .Y(_248_)
 );
 
-NAND2X1 _3127_ (
+NAND3X1 _3127_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg1_latched [1]),
-    .B(_733__bF$buf5),
-    .Y(_177_)
+    .A(_1058_),
+    .B(_1055_),
+    .C(_1059_),
+    .Y(_249_)
 );
 
-INVX1 _3128_ (
+OAI21X1 _3128_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[21]),
-    .Y(_178_)
+    .A(_1057_),
+    .B(_1054_),
+    .C(i_rst_n_bF$buf9),
+    .Y(_250_)
 );
 
-MUX2X1 _3129_ (
+AOI21X1 _3129_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_178_),
-    .B(_880_),
-    .S(ibus_pending_ack_bF$buf5),
-    .Y(_179_)
+    .A(_249_),
+    .B(_248_),
+    .C(_250_),
+    .Y(_1265_)
 );
 
-NAND2X1 _3130_ (
+INVX1 _3130_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_179_),
-    .B(_1693__bF$buf3),
-    .Y(_180_)
+    .A(ibus_pending_rdt[13]),
+    .Y(_251_)
 );
 
-AOI21X1 _3131_ (
+NAND2X1 _3131_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_180_),
-    .B(_177_),
-    .C(_1126__bF$buf3),
-    .Y(_1338_)
+    .A(ibus_pending_ack_bF$buf0),
+    .B(_251_),
+    .Y(_252_)
 );
 
-INVX1 _3132_ (
+OAI21X1 _3132_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[22]),
-    .Y(_181_)
+    .A(\u_mem_serial.shift_reg [13]),
+    .B(ibus_pending_ack_bF$buf5),
+    .C(_252_),
+    .Y(_253_)
 );
 
-MUX2X1 _3133_ (
+OR2X2 _3133_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_181_),
-    .B(_872_),
+    .A(_659__bF$buf5),
+    .B(_253_),
+    .Y(_254_)
+);
+
+OAI21X1 _3134_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_694_),
+    .B(_1692__bF$buf1),
+    .C(_254_),
+    .Y(_1264_)
+);
+
+INVX1 _3135_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ibus_pending_rdt[12]),
+    .Y(_255_)
+);
+
+MUX2X1 _3136_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_255_),
+    .B(_931_),
     .S(ibus_pending_ack_bF$buf4),
-    .Y(_182_)
-);
-
-NAND2X1 _3134_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_182_),
-    .B(_1693__bF$buf2),
-    .Y(_183_)
-);
-
-OAI21X1 _3135_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_116_),
-    .B(_1693__bF$buf1),
-    .C(_183_),
-    .Y(_184_)
-);
-
-AND2X2 _3136_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_184_),
-    .B(i_rst_n_bF$buf9),
-    .Y(_1337_)
+    .Y(_256_)
 );
 
 NAND2X1 _3137_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_rf_if.rreg1_latched [3]),
-    .B(_733__bF$buf4),
-    .Y(_185_)
+    .A(_256_),
+    .B(_1692__bF$buf0),
+    .Y(_257_)
 );
 
-INVX1 _3138_ (
+OAI21X1 _3138_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[23]),
-    .Y(_186_)
+    .A(_1500_),
+    .B(_1692__bF$buf4),
+    .C(_257_),
+    .Y(_1263_)
 );
 
-MUX2X1 _3139_ (
+INVX1 _3139_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_186_),
-    .B(_864_),
-    .S(ibus_pending_ack_bF$buf3),
-    .Y(_187_)
+    .A(ibus_pending_rdt[5]),
+    .Y(_258_)
 );
 
 NAND2X1 _3140_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_187_),
-    .B(_1693__bF$buf0),
-    .Y(_188_)
+    .A(ibus_pending_ack_bF$buf3),
+    .B(_258_),
+    .Y(_259_)
 );
 
-AOI21X1 _3141_ (
+OAI21X1 _3141_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_188_),
-    .B(_185_),
-    .C(_1126__bF$buf2),
-    .Y(_1336_)
+    .A(\u_mem_serial.shift_reg [5]),
+    .B(ibus_pending_ack_bF$buf2),
+    .C(_259_),
+    .Y(_260_)
 );
 
-INVX1 _3142_ (
+MUX2X1 _3142_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [31]),
-    .Y(_189_)
+    .A(_787_),
+    .B(_260_),
+    .S(_659__bF$buf4),
+    .Y(_1262_)
 );
 
-OAI21X1 _3143_ (
+INVX1 _3143_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1121_),
-    .B(_786_),
-    .C(i_rst_n_bF$buf8),
-    .Y(_190_)
+    .A(\u_mem_serial.shift_reg [4]),
+    .Y(_261_)
 );
 
-AND2X2 _3144_ (
+INVX1 _3144_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_621_),
-    .B(\u_cpu.ctrl.i_jump ),
-    .Y(_191_)
+    .A(ibus_pending_rdt[4]),
+    .Y(_262_)
 );
 
-INVX1 _3145_ (
+MUX2X1 _3145_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1553_),
-    .Y(_192_)
+    .A(_262_),
+    .B(_261_),
+    .S(ibus_pending_ack_bF$buf1),
+    .Y(_263_)
 );
 
-NOR2X1 _3146_ (
+NAND2X1 _3146_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf1),
-    .B(_752_),
-    .Y(_193_)
+    .A(_263_),
+    .B(_1692__bF$buf3),
+    .Y(_264_)
 );
 
 OAI21X1 _3147_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.i_jump ),
-    .B(_192_),
-    .C(_193_),
-    .Y(_194_)
+    .A(_1062_),
+    .B(_1692__bF$buf2),
+    .C(_264_),
+    .Y(_1261_)
 );
 
-OAI22X1 _3148_ (
+INVX1 _3148_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_189_),
-    .B(_190__bF$buf4),
-    .C(_194_),
-    .D(_191_),
-    .Y(_1335_)
+    .A(ibus_pending_rdt[3]),
+    .Y(_265_)
 );
 
-AND2X2 _3149_ (
+NAND2X1 _3149_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_rst_n_bF$buf7),
-    .B(\u_cpu.state.cnt_r [1]),
-    .Y(_1334_)
+    .A(ibus_pending_ack_bF$buf0),
+    .B(_265_),
+    .Y(_266_)
 );
 
-AND2X2 _3150_ (
+OAI21X1 _3150_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_rst_n_bF$buf6),
-    .B(\u_cpu.state.cnt_r [0]),
-    .Y(_1333_)
+    .A(\u_mem_serial.shift_reg [3]),
+    .B(ibus_pending_ack_bF$buf5),
+    .C(_266_),
+    .Y(_267_)
 );
 
-AOI21X1 _3151_ (
+MUX2X1 _3151_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_779_),
-    .B(\u_cpu.state.cnt_r [3]),
-    .C(\u_rf_if.ready_pulse ),
-    .Y(_195_)
+    .A(_1520_),
+    .B(_267_),
+    .S(_659__bF$buf3),
+    .Y(_1260_)
 );
 
-AOI21X1 _3152_ (
+OAI21X1 _3152_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_756_),
-    .B(_195_),
-    .C(_1126__bF$buf0),
-    .Y(_1332_)
+    .A(_673__bF$buf3),
+    .B(_674__bF$buf0),
+    .C(\u_cpu.decode.opcode [0]),
+    .Y(_268_)
 );
 
 INVX1 _3153_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.state.cnt_r [3]),
-    .Y(_196_)
+    .A(ibus_pending_rdt[2]),
+    .Y(_269_)
 );
 
-NOR2X1 _3154_ (
+NAND2X1 _3154_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_196_),
-    .B(_670_),
-    .Y(_197_)
+    .A(ibus_pending_ack_bF$buf4),
+    .B(_269_),
+    .Y(_270_)
 );
 
-INVX1 _3155_ (
+OAI21X1 _3155_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_197_),
-    .Y(_198_)
+    .A(\u_mem_serial.shift_reg [2]),
+    .B(ibus_pending_ack_bF$buf3),
+    .C(_270_),
+    .Y(_271_)
 );
 
 OAI21X1 _3156_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_671_),
-    .B(_198_),
-    .C(i_rst_n_bF$buf5),
-    .Y(_199_)
+    .A(_659__bF$buf2),
+    .B(_271_),
+    .C(_268_),
+    .Y(_1259_)
 );
 
-AOI21X1 _3157_ (
+OAI21X1 _3157_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_671_),
-    .B(_198_),
-    .C(_199_),
-    .Y(_1331_)
+    .A(_751_),
+    .B(_1032_),
+    .C(\u_mem_serial.bit_count [6]),
+    .Y(_272_)
 );
 
-OAI21X1 _3158_ (
+NOR2X1 _3158_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_196_),
-    .B(_670_),
-    .C(i_rst_n_bF$buf4),
-    .Y(_200_)
+    .A(_751_),
+    .B(_1032_),
+    .Y(_273_)
 );
 
 AOI21X1 _3159_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_196_),
-    .B(_670_),
-    .C(_200_),
-    .Y(_1330_)
+    .A(_273_),
+    .B(_1026_),
+    .C(_1051_),
+    .Y(_274_)
 );
 
-OAI21X1 _3160_ (
+AOI21X1 _3160_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1110_),
-    .B(_1103_),
-    .C(_1112_),
-    .Y(_201_)
+    .A(_274_),
+    .B(_272_),
+    .C(_1070__bF$buf1),
+    .Y(_1258_)
 );
 
-NOR2X1 _3161_ (
+INVX1 _3161_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf7),
-    .B(_1108_),
-    .Y(_202_)
+    .A(_1855_),
+    .Y(_275_)
 );
 
-AND2X2 _3162_ (
+NOR2X1 _3162_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_201_),
-    .B(_202_),
-    .Y(_1329_)
+    .A(i_clk_fast_bF$buf7),
+    .B(_275_),
+    .Y(_1854_)
 );
 
-OAI21X1 _3163_ (
+AND2X2 _3163_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_785_),
-    .B(_784_),
-    .C(i_rst_n_bF$buf3),
-    .Y(_203_)
+    .A(\u_mem_serial.shift_reg [37]),
+    .B(_1855_),
+    .Y(_0_)
 );
 
-AOI21X1 _3164_ (
+INVX1 _3164_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_785_),
-    .B(_784_),
-    .C(_203_),
-    .Y(_1328_)
+    .A(mem_ibus_ack),
+    .Y(_276_)
 );
 
-AND2X2 _3165_ (
+OAI21X1 _3165_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_rst_n_bF$buf2),
-    .B(\u_cpu.state.cnt_r [2]),
-    .Y(_1327_)
+    .A(\u_mem_serial.state [0]),
+    .B(_746_),
+    .C(i_rst_n_bF$buf8),
+    .Y(_277_)
 );
 
 INVX1 _3166_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.i_jump ),
-    .Y(_204_)
+    .A(_746_),
+    .Y(_278_)
 );
 
-NOR2X1 _3167_ (
+NAND3X1 _3167_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.i_right_shift_op ),
-    .B(\u_cpu.decode.co_mem_word ),
-    .Y(_205_)
+    .A(\u_mem_serial.active_ibus ),
+    .B(_1047_),
+    .C(_278_),
+    .Y(_279_)
 );
 
-OAI21X1 _3168_ (
+AOI21X1 _3168_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.alu.cmp_r ),
-    .B(_1524_),
-    .C(_205_),
-    .Y(_206_)
+    .A(_279_),
+    .B(_276_),
+    .C(_277_),
+    .Y(_1255_)
 );
 
-AOI21X1 _3169_ (
+INVX1 _3169_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1476_),
-    .B(_1477_),
-    .C(_206_),
-    .Y(_207_)
+    .A(ibus_pending_rdt[6]),
+    .Y(_280_)
 );
 
-AND2X2 _3170_ (
+NAND2X1 _3170_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1476_),
-    .B(_1132_),
-    .Y(_208_)
+    .A(ibus_pending_ack_bF$buf2),
+    .B(_280_),
+    .Y(_281_)
 );
 
 OAI21X1 _3171_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.i_right_shift_op ),
-    .B(\u_cpu.bne_or_bge ),
-    .C(\u_cpu.decode.co_mem_word ),
-    .Y(_209_)
+    .A(\u_mem_serial.shift_reg [6]),
+    .B(ibus_pending_ack_bF$buf1),
+    .C(_281_),
+    .Y(_282_)
 );
 
-NAND3X1 _3172_ (
+MUX2X1 _3172_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1522_),
-    .B(_209_),
-    .C(_1519_),
-    .Y(_210_)
+    .A(_1063_),
+    .B(_282_),
+    .S(_659__bF$buf1),
+    .Y(_1254_)
 );
 
-OR2X2 _3173_ (
+INVX1 _3173_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_208_),
-    .B(_210_),
-    .Y(_211_)
+    .A(ibus_pending_rdt[14]),
+    .Y(_283_)
 );
 
 NAND2X1 _3174_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_210_),
-    .B(_208_),
-    .Y(_212_)
+    .A(ibus_pending_ack_bF$buf0),
+    .B(_283_),
+    .Y(_284_)
 );
 
-AOI21X1 _3175_ (
+OAI21X1 _3175_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_211_),
-    .B(_212_),
-    .C(_205_),
-    .Y(_213_)
+    .A(\u_mem_serial.shift_reg [14]),
+    .B(ibus_pending_ack_bF$buf5),
+    .C(_284_),
+    .Y(_285_)
 );
 
-NOR2X1 _3176_ (
+OR2X2 _3176_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_207_),
-    .B(_213_),
-    .Y(_214_)
+    .A(_659__bF$buf0),
+    .B(_285_),
+    .Y(_286_)
 );
 
-AND2X2 _3177_ (
+OAI21X1 _3177_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_214_),
-    .B(\u_cpu.bne_or_bge ),
-    .Y(_215_)
+    .A(_705_),
+    .B(_1692__bF$buf1),
+    .C(_286_),
+    .Y(_1253_)
 );
 
 OAI21X1 _3178_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bne_or_bge ),
-    .B(_214_),
-    .C(_744_),
-    .Y(_216_)
+    .A(_1523_),
+    .B(_1692__bF$buf0),
+    .C(_141_),
+    .Y(_1252_)
 );
 
-NAND2X1 _3179_ (
+NAND3X1 _3179_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_rst_n_bF$buf1),
-    .B(\u_cpu.branch_op ),
-    .Y(_217_)
+    .A(_245_),
+    .B(_1047_),
+    .C(_278_),
+    .Y(_287_)
 );
 
-NOR2X1 _3180_ (
+AOI21X1 _3180_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_217_),
-    .B(_765_),
-    .Y(_218_)
+    .A(_278_),
+    .B(_1024_),
+    .C(mem_dbus_ack_bF$buf5),
+    .Y(_288_)
 );
 
-OAI21X1 _3181_ (
+AOI21X1 _3181_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_216_),
-    .B(_215_),
-    .C(_218_),
-    .Y(_219_)
+    .A(_288_),
+    .B(_287_),
+    .C(_277_),
+    .Y(_1251_)
 );
 
 OAI21X1 _3182_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_204_),
-    .B(_203_),
-    .C(_219_),
-    .Y(_1326_)
+    .A(_673__bF$buf2),
+    .B(_674__bF$buf3),
+    .C(\u_cpu.bufreg.i_sh_signed ),
+    .Y(_289_)
 );
 
-OAI21X1 _3183_ (
+INVX1 _3183_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_785_),
-    .B(_784_),
-    .C(\u_cpu.state.init_done ),
-    .Y(_220_)
+    .A(ibus_pending_rdt[30]),
+    .Y(_290_)
 );
 
-AOI21X1 _3184_ (
+NAND2X1 _3184_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_765_),
-    .B(_220_),
-    .C(_1126__bF$buf6),
-    .Y(_1325_)
+    .A(ibus_pending_ack_bF$buf4),
+    .B(_290_),
+    .Y(_291_)
 );
 
-OR2X2 _3185_ (
+OAI21X1 _3185_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1693__bF$buf5),
-    .B(_203_),
-    .Y(_221_)
+    .A(\u_mem_serial.shift_reg [30]),
+    .B(ibus_pending_ack_bF$buf3),
+    .C(_291_),
+    .Y(_292_)
 );
 
 OAI21X1 _3186_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_203_),
-    .B(_1693__bF$buf4),
-    .C(_190__bF$buf3),
-    .Y(_222_)
+    .A(_659__bF$buf5),
+    .B(_292_),
+    .C(_289_),
+    .Y(_1250_)
 );
 
-OAI21X1 _3187_ (
+INVX1 _3187_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1125_),
-    .B(_221_),
-    .C(_222_),
-    .Y(_1324_)
+    .A(rreg0[3]),
+    .Y(_293_)
 );
 
-INVX1 _3188_ (
+NOR2X1 _3188_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[13]),
-    .Y(_223_)
+    .A(\u_cpu.decode.opcode [2]),
+    .B(\u_cpu.decode.opcode [1]),
+    .Y(_294_)
 );
 
-NAND2X1 _3189_ (
+OAI21X1 _3189_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf2),
-    .B(_223_),
-    .Y(_224_)
+    .A(_692_),
+    .B(_294_),
+    .C(_1543_),
+    .Y(_295_)
 );
 
-OAI21X1 _3190_ (
+NAND2X1 _3190_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [13]),
-    .B(ibus_pending_ack_bF$buf1),
-    .C(_224_),
-    .Y(_225_)
+    .A(_1066_),
+    .B(_295_),
+    .Y(_296_)
 );
 
-OR2X2 _3191_ (
+OAI21X1 _3191_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_733__bF$buf3),
-    .B(_225_),
-    .Y(_226_)
+    .A(rreg0[4]),
+    .B(_296_),
+    .C(_659__bF$buf4),
+    .Y(_297_)
 );
 
-OAI21X1 _3192_ (
+AND2X2 _3192_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_789_),
-    .B(_1693__bF$buf3),
-    .C(_226_),
-    .Y(_1323_)
+    .A(_659__bF$buf3),
+    .B(_296_),
+    .Y(_298_)
 );
 
-INVX1 _3193_ (
+AOI22X1 _3193_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[12]),
-    .Y(_227_)
+    .A(_293_),
+    .B(_298_),
+    .C(_169_),
+    .D(_297_),
+    .Y(_1249_)
 );
 
-MUX2X1 _3194_ (
+INVX1 _3194_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_227_),
-    .B(_952_),
-    .S(ibus_pending_ack_bF$buf0),
-    .Y(_228_)
+    .A(rreg0[2]),
+    .Y(_299_)
 );
 
-NAND2X1 _3195_ (
+OAI21X1 _3195_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_228_),
-    .B(_1693__bF$buf2),
-    .Y(_229_)
+    .A(rreg0[3]),
+    .B(_296_),
+    .C(_659__bF$buf2),
+    .Y(_300_)
 );
 
-OAI21X1 _3196_ (
+AOI22X1 _3196_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_790_),
-    .B(_1693__bF$buf1),
-    .C(_229_),
-    .Y(_1322_)
+    .A(_299_),
+    .B(_298_),
+    .C(_165_),
+    .D(_300_),
+    .Y(_1248_)
 );
 
 INVX1 _3197_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[5]),
-    .Y(_230_)
+    .A(rreg0[1]),
+    .Y(_301_)
 );
 
-NAND2X1 _3198_ (
+OAI21X1 _3198_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf6),
-    .B(_230_),
-    .Y(_231_)
+    .A(rreg0[2]),
+    .B(_296_),
+    .C(_659__bF$buf1),
+    .Y(_302_)
 );
 
-OAI21X1 _3199_ (
+AOI22X1 _3199_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [5]),
-    .B(ibus_pending_ack_bF$buf5),
-    .C(_231_),
-    .Y(_232_)
+    .A(_301_),
+    .B(_298_),
+    .C(_161_),
+    .D(_302_),
+    .Y(_1247_)
 );
 
-MUX2X1 _3200_ (
+INVX1 _3200_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_742_),
-    .B(_232_),
-    .S(_733__bF$buf2),
-    .Y(_1321_)
+    .A(\u_cpu.csr_imm ),
+    .Y(_303_)
 );
 
-INVX1 _3201_ (
+OAI21X1 _3201_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[4]),
-    .Y(_233_)
+    .A(rreg0[1]),
+    .B(_296_),
+    .C(_659__bF$buf0),
+    .Y(_304_)
 );
 
-NAND2X1 _3202_ (
+AOI22X1 _3202_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf4),
-    .B(_233_),
-    .Y(_234_)
+    .A(_303_),
+    .B(_298_),
+    .C(_157_),
+    .D(_304_),
+    .Y(_1246_)
 );
 
-OAI21X1 _3203_ (
+INVX1 _3203_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [4]),
-    .B(ibus_pending_ack_bF$buf3),
-    .C(_234_),
-    .Y(_235_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [3]),
+    .Y(_305_)
 );
 
-MUX2X1 _3204_ (
+OAI21X1 _3204_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1118_),
-    .B(_235_),
-    .S(_733__bF$buf1),
-    .Y(_1320_)
+    .A(\u_cpu.csr_imm ),
+    .B(_296_),
+    .C(_659__bF$buf5),
+    .Y(_306_)
 );
 
-MUX2X1 _3205_ (
+AOI22X1 _3205_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[3]),
-    .B(\u_mem_serial.shift_reg [3]),
-    .S(ibus_pending_ack_bF$buf2),
-    .Y(_236_)
+    .A(_305_),
+    .B(_298_),
+    .C(_286_),
+    .D(_306_),
+    .Y(_1245_)
 );
 
-MUX2X1 _3206_ (
+INVX1 _3206_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_691_),
-    .B(_236_),
-    .S(_733__bF$buf0),
-    .Y(_1319_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [2]),
+    .Y(_307_)
 );
 
-NOR2X1 _3207_ (
+OAI21X1 _3207_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_744_),
-    .B(_1693__bF$buf0),
-    .Y(_237_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [3]),
+    .B(_296_),
+    .C(_659__bF$buf4),
+    .Y(_308_)
 );
 
-INVX1 _3208_ (
+AOI22X1 _3208_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_237_),
-    .Y(_238_)
+    .A(_307_),
+    .B(_298_),
+    .C(_254_),
+    .D(_308_),
+    .Y(_1244_)
 );
 
 INVX1 _3209_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[2]),
-    .Y(_239_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [1]),
+    .Y(_309_)
 );
 
-NAND2X1 _3210_ (
+OAI21X1 _3210_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf1),
-    .B(_239_),
-    .Y(_240_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [2]),
+    .B(_296_),
+    .C(_659__bF$buf3),
+    .Y(_310_)
 );
 
-OAI21X1 _3211_ (
+AOI22X1 _3211_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [2]),
-    .B(ibus_pending_ack_bF$buf0),
-    .C(_240_),
-    .Y(_241_)
+    .A(_309_),
+    .B(_298_),
+    .C(_257_),
+    .D(_310_),
+    .Y(_1243_)
 );
 
-OAI21X1 _3212_ (
+INVX1 _3212_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_733__bF$buf5),
-    .B(_241_),
-    .C(_238_),
-    .Y(_1318_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [0]),
+    .Y(_311_)
 );
 
-INVX1 _3213_ (
+OAI21X1 _3213_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1907_),
-    .Y(_242_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [1]),
+    .B(_296_),
+    .C(_659__bF$buf2),
+    .Y(_312_)
 );
 
-NOR2X1 _3214_ (
+AOI22X1 _3214_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_clk_fast_bF$buf6),
-    .B(_242_),
-    .Y(_1906_)
+    .A(_311_),
+    .B(_298_),
+    .C(_141_),
+    .D(_312_),
+    .Y(_1242_)
 );
 
-NAND3X1 _3215_ (
+NAND2X1 _3215_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg2.i_op_b_sel ),
-    .B(_1115_),
-    .C(_1106_),
-    .Y(_243_)
+    .A(_1062_),
+    .B(_1526_),
+    .Y(_313_)
 );
 
-OAI21X1 _3216_ (
+OAI22X1 _3216_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1048_),
-    .B(_1106_),
-    .C(_243_),
-    .Y(_244_)
+    .A(_313_),
+    .B(_268_),
+    .C(_1066_),
+    .D(_1692__bF$buf4),
+    .Y(_314_)
 );
 
-AND2X2 _3217_ (
+INVX4 _3217_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_244_),
-    .B(i_rst_n_bF$buf0),
-    .Y(_1316_)
+    .A(_314_),
+    .Y(_315_)
 );
 
-OAI21X1 _3218_ (
+INVX1 _3218_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.state [1]),
-    .B(_1712_),
-    .C(_1907_),
-    .Y(_245_)
+    .A(ibus_pending_rdt[29]),
+    .Y(_316_)
 );
 
-AOI21X1 _3219_ (
+MUX2X1 _3219_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1107_),
-    .B(_245_),
-    .C(_1126__bF$buf5),
-    .Y(_1315_)
+    .A(_316_),
+    .B(_812_),
+    .S(ibus_pending_ack_bF$buf2),
+    .Y(_317_)
 );
 
 INVX1 _3220_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_ibus ),
-    .Y(_246_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [5]),
+    .Y(_318_)
 );
 
-AOI22X1 _3221_ (
+OAI21X1 _3221_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_246_),
-    .B(_1107_),
-    .C(_1104_),
-    .D(_1052__bF$buf2),
-    .Y(_1314_)
+    .A(_673__bF$buf1),
+    .B(_674__bF$buf2),
+    .C(_318_),
+    .Y(_319_)
 );
 
-INVX1 _3222_ (
+OAI21X1 _3222_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1708_),
-    .Y(_247_)
+    .A(_659__bF$buf1),
+    .B(_317_),
+    .C(_319_),
+    .Y(_320_)
 );
 
 NOR2X1 _3223_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1064_),
-    .B(_1071_),
-    .Y(_248_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [4]),
+    .B(_315_),
+    .Y(_321_)
 );
 
-NAND2X1 _3224_ (
+AOI21X1 _3224_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1101_),
-    .B(_248_),
-    .Y(_249_)
+    .A(_315_),
+    .B(_320_),
+    .C(_321_),
+    .Y(_1241_)
 );
 
-OAI21X1 _3225_ (
+INVX1 _3225_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.state [0]),
-    .B(_247_),
-    .C(_249_),
-    .Y(_250_)
+    .A(ibus_pending_rdt[28]),
+    .Y(_322_)
 );
 
-NAND2X1 _3226_ (
+MUX2X1 _3226_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.active_ibus ),
-    .B(_250_),
-    .Y(_251_)
+    .A(_322_),
+    .B(_819_),
+    .S(ibus_pending_ack_bF$buf1),
+    .Y(_323_)
 );
 
-OAI21X1 _3227_ (
+MUX2X1 _3227_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.state [0]),
-    .B(_247_),
-    .C(i_rst_n_bF$buf10),
-    .Y(_252_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [4]),
+    .B(_323_),
+    .S(_659__bF$buf0),
+    .Y(_324_)
 );
 
-AOI21X1 _3228_ (
+NOR2X1 _3228_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_251_),
-    .B(_736_),
-    .C(_252_),
-    .Y(_1313_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [3]),
+    .B(_315_),
+    .Y(_325_)
 );
 
-INVX1 _3229_ (
+AOI21X1 _3229_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[6]),
-    .Y(_253_)
+    .A(_315_),
+    .B(_324_),
+    .C(_325_),
+    .Y(_1240_)
 );
 
-NAND2X1 _3230_ (
+INVX1 _3230_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf6),
-    .B(_253_),
-    .Y(_254_)
+    .A(ibus_pending_rdt[27]),
+    .Y(_326_)
 );
 
-OAI21X1 _3231_ (
+MUX2X1 _3231_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [6]),
-    .B(ibus_pending_ack_bF$buf5),
-    .C(_254_),
-    .Y(_255_)
+    .A(_326_),
+    .B(_826_),
+    .S(ibus_pending_ack_bF$buf0),
+    .Y(_327_)
 );
 
 MUX2X1 _3232_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1119_),
-    .B(_255_),
-    .S(_733__bF$buf4),
-    .Y(_1312_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [3]),
+    .B(_327_),
+    .S(_659__bF$buf5),
+    .Y(_328_)
 );
 
-INVX1 _3233_ (
+NOR2X1 _3233_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[14]),
-    .Y(_256_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [2]),
+    .B(_315_),
+    .Y(_329_)
 );
 
-NAND2X1 _3234_ (
+AOI21X1 _3234_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf4),
-    .B(_256_),
-    .Y(_257_)
+    .A(_315_),
+    .B(_328_),
+    .C(_329_),
+    .Y(_1239_)
 );
 
-OAI21X1 _3235_ (
+INVX1 _3235_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [14]),
-    .B(ibus_pending_ack_bF$buf3),
-    .C(_257_),
-    .Y(_258_)
+    .A(ibus_pending_rdt[26]),
+    .Y(_330_)
 );
 
-OR2X2 _3236_ (
+MUX2X1 _3236_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_733__bF$buf3),
-    .B(_258_),
-    .Y(_259_)
+    .A(_330_),
+    .B(_833_),
+    .S(ibus_pending_ack_bF$buf5),
+    .Y(_331_)
 );
 
-OAI21X1 _3237_ (
+MUX2X1 _3237_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_780_),
-    .B(_1693__bF$buf5),
-    .C(_259_),
-    .Y(_1311_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [2]),
+    .B(_331_),
+    .S(_659__bF$buf4),
+    .Y(_332_)
 );
 
-OAI21X1 _3238_ (
+NOR2X1 _3238_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_688_),
-    .B(_1693__bF$buf4),
-    .C(_176_),
-    .Y(_1310_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [1]),
+    .B(_315_),
+    .Y(_333_)
 );
 
-NAND2X1 _3239_ (
+AOI21X1 _3239_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_246_),
-    .B(_250_),
-    .Y(_260_)
+    .A(_315_),
+    .B(_332_),
+    .C(_333_),
+    .Y(_1238_)
 );
 
-AOI21X1 _3240_ (
+INVX1 _3240_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_260_),
-    .B(_761_),
-    .C(_252_),
-    .Y(_1309_)
+    .A(ibus_pending_rdt[25]),
+    .Y(_334_)
 );
 
-INVX1 _3241_ (
+MUX2X1 _3241_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.i_sh_signed ),
-    .Y(_261_)
+    .A(_334_),
+    .B(_840_),
+    .S(ibus_pending_ack_bF$buf4),
+    .Y(_335_)
 );
 
-INVX1 _3242_ (
+MUX2X1 _3242_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[30]),
-    .Y(_262_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [1]),
+    .B(_335_),
+    .S(_659__bF$buf3),
+    .Y(_336_)
 );
 
-MUX2X1 _3243_ (
+NOR2X1 _3243_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_262_),
-    .B(_1715_),
-    .S(ibus_pending_ack_bF$buf2),
-    .Y(_263_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [0]),
+    .B(_315_),
+    .Y(_337_)
 );
 
-NAND2X1 _3244_ (
+AOI21X1 _3244_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_263_),
-    .B(_1693__bF$buf3),
-    .Y(_264_)
+    .A(_315_),
+    .B(_336_),
+    .C(_337_),
+    .Y(_1237_)
 );
 
-OAI21X1 _3245_ (
+INVX1 _3245_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_261_),
-    .B(_1693__bF$buf2),
-    .C(_264_),
-    .Y(_1308_)
+    .A(rreg1[3]),
+    .Y(_338_)
 );
 
 INVX1 _3246_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg0[3]),
-    .Y(_265_)
+    .A(_679_),
+    .Y(_339_)
 );
 
-NOR2X1 _3247_ (
+OAI21X1 _3247_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.decode.opcode [2]),
-    .B(\u_cpu.decode.opcode [1]),
-    .Y(_266_)
+    .A(_1524_),
+    .B(_339_),
+    .C(_1066_),
+    .Y(_340_)
 );
 
 OAI21X1 _3248_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_759_),
-    .B(_266_),
-    .C(_674_),
-    .Y(_267_)
+    .A(rreg1[4]),
+    .B(_340_),
+    .C(_659__bF$buf2),
+    .Y(_341_)
 );
 
-NAND2X1 _3249_ (
+AND2X2 _3249_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_267_),
-    .B(_754_),
-    .Y(_268_)
+    .A(_659__bF$buf1),
+    .B(_340_),
+    .Y(_342_)
 );
 
-OAI21X1 _3250_ (
+AOI22X1 _3250_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg0[4]),
-    .B(_268_),
-    .C(_733__bF$buf2),
-    .Y(_269_)
-);
-
-AND2X2 _3251_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_733__bF$buf1),
-    .B(_268_),
-    .Y(_270_)
-);
-
-AOI22X1 _3252_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_265_),
-    .B(_270_),
-    .C(_157_),
-    .D(_269_),
-    .Y(_1307_)
-);
-
-INVX1 _3253_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(rreg0[2]),
-    .Y(_271_)
-);
-
-OAI21X1 _3254_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(rreg0[3]),
-    .B(_268_),
-    .C(_733__bF$buf0),
-    .Y(_272_)
-);
-
-AOI22X1 _3255_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_271_),
-    .B(_270_),
+    .A(_338_),
+    .B(_342_),
     .C(_153_),
-    .D(_272_),
-    .Y(_1306_)
+    .D(_341_),
+    .Y(_1236_)
 );
 
-INVX1 _3256_ (
+INVX1 _3251_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg0[1]),
-    .Y(_273_)
+    .A(rreg1[2]),
+    .Y(_343_)
+);
+
+OAI21X1 _3252_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(rreg1[3]),
+    .B(_340_),
+    .C(_659__bF$buf0),
+    .Y(_344_)
+);
+
+AOI22X1 _3253_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_343_),
+    .B(_342_),
+    .C(_149_),
+    .D(_344_),
+    .Y(_1235_)
+);
+
+INVX1 _3254_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(rreg1[1]),
+    .Y(_345_)
+);
+
+OAI21X1 _3255_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(rreg1[2]),
+    .B(_340_),
+    .C(_659__bF$buf5),
+    .Y(_346_)
+);
+
+AOI22X1 _3256_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_345_),
+    .B(_342_),
+    .C(_145_),
+    .D(_346_),
+    .Y(_1234_)
 );
 
 OAI21X1 _3257_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg0[2]),
-    .B(_268_),
-    .C(_733__bF$buf5),
-    .Y(_274_)
+    .A(rreg1[1]),
+    .B(_340_),
+    .C(_659__bF$buf4),
+    .Y(_347_)
 );
 
 AOI22X1 _3258_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_273_),
-    .B(_270_),
-    .C(_149_),
-    .D(_274_),
-    .Y(_1305_)
+    .A(_1540_),
+    .B(_342_),
+    .C(_141_),
+    .D(_347_),
+    .Y(_1233_)
 );
 
 INVX1 _3259_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.csr_imm ),
-    .Y(_275_)
+    .A(_678_),
+    .Y(_348_)
 );
 
-OAI21X1 _3260_ (
+NAND2X1 _3260_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg0[1]),
-    .B(_268_),
-    .C(_733__bF$buf4),
-    .Y(_276_)
+    .A(_1066_),
+    .B(_348_),
+    .Y(_349_)
 );
 
-AOI22X1 _3261_ (
+INVX1 _3261_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_275_),
-    .B(_270_),
-    .C(_145_),
-    .D(_276_),
-    .Y(_1304_)
+    .A(_349_),
+    .Y(_350_)
 );
 
-INVX1 _3262_ (
+NOR2X1 _3262_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [3]),
-    .Y(_277_)
+    .A(_350_),
+    .B(_1692__bF$buf3),
+    .Y(_351_)
 );
 
-OAI21X1 _3263_ (
+INVX1 _3263_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.csr_imm ),
-    .B(_268_),
-    .C(_733__bF$buf3),
-    .Y(_278_)
+    .A(ibus_pending_rdt[10]),
+    .Y(_352_)
 );
 
-AOI22X1 _3264_ (
+MUX2X1 _3264_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_277_),
-    .B(_270_),
-    .C(_259_),
-    .D(_278_),
-    .Y(_1303_)
+    .A(_352_),
+    .B(_945_),
+    .S(ibus_pending_ack_bF$buf3),
+    .Y(_353_)
 );
 
-INVX1 _3265_ (
+NAND3X1 _3265_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [2]),
-    .Y(_279_)
+    .A(_687_),
+    .B(_350_),
+    .C(_659__bF$buf3),
+    .Y(_354_)
 );
 
 OAI21X1 _3266_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [3]),
-    .B(_268_),
-    .C(_733__bF$buf2),
-    .Y(_280_)
+    .A(_659__bF$buf2),
+    .B(_353_),
+    .C(_354_),
+    .Y(_355_)
 );
 
-AOI22X1 _3267_ (
+AOI21X1 _3267_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_279_),
-    .B(_270_),
-    .C(_226_),
-    .D(_280_),
-    .Y(_1302_)
+    .A(_351_),
+    .B(_682_),
+    .C(_355_),
+    .Y(_1232_)
 );
 
 INVX1 _3268_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [1]),
-    .Y(_281_)
+    .A(ibus_pending_rdt[9]),
+    .Y(_356_)
 );
 
-OAI21X1 _3269_ (
+MUX2X1 _3269_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [2]),
-    .B(_268_),
-    .C(_733__bF$buf1),
-    .Y(_282_)
+    .A(_356_),
+    .B(_952_),
+    .S(ibus_pending_ack_bF$buf2),
+    .Y(_357_)
 );
 
-AOI22X1 _3270_ (
+NAND3X1 _3270_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_281_),
-    .B(_270_),
-    .C(_229_),
-    .D(_282_),
-    .Y(_1301_)
+    .A(_682_),
+    .B(_350_),
+    .C(_659__bF$buf1),
+    .Y(_358_)
 );
 
-INVX1 _3271_ (
+OAI21X1 _3271_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [0]),
-    .Y(_283_)
+    .A(_659__bF$buf0),
+    .B(_357_),
+    .C(_358_),
+    .Y(_359_)
 );
 
-OAI21X1 _3272_ (
+AOI21X1 _3272_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [1]),
-    .B(_268_),
-    .C(_733__bF$buf0),
-    .Y(_284_)
+    .A(_351_),
+    .B(_683_),
+    .C(_359_),
+    .Y(_1231_)
 );
 
-AOI22X1 _3273_ (
+INVX1 _3273_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_283_),
-    .B(_270_),
-    .C(_176_),
-    .D(_284_),
-    .Y(_1300_)
+    .A(ibus_pending_rdt[8]),
+    .Y(_360_)
 );
 
-NAND2X1 _3274_ (
+MUX2X1 _3274_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1121_),
-    .B(_733__bF$buf5),
-    .Y(_285_)
+    .A(_360_),
+    .B(_959_),
+    .S(ibus_pending_ack_bF$buf1),
+    .Y(_361_)
 );
 
-INVX1 _3275_ (
+NAND3X1 _3275_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_285_),
-    .Y(_286_)
+    .A(_683_),
+    .B(_350_),
+    .C(_659__bF$buf5),
+    .Y(_362_)
 );
 
-AND2X2 _3276_ (
+OAI21X1 _3276_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_686_),
-    .B(_1118_),
-    .Y(_287_)
+    .A(_659__bF$buf4),
+    .B(_361_),
+    .C(_362_),
+    .Y(_363_)
 );
 
 AOI21X1 _3277_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_237_),
-    .B(_287_),
-    .C(_286_),
-    .Y(_288_)
+    .A(_351_),
+    .B(_684_),
+    .C(_363_),
+    .Y(_1230_)
 );
 
 INVX1 _3278_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[29]),
-    .Y(_289_)
+    .A(ibus_pending_rdt[7]),
+    .Y(_364_)
 );
 
-NAND2X1 _3279_ (
+MUX2X1 _3279_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf1),
-    .B(_289_),
-    .Y(_290_)
+    .A(_364_),
+    .B(_966_),
+    .S(ibus_pending_ack_bF$buf0),
+    .Y(_365_)
 );
 
-OAI21X1 _3280_ (
+NAND2X1 _3280_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [29]),
-    .B(ibus_pending_ack_bF$buf0),
-    .C(_290_),
-    .Y(_291_)
+    .A(_365_),
+    .B(_1692__bF$buf2),
+    .Y(_366_)
 );
 
-NAND2X1 _3281_ (
+OAI21X1 _3281_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_291_),
-    .B(_1693__bF$buf1),
-    .Y(_292_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [1]),
+    .B(_349_),
+    .C(_659__bF$buf3),
+    .Y(_367_)
 );
 
-OAI21X1 _3282_ (
+AOI22X1 _3282_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [5]),
-    .B(_1693__bF$buf0),
-    .C(_292_),
-    .Y(_293_)
+    .A(_366_),
+    .B(_367_),
+    .C(_351_),
+    .D(_686_),
+    .Y(_1229_)
 );
 
-NOR2X1 _3283_ (
+OAI21X1 _3283_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [4]),
-    .B(_288_),
-    .Y(_294_)
+    .A(_673__bF$buf0),
+    .B(_674__bF$buf1),
+    .C(\u_cpu.immdec.gen_immdec_w_eq_1.imm31 ),
+    .Y(_368_)
 );
 
-AOI21X1 _3284_ (
+INVX1 _3284_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_288_),
-    .B(_293_),
-    .C(_294_),
-    .Y(_1299_)
+    .A(ibus_pending_rdt[31]),
+    .Y(_369_)
 );
 
-INVX1 _3285_ (
+NAND2X1 _3285_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[28]),
-    .Y(_295_)
+    .A(ibus_pending_ack_bF$buf5),
+    .B(_369_),
+    .Y(_370_)
 );
 
-NAND2X1 _3286_ (
+OAI21X1 _3286_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf6),
-    .B(_295_),
-    .Y(_296_)
+    .A(\u_mem_serial.shift_reg [31]),
+    .B(ibus_pending_ack_bF$buf4),
+    .C(_370_),
+    .Y(_371_)
 );
 
 OAI21X1 _3287_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [28]),
-    .B(ibus_pending_ack_bF$buf5),
-    .C(_296_),
-    .Y(_297_)
+    .A(_659__bF$buf2),
+    .B(_371_),
+    .C(_368_),
+    .Y(_1228_)
 );
 
-NAND2X1 _3288_ (
+INVX1 _3288_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_297_),
-    .B(_1693__bF$buf5),
-    .Y(_298_)
+    .A(rreg0[4]),
+    .Y(_372_)
 );
 
-OAI21X1 _3289_ (
+NAND3X1 _3289_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [4]),
-    .B(_1693__bF$buf4),
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm31 ),
+    .B(_1543_),
+    .C(_659__bF$buf1),
+    .Y(_373_)
+);
+
+OAI21X1 _3290_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.branch_op ),
+    .B(_1692__bF$buf1),
+    .C(_373_),
+    .Y(_374_)
+);
+
+OAI21X1 _3291_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.branch_op ),
+    .B(rreg1[0]),
+    .C(_374_),
+    .Y(_375_)
+);
+
+AOI21X1 _3292_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1692__bF$buf0),
+    .B(_1694_),
     .C(_298_),
-    .Y(_299_)
+    .Y(_376_)
 );
 
-NOR2X1 _3290_ (
+AOI22X1 _3293_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [3]),
-    .B(_288_),
-    .Y(_300_)
+    .A(_372_),
+    .B(_298_),
+    .C(_375_),
+    .D(_376_),
+    .Y(_1227_)
 );
 
-AOI21X1 _3291_ (
+NOR2X1 _3294_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_288_),
-    .B(_299_),
-    .C(_300_),
-    .Y(_1298_)
+    .A(_1066_),
+    .B(_1692__bF$buf4),
+    .Y(_377_)
 );
 
-INVX1 _3292_ (
+AOI22X1 _3295_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[27]),
-    .Y(_301_)
-);
-
-NAND2X1 _3293_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf4),
-    .B(_301_),
-    .Y(_302_)
-);
-
-OAI21X1 _3294_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [27]),
-    .B(ibus_pending_ack_bF$buf3),
-    .C(_302_),
-    .Y(_303_)
-);
-
-NAND2X1 _3295_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_303_),
-    .B(_1693__bF$buf3),
-    .Y(_304_)
+    .A(_1692__bF$buf3),
+    .B(_365_),
+    .C(_377_),
+    .D(\u_cpu.immdec.gen_immdec_w_eq_1.imm7 ),
+    .Y(_378_)
 );
 
 OAI21X1 _3296_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [3]),
-    .B(_1693__bF$buf2),
-    .C(_304_),
-    .Y(_305_)
+    .A(_1065_),
+    .B(_373_),
+    .C(_378_),
+    .Y(_1226_)
 );
 
-NOR2X1 _3297_ (
+INVX1 _3297_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [2]),
-    .B(_288_),
-    .Y(_306_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm7 ),
+    .Y(_379_)
 );
 
-AOI21X1 _3298_ (
+NAND2X1 _3298_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_288_),
-    .B(_305_),
-    .C(_306_),
-    .Y(_1297_)
+    .A(_725_),
+    .B(_1520_),
+    .Y(_380_)
 );
 
-INVX1 _3299_ (
+OAI21X1 _3299_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[26]),
-    .Y(_307_)
+    .A(\u_cpu.decode.opcode [2]),
+    .B(\u_cpu.decode.opcode [1]),
+    .C(_380_),
+    .Y(_381_)
 );
 
-NAND2X1 _3300_ (
+INVX1 _3300_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf2),
-    .B(_307_),
-    .Y(_308_)
+    .A(_381_),
+    .Y(_382_)
 );
 
-OAI21X1 _3301_ (
+AOI21X1 _3301_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [26]),
-    .B(ibus_pending_ack_bF$buf1),
-    .C(_308_),
-    .Y(_309_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm31 ),
+    .B(_1543_),
+    .C(_382_),
+    .Y(_383_)
 );
 
 NAND2X1 _3302_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_309_),
-    .B(_1693__bF$buf1),
-    .Y(_310_)
+    .A(\u_cpu.branch_op ),
+    .B(_725_),
+    .Y(_384_)
 );
 
 OAI21X1 _3303_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [2]),
-    .B(_1693__bF$buf0),
-    .C(_310_),
-    .Y(_311_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [0]),
+    .B(_381_),
+    .C(_384_),
+    .Y(_385_)
 );
 
-NOR2X1 _3304_ (
+OAI22X1 _3304_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [1]),
-    .B(_288_),
-    .Y(_312_)
+    .A(_379_),
+    .B(_384_),
+    .C(_385_),
+    .D(_383_),
+    .Y(_386_)
 );
 
-AOI21X1 _3305_ (
+OAI21X1 _3305_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_288_),
-    .B(_311_),
-    .C(_312_),
-    .Y(_1296_)
+    .A(_673__bF$buf3),
+    .B(_674__bF$buf0),
+    .C(_386_),
+    .Y(_387_)
 );
 
-INVX1 _3306_ (
+OAI21X1 _3306_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[25]),
-    .Y(_313_)
+    .A(_659__bF$buf0),
+    .B(_292_),
+    .C(_387_),
+    .Y(_388_)
 );
 
 NAND2X1 _3307_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf0),
-    .B(_313_),
-    .Y(_314_)
+    .A(_388_),
+    .B(_315_),
+    .Y(_389_)
 );
 
 OAI21X1 _3308_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [25]),
-    .B(ibus_pending_ack_bF$buf6),
-    .C(_314_),
-    .Y(_315_)
+    .A(_318_),
+    .B(_315_),
+    .C(_389_),
+    .Y(_1225_)
 );
 
-NAND2X1 _3309_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_315_),
-    .B(_1693__bF$buf5),
-    .Y(_316_)
-);
-
-OAI21X1 _3310_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [1]),
-    .B(_1693__bF$buf4),
-    .C(_316_),
-    .Y(_317_)
-);
-
-NOR2X1 _3311_ (
+MUX2X1 _3309_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [0]),
-    .B(_288_),
-    .Y(_318_)
+    .B(_1746_),
+    .S(_659__bF$buf5),
+    .Y(_390_)
 );
 
-AOI21X1 _3312_ (
+NAND2X1 _3310_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_288_),
-    .B(_317_),
-    .C(_318_),
-    .Y(_1295_)
+    .A(rreg1[4]),
+    .B(_342_),
+    .Y(_391_)
 );
 
-INVX1 _3313_ (
+OAI21X1 _3311_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg1[3]),
-    .Y(_319_)
+    .A(_342_),
+    .B(_390_),
+    .C(_391_),
+    .Y(_1224_)
 );
 
-OAI21X1 _3314_ (
+INVX1 _3312_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1119_),
-    .B(_1118_),
-    .C(_741_),
-    .Y(_320_)
+    .A(ibus_pending_rdt[11]),
+    .Y(_392_)
+);
+
+MUX2X1 _3313_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_392_),
+    .B(_938_),
+    .S(ibus_pending_ack_bF$buf3),
+    .Y(_393_)
+);
+
+MUX2X1 _3314_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [0]),
+    .B(_393_),
+    .S(_659__bF$buf4),
+    .Y(_394_)
 );
 
 NAND2X1 _3315_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_320_),
-    .B(_754_),
-    .Y(_321_)
+    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [4]),
+    .B(_351_),
+    .Y(_395_)
 );
 
 OAI21X1 _3316_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg1[4]),
-    .B(_321_),
-    .C(_733__bF$buf4),
-    .Y(_322_)
+    .A(_351_),
+    .B(_394_),
+    .C(_395_),
+    .Y(_1223_)
 );
 
-AND2X2 _3317_ (
+INVX1 _3317_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_733__bF$buf3),
-    .B(_321_),
-    .Y(_323_)
+    .A(\u_cpu.bufreg.data [28]),
+    .Y(_396_)
 );
 
-AOI22X1 _3318_ (
+INVX1 _3318_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_319_),
-    .B(_323_),
-    .C(_188_),
-    .D(_322_),
-    .Y(_1294_)
+    .A(\u_cpu.bufreg.data [29]),
+    .Y(_397_)
 );
 
-INVX1 _3319_ (
+MUX2X1 _3319_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg1[2]),
-    .Y(_324_)
+    .A(_397_),
+    .B(_396_),
+    .S(_1536__bF$buf2),
+    .Y(_1222_)
 );
 
-OAI21X1 _3320_ (
+INVX1 _3320_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg1[3]),
-    .B(_321_),
-    .C(_733__bF$buf2),
-    .Y(_325_)
+    .A(\u_cpu.bufreg.data [27]),
+    .Y(_398_)
 );
 
-AOI22X1 _3321_ (
+MUX2X1 _3321_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_324_),
-    .B(_323_),
-    .C(_183_),
-    .D(_325_),
-    .Y(_1293_)
+    .A(_396_),
+    .B(_398_),
+    .S(_1536__bF$buf1),
+    .Y(_1221_)
 );
 
 INVX1 _3322_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg1[1]),
-    .Y(_326_)
+    .A(\u_cpu.bufreg.data [26]),
+    .Y(_399_)
 );
 
-OAI21X1 _3323_ (
+MUX2X1 _3323_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg1[2]),
-    .B(_321_),
-    .C(_733__bF$buf1),
-    .Y(_327_)
+    .A(_398_),
+    .B(_399_),
+    .S(_1536__bF$buf0),
+    .Y(_1220_)
 );
 
-AOI22X1 _3324_ (
+INVX1 _3324_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_326_),
-    .B(_323_),
-    .C(_180_),
-    .D(_327_),
-    .Y(_1292_)
+    .A(\u_cpu.bufreg.data [25]),
+    .Y(_400_)
 );
 
-OAI21X1 _3325_ (
+MUX2X1 _3325_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg1[1]),
-    .B(_321_),
-    .C(_733__bF$buf0),
-    .Y(_328_)
+    .A(_399_),
+    .B(_400_),
+    .S(_1536__bF$buf4),
+    .Y(_1219_)
 );
 
-AOI22X1 _3326_ (
+INVX1 _3326_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_678_),
-    .B(_323_),
-    .C(_176_),
-    .D(_328_),
-    .Y(_1291_)
+    .A(\u_cpu.bufreg.data [24]),
+    .Y(_401_)
 );
 
-INVX1 _3327_ (
+MUX2X1 _3327_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_740_),
-    .Y(_329_)
+    .A(_400_),
+    .B(_401_),
+    .S(_1536__bF$buf3),
+    .Y(_1218_)
 );
 
-NAND2X1 _3328_ (
+INVX1 _3328_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_754_),
-    .B(_329_),
-    .Y(_330_)
+    .A(\u_cpu.bufreg.data [23]),
+    .Y(_402_)
 );
 
-INVX1 _3329_ (
+MUX2X1 _3329_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_330_),
-    .Y(_331_)
+    .A(_401_),
+    .B(_402_),
+    .S(_1536__bF$buf2),
+    .Y(_1217_)
 );
 
-NOR2X1 _3330_ (
+INVX1 _3330_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_331_),
-    .B(_1693__bF$buf3),
-    .Y(_332_)
+    .A(\u_cpu.bufreg.data [22]),
+    .Y(_403_)
 );
 
-NAND2X1 _3331_ (
+MUX2X1 _3331_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_746_),
-    .B(_332_),
-    .Y(_333_)
+    .A(_402_),
+    .B(_403_),
+    .S(_1536__bF$buf1),
+    .Y(_1216_)
 );
 
 INVX1 _3332_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[10]),
-    .Y(_334_)
+    .A(\u_cpu.bufreg.data [21]),
+    .Y(_404_)
 );
 
-NAND2X1 _3333_ (
+MUX2X1 _3333_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf5),
-    .B(_334_),
-    .Y(_335_)
+    .A(_403_),
+    .B(_404_),
+    .S(_1536__bF$buf0),
+    .Y(_1215_)
 );
 
-OAI21X1 _3334_ (
+INVX1 _3334_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [10]),
-    .B(ibus_pending_ack_bF$buf4),
-    .C(_335_),
-    .Y(_336_)
+    .A(\u_cpu.bufreg.data [20]),
+    .Y(_405_)
 );
 
-NAND2X1 _3335_ (
+MUX2X1 _3335_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_336_),
-    .B(_1693__bF$buf2),
-    .Y(_337_)
+    .A(_404_),
+    .B(_405_),
+    .S(_1536__bF$buf4),
+    .Y(_1214_)
 );
 
-NAND3X1 _3336_ (
+INVX1 _3336_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_751_),
-    .B(_331_),
-    .C(_733__bF$buf5),
-    .Y(_338_)
+    .A(\u_cpu.bufreg.data [19]),
+    .Y(_406_)
 );
 
-NAND3X1 _3337_ (
+MUX2X1 _3337_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_337_),
-    .B(_338_),
-    .C(_333_),
-    .Y(_339_)
+    .A(_405_),
+    .B(_406_),
+    .S(_1536__bF$buf3),
+    .Y(_1213_)
 );
 
 INVX1 _3338_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_339_),
-    .Y(_1290_)
+    .A(\u_cpu.bufreg.data [18]),
+    .Y(_407_)
 );
 
-NAND2X1 _3339_ (
+MUX2X1 _3339_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_747_),
-    .B(_332_),
-    .Y(_340_)
+    .A(_406_),
+    .B(_407_),
+    .S(_1536__bF$buf2),
+    .Y(_1212_)
 );
 
 INVX1 _3340_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[9]),
-    .Y(_341_)
+    .A(\u_cpu.bufreg.data [17]),
+    .Y(_408_)
 );
 
-NAND2X1 _3341_ (
+MUX2X1 _3341_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf3),
-    .B(_341_),
-    .Y(_342_)
+    .A(_407_),
+    .B(_408_),
+    .S(_1536__bF$buf1),
+    .Y(_1211_)
 );
 
-OAI21X1 _3342_ (
+INVX1 _3342_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [9]),
-    .B(ibus_pending_ack_bF$buf2),
-    .C(_342_),
-    .Y(_343_)
+    .A(\u_cpu.bufreg.data [16]),
+    .Y(_409_)
 );
 
-NAND2X1 _3343_ (
+MUX2X1 _3343_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_343_),
-    .B(_1693__bF$buf1),
-    .Y(_344_)
+    .A(_408_),
+    .B(_409_),
+    .S(_1536__bF$buf0),
+    .Y(_1210_)
 );
 
-NAND3X1 _3344_ (
+INVX1 _3344_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_746_),
-    .B(_331_),
-    .C(_733__bF$buf4),
-    .Y(_345_)
+    .A(\u_cpu.bufreg.data [15]),
+    .Y(_410_)
 );
 
-NAND3X1 _3345_ (
+MUX2X1 _3345_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_344_),
-    .B(_345_),
-    .C(_340_),
-    .Y(_346_)
+    .A(_409_),
+    .B(_410_),
+    .S(_1536__bF$buf4),
+    .Y(_1209_)
 );
 
 INVX1 _3346_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_346_),
-    .Y(_1289_)
+    .A(\u_cpu.bufreg.data [14]),
+    .Y(_411_)
 );
 
-NAND2X1 _3347_ (
+MUX2X1 _3347_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_748_),
-    .B(_332_),
-    .Y(_347_)
+    .A(_410_),
+    .B(_411_),
+    .S(_1536__bF$buf3),
+    .Y(_1208_)
 );
 
 INVX1 _3348_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[8]),
-    .Y(_348_)
+    .A(\u_cpu.bufreg.data [13]),
+    .Y(_412_)
 );
 
-NAND2X1 _3349_ (
+MUX2X1 _3349_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf1),
-    .B(_348_),
-    .Y(_349_)
+    .A(_411_),
+    .B(_412_),
+    .S(_1536__bF$buf2),
+    .Y(_1207_)
 );
 
-OAI21X1 _3350_ (
+INVX1 _3350_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [8]),
-    .B(ibus_pending_ack_bF$buf0),
-    .C(_349_),
-    .Y(_350_)
+    .A(\u_cpu.bufreg.data [12]),
+    .Y(_413_)
 );
 
-NAND2X1 _3351_ (
+MUX2X1 _3351_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_350_),
-    .B(_1693__bF$buf0),
-    .Y(_351_)
+    .A(_412_),
+    .B(_413_),
+    .S(_1536__bF$buf1),
+    .Y(_1206_)
 );
 
-NAND3X1 _3352_ (
+INVX1 _3352_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_747_),
-    .B(_331_),
-    .C(_733__bF$buf3),
-    .Y(_352_)
+    .A(\u_cpu.bufreg.data [11]),
+    .Y(_414_)
 );
 
-NAND3X1 _3353_ (
+MUX2X1 _3353_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_351_),
-    .B(_352_),
-    .C(_347_),
-    .Y(_353_)
+    .A(_413_),
+    .B(_414_),
+    .S(_1536__bF$buf0),
+    .Y(_1205_)
 );
 
 INVX1 _3354_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_353_),
-    .Y(_1288_)
+    .A(\u_cpu.bufreg.data [10]),
+    .Y(_415_)
 );
 
-INVX1 _3355_ (
+MUX2X1 _3355_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[7]),
-    .Y(_354_)
+    .A(_414_),
+    .B(_415_),
+    .S(_1536__bF$buf4),
+    .Y(_1204_)
 );
 
-MUX2X1 _3356_ (
+INVX1 _3356_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_354_),
-    .B(_992_),
-    .S(ibus_pending_ack_bF$buf6),
-    .Y(_355_)
+    .A(\u_cpu.bufreg.data [9]),
+    .Y(_416_)
 );
 
-NAND2X1 _3357_ (
+MUX2X1 _3357_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_355_),
-    .B(_1693__bF$buf5),
-    .Y(_356_)
+    .A(_415_),
+    .B(_416_),
+    .S(_1536__bF$buf3),
+    .Y(_1203_)
 );
 
-OAI21X1 _3358_ (
+INVX1 _3358_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [1]),
-    .B(_330_),
-    .C(_733__bF$buf2),
-    .Y(_357_)
+    .A(\u_cpu.bufreg.data [8]),
+    .Y(_417_)
 );
 
-AOI22X1 _3359_ (
+MUX2X1 _3359_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_356_),
-    .B(_357_),
-    .C(_332_),
-    .D(_750_),
-    .Y(_1287_)
+    .A(_416_),
+    .B(_417_),
+    .S(_1536__bF$buf2),
+    .Y(_1202_)
 );
 
-NAND2X1 _3360_ (
+INVX1 _3360_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm31 ),
-    .B(_733__bF$buf1),
-    .Y(_358_)
+    .A(\u_cpu.bufreg.data [7]),
+    .Y(_418_)
 );
 
-INVX1 _3361_ (
+MUX2X1 _3361_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_rdt[31]),
-    .Y(_359_)
+    .A(_417_),
+    .B(_418_),
+    .S(_1536__bF$buf1),
+    .Y(_1201_)
 );
 
-NAND2X1 _3362_ (
+INVX1 _3362_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf5),
-    .B(_359_),
-    .Y(_360_)
+    .A(\u_cpu.bufreg.data [6]),
+    .Y(_419_)
 );
 
-OAI21X1 _3363_ (
+MUX2X1 _3363_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [31]),
-    .B(ibus_pending_ack_bF$buf4),
-    .C(_360_),
-    .Y(_361_)
+    .A(_418_),
+    .B(_419_),
+    .S(_1536__bF$buf0),
+    .Y(_1200_)
 );
 
-OAI21X1 _3364_ (
+INVX1 _3364_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_733__bF$buf0),
-    .B(_361_),
-    .C(_358_),
-    .Y(_1286_)
+    .A(\u_cpu.bufreg.data [5]),
+    .Y(_420_)
 );
 
-INVX1 _3365_ (
+MUX2X1 _3365_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(rreg0[4]),
-    .Y(_362_)
+    .A(_419_),
+    .B(_420_),
+    .S(_1536__bF$buf4),
+    .Y(_1199_)
 );
 
-NAND3X1 _3366_ (
+INVX1 _3366_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm31 ),
-    .B(_674_),
-    .C(_733__bF$buf5),
-    .Y(_363_)
+    .A(\u_cpu.bufreg.data [4]),
+    .Y(_421_)
 );
 
-OAI21X1 _3367_ (
+MUX2X1 _3367_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.branch_op ),
-    .B(_1693__bF$buf4),
-    .C(_363_),
-    .Y(_364_)
+    .A(_420_),
+    .B(_421_),
+    .S(_1536__bF$buf3),
+    .Y(_1198_)
 );
 
-OAI21X1 _3368_ (
+INVX1 _3368_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.branch_op ),
-    .B(rreg1[0]),
-    .C(_364_),
-    .Y(_365_)
+    .A(\u_cpu.bufreg.data [3]),
+    .Y(_422_)
 );
 
-AOI21X1 _3369_ (
+MUX2X1 _3369_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1693__bF$buf3),
-    .B(_1725_),
-    .C(_270_),
-    .Y(_366_)
+    .A(_421_),
+    .B(_422_),
+    .S(_1536__bF$buf2),
+    .Y(_1197_)
 );
 
-AOI22X1 _3370_ (
+NOR2X1 _3370_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_362_),
-    .B(_270_),
-    .C(_365_),
-    .D(_366_),
-    .Y(_1285_)
+    .A(\u_cpu.bufreg.data [2]),
+    .B(_1536__bF$buf1),
+    .Y(_423_)
 );
 
-INVX1 _3371_ (
+AOI21X1 _3371_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm7 ),
-    .Y(_367_)
+    .A(_422_),
+    .B(_1536__bF$buf0),
+    .C(_423_),
+    .Y(_1196_)
 );
 
-AOI21X1 _3372_ (
+INVX2 _3372_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1693__bF$buf2),
-    .B(_355_),
-    .C(_286_),
-    .Y(_368_)
+    .A(_1536__bF$buf4),
+    .Y(_424_)
 );
 
-AOI22X1 _3373_ (
+OAI21X1 _3373_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_367_),
-    .B(_286_),
-    .C(_368_),
-    .D(_363_),
-    .Y(_1284_)
+    .A(\u_cpu.state.cnt_r [0]),
+    .B(\u_cpu.state.cnt_r [1]),
+    .C(_1554_),
+    .Y(_425_)
 );
 
-INVX1 _3374_ (
+MUX2X1 _3374_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [5]),
-    .Y(_369_)
+    .A(_424_),
+    .B(_425_),
+    .S(_704_),
+    .Y(_426_)
 );
 
-NAND2X1 _3375_ (
+MUX2X1 _3375_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_744_),
-    .B(_691_),
-    .Y(_370_)
+    .A(_780_),
+    .B(_766_),
+    .S(_426_),
+    .Y(_1195_)
 );
 
-OAI21X1 _3376_ (
+INVX1 _3376_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.decode.opcode [2]),
+    .A(\u_cpu.bufreg.data [30]),
+    .Y(_427_)
+);
+
+MUX2X1 _3377_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_427_),
+    .B(_397_),
+    .S(_1536__bF$buf3),
+    .Y(_1194_)
+);
+
+NOR2X1 _3378_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.data [31]),
+    .B(_424_),
+    .Y(_428_)
+);
+
+AOI21X1 _3379_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_427_),
+    .B(_424_),
+    .C(_428_),
+    .Y(_1193_)
+);
+
+NAND2X1 _3380_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.decode.opcode [0]),
     .B(\u_cpu.decode.opcode [1]),
-    .C(_370_),
-    .Y(_371_)
+    .Y(_429_)
 );
 
-INVX1 _3377_ (
+AOI21X1 _3381_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_371_),
-    .Y(_372_)
+    .A(_380_),
+    .B(_429_),
+    .C(_1063_),
+    .Y(_430_)
 );
 
-AOI21X1 _3378_ (
+AOI21X1 _3382_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm31 ),
-    .B(_674_),
-    .C(_372_),
-    .Y(_373_)
-);
-
-NAND2X1 _3379_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.branch_op ),
-    .B(_744_),
-    .Y(_374_)
-);
-
-OAI21X1 _3380_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [0]),
-    .B(_371_),
-    .C(_374_),
-    .Y(_375_)
-);
-
-OAI22X1 _3381_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_367_),
-    .B(_374_),
-    .C(_375_),
-    .D(_373_),
-    .Y(_376_)
-);
-
-NAND2X1 _3382_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_376_),
-    .B(_733__bF$buf4),
-    .Y(_377_)
+    .A(_1585_),
+    .B(_430_),
+    .C(\u_cpu.decode.opcode [2]),
+    .Y(_431_)
 );
 
 NAND2X1 _3383_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_377_),
-    .B(_264_),
-    .Y(_378_)
-);
-
-NAND2X1 _3384_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_378_),
-    .B(_288_),
-    .Y(_379_)
-);
-
-OAI21X1 _3385_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_369_),
-    .B(_288_),
-    .C(_379_),
-    .Y(_1283_)
-);
-
-MUX2X1 _3386_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [0]),
-    .B(_1695_),
-    .S(_733__bF$buf3),
-    .Y(_380_)
-);
-
-NAND2X1 _3387_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(rreg1[4]),
-    .B(_323_),
-    .Y(_381_)
-);
-
-OAI21X1 _3388_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_323_),
-    .B(_380_),
-    .C(_381_),
-    .Y(_1282_)
-);
-
-INVX1 _3389_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(ibus_pending_rdt[11]),
-    .Y(_382_)
-);
-
-MUX2X1 _3390_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_382_),
-    .B(_960_),
-    .S(ibus_pending_ack_bF$buf3),
-    .Y(_383_)
-);
-
-MUX2X1 _3391_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [0]),
-    .B(_383_),
-    .S(_733__bF$buf2),
-    .Y(_384_)
-);
-
-NAND2X1 _3392_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [4]),
-    .B(_332_),
-    .Y(_385_)
-);
-
-OAI21X1 _3393_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_332_),
-    .B(_384_),
-    .C(_385_),
-    .Y(_1281_)
-);
-
-INVX1 _3394_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [28]),
-    .Y(_386_)
-);
-
-INVX1 _3395_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [29]),
-    .Y(_387_)
-);
-
-MUX2X1 _3396_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_386_),
-    .B(_387_),
-    .S(_661__bF$buf3),
-    .Y(_1280_)
-);
-
-INVX1 _3397_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [27]),
-    .Y(_388_)
-);
-
-MUX2X1 _3398_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_388_),
-    .B(_386_),
-    .S(_661__bF$buf2),
-    .Y(_1279_)
-);
-
-INVX1 _3399_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [26]),
-    .Y(_389_)
-);
-
-MUX2X1 _3400_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_389_),
-    .B(_388_),
-    .S(_661__bF$buf1),
-    .Y(_1278_)
-);
-
-INVX1 _3401_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [25]),
-    .Y(_390_)
-);
-
-MUX2X1 _3402_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_390_),
-    .B(_389_),
-    .S(_661__bF$buf0),
-    .Y(_1277_)
-);
-
-INVX1 _3403_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [24]),
-    .Y(_391_)
-);
-
-MUX2X1 _3404_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_391_),
-    .B(_390_),
-    .S(_661__bF$buf4),
-    .Y(_1276_)
-);
-
-INVX1 _3405_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [23]),
-    .Y(_392_)
-);
-
-MUX2X1 _3406_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_392_),
-    .B(_391_),
-    .S(_661__bF$buf3),
-    .Y(_1275_)
-);
-
-INVX1 _3407_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [22]),
-    .Y(_393_)
-);
-
-MUX2X1 _3408_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_393_),
-    .B(_392_),
-    .S(_661__bF$buf2),
-    .Y(_1274_)
-);
-
-INVX1 _3409_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [21]),
-    .Y(_394_)
-);
-
-MUX2X1 _3410_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_394_),
-    .B(_393_),
-    .S(_661__bF$buf1),
-    .Y(_1273_)
-);
-
-INVX1 _3411_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [20]),
-    .Y(_395_)
-);
-
-MUX2X1 _3412_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_395_),
-    .B(_394_),
-    .S(_661__bF$buf0),
-    .Y(_1272_)
-);
-
-INVX1 _3413_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [19]),
-    .Y(_396_)
-);
-
-MUX2X1 _3414_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_396_),
-    .B(_395_),
-    .S(_661__bF$buf4),
-    .Y(_1271_)
-);
-
-INVX1 _3415_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [18]),
-    .Y(_397_)
-);
-
-MUX2X1 _3416_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_397_),
-    .B(_396_),
-    .S(_661__bF$buf3),
-    .Y(_1270_)
-);
-
-INVX1 _3417_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [17]),
-    .Y(_398_)
-);
-
-MUX2X1 _3418_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_398_),
-    .B(_397_),
-    .S(_661__bF$buf2),
-    .Y(_1269_)
-);
-
-INVX1 _3419_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [16]),
-    .Y(_399_)
-);
-
-MUX2X1 _3420_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_399_),
-    .B(_398_),
-    .S(_661__bF$buf1),
-    .Y(_1268_)
-);
-
-INVX1 _3421_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [15]),
-    .Y(_400_)
-);
-
-MUX2X1 _3422_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_400_),
-    .B(_399_),
-    .S(_661__bF$buf0),
-    .Y(_1267_)
-);
-
-INVX1 _3423_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [14]),
-    .Y(_401_)
-);
-
-MUX2X1 _3424_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_401_),
-    .B(_400_),
-    .S(_661__bF$buf4),
-    .Y(_1266_)
-);
-
-INVX1 _3425_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [13]),
-    .Y(_402_)
-);
-
-MUX2X1 _3426_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_402_),
-    .B(_401_),
-    .S(_661__bF$buf3),
-    .Y(_1265_)
-);
-
-INVX1 _3427_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [12]),
-    .Y(_403_)
-);
-
-MUX2X1 _3428_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_403_),
-    .B(_402_),
-    .S(_661__bF$buf2),
-    .Y(_1264_)
-);
-
-INVX1 _3429_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [11]),
-    .Y(_404_)
-);
-
-MUX2X1 _3430_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_404_),
-    .B(_403_),
-    .S(_661__bF$buf1),
-    .Y(_1263_)
-);
-
-INVX1 _3431_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [10]),
-    .Y(_405_)
-);
-
-MUX2X1 _3432_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_405_),
-    .B(_404_),
-    .S(_661__bF$buf0),
-    .Y(_1262_)
-);
-
-INVX1 _3433_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [9]),
-    .Y(_406_)
-);
-
-MUX2X1 _3434_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_406_),
-    .B(_405_),
-    .S(_661__bF$buf4),
-    .Y(_1261_)
-);
-
-INVX1 _3435_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [8]),
-    .Y(_407_)
-);
-
-MUX2X1 _3436_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_407_),
-    .B(_406_),
-    .S(_661__bF$buf3),
-    .Y(_1260_)
-);
-
-INVX1 _3437_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [7]),
-    .Y(_408_)
-);
-
-MUX2X1 _3438_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_408_),
-    .B(_407_),
-    .S(_661__bF$buf2),
-    .Y(_1259_)
-);
-
-INVX1 _3439_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [6]),
-    .Y(_409_)
-);
-
-MUX2X1 _3440_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_409_),
-    .B(_408_),
-    .S(_661__bF$buf1),
-    .Y(_1258_)
-);
-
-INVX1 _3441_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [5]),
-    .Y(_410_)
-);
-
-MUX2X1 _3442_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_410_),
-    .B(_409_),
-    .S(_661__bF$buf0),
-    .Y(_1257_)
-);
-
-INVX1 _3443_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [4]),
-    .Y(_411_)
-);
-
-MUX2X1 _3444_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_411_),
-    .B(_410_),
-    .S(_661__bF$buf4),
-    .Y(_1256_)
-);
-
-INVX1 _3445_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [3]),
-    .Y(_412_)
-);
-
-MUX2X1 _3446_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_412_),
-    .B(_411_),
-    .S(_661__bF$buf3),
-    .Y(_1255_)
-);
-
-INVX1 _3447_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [2]),
-    .Y(_413_)
-);
-
-MUX2X1 _3448_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_413_),
-    .B(_412_),
-    .S(_661__bF$buf2),
-    .Y(_1254_)
-);
-
-OAI21X1 _3449_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.state.cnt_r [0]),
-    .B(\u_cpu.state.cnt_r [1]),
-    .C(_656_),
-    .Y(_414_)
-);
-
-MUX2X1 _3450_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_661__bF$buf1),
-    .B(_414_),
-    .S(_753_),
-    .Y(_415_)
-);
-
-MUX2X1 _3451_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1535_),
-    .B(_666_),
-    .S(_415_),
-    .Y(_1253_)
-);
-
-INVX1 _3452_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [30]),
-    .Y(_416_)
-);
-
-MUX2X1 _3453_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_387_),
-    .B(_416_),
-    .S(_661__bF$buf0),
-    .Y(_1252_)
-);
-
-INVX1 _3454_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.data [31]),
-    .Y(_417_)
-);
-
-MUX2X1 _3455_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_416_),
-    .B(_417_),
-    .S(_661__bF$buf4),
-    .Y(_1251_)
-);
-
-NOR2X1 _3456_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_413_),
-    .B(_786_),
-    .Y(_418_)
-);
-
-OAI21X1 _3457_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.decode.opcode [1]),
-    .B(_744_),
-    .C(\u_cpu.branch_op ),
-    .Y(_419_)
-);
-
-INVX1 _3458_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_419_),
-    .Y(_420_)
-);
-
-OAI21X1 _3459_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.decode.opcode [0]),
-    .B(_691_),
-    .C(_420_),
-    .Y(_421_)
-);
-
-OAI21X1 _3460_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_421_),
-    .B(_655_),
-    .C(_1118_),
-    .Y(_422_)
-);
-
-AOI21X1 _3461_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_675_),
-    .B(_673_),
-    .C(_422_),
-    .Y(_423_)
-);
-
-NAND3X1 _3462_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.c_r ),
-    .B(_419_),
-    .C(_1130_),
-    .Y(_424_)
-);
-
-INVX1 _3463_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg.c_r ),
-    .Y(_425_)
-);
-
-OAI21X1 _3464_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_420_),
-    .B(_1517_),
-    .C(_425_),
-    .Y(_426_)
-);
-
-AND2X2 _3465_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_426_),
-    .B(_424_),
-    .Y(_427_)
-);
-
-OAI21X1 _3466_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_427_),
-    .B(_423_),
-    .C(_786_),
-    .Y(_428_)
-);
-
-AOI21X1 _3467_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_423_),
-    .B(_427_),
-    .C(_428_),
-    .Y(_429_)
-);
-
-OAI21X1 _3468_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_418_),
-    .B(_429_),
-    .C(_415_),
-    .Y(_430_)
-);
-
-OAI21X1 _3469_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1535_),
-    .B(_415_),
-    .C(_430_),
-    .Y(_1250_)
-);
-
-NAND2X1 _3470_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_427_),
-    .B(_423_),
-    .Y(_431_)
-);
-
-AOI21X1 _3471_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_424_),
+    .A(_1545_),
     .B(_431_),
-    .C(_661__bF$buf3),
-    .Y(_1249_)
-);
-
-NOR2X1 _3472_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_417_),
-    .B(_261_),
     .Y(_432_)
 );
 
-AOI21X1 _3473_ (
+OAI21X1 _3384_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_753_),
-    .B(_432_),
-    .C(_429_),
+    .A(_1063_),
+    .B(\u_cpu.decode.opcode [0]),
+    .C(_1561_),
     .Y(_433_)
 );
 
-NAND2X1 _3474_ (
+AOI21X1 _3385_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.data [31]),
-    .B(_661__bF$buf2),
+    .A(\u_cpu.branch_op ),
+    .B(\u_cpu.decode.opcode [1]),
+    .C(_433_),
     .Y(_434_)
 );
 
-OAI21X1 _3475_ (
+NAND2X1 _3386_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_661__bF$buf1),
-    .B(_433_),
-    .C(_434_),
-    .Y(_1248_)
+    .A(\u_cpu.bufreg.c_r ),
+    .B(_434_),
+    .Y(_435_)
 );
 
-NOR2X1 _3476_ (
+OR2X2 _3387_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_434_),
+    .B(\u_cpu.bufreg.c_r ),
+    .Y(_436_)
+);
+
+NAND2X1 _3388_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_435_),
+    .B(_436_),
+    .Y(_437_)
+);
+
+OR2X2 _3389_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_432_),
+    .B(_437_),
+    .Y(_438_)
+);
+
+AOI21X1 _3390_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_432_),
+    .B(_437_),
+    .C(_704_),
+    .Y(_439_)
+);
+
+AND2X2 _3391_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_438_),
+    .B(_439_),
+    .Y(_440_)
+);
+
+AOI21X1 _3392_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.data [2]),
+    .B(_704_),
+    .C(_440_),
+    .Y(_441_)
+);
+
+MUX2X1 _3393_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_441_),
+    .B(_780_),
+    .S(_426_),
+    .Y(_1192_)
+);
+
+AOI21X1 _3394_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_438_),
+    .B(_435_),
+    .C(_424_),
+    .Y(_1191_)
+);
+
+AND2X2 _3395_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.i_sh_signed ),
+    .B(\u_cpu.bufreg.data [31]),
+    .Y(_442_)
+);
+
+AOI21X1 _3396_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_704_),
+    .B(_442_),
+    .C(_440_),
+    .Y(_443_)
+);
+
+NAND2X1 _3397_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.data [31]),
+    .B(_424_),
+    .Y(_444_)
+);
+
+OAI21X1 _3398_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_424_),
+    .B(_443_),
+    .C(_444_),
+    .Y(_1190_)
+);
+
+NOR2X1 _3399_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_cpu.bufreg2.i_bytecnt [1]),
     .B(\u_cpu.state.i_ctrl_misalign ),
-    .Y(_435_)
+    .Y(_445_)
 );
 
-AOI22X1 _3477_ (
+AOI22X1 _3400_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_cpu.bufreg2.i_bytecnt [0]),
     .B(\u_cpu.bufreg.data [0]),
     .C(\u_cpu.bufreg2.i_bytecnt [1]),
     .D(\u_cpu.state.i_ctrl_misalign ),
-    .Y(_436_)
+    .Y(_446_)
 );
 
-OAI21X1 _3478_ (
+OAI21X1 _3401_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_435_),
-    .B(_436_),
-    .C(_754_),
-    .Y(_437_)
+    .A(_445_),
+    .B(_446_),
+    .C(_1066_),
+    .Y(_447_)
 );
 
-OAI21X1 _3479_ (
+INVX1 _3402_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_657_),
-    .B(_753_),
-    .C(_794_),
-    .Y(_438_)
+    .A(_447_),
+    .Y(_448_)
 );
 
-INVX1 _3480_ (
+OAI21X1 _3403_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_438_),
-    .Y(_439_)
+    .A(_1553_),
+    .B(_704_),
+    .C(_727_),
+    .Y(_449_)
 );
 
-OAI21X1 _3481_ (
+AOI21X1 _3404_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_437_),
-    .B(_439_),
-    .C(_761_),
-    .Y(_440_)
+    .A(_449_),
+    .B(_448_),
+    .C(mem_dbus_ack_bF$buf4),
+    .Y(_450_)
 );
 
-NOR2X1 _3482_ (
+NAND2X1 _3405_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_781_),
-    .B(_440__bF$buf5),
-    .Y(_441_)
+    .A(_708_),
+    .B(_450__bF$buf4),
+    .Y(_451_)
+);
+
+INVX2 _3406_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_451_),
+    .Y(_452_)
+);
+
+NAND2X1 _3407_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dhi [6]),
+    .B(_452_),
+    .Y(_453_)
+);
+
+NAND2X1 _3408_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf3),
+    .B(_805_),
+    .Y(_454_)
+);
+
+OAI21X1 _3409_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf2),
+    .B(\u_cpu.bufreg2.cnt_next [6]),
+    .C(_454_),
+    .Y(_455_)
+);
+
+OAI21X1 _3410_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_452_),
+    .B(_455_),
+    .C(_453_),
+    .Y(_1189_)
+);
+
+NOR2X1 _3411_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dhi [5]),
+    .B(_666_),
+    .Y(_456_)
+);
+
+NAND3X1 _3412_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1552_),
+    .B(_727_),
+    .C(_223_),
+    .Y(_457_)
+);
+
+OAI21X1 _3413_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_457_),
+    .B(_717_),
+    .C(_697_),
+    .Y(_458_)
+);
+
+OR2X2 _3414_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_663_),
+    .B(_458_),
+    .Y(_459_)
+);
+
+AOI21X1 _3415_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf1),
+    .B(\u_mem_serial.shift_reg [29]),
+    .C(_452_),
+    .Y(_460_)
+);
+
+AOI22X1 _3416_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_450__bF$buf3),
+    .B(_456_),
+    .C(_460_),
+    .D(_459_),
+    .Y(_1188_)
+);
+
+NAND2X1 _3417_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf0),
+    .B(_819_),
+    .Y(_461_)
+);
+
+NOR2X1 _3418_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dhi [4]),
+    .B(_714_),
+    .Y(_462_)
+);
+
+NOR2X1 _3419_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_768_),
+    .B(_712_),
+    .Y(_463_)
+);
+
+NOR2X1 _3420_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_462_),
+    .B(_463_),
+    .Y(_464_)
+);
+
+AOI21X1 _3421_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_666_),
+    .B(_464_),
+    .C(_456_),
+    .Y(_465_)
+);
+
+OAI21X1 _3422_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf6),
+    .B(_465_),
+    .C(_461_),
+    .Y(_466_)
+);
+
+MUX2X1 _3423_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_466_),
+    .B(_768_),
+    .S(_451_),
+    .Y(_1187_)
+);
+
+NAND2X1 _3424_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf5),
+    .B(_826_),
+    .Y(_467_)
+);
+
+NAND2X1 _3425_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_716_),
+    .B(_715_),
+    .Y(_468_)
+);
+
+INVX1 _3426_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_468_),
+    .Y(_469_)
+);
+
+NOR2X1 _3427_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_776_),
+    .B(_469_),
+    .Y(_470_)
+);
+
+NOR2X1 _3428_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_712_),
+    .B(_470_),
+    .Y(_471_)
+);
+
+MUX2X1 _3429_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_768_),
+    .B(_471_),
+    .S(_708_),
+    .Y(_472_)
+);
+
+OAI21X1 _3430_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf4),
+    .B(_472_),
+    .C(_467_),
+    .Y(_473_)
+);
+
+MUX2X1 _3431_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_473_),
+    .B(_776_),
+    .S(_451_),
+    .Y(_1186_)
+);
+
+NOR2X1 _3432_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_716_),
+    .B(_715_),
+    .Y(_474_)
+);
+
+NOR2X1 _3433_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_474_),
+    .B(_469_),
+    .Y(_475_)
+);
+
+OAI21X1 _3434_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_475_),
+    .B(_708_),
+    .C(_697_),
+    .Y(_476_)
+);
+
+AOI21X1 _3435_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dhi [3]),
+    .B(_708_),
+    .C(_476_),
+    .Y(_477_)
+);
+
+OAI21X1 _3436_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_697_),
+    .B(\u_mem_serial.shift_reg [26]),
+    .C(_451_),
+    .Y(_478_)
+);
+
+OAI22X1 _3437_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_716_),
+    .B(_451_),
+    .C(_477_),
+    .D(_478_),
+    .Y(_1185_)
+);
+
+INVX1 _3438_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.i_shamt [1]),
+    .Y(_479_)
+);
+
+NOR2X1 _3439_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.i_shamt [1]),
+    .B(_1597_),
+    .Y(_480_)
+);
+
+NOR2X1 _3440_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.i_shamt [0]),
+    .B(_479_),
+    .Y(_481_)
+);
+
+NOR2X1 _3441_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_480_),
+    .B(_481_),
+    .Y(_482_)
+);
+
+OAI21X1 _3442_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_716_),
+    .B(_666_),
+    .C(_697_),
+    .Y(_483_)
+);
+
+AOI21X1 _3443_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_666_),
+    .B(_482_),
+    .C(_483_),
+    .Y(_484_)
+);
+
+OAI21X1 _3444_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_697_),
+    .B(\u_mem_serial.shift_reg [25]),
+    .C(_451_),
+    .Y(_485_)
+);
+
+OAI22X1 _3445_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_479_),
+    .B(_451_),
+    .C(_484_),
+    .D(_485_),
+    .Y(_1184_)
+);
+
+NAND2X1 _3446_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.i_shamt [0]),
+    .B(_452_),
+    .Y(_486_)
+);
+
+NAND2X1 _3447_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.i_shamt [1]),
+    .B(_708_),
+    .Y(_487_)
+);
+
+OAI21X1 _3448_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg.i_shamt [0]),
+    .B(_708_),
+    .C(_487_),
+    .Y(_488_)
+);
+
+MUX2X1 _3449_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_488_),
+    .B(\u_mem_serial.shift_reg [24]),
+    .S(_697_),
+    .Y(_489_)
+);
+
+OAI21X1 _3450_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_452_),
+    .B(_489_),
+    .C(_486_),
+    .Y(_1183_)
+);
+
+INVX1 _3451_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dlo [22]),
+    .Y(_490_)
+);
+
+NAND2X1 _3452_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf3),
+    .B(_861_),
+    .Y(_491_)
+);
+
+OAI21X1 _3453_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf2),
+    .B(\u_cpu.bufreg2.dlo [23]),
+    .C(_491_),
+    .Y(_492_)
+);
+
+MUX2X1 _3454_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_490_),
+    .B(_492_),
+    .S(_450__bF$buf2),
+    .Y(_1182_)
+);
+
+INVX1 _3455_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dlo [21]),
+    .Y(_493_)
+);
+
+NAND2X1 _3456_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf1),
+    .B(_868_),
+    .Y(_494_)
+);
+
+OAI21X1 _3457_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf0),
+    .B(\u_cpu.bufreg2.dlo [22]),
+    .C(_494_),
+    .Y(_495_)
+);
+
+MUX2X1 _3458_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_493_),
+    .B(_495_),
+    .S(_450__bF$buf1),
+    .Y(_1181_)
+);
+
+INVX1 _3459_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dlo [20]),
+    .Y(_496_)
+);
+
+NAND2X1 _3460_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf6),
+    .B(_875_),
+    .Y(_497_)
+);
+
+OAI21X1 _3461_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf5),
+    .B(\u_cpu.bufreg2.dlo [21]),
+    .C(_497_),
+    .Y(_498_)
+);
+
+MUX2X1 _3462_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_496_),
+    .B(_498_),
+    .S(_450__bF$buf0),
+    .Y(_1180_)
+);
+
+INVX1 _3463_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dlo [19]),
+    .Y(_499_)
+);
+
+NAND2X1 _3464_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf4),
+    .B(_882_),
+    .Y(_500_)
+);
+
+OAI21X1 _3465_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf3),
+    .B(\u_cpu.bufreg2.dlo [20]),
+    .C(_500_),
+    .Y(_501_)
+);
+
+MUX2X1 _3466_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_499_),
+    .B(_501_),
+    .S(_450__bF$buf4),
+    .Y(_1179_)
+);
+
+INVX1 _3467_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dlo [18]),
+    .Y(_502_)
+);
+
+NAND2X1 _3468_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf2),
+    .B(_889_),
+    .Y(_503_)
+);
+
+OAI21X1 _3469_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf1),
+    .B(\u_cpu.bufreg2.dlo [19]),
+    .C(_503_),
+    .Y(_504_)
+);
+
+MUX2X1 _3470_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_502_),
+    .B(_504_),
+    .S(_450__bF$buf3),
+    .Y(_1178_)
+);
+
+INVX1 _3471_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dlo [17]),
+    .Y(_505_)
+);
+
+NAND2X1 _3472_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf0),
+    .B(_896_),
+    .Y(_506_)
+);
+
+OAI21X1 _3473_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf6),
+    .B(\u_cpu.bufreg2.dlo [18]),
+    .C(_506_),
+    .Y(_507_)
+);
+
+MUX2X1 _3474_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_505_),
+    .B(_507_),
+    .S(_450__bF$buf2),
+    .Y(_1177_)
+);
+
+NAND2X1 _3475_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf5),
+    .B(_903_),
+    .Y(_508_)
+);
+
+OAI21X1 _3476_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf4),
+    .B(\u_cpu.bufreg2.dlo [17]),
+    .C(_508_),
+    .Y(_509_)
+);
+
+MUX2X1 _3477_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1593_),
+    .B(_509_),
+    .S(_450__bF$buf1),
+    .Y(_1176_)
+);
+
+INVX1 _3478_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dlo [15]),
+    .Y(_510_)
+);
+
+NAND2X1 _3479_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf3),
+    .B(_910_),
+    .Y(_511_)
+);
+
+OAI21X1 _3480_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf2),
+    .B(\u_cpu.bufreg2.dlo [16]),
+    .C(_511_),
+    .Y(_512_)
+);
+
+MUX2X1 _3481_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_510_),
+    .B(_512_),
+    .S(_450__bF$buf0),
+    .Y(_1175_)
+);
+
+INVX1 _3482_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dlo [14]),
+    .Y(_513_)
 );
 
 NAND2X1 _3483_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf5),
-    .B(_1715_),
-    .Y(_442_)
+    .A(mem_dbus_ack_bF$buf1),
+    .B(_917_),
+    .Y(_514_)
 );
 
 OAI21X1 _3484_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf4),
-    .B(\u_cpu.bufreg2.cnt_next [6]),
-    .C(_442_),
-    .Y(_443_)
+    .A(mem_dbus_ack_bF$buf0),
+    .B(\u_cpu.bufreg2.dlo [15]),
+    .C(_514_),
+    .Y(_515_)
 );
 
 MUX2X1 _3485_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_648_),
-    .B(_443_),
-    .S(_441_),
-    .Y(_1247_)
+    .A(_513_),
+    .B(_515_),
+    .S(_450__bF$buf4),
+    .Y(_1174_)
 );
 
-INVX2 _3486_ (
+INVX1 _3486_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_441_),
-    .Y(_444_)
+    .A(\u_cpu.bufreg2.dlo [13]),
+    .Y(_516_)
 );
 
-NAND3X1 _3487_ (
+NAND2X1 _3487_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_658_),
-    .B(_794_),
-    .C(_197_),
-    .Y(_445_)
+    .A(mem_dbus_ack_bF$buf6),
+    .B(_924_),
+    .Y(_517_)
 );
 
 OAI21X1 _3488_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_778_),
-    .B(_445_),
-    .C(_626_),
-    .Y(_446_)
+    .A(mem_dbus_ack_bF$buf5),
+    .B(\u_cpu.bufreg2.dlo [14]),
+    .C(_517_),
+    .Y(_518_)
 );
 
-AND2X2 _3489_ (
+MUX2X1 _3489_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_446_),
-    .B(_761_),
-    .Y(_447_)
+    .A(_516_),
+    .B(_518_),
+    .S(_450__bF$buf3),
+    .Y(_1173_)
 );
 
-OAI21X1 _3490_ (
+INVX1 _3490_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_761_),
-    .B(\u_mem_serial.shift_reg [29]),
-    .C(_444_),
-    .Y(_448_)
+    .A(\u_cpu.bufreg2.dlo [12]),
+    .Y(_519_)
 );
 
-OAI22X1 _3491_ (
+NAND2X1 _3491_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_777_),
-    .B(_444_),
-    .C(_447_),
-    .D(_448_),
-    .Y(_1246_)
+    .A(mem_dbus_ack_bF$buf4),
+    .B(_931_),
+    .Y(_520_)
 );
 
-NAND2X1 _3492_ (
+OAI21X1 _3492_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(mem_dbus_ack_bF$buf3),
-    .B(_824_),
-    .Y(_449_)
+    .B(\u_cpu.bufreg2.dlo [13]),
+    .C(_520_),
+    .Y(_521_)
 );
 
-NOR2X1 _3493_ (
+MUX2X1 _3493_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg2.dhi [4]),
-    .B(_773_),
-    .Y(_450_)
+    .A(_519_),
+    .B(_521_),
+    .S(_450__bF$buf2),
+    .Y(_1172_)
 );
 
-NOR2X1 _3494_ (
+INVX1 _3494_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_771_),
-    .B(_770_),
-    .Y(_451_)
+    .A(\u_cpu.bufreg2.dlo [11]),
+    .Y(_522_)
 );
 
-NOR2X1 _3495_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_450_),
-    .B(_451_),
-    .Y(_452_)
-);
-
-MUX2X1 _3496_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_452_),
-    .B(_777_),
-    .S(_781_),
-    .Y(_453_)
-);
-
-OAI21X1 _3497_ (
+NAND2X1 _3495_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(mem_dbus_ack_bF$buf2),
-    .B(_453_),
-    .C(_449_),
-    .Y(_454_)
+    .B(_938_),
+    .Y(_523_)
 );
 
-MUX2X1 _3498_ (
+OAI21X1 _3496_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_771_),
-    .B(_454_),
-    .S(_441_),
-    .Y(_1245_)
+    .A(mem_dbus_ack_bF$buf1),
+    .B(\u_cpu.bufreg2.dlo [12]),
+    .C(_523_),
+    .Y(_524_)
+);
+
+MUX2X1 _3497_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_522_),
+    .B(_524_),
+    .S(_450__bF$buf1),
+    .Y(_1171_)
+);
+
+INVX1 _3498_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dlo [10]),
+    .Y(_525_)
 );
 
 NAND2X1 _3499_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf1),
-    .B(_832_),
-    .Y(_455_)
-);
-
-NAND2X1 _3500_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_776_),
-    .B(_774_),
-    .Y(_456_)
-);
-
-INVX1 _3501_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_456_),
-    .Y(_457_)
-);
-
-NOR2X1 _3502_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_775_),
-    .B(_457_),
-    .Y(_458_)
-);
-
-NOR2X1 _3503_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_770_),
-    .B(_458_),
-    .Y(_459_)
-);
-
-MUX2X1 _3504_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_459_),
-    .B(_771_),
-    .S(_781_),
-    .Y(_460_)
-);
-
-OAI21X1 _3505_ (
-    .vdd(vdd),
-    .gnd(gnd),
     .A(mem_dbus_ack_bF$buf0),
-    .B(_460_),
-    .C(_455_),
-    .Y(_461_)
+    .B(_945_),
+    .Y(_526_)
 );
 
-MUX2X1 _3506_ (
+OAI21X1 _3500_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_775_),
-    .B(_461_),
-    .S(_441_),
-    .Y(_1244_)
+    .A(mem_dbus_ack_bF$buf6),
+    .B(\u_cpu.bufreg2.dlo [11]),
+    .C(_526_),
+    .Y(_527_)
 );
 
-NOR2X1 _3507_ (
+MUX2X1 _3501_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_775_),
-    .B(_781_),
-    .Y(_462_)
+    .A(_525_),
+    .B(_527_),
+    .S(_450__bF$buf0),
+    .Y(_1170_)
 );
 
-NOR2X1 _3508_ (
+INVX1 _3502_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_776_),
-    .B(_774_),
-    .Y(_463_)
+    .A(\u_cpu.bufreg2.dlo [9]),
+    .Y(_528_)
 );
 
-OAI21X1 _3509_ (
+NAND2X1 _3503_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_457_),
-    .B(_463_),
-    .C(_781_),
-    .Y(_464_)
+    .A(mem_dbus_ack_bF$buf5),
+    .B(_952_),
+    .Y(_529_)
 );
 
-NAND2X1 _3510_ (
+OAI21X1 _3504_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_761_),
-    .B(_464_),
-    .Y(_465_)
+    .A(mem_dbus_ack_bF$buf4),
+    .B(\u_cpu.bufreg2.dlo [10]),
+    .C(_529_),
+    .Y(_530_)
 );
 
-NOR2X1 _3511_ (
+MUX2X1 _3505_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_462_),
-    .B(_465_),
-    .Y(_466_)
+    .A(_528_),
+    .B(_530_),
+    .S(_450__bF$buf4),
+    .Y(_1169_)
+);
+
+INVX1 _3506_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dlo [8]),
+    .Y(_531_)
+);
+
+NAND2X1 _3507_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf3),
+    .B(_959_),
+    .Y(_532_)
+);
+
+OAI21X1 _3508_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf2),
+    .B(\u_cpu.bufreg2.dlo [9]),
+    .C(_532_),
+    .Y(_533_)
+);
+
+MUX2X1 _3509_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_531_),
+    .B(_533_),
+    .S(_450__bF$buf3),
+    .Y(_1168_)
+);
+
+INVX1 _3510_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dlo [7]),
+    .Y(_534_)
+);
+
+NAND2X1 _3511_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf1),
+    .B(_966_),
+    .Y(_535_)
 );
 
 OAI21X1 _3512_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_761_),
-    .B(\u_mem_serial.shift_reg [26]),
-    .C(_444_),
-    .Y(_467_)
+    .A(mem_dbus_ack_bF$buf0),
+    .B(\u_cpu.bufreg2.dlo [8]),
+    .C(_535_),
+    .Y(_536_)
 );
 
-OAI22X1 _3513_ (
+MUX2X1 _3513_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_776_),
-    .B(_444_),
-    .C(_466_),
-    .D(_467_),
-    .Y(_1243_)
+    .A(_534_),
+    .B(_536_),
+    .S(_450__bF$buf2),
+    .Y(_1167_)
 );
 
 INVX1 _3514_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.i_shamt [1]),
-    .Y(_468_)
+    .A(\u_cpu.bufreg2.dlo [6]),
+    .Y(_537_)
 );
 
-INVX1 _3515_ (
+NAND2X1 _3515_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.i_shamt [0]),
-    .Y(_469_)
+    .A(mem_dbus_ack_bF$buf6),
+    .B(_974_),
+    .Y(_538_)
 );
 
-NOR2X1 _3516_ (
+OAI21X1 _3516_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.i_shamt [1]),
-    .B(_469_),
-    .Y(_470_)
+    .A(mem_dbus_ack_bF$buf5),
+    .B(\u_cpu.bufreg2.dlo [7]),
+    .C(_538_),
+    .Y(_539_)
 );
 
-NOR2X1 _3517_ (
+MUX2X1 _3517_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.i_shamt [0]),
-    .B(_468_),
-    .Y(_471_)
+    .A(_537_),
+    .B(_539_),
+    .S(_450__bF$buf1),
+    .Y(_1166_)
 );
 
-NOR2X1 _3518_ (
+INVX1 _3518_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_470_),
-    .B(_471_),
-    .Y(_472_)
+    .A(\u_cpu.bufreg2.dlo [5]),
+    .Y(_540_)
 );
 
-OAI21X1 _3519_ (
+INVX1 _3519_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_776_),
-    .B(_781_),
-    .C(_761_),
-    .Y(_473_)
+    .A(\u_mem_serial.shift_reg [5]),
+    .Y(_541_)
 );
 
-AOI21X1 _3520_ (
+NAND2X1 _3520_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_781_),
-    .B(_472_),
-    .C(_473_),
-    .Y(_474_)
+    .A(mem_dbus_ack_bF$buf4),
+    .B(_541_),
+    .Y(_542_)
 );
 
 OAI21X1 _3521_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_761_),
-    .B(\u_mem_serial.shift_reg [25]),
-    .C(_444_),
-    .Y(_475_)
+    .A(mem_dbus_ack_bF$buf3),
+    .B(\u_cpu.bufreg2.dlo [6]),
+    .C(_542_),
+    .Y(_543_)
 );
 
-OAI22X1 _3522_ (
+MUX2X1 _3522_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_468_),
-    .B(_444_),
-    .C(_474_),
-    .D(_475_),
-    .Y(_1242_)
+    .A(_540_),
+    .B(_543_),
+    .S(_450__bF$buf0),
+    .Y(_1165_)
 );
 
-NAND2X1 _3523_ (
+INVX1 _3523_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.bufreg.i_shamt [0]),
-    .B(_441_),
-    .Y(_476_)
+    .A(\u_cpu.bufreg2.dlo [4]),
+    .Y(_544_)
 );
 
 NAND2X1 _3524_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_469_),
-    .B(_781_),
-    .Y(_477_)
+    .A(mem_dbus_ack_bF$buf2),
+    .B(_261_),
+    .Y(_545_)
 );
 
 OAI21X1 _3525_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_468_),
-    .B(_781_),
-    .C(_477_),
-    .Y(_478_)
+    .A(mem_dbus_ack_bF$buf1),
+    .B(\u_cpu.bufreg2.dlo [5]),
+    .C(_545_),
+    .Y(_546_)
 );
 
 MUX2X1 _3526_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_478_),
-    .B(\u_mem_serial.shift_reg [24]),
-    .S(_761_),
-    .Y(_479_)
+    .A(_544_),
+    .B(_546_),
+    .S(_450__bF$buf4),
+    .Y(_1164_)
 );
 
-OAI21X1 _3527_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_441_),
-    .B(_479_),
-    .C(_476_),
-    .Y(_1241_)
-);
-
-NAND2X1 _3528_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf6),
-    .B(_872_),
-    .Y(_480_)
-);
-
-OAI21X1 _3529_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf5),
-    .B(\u_cpu.bufreg2.dlo [23]),
-    .C(_480_),
-    .Y(_481_)
-);
-
-NOR2X1 _3530_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [22]),
-    .B(_440__bF$buf4),
-    .Y(_482_)
-);
-
-AOI21X1 _3531_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf3),
-    .B(_481_),
-    .C(_482_),
-    .Y(_1240_)
-);
-
-NAND2X1 _3532_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf4),
-    .B(_880_),
-    .Y(_483_)
-);
-
-OAI21X1 _3533_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf3),
-    .B(\u_cpu.bufreg2.dlo [22]),
-    .C(_483_),
-    .Y(_484_)
-);
-
-NOR2X1 _3534_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [21]),
-    .B(_440__bF$buf2),
-    .Y(_485_)
-);
-
-AOI21X1 _3535_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf1),
-    .B(_484_),
-    .C(_485_),
-    .Y(_1239_)
-);
-
-NAND2X1 _3536_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf2),
-    .B(_888_),
-    .Y(_486_)
-);
-
-OAI21X1 _3537_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf1),
-    .B(\u_cpu.bufreg2.dlo [21]),
-    .C(_486_),
-    .Y(_487_)
-);
-
-NOR2X1 _3538_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [20]),
-    .B(_440__bF$buf0),
-    .Y(_488_)
-);
-
-AOI21X1 _3539_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf5),
-    .B(_487_),
-    .C(_488_),
-    .Y(_1238_)
-);
-
-NAND2X1 _3540_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf0),
-    .B(_896_),
-    .Y(_489_)
-);
-
-OAI21X1 _3541_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf6),
-    .B(\u_cpu.bufreg2.dlo [20]),
-    .C(_489_),
-    .Y(_490_)
-);
-
-NOR2X1 _3542_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [19]),
-    .B(_440__bF$buf4),
-    .Y(_491_)
-);
-
-AOI21X1 _3543_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf3),
-    .B(_490_),
-    .C(_491_),
-    .Y(_1237_)
-);
-
-NAND2X1 _3544_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf5),
-    .B(_904_),
-    .Y(_492_)
-);
-
-OAI21X1 _3545_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf4),
-    .B(\u_cpu.bufreg2.dlo [19]),
-    .C(_492_),
-    .Y(_493_)
-);
-
-NOR2X1 _3546_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [18]),
-    .B(_440__bF$buf2),
-    .Y(_494_)
-);
-
-AOI21X1 _3547_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf1),
-    .B(_493_),
-    .C(_494_),
-    .Y(_1236_)
-);
-
-NAND2X1 _3548_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf3),
-    .B(_912_),
-    .Y(_495_)
-);
-
-OAI21X1 _3549_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf2),
-    .B(\u_cpu.bufreg2.dlo [18]),
-    .C(_495_),
-    .Y(_496_)
-);
-
-NOR2X1 _3550_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [17]),
-    .B(_440__bF$buf0),
-    .Y(_497_)
-);
-
-AOI21X1 _3551_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf5),
-    .B(_496_),
-    .C(_497_),
-    .Y(_1235_)
-);
-
-NAND2X1 _3552_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf1),
-    .B(_920_),
-    .Y(_498_)
-);
-
-OAI21X1 _3553_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf0),
-    .B(\u_cpu.bufreg2.dlo [17]),
-    .C(_498_),
-    .Y(_499_)
-);
-
-NOR2X1 _3554_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [16]),
-    .B(_440__bF$buf4),
-    .Y(_500_)
-);
-
-AOI21X1 _3555_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf3),
-    .B(_499_),
-    .C(_500_),
-    .Y(_1234_)
-);
-
-NAND2X1 _3556_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf6),
-    .B(_928_),
-    .Y(_501_)
-);
-
-OAI21X1 _3557_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf5),
-    .B(\u_cpu.bufreg2.dlo [16]),
-    .C(_501_),
-    .Y(_502_)
-);
-
-NOR2X1 _3558_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [15]),
-    .B(_440__bF$buf2),
-    .Y(_503_)
-);
-
-AOI21X1 _3559_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf1),
-    .B(_502_),
-    .C(_503_),
-    .Y(_1233_)
-);
-
-NAND2X1 _3560_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf4),
-    .B(_936_),
-    .Y(_504_)
-);
-
-OAI21X1 _3561_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf3),
-    .B(\u_cpu.bufreg2.dlo [15]),
-    .C(_504_),
-    .Y(_505_)
-);
-
-NOR2X1 _3562_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [14]),
-    .B(_440__bF$buf0),
-    .Y(_506_)
-);
-
-AOI21X1 _3563_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf5),
-    .B(_505_),
-    .C(_506_),
-    .Y(_1232_)
-);
-
-NAND2X1 _3564_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf2),
-    .B(_944_),
-    .Y(_507_)
-);
-
-OAI21X1 _3565_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf1),
-    .B(\u_cpu.bufreg2.dlo [14]),
-    .C(_507_),
-    .Y(_508_)
-);
-
-NOR2X1 _3566_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [13]),
-    .B(_440__bF$buf4),
-    .Y(_509_)
-);
-
-AOI21X1 _3567_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf3),
-    .B(_508_),
-    .C(_509_),
-    .Y(_1231_)
-);
-
-NAND2X1 _3568_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf0),
-    .B(_952_),
-    .Y(_510_)
-);
-
-OAI21X1 _3569_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf6),
-    .B(\u_cpu.bufreg2.dlo [13]),
-    .C(_510_),
-    .Y(_511_)
-);
-
-NOR2X1 _3570_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [12]),
-    .B(_440__bF$buf2),
-    .Y(_512_)
-);
-
-AOI21X1 _3571_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf1),
-    .B(_511_),
-    .C(_512_),
-    .Y(_1230_)
-);
-
-NAND2X1 _3572_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf5),
-    .B(_960_),
-    .Y(_513_)
-);
-
-OAI21X1 _3573_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf4),
-    .B(\u_cpu.bufreg2.dlo [12]),
-    .C(_513_),
-    .Y(_514_)
-);
-
-NOR2X1 _3574_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [11]),
-    .B(_440__bF$buf0),
-    .Y(_515_)
-);
-
-AOI21X1 _3575_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf5),
-    .B(_514_),
-    .C(_515_),
-    .Y(_1229_)
-);
-
-NAND2X1 _3576_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf3),
-    .B(_968_),
-    .Y(_516_)
-);
-
-OAI21X1 _3577_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf2),
-    .B(\u_cpu.bufreg2.dlo [11]),
-    .C(_516_),
-    .Y(_517_)
-);
-
-NOR2X1 _3578_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [10]),
-    .B(_440__bF$buf4),
-    .Y(_518_)
-);
-
-AOI21X1 _3579_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf3),
-    .B(_517_),
-    .C(_518_),
-    .Y(_1228_)
-);
-
-NAND2X1 _3580_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf1),
-    .B(_976_),
-    .Y(_519_)
-);
-
-OAI21X1 _3581_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf0),
-    .B(\u_cpu.bufreg2.dlo [10]),
-    .C(_519_),
-    .Y(_520_)
-);
-
-NOR2X1 _3582_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [9]),
-    .B(_440__bF$buf2),
-    .Y(_521_)
-);
-
-AOI21X1 _3583_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf1),
-    .B(_520_),
-    .C(_521_),
-    .Y(_1227_)
-);
-
-NAND2X1 _3584_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf6),
-    .B(_984_),
-    .Y(_522_)
-);
-
-OAI21X1 _3585_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf5),
-    .B(\u_cpu.bufreg2.dlo [9]),
-    .C(_522_),
-    .Y(_523_)
-);
-
-NOR2X1 _3586_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [8]),
-    .B(_440__bF$buf0),
-    .Y(_524_)
-);
-
-AOI21X1 _3587_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf5),
-    .B(_523_),
-    .C(_524_),
-    .Y(_1226_)
-);
-
-NAND2X1 _3588_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf4),
-    .B(_992_),
-    .Y(_525_)
-);
-
-OAI21X1 _3589_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf3),
-    .B(\u_cpu.bufreg2.dlo [8]),
-    .C(_525_),
-    .Y(_526_)
-);
-
-NOR2X1 _3590_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [7]),
-    .B(_440__bF$buf4),
-    .Y(_527_)
-);
-
-AOI21X1 _3591_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf3),
-    .B(_526_),
-    .C(_527_),
-    .Y(_1225_)
-);
-
-NAND2X1 _3592_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf2),
-    .B(_1000_),
-    .Y(_528_)
-);
-
-OAI21X1 _3593_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf1),
-    .B(\u_cpu.bufreg2.dlo [7]),
-    .C(_528_),
-    .Y(_529_)
-);
-
-NOR2X1 _3594_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [6]),
-    .B(_440__bF$buf2),
-    .Y(_530_)
-);
-
-AOI21X1 _3595_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf1),
-    .B(_529_),
-    .C(_530_),
-    .Y(_1224_)
-);
-
-NAND2X1 _3596_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf0),
-    .B(_1008_),
-    .Y(_531_)
-);
-
-OAI21X1 _3597_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf6),
-    .B(\u_cpu.bufreg2.dlo [6]),
-    .C(_531_),
-    .Y(_532_)
-);
-
-NOR2X1 _3598_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [5]),
-    .B(_440__bF$buf0),
-    .Y(_533_)
-);
-
-AOI21X1 _3599_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf5),
-    .B(_532_),
-    .C(_533_),
-    .Y(_1223_)
-);
-
-NAND2X1 _3600_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf5),
-    .B(_1016_),
-    .Y(_534_)
-);
-
-OAI21X1 _3601_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf4),
-    .B(\u_cpu.bufreg2.dlo [5]),
-    .C(_534_),
-    .Y(_535_)
-);
-
-NOR2X1 _3602_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [4]),
-    .B(_440__bF$buf4),
-    .Y(_536_)
-);
-
-AOI21X1 _3603_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf3),
-    .B(_535_),
-    .C(_536_),
-    .Y(_1222_)
-);
-
-NAND2X1 _3604_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf3),
-    .B(_1024_),
-    .Y(_537_)
-);
-
-OAI21X1 _3605_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf2),
-    .B(\u_cpu.bufreg2.dlo [4]),
-    .C(_537_),
-    .Y(_538_)
-);
-
-NOR2X1 _3606_ (
+INVX1 _3527_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_cpu.bufreg2.dlo [3]),
-    .B(_440__bF$buf2),
-    .Y(_539_)
-);
-
-AOI21X1 _3607_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf1),
-    .B(_538_),
-    .C(_539_),
-    .Y(_1221_)
-);
-
-NAND2X1 _3608_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf1),
-    .B(_1032_),
-    .Y(_540_)
-);
-
-OAI21X1 _3609_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf0),
-    .B(\u_cpu.bufreg2.dlo [3]),
-    .C(_540_),
-    .Y(_541_)
-);
-
-NOR2X1 _3610_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [2]),
-    .B(_440__bF$buf0),
-    .Y(_542_)
-);
-
-AOI21X1 _3611_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf5),
-    .B(_541_),
-    .C(_542_),
-    .Y(_1220_)
-);
-
-NAND2X1 _3612_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf6),
-    .B(_1041_),
-    .Y(_543_)
-);
-
-OAI21X1 _3613_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf5),
-    .B(\u_cpu.bufreg2.dlo [2]),
-    .C(_543_),
-    .Y(_544_)
-);
-
-MUX2X1 _3614_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_544_),
-    .B(_1047_),
-    .S(_440__bF$buf4),
-    .Y(_1219_)
-);
-
-INVX1 _3615_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [0]),
-    .Y(_545_)
-);
-
-NAND2X1 _3616_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf4),
-    .B(_545_),
-    .Y(_546_)
-);
-
-OAI21X1 _3617_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf3),
-    .B(\u_cpu.bufreg2.dlo [1]),
-    .C(_546_),
     .Y(_547_)
 );
 
-MUX2X1 _3618_ (
+INVX1 _3528_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_547_),
-    .B(_1066_),
-    .S(_440__bF$buf3),
-    .Y(_1218_)
-);
-
-NAND2X1 _3619_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf2),
-    .B(_864_),
+    .A(\u_mem_serial.shift_reg [3]),
     .Y(_548_)
 );
 
-OAI21X1 _3620_ (
+NAND2X1 _3529_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(mem_dbus_ack_bF$buf1),
-    .B(\u_cpu.bufreg.i_shamt [0]),
-    .C(_548_),
+    .A(mem_dbus_ack_bF$buf0),
+    .B(_548_),
     .Y(_549_)
 );
 
-NOR2X1 _3621_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.dlo [23]),
-    .B(_440__bF$buf2),
-    .Y(_550_)
-);
-
-AOI21X1 _3622_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_440__bF$buf1),
-    .B(_549_),
-    .C(_550_),
-    .Y(_1217_)
-);
-
-INVX1 _3623_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bufreg2.cnt_next [6]),
-    .Y(_551_)
-);
-
-OR2X2 _3624_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1518_),
-    .B(mem_dbus_ack_bF$buf0),
-    .Y(_552_)
-);
-
-AOI21X1 _3625_ (
+OAI21X1 _3530_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(mem_dbus_ack_bF$buf6),
-    .B(\u_mem_serial.shift_reg [31]),
-    .C(_441_),
+    .B(\u_cpu.bufreg2.dlo [4]),
+    .C(_549_),
+    .Y(_550_)
+);
+
+MUX2X1 _3531_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_547_),
+    .B(_550_),
+    .S(_450__bF$buf3),
+    .Y(_1163_)
+);
+
+INVX1 _3532_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dlo [2]),
+    .Y(_551_)
+);
+
+INVX1 _3533_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.shift_reg [2]),
+    .Y(_552_)
+);
+
+NAND2X1 _3534_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(mem_dbus_ack_bF$buf5),
+    .B(_552_),
     .Y(_553_)
 );
 
-AOI22X1 _3626_ (
+OAI21X1 _3535_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_551_),
-    .B(_441_),
+    .A(mem_dbus_ack_bF$buf4),
+    .B(\u_cpu.bufreg2.dlo [3]),
     .C(_553_),
-    .D(_552_),
-    .Y(_1216_)
-);
-
-INVX1 _3627_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [26]),
     .Y(_554_)
 );
 
-INVX1 _3628_ (
+MUX2X1 _3536_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [27]),
+    .A(_551_),
+    .B(_554_),
+    .S(_450__bF$buf2),
+    .Y(_1162_)
+);
+
+INVX1 _3537_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.bufreg2.dlo [1]),
     .Y(_555_)
 );
 
-INVX8 _3629_ (
+INVX1 _3538_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_193_),
+    .A(\u_mem_serial.shift_reg [1]),
     .Y(_556_)
 );
 
-OAI22X1 _3630_ (
+NAND2X1 _3539_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_554_),
-    .B(_190__bF$buf2),
-    .C(_555_),
-    .D(_556__bF$buf4),
-    .Y(_1215_)
-);
-
-INVX1 _3631_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [25]),
+    .A(mem_dbus_ack_bF$buf3),
+    .B(_556_),
     .Y(_557_)
 );
 
-OAI22X1 _3632_ (
+OAI21X1 _3540_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_557_),
-    .B(_190__bF$buf1),
-    .C(_554_),
-    .D(_556__bF$buf3),
-    .Y(_1214_)
-);
-
-INVX1 _3633_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [24]),
+    .A(mem_dbus_ack_bF$buf2),
+    .B(\u_cpu.bufreg2.dlo [2]),
+    .C(_557_),
     .Y(_558_)
 );
 
-OAI22X1 _3634_ (
+MUX2X1 _3541_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_558_),
-    .B(_190__bF$buf0),
-    .C(_557_),
-    .D(_556__bF$buf2),
-    .Y(_1213_)
+    .A(_555_),
+    .B(_558_),
+    .S(_450__bF$buf1),
+    .Y(_1161_)
 );
 
-INVX1 _3635_ (
+INVX1 _3542_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [23]),
+    .A(\u_mem_serial.shift_reg [0]),
     .Y(_559_)
 );
 
-OAI22X1 _3636_ (
+NAND2X1 _3543_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_559_),
-    .B(_190__bF$buf4),
-    .C(_558_),
-    .D(_556__bF$buf1),
-    .Y(_1212_)
-);
-
-INVX1 _3637_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [22]),
+    .A(mem_dbus_ack_bF$buf1),
+    .B(_559_),
     .Y(_560_)
 );
 
-OAI22X1 _3638_ (
+OAI21X1 _3544_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_560_),
-    .B(_190__bF$buf3),
-    .C(_559_),
-    .D(_556__bF$buf0),
-    .Y(_1211_)
-);
-
-INVX1 _3639_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [21]),
+    .A(mem_dbus_ack_bF$buf0),
+    .B(\u_cpu.bufreg2.dlo [1]),
+    .C(_560_),
     .Y(_561_)
 );
 
-OAI22X1 _3640_ (
+MUX2X1 _3545_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_561_),
-    .B(_190__bF$buf2),
-    .C(_560_),
-    .D(_556__bF$buf4),
-    .Y(_1210_)
+    .A(_1596_),
+    .B(_561_),
+    .S(_450__bF$buf0),
+    .Y(_1160_)
 );
 
-INVX1 _3641_ (
+INVX1 _3546_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [20]),
+    .A(\u_cpu.bufreg2.dlo [23]),
     .Y(_562_)
 );
 
-OAI22X1 _3642_ (
+NAND2X1 _3547_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_562_),
-    .B(_190__bF$buf1),
-    .C(_561_),
-    .D(_556__bF$buf3),
-    .Y(_1209_)
-);
-
-INVX1 _3643_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [19]),
+    .A(mem_dbus_ack_bF$buf6),
+    .B(_854_),
     .Y(_563_)
 );
 
-OAI22X1 _3644_ (
+OAI21X1 _3548_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_563_),
-    .B(_190__bF$buf0),
-    .C(_562_),
-    .D(_556__bF$buf2),
-    .Y(_1208_)
-);
-
-INVX1 _3645_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [18]),
+    .A(mem_dbus_ack_bF$buf5),
+    .B(\u_cpu.bufreg.i_shamt [0]),
+    .C(_563_),
     .Y(_564_)
 );
 
-OAI22X1 _3646_ (
+MUX2X1 _3549_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_564_),
-    .B(_190__bF$buf4),
-    .C(_563_),
-    .D(_556__bF$buf1),
-    .Y(_1207_)
+    .A(_562_),
+    .B(_564_),
+    .S(_450__bF$buf4),
+    .Y(_1159_)
 );
 
-INVX1 _3647_ (
+INVX1 _3550_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [17]),
+    .A(\u_cpu.bufreg2.cnt_next [6]),
     .Y(_565_)
 );
 
-OAI22X1 _3648_ (
+NAND2X1 _3551_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_565_),
-    .B(_190__bF$buf3),
-    .C(_564_),
-    .D(_556__bF$buf0),
-    .Y(_1206_)
-);
-
-INVX1 _3649_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [16]),
+    .A(_697_),
+    .B(_1565_),
     .Y(_566_)
 );
 
-OAI22X1 _3650_ (
+AOI21X1 _3552_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_566_),
-    .B(_190__bF$buf2),
-    .C(_565_),
-    .D(_556__bF$buf4),
-    .Y(_1205_)
-);
-
-INVX1 _3651_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [15]),
+    .A(mem_dbus_ack_bF$buf4),
+    .B(\u_mem_serial.shift_reg [31]),
+    .C(_452_),
     .Y(_567_)
 );
 
-OAI22X1 _3652_ (
+AOI22X1 _3553_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_567_),
-    .B(_190__bF$buf1),
-    .C(_566_),
-    .D(_556__bF$buf3),
-    .Y(_1204_)
+    .A(_565_),
+    .B(_452_),
+    .C(_567_),
+    .D(_566_),
+    .Y(_1158_)
 );
 
-INVX1 _3653_ (
+INVX1 _3554_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [14]),
+    .A(\u_cpu.ctrl.o_ibus_adr [26]),
     .Y(_568_)
 );
 
-OAI22X1 _3654_ (
+INVX1 _3555_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_568_),
-    .B(_190__bF$buf0),
-    .C(_567_),
-    .D(_556__bF$buf2),
-    .Y(_1203_)
-);
-
-INVX1 _3655_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [13]),
+    .A(\u_cpu.ctrl.o_ibus_adr [27]),
     .Y(_569_)
 );
 
-OAI22X1 _3656_ (
+INVX8 _3556_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_569_),
-    .B(_190__bF$buf4),
-    .C(_568_),
-    .D(_556__bF$buf1),
-    .Y(_1202_)
-);
-
-INVX1 _3657_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [12]),
+    .A(_214_),
     .Y(_570_)
 );
 
-OAI22X1 _3658_ (
+OAI22X1 _3557_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_570_),
-    .B(_190__bF$buf3),
+    .A(_568_),
+    .B(_212__bF$buf2),
     .C(_569_),
-    .D(_556__bF$buf0),
-    .Y(_1201_)
+    .D(_570__bF$buf4),
+    .Y(_1157_)
 );
 
-INVX1 _3659_ (
+INVX1 _3558_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [11]),
+    .A(\u_cpu.ctrl.o_ibus_adr [25]),
     .Y(_571_)
 );
 
-OAI22X1 _3660_ (
+OAI22X1 _3559_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(_571_),
-    .B(_190__bF$buf2),
-    .C(_570_),
-    .D(_556__bF$buf4),
-    .Y(_1200_)
+    .B(_212__bF$buf1),
+    .C(_568_),
+    .D(_570__bF$buf3),
+    .Y(_1156_)
 );
 
-INVX1 _3661_ (
+INVX1 _3560_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [10]),
+    .A(\u_cpu.ctrl.o_ibus_adr [24]),
     .Y(_572_)
 );
 
-OAI22X1 _3662_ (
+OAI22X1 _3561_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(_572_),
-    .B(_190__bF$buf1),
+    .B(_212__bF$buf0),
     .C(_571_),
-    .D(_556__bF$buf3),
-    .Y(_1199_)
+    .D(_570__bF$buf2),
+    .Y(_1155_)
+);
+
+INVX1 _3562_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [23]),
+    .Y(_573_)
+);
+
+OAI22X1 _3563_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_573_),
+    .B(_212__bF$buf4),
+    .C(_572_),
+    .D(_570__bF$buf1),
+    .Y(_1154_)
+);
+
+INVX1 _3564_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [22]),
+    .Y(_574_)
+);
+
+OAI22X1 _3565_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_574_),
+    .B(_212__bF$buf3),
+    .C(_573_),
+    .D(_570__bF$buf0),
+    .Y(_1153_)
+);
+
+INVX1 _3566_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [21]),
+    .Y(_575_)
+);
+
+OAI22X1 _3567_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_575_),
+    .B(_212__bF$buf2),
+    .C(_574_),
+    .D(_570__bF$buf4),
+    .Y(_1152_)
+);
+
+INVX1 _3568_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [20]),
+    .Y(_576_)
+);
+
+OAI22X1 _3569_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_576_),
+    .B(_212__bF$buf1),
+    .C(_575_),
+    .D(_570__bF$buf3),
+    .Y(_1151_)
+);
+
+INVX1 _3570_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [19]),
+    .Y(_577_)
+);
+
+OAI22X1 _3571_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_577_),
+    .B(_212__bF$buf0),
+    .C(_576_),
+    .D(_570__bF$buf2),
+    .Y(_1150_)
+);
+
+INVX1 _3572_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [18]),
+    .Y(_578_)
+);
+
+OAI22X1 _3573_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_578_),
+    .B(_212__bF$buf4),
+    .C(_577_),
+    .D(_570__bF$buf1),
+    .Y(_1149_)
+);
+
+INVX1 _3574_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [17]),
+    .Y(_579_)
+);
+
+OAI22X1 _3575_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_579_),
+    .B(_212__bF$buf3),
+    .C(_578_),
+    .D(_570__bF$buf0),
+    .Y(_1148_)
+);
+
+INVX1 _3576_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [16]),
+    .Y(_580_)
+);
+
+OAI22X1 _3577_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_580_),
+    .B(_212__bF$buf2),
+    .C(_579_),
+    .D(_570__bF$buf4),
+    .Y(_1147_)
+);
+
+INVX1 _3578_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [15]),
+    .Y(_581_)
+);
+
+OAI22X1 _3579_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_581_),
+    .B(_212__bF$buf1),
+    .C(_580_),
+    .D(_570__bF$buf3),
+    .Y(_1146_)
+);
+
+INVX1 _3580_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [14]),
+    .Y(_582_)
+);
+
+OAI22X1 _3581_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_582_),
+    .B(_212__bF$buf0),
+    .C(_581_),
+    .D(_570__bF$buf2),
+    .Y(_1145_)
+);
+
+INVX1 _3582_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [13]),
+    .Y(_583_)
+);
+
+OAI22X1 _3583_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_583_),
+    .B(_212__bF$buf4),
+    .C(_582_),
+    .D(_570__bF$buf1),
+    .Y(_1144_)
+);
+
+INVX1 _3584_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [12]),
+    .Y(_584_)
+);
+
+OAI22X1 _3585_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_584_),
+    .B(_212__bF$buf3),
+    .C(_583_),
+    .D(_570__bF$buf0),
+    .Y(_1143_)
+);
+
+INVX1 _3586_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [11]),
+    .Y(_585_)
+);
+
+OAI22X1 _3587_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_585_),
+    .B(_212__bF$buf2),
+    .C(_584_),
+    .D(_570__bF$buf4),
+    .Y(_1142_)
+);
+
+INVX1 _3588_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [10]),
+    .Y(_586_)
+);
+
+OAI22X1 _3589_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_586_),
+    .B(_212__bF$buf1),
+    .C(_585_),
+    .D(_570__bF$buf3),
+    .Y(_1141_)
+);
+
+INVX1 _3590_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [9]),
+    .Y(_587_)
+);
+
+OAI22X1 _3591_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_587_),
+    .B(_212__bF$buf0),
+    .C(_586_),
+    .D(_570__bF$buf2),
+    .Y(_1140_)
+);
+
+INVX1 _3592_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [8]),
+    .Y(_588_)
+);
+
+OAI22X1 _3593_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_588_),
+    .B(_212__bF$buf4),
+    .C(_587_),
+    .D(_570__bF$buf1),
+    .Y(_1139_)
+);
+
+INVX1 _3594_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [7]),
+    .Y(_589_)
+);
+
+OAI22X1 _3595_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_589_),
+    .B(_212__bF$buf3),
+    .C(_588_),
+    .D(_570__bF$buf0),
+    .Y(_1138_)
+);
+
+INVX1 _3596_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [6]),
+    .Y(_590_)
+);
+
+OAI22X1 _3597_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_590_),
+    .B(_212__bF$buf2),
+    .C(_589_),
+    .D(_570__bF$buf4),
+    .Y(_1137_)
+);
+
+INVX1 _3598_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [5]),
+    .Y(_591_)
+);
+
+OAI22X1 _3599_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_591_),
+    .B(_212__bF$buf1),
+    .C(_590_),
+    .D(_570__bF$buf3),
+    .Y(_1136_)
+);
+
+INVX1 _3600_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [4]),
+    .Y(_592_)
+);
+
+OAI22X1 _3601_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_592_),
+    .B(_212__bF$buf0),
+    .C(_591_),
+    .D(_570__bF$buf2),
+    .Y(_1135_)
+);
+
+INVX1 _3602_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [3]),
+    .Y(_593_)
+);
+
+OAI22X1 _3603_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_593_),
+    .B(_212__bF$buf4),
+    .C(_592_),
+    .D(_570__bF$buf1),
+    .Y(_1134_)
+);
+
+INVX1 _3604_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [2]),
+    .Y(_594_)
+);
+
+OAI22X1 _3605_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_594_),
+    .B(_212__bF$buf3),
+    .C(_593_),
+    .D(_570__bF$buf0),
+    .Y(_1133_)
+);
+
+OAI22X1 _3606_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_995_),
+    .B(_212__bF$buf2),
+    .C(_594_),
+    .D(_570__bF$buf4),
+    .Y(_1132_)
+);
+
+OAI22X1 _3607_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1008_),
+    .B(_212__bF$buf1),
+    .C(_995_),
+    .D(_570__bF$buf3),
+    .Y(_1131_)
+);
+
+INVX1 _3608_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [28]),
+    .Y(_595_)
+);
+
+OAI22X1 _3609_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_569_),
+    .B(_212__bF$buf0),
+    .C(_595_),
+    .D(_570__bF$buf2),
+    .Y(_1130_)
+);
+
+INVX1 _3610_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [30]),
+    .Y(_596_)
+);
+
+OAI22X1 _3611_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_596_),
+    .B(_212__bF$buf4),
+    .C(_211_),
+    .D(_570__bF$buf1),
+    .Y(_1129_)
+);
+
+INVX1 _3612_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.ctrl.o_ibus_adr [29]),
+    .Y(_597_)
+);
+
+OAI22X1 _3613_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_597_),
+    .B(_212__bF$buf3),
+    .C(_596_),
+    .D(_570__bF$buf0),
+    .Y(_1128_)
+);
+
+OAI22X1 _3614_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_595_),
+    .B(_212__bF$buf2),
+    .C(_597_),
+    .D(_570__bF$buf4),
+    .Y(_1127_)
+);
+
+AOI21X1 _3615_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1551_),
+    .B(_1530_),
+    .C(_688_),
+    .Y(_1126_)
+);
+
+INVX1 _3616_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1607_),
+    .Y(_598_)
+);
+
+AOI21X1 _3617_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1610_),
+    .B(_598_),
+    .C(_688_),
+    .Y(_1125_)
+);
+
+NAND2X1 _3618_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1066_),
+    .B(_232_),
+    .Y(_599_)
+);
+
+OAI21X1 _3619_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1066_),
+    .B(_1578_),
+    .C(_599_),
+    .Y(_1124_)
+);
+
+INVX1 _3620_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.alu.cmp_r ),
+    .Y(_600_)
+);
+
+NAND2X1 _3621_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1066_),
+    .B(_236_),
+    .Y(_601_)
+);
+
+OAI21X1 _3622_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_600_),
+    .B(_1066_),
+    .C(_601_),
+    .Y(_1123_)
+);
+
+OAI21X1 _3623_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1602_),
+    .B(_1592_),
+    .C(_1601_),
+    .Y(_1122_)
+);
+
+OAI21X1 _3624_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ibus_pending_ack_bF$buf2),
+    .B(_674__bF$buf3),
+    .C(mem_ibus_ack),
+    .Y(_602_)
+);
+
+MUX2X1 _3625_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_290_),
+    .B(_805_),
+    .S(_602__bF$buf4),
+    .Y(_1121_)
+);
+
+MUX2X1 _3626_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_316_),
+    .B(_812_),
+    .S(_602__bF$buf3),
+    .Y(_1120_)
+);
+
+MUX2X1 _3627_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_322_),
+    .B(_819_),
+    .S(_602__bF$buf2),
+    .Y(_1119_)
+);
+
+MUX2X1 _3628_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_326_),
+    .B(_826_),
+    .S(_602__bF$buf1),
+    .Y(_1118_)
+);
+
+MUX2X1 _3629_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_330_),
+    .B(_833_),
+    .S(_602__bF$buf0),
+    .Y(_1117_)
+);
+
+MUX2X1 _3630_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_334_),
+    .B(_840_),
+    .S(_602__bF$buf4),
+    .Y(_1116_)
+);
+
+MUX2X1 _3631_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1745_),
+    .B(_847_),
+    .S(_602__bF$buf3),
+    .Y(_1115_)
+);
+
+MUX2X1 _3632_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_151_),
+    .B(_854_),
+    .S(_602__bF$buf2),
+    .Y(_1114_)
+);
+
+MUX2X1 _3633_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_147_),
+    .B(_861_),
+    .S(_602__bF$buf1),
+    .Y(_1113_)
+);
+
+MUX2X1 _3634_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_143_),
+    .B(_868_),
+    .S(_602__bF$buf0),
+    .Y(_1112_)
+);
+
+MUX2X1 _3635_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_139_),
+    .B(_875_),
+    .S(_602__bF$buf4),
+    .Y(_1111_)
+);
+
+MUX2X1 _3636_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1693_),
+    .B(_882_),
+    .S(_602__bF$buf3),
+    .Y(_1110_)
+);
+
+MUX2X1 _3637_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_167_),
+    .B(_889_),
+    .S(_602__bF$buf2),
+    .Y(_1109_)
+);
+
+MUX2X1 _3638_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_163_),
+    .B(_896_),
+    .S(_602__bF$buf1),
+    .Y(_1108_)
+);
+
+MUX2X1 _3639_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_159_),
+    .B(_903_),
+    .S(_602__bF$buf0),
+    .Y(_1107_)
+);
+
+MUX2X1 _3640_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_155_),
+    .B(_910_),
+    .S(_602__bF$buf4),
+    .Y(_1106_)
+);
+
+MUX2X1 _3641_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_283_),
+    .B(_917_),
+    .S(_602__bF$buf3),
+    .Y(_1105_)
+);
+
+MUX2X1 _3642_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_251_),
+    .B(_924_),
+    .S(_602__bF$buf2),
+    .Y(_1104_)
+);
+
+MUX2X1 _3643_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_255_),
+    .B(_931_),
+    .S(_602__bF$buf1),
+    .Y(_1103_)
+);
+
+MUX2X1 _3644_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_392_),
+    .B(_938_),
+    .S(_602__bF$buf0),
+    .Y(_1102_)
+);
+
+MUX2X1 _3645_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_352_),
+    .B(_945_),
+    .S(_602__bF$buf4),
+    .Y(_1101_)
+);
+
+MUX2X1 _3646_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_356_),
+    .B(_952_),
+    .S(_602__bF$buf3),
+    .Y(_1100_)
+);
+
+MUX2X1 _3647_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_360_),
+    .B(_959_),
+    .S(_602__bF$buf2),
+    .Y(_1099_)
+);
+
+MUX2X1 _3648_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_364_),
+    .B(_966_),
+    .S(_602__bF$buf1),
+    .Y(_1098_)
+);
+
+MUX2X1 _3649_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_280_),
+    .B(_974_),
+    .S(_602__bF$buf0),
+    .Y(_1097_)
+);
+
+MUX2X1 _3650_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_258_),
+    .B(_541_),
+    .S(_602__bF$buf4),
+    .Y(_1096_)
+);
+
+MUX2X1 _3651_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_262_),
+    .B(_261_),
+    .S(_602__bF$buf3),
+    .Y(_1095_)
+);
+
+MUX2X1 _3652_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_265_),
+    .B(_548_),
+    .S(_602__bF$buf2),
+    .Y(_1094_)
+);
+
+MUX2X1 _3653_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_269_),
+    .B(_552_),
+    .S(_602__bF$buf1),
+    .Y(_1093_)
+);
+
+INVX1 _3654_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ibus_pending_rdt[1]),
+    .Y(_603_)
+);
+
+MUX2X1 _3655_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_603_),
+    .B(_556_),
+    .S(_602__bF$buf0),
+    .Y(_1092_)
+);
+
+INVX1 _3656_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(ibus_pending_rdt[0]),
+    .Y(_604_)
+);
+
+MUX2X1 _3657_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_604_),
+    .B(_559_),
+    .S(_602__bF$buf4),
+    .Y(_1091_)
+);
+
+OAI21X1 _3658_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.bit_count [1]),
+    .B(_1041_),
+    .C(_1052_),
+    .Y(_1040_)
+);
+
+AOI21X1 _3659_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1041_),
+    .B(_1045_),
+    .C(_1049_),
+    .Y(_1461_)
+);
+
+INVX1 _3660_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1042_),
+    .Y(_1041_)
+);
+
+AND2X2 _3661_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1043_),
+    .B(_1044_),
+    .Y(_1042_)
+);
+
+NOR2X1 _3662_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1046_),
+    .B(_1048_),
+    .Y(_1043_)
 );
 
 INVX1 _3663_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [9]),
-    .Y(_573_)
+    .A(\u_mem_serial.bit_count [0]),
+    .Y(_1044_)
 );
 
-OAI22X1 _3664_ (
+OAI21X1 _3664_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_573_),
-    .B(_190__bF$buf0),
-    .C(_572_),
-    .D(_556__bF$buf2),
-    .Y(_1198_)
+    .A(_1046_),
+    .B(_1048_),
+    .C(\u_mem_serial.bit_count [0]),
+    .Y(_1045_)
 );
 
-INVX1 _3665_ (
+OAI21X1 _3665_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [8]),
-    .Y(_574_)
+    .A(\u_mem_serial.req_pending ),
+    .B(\u_mem_serial.state [0]),
+    .C(_1047_),
+    .Y(_1046_)
 );
 
-OAI22X1 _3666_ (
+INVX1 _3666_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_574_),
-    .B(_190__bF$buf4),
-    .C(_573_),
-    .D(_556__bF$buf1),
-    .Y(_1197_)
+    .A(\u_mem_serial.state [1]),
+    .Y(_1047_)
 );
 
-INVX1 _3667_ (
+AOI21X1 _3667_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [7]),
-    .Y(_575_)
+    .A(_1059_),
+    .B(_1055_),
+    .C(_1057_),
+    .Y(_1048_)
 );
 
-OAI22X1 _3668_ (
+INVX1 _3668_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_575_),
-    .B(_190__bF$buf3),
-    .C(_574_),
-    .D(_556__bF$buf0),
-    .Y(_1196_)
+    .A(_1050_),
+    .Y(_1049_)
 );
 
-INVX1 _3669_ (
+NOR2X1 _3669_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [6]),
-    .Y(_576_)
+    .A(_1070__bF$buf0),
+    .B(_1051_),
+    .Y(_1050_)
 );
 
-OAI22X1 _3670_ (
+INVX1 _3670_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_576_),
-    .B(_190__bF$buf2),
-    .C(_575_),
-    .D(_556__bF$buf4),
-    .Y(_1195_)
+    .A(_1052_),
+    .Y(_1051_)
 );
 
-INVX1 _3671_ (
+NAND2X1 _3671_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [5]),
-    .Y(_577_)
+    .A(_1053_),
+    .B(_1059_),
+    .Y(_1052_)
 );
 
-OAI22X1 _3672_ (
+NOR2X1 _3672_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_577_),
-    .B(_190__bF$buf1),
-    .C(_576_),
-    .D(_556__bF$buf3),
-    .Y(_1194_)
+    .A(_1057_),
+    .B(_1054_),
+    .Y(_1053_)
 );
 
-INVX1 _3673_ (
+NAND2X1 _3673_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [4]),
-    .Y(_578_)
+    .A(\u_mem_serial.req_pending ),
+    .B(_1055_),
+    .Y(_1054_)
 );
 
-OAI22X1 _3674_ (
+AND2X2 _3674_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_578_),
-    .B(_190__bF$buf0),
-    .C(_577_),
-    .D(_556__bF$buf2),
-    .Y(_1193_)
+    .A(\gen_int_sys_clk.clk_div [1]),
+    .B(\gen_int_sys_clk.clk_div [0]),
+    .Y(_613_)
 );
 
-INVX1 _3675_ (
+NAND2X1 _3675_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [3]),
-    .Y(_579_)
+    .A(\gen_int_sys_clk.clk_div [2]),
+    .B(_613_),
+    .Y(_614_)
 );
 
-OAI22X1 _3676_ (
+INVX1 _3676_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_579_),
-    .B(_190__bF$buf4),
-    .C(_578_),
-    .D(_556__bF$buf1),
-    .Y(_1192_)
+    .A(_614_),
+    .Y(_615_)
 );
 
-INVX1 _3677_ (
+NOR2X1 _3677_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [2]),
-    .Y(_580_)
+    .A(\gen_int_sys_clk.clk_div [2]),
+    .B(_613_),
+    .Y(_616_)
 );
 
-OAI22X1 _3678_ (
+NOR2X1 _3678_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_580_),
-    .B(_190__bF$buf3),
-    .C(_579_),
-    .D(_556__bF$buf0),
-    .Y(_1191_)
+    .A(_616_),
+    .B(_615_),
+    .Y(_1082_)
 );
 
-INVX1 _3679_ (
+NOR2X1 _3679_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [1]),
-    .Y(_581_)
+    .A(\gen_int_sys_clk.clk_div [1]),
+    .B(\gen_int_sys_clk.clk_div [0]),
+    .Y(_617_)
 );
 
-OAI22X1 _3680_ (
+NOR2X1 _3680_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_581_),
-    .B(_190__bF$buf2),
-    .C(_580_),
-    .D(_556__bF$buf4),
-    .Y(_1190_)
+    .A(_617_),
+    .B(_613_),
+    .Y(_1081_)
 );
 
-OAI22X1 _3681_ (
+INVX1 _3681_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1544_),
-    .B(_190__bF$buf1),
-    .C(_581_),
-    .D(_556__bF$buf3),
-    .Y(_1189_)
+    .A(\gen_int_sys_clk.clk_div [0]),
+    .Y(_1080_)
 );
 
 INVX1 _3682_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [28]),
-    .Y(_582_)
+    .A(\gen_int_sys_clk.clk_div [3]),
+    .Y(_618_)
 );
 
-OAI22X1 _3683_ (
+OAI21X1 _3683_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_555_),
-    .B(_190__bF$buf0),
-    .C(_582_),
-    .D(_556__bF$buf2),
-    .Y(_1188_)
+    .A(_618_),
+    .B(_614_),
+    .C(_1056_),
+    .Y(_619_)
 );
 
-INVX1 _3684_ (
+NOR2X1 _3684_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [30]),
-    .Y(_583_)
+    .A(_618_),
+    .B(_614_),
+    .Y(_620_)
 );
 
-OAI22X1 _3685_ (
+NAND2X1 _3685_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_583_),
-    .B(_190__bF$buf4),
-    .C(_189_),
-    .D(_556__bF$buf1),
-    .Y(_1187_)
+    .A(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .B(_620_),
+    .Y(_621_)
 );
 
-INVX1 _3686_ (
+AND2X2 _3686_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.ctrl.o_ibus_adr [29]),
-    .Y(_584_)
+    .A(_621_),
+    .B(_619_),
+    .Y(_1079_)
 );
 
-OAI22X1 _3687_ (
+INVX1 _3687_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_584_),
-    .B(_190__bF$buf3),
-    .C(_583_),
-    .D(_556__bF$buf0),
-    .Y(_1186_)
+    .A(_271_),
+    .Y(_622_)
 );
 
-OAI22X1 _3688_ (
+INVX1 _3688_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_582_),
-    .B(_190__bF$buf2),
-    .C(_584_),
-    .D(_556__bF$buf4),
-    .Y(_1185_)
+    .A(_260_),
+    .Y(_623_)
 );
 
-AOI21X1 _3689_ (
+INVX1 _3689_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_659_),
-    .B(_682_),
-    .C(_752_),
-    .Y(_1184_)
+    .A(_292_),
+    .Y(_624_)
 );
 
-INVX1 _3690_ (
+NAND3X1 _3690_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1546_),
-    .Y(_585_)
+    .A(_253_),
+    .B(_623_),
+    .C(_624_),
+    .Y(_625_)
 );
 
-AOI21X1 _3691_ (
+AOI22X1 _3691_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1551_),
-    .B(_585_),
-    .C(_752_),
-    .Y(_1183_)
+    .A(_253_),
+    .B(_256_),
+    .C(_625_),
+    .D(_285_),
+    .Y(_626_)
 );
 
 NAND2X1 _3692_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1121_),
-    .B(_1141_),
-    .Y(_586_)
-);
-
-OAI21X1 _3693_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1121_),
-    .B(_208_),
-    .C(_586_),
-    .Y(_1182_)
-);
-
-NAND2X1 _3694_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.alu.cmp_r ),
-    .B(_1121_),
-    .Y(_587_)
-);
-
-OAI21X1 _3695_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1121_),
-    .B(_214_),
-    .C(_587_),
-    .Y(_1181_)
-);
-
-NAND2X1 _3696_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1086_),
-    .B(_1077_),
-    .Y(_588_)
-);
-
-INVX1 _3697_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_588_),
-    .Y(_589_)
-);
-
-OAI21X1 _3698_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1085_),
-    .B(_1084_),
-    .C(_589_),
-    .Y(_590_)
-);
-
-NOR2X1 _3699_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_590_),
-    .B(_1069_),
-    .Y(_591_)
-);
-
-NAND2X1 _3700_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.bit_count [6]),
-    .B(\u_mem_serial.bit_count [2]),
-    .Y(_592_)
-);
-
-NOR2X1 _3701_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_592_),
-    .B(_588_),
-    .Y(_593_)
-);
-
-NAND2X1 _3702_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1063_),
-    .B(_593_),
-    .Y(_594_)
-);
-
-INVX1 _3703_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_594_),
-    .Y(_595_)
-);
-
-NAND2X1 _3704_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.bit_count [1]),
-    .B(_1535_),
-    .Y(_596_)
-);
-
-NAND2X1 _3705_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.state.i_ctrl_misalign ),
-    .B(_1094_),
-    .Y(_597_)
-);
-
-NAND2X1 _3706_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_596_),
-    .B(_597_),
-    .Y(_598_)
-);
-
-OAI21X1 _3707_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_cpu.bne_or_bge ),
-    .B(\u_cpu.bufreg.data [0]),
-    .C(_598_),
-    .Y(_599_)
-);
-
-NAND2X1 _3708_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_789_),
-    .B(_599_),
-    .Y(_600_)
-);
-
-NAND2X1 _3709_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.bit_count [0]),
-    .B(_666_),
-    .Y(_601_)
-);
-
-AOI21X1 _3710_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.bit_count [1]),
-    .B(\u_cpu.decode.co_mem_word ),
-    .C(_1048_),
-    .Y(_602_)
-);
-
-OAI21X1 _3711_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_601_),
-    .B(_598_),
-    .C(_602_),
-    .Y(_603_)
-);
-
-AOI21X1 _3712_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_600_),
-    .B(_1064_),
-    .C(_603_),
-    .Y(_604_)
-);
-
-AOI21X1 _3713_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_591_),
-    .B(_604_),
-    .C(_595_),
-    .Y(_605_)
-);
-
-OAI21X1 _3714_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [31]),
-    .B(_591_),
-    .C(_605_),
-    .Y(_606_)
-);
-
-NOR2X1 _3715_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.bit_count [0]),
-    .B(_1094_),
-    .Y(_607_)
-);
-
-AOI22X1 _3716_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_593_),
-    .B(_607_),
-    .C(_595_),
-    .D(\u_mem_serial.active_ibus ),
-    .Y(_608_)
-);
-
-NAND2X1 _3717_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_607_),
-    .B(_593_),
-    .Y(_609_)
-);
-
-OAI21X1 _3718_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.active_we_bF$buf1 ),
-    .B(_609_),
-    .C(_1907_),
-    .Y(_610_)
-);
-
-AOI21X1 _3719_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_606_),
-    .B(_608_),
-    .C(_610_),
-    .Y(_0_)
-);
-
-NAND2X1 _3720_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1540_),
-    .B(_1539_),
-    .Y(_1179_)
-);
-
-NAND2X1 _3721_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1074_),
-    .B(_1078_),
-    .Y(_611_)
-);
-
-AOI21X1 _3722_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1076_),
-    .B(\u_mem_serial.bit_count [6]),
-    .C(_1106_),
-    .Y(_612_)
-);
-
-AOI21X1 _3723_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_611_),
-    .B(_612_),
-    .C(_1126__bF$buf4),
-    .Y(_1178_)
-);
-
-AND2X2 _3724_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_737_),
-    .B(_755_),
-    .Y(_613_)
-);
-
-INVX1 _3725_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_613_),
-    .Y(_614_)
-);
-
-OAI21X1 _3726_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(ibus_pending_ack_bF$buf2),
-    .B(_614_),
-    .C(mem_ibus_ack),
-    .Y(_615_)
-);
-
-MUX2X1 _3727_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_262_),
-    .B(_1715_),
-    .S(_615__bF$buf4),
-    .Y(_1177_)
-);
-
-MUX2X1 _3728_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_289_),
-    .B(_816_),
-    .S(_615__bF$buf3),
-    .Y(_1176_)
-);
-
-MUX2X1 _3729_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_295_),
-    .B(_824_),
-    .S(_615__bF$buf2),
-    .Y(_1175_)
-);
-
-MUX2X1 _3730_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_301_),
-    .B(_832_),
-    .S(_615__bF$buf1),
-    .Y(_1174_)
-);
-
-MUX2X1 _3731_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_307_),
-    .B(_840_),
-    .S(_615__bF$buf0),
-    .Y(_1173_)
-);
-
-MUX2X1 _3732_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_313_),
-    .B(_848_),
-    .S(_615__bF$buf4),
-    .Y(_1172_)
-);
-
-MUX2X1 _3733_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1694_),
-    .B(_856_),
-    .S(_615__bF$buf3),
-    .Y(_1171_)
-);
-
-MUX2X1 _3734_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_186_),
-    .B(_864_),
-    .S(_615__bF$buf2),
-    .Y(_1170_)
-);
-
-MUX2X1 _3735_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_181_),
-    .B(_872_),
-    .S(_615__bF$buf1),
-    .Y(_1169_)
-);
-
-MUX2X1 _3736_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_178_),
-    .B(_880_),
-    .S(_615__bF$buf0),
-    .Y(_1168_)
-);
-
-MUX2X1 _3737_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_174_),
-    .B(_888_),
-    .S(_615__bF$buf4),
-    .Y(_1167_)
-);
-
-MUX2X1 _3738_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1724_),
-    .B(_896_),
-    .S(_615__bF$buf3),
-    .Y(_1166_)
-);
-
-MUX2X1 _3739_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_155_),
-    .B(_904_),
-    .S(_615__bF$buf2),
-    .Y(_1165_)
-);
-
-MUX2X1 _3740_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_151_),
-    .B(_912_),
-    .S(_615__bF$buf1),
-    .Y(_1164_)
-);
-
-MUX2X1 _3741_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_147_),
-    .B(_920_),
-    .S(_615__bF$buf0),
-    .Y(_1163_)
-);
-
-MUX2X1 _3742_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_143_),
-    .B(_928_),
-    .S(_615__bF$buf4),
-    .Y(_1162_)
-);
-
-MUX2X1 _3743_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_256_),
-    .B(_936_),
-    .S(_615__bF$buf3),
-    .Y(_1161_)
-);
-
-MUX2X1 _3744_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_223_),
-    .B(_944_),
-    .S(_615__bF$buf2),
-    .Y(_1160_)
-);
-
-MUX2X1 _3745_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_227_),
-    .B(_952_),
-    .S(_615__bF$buf1),
-    .Y(_1159_)
-);
-
-MUX2X1 _3746_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_382_),
-    .B(_960_),
-    .S(_615__bF$buf0),
-    .Y(_1158_)
-);
-
-MUX2X1 _3747_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_334_),
-    .B(_968_),
-    .S(_615__bF$buf4),
-    .Y(_1157_)
-);
-
-MUX2X1 _3748_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_341_),
-    .B(_976_),
-    .S(_615__bF$buf3),
-    .Y(_1156_)
-);
-
-MUX2X1 _3749_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_348_),
-    .B(_984_),
-    .S(_615__bF$buf2),
-    .Y(_1155_)
-);
-
-MUX2X1 _3750_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_354_),
-    .B(_992_),
-    .S(_615__bF$buf1),
-    .Y(_1154_)
-);
-
-MUX2X1 _3751_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_253_),
-    .B(_1000_),
-    .S(_615__bF$buf0),
-    .Y(_1153_)
-);
-
-MUX2X1 _3752_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_230_),
-    .B(_1008_),
-    .S(_615__bF$buf4),
-    .Y(_1152_)
-);
-
-MUX2X1 _3753_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_233_),
-    .B(_1016_),
-    .S(_615__bF$buf3),
-    .Y(_1151_)
-);
-
-INVX1 _3754_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(ibus_pending_rdt[3]),
-    .Y(_616_)
-);
-
-MUX2X1 _3755_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_616_),
-    .B(_1024_),
-    .S(_615__bF$buf2),
-    .Y(_1150_)
-);
-
-MUX2X1 _3756_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_239_),
-    .B(_1032_),
-    .S(_615__bF$buf1),
-    .Y(_1149_)
-);
-
-INVX1 _3757_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(ibus_pending_rdt[1]),
-    .Y(_617_)
-);
-
-MUX2X1 _3758_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_617_),
-    .B(_1041_),
-    .S(_615__bF$buf0),
-    .Y(_1148_)
-);
-
-INVX1 _3759_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(ibus_pending_rdt[0]),
-    .Y(_618_)
-);
-
-MUX2X1 _3760_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_618_),
-    .B(_545_),
-    .S(_615__bF$buf4),
-    .Y(_1147_)
-);
-
-AOI21X1 _3761_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1096_),
-    .B(_1099_),
-    .C(_1104_),
-    .Y(_1515_)
-);
-
-INVX1 _3762_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1097_),
-    .Y(_1096_)
-);
-
-NOR2X1 _3763_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.bit_count [0]),
-    .B(_1098_),
-    .Y(_1097_)
-);
-
-OR2X2 _3764_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1102_),
-    .B(_1100_),
-    .Y(_1098_)
-);
-
-OAI21X1 _3765_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1100_),
-    .B(_1102_),
-    .C(\u_mem_serial.bit_count [0]),
-    .Y(_1099_)
-);
-
-OAI21X1 _3766_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.req_pending ),
-    .B(\u_mem_serial.state [0]),
-    .C(_1101_),
-    .Y(_1100_)
-);
-
-INVX1 _3767_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.state [1]),
-    .Y(_1101_)
-);
-
-AND2X2 _3768_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1103_),
-    .B(_1111_),
-    .Y(_1102_)
-);
-
-OAI21X1 _3769_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1124_),
-    .B(_1115_),
-    .C(_1113_),
-    .Y(_1103_)
-);
-
-INVX1 _3770_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1105_),
-    .Y(_1104_)
-);
-
-NOR2X1 _3771_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1126__bF$buf3),
-    .B(_1106_),
-    .Y(_1105_)
-);
-
-INVX1 _3772_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1107_),
-    .Y(_1106_)
-);
-
-OAI21X1 _3773_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1124_),
-    .B(_1115_),
-    .C(_1108_),
-    .Y(_1107_)
-);
-
-AND2X2 _3774_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1109_),
-    .B(_1113_),
-    .Y(_1108_)
-);
-
-NOR2X1 _3775_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1112_),
-    .B(_1110_),
-    .Y(_1109_)
-);
-
-INVX1 _3776_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1111_),
-    .Y(_1110_)
-);
-
-AND2X2 _3777_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\gen_int_sys_clk.clk_div [1]),
-    .B(\gen_int_sys_clk.clk_div [0]),
+    .A(\u_mem_serial.shift_reg [1]),
+    .B(\u_mem_serial.shift_reg [0]),
     .Y(_627_)
 );
 
-NAND2X1 _3778_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\gen_int_sys_clk.clk_div [2]),
-    .B(_627_),
-    .Y(_628_)
-);
-
-INVX1 _3779_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_628_),
-    .Y(_629_)
-);
-
-NOR2X1 _3780_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\gen_int_sys_clk.clk_div [2]),
-    .B(_627_),
-    .Y(_630_)
-);
-
-NOR2X1 _3781_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_630_),
-    .B(_629_),
-    .Y(_1138_)
-);
-
-NOR2X1 _3782_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\gen_int_sys_clk.clk_div [1]),
-    .B(\gen_int_sys_clk.clk_div [0]),
-    .Y(_631_)
-);
-
-NOR2X1 _3783_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_631_),
-    .B(_627_),
-    .Y(_1137_)
-);
-
-INVX1 _3784_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\gen_int_sys_clk.clk_div [0]),
-    .Y(_1136_)
-);
-
-INVX1 _3785_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\gen_int_sys_clk.clk_div [3]),
-    .Y(_632_)
-);
-
-OAI21X1 _3786_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_632_),
-    .B(_628_),
-    .C(_1114_),
-    .Y(_633_)
-);
-
-NOR2X1 _3787_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_632_),
-    .B(_628_),
-    .Y(_634_)
-);
-
-NAND2X1 _3788_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\gen_int_sys_clk.clk_sys_r_bF$buf44 ),
-    .B(_634_),
-    .Y(_635_)
-);
-
-AND2X2 _3789_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_635_),
-    .B(_633_),
-    .Y(_1135_)
-);
-
-NAND2X1 _3790_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_236_),
-    .B(_1693__bF$buf1),
-    .Y(_636_)
-);
-
-INVX1 _3791_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_241_),
-    .Y(_637_)
-);
-
-INVX1 _3792_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_232_),
-    .Y(_638_)
-);
-
-NAND3X1 _3793_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_225_),
-    .B(_263_),
-    .C(_638_),
-    .Y(_639_)
-);
-
-AOI22X1 _3794_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_225_),
-    .B(_228_),
-    .C(_639_),
-    .D(_258_),
-    .Y(_640_)
-);
-
-INVX1 _3795_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_235_),
-    .Y(_641_)
-);
-
-NAND2X1 _3796_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [1]),
-    .B(\u_mem_serial.shift_reg [0]),
-    .Y(_642_)
-);
-
-NAND3X1 _3797_ (
+NAND3X1 _3693_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(ibus_pending_ack_bF$buf1),
     .B(ibus_pending_rdt[1]),
     .C(ibus_pending_rdt[0]),
-    .Y(_643_)
+    .Y(_628_)
 );
 
-OAI21X1 _3798_ (
+OAI21X1 _3694_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(ibus_pending_ack_bF$buf0),
-    .B(_642_),
-    .C(_643_),
-    .Y(_644_)
+    .B(_627_),
+    .C(_628_),
+    .Y(_629_)
 );
 
-NAND3X1 _3799_ (
+NAND3X1 _3695_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_255_),
-    .B(_644_),
-    .C(_641_),
-    .Y(_645_)
+    .A(_629_),
+    .B(_267_),
+    .C(_282_),
+    .Y(_630_)
 );
 
-INVX1 _3800_ (
+INVX1 _3696_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_645_),
-    .Y(_646_)
+    .A(_630_),
+    .Y(_631_)
 );
 
-OAI21X1 _3801_ (
+OAI21X1 _3697_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_637_),
-    .B(_640_),
-    .C(_646_),
-    .Y(_647_)
+    .A(_622_),
+    .B(_626_),
+    .C(_631_),
+    .Y(_632_)
 );
 
-OAI22X1 _3802_ (
+OAI22X1 _3698_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_707_),
-    .B(_1693__bF$buf0),
-    .C(_647_),
-    .D(_636_),
-    .Y(_1134_)
+    .A(_1499_),
+    .B(_1692__bF$buf2),
+    .C(_632_),
+    .D(_264_),
+    .Y(_1078_)
 );
 
-NOR2X1 _3803_ (
+NOR2X1 _3699_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_mem_serial.clk_sys_prev ),
+    .B(_1056_),
+    .Y(_1055_)
+);
+
+INVX1 _3700_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
+    .Y(_1056_)
+);
+
+INVX1 _3701_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_1058_),
+    .Y(_1057_)
+);
+
+NOR2X1 _3702_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_mem_serial.state [1]),
     .B(\u_mem_serial.state [0]),
-    .Y(_1111_)
+    .Y(_1058_)
 );
 
-INVX1 _3804_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.req_pending ),
-    .Y(_1112_)
-);
-
-NOR2X1 _3805_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\u_mem_serial.clk_sys_prev ),
-    .B(_1114_),
-    .Y(_1113_)
-);
-
-INVX1 _3806_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
-    .Y(_1114_)
-);
-
-NOR2X1 _3807_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .A(_1568_),
-    .B(_1583_),
-    .Y(_650_)
-);
-
-NAND3X1 _3808_ (
+AND2X2 _3703_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\u_rf_if.o_waddr [2]),
     .B(\u_rf_if.o_waddr [1]),
-    .C(_650_),
-    .Y(_651_)
+    .Y(_635_)
 );
 
-OAI21X1 _3809_ (
+NAND3X1 _3704_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_711_),
-    .B(_651_),
+    .A(\u_rf_if.o_waddr [0]),
+    .B(\u_rf_if.o_waddr [3]),
+    .C(_635_),
+    .Y(_636_)
+);
+
+OAI21X1 _3705_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_636_),
+    .B(_1701_),
     .C(rf_write_drain_busy),
-    .Y(_652_)
+    .Y(_637_)
 );
 
-NAND2X1 _3810_ (
+OAI21X1 _3706_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_652_),
-    .B(_737_),
-    .Y(_1131_)
+    .A(_675_),
+    .B(_689_),
+    .C(_637_),
+    .Y(_1075_)
 );
 
-INVX1 _3811_ (
+OAI21X1 _3707_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1116_),
-    .Y(_1115_)
+    .A(_1070__bF$buf6),
+    .B(_1069_),
+    .C(_1060_),
+    .Y(_1059_)
 );
 
-OAI21X1 _3812_ (
+NAND2X1 _3708_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_735_),
-    .B(_613_),
-    .C(_615__bF$buf3),
-    .Y(_1129_)
+    .A(ibus_pending_ack_bF$buf5),
+    .B(_674__bF$buf2),
+    .Y(_638_)
 );
 
-NOR2X1 _3813_ (
+NAND2X1 _3709_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(_638_),
+    .B(_602__bF$buf3),
+    .Y(_1073_)
+);
+
+NOR2X1 _3710_ (
     .vdd(vdd),
     .gnd(gnd),
     .A(\gen_int_sys_clk.clk_div [3]),
-    .B(_629_),
-    .Y(_653_)
+    .B(_615_),
+    .Y(_639_)
 );
 
-NOR2X1 _3814_ (
+NOR2X1 _3711_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_634_),
-    .B(_653_),
-    .Y(_1128_)
+    .A(_620_),
+    .B(_639_),
+    .Y(_1072_)
 );
 
-INVX1 _3815_ (
+MUX2X1 _3712_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_mem_serial.shift_reg [31]),
-    .Y(_654_)
+    .A(_369_),
+    .B(_798_),
+    .S(_602__bF$buf2),
+    .Y(_1071_)
 );
 
-MUX2X1 _3816_ (
+DFFPOSX1 _3713_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_359_),
-    .B(_654_),
-    .S(_615__bF$buf2),
-    .Y(_1127_)
+    .CLK(i_clk_fast_bF$buf6),
+    .D(_1452_),
+    .Q(\u_mem_serial.shift_reg [3])
+);
+
+DFFPOSX1 _3714_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .D(_1244_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [2])
+);
+
+DFFPOSX1 _3715_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf5),
+    .D(_1453_),
+    .Q(\u_mem_serial.shift_reg [2])
+);
+
+DFFPOSX1 _3716_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .D(_1245_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [3])
+);
+
+DFFPOSX1 _3717_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf4),
+    .D(_1454_),
+    .Q(\u_mem_serial.shift_reg [1])
+);
+
+DFFPOSX1 _3718_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .D(_1246_),
+    .Q(\u_cpu.csr_imm )
+);
+
+DFFPOSX1 _3719_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf3),
+    .D(_1455_),
+    .Q(\u_mem_serial.shift_reg [0])
+);
+
+DFFPOSX1 _3720_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .D(_1247_),
+    .Q(rreg0[1])
+);
+
+DFFPOSX1 _3721_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf2),
+    .D(_1456_),
+    .Q(\u_mem_serial.bit_count [5])
+);
+
+DFFPOSX1 _3722_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .D(_1248_),
+    .Q(rreg0[2])
+);
+
+DFFPOSX1 _3723_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf1),
+    .D(_1457_),
+    .Q(\u_mem_serial.bit_count [4])
+);
+
+DFFPOSX1 _3724_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .D(_1249_),
+    .Q(rreg0[3])
+);
+
+DFFPOSX1 _3725_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf0),
+    .D(_1458_),
+    .Q(\u_mem_serial.bit_count [3])
+);
+
+DFFPOSX1 _3726_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .D(_1250_),
+    .Q(\u_cpu.bufreg.i_sh_signed )
+);
+
+DFFPOSX1 _3727_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf8),
+    .D(_1459_),
+    .Q(\u_mem_serial.bit_count [2])
+);
+
+DFFSR _3728_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .D(_1102_),
+    .Q(ibus_pending_rdt[11]),
+    .R(i_rst_n_bF$buf7),
+    .S(vdd)
+);
+
+DFFPOSX1 _3729_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf7),
+    .D(_1460_),
+    .Q(\u_mem_serial.bit_count [1])
+);
+
+DFFPOSX1 _3730_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf6),
+    .D(_1251_),
+    .Q(mem_dbus_ack)
+);
+
+DFFPOSX1 _3731_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .D(_1252_),
+    .Q(\u_cpu.decode.co_ebreak )
+);
+
+DFFPOSX1 _3732_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .D(_1253_),
+    .Q(\u_cpu.bufreg.i_right_shift_op )
+);
+
+DFFPOSX1 _3733_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .D(_1254_),
+    .Q(\u_cpu.branch_op )
+);
+
+DFFSR _3734_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .D(_1103_),
+    .Q(ibus_pending_rdt[12]),
+    .R(i_rst_n_bF$buf6),
+    .S(vdd)
+);
+
+DFFPOSX1 _3735_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf5),
+    .D(_1255_),
+    .Q(mem_ibus_ack)
+);
+
+DFFSR _3736_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .D(_1104_),
+    .Q(ibus_pending_rdt[13]),
+    .R(i_rst_n_bF$buf5),
+    .S(vdd)
+);
+
+DFFPOSX1 _3737_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf4),
+    .D(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .Q(\u_mem_serial.clk_sys_prev )
+);
+
+DFFPOSX1 _3738_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .D(_1259_),
+    .Q(\u_cpu.decode.opcode [0])
+);
+
+DFFPOSX1 _3739_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
+    .D(_1260_),
+    .Q(\u_cpu.decode.opcode [1])
+);
+
+DFFPOSX1 _3740_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .D(_1261_),
+    .Q(\u_cpu.decode.opcode [2])
+);
+
+DFFPOSX1 _3741_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .D(_1262_),
+    .Q(\u_cpu.bufreg2.i_op_b_sel )
+);
+
+DFFPOSX1 _3742_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .D(_1263_),
+    .Q(\u_cpu.bne_or_bge )
+);
+
+DFFPOSX1 _3743_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .D(_1264_),
+    .Q(\u_cpu.decode.co_mem_word )
+);
+
+DFFSR _3744_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .D(_1105_),
+    .Q(ibus_pending_rdt[14]),
+    .R(i_rst_n_bF$buf4),
+    .S(vdd)
+);
+
+DFFPOSX1 _3745_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf3),
+    .D(_1265_),
+    .Q(\u_mem_serial.req_pending )
+);
+
+DFFSR _3746_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .D(_1106_),
+    .Q(ibus_pending_rdt[15]),
+    .R(i_rst_n_bF$buf3),
+    .S(vdd)
+);
+
+DFFPOSX1 _3747_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf2),
+    .D(_1266_),
+    .Q(\u_mem_serial.active_ibus )
+);
+
+DFFPOSX1 _3748_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .D(_1267_),
+    .Q(\u_cpu.state.ibus_cyc )
+);
+
+DFFSR _3749_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
+    .D(_1107_),
+    .Q(ibus_pending_rdt[16]),
+    .R(i_rst_n_bF$buf2),
+    .S(vdd)
+);
+
+DFFPOSX1 _3750_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .D(_1268_),
+    .Q(\u_cpu.state.init_done )
+);
+
+DFFSR _3751_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .D(_1108_),
+    .Q(ibus_pending_rdt[17]),
+    .R(i_rst_n_bF$buf1),
+    .S(vdd)
+);
+
+DFFPOSX1 _3752_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
+    .D(_1269_),
+    .Q(\u_cpu.ctrl.i_jump )
+);
+
+DFFPOSX1 _3753_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .D(_1270_),
+    .Q(\u_cpu.state.cnt_r [3])
+);
+
+DFFPOSX1 _3754_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .D(_1271_),
+    .Q(\u_cpu.bufreg2.i_bytecnt [1])
+);
+
+DFFPOSX1 _3755_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .D(_1272_),
+    .Q(\u_cpu.state.o_cnt [2])
+);
+
+DFFPOSX1 _3756_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
+    .D(_1273_),
+    .Q(\u_cpu.bufreg2.i_bytecnt [0])
+);
+
+DFFPOSX1 _3757_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .D(_1274_),
+    .Q(\u_cpu.state.cnt_r [0])
+);
+
+DFFPOSX1 _3758_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .D(_1275_),
+    .Q(\u_cpu.state.cnt_r [1])
+);
+
+DFFPOSX1 _3759_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
+    .D(_1276_),
+    .Q(\u_cpu.state.cnt_r [2])
+);
+
+DFFSR _3760_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
+    .D(_1109_),
+    .Q(ibus_pending_rdt[18]),
+    .R(i_rst_n_bF$buf0),
+    .S(vdd)
+);
+
+DFFPOSX1 _3761_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf1),
+    .D(_1277_),
+    .Q(\u_mem_serial.active_we )
+);
+
+DFFSR _3762_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
+    .D(_1110_),
+    .Q(ibus_pending_rdt[19]),
+    .R(i_rst_n_bF$buf11),
+    .S(vdd)
+);
+
+DFFPOSX1 _3763_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf0),
+    .D(_1278_),
+    .Q(\u_mem_serial.shift_reg [37])
+);
+
+DFFSR _3764_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
+    .D(_1111_),
+    .Q(ibus_pending_rdt[20]),
+    .R(i_rst_n_bF$buf10),
+    .S(vdd)
+);
+
+DFFPOSX1 _3765_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf8),
+    .D(_1279_),
+    .Q(\u_mem_serial.state [1])
+);
+
+DFFSR _3766_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
+    .D(_1112_),
+    .Q(ibus_pending_rdt[21]),
+    .R(i_rst_n_bF$buf9),
+    .S(vdd)
+);
+
+DFFPOSX1 _3767_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
+    .D(_1280_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [31])
+);
+
+DFFSR _3768_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
+    .D(_1113_),
+    .Q(ibus_pending_rdt[22]),
+    .R(i_rst_n_bF$buf8),
+    .S(vdd)
+);
+
+DFFPOSX1 _3769_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf7),
+    .D(_1281_),
+    .Q(\u_rf_if.tx_state [3])
+);
+
+DFFSR _3770_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
+    .D(_1114_),
+    .Q(ibus_pending_rdt[23]),
+    .R(i_rst_n_bF$buf7),
+    .S(vdd)
+);
+
+DFFPOSX1 _3771_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf6),
+    .D(_1282_),
+    .Q(\u_rf_if.tx_state [2])
+);
+
+DFFSR _3772_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
+    .D(_1115_),
+    .Q(ibus_pending_rdt[24]),
+    .R(i_rst_n_bF$buf6),
+    .S(vdd)
+);
+
+DFFPOSX1 _3773_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf5),
+    .D(_1283_),
+    .Q(\u_rf_if.tx_state [1])
+);
+
+DFFSR _3774_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .D(_1116_),
+    .Q(ibus_pending_rdt[25]),
+    .R(i_rst_n_bF$buf5),
+    .S(vdd)
+);
+
+DFFPOSX1 _3775_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf4),
+    .D(_1284_),
+    .Q(\u_rf_if.tx_state [0])
+);
+
+DFFSR _3776_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
+    .D(_1117_),
+    .Q(ibus_pending_rdt[26]),
+    .R(i_rst_n_bF$buf4),
+    .S(vdd)
+);
+
+DFFPOSX1 _3777_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf3),
+    .D(_1285_),
+    .Q(\u_rf_if.last_req_key [9])
+);
+
+DFFSR _3778_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .D(_1118_),
+    .Q(ibus_pending_rdt[27]),
+    .R(i_rst_n_bF$buf3),
+    .S(vdd)
+);
+
+DFFPOSX1 _3779_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf2),
+    .D(_1286_),
+    .Q(\u_rf_if.last_req_key [8])
+);
+
+DFFSR _3780_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .D(_1119_),
+    .Q(ibus_pending_rdt[28]),
+    .R(i_rst_n_bF$buf2),
+    .S(vdd)
+);
+
+DFFPOSX1 _3781_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf1),
+    .D(_1287_),
+    .Q(\u_rf_if.last_req_key [7])
+);
+
+DFFSR _3782_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .D(_1120_),
+    .Q(ibus_pending_rdt[29]),
+    .R(i_rst_n_bF$buf1),
+    .S(vdd)
+);
+
+DFFPOSX1 _3783_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf0),
+    .D(_1288_),
+    .Q(\u_rf_if.last_req_key [6])
+);
+
+DFFSR _3784_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .D(_1121_),
+    .Q(ibus_pending_rdt[30]),
+    .R(i_rst_n_bF$buf0),
+    .S(vdd)
+);
+
+DFFPOSX1 _3785_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf8),
+    .D(_1289_),
+    .Q(\u_rf_if.last_req_key [5])
+);
+
+DFFPOSX1 _3786_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .D(_1122_),
+    .Q(\u_cpu.mem_if.signbit )
+);
+
+DFFPOSX1 _3787_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf7),
+    .D(_1290_),
+    .Q(\u_rf_if.last_req_key [4])
+);
+
+DFFPOSX1 _3788_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .D(_1123_),
+    .Q(\u_cpu.alu.cmp_r )
+);
+
+DFFPOSX1 _3789_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf6),
+    .D(_1291_),
+    .Q(\u_rf_if.last_req_key [3])
+);
+
+DFFSR _3790_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .D(_1071_),
+    .Q(ibus_pending_rdt[31]),
+    .R(i_rst_n_bF$buf11),
+    .S(vdd)
+);
+
+DFFPOSX1 _3791_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf5),
+    .D(_1292_),
+    .Q(\u_rf_if.last_req_key [2])
+);
+
+DFFPOSX1 _3792_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .D(_1124_),
+    .Q(\u_cpu.alu.add_cy_r )
+);
+
+DFFPOSX1 _3793_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf4),
+    .D(_1293_),
+    .Q(\u_rf_if.last_req_key [1])
+);
+
+DFFPOSX1 _3794_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf3),
+    .D(_1072_),
+    .Q(\gen_int_sys_clk.clk_div [3])
+);
+
+DFFPOSX1 _3795_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(i_clk_fast_bF$buf2),
+    .D(_1294_),
+    .Q(\u_rf_if.last_req_key [0])
+);
+
+DFFPOSX1 _3796_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .D(_1128_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [29])
+);
+
+DFFPOSX1 _3797_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .D(_1295_),
+    .Q(\u_rf_if.issue_chunk [3])
+);
+
+DFFSR _3798_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .D(_1073_),
+    .Q(ibus_pending_ack),
+    .R(i_rst_n_bF$buf10),
+    .S(vdd)
+);
+
+DFFPOSX1 _3799_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .D(_1296_),
+    .Q(\u_rf_if.issue_chunk [2])
+);
+
+DFFPOSX1 _3800_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .D(_1129_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [30])
+);
+
+DFFPOSX1 _3801_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .D(_1297_),
+    .Q(\u_rf_if.issue_chunk [1])
+);
+
+INVX8 _3802_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(i_rst_n_bF$buf9),
+    .Y(_1070_)
+);
+
+DFFPOSX1 _3803_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .D(_1298_),
+    .Q(\u_rf_if.issue_chunk [0])
+);
+
+DFFPOSX1 _3804_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
+    .D(_1130_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [27])
+);
+
+DFFPOSX1 _3805_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .D(_1299_),
+    .Q(\u_rf_if.issue_sel )
+);
+
+DFFSR _3806_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .D(_1075_),
+    .Q(rf_write_drain_busy),
+    .R(i_rst_n_bF$buf8),
+    .S(vdd)
+);
+
+DFFPOSX1 _3807_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .D(_1300_),
+    .Q(\u_rf_if.rreg0_latched [3])
+);
+
+DFFPOSX1 _3808_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .D(_1131_),
+    .Q(\u_cpu.ctrl.pc )
+);
+
+DFFPOSX1 _3809_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .D(_1301_),
+    .Q(\u_rf_if.rreg0_latched [2])
+);
+
+INVX1 _3810_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.state.ibus_cyc ),
+    .Y(_1069_)
+);
+
+DFFPOSX1 _3811_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .D(_1302_),
+    .Q(\u_rf_if.rreg0_latched [1])
+);
+
+DFFPOSX1 _3812_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .D(_1132_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [1])
+);
+
+DFFPOSX1 _3813_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
+    .D(_1303_),
+    .Q(\u_rf_if.rreg0_latched [0])
+);
+
+NAND2X1 _3814_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .A(\u_cpu.state.init_done ),
+    .B(_1065_),
+    .Y(_1064_)
+);
+
+DFFPOSX1 _3815_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .D(_1304_),
+    .Q(\u_rf_if.rreg1_latched [3])
+);
+
+DFFPOSX1 _3816_ (
+    .vdd(vdd),
+    .gnd(gnd),
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .D(_1133_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [2])
 );
 
 DFFPOSX1 _3817_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
-    .D(_1330_),
-    .Q(\u_cpu.state.o_cnt [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
+    .D(_1305_),
+    .Q(\u_rf_if.rreg1_latched [2])
 );
 
-DFFPOSX1 _3818_ (
+DFFSR _3818_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
-    .D(_1331_),
-    .Q(\u_cpu.bufreg2.i_bytecnt [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .D(_1078_),
+    .Q(current_wdata0_next_hint),
+    .R(i_rst_n_bF$buf7),
+    .S(vdd)
 );
 
 DFFPOSX1 _3819_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
-    .D(_1332_),
-    .Q(\u_cpu.state.cnt_r [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .D(_1306_),
+    .Q(\u_rf_if.rreg1_latched [1])
 );
 
 DFFPOSX1 _3820_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
-    .D(_1333_),
-    .Q(\u_cpu.state.cnt_r [1])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .D(_1134_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [3])
 );
 
 DFFPOSX1 _3821_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
-    .D(_1334_),
-    .Q(\u_cpu.state.cnt_r [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
+    .D(_1307_),
+    .Q(\u_rf_if.rreg1_latched [0])
 );
 
-DFFSR _3822_ (
+DFFPOSX1 _3822_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
-    .D(_1167_),
-    .Q(ibus_pending_rdt[20]),
-    .R(i_rst_n_bF$buf9),
-    .S(vdd)
+    .CLK(i_clk_fast_bF$buf1),
+    .D(_1079_),
+    .Q(\gen_int_sys_clk.clk_sys_r )
 );
 
 DFFPOSX1 _3823_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
-    .D(_1335_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [31])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .D(_1192_),
+    .Q(\u_cpu.state.i_ctrl_misalign )
 );
 
-DFFSR _3824_ (
+DFFPOSX1 _3824_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
-    .D(_1168_),
-    .Q(ibus_pending_rdt[21]),
-    .R(i_rst_n_bF$buf8),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .D(_1308_),
+    .Q(raddr[7])
 );
 
 DFFPOSX1 _3825_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
-    .D(_1336_),
-    .Q(\u_rf_if.rreg1_latched [3])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
+    .D(_1135_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [4])
 );
 
-DFFSR _3826_ (
+DFFPOSX1 _3826_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
-    .D(_1169_),
-    .Q(ibus_pending_rdt[22]),
-    .R(i_rst_n_bF$buf7),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
+    .D(_1309_),
+    .Q(raddr[6])
 );
 
 DFFPOSX1 _3827_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
-    .D(_1337_),
-    .Q(\u_rf_if.rreg1_latched [2])
+    .CLK(i_clk_fast_bF$buf0),
+    .D(_1461_),
+    .Q(\u_mem_serial.bit_count [0])
 );
 
-DFFSR _3828_ (
+DFFPOSX1 _3828_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
-    .D(_1170_),
-    .Q(ibus_pending_rdt[23]),
-    .R(i_rst_n_bF$buf6),
-    .S(vdd)
+    .CLK(i_clk_fast_bF$buf8),
+    .D(_1080_),
+    .Q(\gen_int_sys_clk.clk_div [0])
 );
 
 DFFPOSX1 _3829_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
-    .D(_1338_),
-    .Q(\u_rf_if.rreg1_latched [1])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
+    .D(_1310_),
+    .Q(raddr[5])
 );
 
-DFFSR _3830_ (
+DFFPOSX1 _3830_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
-    .D(_1171_),
-    .Q(ibus_pending_rdt[24]),
-    .R(i_rst_n_bF$buf5),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
+    .D(_1127_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [28])
 );
 
 DFFPOSX1 _3831_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
-    .D(_1339_),
-    .Q(\u_rf_if.rreg1_latched [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
+    .D(_1136_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [5])
 );
 
-DFFSR _3832_ (
+DFFPOSX1 _3832_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
-    .D(_1172_),
-    .Q(ibus_pending_rdt[25]),
-    .R(i_rst_n_bF$buf4),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
+    .D(_1311_),
+    .Q(raddr[4])
 );
 
 DFFPOSX1 _3833_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
-    .D(_1340_),
-    .Q(\u_rf_if.issue_chunk [3])
+    .CLK(i_clk_fast_bF$buf7),
+    .D(_1081_),
+    .Q(\gen_int_sys_clk.clk_div [1])
 );
 
-DFFSR _3834_ (
+DFFPOSX1 _3834_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
-    .D(_1173_),
-    .Q(ibus_pending_rdt[26]),
-    .R(i_rst_n_bF$buf3),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
+    .D(_1312_),
+    .Q(raddr[3])
 );
 
 DFFPOSX1 _3835_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
-    .D(_1341_),
-    .Q(\u_rf_if.issue_chunk [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
+    .D(_1137_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [6])
 );
 
-DFFSR _3836_ (
+DFFPOSX1 _3836_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
-    .D(_1174_),
-    .Q(ibus_pending_rdt[27]),
-    .R(i_rst_n_bF$buf2),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
+    .D(_1313_),
+    .Q(raddr[2])
 );
 
 DFFPOSX1 _3837_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
-    .D(_1342_),
-    .Q(\u_rf_if.issue_chunk [1])
+    .CLK(i_clk_fast_bF$buf6),
+    .D(_1082_),
+    .Q(\gen_int_sys_clk.clk_div [2])
 );
 
-DFFSR _3838_ (
+DFFPOSX1 _3838_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
-    .D(_1175_),
-    .Q(ibus_pending_rdt[28]),
-    .R(i_rst_n_bF$buf1),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .D(_1314_),
+    .Q(raddr[1])
 );
 
 DFFPOSX1 _3839_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
-    .D(_1343_),
-    .Q(\u_rf_if.issue_chunk [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
+    .D(_1138_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [7])
 );
 
-DFFSR _3840_ (
+DFFPOSX1 _3840_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
-    .D(_1176_),
-    .Q(ibus_pending_rdt[29]),
-    .R(i_rst_n_bF$buf0),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .D(_1315_),
+    .Q(raddr[0])
 );
 
-DFFPOSX1 _3841_ (
+OR2X2 _3841_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
-    .D(_1344_),
-    .Q(\u_rf_if.issue_sel )
+    .A(_1064_),
+    .B(_1061_),
+    .Y(_1060_)
 );
 
-DFFSR _3842_ (
+DFFPOSX1 _3842_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
-    .D(_1177_),
-    .Q(ibus_pending_rdt[30]),
-    .R(i_rst_n_bF$buf10),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .D(_1316_),
+    .Q(\u_rf_if.o_waddr [2])
 );
 
 DFFPOSX1 _3843_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
-    .D(_1345_),
-    .Q(\u_rf_if.rreg0_latched [3])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .D(_1139_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [8])
 );
 
-DFFSR _3844_ (
+DFFPOSX1 _3844_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
-    .D(_1127_),
-    .Q(ibus_pending_rdt[31]),
-    .R(i_rst_n_bF$buf9),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .D(_1317_),
+    .Q(\u_rf_if.o_waddr [1])
 );
 
-DFFPOSX1 _3845_ (
+NAND3X1 _3845_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
-    .D(_1346_),
-    .Q(\u_rf_if.rreg0_latched [2])
+    .A(i_rst_n_bF$buf6),
+    .B(_1063_),
+    .C(_1062_),
+    .Y(_1061_)
 );
 
 DFFPOSX1 _3846_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf5),
-    .D(_1178_),
-    .Q(\u_mem_serial.bit_count [6])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .D(_1318_),
+    .Q(\u_rf_if.o_waddr [0])
 );
 
 DFFPOSX1 _3847_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
-    .D(_1347_),
-    .Q(\u_rf_if.rreg0_latched [1])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .D(_1140_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [9])
 );
 
 DFFPOSX1 _3848_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
-    .D(_1179_),
-    .Q(\u_cpu.mem_if.signbit )
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .D(_1319_),
+    .Q(\u_rf_if.read_buf0 [29])
 );
 
-DFFPOSX1 _3849_ (
+INVX2 _3849_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
-    .D(_1348_),
-    .Q(\u_rf_if.rreg0_latched [0])
+    .A(\u_cpu.decode.opcode [2]),
+    .Y(_1062_)
 );
 
 DFFPOSX1 _3850_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
-    .D(_1181_),
-    .Q(\u_cpu.alu.cmp_r )
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .D(_1320_),
+    .Q(\u_rf_if.read_buf0 [28])
 );
 
 DFFPOSX1 _3851_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
-    .D(_1349_),
-    .Q(\u_rf_if.o_waddr [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .D(_1141_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [10])
 );
 
 DFFPOSX1 _3852_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf4),
-    .D(_1128_),
-    .Q(\gen_int_sys_clk.clk_div [3])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .D(_1321_),
+    .Q(\u_rf_if.read_buf0 [27])
 );
 
-DFFPOSX1 _3853_ (
+INVX2 _3853_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
-    .D(_1350_),
-    .Q(\u_rf_if.o_waddr [1])
+    .A(\u_cpu.branch_op ),
+    .Y(_1063_)
 );
 
 DFFPOSX1 _3854_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
-    .D(_1182_),
-    .Q(\u_cpu.alu.add_cy_r )
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .D(_1322_),
+    .Q(\u_rf_if.read_buf0 [26])
 );
 
 DFFPOSX1 _3855_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
-    .D(_1351_),
-    .Q(\u_rf_if.o_waddr [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .D(_1142_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [11])
 );
 
-DFFSR _3856_ (
+DFFPOSX1 _3856_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
-    .D(_1129_),
-    .Q(ibus_pending_ack),
-    .R(i_rst_n_bF$buf8),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .D(_1323_),
+    .Q(\u_rf_if.read_buf0 [25])
 );
 
-DFFPOSX1 _3857_ (
+INVX1 _3857_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
-    .D(_1352_),
-    .Q(\u_rf_if.write_wait [4])
+    .A(_1066_),
+    .Y(_1065_)
 );
 
 DFFPOSX1 _3858_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
-    .D(_1186_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [29])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .D(_1324_),
+    .Q(\u_rf_if.read_buf0 [24])
 );
 
 DFFPOSX1 _3859_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
-    .D(_1353_),
-    .Q(\u_rf_if.write_wait [3])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .D(_1143_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [12])
 );
 
-INVX8 _3860_ (
+DFFPOSX1 _3860_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_rst_n_bF$buf7),
-    .Y(_1126_)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
+    .D(_1325_),
+    .Q(\u_rf_if.read_buf0 [23])
 );
 
 DFFPOSX1 _3861_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
-    .D(_1354_),
-    .Q(\u_rf_if.write_wait [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .D(_1126_),
+    .Q(\u_cpu.ctrl.pc_plus_offset_cy_r_w )
 );
 
-DFFPOSX1 _3862_ (
+NAND2X1 _3862_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
-    .D(_1187_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [30])
+    .A(_1068_),
+    .B(_1067_),
+    .Y(_1066_)
 );
 
 DFFPOSX1 _3863_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf44 ),
-    .D(_1355_),
-    .Q(\u_rf_if.write_wait [1])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .D(_1326_),
+    .Q(\u_rf_if.read_buf0 [22])
 );
 
-DFFSR _3864_ (
+DFFPOSX1 _3864_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
-    .D(_1131_),
-    .Q(rf_write_drain_busy),
-    .R(i_rst_n_bF$buf6),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .D(_1144_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [13])
 );
 
 DFFPOSX1 _3865_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
-    .D(_1356_),
-    .Q(\u_rf_if.write_wait [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .D(_1327_),
+    .Q(\u_rf_if.read_buf0 [21])
 );
 
-DFFPOSX1 _3866_ (
+NOR2X1 _3866_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
-    .D(_1357_),
-    .Q(\u_rf_if.wdata0_r [0])
+    .A(\u_cpu.state.cnt_r [2]),
+    .B(\u_cpu.state.cnt_r [3]),
+    .Y(_1067_)
 );
 
 DFFPOSX1 _3867_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
-    .D(_1188_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [27])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .D(_1328_),
+    .Q(\u_rf_if.read_buf0 [20])
 );
 
 DFFPOSX1 _3868_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
-    .D(_1358_),
-    .Q(raddr[7])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .D(_1145_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [14])
 );
 
-INVX1 _3869_ (
+DFFPOSX1 _3869_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.state.ibus_cyc ),
-    .Y(_1125_)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .D(_1329_),
+    .Q(\u_rf_if.read_buf0 [19])
 );
 
-DFFPOSX1 _3870_ (
+NOR2X1 _3870_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
-    .D(_1359_),
-    .Q(raddr[6])
+    .A(\u_cpu.state.cnt_r [0]),
+    .B(\u_cpu.state.cnt_r [1]),
+    .Y(_1068_)
 );
 
 DFFPOSX1 _3871_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
-    .D(_1189_),
-    .Q(\u_cpu.ctrl.pc )
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
+    .D(_1330_),
+    .Q(\u_rf_if.read_buf0 [18])
 );
 
 DFFPOSX1 _3872_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
-    .D(_1360_),
-    .Q(raddr[5])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .D(_1146_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [15])
 );
 
-NAND2X1 _3873_ (
+DFFPOSX1 _3873_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.state.init_done ),
-    .B(_1121_),
-    .Y(_1120_)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .D(_1331_),
+    .Q(\u_rf_if.read_buf0 [17])
 );
 
-DFFPOSX1 _3874_ (
+DFFSR _3874_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
-    .D(_1361_),
-    .Q(raddr[4])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
+    .D(_1091_),
+    .Q(ibus_pending_rdt[0]),
+    .R(vdd),
+    .S(i_rst_n_bF$buf5)
 );
 
 DFFPOSX1 _3875_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
-    .D(_1190_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [1])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .D(_1332_),
+    .Q(\u_rf_if.read_buf0 [16])
 );
 
 DFFPOSX1 _3876_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
-    .D(_1362_),
-    .Q(raddr[3])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .D(_1147_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [16])
 );
 
-DFFSR _3877_ (
+DFFPOSX1 _3877_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
-    .D(_1134_),
-    .Q(current_wdata0_next_hint),
-    .R(i_rst_n_bF$buf5),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .D(_1333_),
+    .Q(\u_rf_if.read_buf0 [15])
 );
 
-DFFPOSX1 _3878_ (
+DFFSR _3878_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
-    .D(_1363_),
-    .Q(raddr[2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
+    .D(_1092_),
+    .Q(ibus_pending_rdt[1]),
+    .R(vdd),
+    .S(i_rst_n_bF$buf4)
 );
 
 DFFPOSX1 _3879_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
-    .D(_1191_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .D(_1334_),
+    .Q(\u_rf_if.read_buf0 [14])
 );
 
 DFFPOSX1 _3880_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
-    .D(_1364_),
-    .Q(raddr[1])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .D(_1148_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [17])
 );
 
 DFFPOSX1 _3881_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf3),
-    .D(_1135_),
-    .Q(\gen_int_sys_clk.clk_sys_r )
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
+    .D(_1335_),
+    .Q(\u_rf_if.read_buf0 [13])
 );
 
-DFFPOSX1 _3882_ (
+DFFSR _3882_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
-    .D(_1365_),
-    .Q(raddr[0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
+    .D(_1093_),
+    .Q(ibus_pending_rdt[2]),
+    .R(i_rst_n_bF$buf3),
+    .S(vdd)
 );
 
 DFFPOSX1 _3883_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
-    .D(_1192_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [3])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
+    .D(_1336_),
+    .Q(\u_rf_if.read_buf0 [12])
 );
 
 DFFPOSX1 _3884_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
-    .D(_1366_),
-    .Q(\u_rf_if.read_buf0 [29])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
+    .D(_1149_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [18])
 );
 
 DFFPOSX1 _3885_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf2),
-    .D(_1136_),
-    .Q(\gen_int_sys_clk.clk_div [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
+    .D(_1337_),
+    .Q(\u_rf_if.read_buf0 [11])
 );
 
-DFFPOSX1 _3886_ (
+DFFSR _3886_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
-    .D(_1367_),
-    .Q(\u_rf_if.read_buf0 [28])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
+    .D(_1094_),
+    .Q(ibus_pending_rdt[3]),
+    .R(i_rst_n_bF$buf2),
+    .S(vdd)
 );
 
 DFFPOSX1 _3887_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
-    .D(_1193_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [4])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
+    .D(_1338_),
+    .Q(\u_rf_if.read_buf0 [10])
 );
 
 DFFPOSX1 _3888_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
-    .D(_1368_),
-    .Q(\u_rf_if.read_buf0 [27])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
+    .D(_1150_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [19])
 );
 
 DFFPOSX1 _3889_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf1),
-    .D(_1137_),
-    .Q(\gen_int_sys_clk.clk_div [1])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
+    .D(_1339_),
+    .Q(\u_rf_if.read_buf0 [9])
 );
 
-DFFPOSX1 _3890_ (
+DFFSR _3890_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
-    .D(_1369_),
-    .Q(\u_rf_if.read_buf0 [26])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .D(_1095_),
+    .Q(ibus_pending_rdt[4]),
+    .R(vdd),
+    .S(i_rst_n_bF$buf1)
 );
 
 DFFPOSX1 _3891_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
-    .D(_1194_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [5])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
+    .D(_1340_),
+    .Q(\u_rf_if.read_buf0 [8])
 );
 
 DFFPOSX1 _3892_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
-    .D(_1370_),
-    .Q(\u_rf_if.read_buf0 [25])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .D(_1151_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [20])
 );
 
 DFFPOSX1 _3893_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf0),
-    .D(_1138_),
-    .Q(\gen_int_sys_clk.clk_div [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .D(_1341_),
+    .Q(\u_rf_if.read_buf0 [7])
 );
 
-DFFPOSX1 _3894_ (
+DFFSR _3894_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
-    .D(_1371_),
-    .Q(\u_rf_if.read_buf0 [24])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .D(_1096_),
+    .Q(ibus_pending_rdt[5]),
+    .R(i_rst_n_bF$buf0),
+    .S(vdd)
 );
 
 DFFPOSX1 _3895_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
-    .D(_1195_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [6])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .D(_1342_),
+    .Q(\u_rf_if.read_buf0 [6])
 );
 
 DFFPOSX1 _3896_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
-    .D(_1372_),
-    .Q(\u_rf_if.read_buf0 [23])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .D(_1152_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [21])
 );
 
-OR2X2 _3897_ (
+DFFPOSX1 _3897_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1120_),
-    .B(_1117_),
-    .Y(_1116_)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .D(_1343_),
+    .Q(\u_rf_if.read_buf0 [5])
 );
 
-DFFPOSX1 _3898_ (
+DFFSR _3898_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
-    .D(_1373_),
-    .Q(\u_rf_if.read_buf0 [22])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .D(_1097_),
+    .Q(ibus_pending_rdt[6]),
+    .R(i_rst_n_bF$buf11),
+    .S(vdd)
 );
 
 DFFPOSX1 _3899_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
-    .D(_1196_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [7])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .D(_1344_),
+    .Q(\u_rf_if.read_buf0 [4])
 );
 
 DFFPOSX1 _3900_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
-    .D(_1374_),
-    .Q(\u_rf_if.read_buf0 [21])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .D(_1153_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [22])
 );
 
-NAND3X1 _3901_ (
+DFFPOSX1 _3901_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(i_rst_n_bF$buf4),
-    .B(_1119_),
-    .C(_1118_),
-    .Y(_1117_)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .D(_1345_),
+    .Q(\u_rf_if.read_buf0 [3])
 );
 
-DFFPOSX1 _3902_ (
+DFFSR _3902_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
-    .D(_1375_),
-    .Q(\u_rf_if.read_buf0 [20])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .D(_1098_),
+    .Q(ibus_pending_rdt[7]),
+    .R(i_rst_n_bF$buf10),
+    .S(vdd)
 );
 
 DFFPOSX1 _3903_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
-    .D(_1197_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [8])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .D(_1346_),
+    .Q(\u_rf_if.read_buf0 [2])
 );
 
 DFFPOSX1 _3904_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
-    .D(_1376_),
-    .Q(\u_rf_if.read_buf0 [19])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .D(_1154_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [23])
 );
 
-INVX2 _3905_ (
+DFFPOSX1 _3905_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.decode.opcode [2]),
-    .Y(_1118_)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .D(_1347_),
+    .Q(\u_rf_if.read_buf0 [1])
 );
 
-DFFPOSX1 _3906_ (
+DFFSR _3906_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
-    .D(_1377_),
-    .Q(\u_rf_if.read_buf0 [18])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .D(_1099_),
+    .Q(ibus_pending_rdt[8]),
+    .R(i_rst_n_bF$buf9),
+    .S(vdd)
 );
 
 DFFPOSX1 _3907_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
-    .D(_1198_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [9])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
+    .D(_1348_),
+    .Q(\u_rf_if.read_buf0 [0])
 );
 
 DFFPOSX1 _3908_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
-    .D(_1378_),
-    .Q(\u_rf_if.read_buf0 [17])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .D(_1155_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [24])
 );
 
-INVX1 _3909_ (
+DFFPOSX1 _3909_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.branch_op ),
-    .Y(_1119_)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .D(_1349_),
+    .Q(\u_rf_if.read_buf1 [29])
 );
 
-DFFPOSX1 _3910_ (
+DFFSR _3910_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
-    .D(_1379_),
-    .Q(\u_rf_if.read_buf0 [16])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .D(_1100_),
+    .Q(ibus_pending_rdt[9]),
+    .R(i_rst_n_bF$buf8),
+    .S(vdd)
 );
 
 DFFPOSX1 _3911_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
-    .D(_1199_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [10])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .D(_1350_),
+    .Q(\u_rf_if.read_buf1 [28])
 );
 
 DFFPOSX1 _3912_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
-    .D(_1380_),
-    .Q(\u_rf_if.read_buf0 [15])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .D(_1156_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [25])
 );
 
-AND2X2 _3913_ (
+DFFPOSX1 _3913_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1123_),
-    .B(_1122_),
-    .Y(_1121_)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .D(_1351_),
+    .Q(\u_rf_if.read_buf1 [27])
 );
 
-DFFPOSX1 _3914_ (
+DFFSR _3914_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
-    .D(_1381_),
-    .Q(\u_rf_if.read_buf0 [14])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .D(_1101_),
+    .Q(ibus_pending_rdt[10]),
+    .R(i_rst_n_bF$buf7),
+    .S(vdd)
 );
 
 DFFPOSX1 _3915_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
-    .D(_1200_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [11])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
+    .D(_1352_),
+    .Q(\u_rf_if.read_buf1 [26])
 );
 
 DFFPOSX1 _3916_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
-    .D(_1382_),
-    .Q(\u_rf_if.read_buf0 [13])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .D(_1157_),
+    .Q(\u_cpu.ctrl.o_ibus_adr [26])
 );
 
-NOR2X1 _3917_ (
+DFFPOSX1 _3917_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.state.cnt_r [2]),
-    .B(\u_cpu.state.cnt_r [3]),
-    .Y(_1122_)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .D(_1353_),
+    .Q(\u_rf_if.read_buf1 [25])
 );
 
 DFFPOSX1 _3918_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
-    .D(_1383_),
-    .Q(\u_rf_if.read_buf0 [12])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
+    .D(_1158_),
+    .Q(\u_cpu.bufreg2.cnt_next [6])
 );
 
 DFFPOSX1 _3919_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
-    .D(_1201_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [12])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .D(_1354_),
+    .Q(\u_rf_if.read_buf1 [24])
 );
 
 DFFPOSX1 _3920_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf44 ),
-    .D(_1384_),
-    .Q(\u_rf_if.read_buf0 [11])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .D(_1159_),
+    .Q(\u_cpu.bufreg2.dlo [23])
 );
 
-NOR2X1 _3921_ (
+DFFPOSX1 _3921_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(\u_cpu.state.cnt_r [0]),
-    .B(\u_cpu.state.cnt_r [1]),
-    .Y(_1123_)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .D(_1355_),
+    .Q(\u_rf_if.read_buf1 [23])
 );
 
 DFFPOSX1 _3922_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
-    .D(_1385_),
-    .Q(\u_rf_if.read_buf0 [10])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
+    .D(_1160_),
+    .Q(\u_cpu.bufreg2.dlo [0])
 );
 
 DFFPOSX1 _3923_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
-    .D(_1202_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [13])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .D(_1356_),
+    .Q(\u_rf_if.read_buf1 [22])
 );
 
 DFFPOSX1 _3924_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
-    .D(_1250_),
-    .Q(\u_cpu.state.i_ctrl_misalign )
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .D(_1161_),
+    .Q(\u_cpu.bufreg2.dlo [1])
 );
 
 DFFPOSX1 _3925_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
-    .D(_1386_),
-    .Q(\u_rf_if.read_buf0 [9])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
+    .D(_1357_),
+    .Q(\u_rf_if.read_buf1 [21])
 );
 
-NOR2X1 _3926_ (
+DFFPOSX1 _3926_ (
     .vdd(vdd),
     .gnd(gnd),
-    .A(_1126__bF$buf2),
-    .B(_1125_),
-    .Y(_1124_)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
+    .D(_1162_),
+    .Q(\u_cpu.bufreg2.dlo [2])
 );
 
 DFFPOSX1 _3927_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
-    .D(_1387_),
-    .Q(\u_rf_if.read_buf0 [8])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
+    .D(_1358_),
+    .Q(\u_rf_if.read_buf1 [20])
 );
 
 DFFPOSX1 _3928_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
-    .D(_1203_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [14])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
+    .D(_1163_),
+    .Q(\u_cpu.bufreg2.dlo [3])
 );
 
 DFFPOSX1 _3929_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
-    .D(_1388_),
-    .Q(\u_rf_if.read_buf0 [7])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
+    .D(_1359_),
+    .Q(\u_rf_if.read_buf1 [19])
 );
 
-DFFSR _3930_ (
+DFFPOSX1 _3930_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
-    .D(_1147_),
-    .Q(ibus_pending_rdt[0]),
-    .R(vdd),
-    .S(i_rst_n_bF$buf3)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
+    .D(_1164_),
+    .Q(\u_cpu.bufreg2.dlo [4])
 );
 
 DFFPOSX1 _3931_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
-    .D(_1185_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [28])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
+    .D(_1360_),
+    .Q(\u_rf_if.read_buf1 [18])
 );
 
 DFFPOSX1 _3932_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
-    .D(_1389_),
-    .Q(\u_rf_if.read_buf0 [6])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
+    .D(_1165_),
+    .Q(\u_cpu.bufreg2.dlo [5])
 );
 
 DFFPOSX1 _3933_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
-    .D(_1204_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [15])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
+    .D(_1361_),
+    .Q(\u_rf_if.read_buf1 [17])
 );
 
 DFFPOSX1 _3934_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
-    .D(_1390_),
-    .Q(\u_rf_if.read_buf0 [5])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .D(_1166_),
+    .Q(\u_cpu.bufreg2.dlo [6])
 );
 
-DFFSR _3935_ (
+DFFPOSX1 _3935_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
-    .D(_1148_),
-    .Q(ibus_pending_rdt[1]),
-    .R(vdd),
-    .S(i_rst_n_bF$buf2)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
+    .D(_1362_),
+    .Q(\u_rf_if.read_buf1 [16])
 );
 
 DFFPOSX1 _3936_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
-    .D(_1391_),
-    .Q(\u_rf_if.read_buf0 [4])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .D(_1167_),
+    .Q(\u_cpu.bufreg2.dlo [7])
 );
 
 DFFPOSX1 _3937_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
-    .D(_1205_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [16])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .D(_1363_),
+    .Q(\u_rf_if.read_buf1 [15])
 );
 
 DFFPOSX1 _3938_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
-    .D(_1392_),
-    .Q(\u_rf_if.read_buf0 [3])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .D(_1168_),
+    .Q(\u_cpu.bufreg2.dlo [8])
 );
 
-DFFSR _3939_ (
+DFFPOSX1 _3939_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
-    .D(_1149_),
-    .Q(ibus_pending_rdt[2]),
-    .R(i_rst_n_bF$buf1),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .D(_1364_),
+    .Q(\u_rf_if.read_buf1 [14])
 );
 
 DFFPOSX1 _3940_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
-    .D(_1393_),
-    .Q(\u_rf_if.read_buf0 [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .D(_1169_),
+    .Q(\u_cpu.bufreg2.dlo [9])
 );
 
 DFFPOSX1 _3941_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
-    .D(_1206_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [17])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .D(_1365_),
+    .Q(\u_rf_if.read_buf1 [13])
 );
 
 DFFPOSX1 _3942_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
-    .D(_1394_),
-    .Q(\u_rf_if.read_buf0 [1])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .D(_1170_),
+    .Q(\u_cpu.bufreg2.dlo [10])
 );
 
-DFFSR _3943_ (
+DFFPOSX1 _3943_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
-    .D(_1150_),
-    .Q(ibus_pending_rdt[3]),
-    .R(i_rst_n_bF$buf0),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .D(_1366_),
+    .Q(\u_rf_if.read_buf1 [12])
 );
 
 DFFPOSX1 _3944_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
-    .D(_1395_),
-    .Q(\u_rf_if.read_buf0 [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .D(_1171_),
+    .Q(\u_cpu.bufreg2.dlo [11])
 );
 
 DFFPOSX1 _3945_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
-    .D(_1207_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [18])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .D(_1367_),
+    .Q(\u_rf_if.read_buf1 [11])
 );
 
 DFFPOSX1 _3946_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
-    .D(_1396_),
-    .Q(\u_rf_if.read_buf1 [29])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .D(_1172_),
+    .Q(\u_cpu.bufreg2.dlo [12])
 );
 
-DFFSR _3947_ (
+DFFPOSX1 _3947_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
-    .D(_1151_),
-    .Q(ibus_pending_rdt[4]),
-    .R(vdd),
-    .S(i_rst_n_bF$buf10)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .D(_1368_),
+    .Q(\u_rf_if.read_buf1 [10])
 );
 
 DFFPOSX1 _3948_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
-    .D(_1397_),
-    .Q(\u_rf_if.read_buf1 [28])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .D(_1173_),
+    .Q(\u_cpu.bufreg2.dlo [13])
 );
 
 DFFPOSX1 _3949_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
-    .D(_1208_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [19])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .D(_1369_),
+    .Q(\u_rf_if.read_buf1 [9])
 );
 
 DFFPOSX1 _3950_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
-    .D(_1398_),
-    .Q(\u_rf_if.read_buf1 [27])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .D(_1174_),
+    .Q(\u_cpu.bufreg2.dlo [14])
 );
 
-DFFSR _3951_ (
+DFFPOSX1 _3951_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
-    .D(_1152_),
-    .Q(ibus_pending_rdt[5]),
-    .R(i_rst_n_bF$buf9),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
+    .D(_1370_),
+    .Q(\u_rf_if.read_buf1 [8])
 );
 
 DFFPOSX1 _3952_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
-    .D(_1399_),
-    .Q(\u_rf_if.read_buf1 [26])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .D(_1175_),
+    .Q(\u_cpu.bufreg2.dlo [15])
 );
 
 DFFPOSX1 _3953_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
-    .D(_1209_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [20])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .D(_1371_),
+    .Q(\u_rf_if.read_buf1 [7])
 );
 
 DFFPOSX1 _3954_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
-    .D(_1400_),
-    .Q(\u_rf_if.read_buf1 [25])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .D(_1176_),
+    .Q(\u_cpu.bufreg2.dlo [16])
 );
 
-DFFSR _3955_ (
+DFFPOSX1 _3955_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
-    .D(_1153_),
-    .Q(ibus_pending_rdt[6]),
-    .R(i_rst_n_bF$buf8),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .D(_1372_),
+    .Q(\u_rf_if.read_buf1 [6])
 );
 
 DFFPOSX1 _3956_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
-    .D(_1401_),
-    .Q(\u_rf_if.read_buf1 [24])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .D(_1177_),
+    .Q(\u_cpu.bufreg2.dlo [17])
 );
 
 DFFPOSX1 _3957_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
-    .D(_1210_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [21])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .D(_1373_),
+    .Q(\u_rf_if.read_buf1 [5])
 );
 
 DFFPOSX1 _3958_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
-    .D(_1402_),
-    .Q(\u_rf_if.read_buf1 [23])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .D(_1178_),
+    .Q(\u_cpu.bufreg2.dlo [18])
 );
 
-DFFSR _3959_ (
+DFFPOSX1 _3959_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
-    .D(_1154_),
-    .Q(ibus_pending_rdt[7]),
-    .R(i_rst_n_bF$buf7),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
+    .D(_1374_),
+    .Q(\u_rf_if.read_buf1 [4])
 );
 
 DFFPOSX1 _3960_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
-    .D(_1403_),
-    .Q(\u_rf_if.read_buf1 [22])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .D(_1179_),
+    .Q(\u_cpu.bufreg2.dlo [19])
 );
 
 DFFPOSX1 _3961_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
-    .D(_1211_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [22])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .D(_1375_),
+    .Q(\u_rf_if.read_buf1 [3])
 );
 
 DFFPOSX1 _3962_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
-    .D(_1184_),
-    .Q(\u_cpu.ctrl.pc_plus_offset_cy_r_w )
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
+    .D(_1180_),
+    .Q(\u_cpu.bufreg2.dlo [20])
 );
 
 DFFPOSX1 _3963_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
-    .D(_1404_),
-    .Q(\u_rf_if.read_buf1 [21])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .D(_1376_),
+    .Q(\u_rf_if.read_buf1 [2])
 );
 
-DFFSR _3964_ (
+DFFPOSX1 _3964_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
-    .D(_1155_),
-    .Q(ibus_pending_rdt[8]),
-    .R(i_rst_n_bF$buf6),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .D(_1181_),
+    .Q(\u_cpu.bufreg2.dlo [21])
 );
 
 DFFPOSX1 _3965_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
-    .D(_1405_),
-    .Q(\u_rf_if.read_buf1 [20])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .D(_1377_),
+    .Q(\u_rf_if.read_buf1 [1])
 );
 
 DFFPOSX1 _3966_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
-    .D(_1212_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [23])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
+    .D(_1182_),
+    .Q(\u_cpu.bufreg2.dlo [22])
 );
 
 DFFPOSX1 _3967_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf44 ),
-    .D(_1406_),
-    .Q(\u_rf_if.read_buf1 [19])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .D(_1378_),
+    .Q(\u_rf_if.read_buf1 [0])
 );
 
-DFFSR _3968_ (
+DFFPOSX1 _3968_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
-    .D(_1156_),
-    .Q(ibus_pending_rdt[9]),
-    .R(i_rst_n_bF$buf5),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .D(_1183_),
+    .Q(\u_cpu.bufreg.i_shamt [0])
 );
 
 DFFPOSX1 _3969_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
-    .D(_1407_),
-    .Q(\u_rf_if.read_buf1 [18])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
+    .D(_1379_),
+    .Q(\u_rf_if.stream_cnt [3])
 );
 
 DFFPOSX1 _3970_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
-    .D(_1213_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [24])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
+    .D(_1184_),
+    .Q(\u_cpu.bufreg.i_shamt [1])
 );
 
 DFFPOSX1 _3971_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
-    .D(_1408_),
-    .Q(\u_rf_if.read_buf1 [17])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
+    .D(_1380_),
+    .Q(\u_rf_if.stream_cnt [2])
 );
 
-DFFSR _3972_ (
+DFFPOSX1 _3972_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
-    .D(_1157_),
-    .Q(ibus_pending_rdt[10]),
-    .R(i_rst_n_bF$buf4),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
+    .D(_1185_),
+    .Q(\u_cpu.bufreg.i_shamt [2])
 );
 
 DFFPOSX1 _3973_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
-    .D(_1409_),
-    .Q(\u_rf_if.read_buf1 [16])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
+    .D(_1381_),
+    .Q(\u_rf_if.stream_cnt [1])
 );
 
 DFFPOSX1 _3974_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
-    .D(_1214_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [25])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
+    .D(_1186_),
+    .Q(\u_cpu.bufreg2.dhi [3])
 );
 
 DFFPOSX1 _3975_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
-    .D(_1410_),
-    .Q(\u_rf_if.read_buf1 [15])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
+    .D(_1382_),
+    .Q(\u_rf_if.stream_cnt [0])
 );
 
-DFFSR _3976_ (
+DFFPOSX1 _3976_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
-    .D(_1158_),
-    .Q(ibus_pending_rdt[11]),
-    .R(i_rst_n_bF$buf3),
-    .S(vdd)
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
+    .D(_1383_),
+    .Q(\u_rf_if.rcnt [2])
 );
 
 DFFPOSX1 _3977_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
-    .D(_1411_),
-    .Q(\u_rf_if.read_buf1 [14])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
+    .D(_1384_),
+    .Q(\u_rf_if.rcnt [0])
 );
 
 DFFPOSX1 _3978_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
-    .D(_1215_),
-    .Q(\u_cpu.ctrl.o_ibus_adr [26])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .D(_1385_),
+    .Q(\u_rf_if.wdata0_r [0])
 );
 
 DFFPOSX1 _3979_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
-    .D(_1412_),
-    .Q(\u_rf_if.read_buf1 [13])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
+    .D(_1386_),
+    .Q(\u_rf_if.stream_active )
 );
 
 DFFPOSX1 _3980_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
-    .D(_1216_),
-    .Q(\u_cpu.bufreg2.cnt_next [6])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .D(_1187_),
+    .Q(\u_cpu.bufreg2.dhi [4])
 );
 
 DFFPOSX1 _3981_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
-    .D(_1413_),
-    .Q(\u_rf_if.read_buf1 [12])
+    .CLK(i_clk_fast_bF$buf5),
+    .D(_1387_),
+    .Q(\u_rf_if.shift_rx [1])
 );
 
 DFFPOSX1 _3982_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
-    .D(_1217_),
-    .Q(\u_cpu.bufreg2.dlo [23])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .D(_1388_),
+    .Q(\u_rf_if.ready_pulse )
 );
 
 DFFPOSX1 _3983_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
-    .D(_1414_),
-    .Q(\u_rf_if.read_buf1 [11])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .D(_1389_),
+    .Q(\u_rf_if.wdata0_next [0])
 );
 
 DFFPOSX1 _3984_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
-    .D(_1218_),
-    .Q(\u_cpu.bufreg2.dlo [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .D(_1390_),
+    .Q(\u_rf_if.rtrig1 )
 );
 
 DFFPOSX1 _3985_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
-    .D(_1415_),
-    .Q(\u_rf_if.read_buf1 [10])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .D(_1188_),
+    .Q(\u_cpu.bufreg2.dhi [5])
 );
 
 DFFPOSX1 _3986_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
-    .D(_1219_),
-    .Q(\u_cpu.bufreg2.dlo [1])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .D(_1391_),
+    .Q(\u_rf_if.stream_cnt [4])
 );
 
 DFFPOSX1 _3987_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
-    .D(_1416_),
-    .Q(\u_rf_if.read_buf1 [9])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .D(_1189_),
+    .Q(\u_cpu.bufreg2.dhi [6])
 );
 
 DFFPOSX1 _3988_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
-    .D(_1220_),
-    .Q(\u_cpu.bufreg2.dlo [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .D(_1392_),
+    .Q(\u_rf_if.write_wait [1])
 );
 
 DFFPOSX1 _3989_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
-    .D(_1417_),
-    .Q(\u_rf_if.read_buf1 [8])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .D(_1190_),
+    .Q(\u_cpu.bufreg.data [31])
 );
 
 DFFPOSX1 _3990_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
-    .D(_1221_),
-    .Q(\u_cpu.bufreg2.dlo [3])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .D(_1393_),
+    .Q(\u_rf_if.rreg1_latched [4])
 );
 
 DFFPOSX1 _3991_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
-    .D(_1418_),
-    .Q(\u_rf_if.read_buf1 [7])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .D(_1191_),
+    .Q(\u_cpu.bufreg.c_r )
 );
 
 DFFPOSX1 _3992_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
-    .D(_1222_),
-    .Q(\u_cpu.bufreg2.dlo [4])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .D(_1394_),
+    .Q(\u_rf_if.read_buf1 [31])
 );
 
 DFFPOSX1 _3993_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
-    .D(_1419_),
-    .Q(\u_rf_if.read_buf1 [6])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .D(_1193_),
+    .Q(\u_cpu.bufreg.data [30])
 );
 
 DFFPOSX1 _3994_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
-    .D(_1223_),
-    .Q(\u_cpu.bufreg2.dlo [5])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .D(_1395_),
+    .Q(\u_rf_if.read_buf0 [31])
 );
 
 DFFPOSX1 _3995_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
-    .D(_1420_),
-    .Q(\u_rf_if.read_buf1 [5])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .D(_1194_),
+    .Q(\u_cpu.bufreg.data [29])
 );
 
 DFFPOSX1 _3996_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
-    .D(_1224_),
-    .Q(\u_cpu.bufreg2.dlo [6])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
+    .D(_1396_),
+    .Q(\u_rf_if.o_waddr [3])
 );
 
 DFFPOSX1 _3997_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
-    .D(_1421_),
-    .Q(\u_rf_if.read_buf1 [4])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .D(_1195_),
+    .Q(\u_cpu.bufreg.data [0])
 );
 
 DFFPOSX1 _3998_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
-    .D(_1225_),
-    .Q(\u_cpu.bufreg2.dlo [7])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .D(_1397_),
+    .Q(\u_rf_if.read_buf0 [30])
 );
 
 DFFPOSX1 _3999_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
-    .D(_1422_),
-    .Q(\u_rf_if.read_buf1 [3])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .D(_1398_),
+    .Q(ren)
 );
 
 DFFPOSX1 _4000_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
-    .D(_1226_),
-    .Q(\u_cpu.bufreg2.dlo [8])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .D(_1196_),
+    .Q(\u_cpu.bufreg.data [2])
 );
 
 DFFPOSX1 _4001_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
-    .D(_1423_),
-    .Q(\u_rf_if.read_buf1 [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .D(_1399_),
+    .Q(\u_rf_if.read_buf1 [30])
 );
 
 DFFPOSX1 _4002_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
-    .D(_1227_),
-    .Q(\u_cpu.bufreg2.dlo [9])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .D(_1197_),
+    .Q(\u_cpu.bufreg.data [3])
 );
 
 DFFPOSX1 _4003_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
-    .D(_1424_),
-    .Q(\u_rf_if.read_buf1 [1])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .D(_1400_),
+    .Q(raddr[8])
 );
 
 DFFPOSX1 _4004_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
-    .D(_1228_),
-    .Q(\u_cpu.bufreg2.dlo [10])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
+    .D(_1198_),
+    .Q(\u_cpu.bufreg.data [4])
 );
 
 DFFPOSX1 _4005_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
-    .D(_1425_),
-    .Q(\u_rf_if.read_buf1 [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .D(_1401_),
+    .Q(\u_rf_if.wdata0_next_phase )
 );
 
 DFFPOSX1 _4006_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
-    .D(_1229_),
-    .Q(\u_cpu.bufreg2.dlo [11])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .D(_1199_),
+    .Q(\u_cpu.bufreg.data [5])
 );
 
 DFFPOSX1 _4007_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
-    .D(_1426_),
-    .Q(\u_rf_if.stream_cnt [3])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
+    .D(_1402_),
+    .Q(\u_rf_if.write_wait [0])
 );
 
 DFFPOSX1 _4008_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
-    .D(_1230_),
-    .Q(\u_cpu.bufreg2.dlo [12])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .D(_1200_),
+    .Q(\u_cpu.bufreg.data [6])
 );
 
 DFFPOSX1 _4009_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
-    .D(_1427_),
-    .Q(\u_rf_if.stream_cnt [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .D(_1403_),
+    .Q(\u_rf_if.pending_read )
 );
 
 DFFPOSX1 _4010_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
-    .D(_1231_),
-    .Q(\u_cpu.bufreg2.dlo [13])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .D(_1201_),
+    .Q(\u_cpu.bufreg.data [7])
 );
 
 DFFPOSX1 _4011_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
-    .D(_1428_),
-    .Q(\u_rf_if.stream_cnt [1])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
+    .D(_1404_),
+    .Q(\u_rf_if.rreg0_latched [4])
 );
 
 DFFPOSX1 _4012_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf44 ),
-    .D(_1232_),
-    .Q(\u_cpu.bufreg2.dlo [14])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .D(_1405_),
+    .Q(\u_rf_if.prefetch_active )
 );
 
 DFFPOSX1 _4013_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
-    .D(_1429_),
-    .Q(\u_rf_if.stream_cnt [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .D(_1202_),
+    .Q(\u_cpu.bufreg.data [8])
 );
 
 DFFPOSX1 _4014_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
-    .D(_1430_),
-    .Q(\u_rf_if.rcnt [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
+    .D(_1406_),
+    .Q(\u_rf_if.issue_idx [5])
 );
 
 DFFPOSX1 _4015_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
-    .D(_1431_),
-    .Q(\u_rf_if.rcnt [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
+    .D(_1407_),
+    .Q(\u_rf_if.rcnt [1])
 );
 
 DFFPOSX1 _4016_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
-    .D(_1432_),
-    .Q(ren)
+    .CLK(i_clk_fast_bF$buf4),
+    .D(_1258_),
+    .Q(\u_mem_serial.bit_count [6])
 );
 
 DFFPOSX1 _4017_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
-    .D(_1433_),
-    .Q(\u_rf_if.prefetch_active )
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
+    .D(_1203_),
+    .Q(\u_cpu.bufreg.data [9])
 );
 
 DFFPOSX1 _4018_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
-    .D(_1233_),
-    .Q(\u_cpu.bufreg2.dlo [15])
+    .CLK(i_clk_fast_bF$buf3),
+    .D(_1408_),
+    .Q(_1855_)
 );
 
 DFFPOSX1 _4019_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
-    .D(_1434_),
-    .Q(raddr[8])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
+    .D(_1204_),
+    .Q(\u_cpu.bufreg.data [10])
 );
 
 DFFPOSX1 _4020_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
-    .D(_1435_),
-    .Q(\u_rf_if.rtrig1 )
+    .CLK(i_clk_fast_bF$buf2),
+    .D(_1409_),
+    .Q(\u_rf_if.last_req_key [10])
 );
 
 DFFPOSX1 _4021_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
-    .D(_1234_),
-    .Q(\u_cpu.bufreg2.dlo [16])
+    .CLK(i_clk_fast_bF$buf1),
+    .D(_1410_),
+    .Q(\u_rf_if.req_seen )
 );
 
 DFFPOSX1 _4022_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
-    .D(_1436_),
-    .Q(\u_rf_if.read_buf0 [30])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
+    .D(_1205_),
+    .Q(\u_cpu.bufreg.data [11])
 );
 
 DFFPOSX1 _4023_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
-    .D(_1235_),
-    .Q(\u_cpu.bufreg2.dlo [17])
+    .CLK(i_clk_fast_bF$buf0),
+    .D(_1411_),
+    .Q(\u_rf_if.shift_rx [0])
 );
 
 DFFPOSX1 _4024_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
-    .D(_1437_),
-    .Q(\u_rf_if.read_buf0 [31])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
+    .D(_1206_),
+    .Q(\u_cpu.bufreg.data [12])
 );
 
 DFFPOSX1 _4025_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
-    .D(_1236_),
-    .Q(\u_cpu.bufreg2.dlo [18])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
+    .D(_1413_),
+    .Q(\u_rf_if.wen0_r )
 );
 
 DFFPOSX1 _4026_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
-    .D(_1438_),
-    .Q(\u_rf_if.read_buf1 [30])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
+    .D(_1207_),
+    .Q(\u_cpu.bufreg.data [13])
 );
 
 DFFPOSX1 _4027_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
-    .D(_1237_),
-    .Q(\u_cpu.bufreg2.dlo [19])
+    .CLK(i_clk_fast_bF$buf8),
+    .D(_1415_),
+    .Q(\u_rf_if.tx_state [4])
 );
 
 DFFPOSX1 _4028_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
-    .D(_1439_),
-    .Q(\u_rf_if.read_buf1 [31])
+    .CLK(i_clk_fast_bF$buf7),
+    .D(_1416_),
+    .Q(\u_rf_if.launch_pending )
 );
 
 DFFPOSX1 _4029_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
-    .D(_1238_),
-    .Q(\u_cpu.bufreg2.dlo [20])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
+    .D(_1208_),
+    .Q(\u_cpu.bufreg.data [14])
 );
 
 DFFPOSX1 _4030_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
-    .D(_1440_),
-    .Q(\u_rf_if.stream_cnt [4])
+    .CLK(i_clk_fast_bF$buf6),
+    .D(_1417_),
+    .Q(_1858_)
 );
 
 DFFPOSX1 _4031_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
-    .D(_1441_),
-    .Q(\u_rf_if.ready_pulse )
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
+    .D(_1209_),
+    .Q(\u_cpu.bufreg.data [15])
 );
 
 DFFPOSX1 _4032_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
-    .D(_1442_),
-    .Q(\u_rf_if.stream_active )
+    .CLK(i_clk_fast_bF$buf5),
+    .D(_1418_),
+    .Q(\u_mem_serial.state [0])
 );
 
 DFFPOSX1 _4033_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
-    .D(_1443_),
-    .Q(\u_rf_if.wdata0_next [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
+    .D(_1210_),
+    .Q(\u_cpu.bufreg.data [16])
 );
 
 DFFPOSX1 _4034_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
-    .D(_1239_),
-    .Q(\u_cpu.bufreg2.dlo [21])
+    .CLK(i_clk_fast_bF$buf4),
+    .D(_1419_),
+    .Q(\u_mem_serial.shift_reg [36])
 );
 
 DFFPOSX1 _4035_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
-    .D(_1444_),
-    .Q(\u_rf_if.write_wait [5])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
+    .D(_1211_),
+    .Q(\u_cpu.bufreg.data [17])
 );
 
 DFFPOSX1 _4036_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
-    .D(_1240_),
-    .Q(\u_cpu.bufreg2.dlo [22])
+    .CLK(i_clk_fast_bF$buf3),
+    .D(_1420_),
+    .Q(\u_mem_serial.shift_reg [35])
 );
 
 DFFPOSX1 _4037_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
-    .D(_1445_),
-    .Q(\u_rf_if.wen0_r )
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
+    .D(_1212_),
+    .Q(\u_cpu.bufreg.data [18])
 );
 
 DFFPOSX1 _4038_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
-    .D(_1241_),
-    .Q(\u_cpu.bufreg.i_shamt [0])
+    .CLK(i_clk_fast_bF$buf2),
+    .D(_1421_),
+    .Q(\u_mem_serial.shift_reg [34])
 );
 
 DFFPOSX1 _4039_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
-    .D(_1446_),
-    .Q(\u_rf_if.wdata0_next_phase )
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
+    .D(_1213_),
+    .Q(\u_cpu.bufreg.data [19])
 );
 
 DFFPOSX1 _4040_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
-    .D(_1447_),
-    .Q(\u_rf_if.rcnt [1])
+    .CLK(i_clk_fast_bF$buf1),
+    .D(_1422_),
+    .Q(\u_mem_serial.shift_reg [33])
 );
 
 DFFPOSX1 _4041_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
-    .D(_1242_),
-    .Q(\u_cpu.bufreg.i_shamt [1])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
+    .D(_1214_),
+    .Q(\u_cpu.bufreg.data [20])
 );
 
 DFFPOSX1 _4042_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
-    .D(_1448_),
-    .Q(\u_rf_if.o_waddr [3])
+    .CLK(i_clk_fast_bF$buf0),
+    .D(_1423_),
+    .Q(\u_mem_serial.shift_reg [32])
 );
 
 DFFPOSX1 _4043_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
-    .D(_1243_),
-    .Q(\u_cpu.bufreg.i_shamt [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
+    .D(_1215_),
+    .Q(\u_cpu.bufreg.data [21])
 );
 
 DFFPOSX1 _4044_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
-    .D(_1449_),
-    .Q(\u_rf_if.rreg0_latched [4])
+    .CLK(i_clk_fast_bF$buf8),
+    .D(_1424_),
+    .Q(\u_mem_serial.shift_reg [31])
 );
 
 DFFPOSX1 _4045_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
-    .D(_1244_),
-    .Q(\u_cpu.bufreg2.dhi [3])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
+    .D(_1216_),
+    .Q(\u_cpu.bufreg.data [22])
 );
 
 DFFPOSX1 _4046_ (
     .vdd(vdd),
     .gnd(gnd),
     .CLK(i_clk_fast_bF$buf7),
-    .D(_1450_),
-    .Q(\u_mem_serial.shift_reg [31])
+    .D(_1425_),
+    .Q(\u_mem_serial.shift_reg [30])
 );
 
 DFFPOSX1 _4047_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
-    .D(_1245_),
-    .Q(\u_cpu.bufreg2.dhi [4])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
+    .D(_1217_),
+    .Q(\u_cpu.bufreg.data [23])
 );
 
 DFFPOSX1 _4048_ (
     .vdd(vdd),
     .gnd(gnd),
     .CLK(i_clk_fast_bF$buf6),
-    .D(_1451_),
-    .Q(\u_mem_serial.state [1])
+    .D(_1426_),
+    .Q(\u_mem_serial.shift_reg [29])
 );
 
 DFFPOSX1 _4049_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
-    .D(_1246_),
-    .Q(\u_cpu.bufreg2.dhi [5])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
+    .D(_1218_),
+    .Q(\u_cpu.bufreg.data [24])
 );
 
 DFFPOSX1 _4050_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
-    .D(_1452_),
-    .Q(\u_rf_if.issue_idx [5])
+    .CLK(i_clk_fast_bF$buf5),
+    .D(_1427_),
+    .Q(\u_mem_serial.shift_reg [28])
 );
 
 DFFPOSX1 _4051_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
-    .D(_1247_),
-    .Q(\u_cpu.bufreg2.dhi [6])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
+    .D(_1219_),
+    .Q(\u_cpu.bufreg.data [25])
 );
 
 DFFPOSX1 _4052_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
-    .D(_1453_),
-    .Q(\u_rf_if.rreg1_latched [4])
+    .CLK(i_clk_fast_bF$buf4),
+    .D(_1428_),
+    .Q(\u_mem_serial.shift_reg [27])
 );
 
 DFFPOSX1 _4053_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
-    .D(_1248_),
-    .Q(\u_cpu.bufreg.data [31])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
+    .D(_1125_),
+    .Q(\u_cpu.ctrl.pc_plus_4_cy_r_w )
 );
 
 DFFPOSX1 _4054_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
-    .D(_1454_),
-    .Q(\u_rf_if.pending_read )
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
+    .D(_1220_),
+    .Q(\u_cpu.bufreg.data [26])
 );
 
 DFFPOSX1 _4055_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
-    .D(_1249_),
-    .Q(\u_cpu.bufreg.c_r )
+    .CLK(i_clk_fast_bF$buf3),
+    .D(_1429_),
+    .Q(\u_mem_serial.shift_reg [26])
 );
 
 DFFPOSX1 _4056_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf5),
-    .D(_1455_),
-    .Q(\u_rf_serial.last_req_key [9])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
+    .D(_1221_),
+    .Q(\u_cpu.bufreg.data [27])
 );
 
 DFFPOSX1 _4057_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
-    .D(_1251_),
-    .Q(\u_cpu.bufreg.data [30])
+    .CLK(i_clk_fast_bF$buf2),
+    .D(_1430_),
+    .Q(\u_mem_serial.shift_reg [25])
 );
 
 DFFPOSX1 _4058_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf4),
-    .D(_1456_),
-    .Q(\u_rf_serial.last_req_key [8])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
+    .D(_1222_),
+    .Q(\u_cpu.bufreg.data [28])
 );
 
 DFFPOSX1 _4059_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
-    .D(_1252_),
-    .Q(\u_cpu.bufreg.data [29])
+    .CLK(i_clk_fast_bF$buf1),
+    .D(_1431_),
+    .Q(\u_mem_serial.shift_reg [24])
 );
 
 DFFPOSX1 _4060_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf3),
-    .D(_1457_),
-    .Q(\u_rf_serial.last_req_key [7])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
+    .D(_1223_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [4])
 );
 
 DFFPOSX1 _4061_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
-    .D(_1253_),
-    .Q(\u_cpu.bufreg.data [0])
+    .CLK(i_clk_fast_bF$buf0),
+    .D(_1432_),
+    .Q(\u_mem_serial.shift_reg [23])
 );
 
 DFFPOSX1 _4062_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf2),
-    .D(_1458_),
-    .Q(\u_rf_serial.last_req_key [6])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
+    .D(_1224_),
+    .Q(rreg1[4])
 );
 
 DFFPOSX1 _4063_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf44 ),
-    .D(_1254_),
-    .Q(\u_cpu.bufreg.data [2])
+    .CLK(i_clk_fast_bF$buf8),
+    .D(_1433_),
+    .Q(\u_mem_serial.shift_reg [22])
 );
 
 DFFPOSX1 _4064_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf1),
-    .D(_1459_),
-    .Q(\u_rf_serial.last_req_key [5])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
+    .D(_1225_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [5])
 );
 
 DFFPOSX1 _4065_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
-    .D(_1255_),
-    .Q(\u_cpu.bufreg.data [3])
+    .CLK(i_clk_fast_bF$buf7),
+    .D(_1434_),
+    .Q(\u_mem_serial.shift_reg [21])
 );
 
 DFFPOSX1 _4066_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf0),
-    .D(_1460_),
-    .Q(\u_rf_serial.last_req_key [4])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
+    .D(_1226_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm7 )
 );
 
 DFFPOSX1 _4067_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
-    .D(_1256_),
-    .Q(\u_cpu.bufreg.data [4])
+    .CLK(i_clk_fast_bF$buf6),
+    .D(_1435_),
+    .Q(\u_mem_serial.shift_reg [20])
 );
 
 DFFPOSX1 _4068_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf7),
-    .D(_1461_),
-    .Q(\u_rf_serial.last_req_key [3])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
+    .D(_1227_),
+    .Q(rreg0[4])
 );
 
 DFFPOSX1 _4069_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
-    .D(_1257_),
-    .Q(\u_cpu.bufreg.data [5])
+    .CLK(i_clk_fast_bF$buf5),
+    .D(_1436_),
+    .Q(\u_mem_serial.shift_reg [19])
 );
 
 DFFPOSX1 _4070_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf6),
-    .D(_1462_),
-    .Q(\u_rf_serial.last_req_key [2])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
+    .D(_1228_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm31 )
 );
 
 DFFPOSX1 _4071_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
-    .D(_1258_),
-    .Q(\u_cpu.bufreg.data [6])
+    .CLK(i_clk_fast_bF$buf4),
+    .D(_1437_),
+    .Q(\u_mem_serial.shift_reg [18])
 );
 
 DFFPOSX1 _4072_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf5),
-    .D(_1463_),
-    .Q(\u_rf_serial.last_req_key [1])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
+    .D(_1229_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [0])
 );
 
 DFFPOSX1 _4073_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
-    .D(_1259_),
-    .Q(\u_cpu.bufreg.data [7])
+    .CLK(i_clk_fast_bF$buf3),
+    .D(_1438_),
+    .Q(\u_mem_serial.shift_reg [17])
 );
 
 DFFPOSX1 _4074_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf4),
-    .D(_1464_),
-    .Q(\u_rf_serial.last_req_key [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
+    .D(_1230_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [1])
 );
 
 DFFPOSX1 _4075_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
-    .D(_1260_),
-    .Q(\u_cpu.bufreg.data [8])
+    .CLK(i_clk_fast_bF$buf2),
+    .D(_1439_),
+    .Q(\u_mem_serial.shift_reg [16])
 );
 
 DFFPOSX1 _4076_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf3),
-    .D(_1465_),
-    .Q(\u_rf_serial.tx_state [3])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
+    .D(_1231_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [2])
 );
 
 DFFPOSX1 _4077_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
-    .D(_1261_),
-    .Q(\u_cpu.bufreg.data [9])
+    .CLK(i_clk_fast_bF$buf1),
+    .D(_1440_),
+    .Q(\u_mem_serial.shift_reg [15])
 );
 
 DFFPOSX1 _4078_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf2),
-    .D(_1515_),
-    .Q(\u_mem_serial.bit_count [0])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
+    .D(_1232_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [3])
 );
 
 DFFPOSX1 _4079_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf1),
-    .D(_1466_),
-    .Q(\u_rf_serial.tx_state [2])
+    .CLK(i_clk_fast_bF$buf0),
+    .D(_1441_),
+    .Q(\u_mem_serial.shift_reg [14])
 );
 
 DFFPOSX1 _4080_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
-    .D(_1262_),
-    .Q(\u_cpu.bufreg.data [10])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
+    .D(_1233_),
+    .Q(rreg1[0])
 );
 
 DFFPOSX1 _4081_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf0),
-    .D(_1467_),
-    .Q(\u_rf_serial.tx_state [1])
+    .CLK(i_clk_fast_bF$buf8),
+    .D(_1442_),
+    .Q(\u_mem_serial.shift_reg [13])
 );
 
 DFFPOSX1 _4082_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
-    .D(_1263_),
-    .Q(\u_cpu.bufreg.data [11])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
+    .D(_1234_),
+    .Q(rreg1[1])
 );
 
 DFFPOSX1 _4083_ (
     .vdd(vdd),
     .gnd(gnd),
     .CLK(i_clk_fast_bF$buf7),
-    .D(_1468_),
-    .Q(\u_rf_serial.tx_state [0])
+    .D(_1443_),
+    .Q(\u_mem_serial.shift_reg [12])
 );
 
 DFFPOSX1 _4084_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
-    .D(_1264_),
-    .Q(\u_cpu.bufreg.data [12])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
+    .D(_1235_),
+    .Q(rreg1[2])
 );
 
 DFFPOSX1 _4085_ (
     .vdd(vdd),
     .gnd(gnd),
     .CLK(i_clk_fast_bF$buf6),
-    .D(_1469_),
-    .Q(\u_rf_serial.shift_rx [0])
+    .D(_1444_),
+    .Q(\u_mem_serial.shift_reg [11])
 );
 
 DFFPOSX1 _4086_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
-    .D(_1265_),
-    .Q(\u_cpu.bufreg.data [13])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
+    .D(_1236_),
+    .Q(rreg1[3])
 );
 
 DFFPOSX1 _4087_ (
     .vdd(vdd),
     .gnd(gnd),
     .CLK(i_clk_fast_bF$buf5),
-    .D(_1470_),
-    .Q(_1910_)
+    .D(_1445_),
+    .Q(\u_mem_serial.shift_reg [10])
 );
 
 DFFPOSX1 _4088_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
-    .D(_1266_),
-    .Q(\u_cpu.bufreg.data [14])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
+    .D(_1237_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [0])
 );
 
 DFFPOSX1 _4089_ (
     .vdd(vdd),
     .gnd(gnd),
     .CLK(i_clk_fast_bF$buf4),
-    .D(_1471_),
-    .Q(\u_rf_serial.shift_rx [1])
+    .D(_1446_),
+    .Q(\u_mem_serial.shift_reg [9])
 );
 
 DFFPOSX1 _4090_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
-    .D(_1267_),
-    .Q(\u_cpu.bufreg.data [15])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
+    .D(_1238_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [1])
 );
 
 DFFPOSX1 _4091_ (
     .vdd(vdd),
     .gnd(gnd),
     .CLK(i_clk_fast_bF$buf3),
-    .D(_1472_),
-    .Q(\u_rf_serial.tx_state [4])
+    .D(_1447_),
+    .Q(\u_mem_serial.shift_reg [8])
 );
 
 DFFPOSX1 _4092_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf2),
-    .D(_1473_),
-    .Q(\u_rf_serial.req_seen )
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
+    .D(_1239_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [2])
 );
 
 DFFPOSX1 _4093_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf1),
-    .D(_1474_),
-    .Q(\u_rf_serial.launch_pending )
+    .CLK(i_clk_fast_bF$buf2),
+    .D(_1448_),
+    .Q(\u_mem_serial.shift_reg [7])
 );
 
 DFFPOSX1 _4094_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
-    .D(_1268_),
-    .Q(\u_cpu.bufreg.data [16])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
+    .D(_1240_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [3])
 );
 
 DFFPOSX1 _4095_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf0),
-    .D(_1475_),
-    .Q(\u_rf_serial.last_req_key [10])
+    .CLK(i_clk_fast_bF$buf1),
+    .D(_1449_),
+    .Q(\u_mem_serial.shift_reg [6])
 );
 
 DFFPOSX1 _4096_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
-    .D(_1269_),
-    .Q(\u_cpu.bufreg.data [17])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
+    .D(_1241_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [4])
 );
 
 DFFPOSX1 _4097_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf7),
-    .D(_1478_),
-    .Q(\u_mem_serial.state [0])
+    .CLK(i_clk_fast_bF$buf0),
+    .D(_1450_),
+    .Q(\u_mem_serial.shift_reg [5])
 );
 
 DFFPOSX1 _4098_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
-    .D(_1270_),
-    .Q(\u_cpu.bufreg.data [18])
+    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
+    .D(_1242_),
+    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [0])
 );
 
 DFFPOSX1 _4099_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf6),
-    .D(_1479_),
-    .Q(\u_mem_serial.shift_reg [30])
+    .CLK(i_clk_fast_bF$buf8),
+    .D(_1451_),
+    .Q(\u_mem_serial.shift_reg [4])
 );
 
 DFFPOSX1 _4100_ (
     .vdd(vdd),
     .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
-    .D(_1271_),
-    .Q(\u_cpu.bufreg.data [19])
-);
-
-DFFPOSX1 _4101_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf5),
-    .D(_1480_),
-    .Q(\u_mem_serial.shift_reg [29])
-);
-
-DFFPOSX1 _4102_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
-    .D(_1272_),
-    .Q(\u_cpu.bufreg.data [20])
-);
-
-DFFPOSX1 _4103_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf4),
-    .D(_1481_),
-    .Q(\u_mem_serial.shift_reg [28])
-);
-
-DFFPOSX1 _4104_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
-    .D(_1273_),
-    .Q(\u_cpu.bufreg.data [21])
-);
-
-DFFPOSX1 _4105_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf3),
-    .D(_1482_),
-    .Q(\u_mem_serial.shift_reg [27])
-);
-
-DFFPOSX1 _4106_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
-    .D(_1274_),
-    .Q(\u_cpu.bufreg.data [22])
-);
-
-DFFPOSX1 _4107_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf2),
-    .D(_1483_),
-    .Q(\u_mem_serial.shift_reg [26])
-);
-
-DFFPOSX1 _4108_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
-    .D(_1275_),
-    .Q(\u_cpu.bufreg.data [23])
-);
-
-DFFPOSX1 _4109_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf1),
-    .D(_1484_),
-    .Q(\u_mem_serial.shift_reg [25])
-);
-
-DFFPOSX1 _4110_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
-    .D(_1276_),
-    .Q(\u_cpu.bufreg.data [24])
-);
-
-DFFPOSX1 _4111_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf0),
-    .D(_1485_),
-    .Q(\u_mem_serial.shift_reg [24])
-);
-
-DFFPOSX1 _4112_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
-    .D(_1277_),
-    .Q(\u_cpu.bufreg.data [25])
-);
-
-DFFPOSX1 _4113_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf7),
-    .D(_1486_),
-    .Q(\u_mem_serial.shift_reg [23])
-);
-
-DFFPOSX1 _4114_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
-    .D(_1278_),
-    .Q(\u_cpu.bufreg.data [26])
-);
-
-DFFPOSX1 _4115_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
-    .D(_1281_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [4])
-);
-
-DFFPOSX1 _4116_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf6),
-    .D(_1487_),
-    .Q(\u_mem_serial.shift_reg [22])
-);
-
-DFFPOSX1 _4117_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
-    .D(_1279_),
-    .Q(\u_cpu.bufreg.data [27])
-);
-
-DFFPOSX1 _4118_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf5),
-    .D(_1488_),
-    .Q(\u_mem_serial.shift_reg [21])
-);
-
-DFFPOSX1 _4119_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
-    .D(_1280_),
-    .Q(\u_cpu.bufreg.data [28])
-);
-
-DFFPOSX1 _4120_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf4),
-    .D(_1489_),
-    .Q(\u_mem_serial.shift_reg [20])
-);
-
-DFFPOSX1 _4121_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf3),
-    .D(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
-    .Q(\u_mem_serial.clk_sys_prev )
-);
-
-DFFPOSX1 _4122_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf2),
-    .D(_1490_),
-    .Q(\u_mem_serial.shift_reg [19])
-);
-
-DFFPOSX1 _4123_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
-    .D(_1282_),
-    .Q(rreg1[4])
-);
-
-DFFPOSX1 _4124_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf1),
-    .D(_1491_),
-    .Q(\u_mem_serial.shift_reg [18])
-);
-
-DFFPOSX1 _4125_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
-    .D(_1283_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [5])
-);
-
-DFFPOSX1 _4126_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf0),
-    .D(_1492_),
-    .Q(\u_mem_serial.shift_reg [17])
-);
-
-DFFPOSX1 _4127_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
-    .D(_1284_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm7 )
-);
-
-DFFPOSX1 _4128_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf7),
-    .D(_1493_),
-    .Q(\u_mem_serial.shift_reg [16])
-);
-
-DFFPOSX1 _4129_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
-    .D(_1285_),
-    .Q(rreg0[4])
-);
-
-DFFPOSX1 _4130_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf6),
-    .D(_1494_),
-    .Q(\u_mem_serial.shift_reg [15])
-);
-
-DFFPOSX1 _4131_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
-    .D(_1286_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm31 )
-);
-
-DFFPOSX1 _4132_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf5),
-    .D(_1495_),
-    .Q(\u_mem_serial.shift_reg [14])
-);
-
-DFFPOSX1 _4133_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf10 ),
-    .D(_1287_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [0])
-);
-
-DFFPOSX1 _4134_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf4),
-    .D(_1496_),
-    .Q(\u_mem_serial.shift_reg [13])
-);
-
-DFFPOSX1 _4135_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf9 ),
-    .D(_1288_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [1])
-);
-
-DFFPOSX1 _4136_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf3),
-    .D(_1497_),
-    .Q(\u_mem_serial.shift_reg [12])
-);
-
-DFFPOSX1 _4137_ (
-    .vdd(vdd),
-    .gnd(gnd),
     .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf8 ),
-    .D(_1289_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [2])
-);
-
-DFFPOSX1 _4138_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf2),
-    .D(_1498_),
-    .Q(\u_mem_serial.shift_reg [11])
-);
-
-DFFPOSX1 _4139_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf7 ),
-    .D(_1290_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm11_7 [3])
-);
-
-DFFPOSX1 _4140_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf1),
-    .D(_1499_),
-    .Q(\u_mem_serial.shift_reg [10])
-);
-
-DFFPOSX1 _4141_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf6 ),
-    .D(_1291_),
-    .Q(rreg1[0])
-);
-
-DFFPOSX1 _4142_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf0),
-    .D(_1500_),
-    .Q(\u_mem_serial.shift_reg [9])
-);
-
-DFFPOSX1 _4143_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf5 ),
-    .D(_1292_),
-    .Q(rreg1[1])
-);
-
-DFFPOSX1 _4144_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf7),
-    .D(_1501_),
-    .Q(\u_mem_serial.shift_reg [8])
-);
-
-DFFPOSX1 _4145_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf4 ),
-    .D(_1293_),
-    .Q(rreg1[2])
-);
-
-DFFPOSX1 _4146_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf6),
-    .D(_1502_),
-    .Q(\u_mem_serial.shift_reg [7])
-);
-
-DFFPOSX1 _4147_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf3 ),
-    .D(_1294_),
-    .Q(rreg1[3])
-);
-
-DFFPOSX1 _4148_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf5),
-    .D(_1503_),
-    .Q(\u_mem_serial.shift_reg [6])
-);
-
-DFFPOSX1 _4149_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf2 ),
-    .D(_1295_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [0])
-);
-
-DFFPOSX1 _4150_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf4),
-    .D(_1504_),
-    .Q(\u_mem_serial.shift_reg [5])
-);
-
-DFFPOSX1 _4151_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf1 ),
-    .D(_1296_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [1])
-);
-
-DFFPOSX1 _4152_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf3),
-    .D(_1505_),
-    .Q(\u_mem_serial.shift_reg [4])
-);
-
-DFFPOSX1 _4153_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf0 ),
-    .D(_1297_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [2])
-);
-
-DFFPOSX1 _4154_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf44 ),
-    .D(_1183_),
-    .Q(\u_cpu.ctrl.pc_plus_4_cy_r_w )
-);
-
-DFFPOSX1 _4155_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf2),
-    .D(_1506_),
-    .Q(\u_mem_serial.shift_reg [3])
-);
-
-DFFPOSX1 _4156_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf43 ),
-    .D(_1298_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [3])
-);
-
-DFFPOSX1 _4157_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf1),
-    .D(_1507_),
-    .Q(\u_mem_serial.shift_reg [2])
-);
-
-DFFPOSX1 _4158_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf42 ),
-    .D(_1299_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [4])
-);
-
-DFFPOSX1 _4159_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf0),
-    .D(_1508_),
-    .Q(\u_mem_serial.shift_reg [1])
-);
-
-DFFPOSX1 _4160_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf41 ),
-    .D(_1300_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [0])
-);
-
-DFFPOSX1 _4161_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf7),
-    .D(_1509_),
-    .Q(\u_mem_serial.shift_reg [0])
-);
-
-DFFPOSX1 _4162_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf40 ),
-    .D(_1301_),
+    .D(_1243_),
     .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [1])
-);
-
-DFFPOSX1 _4163_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf6),
-    .D(_1510_),
-    .Q(\u_mem_serial.bit_count [5])
-);
-
-DFFPOSX1 _4164_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf39 ),
-    .D(_1302_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [2])
-);
-
-DFFPOSX1 _4165_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf5),
-    .D(_1511_),
-    .Q(\u_mem_serial.bit_count [4])
-);
-
-DFFPOSX1 _4166_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf38 ),
-    .D(_1303_),
-    .Q(\u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20 [3])
-);
-
-DFFPOSX1 _4167_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf4),
-    .D(_1512_),
-    .Q(\u_mem_serial.bit_count [3])
-);
-
-DFFPOSX1 _4168_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf37 ),
-    .D(_1304_),
-    .Q(\u_cpu.csr_imm )
-);
-
-DFFPOSX1 _4169_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf3),
-    .D(_1513_),
-    .Q(\u_mem_serial.bit_count [2])
-);
-
-DFFPOSX1 _4170_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf36 ),
-    .D(_1305_),
-    .Q(rreg0[1])
-);
-
-DFFPOSX1 _4171_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf2),
-    .D(_1514_),
-    .Q(\u_mem_serial.bit_count [1])
-);
-
-DFFPOSX1 _4172_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf35 ),
-    .D(_1306_),
-    .Q(rreg0[2])
-);
-
-DFFPOSX1 _4173_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf34 ),
-    .D(_1307_),
-    .Q(rreg0[3])
-);
-
-DFFPOSX1 _4174_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf33 ),
-    .D(_1308_),
-    .Q(\u_cpu.bufreg.i_sh_signed )
-);
-
-DFFSR _4175_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf32 ),
-    .D(_1159_),
-    .Q(ibus_pending_rdt[12]),
-    .R(i_rst_n_bF$buf2),
-    .S(vdd)
-);
-
-DFFPOSX1 _4176_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf1),
-    .D(_1309_),
-    .Q(mem_dbus_ack)
-);
-
-DFFPOSX1 _4177_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf31 ),
-    .D(_1310_),
-    .Q(\u_cpu.decode.co_ebreak )
-);
-
-DFFPOSX1 _4178_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf30 ),
-    .D(_1311_),
-    .Q(\u_cpu.bufreg.i_right_shift_op )
-);
-
-DFFPOSX1 _4179_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf29 ),
-    .D(_1312_),
-    .Q(\u_cpu.branch_op )
-);
-
-DFFSR _4180_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf28 ),
-    .D(_1160_),
-    .Q(ibus_pending_rdt[13]),
-    .R(i_rst_n_bF$buf1),
-    .S(vdd)
-);
-
-DFFPOSX1 _4181_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf0),
-    .D(_1313_),
-    .Q(mem_ibus_ack)
-);
-
-DFFSR _4182_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf27 ),
-    .D(_1161_),
-    .Q(ibus_pending_rdt[14]),
-    .R(i_rst_n_bF$buf0),
-    .S(vdd)
-);
-
-DFFPOSX1 _4183_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf7),
-    .D(_1314_),
-    .Q(\u_mem_serial.active_ibus )
-);
-
-DFFSR _4184_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf26 ),
-    .D(_1162_),
-    .Q(ibus_pending_rdt[15]),
-    .R(i_rst_n_bF$buf10),
-    .S(vdd)
-);
-
-DFFPOSX1 _4185_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf6),
-    .D(_1315_),
-    .Q(_1907_)
-);
-
-DFFSR _4186_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf25 ),
-    .D(_1163_),
-    .Q(ibus_pending_rdt[16]),
-    .R(i_rst_n_bF$buf9),
-    .S(vdd)
-);
-
-DFFPOSX1 _4187_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf5),
-    .D(_1316_),
-    .Q(\u_mem_serial.active_we )
-);
-
-DFFPOSX1 _4188_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf24 ),
-    .D(_1318_),
-    .Q(\u_cpu.decode.opcode [0])
-);
-
-DFFPOSX1 _4189_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf23 ),
-    .D(_1319_),
-    .Q(\u_cpu.decode.opcode [1])
-);
-
-DFFPOSX1 _4190_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf22 ),
-    .D(_1320_),
-    .Q(\u_cpu.decode.opcode [2])
-);
-
-DFFPOSX1 _4191_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf21 ),
-    .D(_1321_),
-    .Q(\u_cpu.bufreg2.i_op_b_sel )
-);
-
-DFFPOSX1 _4192_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf20 ),
-    .D(_1322_),
-    .Q(\u_cpu.bne_or_bge )
-);
-
-DFFPOSX1 _4193_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf19 ),
-    .D(_1323_),
-    .Q(\u_cpu.decode.co_mem_word )
-);
-
-DFFPOSX1 _4194_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf18 ),
-    .D(_1324_),
-    .Q(\u_cpu.state.ibus_cyc )
-);
-
-DFFSR _4195_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf17 ),
-    .D(_1164_),
-    .Q(ibus_pending_rdt[17]),
-    .R(i_rst_n_bF$buf8),
-    .S(vdd)
-);
-
-DFFPOSX1 _4196_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf16 ),
-    .D(_1325_),
-    .Q(\u_cpu.state.init_done )
-);
-
-DFFSR _4197_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf15 ),
-    .D(_1165_),
-    .Q(ibus_pending_rdt[18]),
-    .R(i_rst_n_bF$buf7),
-    .S(vdd)
-);
-
-DFFPOSX1 _4198_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf14 ),
-    .D(_1326_),
-    .Q(\u_cpu.ctrl.i_jump )
-);
-
-DFFPOSX1 _4199_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf13 ),
-    .D(_1327_),
-    .Q(\u_cpu.state.cnt_r [3])
-);
-
-DFFPOSX1 _4200_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf12 ),
-    .D(_1328_),
-    .Q(\u_cpu.bufreg2.i_bytecnt [1])
-);
-
-DFFSR _4201_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(\gen_int_sys_clk.clk_sys_r_bF$buf11 ),
-    .D(_1166_),
-    .Q(ibus_pending_rdt[19]),
-    .R(i_rst_n_bF$buf6),
-    .S(vdd)
-);
-
-DFFPOSX1 _4202_ (
-    .vdd(vdd),
-    .gnd(gnd),
-    .CLK(i_clk_fast_bF$buf4),
-    .D(_1329_),
-    .Q(\u_mem_serial.req_pending )
 );
 
 endmodule
