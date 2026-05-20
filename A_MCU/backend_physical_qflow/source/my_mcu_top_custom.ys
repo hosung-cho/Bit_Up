@@ -1,6 +1,6 @@
 # Custom synthesis script for area-first optimization
 read_liberty -lib -ignore_miss_dir -setattr blackbox /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
-read_verilog  /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/backend_physical_qflow/source/my_mcu_top.v
+read_verilog  /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/my_mcu_top.v
 read_verilog  offchip_mem_bridge.v
 read_verilog  serv_rf_ram_if.v
 read_verilog  serv_top.v
@@ -15,6 +15,15 @@ read_verilog  serv_immdec.v
 read_verilog  serv_decode.v
 read_verilog  serv_state.v
 
+chparam -set USE_EXT_SYS_CLK 1 my_mcu_top
+chparam -set RV32E_MODE 1 my_mcu_top
+chparam -set MEM_ADDR_BITS 11 my_mcu_top
+chparam -set USE_RF_INTERLOCK 0 my_mcu_top
+chparam -set DISABLE_DBUS 1 my_mcu_top
+chparam -set SERV_PRE_REGISTER 1 my_mcu_top
+chparam -set SINGLE_RF_READ 1 my_mcu_top
+chparam -set RESET_STRATEGY "NONE" my_mcu_top
+
 # High-level synthesis (preventing default abc inside synth)
 synth -top my_mcu_top -noabc
 
@@ -28,7 +37,7 @@ dfflibmap -liberty /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
 opt -purge
 
 # Custom ABC script for area optimization on the FLATTENED design
-abc -exe /usr/local/share/qflow/bin/yosys-abc -liberty /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib -script +strash;dch,-f;retime;strash;map,-M,1
+abc -exe /usr/local/share/qflow/bin/yosys-abc -liberty /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib -script +strash;ifraig;scorr;dc2;strash;map,-a
 setundef -zero
 
 clean -purge

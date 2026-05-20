@@ -1,8 +1,8 @@
-obstruction -9.0 1300.5 1305.0 1308.0 metal1
-obstruction -9.0 -3.0 1305.0 1.5 metal1
-obstruction -9.0 -3.0 1.5 1308.0 metal1
-obstruction 1297.5 -3.0 1305.0 1308.0 metal1
-obstruction 1.5 1300.5 1297.5 1308.0 metal3
-obstruction 1.5 -3.0 1297.5 1.5 metal3
-obstruction -9.0 1.5 1.5 1300.5 metal2
-obstruction 1297.5 1.5 1305.0 1300.5 metal2
+obstruction -9.0 976.5 969.0 984.0 metal1
+obstruction -9.0 -3.0 969.0 1.5 metal1
+obstruction -9.0 -3.0 1.5 984.0 metal1
+obstruction 961.5 -3.0 969.0 984.0 metal1
+obstruction 1.5 976.5 961.5 984.0 metal3
+obstruction 1.5 -3.0 961.5 1.5 metal3
+obstruction -9.0 1.5 1.5 976.5 metal2
+obstruction 961.5 1.5 969.0 976.5 metal2

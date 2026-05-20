@@ -1,8 +1,8 @@
 #!/bin/tcsh -f
 # QFlow project variables for my_mcu_top on ETRI 0.5um CMOS.
 
-# Prefer conservative density first; tighten only after routing succeeds.
-set initial_density = 0.94
+# Area-first MPW target. DRC cleanup is handled after the core is under 1mm x 1mm.
+set initial_density = 1.00
 set graywolf_options = "-n"
 set yosys_options = "-s /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/backend_physical_qflow/source/my_mcu_top_custom.ys"
 

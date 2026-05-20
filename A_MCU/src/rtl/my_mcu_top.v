@@ -9,7 +9,18 @@ module my_mcu_top #(
     // QFlow physical implementation copy: synthesize the area-first external
     // slow-clock variant.  The canonical RTL keeps USE_EXT_SYS_CLK=0 by
     // default for existing functional simulations.
-    parameter integer USE_EXT_SYS_CLK = 0
+    parameter integer USE_EXT_SYS_CLK = 0,
+    // Area-first RV32E mode. The core still decodes 5-bit register fields, but
+    // the external RF only implements x0-x15; software must not use x16-x31.
+    parameter integer RV32E_MODE = 0,
+    parameter integer MEM_ADDR_BITS = 32,
+    parameter integer USE_RF_INTERLOCK = 1,
+    parameter integer DISABLE_DBUS = 0,
+    parameter integer SERV_PRE_REGISTER = 1,
+    parameter integer SINGLE_RF_READ = 0,
+    // Keep MINI for simulation/debug. The physical implementation copy can
+    // override this to "NONE" when the MPW flow needs the smallest cell area.
+    parameter RESET_STRATEGY = "MINI"
 ) (
     input  wire i_clk_fast,    // RF/memory serial fast clock
     input  wire i_clk_sys_ext, // optional external slow SERV clock
@@ -57,7 +68,9 @@ module my_mcu_top #(
     localparam W         = 1;
     localparam RF_WIDTH  = W * 2;
     localparam CSR_REGS  = WITH_CSR * 4;
-    localparam RF_DEPTH  = (32*(32+CSR_REGS))/RF_WIDTH;
+    localparam GPR_REGS  = (RV32E_MODE != 0) ? 16 : 32;
+    localparam RF_DEPTH  = (32*(GPR_REGS+CSR_REGS))/RF_WIDTH;
+    localparam RF_RAW    = $clog2(GPR_REGS+CSR_REGS);
 
     // 3. Wishbone 버스 선언
     wire [31:0] wb_ibus_adr, wb_dbus_adr;
@@ -91,6 +104,10 @@ module my_mcu_top #(
     wire [$clog2(RF_DEPTH)-1:0] raddr;
     wire                ren;
     wire [RF_WIDTH-1:0] rdata;
+    wire [RF_RAW-1:0]   rf_wreg0_to_if = wreg0[RF_RAW-1:0];
+    wire [RF_RAW-1:0]   rf_wreg1_to_if = wreg1[RF_RAW-1:0];
+    wire [RF_RAW-1:0]   rf_rreg0_to_if = rf_read_reg0_to_if[RF_RAW-1:0];
+    wire [RF_RAW-1:0]   rf_rreg1_to_if = rf_read_reg1_to_if[RF_RAW-1:0];
 
     // Correctness-first off-chip RF interlock.
     //
@@ -107,29 +124,52 @@ module my_mcu_top #(
     wire       ibus_interlock = rf_write_drain_busy || rf_write_start;
     wire       ibus_can_ack   = !ibus_interlock;
 
-    assign wb_ibus_ack = ibus_pending_ack ? ibus_can_ack :
+    assign wb_ibus_ack = (USE_RF_INTERLOCK == 0) ? mem_ibus_ack :
+                         ibus_pending_ack ? ibus_can_ack :
                          (mem_ibus_ack && ibus_can_ack);
-    assign wb_ibus_rdt = ibus_pending_ack ? ibus_pending_rdt : mem_ibus_rdt;
+    assign wb_ibus_rdt = ((USE_RF_INTERLOCK != 0) && ibus_pending_ack) ? ibus_pending_rdt : mem_ibus_rdt;
 
-    always @(posedge clk_sys or posedge rst) begin
-        if (rst) begin
-            rf_write_drain_busy <= 1'b0;
-            ibus_pending_ack <= 1'b0;
-            ibus_pending_rdt <= 32'h0000_0013;
-        end else begin
-            if (rf_write_start)
-                rf_write_drain_busy <= 1'b1;
-            else if (rf_write_done)
-                rf_write_drain_busy <= 1'b0;
+    generate
+        if (RESET_STRATEGY == "NONE") begin : gen_ibus_interlock_no_reset
+            always @(posedge clk_sys) begin
+                if (USE_RF_INTERLOCK != 0) begin
+                    if (rf_write_start)
+                        rf_write_drain_busy <= 1'b1;
+                    else if (rf_write_done)
+                        rf_write_drain_busy <= 1'b0;
 
-            if (mem_ibus_ack && (!ibus_can_ack || ibus_pending_ack)) begin
-                ibus_pending_ack <= 1'b1;
-                ibus_pending_rdt <= mem_ibus_rdt;
-            end else if (ibus_pending_ack && ibus_can_ack) begin
-                ibus_pending_ack <= 1'b0;
+                    if (mem_ibus_ack && (!ibus_can_ack || ibus_pending_ack)) begin
+                        ibus_pending_ack <= 1'b1;
+                        ibus_pending_rdt <= mem_ibus_rdt;
+                    end else if (ibus_pending_ack && ibus_can_ack) begin
+                        ibus_pending_ack <= 1'b0;
+                    end
+                end
+            end
+        end else begin : gen_ibus_interlock_reset
+            always @(posedge clk_sys or posedge rst) begin
+                if (rst) begin
+                    rf_write_drain_busy <= 1'b0;
+                    ibus_pending_ack <= 1'b0;
+                    ibus_pending_rdt <= 32'h0000_0013;
+                end else begin
+                    if (USE_RF_INTERLOCK != 0) begin
+                        if (rf_write_start)
+                            rf_write_drain_busy <= 1'b1;
+                        else if (rf_write_done)
+                            rf_write_drain_busy <= 1'b0;
+
+                        if (mem_ibus_ack && (!ibus_can_ack || ibus_pending_ack)) begin
+                            ibus_pending_ack <= 1'b1;
+                            ibus_pending_rdt <= mem_ibus_rdt;
+                        end else if (ibus_pending_ack && ibus_can_ack) begin
+                            ibus_pending_ack <= 1'b0;
+                        end
+                    end
+                end
             end
         end
-    end
+    endgenerate
 
     function [4+WITH_CSR:0] decode_rf_read_reg1;
         input [31:0] insn;
@@ -179,29 +219,47 @@ module my_mcu_top #(
 
     reg has_fetched_first_insn;
     reg current_wdata0_next_hint;
-    always @(posedge clk_sys or posedge rst) begin
-        if (rst) begin
-            rf_read_reg0 <= {1'b0, 5'd0};
-            rf_read_reg1 <= {1'b0, 5'd0};
-            has_fetched_first_insn <= 1'b0;
-            current_wdata0_next_hint <= 1'b0;
-        end else if (wb_ibus_ack) begin
-            rf_read_reg0 <= {1'b0, wb_ibus_rdt[19:15]};
-            rf_read_reg1 <= decode_rf_read_reg1(wb_ibus_rdt);
-            has_fetched_first_insn <= 1'b1;
-            current_wdata0_next_hint <= decode_wdata0_next_hint(wb_ibus_rdt);
-        end else if (rf_rreq) begin
-            rf_read_reg0 <= rreg0;
-            rf_read_reg1 <= rreg1;
+    generate
+        if (RESET_STRATEGY == "NONE") begin : gen_rf_prefetch_hint_no_reset
+            always @(posedge clk_sys) begin
+                if (wb_ibus_ack) begin
+                    rf_read_reg0 <= (USE_RF_INTERLOCK == 0) ? rreg0 : {1'b0, wb_ibus_rdt[19:15]};
+                    rf_read_reg1 <= (USE_RF_INTERLOCK == 0) ? rreg1 : decode_rf_read_reg1(wb_ibus_rdt);
+                    has_fetched_first_insn <= 1'b1;
+                    current_wdata0_next_hint <= (USE_RF_INTERLOCK == 0) ? 1'b0 : decode_wdata0_next_hint(wb_ibus_rdt);
+                end else if (rf_rreq) begin
+                    rf_read_reg0 <= rreg0;
+                    rf_read_reg1 <= rreg1;
+                end
+            end
+        end else begin : gen_rf_prefetch_hint_reset
+            always @(posedge clk_sys or posedge rst) begin
+                if (rst) begin
+                    rf_read_reg0 <= {1'b0, 5'd0};
+                    rf_read_reg1 <= {1'b0, 5'd0};
+                    has_fetched_first_insn <= 1'b0;
+                    current_wdata0_next_hint <= 1'b0;
+                end else if (wb_ibus_ack) begin
+                    rf_read_reg0 <= (USE_RF_INTERLOCK == 0) ? rreg0 : {1'b0, wb_ibus_rdt[19:15]};
+                    rf_read_reg1 <= (USE_RF_INTERLOCK == 0) ? rreg1 : decode_rf_read_reg1(wb_ibus_rdt);
+                    has_fetched_first_insn <= 1'b1;
+                    current_wdata0_next_hint <= (USE_RF_INTERLOCK == 0) ? 1'b0 : decode_wdata0_next_hint(wb_ibus_rdt);
+                end else if (rf_rreq) begin
+                    rf_read_reg0 <= rreg0;
+                    rf_read_reg1 <= rreg1;
+                end
+            end
         end
-    end
+    endgenerate
 
-    assign rf_wdata0_next_to_if = rf_wdata0_next |
-                                  current_wdata0_next_hint;
+    assign rf_wdata0_next_to_if = (USE_RF_INTERLOCK == 0) ? rf_wdata0_next :
+                                  (rf_wdata0_next | current_wdata0_next_hint);
 
-    assign rf_read_reg0_to_if = wb_ibus_ack ? {1'b0, wb_ibus_rdt[19:15]} :
+    assign rf_read_reg0_to_if = (USE_RF_INTERLOCK == 0) ? rreg0 :
+                                wb_ibus_ack ? {1'b0, wb_ibus_rdt[19:15]} :
                                 rf_read_reg0;
-    assign rf_read_reg1_to_if = ((WITH_CSR != 0) && rf_rreq && rreg1[4+WITH_CSR]) ? rreg1 :
+    assign rf_read_reg1_to_if = (USE_RF_INTERLOCK == 0) ? rreg1 :
+                                ((WITH_CSR != 0) && rf_rreq && rreg1[4+WITH_CSR]) ? rreg1 :
                                 wb_ibus_ack ? decode_rf_read_reg1(wb_ibus_rdt) :
                                 rf_read_reg1;
 
@@ -209,7 +267,10 @@ module my_mcu_top #(
     serv_top #(
         .RESET_PC(32'h0000_0000), // 부팅 주소
         .WITH_CSR(WITH_CSR),
-        .W(W)
+        .W(W),
+        .PRE_REGISTER(SERV_PRE_REGISTER != 0),
+        .WITH_MEM(DISABLE_DBUS == 0),
+        .RESET_STRATEGY(RESET_STRATEGY)
     ) u_cpu (
         .clk(clk_sys),
         .i_rst(rst),
@@ -248,8 +309,10 @@ module my_mcu_top #(
     // 6. 통합 RF 어댑터 및 외부 4핀 시리얼 RF
     serv_rf_ram_if #(
         .width(RF_WIDTH),
-        .reset_strategy("MINI"),
+        .reset_strategy(RESET_STRATEGY),
+        .gpr_regs(GPR_REGS),
         .csr_regs(CSR_REGS),
+        .single_read_port(SINGLE_RF_READ != 0),
         .W(W)
     ) u_rf_if (
         .i_clk(clk_sys),
@@ -257,15 +320,15 @@ module my_mcu_top #(
         .i_wreq(rf_wreq),
         .i_rreq(rf_rreq && (has_fetched_first_insn || wb_ibus_ack)),
         .o_ready(rf_ready),
-        .i_wreg0(wreg0),
-        .i_wreg1(wreg1),
+        .i_wreg0(rf_wreg0_to_if),
+        .i_wreg1(rf_wreg1_to_if),
         .i_wen0(wen0),
         .i_wen1(wen1),
         .i_wdata0(wdata0),
         .i_wdata1(wdata1),
         .i_wdata0_next(rf_wdata0_next_to_if),
-        .i_rreg0(rf_read_reg0_to_if),
-        .i_rreg1(rf_read_reg1_to_if),
+        .i_rreg0(rf_rreg0_to_if),
+        .i_rreg1(rf_rreg1_to_if),
         .o_rdata0(rdata0),
         .o_rdata1(rdata1),
         .o_waddr(waddr),
@@ -273,7 +336,6 @@ module my_mcu_top #(
         .o_wen(wen),
         .o_raddr(raddr),
         .o_ren(ren),
-        
         .i_clk_fast(i_clk_fast),
         .o_rf_sync(o_rf_sync),
         .o_rf_sck(o_rf_sck),
@@ -286,7 +348,10 @@ module my_mcu_top #(
     // -----------------------------------------------------------------
     // CPU가 내보내는 주소(wb_dbus_adr)를 보고 누구를 깨울지 결정합니다.
     
-    offchip_mem_bridge u_mem_serial (
+    offchip_mem_bridge #(
+        .ADDR_BITS(MEM_ADDR_BITS),
+        .RESET_STRATEGY(RESET_STRATEGY)
+    ) u_mem_serial (
         .i_clk_fast(i_clk_fast),
         .i_clk_sys(clk_sys),
         .i_rst((!i_rst_n) || rst),
@@ -296,7 +361,7 @@ module my_mcu_top #(
         .o_ibus_rdt(mem_ibus_rdt),
         .o_ibus_ack(mem_ibus_ack),
 
-        .i_dbus_cyc(wb_dbus_cyc),
+        .i_dbus_cyc((DISABLE_DBUS == 0) ? wb_dbus_cyc : 1'b0),
         .i_dbus_adr(wb_dbus_adr),
         .i_dbus_dat(wb_dbus_dat),
         .i_dbus_sel(wb_dbus_sel),
@@ -310,7 +375,7 @@ module my_mcu_top #(
         .i_mem_miso(i_mem_miso)
     );
 
-    assign wb_dbus_rdt = mem_dbus_rdt;
-    assign wb_dbus_ack = mem_dbus_ack;
+    assign wb_dbus_rdt = (DISABLE_DBUS == 0) ? mem_dbus_rdt : 32'b0;
+    assign wb_dbus_ack = (DISABLE_DBUS == 0) ? mem_dbus_ack : wb_dbus_cyc;
 
 endmodule

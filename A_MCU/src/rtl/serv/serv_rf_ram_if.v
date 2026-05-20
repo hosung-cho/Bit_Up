@@ -10,9 +10,11 @@ module serv_rf_ram_if
   #(parameter width=2,
     parameter W = 1,
     parameter reset_strategy="MINI",
+    parameter gpr_regs=32,
     parameter csr_regs=4,
+    parameter single_read_port=0,
     parameter B=W-1,
-    parameter raw=$clog2(32+csr_regs),
+    parameter raw=$clog2(gpr_regs+csr_regs),
     parameter l2w=$clog2(width),
     parameter aw=5+raw-l2w)
   (
@@ -48,7 +50,7 @@ module serv_rf_ram_if
    input wire              i_rf_miso
   );
 
-   localparam depth = 32 * (32 + csr_regs) / width;
+   localparam depth = 32 * (gpr_regs + csr_regs) / width;
 
    reg ready_pulse;
    assign o_ready = i_wreq | ready_pulse;
@@ -60,7 +62,8 @@ module serv_rf_ram_if
    reg        stream_active;
 
    assign o_rdata0 = stream_active ? read_buf0[0] : 1'b0;
-   assign o_rdata1 = stream_active ? read_buf1[0] : 1'b0;
+   assign o_rdata1 = (single_read_port != 0) ? 1'b0 :
+                     stream_active ? read_buf1[0] : 1'b0;
 
    localparam ratio = width/W;
    localparam CMSB = 4-$clog2(W);
@@ -105,12 +108,12 @@ module serv_rf_ram_if
    reg [raw-1:0] rreg0_latched;
    reg [raw-1:0] rreg1_latched;
 
-   wire [3:0] issue_chunk = issue_idx[4:1];
-   wire       issue_sel   = issue_idx[0];
+   wire [3:0] issue_chunk = (single_read_port != 0) ? issue_idx[3:0] : issue_idx[4:1];
+   wire       issue_sel   = (single_read_port != 0) ? 1'b0 : issue_idx[0];
    wire [raw-1:0] issue_reg = issue_sel ? rreg1_latched : rreg0_latched;
    wire       prev_valid = prefetch_active && (issue_idx != 6'd0);
    wire [4:0] prev_issue_idx = issue_idx[4:0] - 5'd1;
-   wire       prev_sel = prev_issue_idx[0];
+   wire       prev_sel = (single_read_port != 0) ? 1'b0 : prev_issue_idx[0];
    wire [aw-1:0] raddr_w = o_raddr;
    wire          ren_w   = o_ren;
 
@@ -181,7 +184,7 @@ module serv_rf_ram_if
    end
 
    // 0번 레지스터(x0)는 RISC-V 스펙상 항상 0을 반환하도록 마스킹
-   wire [width-1:0] rdata_w = (target_reg == 5'd0) ? {width{1'b0}} : shift_rx;
+   wire [width-1:0] rdata_w = (target_reg == {raw{1'b0}}) ? {width{1'b0}} : shift_rx;
 
    always @(posedge i_clk) begin
       ready_pulse <= 1'b0;
@@ -240,7 +243,7 @@ module serv_rf_ram_if
                read_buf0 <= {rdata_w, read_buf0[31:2]};
          end
 
-         if (issue_idx < 6'd32) begin
+         if (issue_idx < ((single_read_port != 0) ? 6'd16 : 6'd32)) begin
             o_ren <= 1'b1;
             o_raddr <= {issue_reg, issue_chunk};
             issue_idx <= issue_idx + 6'd1;

@@ -1,1 +1,0 @@
-/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_rf_ram.v

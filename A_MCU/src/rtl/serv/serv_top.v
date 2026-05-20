@@ -15,6 +15,7 @@ module serv_top
     parameter	    RESET_PC = 32'd0,
     parameter [0:0] DEBUG = 1'b0,
     parameter [0:0] MDU = 1'b0,
+    parameter [0:0] WITH_MEM = 1'b1,
     parameter [0:0] COMPRESSED=0,
     parameter [0:0] ALIGN = COMPRESSED)
    (
@@ -298,6 +299,7 @@ module serv_top
 
    serv_decode
      #(.PRE_REGISTER (PRE_REGISTER),
+       .WITH_MEM(WITH_MEM),
        .MDU(MDU))
    decode
      (
@@ -535,26 +537,34 @@ module serv_top
       //CSR read port
       .o_csr       (rf_csr_out));
 
-   serv_mem_if
-     #(.WITH_CSR (WITH_CSR[0:0]),
-       .W (W))
-   mem_if
-     (
-      .i_clk        (clk),
-      //State
-      .i_bytecnt    (mem_bytecnt),
-      .i_lsb        (lsb),
-      .o_misalign   (mem_misalign),
-      //Control
-      .i_mdu_op     (mdu_op),
-      .i_signed     (mem_signed),
-      .i_word       (mem_word),
-      .i_half       (mem_half),
-      //Data
-      .i_bufreg2_q  (bufreg2_q),
-      .o_rd         (mem_rd),
-      //External interface
-      .o_wb_sel     (o_dbus_sel));
+   generate
+      if (WITH_MEM) begin : gen_mem_if
+         serv_mem_if
+           #(.WITH_CSR (WITH_CSR[0:0]),
+             .W (W))
+         mem_if
+           (
+            .i_clk        (clk),
+            //State
+            .i_bytecnt    (mem_bytecnt),
+            .i_lsb        (lsb),
+            .o_misalign   (mem_misalign),
+            //Control
+            .i_mdu_op     (mdu_op),
+            .i_signed     (mem_signed),
+            .i_word       (mem_word),
+            .i_half       (mem_half),
+            //Data
+            .i_bufreg2_q  (bufreg2_q),
+            .o_rd         (mem_rd),
+            //External interface
+            .o_wb_sel     (o_dbus_sel));
+      end else begin : gen_no_mem_if
+         assign mem_misalign = 1'b0;
+         assign mem_rd = {W{1'b0}};
+         assign o_dbus_sel = 4'b0000;
+      end
+   endgenerate
 
    generate
       if (|WITH_CSR) begin : gen_csr
