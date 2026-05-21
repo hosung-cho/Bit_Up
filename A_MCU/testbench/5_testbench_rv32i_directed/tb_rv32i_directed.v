@@ -56,7 +56,9 @@ module tb_rv32i_directed;
    wire [7:0] gpio_out;
    wire [7:0] gpio_oe;
 
-   my_mcu_top dut (
+   my_mcu_top #(
+      .STREAM_RS2_READ(1)
+   ) dut (
       .i_clk_fast(clk_fast),
       .i_rst_n(rst_n),
       .o_rf_sync(rf_sync),

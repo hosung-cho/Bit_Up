@@ -92,6 +92,7 @@ module serv_rf_ram_if
    wire [raw-1:0] wreg = wtrig1 ? i_wreg1 : i_wreg0;
 
    wire [width-1:0] wdata0_next = {i_wdata0, wdata0_r[width-1:W]};
+   wire [width-1:0] wdata0_stream_next = {wdata0_next[0], read_buf1[0]};
    wire [width-1:0] wdata1_phase = wdata1_r[width:W];
    wire [width-1:0] wdata1_sel = i_wreg1[raw-1] ? wdata1_phase : wdata1_r[width-1:0];
 
@@ -100,7 +101,7 @@ module serv_rf_ram_if
 
    // 내부 연결 와이어 선언 및 출력 매핑
    wire [width-1:0]  wdata_w = wtrig1 ? wdata1_sel :
-                               use_wdata0_next ? wdata0_next : wdata0_r;
+                               use_wdata0_next ? (stream_rs2_active ? wdata0_stream_next : wdata0_next) : wdata0_r;
    wire [aw-1:0]     waddr_w = {wreg, write_chunk};
    wire              wen_w   = (wtrig0 & wen0_r) | (wtrig1 & wen1_r);
 
@@ -240,6 +241,11 @@ module serv_rf_ram_if
          wdata0_next_phase <= 1'b0;
       else if (wen_w && !wtrig1 && (write_chunk == 4'd0))
          wdata0_next_phase <= i_wdata0_next & rcnt[2];
+
+      if (i_wreq)
+         read_buf1[0] <= 1'b0;
+      else if (wen_w && !wtrig1 && stream_rs2_active && i_wdata0_next)
+         read_buf1[0] <= wdata0_next[1];
 
       if (i_rreq) begin
          pending_read <= 1'b1;

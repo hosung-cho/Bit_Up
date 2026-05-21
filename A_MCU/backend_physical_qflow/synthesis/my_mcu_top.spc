@@ -846,1697 +846,1684 @@ XOR2X2_0 OR2X2_0/A OR2X2_0/B OR2X2_0/Y vdd gnd OR2X2
 .subckt my_mcu_top vdd gnd i_clk_fast i_clk_sys_ext i_rst_n o_rf_sync o_rf_sck
 + o_rf_mosi i_rf_miso o_mem_sync o_mem_sck o_mem_mosi i_mem_miso 
 
-X_1677_ _1020_ _1021_ _777_ vdd gnd NOR2X1
-X_1257_ \u_cpu.decode.opcode\[0] _472_ _452_ vdd gnd NOR2X1
-XFILL99150x72150 gnd vdd FILL
-XFILL99150x39750 gnd vdd FILL
-X_1486_ _859_ _867_ _722_ _874_ vdd gnd OAI21X1
-X_1295_ _438_ \u_cpu.decode.opcode\[2] _493_ _417_ vdd gnd OAI21X1
-X_2521_ _614_ i_clk_fast_bF$buf5 \u_mem_serial.shift_reg\[15] vdd gnd DFFPOSX1
-X_2101_ \u_cpu.decode.opcode\[1] _437_ \u_cpu.branch_op\ _154_ vdd gnd OAI21X1
-X_1389_ \u_rf_if.last_req_key\[3] _327_ _325_ vdd gnd NOR2X1
-X_2330_ _664_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.data\[28] vdd gnd DFFPOSX1
-X_1601_ \u_rf_if.rreg0_latched\[3] _970_ _969_ _971_ vdd gnd NAND3X1
-X_1198_ \u_mem_serial.shift_reg\[0] _510_ _509_ vdd gnd NAND2X1
-X_1830_ _552__bF$buf0 _1127_ _1128_ _725_ vdd gnd OAI21X1
-X_1410_ _305_ _315_ _304_ vdd gnd AND2X2
-XBUFX2_insert37 _440_ _440__bF$buf5 vdd gnd BUFX2
-XBUFX2_insert38 _440_ _440__bF$buf4 vdd gnd BUFX2
-XBUFX2_insert39 _440_ _440__bF$buf3 vdd gnd BUFX2
-X_2424_ _601_ i_clk_sys_ext_bF$buf13 \u_cpu.ctrl.o_ibus_adr\[21] vdd gnd DFFPOSX1
-X_2004_ _93_ _95_ _96_ _674_ vdd gnd OAI21X1
-X_2233_ \u_cpu.ctrl.o_ibus_adr\[19] _253_ vdd gnd INVX1
-X_1924_ \u_cpu.bufreg.data\[6] _41_ vdd gnd INVX1
-X_1504_ _889_ _446_ _834_ vdd gnd NAND2X1
-X_2462_ _768_ i_clk_sys_ext_bF$buf11 \u_rf_if.read_buf0\[28] vdd gnd DFFPOSX1
-X_2042_ _122_ _93_ _125_ _665_ vdd gnd OAI21X1
-X_1733_ rf_read_reg1_to_if[0] _1059_ vdd gnd INVX1
-X_1313_ _491_ _489_ _492_ _399_ vdd gnd OAI21X1
-X_2518_ _813_ i_clk_sys_ext_bF$buf5 \u_rf_if.stream_cnt\[3] vdd gnd DFFPOSX1
-X_2271_ _267_ _264_ _440__bF$buf2 _576_ vdd gnd MUX2X1
-X_1962_ _64_ _56_ _66_ _686_ vdd gnd AOI21X1
-X_1542_ _922_ _923_ vdd gnd INVX1
-X_2327_ _817_ i_clk_fast_bF$buf2 \u_rf_if.shift_rx\[1] vdd gnd DFFPOSX1
-X_2080_ \u_cpu.bufreg.data\[10] _145_ vdd gnd INVX1
-X_1771_ \u_rf_if.last_req_key\[3] _704__bF$buf3 i_rst_n_bF$buf3 _1081_ vdd gnd OAI21X1
-X_1351_ _377_ _363_ _361_ vdd gnd NAND2X1
-X_2556_ _841_ i_clk_fast_bF$buf1 \u_rf_if.last_req_key\[9] vdd gnd DFFPOSX1
-X_2136_ i_mem_miso _178_ _179_ _180_ vdd gnd NAND3X1
-X_1827_ _505__bF$buf0 _1119_ _1126_ _726_ vdd gnd AOI21X1
-X_1407_ \u_rf_if.last_req_key\[2] _309_ _307_ vdd gnd NAND2X1
-X_1580_ _941_ _955_ _954_ _956_ vdd gnd OAI21X1
-X_1160_ _0_ o_mem_mosi vdd gnd BUFX2
-X_2365_ _696_ i_clk_sys_ext_bF$buf6 \u_cpu.branch_op\ vdd gnd DFFPOSX1
-X_1636_ _994_ _995_ _792_ vdd gnd NOR2X1
-X_1216_ _500_ _494_ _493_ vdd gnd NAND2X1
-X_2174_ \u_cpu.bufreg.i_shamt\[1] _212_ vdd gnd INVX1
-X_1865_ \u_cpu.ctrl.o_ibus_adr\[5] _1154_ vdd gnd INVX1
-X_1445_ _724_ i_rf_miso _797_ vdd gnd OR2X2
-XFILL98550x32550 gnd vdd FILL
-XFILL98850x150 gnd vdd FILL
-X_1674_ \u_rf_if.stream_active_bF$buf0\ _1017_ _1019_ _778_ vdd gnd AOI21X1
-X_1254_ _458_ _456_ _465_ _455_ vdd gnd NAND3X1
-X_2459_ _611_ i_clk_fast_bF$buf5 \u_mem_serial.shift_reg\[25] vdd gnd DFFPOSX1
-X_2039_ _123_ _86_ _124_ vdd gnd NOR2X1
-X_1483_ _809_ _870_ _871_ vdd gnd NAND2X1
-X_2268_ _266_ _265_ _440__bF$buf5 _578_ vdd gnd MUX2X1
-XFILL99150x93750 gnd vdd FILL
-X_1959_ \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[2] _64_ vdd gnd INVX1
-X_1539_ _918_ _919_ _920_ vdd gnd NOR2X1
-X_1292_ \u_cpu.state.o_cnt\[2] _421_ _420_ vdd gnd NOR2X1
-XFILL98850x75750 gnd vdd FILL
-X_2497_ _795_ i_clk_sys_ext_bF$buf3 \u_rf_if.read_buf0\[1] vdd gnd DFFPOSX1
-X_2077_ _142_ _143_ _413__bF$buf0 _648_ vdd gnd MUX2X1
-X_1768_ _323_ _704__bF$buf2 _1079_ _744_ vdd gnd AOI21X1
-X_1348_ \u_cpu.branch_op\ _373_ _367_ _364_ vdd gnd OAI21X1
-X_1997_ _1059_ _90_ _86_ _675_ vdd gnd MUX2X1
-X_1577_ mem_ibus_ack_bF$buf0 _952_ _953_ _825_ vdd gnd AOI21X1
-X_1157_ _1122_ o_rf_mosi vdd gnd BUFX2
-X_1386_ ren_bF$buf3 \u_rf_if.o_waddr\[3] _329_ _328_ vdd gnd OAI21X1
-X_1195_ \u_mem_serial.shift_reg\[3] _512_ vdd gnd INVX1
-X_2421_ _745_ i_clk_fast_bF$buf2 \u_rf_if.last_req_key\[0] vdd gnd DFFPOSX1
-X_2001_ mem_ibus_ack_bF$buf3 _429_ _94_ vdd gnd NOR2X1
-X_1289_ _437_ _424_ _423_ vdd gnd NOR2X1
-X_2230_ _250_ _251_ _440__bF$buf2 _601_ vdd gnd MUX2X1
-X_1921_ \u_mem_serial.bit_count\[4] _31_ \u_mem_serial.bit_count\[5] _39_ vdd gnd OAI21X1
-X_1501_ \u_mem_serial.shift_reg\[27] _505__bF$buf4 _888_ vdd gnd NOR2X1
-X_1730_ rf_read_reg0_to_if[2] _1057_ vdd gnd INVX1
-X_1310_ _403_ _402_ vdd gnd INVX1
-X_2515_ _554_ _553_ vdd gnd INVX1
-X_2324_ _659_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.data\[23] vdd gnd DFFPOSX1
-X_2553_ _625_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[5] vdd gnd DFFPOSX1
-X_2133_ _514_ _505__bF$buf2 _177_ _625_ vdd gnd OAI21X1
-X_1824_ _567_ _551__bF$buf0 _1118_ vdd gnd NOR2X1
-X_1404_ _337_ _311_ _310_ vdd gnd NAND2X1
-X_2362_ _693_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[3] vdd gnd DFFPOSX1
-X_1633_ _992_ _993_ _793_ vdd gnd NOR2X1
-X_1213_ \u_cpu.branch_op\ \u_cpu.decode.opcode\[0] _496_ vdd gnd NOR2X1
-X_2418_ _598_ i_clk_sys_ext_bF$buf3 \u_cpu.ctrl.o_ibus_adr\[18] vdd gnd DFFPOSX1
-X_2171_ _187_ _208_ _209_ _210_ vdd gnd OAI21X1
-X_1862_ \u_mem_serial.shift_reg\[20] _1151_ vdd gnd INVX1
-X_1442_ \u_rf_if.tx_state\[0] _722_ vdd gnd INVX1
-X_2227_ \u_cpu.ctrl.o_ibus_adr\[22] _250_ vdd gnd INVX1
-X_1918_ _35_ _33_ _36_ vdd gnd NAND2X1
-X_1671_ _383__bF$buf0 \u_rf_if.read_buf0\[18] \u_rf_if.read_buf0\[17] _990__bF$buf4 _1018_ vdd 
+X_1677_ \u_rf_if.read_buf0\[19] _943__bF$buf0 \u_rf_if.read_buf0\[21] _926_ _1010_ vdd 
 + gnd
 + OAI22X1
-X_1251_ \u_cpu.bufreg2.dhi\[5] _459_ _458_ vdd gnd NAND2X1
-X_2456_ _764_ i_clk_sys_ext_bF$buf5 \u_rf_if.issue_idx\[2] vdd gnd DFFPOSX1
-X_2036_ \u_mem_serial.shift_reg\[24] _121_ vdd gnd INVX1
-X_1727_ rf_read_reg0_to_if[1] _1055_ vdd gnd INVX1
-X_1307_ _438_ _472_ _405_ vdd gnd NOR2X1
-X_1480_ _867_ _868_ vdd gnd INVX1
-X_2265_ _264_ _246_ _440__bF$buf5 _579_ vdd gnd MUX2X1
-X_1956_ mem_ibus_ack_bF$buf6 _1053_ _48_ _62_ vdd gnd OAI21X1
-X_1536_ \u_rf_if.stream_cnt\[3] _917_ vdd gnd INVX1
-X_2494_ _792_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[4] vdd gnd DFFPOSX1
-X_2074_ \u_cpu.bufreg.data\[13] _142_ vdd gnd INVX1
-X_1765_ \u_rf_if.last_req_key\[0] _704__bF$buf1 i_rst_n_bF$buf3 _1078_ vdd gnd OAI21X1
-X_1345_ _371_ _369_ _368_ _367_ vdd gnd OAI21X1
-X_1994_ \u_mem_serial.shift_reg\[21] rf_read_reg1_to_if[2] mem_ibus_ack_bF$buf2 _89_ vdd gnd MUX2X1
-X_1574_ _947__bF$buf0 _951_ _950_ _826_ vdd gnd OAI21X1
-X_2359_ _691_ i_clk_sys_ext_bF$buf12 rf_read_reg0_to_if[3] vdd gnd DFFPOSX1
-X_1383_ \u_rf_if.last_req_key\[7] _333_ _331_ vdd gnd NAND2X1
-X_2588_ _726_ i_clk_fast_bF$buf5 \u_mem_serial.shift_reg\[30] vdd gnd DFFPOSX1
-X_2168_ _201_ _206_ _465_ _207_ vdd gnd OAI21X1
-X_1859_ mem_ibus_ack_bF$buf0 _484_ _1149_ vdd gnd NOR2X1
-X_1439_ _276_ _704_ vdd gnd INVX4
-X_1192_ \u_mem_serial.shift_reg\[6] _515_ vdd gnd INVX1
-X_2397_ _589_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[9] vdd gnd DFFPOSX1
-X_1668_ \u_rf_if.read_buf0\[18] _947__bF$buf4 \u_rf_if.read_buf0\[16] _990__bF$buf4 _1016_ vdd 
-+ gnd
-+ OAI22X1
-X_1248_ \u_cpu.bufreg2.dhi\[3] _462_ _461_ vdd gnd NOR2X1
-X_1897_ \u_mem_serial.shift_reg\[31] _20_ vdd gnd INVX1
-X_1477_ _863_ _864_ _865_ vdd gnd AND2X2
-X_1286_ _426_ _440__bF$buf1 _425_ vdd gnd NAND2X1
-X_2512_ \u_mem_serial.shift_reg\[9] _551__bF$buf2 _550_ vdd gnd NAND2X1
-X_2321_ _656_ i_clk_sys_ext_bF$buf2 \u_cpu.bufreg.data\[20] vdd gnd DFFPOSX1
-X_1189_ mem_ibus_ack_bF$buf0 _518_ vdd gnd INVX4
-X_2550_ _838_ i_clk_fast_bF$buf7 _1124_ vdd gnd DFFPOSX1
-X_2130_ \u_mem_serial.shift_reg\[30] _551__bF$buf1 _505__bF$buf0 _176_ vdd gnd NAND3X1
-X_1821_ \u_mem_serial.shift_reg\[28] _504_ _1116_ vdd gnd NOR2X1
-X_1401_ _323_ _313_ vdd gnd INVX1
-X_1630_ \u_rf_if.stream_active_bF$buf0\ _988_ _991_ _794_ vdd gnd AOI21X1
-X_1210_ \u_cpu.bufreg.i_right_shift_op\ _499_ vdd gnd INVX2
-X_2415_ _742_ i_clk_fast_bF$buf2 \u_rf_if.last_req_key\[3] vdd gnd DFFPOSX1
-X_2224_ _247_ _248_ _440__bF$buf5 _604_ vdd gnd MUX2X1
-X_1915_ _504_ _33_ _562_ _34_ vdd gnd OAI21X1
-X_2453_ _609_ i_clk_sys_ext_bF$buf1 \u_cpu.bufreg2.cnt_next\[6] vdd gnd DFFPOSX1
-X_2033_ \u_mem_serial.shift_reg\[30] mem_ibus_ack_bF$buf6 _75_ _119_ vdd gnd AOI21X1
-X_1724_ \u_cpu.csr_imm\ _1053_ vdd gnd INVX1
-X_1304_ \u_cpu.decode.opcode\[0] _409_ _408_ vdd gnd NOR2X1
-X_2509_ \u_mem_serial.shift_reg\[6] _551__bF$buf1 _548_ vdd gnd NAND2X1
-X_2262_ \u_cpu.ctrl.pc\ _440__bF$buf0 _263_ vdd gnd NOR2X1
-X_1953_ \u_mem_serial.shift_reg\[15] rf_read_reg0_to_if[1] mem_ibus_ack_bF$buf2 _60_ vdd gnd MUX2X1
-X_1533_ _913_ _370_ _914_ vdd gnd NOR2X1
-X_2318_ _653_ i_clk_sys_ext_bF$buf2 \u_cpu.bufreg.data\[17] vdd gnd DFFPOSX1
-X_2491_ _789_ i_clk_sys_ext_bF$buf11 \u_rf_if.read_buf0\[7] vdd gnd DFFPOSX1
-X_2071_ _139_ _140_ _413__bF$buf3 _651_ vdd gnd MUX2X1
-X_1762_ _799_ _442_ _1076_ _1077_ vdd gnd OAI21X1
-X_1342_ \u_rf_if.i_stream_rs2_en\ _370_ vdd gnd INVX1
-X_2547_ _571_ i_clk_sys_ext_bF$buf1 \u_cpu.alu.add_cy_r\ vdd gnd DFFPOSX1
-X_2127_ \u_mem_serial.state\[1] _174_ vdd gnd INVX1
-X_1818_ _1112_ _1113_ _567_ _1114_ vdd gnd MUX2X1
-XFILL99150x150 gnd vdd FILL
-X_1991_ _906_ _87_ _86_ _678_ vdd gnd MUX2X1
-X_1571_ _947__bF$buf0 _938_ _949_ _827_ vdd gnd OAI21X1
-X_2356_ _688_ i_clk_sys_ext_bF$buf4 \u_cpu.csr_imm\ vdd gnd DFFPOSX1
-X_1627_ _988_ _947__bF$buf1 _989_ _795_ vdd gnd OAI21X1
-X_1207_ _505__bF$buf3 _503_ _502_ _847_ vdd gnd AOI21X1
-X_1380_ ren_bF$buf0 raddr[7] _336_ _335_ _334_ vdd 
+X_1257_ _442_ _441_ vdd gnd INVX1
+X_1486_ _864_ _865_ vdd gnd INVX1
+X_1295_ _421_ _406_ _405_ vdd gnd OR2X2
+X_2521_ _618_ i_clk_sys_ext_bF$buf11 \u_cpu.bufreg2.dhi\[4] vdd gnd DFFPOSX1
+X_2101_ _148_ _123_ _426__bF$buf1 _631_ vdd gnd MUX2X1
+X_1389_ raddr[1] _313_ vdd gnd INVX1
+X_2330_ _678_ i_clk_sys_ext_bF$buf0 \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[3] vdd gnd DFFPOSX1
+XFILL97950x79350 gnd vdd FILL
+X_1601_ \u_rf_if.issue_idx\[4] _931_ _960_ vdd gnd NAND2X1
+X_1198_ _505_ _503_ _500_ _499_ vdd gnd NAND3X1
+X_1830_ \u_cpu.bufreg2.i_bytecnt\[0] _485_ _1110_ vdd gnd NOR2X1
+X_1410_ ren raddr[5] _342_ _293_ _292_ vdd 
 + gnd
 + AOI22X1
-X_2585_ _637_ i_clk_sys_ext_bF$buf12 \u_cpu.bufreg.data\[2] vdd gnd DFFPOSX1
-X_2165_ _188_ _197_ _204_ _205_ vdd gnd OAI21X1
-X_1856_ _473_ _1147_ _1136_ _718_ vdd gnd OAI21X1
-X_1436_ _279_ _296_ _278_ vdd gnd AND2X2
-X_2394_ _588_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[8] vdd gnd DFFPOSX1
-X_1665_ \u_rf_if.read_buf0\[17] _1014_ vdd gnd INVX1
-X_1245_ \u_cpu.bufreg.i_shamt\[2] _464_ vdd gnd INVX1
-X_1894_ mem_ibus_ack_bF$buf1 _437_ _18_ _706_ vdd gnd OAI21X1
-X_1474_ _861_ _862_ vdd gnd INVX1
-X_2259_ _532_ _242_ _440__bF$buf1 _582_ vdd gnd MUX2X1
-X_1283_ _430_ _429_ _428_ vdd gnd NAND2X1
-X_2488_ _786_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[10] vdd gnd DFFPOSX1
-X_2068_ \u_cpu.bufreg.data\[16] _139_ vdd gnd INVX1
-X_1759_ _520_ _522_ i_rst_n_bF$buf2 _1075_ vdd gnd OAI21X1
-X_1339_ _376_ _375_ _374_ _373_ vdd gnd OAI21X1
-X_2297_ \u_mem_serial.bit_count\[3] _559_ vdd gnd INVX1
-X_1988_ \u_cpu.bufreg2.i_op_b_sel\ _437_ _404_ _85_ vdd gnd NAND3X1
-X_1568_ _383__bF$buf4 _946_ _947_ vdd gnd NAND2X1
-X_1797_ _1096_ _1097_ _927_ _733_ vdd gnd MUX2X1
-X_1377_ ren_bF$buf2 _337_ vdd gnd INVX2
-XFILL99150x32550 gnd vdd FILL
-X_1186_ _521_ _520_ vdd gnd INVX1
-X_2412_ _595_ i_clk_sys_ext_bF$buf3 \u_cpu.ctrl.o_ibus_adr\[15] vdd gnd DFFPOSX1
-X_2221_ \u_cpu.ctrl.o_ibus_adr\[25] _247_ vdd gnd INVX1
-X_1912_ _562_ _28_ _31_ vdd gnd NAND2X1
-X_2450_ _761_ i_clk_sys_ext_bF$buf9 \u_rf_if.rreg0_latched\[0] vdd gnd DFFPOSX1
-X_2030_ \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[0] _114_ _115_ _116_ vdd gnd OAI21X1
-X_1721_ _1051_ _1050_ _763_ vdd gnd NOR2X1
-X_1301_ _418_ _412_ _411_ vdd gnd NOR2X1
-X_2506_ \u_mem_serial.shift_reg\[10] _551__bF$buf2 _546_ vdd gnd NAND2X1
-X_1950_ _1057_ _58_ _56_ _690_ vdd gnd MUX2X1
-X_1530_ \u_rf_if.issue_idx\[1] \u_rf_if.issue_idx\[0] _911_ vdd gnd NOR2X1
-X_2315_ \u_cpu.state.cnt_r\[0] i_clk_sys_ext_bF$buf2 \u_cpu.state.cnt_r\[1] vdd gnd DFFPOSX1
-X_2544_ _576_ i_clk_sys_ext_bF$buf13 \u_cpu.ctrl.o_ibus_adr\[28] vdd gnd DFFPOSX1
-X_2124_ \u_mem_serial.bit_count\[0] _551__bF$buf2 _172_ vdd gnd NAND2X1
-X_1815_ _536_ _551__bF$buf5 _1111_ vdd gnd NAND2X1
-X_2353_ _685_ i_clk_sys_ext_bF$buf4 \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[1] vdd gnd DFFPOSX1
-X_1624_ _986_ _947__bF$buf1 _987_ _796_ vdd gnd OAI21X1
-X_1204_ _551__bF$buf2 _504_ vdd gnd INVX2
-X_2409_ _739_ i_clk_fast_bF$buf1 \u_rf_if.last_req_key\[6] vdd gnd DFFPOSX1
-X_2582_ _635_ i_clk_sys_ext_bF$buf2 \u_cpu.bufreg.data\[30] vdd gnd DFFPOSX1
-X_2162_ _200_ _201_ _202_ vdd gnd NOR2X1
-X_1853_ _1137_ _1139_ _1144_ _1145_ vdd gnd OAI21X1
-X_1433_ \u_rf_if.last_req_key\[5] _283_ _281_ vdd gnd NAND2X1
-X_2218_ \u_cpu.ctrl.o_ibus_adr\[26] _245_ vdd gnd INVX1
-X_2391_ _716_ i_clk_sys_ext_bF$buf12 \u_cpu.state.ibus_cyc\ vdd gnd DFFPOSX1
-X_1909_ _559_ _24_ _29_ vdd gnd NOR2X1
-X_1662_ \u_rf_if.read_buf0\[15] _383__bF$buf1 _1012_ vdd gnd NOR2X1
-X_1242_ _499_ _483_ _468_ _467_ vdd gnd OAI21X1
-X_2447_ _758_ i_clk_sys_ext_bF$buf12 \u_rf_if.rreg1_latched\[0] vdd gnd DFFPOSX1
-X_2027_ \u_cpu.branch_op\ _437_ _113_ vdd gnd NAND2X1
-X_1718_ _1049_ _1048_ _764_ vdd gnd NOR2X1
-X_1891_ _516_ mem_ibus_ack_bF$buf1 _17_ _708_ vdd gnd AOI21X1
-X_1471_ \u_rf_if.wdata0_next\[0] _859_ vdd gnd INVX1
-X_2256_ _42_ _1154_ _440__bF$buf1 _585_ vdd gnd MUX2X1
-X_1947_ \u_mem_serial.shift_reg\[18] rf_read_reg0_to_if[4] mem_ibus_ack_bF$buf0 _57_ vdd gnd MUX2X1
-X_1527_ \u_rf_if.prefetch_active\ _908_ vdd gnd INVX2
-X_1280_ _433_ _432_ _431_ vdd gnd NAND2X1
-X_2485_ _784_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[12] vdd gnd DFFPOSX1
-X_2065_ _136_ _137_ _413__bF$buf2 _654_ vdd gnd MUX2X1
-X_1756_ \u_rf_if.write_wait\[0] _1073_ _750_ vdd gnd NOR2X1
-X_1336_ \u_cpu.bufreg2.i_op_b_sel\ _376_ vdd gnd INVX1
-X_2294_ _563_ _568_ \u_mem_serial.state\[1] _562_ vdd gnd AOI21X1
-X_1985_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[0] _83_ vdd gnd INVX1
-X_1565_ \u_rf_if.issue_idx\[4] _943_ _912_ _944_ vdd gnd NAND3X1
-X_1794_ _908_ _915_ _330_ _1095_ vdd gnd OAI21X1
-X_1374_ \u_mem_serial.shift_reg\[5] _551__bF$buf1 _505__bF$buf0 _339_ vdd gnd NAND3X1
-X_2579_ _631_ i_clk_sys_ext_bF$buf2 \u_cpu.bufreg.data\[31] vdd gnd DFFPOSX1
-X_2159_ _196_ _199_ _621_ vdd gnd NAND2X1
-X_1183_ \u_rf_if.tx_state\[2] _524_ _523_ vdd gnd NOR2X1
-X_2388_ _587_ i_clk_sys_ext_bF$buf4 \u_cpu.ctrl.o_ibus_adr\[7] vdd gnd DFFPOSX1
-X_1659_ _1009_ _997_ _1010_ _784_ vdd gnd AOI21X1
-X_1239_ \u_cpu.bufreg2.dhi\[6] _470_ vdd gnd INVX1
-X_2197_ _551__bF$buf0 _229_ _227_ _230_ vdd gnd OAI21X1
-X_1888_ _513_ _16_ vdd gnd INVX1
-X_1468_ _806_ _837_ _846_ _848_ vdd gnd OAI21X1
-X_1697_ \u_rf_if.read_buf0\[29] _947__bF$buf0 \u_rf_if.read_buf0\[27] _990__bF$buf1 _1034_ vdd 
-+ gnd
-+ OAI22X1
-X_1277_ _435_ _436_ _434_ vdd gnd NOR2X1
-X_2503_ _552__bF$buf3 _546_ _545_ _854_ vdd gnd OAI21X1
-X_2312_ _649_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.data\[13] vdd gnd DFFPOSX1
-X_2541_ _823_ i_clk_sys_ext_bF$buf11 \u_rf_if.stream_active\ vdd gnd DFFPOSX1
-X_2121_ _552__bF$buf1 _169_ _170_ _630_ vdd gnd OAI21X1
-X_1812_ \u_rf_if.rs2_stream_buf\[0] _956_ _925_ _1109_ vdd gnd OAI21X1
-X_2350_ _683_ i_clk_sys_ext_bF$buf4 \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[4] vdd gnd DFFPOSX1
-X_1621_ _917_ _985_ _984_ _978_ _813_ vdd 
+XBUFX2_insert30 _543_ _543__bF$buf4 vdd gnd BUFX2
+XBUFX2_insert31 _543_ _543__bF$buf3 vdd gnd BUFX2
+XBUFX2_insert32 _543_ _543__bF$buf2 vdd gnd BUFX2
+XBUFX2_insert33 _543_ _543__bF$buf1 vdd gnd BUFX2
+XBUFX2_insert34 _543_ _543__bF$buf0 vdd gnd BUFX2
+X_2424_ _749_ i_clk_sys_ext_bF$buf6 \u_rf_if.o_waddr\[0] vdd gnd DFFPOSX1
+X_2004_ rf_wreg0_to_if[3] _89_ _92_ vdd gnd NAND2X1
+X_2233_ _241_ _242_ _873__bF$buf0 _590_ vdd gnd MUX2X1
+X_1924_ _33_ _35_ _694_ vdd gnd NAND2X1
+X_1504_ _880_ _873__bF$buf5 _881_ vdd gnd NAND2X1
+X_2462_ _779_ i_clk_sys_ext_bF$buf2 \u_rf_if.read_buf0\[11] vdd gnd DFFPOSX1
+X_2042_ mem_ibus_ack_bF$buf2 \u_mem_serial.shift_reg\[11] _87_ _90_ _121_ vdd 
 + gnd
 + AOI22X1
-X_1201_ _516_ _515_ _507_ _506_ vdd gnd OAI21X1
-X_2406_ _592_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[12] vdd gnd DFFPOSX1
-X_1850_ _1140_ _1141_ _1142_ vdd gnd NOR2X1
-X_1430_ ren_bF$buf1 _439_ _284_ vdd gnd NOR2X1
-X_2215_ _148_ _242_ _567_ _243_ vdd gnd MUX2X1
-X_1906_ _560_ _562_ _26_ _702_ vdd gnd OAI21X1
-X_2444_ _755_ i_clk_sys_ext_bF$buf12 \u_rf_if.rcnt\[0] vdd gnd DFFPOSX1
-X_2024_ _476_ _105_ _110_ _668_ vdd gnd OAI21X1
-X_1715_ \u_rf_if.issue_idx\[2] _1046_ _1047_ vdd gnd NAND2X1
-X_2253_ _228_ _224_ _440__bF$buf0 _588_ vdd gnd MUX2X1
-XFILL98250x93750 gnd vdd FILL
-X_1944_ \u_cpu.decode.opcode\[0] _472_ _409_ _54_ vdd gnd OAI21X1
-X_1524_ rf_read_reg1_to_if[3] _906_ vdd gnd INVX1
-X_2309_ _646_ i_clk_sys_ext_bF$buf13 \u_cpu.bufreg.data\[10] vdd gnd DFFPOSX1
-X_2482_ _781_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[15] vdd gnd DFFPOSX1
-X_2062_ \u_cpu.bufreg.data\[19] _136_ vdd gnd INVX1
-X_1753_ _894_ _1071_ _1072_ vdd gnd NOR2X1
-X_1333_ \u_cpu.alu.add_cy_r\ _379_ vdd gnd INVX1
-X_2538_ _828_ i_clk_sys_ext_bF$buf5 \u_rf_if.stream_cnt\[4] vdd gnd DFFPOSX1
-X_2118_ _168_ _153_ _413__bF$buf3 _631_ vdd gnd MUX2X1
-X_2291_ i_clk_sys_ext_bF$buf4 _565_ vdd gnd INVX1
-X_1809_ \u_rf_if.rs2_stream_buf\[0] _1106_ vdd gnd INVX1
-X_1982_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[1] _81_ vdd gnd INVX1
-X_1562_ _940_ _941_ vdd gnd INVX1
-X_2347_ _681_ i_clk_sys_ext_bF$buf4 \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[2] vdd gnd DFFPOSX1
-X_1618_ _981_ _983_ _980_ _814_ vdd gnd OAI21X1
-X_1791_ \u_rf_if.issue_idx\[2] _1043_ _927_ _1093_ vdd gnd OAI21X1
-X_1371_ _342_ _343_ _341_ vdd gnd NOR2X1
-X_2576_ _579_ i_clk_sys_ext_bF$buf13 \u_cpu.ctrl.o_ibus_adr\[27] vdd gnd DFFPOSX1
-XFILL98850x3750 gnd vdd FILL
-X_2156_ _194_ _465_ _197_ vdd gnd NOR2X1
-X_1847_ _1138_ _419_ _362_ _361_ _1139_ vdd 
+X_1733_ rf_read_reg1_to_if[0] _1047_ vdd gnd INVX1
+X_1313_ _388_ _390_ _387_ vdd gnd NAND2X1
+X_2518_ _823_ i_clk_sys_ext_bF$buf8 \u_rf_if.stream_cnt\[4] vdd gnd DFFPOSX1
+X_2271_ _474_ _382_ _257_ _567_ vdd gnd OAI21X1
+X_1962_ _59_ _51_ _61_ _682_ vdd gnd AOI21X1
+X_1542_ _330_ _292_ _911_ vdd gnd NAND2X1
+X_2327_ _675_ i_clk_sys_ext_bF$buf0 \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[0] vdd gnd DFFPOSX1
+X_2080_ _139_ _140_ _426__bF$buf2 _643_ vdd gnd MUX2X1
+X_1771_ \u_rf_if.last_req_key\[7] _284_ i_rst_n_bF$buf1 _1068_ vdd gnd OAI21X1
+X_1351_ \u_cpu.decode.opcode\[0] _350_ _349_ vdd gnd NAND2X1
+X_2556_ _626_ i_clk_fast_bF$buf1 \u_mem_serial.shift_reg\[5] vdd gnd DFFPOSX1
+X_2136_ \u_cpu.bufreg2.i_bytecnt\[1] \u_cpu.state.i_ctrl_misalign\ _468_ _174_ vdd gnd AOI21X1
+X_1827_ _1108_ _543__bF$buf1 _1107_ _528_ _720_ vdd 
++ gnd
++ OAI22X1
+X_1407_ _316_ _296_ _298_ _295_ vdd gnd NAND3X1
+XFILL97950x3750 gnd vdd FILL
+X_1580_ _942_ _943__bF$buf2 _926_ _944_ _818_ vdd 
++ gnd
++ OAI22X1
+X_1160_ _537_ _532_ _849_ vdd gnd NAND2X1
+X_2365_ _704_ i_clk_sys_ext_bF$buf7 \u_cpu.bufreg2.i_op_b_sel\ vdd gnd DFFPOSX1
+X_1636_ \u_rf_if.read_buf0\[6] _984_ vdd gnd INVX1
+X_1216_ _483_ _482_ vdd gnd INVX1
+X_2174_ _178_ _205_ _206_ _207_ vdd gnd OAI21X1
+X_1865_ \u_cpu.ctrl.o_ibus_adr\[5] _1143_ vdd gnd INVX1
+X_1445_ _265_ _263_ _266_ _262_ vdd gnd NAND3X1
+X_1674_ \u_rf_if.read_buf0\[18] _943__bF$buf0 \u_rf_if.read_buf0\[20] _926_ _1008_ vdd 
++ gnd
++ OAI22X1
+X_1254_ _471_ _445_ _444_ vdd gnd NAND2X1
+X_2459_ _776_ i_clk_sys_ext_bF$buf4 \u_rf_if.read_buf0\[14] vdd gnd DFFPOSX1
+X_2039_ _508_ _117_ _118_ _119_ vdd gnd OAI21X1
+X_1483_ \u_rf_if.wen0_r\ \u_rf_if.rtrig0\ _862_ vdd gnd NAND2X1
+X_2268_ \u_cpu.ctrl.i_jump\ _350_ _873__bF$buf2 _256_ vdd gnd OAI21X1
+X_1959_ \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[2] _59_ vdd gnd INVX1
+X_1539_ \u_rf_if.stream_cnt\[4] _908_ _909_ vdd gnd NAND2X1
+X_1292_ \u_cpu.decode.co_ebreak\ _408_ vdd gnd INVX1
+X_2497_ _806_ i_clk_sys_ext_bF$buf6 \u_rf_if.write_wait\[0] vdd gnd DFFPOSX1
+X_2077_ \u_cpu.bufreg.data\[12] _139_ vdd gnd INVX1
+XFILL97650x90150 gnd vdd FILL
+XFILL97650x57750 gnd vdd FILL
+X_1768_ _292_ _284_ _1066_ _737_ vdd gnd AOI21X1
+X_1348_ _353_ _356_ _352_ vdd gnd NOR2X1
+X_1997_ _85_ _81_ _86_ vdd gnd NOR2X1
+X_1577_ \u_rf_if.read_buf0\[31] _942_ vdd gnd INVX1
+X_1157_ \u_mem_serial.state\[0] _535_ _554_ _534_ vdd gnd OAI21X1
+X_1386_ _317_ _320_ _316_ vdd gnd NOR2X1
+X_1195_ \u_mem_serial.shift_reg\[3] _502_ vdd gnd INVX1
+XFILL97950x10950 gnd vdd FILL
+X_2421_ _602_ i_clk_sys_ext_bF$buf11 \u_cpu.ctrl.o_ibus_adr\[26] vdd gnd DFFPOSX1
+X_2001_ _88_ _89_ vdd gnd INVX2
+X_1289_ _437_ _412_ _411_ vdd gnd AND2X2
+X_2230_ \u_cpu.ctrl.o_ibus_adr\[16] _241_ vdd gnd INVX1
+X_1921_ _870_ _32_ _529_ _33_ vdd gnd OAI21X1
+X_1501_ rf_wreg0_to_if[0] \u_cpu.immdec.gen_immdec_w_eq_1.imm11_7\[4] _878_ vdd gnd NOR2X1
+X_1730_ rf_read_reg0_to_if[2] _1045_ vdd gnd INVX1
+X_1310_ \u_cpu.alu.add_cy_r\ _391_ _390_ vdd gnd NAND2X1
+X_2515_ _820_ i_clk_sys_ext_bF$buf6 ren vdd gnd DFFPOSX1
+X_2324_ _672_ i_clk_sys_ext_bF$buf0 rf_read_reg1_to_if[1] vdd gnd DFFPOSX1
+X_2553_ _849_ i_clk_fast_bF$buf0 \u_mem_serial.state\[0] vdd gnd DFFPOSX1
+X_2133_ _171_ _504_ _543__bF$buf1 _621_ vdd gnd MUX2X1
+X_1824_ \u_mem_serial.shift_reg\[1] _1107_ vdd gnd INVX1
+X_1404_ _299_ _301_ _306_ _298_ vdd gnd AOI21X1
+X_2362_ _702_ i_clk_sys_ext_bF$buf7 \u_cpu.decode.opcode\[1] vdd gnd DFFPOSX1
+X_1633_ \u_rf_if.read_buf0\[5] _982_ vdd gnd INVX1
+X_1213_ _487_ _486_ _485_ vdd gnd NOR2X1
+X_2418_ _746_ i_clk_fast_bF$buf7 \u_rf_if.tx_state\[0] vdd gnd DFFPOSX1
+X_2171_ _461_ _203_ _463_ _204_ vdd gnd OAI21X1
+X_1862_ \u_mem_serial.shift_reg\[21] _1140_ vdd gnd INVX1
+X_1442_ \u_rf_if.tx_state\[1] \u_rf_if.tx_state\[0] \u_rf_if.tx_state\[2] _265_ vdd gnd OAI21X1
+X_2227_ _238_ _239_ _873__bF$buf4 _593_ vdd gnd MUX2X1
+X_1918_ \u_mem_serial.bit_count\[5] _30_ vdd gnd INVX1
+X_1671_ \u_rf_if.read_buf0\[19] _1006_ vdd gnd INVX1
+X_1251_ _449_ _448_ _447_ vdd gnd NOR2X1
+X_2456_ _774_ i_clk_sys_ext_bF$buf10 \u_rf_if.read_buf0\[16] vdd gnd DFFPOSX1
+X_2036_ rf_read_reg1_to_if[4] _116_ vdd gnd INVX1
+X_1727_ rf_read_reg0_to_if[1] _1043_ vdd gnd INVX1
+X_1307_ \u_rf_if.stream_active\ _393_ vdd gnd INVX8
+X_1480_ _700_ _842_ _859_ _860_ vdd gnd OAI21X1
+X_2265_ _352_ _254_ vdd gnd INVX1
+X_1956_ mem_ibus_ack_bF$buf5 _1041_ _43_ _57_ vdd gnd OAI21X1
+X_1536_ \u_rf_if.stream_cnt\[2] \u_rf_if.stream_cnt\[4] \u_rf_if.stream_cnt\[3] _906_ vdd gnd NAND3X1
+X_2494_ _551_ _550_ _549_ _548_ vdd gnd NAND3X1
+X_2074_ _136_ _137_ _426__bF$buf0 _646_ vdd gnd MUX2X1
+X_1765_ \u_rf_if.last_req_key\[4] _284_ i_rst_n_bF$buf1 _1065_ vdd gnd OAI21X1
+X_1345_ \u_cpu.ctrl.pc\ \u_cpu.ctrl.pc_plus_4_cy_r_w\ _355_ vdd gnd NAND2X1
+X_1994_ \u_mem_serial.shift_reg\[21] rf_read_reg1_to_if[2] mem_ibus_ack_bF$buf5 _84_ vdd gnd MUX2X1
+X_1574_ _940_ _820_ vdd gnd INVX1
+X_1154_ _1115_ o_mem_sck vdd gnd BUFX2
+X_2359_ _581_ i_clk_sys_ext_bF$buf3 \u_cpu.ctrl.o_ibus_adr\[6] vdd gnd DFFPOSX1
+X_1383_ \u_rf_if.last_req_key\[8] _344_ \u_rf_if.req_seen\ _319_ vdd gnd OAI21X1
+X_2168_ \u_cpu.bufreg.i_shamt\[0] _201_ vdd gnd INVX1
+X_1859_ mem_ibus_ack_bF$buf3 _481_ _1138_ vdd gnd NOR2X1
+X_1439_ _340_ _282_ _274_ _335_ _268_ vdd 
 + gnd
 + AOI22X1
-X_1427_ _288_ \u_rf_if.last_req_key\[0] _287_ vdd gnd AND2X2
-X_1180_ ren_bF$buf2 _527_ i_rst_n_bF$buf2 _526_ vdd gnd OAI21X1
-X_2385_ _711_ i_clk_sys_ext_bF$buf6 \u_cpu.decode.co_mem_word\ vdd gnd DFFPOSX1
-X_1656_ _1007_ _1008_ _785_ vdd gnd NOR2X1
-X_1236_ \u_cpu.branch_op\ _482_ _473_ vdd gnd NAND2X1
-X_2194_ _222_ _551__bF$buf0 _227_ vdd gnd NAND2X1
-X_1885_ mem_ibus_ack_bF$buf1 _498_ _14_ _711_ vdd gnd OAI21X1
-X_1465_ _810_ _836_ _808_ _837_ vdd gnd OAI21X1
-X_1694_ \u_rf_if.read_buf0\[28] _1032_ vdd gnd INVX1
-X_1274_ \u_cpu.decode.opcode\[0] _437_ vdd gnd INVX2
-X_2479_ _778_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[18] vdd gnd DFFPOSX1
-X_2059_ _133_ _134_ _413__bF$buf0 _657_ vdd gnd MUX2X1
-XFILL98550x68550 gnd vdd FILL
-X_2288_ \u_mem_serial.state\[0] _568_ vdd gnd INVX1
-X_1979_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[2] _79_ vdd gnd INVX1
-X_1559_ _935_ _937_ \u_rf_if.shift_rx\[0] _938_ vdd gnd OAI21X1
-X_2500_ _544_ _543_ vdd gnd INVX1
-X_2097_ \u_cpu.bufreg.data\[30] _152_ vdd gnd INVX1
-X_1788_ _921_ _1090_ _968_ _1091_ vdd gnd NAND3X1
-X_1368_ _345_ _344_ vdd gnd INVX1
-X_1597_ _908_ _915_ _966_ _819_ vdd gnd OAI21X1
-X_1177_ \u_rf_if.wen0_r\ _529_ vdd gnd INVX1
-X_2403_ _620_[2] i_clk_sys_ext_bF$buf2 \u_cpu.bufreg2.i_bytecnt\[1] vdd gnd DFFPOSX1
-X_2212_ _239_ _240_ _552__bF$buf4 _608_ vdd gnd MUX2X1
-X_1903_ \u_mem_serial.bit_count\[2] _22_ _24_ vdd gnd NOR2X1
-X_2441_ _753_ i_clk_sys_ext_bF$buf0 \u_rf_if.o_waddr\[0] vdd gnd DFFPOSX1
-X_2021_ _56_ _108_ _109_ vdd gnd NOR2X1
-X_1712_ _943_ _1043_ _1044_ vdd gnd NOR2X1
-X_2250_ _260_ _261_ _440__bF$buf3 _591_ vdd gnd MUX2X1
-X_1941_ mem_ibus_ack_bF$buf1 _375_ _51_ _692_ vdd gnd OAI21X1
-X_1521_ _501_ _903_ _904_ vdd gnd NOR2X1
-X_2306_ _643_ i_clk_sys_ext_bF$buf10 \u_cpu.bufreg.data\[7] vdd gnd DFFPOSX1
-X_1750_ \u_rf_if.o_waddr\[1] _892_ _446_ _1070_ vdd gnd OAI21X1
-X_1330_ \u_rf_if.read_buf0\[0] _382_ vdd gnd INVX1
-X_2535_ _826_ i_clk_sys_ext_bF$buf11 \u_rf_if.read_buf0\[31] vdd gnd DFFPOSX1
-X_2115_ _160_ _163_ _412_ _632_ vdd gnd AOI21X1
-X_1806_ _968_ _1102_ _1103_ _730_ vdd gnd OAI21X1
-X_2344_ _678_ i_clk_sys_ext_bF$buf4 rf_read_reg1_to_if[3] vdd gnd DFFPOSX1
-X_1615_ \u_rf_if.stream_cnt\[2] \u_rf_if.stream_cnt\[0] _981_ vdd gnd NOR2X1
-X_2573_ _629_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[4] vdd gnd DFFPOSX1
-X_2153_ \u_cpu.bufreg2.dhi\[4] _194_ vdd gnd INVX1
-XCLKBUF1_insert50 i_clk_fast i_clk_fast_bF$buf0 vdd gnd CLKBUF1
-X_1844_ _492_ _485_ \u_cpu.ctrl.i_jump\ _1136_ vdd gnd OAI21X1
-X_1424_ _337_ raddr[0] _290_ vdd gnd OR2X2
-X_2209_ _366_ _189_ _238_ _609_ vdd gnd AOI21X1
-X_2382_ _708_ i_clk_sys_ext_bF$buf6 \u_cpu.decode.opcode\[2] vdd gnd DFFPOSX1
-X_1653_ _1005_ _1006_ _786_ vdd gnd NOR2X1
-X_1233_ _477_ _476_ vdd gnd INVX2
-X_2438_ _606_ i_clk_sys_ext_bF$buf13 \u_cpu.ctrl.o_ibus_adr\[26] vdd gnd DFFPOSX1
-X_2018_ mem_ibus_ack_bF$buf7 \u_cpu.branch_op\ _105_ _106_ vdd gnd OAI21X1
-X_2191_ _147_ _224_ _567_ _225_ vdd gnd MUX2X1
-X_1709_ \u_rf_if.issue_idx\[1] _969_ _966_ _1042_ vdd gnd OAI21X1
-X_1882_ _551__bF$buf4 _12_ _9_ _13_ vdd gnd OAI21X1
-X_1462_ _809_ _810_ vdd gnd INVX1
-X_2247_ \u_cpu.ctrl.o_ibus_adr\[12] _260_ vdd gnd INVX1
-X_1938_ \u_mem_serial.shift_reg\[2] _551__bF$buf3 _505__bF$buf2 _50_ vdd gnd NAND3X1
-X_1518_ _445_ _901_ _832_ vdd gnd NOR2X1
-X_1691_ _1029_ _997_ _1030_ _772_ vdd gnd AOI21X1
-X_1271_ _476_ _468_ _440_ vdd gnd NOR2X1
-X_2476_ _777_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[19] vdd gnd DFFPOSX1
-X_2056_ \u_cpu.bufreg.data\[22] _133_ vdd gnd INVX1
-X_1747_ _890_ _891_ _446_ _1068_ vdd gnd OAI21X1
-X_1327_ \u_cpu.bufreg.i_right_shift_op\ \u_cpu.bne_or_bge\ _385_ vdd gnd NOR2X1
-X_2285_ \u_mem_serial.shift_reg\[1] _551__bF$buf3 _505__bF$buf4 _275_ vdd gnd NAND3X1
-X_1976_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[3] _77_ vdd gnd INVX1
-X_1556_ _294_ _283_ _935_ vdd gnd NAND2X1
-X_2094_ _479_ _420_ _468_ _150_ vdd gnd NAND3X1
-X_1785_ _1088_ _1087_ _736_ vdd gnd NOR2X1
-X_1365_ \u_cpu.ctrl.pc\ \u_cpu.ctrl.pc_plus_4_cy_r_w\ _347_ vdd gnd AND2X2
-X_1594_ _966_ _967_ vdd gnd INVX1
-X_1174_ _533_ _532_ _567_ _531_ vdd gnd MUX2X1
-X_2379_ _706_ i_clk_sys_ext_bF$buf6 \u_cpu.decode.opcode\[0] vdd gnd DFFPOSX1
-X_2188_ \u_mem_serial.shift_reg\[23] _222_ vdd gnd INVX1
-X_1879_ \u_cpu.bufreg.data\[7] _10_ vdd gnd INVX1
-X_1459_ _802_ _722_ _807_ vdd gnd NOR2X1
-X_2400_ _590_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[10] vdd gnd DFFPOSX1
-X_1688_ _1027_ _1028_ _773_ vdd gnd NOR2X1
-X_1268_ _520_ _522_ _442_ vdd gnd NOR2X1
-X_1900_ _21_ _22_ vdd gnd INVX1
-X_1497_ _884_ _880_ _879_ _885_ vdd gnd AOI21X1
-X_2303_ \u_cpu.state.cnt_r\[1] i_clk_sys_ext_bF$buf2 \u_cpu.state.cnt_r\[2] vdd gnd DFFPOSX1
-X_2532_ _822_ i_clk_sys_ext_bF$buf5 \u_rf_if.ready_pulse\ vdd gnd DFFPOSX1
-X_2112_ _163_ _164_ _165_ vdd gnd AND2X2
-X_1803_ _968_ _1100_ _1101_ _731_ vdd gnd OAI21X1
-X_2341_ _675_ i_clk_sys_ext_bF$buf10 rf_read_reg1_to_if[0] vdd gnd DFFPOSX1
-X_1612_ \u_rf_if.stream_cnt\[1] _933_ _979_ vdd gnd NOR2X1
-X_2570_ _853_ i_clk_fast_bF$buf4 \u_mem_serial.state\[0] vdd gnd DFFPOSX1
-X_2150_ _189_ _191_ _454_ _192_ vdd gnd NAND3X1
-XCLKBUF1_insert23 i_clk_sys_ext i_clk_sys_ext_bF$buf13 vdd gnd CLKBUF1
-XCLKBUF1_insert24 i_clk_sys_ext i_clk_sys_ext_bF$buf12 vdd gnd CLKBUF1
-XCLKBUF1_insert25 i_clk_sys_ext i_clk_sys_ext_bF$buf11 vdd gnd CLKBUF1
-XCLKBUF1_insert26 i_clk_sys_ext i_clk_sys_ext_bF$buf10 vdd gnd CLKBUF1
-XCLKBUF1_insert27 i_clk_sys_ext i_clk_sys_ext_bF$buf9 vdd gnd CLKBUF1
-XCLKBUF1_insert28 i_clk_sys_ext i_clk_sys_ext_bF$buf8 vdd gnd CLKBUF1
-XCLKBUF1_insert29 i_clk_sys_ext i_clk_sys_ext_bF$buf7 vdd gnd CLKBUF1
-X_1841_ \u_mem_serial.shift_reg\[27] _504_ _1134_ vdd gnd NOR2X1
-X_1421_ _294_ _293_ vdd gnd INVX1
-X_2206_ \u_mem_serial.shift_reg\[9] _552__bF$buf2 _237_ vdd gnd NAND2X1
-X_1650_ \u_rf_if.stream_active_bF$buf2\ _1002_ _1004_ _787_ vdd gnd AOI21X1
-X_1230_ \u_cpu.state.cnt_r\[0] \u_cpu.state.cnt_r\[1] _479_ vdd gnd OR2X2
-X_2435_ _832_ i_clk_sys_ext_bF$buf12 \u_rf_if.wdata0_next_phase\ vdd gnd DFFPOSX1
-X_2015_ mem_ibus_ack_bF$buf4 _20_ _103_ _670_ vdd gnd AOI21X1
-X_1706_ _942_ _819_ _1039_ _766_ vdd gnd OAI21X1
-X_2244_ _257_ _258_ _440__bF$buf2 _594_ vdd gnd MUX2X1
-X_1935_ mem_ibus_ack_bF$buf7 _499_ _48_ _695_ vdd gnd OAI21X1
-X_1515_ \u_rf_if.rcnt\[2] _899_ vdd gnd INVX1
-X_2473_ \u_cpu.o_wdata0\ i_clk_sys_ext_bF$buf0 \u_rf_if.wdata0_next\[0] vdd gnd DFFPOSX1
-X_2053_ _130_ _131_ _413__bF$buf1 _660_ vdd gnd MUX2X1
-X_1744_ _501_ _903_ _899_ _1066_ vdd gnd OAI21X1
-X_1324_ _390_ _397_ _388_ vdd gnd NAND2X1
-X_2529_ _818_ i_clk_sys_ext_bF$buf0 raddr[7] vdd gnd DFFPOSX1
-X_2109_ _161_ _160_ _162_ vdd gnd NAND2X1
-X_2282_ _477_ _372_ _273_ _571_ vdd gnd OAI21X1
-X_1973_ _437_ _74_ _53_ _75_ vdd gnd OAI21X1
-X_1553_ _383__bF$buf3 _932_ _933_ vdd gnd NOR2X1
-X_2338_ _672_ i_clk_sys_ext_bF$buf9 rf_wreg0_to_if[1] vdd gnd DFFPOSX1
-X_2091_ \u_cpu.bufreg.data\[2] _148_ vdd gnd INVX1
-X_1609_ _975_ _976_ _977_ _817_ vdd gnd AOI21X1
-X_1782_ _321_ _276_ _1086_ _737_ vdd gnd AOI21X1
-X_1362_ _384_ _360_ _351_ _350_ vdd gnd OAI21X1
-X_2567_ _577_ i_clk_sys_ext_bF$buf3 \u_cpu.ctrl.o_ibus_adr\[29] vdd gnd DFFPOSX1
-X_2147_ _187_ _465_ \u_cpu.bufreg2.cnt_next\[6] _190_ vdd gnd OAI21X1
-X_1838_ _543_ _563_ _1132_ _721_ vdd gnd OAI21X1
-X_1418_ \u_rf_if.launch_pending\ _297_ _296_ vdd gnd NOR2X1
-X_1591_ \u_rf_if.pending_read\ _964_ vdd gnd INVX1
-X_1171_ _535_ _551__bF$buf5 _534_ vdd gnd NAND2X1
-XFILL98250x32550 gnd vdd FILL
-X_2376_ _702_ i_clk_fast_bF$buf0 \u_mem_serial.bit_count\[2] vdd gnd DFFPOSX1
-X_1647_ _383__bF$buf3 \u_rf_if.read_buf0\[9] \u_rf_if.read_buf0\[8] _990__bF$buf3 _1003_ vdd 
-+ gnd
-+ OAI22X1
-X_1227_ _493_ _483_ _482_ vdd gnd NOR2X1
-X_2185_ \u_mem_serial.shift_reg\[14] _551__bF$buf1 _1118_ \u_cpu.ctrl.pc\ _220_ vdd 
+X_1192_ _506_ _508_ _505_ vdd gnd NOR2X1
+X_2397_ _590_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[15] vdd gnd DFFPOSX1
+X_1668_ \u_rf_if.read_buf0\[17] _393__bF$buf0 _1004_ vdd gnd NOR2X1
+X_1248_ \u_cpu.decode.opcode\[0] _450_ vdd gnd INVX2
+X_1897_ \u_mem_serial.shift_reg\[31] _14_ vdd gnd INVX1
+X_1477_ _855_ _856_ _261_ _857_ vdd gnd OAI21X1
+X_1286_ _415_ _481_ _414_ vdd gnd NAND2X1
+X_2512_ _614_ i_clk_sys_ext_bF$buf11 \u_cpu.bufreg.i_shamt\[1] vdd gnd DFFPOSX1
+XFILL97950x86550 gnd vdd FILL
+X_2321_ _669_ i_clk_sys_ext_bF$buf6 rf_wreg0_to_if[2] vdd gnd DFFPOSX1
+X_1189_ mem_ibus_ack_bF$buf7 _508_ vdd gnd INVX4
+X_2550_ _573_ i_clk_sys_ext_bF$buf5 \u_cpu.ctrl.o_ibus_adr\[30] vdd gnd DFFPOSX1
+X_2130_ \u_mem_serial.bit_count\[1] _548_ \u_mem_serial.bit_count\[5] _169_ vdd gnd OAI21X1
+X_1821_ _559_ _542__bF$buf2 _1105_ vdd gnd NOR2X1
+X_1401_ \u_rf_if.last_req_key\[2] _302_ _301_ vdd gnd NAND2X1
+X_1630_ \u_rf_if.read_buf0\[4] _980_ vdd gnd INVX1
+X_1210_ \u_cpu.bufreg2.i_bytecnt\[0] _488_ vdd gnd INVX1
+X_2415_ _745_ i_clk_fast_bF$buf5 \u_rf_if.tx_state\[1] vdd gnd DFFPOSX1
+X_2224_ \u_cpu.ctrl.o_ibus_adr\[19] _238_ vdd gnd INVX1
+X_1915_ _548_ _19_ _28_ vdd gnd NOR2X1
+XFILL97950x18150 gnd vdd FILL
+X_2453_ _771_ i_clk_sys_ext_bF$buf4 \u_rf_if.read_buf0\[19] vdd gnd DFFPOSX1
+X_2033_ _508_ _113_ _114_ vdd gnd NAND2X1
+X_1724_ \u_cpu.csr_imm\ _1041_ vdd gnd INVX1
+X_1304_ _493_ \u_cpu.decode.opcode\[2] _396_ vdd gnd AND2X2
+X_2509_ _813_ i_clk_sys_ext_bF$buf1 \u_rf_if.wdata0_next_phase\ vdd gnd DFFPOSX1
+X_2262_ _251_ _253_ _873__bF$buf1 _572_ vdd gnd MUX2X1
+X_1953_ \u_mem_serial.shift_reg\[15] rf_read_reg0_to_if[1] mem_ibus_ack_bF$buf5 _55_ vdd gnd MUX2X1
+X_1533_ \u_rf_if.stream_cnt\[2] _902_ _903_ vdd gnd NAND2X1
+X_2318_ _666_ i_clk_sys_ext_bF$buf0 \u_cpu.immdec.gen_immdec_w_eq_1.imm31\ vdd gnd DFFPOSX1
+X_2491_ _546_ _547_ _545_ vdd gnd NAND2X1
+X_2071_ \u_cpu.bufreg.data\[15] _136_ vdd gnd INVX1
+X_1762_ _300_ _285_ _1063_ _740_ vdd gnd AOI21X1
+X_1342_ _394_ _368_ _359_ _358_ vdd gnd OAI21X1
+X_2547_ _846_ i_clk_fast_bF$buf1 \u_mem_serial.shift_reg\[9] vdd gnd DFFPOSX1
+X_2127_ _168_ _532_ _624_ vdd gnd NAND2X1
+X_1818_ _542__bF$buf4 _1102_ _1099_ _1103_ vdd gnd OAI21X1
+X_1991_ _884_ _82_ _81_ _674_ vdd gnd MUX2X1
+X_1571_ _898_ _934_ _937_ _938_ vdd gnd OAI21X1
+X_1151_ _1118_ o_rf_sck vdd gnd BUFX2
+X_2356_ i_clk_sys_ext_bF$buf0 i_clk_fast_bF$buf2 \u_mem_serial.clk_sys_prev\ vdd gnd DFFPOSX1
+X_1627_ \u_rf_if.read_buf0\[2] _978_ vdd gnd INVX1
+X_1207_ _494_ _492_ \u_cpu.decode.opcode\[2] _491_ vdd gnd OAI21X1
+X_1380_ ren _324_ _323_ _322_ vdd gnd AOI21X1
+X_2165_ _462_ _463_ _187_ _199_ vdd gnd OAI21X1
+X_1856_ _1122_ _481_ _1136_ _713_ vdd gnd OAI21X1
+X_1436_ i_clk_fast_bF$buf7 _271_ _1118_ vdd gnd NOR2X1
+X_2394_ _735_ i_clk_fast_bF$buf5 \u_rf_if.last_req_key\[7] vdd gnd DFFPOSX1
+X_1665_ \u_rf_if.read_buf0\[16] _393__bF$buf0 _1002_ vdd gnd NOR2X1
+X_1245_ _456_ _454_ _463_ _453_ vdd gnd NAND3X1
+X_1894_ mem_ibus_ack_bF$buf7 _450_ _12_ _701_ vdd gnd OAI21X1
+X_1474_ _330_ _854_ vdd gnd INVX1
+X_2259_ \u_cpu.ctrl.o_ibus_adr\[31] _252_ vdd gnd INVX1
+X_1283_ _418_ _417_ vdd gnd INVX1
+X_2488_ \u_mem_serial.state\[1] _552_ _542_ vdd gnd NOR2X1
+X_2068_ _133_ _134_ _426__bF$buf0 _649_ vdd gnd MUX2X1
+X_1759_ _310_ _285_ i_rst_n_bF$buf0 _1062_ vdd gnd OAI21X1
+X_1339_ _367_ _366_ _362_ _361_ vdd gnd OAI21X1
+X_2297_ _648_ i_clk_sys_ext_bF$buf5 \u_cpu.bufreg.data\[16] vdd gnd DFFPOSX1
+X_1988_ _470_ _469_ _874_ _80_ vdd gnd OAI21X1
+X_1568_ \u_rf_if.stream_cnt\[0] _393__bF$buf3 _935_ vdd gnd NOR2X1
+X_1797_ \u_rf_if.rreg0_latched\[0] _960_ _933_ _1086_ vdd gnd NAND3X1
+X_1377_ \u_rf_if.last_req_key\[3] _325_ vdd gnd INVX1
+X_1186_ _511_ _510_ vdd gnd INVX1
+X_2412_ _830_ i_clk_sys_ext_bF$buf6 \u_rf_if.wen0_r\ vdd gnd DFFPOSX1
+X_2221_ _235_ _236_ _873__bF$buf4 _597_ vdd gnd MUX2X1
+X_1912_ _25_ _24_ _542__bF$buf0 _26_ vdd gnd OAI21X1
+X_2450_ _768_ i_clk_sys_ext_bF$buf4 \u_rf_if.read_buf0\[22] vdd gnd DFFPOSX1
+X_2030_ \u_cpu.branch_op\ _450_ _416_ _110_ _111_ vdd 
 + gnd
 + AOI22X1
-X_1876_ \u_mem_serial.shift_reg\[22] _7_ vdd gnd INVX1
-X_1456_ _1124_ _805_ vdd gnd INVX1
-X_1685_ \u_rf_if.stream_active_bF$buf0\ _1024_ _1026_ _774_ vdd gnd AOI21X1
-X_1265_ mem_ibus_ack_bF$buf0 _445_ _444_ vdd gnd NOR2X1
-XFILL98550x75750 gnd vdd FILL
-X_1494_ \u_rf_if.tx_state\[0] _327_ _809_ _882_ vdd gnd OAI21X1
-X_2279_ \u_cpu.ctrl.i_jump\ _341_ _440__bF$buf3 _272_ vdd gnd OAI21X1
-XBUFX2_insert0 _990_ _990__bF$buf4 vdd gnd BUFX2
-XBUFX2_insert1 _990_ _990__bF$buf3 vdd gnd BUFX2
-XBUFX2_insert2 _990_ _990__bF$buf2 vdd gnd BUFX2
-XBUFX2_insert3 _990_ _990__bF$buf1 vdd gnd BUFX2
-XBUFX2_insert4 _990_ _990__bF$buf0 vdd gnd BUFX2
-XBUFX2_insert5 ren ren_bF$buf3 vdd gnd BUFX2
-XBUFX2_insert6 ren ren_bF$buf2 vdd gnd BUFX2
-XBUFX2_insert7 ren ren_bF$buf1 vdd gnd BUFX2
-XBUFX2_insert8 ren ren_bF$buf0 vdd gnd BUFX2
-XBUFX2_insert9 _552_ _552__bF$buf4 vdd gnd BUFX2
-X_2088_ _41_ _1153_ _413__bF$buf4 _640_ vdd gnd MUX2X1
-X_1779_ \u_rf_if.last_req_key\[7] _704__bF$buf2 i_rst_n_bF$buf1 _1085_ vdd gnd OAI21X1
-X_1359_ _359_ _358_ _354_ _353_ vdd gnd OAI21X1
-X_2300_ _557_ _556_ vdd gnd INVX1
-X_1588_ \u_rf_if.stream_active_bF$buf1\ _962_ _954_ _823_ vdd gnd OAI21X1
-X_1168_ _552__bF$buf2 _538_ _537_ _851_ vdd gnd OAI21X1
-X_1800_ _968_ _1098_ _1099_ _732_ vdd gnd OAI21X1
-X_1397_ \u_rf_if.last_req_key\[9] _527_ _317_ vdd gnd NAND2X1
-X_2203_ _551__bF$buf0 _234_ _232_ _235_ vdd gnd OAI21X1
-XFILL99150x68550 gnd vdd FILL
-X_2432_ _604_ i_clk_sys_ext_bF$buf13 \u_cpu.ctrl.o_ibus_adr\[24] vdd gnd DFFPOSX1
-X_2012_ mem_ibus_ack_bF$buf3 \u_mem_serial.shift_reg\[7] _93_ rf_wreg0_to_if[0] _102_ vdd 
+XFILL97950x72150 gnd vdd FILL
+X_1721_ _1039_ _1038_ _757_ vdd gnd NOR2X1
+X_1301_ _401_ _410_ _399_ vdd gnd NAND2X1
+X_2506_ _611_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[14] vdd gnd DFFPOSX1
+X_1950_ _1045_ _53_ _51_ _686_ vdd gnd MUX2X1
+X_1530_ \u_rf_if.stream_cnt\[1] _900_ vdd gnd INVX1
+X_2315_ _664_ i_clk_sys_ext_bF$buf7 \u_cpu.immdec.gen_immdec_w_eq_1.imm7\ vdd gnd DFFPOSX1
+X_2544_ _844_ i_clk_fast_bF$buf5 \u_rf_if.launch_pending\ vdd gnd DFFPOSX1
+X_2124_ _542__bF$buf2 _533_ _167_ vdd gnd NAND2X1
+X_1815_ \u_cpu.bufreg.data\[4] _1100_ vdd gnd INVX1
+X_2353_ _695_ i_clk_fast_bF$buf3 \u_mem_serial.bit_count\[4] vdd gnd DFFPOSX1
+X_1624_ _943__bF$buf2 _976_ vdd gnd INVX1
+X_1204_ _496_ _495_ _494_ vdd gnd NOR2X1
+X_2409_ _597_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[21] vdd gnd DFFPOSX1
+X_2162_ _193_ _196_ _617_ vdd gnd NAND2X1
+X_1853_ _1132_ \u_cpu.bne_or_bge\ _1134_ vdd gnd OR2X2
+X_1433_ _273_ _440_ _1119_ _272_ vdd gnd OAI21X1
+X_2218_ \u_cpu.ctrl.o_ibus_adr\[22] _235_ vdd gnd INVX1
+X_2391_ _734_ i_clk_fast_bF$buf1 \u_rf_if.last_req_key\[8] vdd gnd DFFPOSX1
+X_1909_ _549_ _20_ _23_ vdd gnd NAND2X1
+X_1662_ _999_ _925__bF$buf2 _1000_ _777_ vdd gnd AOI21X1
+X_1242_ \u_cpu.bufreg2.dhi\[5] _457_ _456_ vdd gnd NAND2X1
+X_2447_ _765_ i_clk_sys_ext_bF$buf2 \u_rf_if.read_buf0\[25] vdd gnd DFFPOSX1
+X_2027_ \u_cpu.immdec.gen_immdec_w_eq_1.imm7\ _108_ vdd gnd INVX1
+X_1718_ _1035_ _1037_ _758_ vdd gnd NOR2X1
+X_1891_ _1121_ mem_ibus_ack_bF$buf7 _11_ _703_ vdd gnd AOI21X1
+X_1471_ _512_ \u_rf_if.tx_state\[3] _843_ vdd gnd OR2X2
+X_2256_ \u_cpu.ctrl.o_ibus_adr\[28] _250_ vdd gnd INVX1
+X_1947_ \u_mem_serial.shift_reg\[18] rf_read_reg0_to_if[4] mem_ibus_ack_bF$buf0 _52_ vdd gnd MUX2X1
+X_1527_ _894_ _508_ _897_ _824_ vdd gnd AOI21X1
+X_1280_ \u_cpu.bufreg2.i_op_b_sel\ _421_ _420_ vdd gnd NAND2X1
+X_2485_ \u_mem_serial.shift_reg\[8] _540_ vdd gnd INVX1
+X_2065_ \u_cpu.bufreg.data\[18] _133_ vdd gnd INVX1
+X_1756_ _1060_ _852_ _743_ vdd gnd AND2X2
+X_1336_ _393__bF$buf0 _392_ _376_ _364_ vdd gnd OAI21X1
+X_2294_ _645_ i_clk_sys_ext_bF$buf11 \u_cpu.bufreg.data\[13] vdd gnd DFFPOSX1
+X_1985_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[0] _78_ vdd gnd INVX1
+X_1565_ _896_ _932_ _821_ vdd gnd NAND2X1
+X_1794_ _932_ raddr[3] _939_ _1084_ vdd gnd AOI21X1
+X_1374_ _330_ \u_rf_if.last_req_key\[4] _328_ vdd gnd OR2X2
+X_2579_ _644_ i_clk_sys_ext_bF$buf11 \u_cpu.bufreg.data\[12] vdd gnd DFFPOSX1
+X_2159_ _190_ _463_ _194_ vdd gnd NOR2X1
+X_1183_ \u_rf_if.tx_state\[2] _514_ _513_ vdd gnd NOR2X1
+X_2388_ _835_ i_clk_fast_bF$buf7 _1119_ vdd gnd DFFPOSX1
+X_1659_ _997_ _998_ _778_ vdd gnd NOR2X1
+X_1239_ \u_cpu.bufreg2.dhi\[3] _460_ _459_ vdd gnd NOR2X1
+X_2197_ \u_mem_serial.shift_reg\[26] _543__bF$buf5 _222_ vdd gnd NOR2X1
+X_1888_ _505_ _10_ vdd gnd INVX1
+X_1468_ _717_ _805_ _282_ _834_ vdd gnd OAI21X1
+X_1697_ _393__bF$buf2 \u_rf_if.read_buf0\[27] \u_rf_if.read_buf0\[26] _943__bF$buf3 _1023_ vdd 
++ gnd
++ OAI22X1
+X_1277_ \u_cpu.decode.opcode\[1] _423_ vdd gnd INVX1
+XFILL97950x93750 gnd vdd FILL
+X_2503_ _809_ i_clk_sys_ext_bF$buf8 \u_rf_if.stream_cnt\[1] vdd gnd DFFPOSX1
+X_2312_ _661_ i_clk_sys_ext_bF$buf12 \u_cpu.immdec.gen_immdec_w_eq_1.imm11_7\[4] vdd gnd DFFPOSX1
+X_2541_ _623_ i_clk_fast_bF$buf2 \u_mem_serial.shift_reg\[31] vdd gnd DFFPOSX1
+X_2121_ _553_ _544_ \u_mem_serial.shift_reg\[15] _166_ vdd gnd OAI21X1
+X_1812_ _1097_ _1096_ _1092_ _724_ vdd gnd OAI21X1
+X_2350_ _577_ i_clk_sys_ext_bF$buf9 \u_cpu.ctrl.o_ibus_adr\[2] vdd gnd DFFPOSX1
+X_1621_ \u_rf_if.write_wait\[1] _444_ _974_ vdd gnd NAND2X1
+X_1201_ \u_cpu.state.init_done\ _497_ vdd gnd INVX1
+X_2406_ _741_ i_clk_fast_bF$buf5 \u_rf_if.last_req_key\[1] vdd gnd DFFPOSX1
+X_1850_ _496_ _495_ _1128_ _1129_ _1131_ vdd 
 + gnd
 + AOI22X1
-X_1703_ \u_rf_if.read_buf0\[31] _947__bF$buf0 \u_rf_if.read_buf0\[29] _990__bF$buf1 _1038_ vdd 
-+ gnd
-+ OAI22X1
-X_2241_ \u_cpu.ctrl.o_ibus_adr\[15] _257_ vdd gnd INVX1
-X_1932_ _45_ _46_ _47_ _697_ vdd gnd AOI21X1
-X_1512_ _895_ _896_ _897_ vdd gnd NOR2X1
-X_2470_ _775_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[21] vdd gnd DFFPOSX1
-X_2050_ \u_cpu.bufreg.data\[25] _130_ vdd gnd INVX1
-X_1741_ mem_ibus_ack_bF$buf7 _1063_ _1064_ _756_ vdd gnd AOI21X1
-X_1321_ _396_ _393_ _391_ vdd gnd NAND2X1
-X_2526_ _734_ i_clk_sys_ext_bF$buf5 raddr[2] vdd gnd DFFPOSX1
-X_2106_ _154_ _381_ _159_ vdd gnd NAND2X1
-X_1970_ _70_ _72_ _56_ _684_ vdd gnd MUX2X1
-X_1550_ _383__bF$buf4 _929_ _925_ _930_ vdd gnd OAI21X1
-X_2335_ _669_ i_clk_sys_ext_bF$buf10 rf_read_reg0_to_if[4] vdd gnd DFFPOSX1
-X_1606_ i_rf_miso _975_ vdd gnd INVX1
-X_2564_ _850_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[18] vdd gnd DFFPOSX1
-X_2144_ _476_ _186_ _187_ vdd gnd NOR2X1
-X_1835_ \u_cpu.bufreg2.i_bytecnt\[1] _486_ _1131_ vdd gnd NOR2X1
-X_1415_ \u_rf_if.last_req_key\[6] _300_ _299_ vdd gnd NAND2X1
-XBUFX2_insert80 mem_ibus_ack mem_ibus_ack_bF$buf7 vdd gnd BUFX2
-XBUFX2_insert81 mem_ibus_ack mem_ibus_ack_bF$buf6 vdd gnd BUFX2
-XBUFX2_insert82 mem_ibus_ack mem_ibus_ack_bF$buf5 vdd gnd BUFX2
-XBUFX2_insert83 mem_ibus_ack mem_ibus_ack_bF$buf4 vdd gnd BUFX2
-XBUFX2_insert84 mem_ibus_ack mem_ibus_ack_bF$buf3 vdd gnd BUFX2
-XBUFX2_insert85 mem_ibus_ack mem_ibus_ack_bF$buf2 vdd gnd BUFX2
-XBUFX2_insert86 mem_ibus_ack mem_ibus_ack_bF$buf1 vdd gnd BUFX2
-XBUFX2_insert87 mem_ibus_ack mem_ibus_ack_bF$buf0 vdd gnd BUFX2
-X_2373_ _584_ i_clk_sys_ext_bF$buf9 \u_cpu.ctrl.o_ibus_adr\[4] vdd gnd DFFPOSX1
-X_1644_ \u_rf_if.read_buf0\[9] _947__bF$buf3 \u_rf_if.read_buf0\[7] _990__bF$buf3 _1001_ vdd 
-+ gnd
-+ OAI22X1
-X_1224_ _486_ _485_ vdd gnd INVX1
-X_2429_ _856_ i_clk_fast_bF$buf1 \u_mem_serial.shift_reg\[10] vdd gnd DFFPOSX1
-X_2009_ rf_wreg0_to_if[1] _93_ _100_ vdd gnd NAND2X1
-X_2182_ \u_mem_serial.shift_reg\[12] _551__bF$buf3 _218_ vdd gnd NAND2X1
-X_1873_ _564_ _5_ vdd gnd INVX1
-X_1453_ _802_ _723_ _803_ vdd gnd NAND2X1
-X_2238_ _254_ _255_ _440__bF$buf4 _597_ vdd gnd MUX2X1
-X_1929_ \u_mem_serial.req_pending\ _45_ vdd gnd INVX1
-X_1509_ _311_ _893_ _894_ vdd gnd NOR2X1
-X_1682_ _383__bF$buf2 \u_rf_if.read_buf0\[22] \u_rf_if.read_buf0\[21] _990__bF$buf0 _1025_ vdd 
-+ gnd
-+ OAI22X1
-X_1262_ _473_ _448_ _453_ _447_ vdd gnd NAND3X1
-X_2467_ _773_ i_clk_sys_ext_bF$buf3 \u_rf_if.read_buf0\[23] vdd gnd DFFPOSX1
-X_2047_ _126_ _128_ _413__bF$buf1 _663_ vdd gnd MUX2X1
-X_1738_ mem_ibus_ack_bF$buf5 _1061_ _1062_ _757_ vdd gnd AOI21X1
-X_1318_ \u_cpu.branch_op\ \u_cpu.bufreg2.i_op_b_sel\ _395_ _394_ vdd gnd OAI21X1
-X_1491_ _843_ _878_ _879_ vdd gnd NAND2X1
-X_2276_ _347_ _343_ _270_ vdd gnd NOR2X1
-X_1967_ \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[0] _70_ vdd gnd INVX1
-X_1547_ _908_ _915_ _927_ _829_ vdd gnd OAI21X1
-X_2085_ _146_ _147_ _413__bF$buf4 _644_ vdd gnd MUX2X1
-X_1776_ _283_ _704__bF$buf0 _1083_ _740_ vdd gnd AOI21X1
-X_1356_ _383__bF$buf2 _382_ _366_ _356_ vdd gnd OAI21X1
-X_1585_ _383__bF$buf4 \u_rf_if.stream_cnt\[0] _960_ _961_ vdd gnd OAI21X1
-X_1165_ _552__bF$buf0 _540_ _539_ _852_ vdd gnd OAI21X1
-X_1394_ ren_bF$buf2 _321_ _320_ vdd gnd NAND2X1
-X_2179_ _214_ _216_ _617_ vdd gnd NAND2X1
-X_1679_ _383__bF$buf0 \u_rf_if.read_buf0\[21] \u_rf_if.read_buf0\[20] _990__bF$buf4 _1023_ vdd 
-+ gnd
-+ OAI22X1
-X_1259_ \u_cpu.decode.co_mem_word\ _499_ _450_ vdd gnd NAND2X1
-X_2200_ _121_ _551__bF$buf0 _232_ vdd gnd NAND2X1
-X_1488_ _313_ _525_ _288_ _807_ _876_ vdd 
+X_1430_ _277_ _275_ _836_ vdd gnd NOR2X1
+X_2215_ _232_ _233_ _873__bF$buf1 _600_ vdd gnd MUX2X1
+XFILL97950x25350 gnd vdd FILL
+X_1906_ _550_ _16_ _21_ vdd gnd NOR2X1
+X_2444_ _762_ i_clk_sys_ext_bF$buf2 \u_rf_if.read_buf0\[28] vdd gnd DFFPOSX1
+X_2024_ mem_ibus_ack_bF$buf3 \u_mem_serial.shift_reg\[7] _47_ \u_cpu.immdec.gen_immdec_w_eq_1.imm7\ _106_ vdd 
 + gnd
 + AOI22X1
-X_1700_ \u_rf_if.read_buf0\[30] _947__bF$buf0 \u_rf_if.read_buf0\[28] _990__bF$buf1 _1036_ vdd 
+X_1715_ _1032_ _1034_ _1035_ vdd gnd NOR2X1
+X_2253_ _227_ _248_ _873__bF$buf5 _576_ vdd gnd MUX2X1
+X_1944_ \u_cpu.decode.opcode\[2] \u_cpu.decode.opcode\[1] _449_ _49_ vdd gnd OAI21X1
+X_1524_ _893_ _895_ _896_ vdd gnd NAND2X1
+X_2309_ _658_ i_clk_sys_ext_bF$buf3 \u_cpu.bufreg.data\[26] vdd gnd DFFPOSX1
+X_2482_ _540_ _543__bF$buf2 _539_ _850_ vdd gnd OAI21X1
+X_2062_ _130_ _131_ _426__bF$buf2 _652_ vdd gnd MUX2X1
+X_1753_ i_rst_n_bF$buf1 _343_ _287_ _1059_ vdd gnd NAND3X1
+X_1333_ _494_ _367_ vdd gnd INVX1
+X_2538_ _837_ i_clk_fast_bF$buf7 \u_rf_if.shift_rx\[0] vdd gnd DFFPOSX1
+X_2118_ _490_ _163_ _161_ _164_ vdd gnd AOI21X1
+X_2291_ \u_mem_serial.bit_count\[2] _550_ vdd gnd INVX1
+X_1809_ _1094_ \u_rf_if.i_stream_rs2_en\ _947_ _1095_ vdd gnd OAI21X1
+X_1982_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[1] _76_ vdd gnd INVX1
+X_1562_ _917_ \u_rf_if.i_stream_rs2_en\ _930_ vdd gnd NAND2X1
+X_2347_ _576_ i_clk_sys_ext_bF$buf9 \u_cpu.ctrl.o_ibus_adr\[1] vdd gnd DFFPOSX1
+X_1618_ _972_ _969_ _970_ _808_ vdd gnd AOI21X1
+X_1791_ \u_rf_if.issue_idx\[2] _932_ _1081_ _1082_ vdd gnd OAI21X1
+X_1371_ _344_ rf_wreg0_to_if[0] _331_ vdd gnd AND2X2
+X_2576_ _643_ i_clk_sys_ext_bF$buf11 \u_cpu.bufreg.data\[11] vdd gnd DFFPOSX1
+X_2156_ _460_ _191_ vdd gnd INVX1
+X_1847_ _387_ _371_ _390_ _1128_ vdd gnd OAI21X1
+X_1427_ _280_ _278_ _277_ _276_ vdd gnd AOI21X1
+X_1180_ ren _517_ i_rst_n_bF$buf2 _516_ vdd gnd OAI21X1
+X_2385_ _722_ i_clk_fast_bF$buf4 \u_mem_serial.shift_reg\[30] vdd gnd DFFPOSX1
+X_1656_ _995_ _996_ _779_ vdd gnd NOR2X1
+X_1236_ \u_cpu.bufreg.i_shamt\[2] _462_ vdd gnd INVX1
+X_2194_ _542__bF$buf3 _219_ _217_ _220_ vdd gnd OAI21X1
+X_1885_ mem_ibus_ack_bF$buf1 _495_ _8_ _706_ vdd gnd OAI21X1
+X_1465_ _342_ _269_ _804_ vdd gnd AND2X2
+X_1694_ _393__bF$buf2 \u_rf_if.read_buf0\[26] \u_rf_if.read_buf0\[25] _943__bF$buf3 _1021_ vdd 
 + gnd
 + OAI22X1
-X_1297_ _500_ _469_ _415_ vdd gnd NOR2X1
-X_2523_ _570_ i_clk_sys_ext_bF$buf1 \u_cpu.alu.cmp_r\ vdd gnd DFFPOSX1
-X_2103_ \u_cpu.decode.opcode\[0] _410_ _155_ _156_ vdd gnd OAI21X1
-X_2332_ _666_ i_clk_sys_ext_bF$buf4 rf_read_reg1_to_if[4] vdd gnd DFFPOSX1
-X_1603_ _908_ _970_ _927_ _973_ vdd gnd OAI21X1
-X_2561_ _574_ i_clk_sys_ext_bF$buf2 \u_cpu.ctrl.pc_plus_offset_cy_r_w\ vdd gnd DFFPOSX1
-X_2141_ \u_cpu.bufreg2.i_bytecnt\[1] \u_cpu.state.i_ctrl_misalign\ _471_ _184_ vdd gnd AOI21X1
-X_1832_ _1129_ _488_ _641_[0] vdd gnd NOR2X1
-X_1412_ _332_ _331_ _303_ _302_ vdd gnd AOI21X1
-XBUFX2_insert51 \u_rf_if.stream_active\ \u_rf_if.stream_active_bF$buf3\ vdd gnd BUFX2
-XBUFX2_insert52 \u_rf_if.stream_active\ \u_rf_if.stream_active_bF$buf2\ vdd gnd BUFX2
-XBUFX2_insert53 \u_rf_if.stream_active\ \u_rf_if.stream_active_bF$buf1\ vdd gnd BUFX2
-XBUFX2_insert54 \u_rf_if.stream_active\ \u_rf_if.stream_active_bF$buf0\ vdd gnd BUFX2
-XBUFX2_insert55 _704_ _704__bF$buf3 vdd gnd BUFX2
-XBUFX2_insert56 _704_ _704__bF$buf2 vdd gnd BUFX2
-XBUFX2_insert57 _704_ _704__bF$buf1 vdd gnd BUFX2
-XBUFX2_insert58 _704_ _704__bF$buf0 vdd gnd BUFX2
-XBUFX2_insert59 _551_ _551__bF$buf5 vdd gnd BUFX2
-X_2370_ _699_ i_clk_fast_bF$buf0 \u_mem_serial.bit_count\[5] vdd gnd DFFPOSX1
-X_1641_ \u_rf_if.read_buf0\[8] _947__bF$buf1 \u_rf_if.read_buf0\[6] _990__bF$buf3 _999_ vdd 
+X_1274_ _430_ _427_ _426_ vdd gnd NAND2X1
+X_2479_ _538_ _545_ _542__bF$buf0 _537_ vdd gnd OAI21X1
+X_2059_ \u_cpu.bufreg.data\[21] _130_ vdd gnd INVX1
+X_2288_ _562_ _554_ _553_ vdd gnd NAND2X1
+X_1979_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[2] _74_ vdd gnd INVX1
+X_1559_ _927_ _928_ vdd gnd INVX1
+X_2500_ _564_ i_clk_fast_bF$buf0 \u_mem_serial.bit_count\[6] vdd gnd DFFPOSX1
+X_2097_ _145_ _432_ _147_ _633_ vdd gnd MUX2X1
+X_1788_ _969_ _900_ _899_ _1079_ vdd gnd OAI21X1
+X_1368_ _335_ _334_ vdd gnd INVX1
+X_1597_ mem_ibus_ack_bF$buf1 _957_ _444_ _814_ vdd gnd OAI21X1
+X_1177_ \u_rf_if.rtrig1\ _519_ vdd gnd INVX1
+X_2403_ _593_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[18] vdd gnd DFFPOSX1
+X_2212_ \u_cpu.ctrl.o_ibus_adr\[25] _232_ vdd gnd INVX1
+X_1903_ _15_ _529_ _18_ _698_ vdd gnd OAI21X1
+XFILL97950x46950 gnd vdd FILL
+X_2441_ _607_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[25] vdd gnd DFFPOSX1
+X_2021_ _508_ _526_ _103_ _104_ vdd gnd OAI21X1
+X_1712_ \u_rf_if.issue_idx\[2] _1032_ vdd gnd INVX1
+X_2250_ _1101_ _522_ _873__bF$buf3 _578_ vdd gnd MUX2X1
+X_1941_ mem_ibus_ack_bF$buf0 _385_ _46_ _688_ vdd gnd OAI21X1
+X_1521_ \u_rf_if.write_wait\[0] \u_rf_if.write_wait\[1] _893_ vdd gnd NOR2X1
+X_2306_ _655_ i_clk_sys_ext_bF$buf3 \u_cpu.bufreg.data\[23] vdd gnd DFFPOSX1
+X_1750_ _281_ _274_ _1057_ _746_ vdd gnd AOI21X1
+X_1330_ _371_ _387_ _370_ vdd gnd OR2X2
+X_2535_ _567_ i_clk_sys_ext_bF$buf10 \u_cpu.alu.add_cy_r\ vdd gnd DFFPOSX1
+X_2115_ _162_ _145_ _147_ _630_ vdd gnd MUX2X1
+X_1806_ \u_rf_if.rs2_stream_buf\[1] _935_ _1092_ vdd gnd NAND2X1
+X_2344_ _689_ i_clk_sys_ext_bF$buf7 \u_cpu.decode.co_ebreak\ vdd gnd DFFPOSX1
+X_1615_ _903_ \u_rf_if.stream_active\ _908_ _970_ vdd gnd AOI21X1
+X_2573_ _641_ i_clk_sys_ext_bF$buf13 \u_cpu.bufreg.data\[9] vdd gnd DFFPOSX1
+X_2153_ _187_ _182_ _188_ _189_ vdd gnd OAI21X1
+XCLKBUF1_insert50 i_clk_fast i_clk_fast_bF$buf6 vdd gnd CLKBUF1
+XCLKBUF1_insert51 i_clk_fast i_clk_fast_bF$buf5 vdd gnd CLKBUF1
+XCLKBUF1_insert52 i_clk_fast i_clk_fast_bF$buf4 vdd gnd CLKBUF1
+XCLKBUF1_insert53 i_clk_fast i_clk_fast_bF$buf3 vdd gnd CLKBUF1
+XCLKBUF1_insert54 i_clk_fast i_clk_fast_bF$buf2 vdd gnd CLKBUF1
+XCLKBUF1_insert55 i_clk_fast i_clk_fast_bF$buf1 vdd gnd CLKBUF1
+XCLKBUF1_insert56 i_clk_fast i_clk_fast_bF$buf0 vdd gnd CLKBUF1
+X_1844_ _1124_ _433_ _1125_ vdd gnd NAND2X1
+X_1424_ _280_ i_rf_miso _279_ vdd gnd OR2X2
+X_2209_ \u_cpu.ctrl.o_ibus_adr\[26] _230_ vdd gnd INVX1
+X_2382_ _615_[1] i_clk_sys_ext_bF$buf13 \u_cpu.bufreg2.i_bytecnt\[0] vdd gnd DFFPOSX1
+X_1653_ \u_rf_if.stream_active\ _992_ _994_ _780_ vdd gnd AOI21X1
+X_1233_ _496_ _480_ _466_ _465_ vdd gnd OAI21X1
+X_2438_ _758_ i_clk_sys_ext_bF$buf1 \u_rf_if.issue_idx\[2] vdd gnd DFFPOSX1
+X_2018_ _508_ _415_ _101_ vdd gnd NAND2X1
+X_2191_ _117_ _542__bF$buf3 _217_ vdd gnd NAND2X1
+X_1709_ _914_ _1029_ _933_ _1030_ vdd gnd OAI21X1
+X_1882_ _542__bF$buf4 _6_ _3_ _7_ vdd gnd OAI21X1
+X_1462_ \u_rf_if.wdata0_r\[0] _801_ vdd gnd INVX1
+X_2247_ _5_ _38_ _873__bF$buf3 _581_ vdd gnd MUX2X1
+X_1938_ _44_ _45_ vdd gnd INVX1
+X_1518_ \u_rf_if.i_stream_rs2_en\ _890_ _891_ vdd gnd NAND2X1
+X_1691_ _393__bF$buf1 \u_rf_if.read_buf0\[25] \u_rf_if.read_buf0\[24] _943__bF$buf3 _1019_ vdd 
 + gnd
 + OAI22X1
-X_1221_ _490_ _489_ _488_ vdd gnd NOR2X1
-X_2426_ _750_ i_clk_sys_ext_bF$buf5 \u_rf_if.write_wait\[0] vdd gnd DFFPOSX1
-X_2006_ rf_wreg0_to_if[2] _93_ _98_ vdd gnd NAND2X1
-X_1870_ _542_ _562_ _2_ _714_ vdd gnd OAI21X1
-X_1450_ \u_rf_if.tx_state\[3] _522_ \u_rf_if.tx_state\[4] _801_ vdd gnd OAI21X1
-X_2235_ \u_cpu.ctrl.o_ibus_adr\[18] _254_ vdd gnd INVX1
-X_1926_ _41_ _42_ _567_ _43_ vdd gnd MUX2X1
-X_1506_ \u_rf_if.wen0_r\ \u_rf_if.rtrig0\ _891_ vdd gnd NAND2X1
-X_2464_ _770_ i_clk_sys_ext_bF$buf11 \u_rf_if.read_buf0\[26] vdd gnd DFFPOSX1
-X_2044_ \u_cpu.bufreg.data\[29] _127_ vdd gnd INVX1
-X_1735_ mem_ibus_ack_bF$buf0 _1059_ _1060_ _758_ vdd gnd AOI21X1
-X_1315_ _400_ _398_ _411_ _422_ _397_ vdd 
+X_1271_ _468_ _429_ vdd gnd INVX1
+X_2476_ _789_ i_clk_sys_ext_bF$buf2 \u_rf_if.read_buf0\[1] vdd gnd DFFPOSX1
+X_2056_ _127_ _128_ _426__bF$buf4 _655_ vdd gnd MUX2X1
+X_1747_ _1055_ _866_ _1056_ vdd gnd NOR2X1
+X_1327_ _374_ _373_ vdd gnd INVX1
+X_2285_ \u_mem_serial.clk_sys_prev\ _557_ _556_ vdd gnd NOR2X1
+X_1976_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[3] _72_ vdd gnd INVX1
+X_1556_ \u_rf_if.stream_active\ _924_ _925_ vdd gnd NOR2X1
+X_2094_ \u_cpu.state.i_ctrl_misalign\ _145_ vdd gnd INVX1
+X_1785_ \u_rf_if.stream_cnt\[2] \u_rf_if.stream_cnt\[1] _1076_ _1077_ vdd gnd AOI21X1
+X_1365_ _338_ _339_ _337_ vdd gnd NOR2X1
+X_1594_ \u_rf_if.rcnt\[1] _955_ vdd gnd INVX1
+X_1174_ _523_ _522_ _559_ _521_ vdd gnd MUX2X1
+X_2379_ _584_ i_clk_sys_ext_bF$buf3 \u_cpu.ctrl.o_ibus_adr\[9] vdd gnd DFFPOSX1
+X_2188_ _542__bF$buf3 _214_ _212_ _215_ vdd gnd OAI21X1
+X_1879_ \u_cpu.bufreg.data\[7] _4_ vdd gnd INVX1
+X_1459_ _796_ _797_ _791_ _798_ vdd gnd OAI21X1
+X_2400_ _738_ i_clk_fast_bF$buf1 \u_rf_if.last_req_key\[4] vdd gnd DFFPOSX1
+X_1688_ _393__bF$buf1 \u_rf_if.read_buf0\[24] \u_rf_if.read_buf0\[23] _943__bF$buf3 _1017_ vdd 
++ gnd
++ OAI22X1
+X_1268_ \u_cpu.bufreg.data\[0] _432_ vdd gnd INVX1
+X_1900_ \u_mem_serial.bit_count\[0] \u_mem_serial.bit_count\[1] _16_ vdd gnd NOR2X1
+X_1497_ \u_cpu.decode.opcode\[0] _386_ _874_ vdd gnd NOR2X1
+X_2303_ _696_ i_clk_fast_bF$buf0 \u_mem_serial.bit_count\[3] vdd gnd DFFPOSX1
+XFILL97650x79350 gnd vdd FILL
+X_2532_ _621_ i_clk_fast_bF$buf2 \u_mem_serial.shift_reg\[0] vdd gnd DFFPOSX1
+X_2112_ _153_ _158_ _490_ _160_ vdd gnd AOI21X1
+X_1803_ \u_rf_if.rreg0_latched\[2] _960_ _933_ _1090_ vdd gnd NAND3X1
+X_2341_ _687_ i_clk_sys_ext_bF$buf9 rf_read_reg0_to_if[3] vdd gnd DFFPOSX1
+X_1612_ \u_rf_if.stream_active\ \u_rf_if.stream_cnt\[0] \u_rf_if.stream_cnt\[1] _968_ vdd gnd AOI21X1
+X_2570_ _638_ i_clk_sys_ext_bF$buf3 \u_cpu.bufreg.data\[6] vdd gnd DFFPOSX1
+X_2150_ _457_ _185_ _463_ _186_ vdd gnd OAI21X1
+XFILL97950x32550 gnd vdd FILL
+X_1841_ \u_cpu.ctrl.i_jump\ _1122_ vdd gnd INVX1
+X_1421_ \u_rf_if.tx_state\[0] _282_ vdd gnd INVX2
+X_2206_ _144_ _227_ _559_ _228_ vdd gnd MUX2X1
+X_1650_ _393__bF$buf4 \u_rf_if.read_buf0\[10] \u_rf_if.read_buf0\[9] _943__bF$buf2 _993_ vdd 
++ gnd
++ OAI22X1
+X_1230_ \u_cpu.decode.co_mem_word\ _469_ _468_ vdd gnd NOR2X1
+X_2435_ _829_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[28] vdd gnd DFFPOSX1
+X_2015_ mem_ibus_ack_bF$buf6 \u_cpu.immdec.gen_immdec_w_eq_1.imm31\ _99_ vdd gnd NOR2X1
+X_1706_ _920_ _821_ _1027_ _760_ vdd gnd OAI21X1
+X_2244_ _247_ _218_ _873__bF$buf2 _584_ vdd gnd MUX2X1
+X_1935_ \u_mem_serial.shift_reg\[14] mem_ibus_ack_bF$buf5 _43_ vdd gnd NAND2X1
+X_1515_ \u_rf_if.read_buf1\[0] _888_ vdd gnd INVX1
+X_2473_ _821_ i_clk_sys_ext_bF$buf6 \u_rf_if.prefetch_active\ vdd gnd DFFPOSX1
+X_2053_ \u_cpu.bufreg.data\[24] _127_ vdd gnd INVX1
+X_1744_ \u_rf_if.o_waddr\[1] _863_ _444_ _1054_ vdd gnd OAI21X1
+X_1324_ _377_ _376_ vdd gnd INVX1
+X_2529_ _831_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[27] vdd gnd DFFPOSX1
+X_2109_ _154_ _155_ _157_ vdd gnd NAND2X1
+X_2282_ i_rst_n_bF$buf2 \u_cpu.state.ibus_cyc\ _559_ vdd gnd NAND2X1
+X_1973_ _450_ _69_ _48_ _70_ vdd gnd OAI21X1
+X_1553_ _921_ _915_ _922_ vdd gnd AND2X2
+X_2338_ _685_ i_clk_sys_ext_bF$buf0 rf_read_reg0_to_if[1] vdd gnd DFFPOSX1
+X_2091_ _1100_ _523_ _426__bF$buf1 _635_ vdd gnd MUX2X1
+X_1609_ _964_ _965_ _966_ _811_ vdd gnd AOI21X1
+X_1782_ raddr[0] _933_ _1027_ _1075_ vdd gnd OAI21X1
+X_1362_ ren raddr[7] _342_ _341_ _340_ vdd 
 + gnd
 + AOI22X1
-X_2273_ \u_mem_serial.bit_count\[6] _38_ _269_ vdd gnd NAND2X1
-X_1964_ mem_ibus_ack_bF$buf4 _64_ _15_ _68_ vdd gnd OAI21X1
-X_1544_ _924_ _925_ vdd gnd INVX1
-X_2329_ _663_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.data\[27] vdd gnd DFFPOSX1
-X_2082_ \u_cpu.bufreg.data\[9] _146_ vdd gnd INVX1
-X_1773_ \u_rf_if.last_req_key\[4] _704__bF$buf3 i_rst_n_bF$buf0 _1082_ vdd gnd OAI21X1
-X_1353_ _497_ _359_ vdd gnd INVX1
-X_2558_ _842_ i_clk_fast_bF$buf5 \u_mem_serial.shift_reg\[6] vdd gnd DFFPOSX1
-X_2138_ _505__bF$buf4 _180_ _181_ _624_ vdd gnd AOI21X1
-X_1829_ \u_mem_serial.shift_reg\[1] _552__bF$buf0 _1128_ vdd gnd NAND2X1
-X_1409_ _306_ _312_ _305_ vdd gnd NOR2X1
-X_1582_ \u_rf_if.i_stream_rs2_en\ _956_ _958_ vdd gnd NAND2X1
-X_1162_ _543_ _563_ _541_ _853_ vdd gnd OAI21X1
-X_2367_ _697_ i_clk_fast_bF$buf1 \u_mem_serial.req_pending\ vdd gnd DFFPOSX1
-X_1638_ _947__bF$buf1 _997_ vdd gnd INVX2
-X_1218_ \u_cpu.bufreg2.i_bytecnt\[0] _491_ vdd gnd INVX1
-X_1391_ ren_bF$buf3 \u_rf_if.o_waddr\[1] _324_ _323_ vdd gnd OAI21X1
-X_2176_ _463_ _213_ _465_ _214_ vdd gnd OAI21X1
-X_1867_ _551__bF$buf4 _1125_ _1152_ _1_ vdd gnd OAI21X1
-X_1447_ i_rst_n_bF$buf2 _799_ vdd gnd INVX1
-X_1676_ _383__bF$buf0 \u_rf_if.read_buf0\[20] \u_rf_if.read_buf0\[19] _990__bF$buf4 _1021_ vdd 
+X_2567_ _636_ i_clk_sys_ext_bF$buf3 \u_cpu.bufreg.data\[4] vdd gnd DFFPOSX1
+X_2147_ _178_ _183_ _181_ _619_ vdd gnd OAI21X1
+X_1838_ _443_ _1114_ _715_ vdd gnd OR2X2
+X_1418_ _285_ _284_ vdd gnd INVX4
+X_1591_ \u_rf_if.ready_pulse\ _953_ vdd gnd INVX1
+X_1171_ _525_ _542__bF$buf1 _524_ vdd gnd NAND2X1
+X_2376_ _713_ i_clk_sys_ext_bF$buf5 \u_cpu.ctrl.i_jump\ vdd gnd DFFPOSX1
+X_1647_ \u_rf_if.read_buf0\[8] _943__bF$buf2 \u_rf_if.read_buf0\[10] _926_ _991_ vdd 
 + gnd
 + OAI22X1
-X_1256_ _499_ _454_ _471_ _453_ vdd gnd OAI21X1
-X_1485_ \u_cpu.o_wdata0\ _867_ _873_ vdd gnd AND2X2
-X_1294_ \u_cpu.bufreg.data\[0] _418_ vdd gnd INVX1
-X_2499_ _736_ i_clk_sys_ext_bF$buf0 raddr[0] vdd gnd DFFPOSX1
-X_2079_ _143_ _144_ _413__bF$buf2 _647_ vdd gnd MUX2X1
-X_1999_ _518_ _91_ _92_ vdd gnd NAND2X1
-X_1579_ _945_ \u_rf_if.i_stream_rs2_en\ _955_ vdd gnd NAND2X1
-X_1159_ _1120_ o_mem_sck vdd gnd BUFX2
-X_2520_ _814_ i_clk_sys_ext_bF$buf5 \u_rf_if.stream_cnt\[2] vdd gnd DFFPOSX1
-X_2100_ _152_ _127_ _413__bF$buf0 _634_ vdd gnd MUX2X1
-X_1388_ _327_ \u_rf_if.last_req_key\[3] _326_ vdd gnd AND2X2
-X_1600_ \u_rf_if.issue_idx\[4] _910_ _914_ _970_ vdd gnd NAND3X1
-X_1197_ \u_mem_serial.shift_reg\[2] _510_ vdd gnd INVX1
-XFILL99150x75750 gnd vdd FILL
-XBUFX2_insert20 _505_ _505__bF$buf2 vdd gnd BUFX2
-XBUFX2_insert21 _505_ _505__bF$buf1 vdd gnd BUFX2
-XBUFX2_insert22 _505_ _505__bF$buf0 vdd gnd BUFX2
-XFILL98850x57750 gnd vdd FILL
-X_2423_ _746_ i_clk_fast_bF$buf7 \u_rf_if.tx_state\[3] vdd gnd DFFPOSX1
-X_2003_ rf_wreg0_to_if[3] _93_ _96_ vdd gnd NAND2X1
-X_2232_ _251_ _252_ _440__bF$buf4 _600_ vdd gnd MUX2X1
-X_1923_ _1151_ _551__bF$buf4 _40_ vdd gnd NAND2X1
-X_1503_ \u_rf_if.write_wait\[0] \u_rf_if.write_wait\[1] _889_ vdd gnd NAND2X1
-X_2461_ _767_ i_clk_sys_ext_bF$buf11 \u_rf_if.read_buf0\[29] vdd gnd DFFPOSX1
-X_2041_ mem_ibus_ack_bF$buf3 \u_mem_serial.shift_reg\[11] _91_ _94_ _125_ vdd 
+X_1227_ _497_ _472_ _478_ _471_ vdd gnd OAI21X1
+X_2185_ _1_ _542__bF$buf3 _212_ vdd gnd NAND2X1
+X_1876_ \u_mem_serial.shift_reg\[23] _1_ vdd gnd INVX1
+X_1456_ _793_ _794_ _795_ vdd gnd NAND2X1
+X_1685_ \u_rf_if.read_buf0\[22] _943__bF$buf3 \u_rf_if.read_buf0\[24] _926_ _1015_ vdd 
++ gnd
++ OAI22X1
+X_1265_ _488_ _489_ _435_ vdd gnd NAND2X1
+XFILL97350x90150 gnd vdd FILL
+XFILL97350x57750 gnd vdd FILL
+X_1494_ \u_mem_serial.shift_reg\[27] _543__bF$buf5 _872_ vdd gnd NOR2X1
+X_2279_ \u_mem_serial.state\[1] _562_ vdd gnd INVX1
+XBUFX2_insert0 _873_ _873__bF$buf5 vdd gnd BUFX2
+XBUFX2_insert1 _873_ _873__bF$buf4 vdd gnd BUFX2
+XBUFX2_insert2 _873_ _873__bF$buf3 vdd gnd BUFX2
+XBUFX2_insert3 _873_ _873__bF$buf2 vdd gnd BUFX2
+XBUFX2_insert4 _873_ _873__bF$buf1 vdd gnd BUFX2
+XBUFX2_insert5 _873_ _873__bF$buf0 vdd gnd BUFX2
+XBUFX2_insert6 _943_ _943__bF$buf4 vdd gnd BUFX2
+XBUFX2_insert7 _943_ _943__bF$buf3 vdd gnd BUFX2
+XBUFX2_insert8 _943_ _943__bF$buf2 vdd gnd BUFX2
+XBUFX2_insert9 _943_ _943__bF$buf1 vdd gnd BUFX2
+X_2088_ _4_ _37_ _426__bF$buf3 _638_ vdd gnd MUX2X1
+X_1779_ _1072_ _1071_ _1073_ vdd gnd NAND2X1
+X_1359_ _519_ _518_ _344_ _343_ vdd gnd OAI21X1
+X_2300_ _651_ i_clk_sys_ext_bF$buf11 \u_cpu.bufreg.data\[19] vdd gnd DFFPOSX1
+X_1588_ _380_ _944_ _950_ _951_ vdd gnd OAI21X1
+X_1168_ _527_ _543__bF$buf2 _540_ _528_ _846_ vdd 
++ gnd
++ OAI22X1
+XFILL97650x10950 gnd vdd FILL
+X_1800_ \u_rf_if.rreg0_latched\[1] _960_ _933_ _1088_ vdd gnd NAND3X1
+X_1397_ raddr[2] _305_ vdd gnd INVX1
+X_2203_ _225_ _224_ _543__bF$buf4 _604_ vdd gnd MUX2X1
+X_2432_ _732_ i_clk_sys_ext_bF$buf4 \u_rf_if.rcnt\[2] vdd gnd DFFPOSX1
+X_2012_ rf_wreg0_to_if[1] _508_ _97_ vdd gnd NAND2X1
+X_1703_ _393__bF$buf3 \u_rf_if.read_buf0\[30] \u_rf_if.read_buf0\[29] _943__bF$buf2 _1026_ vdd 
++ gnd
++ OAI22X1
+X_2241_ _245_ _246_ _873__bF$buf2 _586_ vdd gnd MUX2X1
+X_1932_ _561_ _558_ _41_ _42_ vdd gnd AOI21X1
+X_1512_ rf_read_reg0_to_if[3] _886_ vdd gnd INVX1
+X_2470_ _784_ i_clk_sys_ext_bF$buf8 \u_rf_if.read_buf0\[6] vdd gnd DFFPOSX1
+X_2050_ _124_ _125_ _426__bF$buf4 _658_ vdd gnd MUX2X1
+X_1741_ mem_ibus_ack_bF$buf4 _1051_ _1052_ _750_ vdd gnd AOI21X1
+X_1321_ \u_rf_if.rs2_stream_buf\[0] _380_ \u_cpu.bufreg2.i_op_b_sel\ _379_ vdd gnd OAI21X1
+X_2526_ _826_ i_clk_sys_ext_bF$buf4 \u_rf_if.read_buf1\[0] vdd gnd DFFPOSX1
+X_2106_ \u_cpu.bufreg.c_r\ _154_ vdd gnd INVX1
+X_1970_ _65_ _51_ _67_ _680_ vdd gnd AOI21X1
+X_1550_ _917_ _918_ _913_ _919_ vdd gnd AOI21X1
+X_2335_ _682_ i_clk_sys_ext_bF$buf7 \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[2] vdd gnd DFFPOSX1
+X_1606_ i_rf_miso _964_ vdd gnd INVX1
+X_2564_ _725_ i_clk_sys_ext_bF$buf6 raddr[6] vdd gnd DFFPOSX1
+X_2144_ _177_ _180_ _452_ _181_ vdd gnd NAND3X1
+X_1835_ \u_mem_serial.shift_reg\[29] _543__bF$buf0 _1113_ vdd gnd NOR2X1
+X_1415_ _337_ _288_ _326_ _287_ vdd gnd NAND3X1
+X_2373_ _710_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[21] vdd gnd DFFPOSX1
+X_1644_ \u_rf_if.read_buf0\[9] _989_ vdd gnd INVX1
+X_1224_ _477_ _475_ _474_ vdd gnd NAND2X1
+X_2429_ _754_ i_clk_sys_ext_bF$buf12 \u_rf_if.rreg0_latched\[1] vdd gnd DFFPOSX1
+X_2009_ \u_mem_serial.shift_reg\[8] rf_wreg0_to_if[2] mem_ibus_ack_bF$buf2 _95_ vdd gnd MUX2X1
+X_2182_ \u_mem_serial.shift_reg\[15] _542__bF$buf1 _1105_ \u_cpu.ctrl.pc\ _210_ vdd 
 + gnd
 + AOI22X1
-X_1732_ mem_ibus_ack_bF$buf5 _1057_ _1058_ _759_ vdd gnd AOI21X1
-X_1312_ _484_ _406_ _401_ _400_ vdd gnd OAI21X1
-X_2517_ _612_ i_clk_fast_bF$buf4 \u_mem_serial.shift_reg\[24] vdd gnd DFFPOSX1
-X_2270_ _265_ _267_ _440__bF$buf2 _577_ vdd gnd MUX2X1
-X_1961_ _65_ _56_ _66_ vdd gnd NOR2X1
-X_1541_ _917_ _921_ _922_ vdd gnd NOR2X1
-X_2326_ _661_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.data\[25] vdd gnd DFFPOSX1
-X_1770_ _309_ _704__bF$buf1 _1080_ _743_ vdd gnd AOI21X1
-X_1350_ _363_ _377_ _362_ vdd gnd OR2X2
-X_2555_ _575_ i_clk_fast_bF$buf0 \u_mem_serial.bit_count\[6] vdd gnd DFFPOSX1
-X_2135_ \u_mem_serial.bit_count\[6] _504_ _179_ vdd gnd NOR2X1
-X_1826_ \u_mem_serial.shift_reg\[30] _505__bF$buf0 _1126_ vdd gnd NOR2X1
-X_1406_ _309_ \u_rf_if.last_req_key\[2] _308_ vdd gnd OR2X2
-X_2364_ _695_ i_clk_sys_ext_bF$buf6 \u_cpu.bufreg.i_right_shift_op\ vdd gnd DFFPOSX1
-X_1635_ _383__bF$buf0 \u_rf_if.read_buf0\[5] \u_rf_if.read_buf0\[4] _990__bF$buf2 _995_ vdd 
+X_1873_ \u_mem_serial.state\[1] _1147_ _1148_ _1149_ vdd gnd OAI21X1
+X_1453_ \u_rf_if.rcnt\[2] _792_ vdd gnd INVX1
+X_2238_ \u_cpu.ctrl.o_ibus_adr\[12] _245_ vdd gnd INVX1
+X_1929_ _542__bF$buf3 _39_ _36_ _40_ vdd gnd OAI21X1
+X_1509_ rf_read_reg1_to_if[3] _884_ vdd gnd INVX1
+X_1682_ \u_rf_if.read_buf0\[23] _1013_ vdd gnd INVX1
+X_1262_ \u_cpu.decode.opcode\[0] _470_ _438_ vdd gnd NAND2X1
+X_2467_ _728_ i_clk_sys_ext_bF$buf1 raddr[3] vdd gnd DFFPOSX1
+X_2047_ \u_cpu.bufreg.data\[27] _124_ vdd gnd INVX1
+X_1738_ mem_ibus_ack_bF$buf2 _1049_ _1050_ _751_ vdd gnd AOI21X1
+X_1318_ \u_cpu.branch_op\ _383_ _382_ vdd gnd NOR2X1
+X_1491_ _869_ _444_ _832_ vdd gnd AND2X2
+X_2276_ \u_mem_serial.bit_count\[6] _33_ _260_ vdd gnd NAND2X1
+X_1967_ \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[0] _65_ vdd gnd INVX1
+X_1547_ _914_ _915_ _916_ vdd gnd NAND2X1
+X_2085_ \u_cpu.bufreg.data\[8] _143_ vdd gnd INVX1
+X_1776_ \u_rf_if.rcnt\[0] _441_ _733_ vdd gnd NOR2X1
+X_1356_ _347_ _528_ _346_ _839_ vdd gnd OAI21X1
+X_1585_ \u_rf_if.rs2_stream_buf\[1] _947_ _948_ vdd gnd NOR2X1
+X_1165_ _531_ _543__bF$buf0 _530_ _528_ _848_ vdd 
 + gnd
 + OAI22X1
-X_1215_ _497_ _495_ \u_cpu.decode.opcode\[2] _494_ vdd gnd OAI21X1
-X_2173_ \u_cpu.bufreg.i_shamt\[0] _211_ vdd gnd INVX1
-X_1864_ \u_cpu.bufreg.data\[5] _1153_ vdd gnd INVX1
-X_1444_ \u_rf_if.tx_state\[1] _722_ _723_ _724_ vdd gnd NAND3X1
-X_2229_ \u_cpu.ctrl.o_ibus_adr\[21] _251_ vdd gnd INVX1
-X_1673_ \u_rf_if.read_buf0\[20] _947__bF$buf4 \u_rf_if.read_buf0\[18] _990__bF$buf4 _1019_ vdd 
+X_1394_ ren \u_rf_if.o_waddr\[0] _309_ _308_ vdd gnd OAI21X1
+X_2179_ _165_ _543__bF$buf0 _531_ _528_ _611_ vdd 
 + gnd
 + OAI22X1
-X_1253_ \u_cpu.bufreg2.dhi\[4] _460_ _457_ _456_ vdd gnd OAI21X1
-X_2458_ _765_ i_clk_sys_ext_bF$buf5 \u_rf_if.issue_idx\[1] vdd gnd DFFPOSX1
-X_2038_ _518_ _121_ _122_ _123_ vdd gnd OAI21X1
-X_1729_ mem_ibus_ack_bF$buf5 _1055_ _1056_ _760_ vdd gnd AOI21X1
-X_1309_ _499_ _404_ \u_cpu.immdec.gen_immdec_w_eq_1.imm31\ _403_ vdd gnd OAI21X1
-X_1482_ _859_ _868_ _869_ _870_ vdd gnd OAI21X1
-X_2267_ \u_cpu.ctrl.o_ibus_adr\[31] _266_ vdd gnd INVX1
-X_1958_ _61_ _56_ _63_ _687_ vdd gnd AOI21X1
-X_1538_ \u_rf_if.stream_cnt\[1] _919_ vdd gnd INVX1
-X_1291_ _491_ _492_ _421_ vdd gnd NAND2X1
-X_2496_ _794_ i_clk_sys_ext_bF$buf3 \u_rf_if.read_buf0\[2] vdd gnd DFFPOSX1
-X_2076_ \u_cpu.bufreg.data\[12] _143_ vdd gnd INVX1
-X_1767_ \u_rf_if.last_req_key\[1] _704__bF$buf2 i_rst_n_bF$buf1 _1079_ vdd gnd OAI21X1
-X_1347_ _372_ _366_ _365_ vdd gnd NAND2X1
-X_1996_ _518_ rf_read_reg1_to_if[1] _71_ _90_ vdd gnd AOI21X1
-X_1576_ mem_ibus_ack_bF$buf5 \u_rf_if.rreg0_latched\[3] _953_ vdd gnd NOR2X1
-X_1156_ _1123_ o_rf_sck vdd gnd BUFX2
-X_1385_ ren_bF$buf3 _330_ _329_ vdd gnd NAND2X1
-X_1194_ _518_ _514_ _513_ vdd gnd NOR2X1
-X_2399_ _720_ i_clk_sys_ext_bF$buf2 \u_cpu.state.cnt_r\[0] vdd gnd DFFPOSX1
-X_1899_ \u_mem_serial.bit_count\[0] \u_mem_serial.bit_count\[1] _21_ vdd gnd NOR2X1
-X_1479_ _866_ _862_ _867_ vdd gnd NOR2X1
-X_2420_ _599_ i_clk_sys_ext_bF$buf3 \u_cpu.ctrl.o_ibus_adr\[19] vdd gnd DFFPOSX1
-X_2000_ _92_ _93_ vdd gnd INVX2
-X_1288_ \u_cpu.decode.opcode\[2] _438_ _424_ vdd gnd NAND2X1
-X_1920_ _504_ _37_ _562_ _38_ vdd gnd OAI21X1
-X_1500_ \u_mem_serial.shift_reg\[26] _504_ _887_ vdd gnd NOR2X1
-X_2514_ _568_ _553_ _562_ _552_ vdd gnd OAI21X1
-X_2323_ _658_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.data\[22] vdd gnd DFFPOSX1
-X_2552_ _839_ i_clk_fast_bF$buf7 \u_rf_if.tx_state\[4] vdd gnd DFFPOSX1
-X_2132_ \u_mem_serial.shift_reg\[4] _551__bF$buf3 _505__bF$buf2 _177_ vdd gnd NAND3X1
-XFILL98850x43350 gnd vdd FILL
-X_1823_ _505__bF$buf1 _1116_ _1117_ _727_ vdd gnd AOI21X1
-X_1403_ \u_rf_if.o_waddr\[2] _311_ vdd gnd INVX1
-X_2361_ _580_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.pc\ vdd gnd DFFPOSX1
-X_1632_ _383__bF$buf0 \u_rf_if.read_buf0\[4] \u_rf_if.read_buf0\[3] _990__bF$buf4 _993_ vdd 
-+ gnd
-+ OAI22X1
-X_1212_ _499_ _498_ _497_ vdd gnd NOR2X1
-X_2417_ _743_ i_clk_fast_bF$buf2 \u_rf_if.last_req_key\[2] vdd gnd DFFPOSX1
-X_2170_ _200_ _465_ _187_ _209_ vdd gnd OAI21X1
-X_1861_ _1148_ _1149_ _1150_ _716_ vdd gnd OAI21X1
-X_1441_ _338_ _704__bF$buf2 _705_ _841_ vdd gnd AOI21X1
-X_2226_ _248_ _249_ _440__bF$buf2 _603_ vdd gnd MUX2X1
-X_1917_ \u_mem_serial.bit_count\[5] _35_ vdd gnd INVX1
-X_1670_ \u_rf_if.read_buf0\[19] _1017_ vdd gnd INVX1
-X_1250_ \u_cpu.bufreg2.dhi\[4] _460_ _459_ vdd gnd NOR2X1
-X_2455_ \u_rf_if.i_stream_rs2_en\ i_clk_sys_ext_bF$buf6 current_stream_rs2_hint vdd gnd DFFPOSX1
-X_2035_ rf_read_reg1_to_if[4] _120_ vdd gnd INVX1
-X_1726_ mem_ibus_ack_bF$buf2 _1053_ _1054_ _761_ vdd gnd AOI21X1
-X_1306_ rf_read_reg1_to_if[0] rf_wreg0_to_if[0] _407_ _406_ vdd gnd MUX2X1
-X_2264_ \u_cpu.ctrl.o_ibus_adr\[28] _264_ vdd gnd INVX1
-X_1955_ \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[3] _61_ vdd gnd INVX1
-X_1535_ \u_rf_if.stream_cnt\[4] _916_ vdd gnd INVX1
-X_2493_ _791_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[5] vdd gnd DFFPOSX1
-X_2073_ _140_ _141_ _413__bF$buf0 _650_ vdd gnd MUX2X1
-X_1764_ _1077_ _879_ _746_ vdd gnd AND2X2
-X_1344_ _376_ _400_ _368_ vdd gnd NAND2X1
-X_2549_ _624_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[0] vdd gnd DFFPOSX1
-X_2129_ _543_ _563_ _19_ _175_ _627_ vdd 
-+ gnd
-+ OAI22X1
-X_1993_ _1063_ _88_ _86_ _677_ vdd gnd MUX2X1
-X_1573_ _935_ _937_ \u_rf_if.shift_rx\[1] _951_ vdd gnd OAI21X1
-X_2358_ _690_ i_clk_sys_ext_bF$buf12 rf_read_reg0_to_if[2] vdd gnd DFFPOSX1
-X_1629_ \u_rf_if.read_buf0\[4] _947__bF$buf2 \u_rf_if.read_buf0\[2] _990__bF$buf0 _991_ vdd 
-+ gnd
-+ OAI22X1
-X_1209_ \u_cpu.state.init_done\ _500_ vdd gnd INVX1
-X_1382_ _333_ \u_rf_if.last_req_key\[7] _332_ vdd gnd OR2X2
-X_2587_ _572_ i_clk_sys_ext_bF$buf2 \u_cpu.ctrl.o_ibus_adr\[31] vdd gnd DFFPOSX1
-X_2167_ _464_ _463_ _206_ vdd gnd NOR2X1
-X_1858_ _440__bF$buf3 _1148_ vdd gnd INVX1
-X_1438_ _442_ _277_ _276_ vdd gnd NAND2X1
-X_1191_ \u_mem_serial.shift_reg\[4] _516_ vdd gnd INVX1
-X_2396_ _721_ i_clk_fast_bF$buf4 \u_mem_serial.active_ibus\ vdd gnd DFFPOSX1
-X_1667_ _1014_ _997_ _1015_ _781_ vdd gnd AOI21X1
-X_1247_ _464_ _463_ _462_ vdd gnd NAND2X1
-X_1896_ i_clk_fast_bF$buf0 _19_ _1120_ vdd gnd NOR2X1
-X_1476_ \u_rf_if.o_waddr\[2] \u_rf_if.o_waddr\[1] _864_ vdd gnd NOR2X1
-X_1285_ _439_ _427_ _434_ _426_ vdd gnd AOI21X1
-X_2299_ \u_mem_serial.bit_count\[1] _558_ _557_ vdd gnd NOR2X1
-X_2511_ \u_mem_serial.shift_reg\[10] _552__bF$buf2 _549_ vdd gnd NAND2X1
-X_1799_ \u_rf_if.rreg1_latched\[0] _973_ _972_ raddr[4] _1099_ vdd 
+X_1679_ \u_rf_if.read_buf0\[22] _1011_ vdd gnd INVX1
+X_1259_ _510_ _512_ _440_ vdd gnd NOR2X1
+X_2200_ _376_ _177_ _223_ _605_ vdd gnd AOI21X1
+X_1488_ \u_rf_if.o_waddr\[3] _866_ _867_ vdd gnd NOR2X1
+X_1700_ \u_rf_if.stream_active\ _1022_ _1024_ _763_ vdd gnd AOI21X1
+X_1297_ _404_ _409_ _403_ vdd gnd OR2X2
+XFILL97650x86550 gnd vdd FILL
+X_2523_ _827_ i_clk_sys_ext_bF$buf7 \u_rf_if.rreg0_latched\[3] vdd gnd DFFPOSX1
+X_2103_ _150_ _433_ _151_ vdd gnd NOR2X1
+X_2332_ _679_ i_clk_sys_ext_bF$buf0 \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[4] vdd gnd DFFPOSX1
+X_1603_ _913_ _960_ _938_ _962_ vdd gnd OAI21X1
+X_2561_ _631_ i_clk_sys_ext_bF$buf3 \u_cpu.bufreg.data\[29] vdd gnd DFFPOSX1
+X_2141_ _178_ _463_ \u_cpu.bufreg2.cnt_next\[6] _179_ vdd gnd OAI21X1
+X_1832_ \u_cpu.bufreg2.i_bytecnt\[1] _483_ _1111_ vdd gnd NOR2X1
+X_1412_ _292_ \u_rf_if.last_req_key\[5] _290_ vdd gnd OR2X2
+XBUFX2_insert57 _542_ _542__bF$buf4 vdd gnd BUFX2
+XBUFX2_insert58 _542_ _542__bF$buf3 vdd gnd BUFX2
+XBUFX2_insert59 _542_ _542__bF$buf2 vdd gnd BUFX2
+X_2370_ _708_ i_clk_fast_bF$buf2 mem_ibus_ack vdd gnd DFFPOSX1
+XFILL97650x18150 gnd vdd FILL
+X_1641_ _986_ _925__bF$buf3 _987_ _785_ vdd gnd AOI21X1
+X_1221_ \u_cpu.state.cnt_r\[2] _477_ vdd gnd INVX1
+X_2426_ _751_ i_clk_sys_ext_bF$buf12 \u_rf_if.rreg1_latched\[1] vdd gnd DFFPOSX1
+X_2006_ \u_mem_serial.shift_reg\[9] rf_wreg0_to_if[3] mem_ibus_ack_bF$buf2 _93_ vdd gnd MUX2X1
+X_1870_ \u_mem_serial.bit_count\[0] _870_ _1146_ _709_ vdd gnd OAI21X1
+X_1450_ _449_ _394_ _718_ vdd gnd NOR2X1
+X_2235_ _242_ _243_ _873__bF$buf0 _589_ vdd gnd MUX2X1
+X_1926_ \u_cpu.bufreg.data\[6] _37_ vdd gnd INVX1
+X_1506_ \u_mem_serial.shift_reg\[27] _870_ _882_ vdd gnd NOR2X1
+X_2464_ _781_ i_clk_sys_ext_bF$buf2 \u_rf_if.read_buf0\[9] vdd gnd DFFPOSX1
+X_2044_ \u_cpu.bufreg.data\[28] _122_ vdd gnd INVX1
+X_1735_ mem_ibus_ack_bF$buf4 _1047_ _1048_ _752_ vdd gnd AOI21X1
+X_1315_ \u_cpu.bufreg.i_sh_signed\ _385_ vdd gnd INVX1
+X_2273_ _473_ _1132_ _258_ _566_ vdd gnd OAI21X1
+X_1964_ mem_ibus_ack_bF$buf0 _59_ _9_ _63_ vdd gnd OAI21X1
+X_1544_ \u_rf_if.prefetch_active\ _913_ vdd gnd INVX1
+X_2329_ _677_ i_clk_sys_ext_bF$buf0 \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[2] vdd gnd DFFPOSX1
+X_2082_ _140_ _141_ _426__bF$buf2 _642_ vdd gnd MUX2X1
+X_1773_ \u_rf_if.last_req_key\[8] _1069_ vdd gnd INVX1
+X_1353_ _397_ _348_ \u_cpu.o_wdata0\ vdd gnd OR2X2
+X_2558_ _627_ i_clk_fast_bF$buf4 \u_mem_serial.shift_reg\[15] vdd gnd DFFPOSX1
+X_2138_ _173_ _174_ _466_ _175_ _176_ vdd 
 + gnd
 + AOI22X1
-X_1379_ ren_bF$buf0 _433_ _335_ vdd gnd NOR2X1
-X_2320_ _655_ i_clk_sys_ext_bF$buf2 \u_cpu.bufreg.data\[19] vdd gnd DFFPOSX1
-X_1188_ _526_ _519_ _849_ vdd gnd NOR2X1
-XFILL99150x82950 gnd vdd FILL
-XFILL99150x3750 gnd vdd FILL
-X_1820_ _1110_ _1115_ _552__bF$buf4 _728_ vdd gnd MUX2X1
-X_1400_ \u_rf_if.last_req_key\[1] _314_ vdd gnd INVX1
-XFILL98850x64950 gnd vdd FILL
-X_2414_ _596_ i_clk_sys_ext_bF$buf3 \u_cpu.ctrl.o_ibus_adr\[16] vdd gnd DFFPOSX1
-X_2223_ \u_cpu.ctrl.o_ibus_adr\[24] _248_ vdd gnd INVX1
-X_1914_ _558_ _22_ _33_ vdd gnd NOR2X1
-X_2452_ _762_ i_clk_sys_ext_bF$buf5 \u_rf_if.issue_idx\[4] vdd gnd DFFPOSX1
-X_2032_ _518_ _117_ _118_ vdd gnd NAND2X1
-X_1723_ \u_rf_if.issue_idx\[4] _1050_ _1052_ _762_ vdd gnd AOI21X1
-X_1303_ _472_ _410_ _409_ vdd gnd NAND2X1
-X_2508_ \u_mem_serial.shift_reg\[7] _552__bF$buf3 _547_ vdd gnd NAND2X1
-X_2261_ _242_ _262_ _440__bF$buf1 _581_ vdd gnd MUX2X1
-X_1952_ _1055_ _59_ _56_ _689_ vdd gnd MUX2X1
-X_1532_ _911_ _912_ _913_ vdd gnd NAND2X1
-X_2317_ _652_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.data\[16] vdd gnd DFFPOSX1
-X_2490_ _788_ i_clk_sys_ext_bF$buf11 \u_rf_if.read_buf0\[8] vdd gnd DFFPOSX1
-X_2070_ \u_cpu.bufreg.data\[15] _140_ vdd gnd INVX1
-X_1761_ i_rst_n_bF$buf2 _277_ _1076_ vdd gnd NAND2X1
-X_1341_ \u_rf_if.read_buf1\[0] \u_rf_if.i_stream_rs2_en\ \u_rf_if.stream_active_bF$buf1\ _371_ vdd gnd OAI21X1
-X_2546_ _834_ i_clk_sys_ext_bF$buf0 \u_rf_if.write_wait\[1] vdd gnd DFFPOSX1
-X_2126_ \u_mem_serial.state\[0] _173_ _172_ _553_ _628_ vdd 
-+ gnd
-+ OAI22X1
-X_1817_ \u_cpu.ctrl.o_ibus_adr\[4] _1113_ vdd gnd INVX1
-X_1990_ \u_mem_serial.shift_reg\[23] rf_read_reg1_to_if[4] mem_ibus_ack_bF$buf3 _87_ vdd gnd MUX2X1
-X_1570_ \u_rf_if.stream_active_bF$buf1\ \u_rf_if.read_buf0\[31] _948_ \u_rf_if.read_buf0\[30] _949_ vdd 
-+ gnd
-+ AOI22X1
-X_2355_ _687_ i_clk_sys_ext_bF$buf6 \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[3] vdd gnd DFFPOSX1
-X_1626_ \u_rf_if.stream_active_bF$buf3\ \u_rf_if.read_buf0\[2] _948_ \u_rf_if.read_buf0\[1] _989_ vdd 
-+ gnd
-+ AOI22X1
-X_1206_ \u_mem_serial.shift_reg\[26] _505__bF$buf3 _502_ vdd gnd NOR2X1
-X_2584_ _728_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[19] vdd gnd DFFPOSX1
-X_2164_ _200_ _465_ _188_ _204_ vdd gnd OAI21X1
-X_1855_ \u_cpu.bne_or_bge\ _1145_ _1146_ _1147_ vdd gnd AOI21X1
-X_1435_ _280_ _285_ _279_ vdd gnd NOR2X1
-X_2393_ _718_ i_clk_sys_ext_bF$buf1 \u_cpu.ctrl.i_jump\ vdd gnd DFFPOSX1
-X_1664_ _1012_ _1013_ _782_ vdd gnd NOR2X1
-X_1244_ _469_ _466_ _465_ vdd gnd NOR2X1
-X_2449_ _760_ i_clk_sys_ext_bF$buf12 \u_rf_if.rreg0_latched\[1] vdd gnd DFFPOSX1
-X_2029_ \u_cpu.branch_op\ _437_ _403_ _114_ _115_ vdd 
-+ gnd
-+ AOI22X1
-X_1893_ \u_mem_serial.shift_reg\[2] mem_ibus_ack_bF$buf4 _18_ vdd gnd NAND2X1
-X_1473_ _860_ _372_ _861_ vdd gnd AND2X2
-X_2258_ _1113_ _532_ _440__bF$buf1 _583_ vdd gnd MUX2X1
-X_1949_ \u_mem_serial.shift_reg\[17] rf_read_reg0_to_if[3] mem_ibus_ack_bF$buf5 _58_ vdd gnd MUX2X1
-X_1529_ \u_rf_if.issue_idx\[5] _910_ vdd gnd INVX1
-X_1282_ \u_cpu.immdec.gen_immdec_w_eq_1.imm11_7\[4] _429_ vdd gnd INVX1
-X_2487_ _829_ i_clk_sys_ext_bF$buf0 ren vdd gnd DFFPOSX1
-X_2067_ _137_ _138_ _413__bF$buf3 _653_ vdd gnd MUX2X1
-X_1758_ _723_ _802_ _1074_ _749_ vdd gnd AOI21X1
-X_1338_ \u_cpu.bne_or_bge\ \u_cpu.decode.co_mem_word\ _374_ vdd gnd NOR2X1
-X_2296_ \u_mem_serial.bit_count\[2] _560_ vdd gnd INVX1
-X_1987_ _83_ _84_ _75_ _679_ vdd gnd MUX2X1
-X_1567_ \u_rf_if.i_stream_rs2_en\ _945_ _941_ _946_ vdd gnd AOI21X1
-X_1796_ \u_rf_if.stream_cnt\[4] _922_ _1097_ vdd gnd NOR2X1
-X_1376_ _527_ _338_ vdd gnd INVX1
-X_1185_ \u_rf_if.tx_state\[3] \u_rf_if.tx_state\[4] _521_ vdd gnd NOR2X1
-X_2199_ \u_mem_serial.shift_reg\[25] _505__bF$buf3 _231_ vdd gnd NOR2X1
-X_2411_ _740_ i_clk_fast_bF$buf2 \u_rf_if.last_req_key\[5] vdd gnd DFFPOSX1
-X_1699_ \u_rf_if.read_buf0\[29] _383__bF$buf4 _1035_ vdd gnd NOR2X1
-X_1279_ rf_wreg0_to_if[2] _432_ vdd gnd INVX1
-X_2220_ _246_ _245_ _440__bF$buf5 _606_ vdd gnd MUX2X1
-X_1911_ _559_ _562_ _30_ _701_ vdd gnd OAI21X1
-X_1720_ \u_rf_if.issue_idx\[3] _1048_ _966_ _1051_ vdd gnd OAI21X1
-X_1300_ _413__bF$buf3 _412_ vdd gnd INVX1
-X_2505_ _633_ i_clk_sys_ext_bF$buf1 \u_cpu.state.i_ctrl_misalign\ vdd gnd DFFPOSX1
-X_2314_ _650_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.data\[14] vdd gnd DFFPOSX1
-X_2543_ _833_ i_clk_sys_ext_bF$buf5 \u_rf_if.o_waddr\[3] vdd gnd DFFPOSX1
-X_2123_ _516_ _505__bF$buf2 _171_ _629_ vdd gnd OAI21X1
-X_1814_ \u_mem_serial.shift_reg\[19] _1110_ vdd gnd INVX1
-X_2352_ _719_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[28] vdd gnd DFFPOSX1
-X_1623_ \u_rf_if.stream_active_bF$buf3\ \u_rf_if.read_buf0\[1] _948_ \u_rf_if.read_buf0\[0] _987_ vdd 
-+ gnd
-+ AOI22X1
-X_1203_ _552__bF$buf0 _505_ vdd gnd INVX8
-X_2408_ _593_ i_clk_sys_ext_bF$buf2 \u_cpu.ctrl.o_ibus_adr\[13] vdd gnd DFFPOSX1
-X_2581_ _634_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.data\[29] vdd gnd DFFPOSX1
-X_2161_ _462_ _201_ vdd gnd INVX1
-X_1852_ _1142_ _1143_ _1137_ _1144_ vdd gnd OAI21X1
-X_1432_ _283_ \u_rf_if.last_req_key\[5] _282_ vdd gnd OR2X2
-X_2217_ _535_ _244_ _552__bF$buf4 _607_ vdd gnd MUX2X1
-X_2390_ _715_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[20] vdd gnd DFFPOSX1
-X_1908_ _27_ _28_ vdd gnd INVX1
-X_1661_ \u_rf_if.stream_active_bF$buf2\ _1009_ _1011_ _783_ vdd gnd AOI21X1
-X_1241_ _493_ _468_ vdd gnd INVX1
-X_2446_ _757_ i_clk_sys_ext_bF$buf12 \u_rf_if.rreg1_latched\[1] vdd gnd DFFPOSX1
-X_2026_ \u_cpu.immdec.gen_immdec_w_eq_1.imm7\ _112_ vdd gnd INVX1
-X_1717_ \u_rf_if.issue_idx\[2] _1046_ _966_ _1049_ vdd gnd OAI21X1
-X_1890_ mem_ibus_ack_bF$buf1 \u_cpu.decode.opcode\[2] _17_ vdd gnd NOR2X1
-X_1470_ _857_ _522_ _858_ vdd gnd NAND2X1
-X_2255_ _11_ _42_ _440__bF$buf0 _586_ vdd gnd MUX2X1
-X_1946_ mem_ibus_ack_bF$buf1 _55_ _53_ _56_ vdd gnd OAI21X1
-X_1526_ mem_ibus_ack_bF$buf2 _906_ _907_ _830_ vdd gnd AOI21X1
-X_2484_ _783_ i_clk_sys_ext_bF$buf11 \u_rf_if.read_buf0\[13] vdd gnd DFFPOSX1
-X_2064_ \u_cpu.bufreg.data\[18] _137_ vdd gnd INVX1
-X_1755_ \u_rf_if.write_wait\[1] _446_ _1073_ vdd gnd NAND2X1
-X_1335_ _378_ _380_ _377_ vdd gnd NAND2X1
-X_2293_ \u_mem_serial.req_pending\ _566_ _564_ _563_ vdd gnd NAND3X1
-X_1984_ _81_ _82_ _75_ _680_ vdd gnd MUX2X1
-X_1564_ \u_rf_if.issue_idx\[1] _943_ vdd gnd INVX1
-X_2349_ _725_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[1] vdd gnd DFFPOSX1
-X_1793_ _922_ _1094_ _1092_ _1093_ _734_ vdd 
-+ gnd
-+ OAI22X1
-X_1373_ _422_ _387_ _340_ \u_cpu.o_wdata0\ vdd gnd OAI21X1
-X_2578_ _729_ i_clk_sys_ext_bF$buf13 \u_rf_if.rs2_stream_buf\[0] vdd gnd DFFPOSX1
-X_2158_ _187_ _197_ _198_ _199_ vdd gnd OAI21X1
-X_1849_ _498_ _385_ _355_ _1141_ vdd gnd OAI21X1
-X_1429_ _287_ _286_ _292_ _291_ _285_ vdd 
-+ gnd
-+ OAI22X1
-X_1182_ _525_ _524_ vdd gnd INVX2
-X_2387_ _713_ i_clk_fast_bF$buf4 mem_ibus_ack vdd gnd DFFPOSX1
-X_1658_ _383__bF$buf1 \u_rf_if.read_buf0\[13] \u_rf_if.read_buf0\[12] _990__bF$buf2 _1010_ vdd 
-+ gnd
-+ OAI22X1
-X_1238_ \u_cpu.decode.co_mem_word\ _472_ _471_ vdd gnd NOR2X1
-XFILL98250x75750 gnd vdd FILL
-X_2196_ _146_ _228_ _567_ _229_ vdd gnd MUX2X1
-X_1887_ mem_ibus_ack_bF$buf1 _357_ _15_ _710_ vdd gnd OAI21X1
-X_1467_ \u_rf_if.tx_state\[2] _524_ _843_ _846_ vdd gnd AOI21X1
-X_1696_ _1032_ _997_ _1033_ _770_ vdd gnd AOI21X1
-X_1276_ \u_cpu.decode.opcode\[0] \u_cpu.bufreg2.i_op_b_sel\ _472_ _435_ vdd gnd OAI21X1
-X_2502_ \u_mem_serial.state\[0] \u_mem_serial.state\[1] _544_ vdd gnd NOR2X1
-X_2099_ _153_ _152_ _413__bF$buf3 _635_ vdd gnd MUX2X1
-X_2311_ _648_ i_clk_sys_ext_bF$buf3 \u_cpu.bufreg.data\[12] vdd gnd DFFPOSX1
-X_1599_ _908_ _915_ _969_ vdd gnd NOR2X1
-X_1179_ _529_ _528_ _527_ vdd gnd NOR2X1
-X_2540_ _621_ i_clk_sys_ext_bF$buf1 \u_cpu.bufreg2.dhi\[4] vdd gnd DFFPOSX1
-X_2120_ \u_mem_serial.shift_reg\[14] _552__bF$buf1 _170_ vdd gnd NAND2X1
-X_1811_ _1105_ \u_rf_if.i_stream_rs2_en\ _1107_ _1108_ vdd gnd AOI21X1
-X_1620_ _920_ _933_ _985_ vdd gnd NAND2X1
-X_1200_ _508_ _513_ _507_ vdd gnd AND2X2
-X_2405_ _573_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.pc_plus_4_cy_r_w\ vdd gnd DFFPOSX1
-X_2214_ \u_cpu.ctrl.o_ibus_adr\[2] _242_ vdd gnd INVX1
-X_1905_ _25_ _24_ _551__bF$buf1 _26_ vdd gnd OAI21X1
-X_2443_ _754_ i_clk_sys_ext_bF$buf12 \u_rf_if.rcnt\[2] vdd gnd DFFPOSX1
-X_2023_ mem_ibus_ack_bF$buf7 \u_mem_serial.shift_reg\[7] _52_ \u_cpu.immdec.gen_immdec_w_eq_1.imm7\ _110_ vdd 
+X_1829_ _1109_ _485_ _596_[0] vdd gnd NOR2X1
+X_1409_ ren _294_ _293_ vdd gnd NOR2X1
+X_1582_ _945_ _444_ _817_ vdd gnd NAND2X1
+X_1162_ \u_mem_serial.shift_reg\[12] _530_ vdd gnd INVX1
+X_2367_ _705_ i_clk_sys_ext_bF$buf7 \u_cpu.bne_or_bge\ vdd gnd DFFPOSX1
+X_1638_ _984_ _925__bF$buf0 _985_ _786_ vdd gnd AOI21X1
+X_1218_ _481_ _480_ vdd gnd INVX1
+X_1391_ ren \u_rf_if.o_waddr\[1] _312_ _311_ vdd gnd OAI21X1
+X_2176_ _201_ _463_ _205_ _208_ vdd gnd AOI21X1
+X_1867_ _542__bF$buf4 _1144_ _1141_ _1145_ vdd gnd OAI21X1
+X_1447_ _307_ _270_ _261_ _699_ vdd gnd AOI21X1
+X_1676_ \u_rf_if.read_buf0\[20] _393__bF$buf1 _1009_ vdd gnd NOR2X1
+X_1256_ mem_ibus_ack_bF$buf1 _443_ _442_ vdd gnd NOR2X1
+X_1485_ \u_rf_if.o_waddr\[1] _863_ _864_ vdd gnd NAND2X1
+X_1294_ \u_cpu.branch_op\ \u_cpu.bufreg2.i_op_b_sel\ _406_ vdd gnd NOR2X1
+X_2499_ _807_ i_clk_sys_ext_bF$buf8 \u_rf_if.stream_cnt\[3] vdd gnd DFFPOSX1
+X_2079_ \u_cpu.bufreg.data\[11] _140_ vdd gnd INVX1
+X_1999_ _474_ _876_ _87_ vdd gnd NAND2X1
+X_1579_ _910_ _911_ \u_rf_if.shift_rx\[1] _944_ vdd gnd OAI21X1
+X_1159_ _560_ _533_ _532_ vdd gnd NAND2X1
+X_2520_ _824_ i_clk_sys_ext_bF$buf1 \u_rf_if.pending_read\ vdd gnd DFFPOSX1
+X_2100_ _149_ _148_ _426__bF$buf1 _632_ vdd gnd MUX2X1
+X_1388_ \u_rf_if.last_req_key\[0] _314_ vdd gnd INVX1
+X_1600_ _958_ _959_ _443_ _813_ vdd gnd AOI21X1
+X_1197_ \u_mem_serial.shift_reg\[4] \u_mem_serial.shift_reg\[6] _501_ _500_ vdd gnd AOI21X1
+XBUFX2_insert20 _393_ _393__bF$buf4 vdd gnd BUFX2
+XBUFX2_insert21 _393_ _393__bF$buf3 vdd gnd BUFX2
+XBUFX2_insert22 _393_ _393__bF$buf2 vdd gnd BUFX2
+XBUFX2_insert23 _393_ _393__bF$buf1 vdd gnd BUFX2
+XBUFX2_insert24 _393_ _393__bF$buf0 vdd gnd BUFX2
+XBUFX2_insert25 _925_ _925__bF$buf3 vdd gnd BUFX2
+XBUFX2_insert26 _925_ _925__bF$buf2 vdd gnd BUFX2
+XBUFX2_insert27 _925_ _925__bF$buf1 vdd gnd BUFX2
+XBUFX2_insert28 _925_ _925__bF$buf0 vdd gnd BUFX2
+XBUFX2_insert29 _543_ _543__bF$buf5 vdd gnd BUFX2
+X_2423_ _603_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[18] vdd gnd DFFPOSX1
+X_2003_ mem_ibus_ack_bF$buf2 \u_mem_serial.shift_reg\[10] _90_ _91_ vdd gnd AOI21X1
+X_2232_ \u_cpu.ctrl.o_ibus_adr\[15] _242_ vdd gnd INVX1
+X_1923_ \u_mem_serial.bit_count\[4] _34_ \u_mem_serial.bit_count\[5] _35_ vdd gnd OAI21X1
+X_1503_ _294_ _879_ _876_ _880_ vdd gnd AOI21X1
+X_2461_ _778_ i_clk_sys_ext_bF$buf2 \u_rf_if.read_buf0\[12] vdd gnd DFFPOSX1
+X_2041_ _116_ _81_ _120_ _662_ vdd gnd AOI21X1
+X_1732_ mem_ibus_ack_bF$buf7 _1045_ _1046_ _753_ vdd gnd AOI21X1
+X_1312_ _393__bF$buf0 _392_ _389_ _388_ vdd gnd OAI21X1
+X_2517_ _616_ i_clk_sys_ext_bF$buf11 \u_cpu.bufreg.i_shamt\[2] vdd gnd DFFPOSX1
+X_2270_ _474_ _1128_ _257_ vdd gnd NAND2X1
+X_1961_ _60_ _51_ _61_ vdd gnd NOR2X1
+X_1541_ _340_ _335_ _910_ vdd gnd NAND2X1
+X_2326_ _674_ i_clk_sys_ext_bF$buf0 rf_read_reg1_to_if[3] vdd gnd DFFPOSX1
+X_1770_ _335_ _284_ _1067_ _736_ vdd gnd AOI21X1
+X_1350_ _352_ _351_ _350_ vdd gnd NOR2X1
+X_2555_ _850_ i_clk_fast_bF$buf1 \u_mem_serial.shift_reg\[8] vdd gnd DFFPOSX1
+X_2135_ \u_cpu.bufreg2.i_bytecnt\[1] \u_cpu.state.i_ctrl_misalign\ _172_ _173_ vdd gnd OAI21X1
+X_1826_ \u_mem_serial.shift_reg\[2] _1108_ vdd gnd INVX1
+X_1406_ \u_rf_if.launch_pending\ _297_ _296_ vdd gnd NOR2X1
+X_2364_ _703_ i_clk_sys_ext_bF$buf7 \u_cpu.decode.opcode\[2] vdd gnd DFFPOSX1
+X_1635_ _982_ _925__bF$buf0 _983_ _787_ vdd gnd AOI21X1
+X_1215_ _488_ _484_ _483_ vdd gnd NOR2X1
+X_2173_ _462_ _463_ _178_ _206_ vdd gnd OAI21X1
+X_1864_ \u_cpu.bufreg.data\[5] _1142_ vdd gnd INVX1
+X_1444_ _264_ _263_ vdd gnd INVX1
+X_2229_ _239_ _240_ _873__bF$buf4 _592_ vdd gnd MUX2X1
+X_1673_ _1006_ _925__bF$buf2 _1007_ _773_ vdd gnd AOI21X1
+X_1253_ _470_ _478_ _446_ _445_ vdd gnd OAI21X1
+X_2458_ \u_rf_if.wdata0_next\[0] i_clk_sys_ext_bF$buf1 \u_rf_if.wdata0_r\[0] vdd gnd DFFPOSX1
+X_2038_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[0] _508_ _118_ vdd gnd NAND2X1
+X_1729_ mem_ibus_ack_bF$buf4 _1043_ _1044_ _754_ vdd gnd AOI21X1
+X_1309_ _393__bF$buf0 _392_ _391_ vdd gnd NOR2X1
+X_1482_ \u_rf_if.o_waddr\[0] _861_ vdd gnd INVX1
+X_2267_ _398_ \u_cpu.ctrl.i_jump\ _255_ vdd gnd AND2X2
+X_1958_ _56_ _51_ _58_ _683_ vdd gnd AOI21X1
+X_1538_ \u_rf_if.stream_active\ \u_rf_if.ready_pulse\ _908_ vdd gnd NOR2X1
+X_1291_ \u_cpu.ctrl.pc_plus_offset_cy_r_w\ _409_ vdd gnd INVX1
+X_2496_ _608_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[24] vdd gnd DFFPOSX1
+X_2076_ _137_ _138_ _426__bF$buf2 _645_ vdd gnd MUX2X1
+X_1767_ \u_rf_if.last_req_key\[5] _284_ i_rst_n_bF$buf3 _1066_ vdd gnd OAI21X1
+X_1347_ _355_ _354_ _353_ vdd gnd NAND2X1
+X_1996_ mem_ibus_ack_bF$buf5 _1049_ _45_ _85_ vdd gnd OAI21X1
+X_1576_ _913_ _941_ _819_ vdd gnd NOR2X1
+X_1156_ \u_mem_serial.clk_sys_prev\ _557_ \u_mem_serial.state\[1] _535_ vdd gnd OAI21X1
+X_1385_ \u_rf_if.last_req_key\[9] _345_ _318_ _317_ vdd gnd OAI21X1
+X_1194_ \u_mem_serial.shift_reg\[2] _504_ _503_ vdd gnd NOR2X1
+X_2399_ _591_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[16] vdd gnd DFFPOSX1
+X_1899_ \u_mem_serial.bit_count\[1] _15_ vdd gnd INVX1
+X_1479_ _858_ _853_ _852_ _859_ vdd gnd AOI21X1
+X_2420_ _730_ i_clk_sys_ext_bF$buf6 raddr[1] vdd gnd DFFPOSX1
+X_2000_ _508_ _87_ _88_ vdd gnd NAND2X1
+X_1288_ _488_ _486_ _489_ _412_ vdd gnd OAI21X1
+X_1920_ _31_ _32_ vdd gnd INVX1
+X_1500_ rf_wreg0_to_if[3] rf_wreg0_to_if[2] _877_ vdd gnd NOR2X1
+X_2514_ _819_ i_clk_sys_ext_bF$buf2 \u_rf_if.ready_pulse\ vdd gnd DFFPOSX1
+X_2323_ _671_ i_clk_sys_ext_bF$buf12 rf_read_reg1_to_if[0] vdd gnd DFFPOSX1
+X_2552_ _625_ i_clk_fast_bF$buf4 \u_mem_serial.state\[1] vdd gnd DFFPOSX1
+X_2132_ i_mem_miso _169_ _170_ _171_ vdd gnd NAND3X1
+X_1823_ _1106_ _1104_ _543__bF$buf0 _722_ vdd gnd MUX2X1
+X_1403_ _300_ _303_ _299_ vdd gnd NAND2X1
+XFILL97650x25350 gnd vdd FILL
+X_2361_ _701_ i_clk_sys_ext_bF$buf7 \u_cpu.decode.opcode\[0] vdd gnd DFFPOSX1
+X_1632_ _980_ _925__bF$buf0 _981_ _788_ vdd gnd AOI21X1
+X_1212_ \u_cpu.state.o_cnt\[2] _486_ vdd gnd INVX1
+X_2417_ _600_ i_clk_sys_ext_bF$buf5 \u_cpu.ctrl.o_ibus_adr\[24] vdd gnd DFFPOSX1
+X_2170_ _201_ _202_ _203_ vdd gnd NOR2X1
+X_1861_ _1137_ _1138_ _1139_ _711_ vdd gnd OAI21X1
+X_1441_ _345_ _514_ _267_ _266_ vdd gnd OAI21X1
+X_2226_ \u_cpu.ctrl.o_ibus_adr\[18] _239_ vdd gnd INVX1
+X_1917_ _551_ _27_ _29_ _695_ vdd gnd OAI21X1
+X_1670_ _1004_ _1005_ _774_ vdd gnd NOR2X1
+X_1250_ \u_cpu.decode.co_mem_word\ _496_ _448_ vdd gnd NAND2X1
+XFILL97950x68550 gnd vdd FILL
+X_2455_ _773_ i_clk_sys_ext_bF$buf10 \u_rf_if.read_buf0\[17] vdd gnd DFFPOSX1
+X_2035_ _107_ _70_ _114_ _115_ _663_ vdd 
 + gnd
 + AOI22X1
-X_1714_ _1045_ _1046_ vdd gnd INVX1
-X_2252_ _233_ _228_ _440__bF$buf0 _589_ vdd gnd MUX2X1
-X_1943_ _52_ _53_ vdd gnd INVX1
-X_1523_ mem_ibus_ack_bF$buf0 _905_ _446_ _831_ vdd gnd OAI21X1
-X_2308_ _645_ i_clk_sys_ext_bF$buf10 \u_cpu.bufreg.data\[9] vdd gnd DFFPOSX1
-X_2481_ _780_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[16] vdd gnd DFFPOSX1
-X_2061_ _134_ _135_ _413__bF$buf2 _656_ vdd gnd MUX2X1
-X_1752_ \u_rf_if.o_waddr\[2] _1069_ _1071_ vdd gnd NOR2X1
-X_1332_ \u_cpu.alu.add_cy_r\ _381_ _380_ vdd gnd NAND2X1
-X_2537_ _619_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg2.dhi\[3] vdd gnd DFFPOSX1
-X_2117_ _493_ _167_ _165_ _168_ vdd gnd AOI21X1
-X_2290_ _567_ _566_ vdd gnd INVX1
-X_1808_ _938_ _1105_ vdd gnd INVX1
-X_1981_ _79_ _80_ _75_ _681_ vdd gnd MUX2X1
-X_1561_ _939_ _910_ _908_ _940_ vdd gnd AOI21X1
-X_2346_ _680_ i_clk_sys_ext_bF$buf4 \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[1] vdd gnd DFFPOSX1
-X_1617_ \u_rf_if.stream_cnt\[2] \u_rf_if.stream_cnt\[1] _982_ _983_ vdd gnd OAI21X1
-X_1790_ raddr[2] _969_ _1092_ vdd gnd NOR2X1
-X_1370_ _420_ \u_cpu.state.cnt_r\[2] _345_ _342_ vdd gnd AOI21X1
-X_2575_ _855_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[7] vdd gnd DFFPOSX1
-X_2155_ _459_ _195_ _465_ _196_ vdd gnd OAI21X1
-X_1846_ \u_cpu.alu.cmp_r\ _1138_ vdd gnd INVX1
-X_1426_ _289_ _288_ vdd gnd INVX1
-X_2384_ _710_ i_clk_sys_ext_bF$buf6 \u_cpu.bne_or_bge\ vdd gnd DFFPOSX1
-X_1655_ _383__bF$buf1 \u_rf_if.read_buf0\[12] \u_rf_if.read_buf0\[11] _990__bF$buf2 _1008_ vdd 
+X_1726_ mem_ibus_ack_bF$buf4 _1041_ _1042_ _755_ vdd gnd AOI21X1
+X_1306_ _495_ _395_ _394_ vdd gnd NAND2X1
+X_2264_ _400_ _403_ _1137_ _570_ vdd gnd AOI21X1
+X_1955_ \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[3] _56_ vdd gnd INVX1
+X_1535_ _902_ _905_ vdd gnd INVX1
+X_2493_ \u_mem_serial.bit_count\[1] _548_ _547_ vdd gnd NOR2X1
+X_2073_ \u_cpu.bufreg.data\[14] _137_ vdd gnd INVX1
+X_1764_ _325_ _285_ _1064_ _739_ vdd gnd AOI21X1
+X_1344_ \u_cpu.state.cnt_r\[2] _434_ _356_ vdd gnd NAND2X1
+X_2549_ _847_ i_clk_fast_bF$buf4 \u_mem_serial.shift_reg\[12] vdd gnd DFFPOSX1
+X_2129_ _347_ _543__bF$buf1 _506_ _528_ _622_ vdd 
 + gnd
 + OAI22X1
-X_1235_ _500_ _475_ _481_ _474_ vdd gnd OAI21X1
-X_2193_ _222_ _226_ _552__bF$buf3 _613_ vdd gnd MUX2X1
-X_1884_ \u_mem_serial.shift_reg\[13] mem_ibus_ack_bF$buf4 _14_ vdd gnd NAND2X1
-X_1464_ _811_ _333_ \u_rf_if.tx_state\[0] _836_ vdd gnd MUX2X1
-X_2249_ \u_cpu.ctrl.o_ibus_adr\[11] _261_ vdd gnd INVX1
-X_1693_ \u_rf_if.stream_active_bF$buf3\ _1029_ _1031_ _771_ vdd gnd AOI21X1
-X_1273_ \u_cpu.branch_op\ _438_ vdd gnd INVX2
-X_2478_ _731_ i_clk_sys_ext_bF$buf0 raddr[5] vdd gnd DFFPOSX1
-X_2058_ \u_cpu.bufreg.data\[21] _134_ vdd gnd INVX1
-X_1749_ _893_ _1069_ vdd gnd INVX1
-X_1329_ \u_rf_if.stream_active_bF$buf2\ _383_ vdd gnd INVX8
-X_2287_ \u_rf_if.read_buf1\[0] _812_ vdd gnd BUFX2
-X_1978_ _77_ _78_ _75_ _682_ vdd gnd MUX2X1
-X_1558_ _936_ _937_ vdd gnd INVX1
-X_2096_ _149_ _418_ _151_ _636_ vdd gnd MUX2X1
-X_1787_ _918_ _919_ _1090_ vdd gnd NAND2X1
-X_1367_ _346_ _347_ _345_ vdd gnd NOR2X1
-X_1596_ _964_ _518_ _967_ _820_ vdd gnd AOI21X1
-X_1176_ _536_ _530_ _552__bF$buf4 _850_ vdd gnd MUX2X1
-X_2402_ _641_[0] i_clk_sys_ext_bF$buf2 \u_cpu.state.o_cnt\[2] vdd gnd DFFPOSX1
-X_2211_ \u_mem_serial.shift_reg\[15] _551__bF$buf4 _1118_ \u_cpu.ctrl.o_ibus_adr\[1] _240_ vdd 
+X_1993_ _1051_ _83_ _81_ _673_ vdd gnd MUX2X1
+X_1573_ _939_ _933_ _940_ vdd gnd NOR2X1
+X_1153_ _1116_ o_mem_sync vdd gnd BUFX2
+X_2358_ _697_ i_clk_fast_bF$buf0 \u_mem_serial.bit_count\[2] vdd gnd DFFPOSX1
+X_1629_ _393__bF$buf4 _978_ _979_ _789_ vdd gnd OAI21X1
+X_1209_ \u_cpu.bufreg2.i_bytecnt\[1] _489_ vdd gnd INVX1
+X_1382_ _325_ _322_ _321_ _320_ vdd gnd OAI21X1
+X_2167_ _198_ _200_ _616_ vdd gnd NAND2X1
+X_1858_ _873__bF$buf5 _1137_ vdd gnd INVX1
+X_1438_ _515_ _270_ _269_ vdd gnd NOR2X1
+X_1191_ \u_mem_serial.shift_reg\[5] _506_ vdd gnd INVX1
+X_2396_ _736_ i_clk_fast_bF$buf5 \u_rf_if.last_req_key\[6] vdd gnd DFFPOSX1
+X_1667_ _1002_ _1003_ _775_ vdd gnd NOR2X1
+X_1247_ _452_ _496_ _451_ vdd gnd OR2X2
+X_1896_ i_clk_fast_bF$buf0 _13_ _1115_ vdd gnd NOR2X1
+X_1476_ \u_rf_if.tx_state\[0] _322_ _269_ _856_ vdd gnd OAI21X1
+X_1285_ _416_ _415_ vdd gnd INVX1
+X_2299_ _650_ i_clk_sys_ext_bF$buf5 \u_cpu.bufreg.data\[18] vdd gnd DFFPOSX1
+X_2511_ _812_ i_clk_sys_ext_bF$buf1 raddr[7] vdd gnd DFFPOSX1
+X_1799_ _939_ _1086_ _1087_ _727_ vdd gnd OAI21X1
+X_1379_ ren \u_rf_if.o_waddr\[3] _323_ vdd gnd NOR2X1
+X_2320_ _668_ i_clk_sys_ext_bF$buf6 rf_wreg0_to_if[1] vdd gnd DFFPOSX1
+X_1188_ _516_ _509_ _844_ vdd gnd NOR2X1
+X_1820_ \u_mem_serial.shift_reg\[30] _1104_ vdd gnd INVX1
+X_1400_ _303_ _302_ vdd gnd INVX1
+XFILL97650x46950 gnd vdd FILL
+X_2414_ _599_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[23] vdd gnd DFFPOSX1
+X_2223_ _236_ _237_ _873__bF$buf4 _595_ vdd gnd MUX2X1
+X_1914_ _23_ _553_ _27_ vdd gnd NOR2X1
+X_2452_ _770_ i_clk_sys_ext_bF$buf4 \u_rf_if.read_buf0\[20] vdd gnd DFFPOSX1
+X_2032_ _108_ _109_ _112_ _113_ vdd gnd OAI21X1
+X_1723_ \u_rf_if.issue_idx\[4] _1038_ _1040_ _756_ vdd gnd AOI21X1
+X_1303_ _436_ _398_ _397_ vdd gnd NOR2X1
+X_2508_ _612_ i_clk_fast_bF$buf0 \u_mem_serial.active_ibus\ vdd gnd DFFPOSX1
+X_2261_ \u_cpu.ctrl.o_ibus_adr\[29] _253_ vdd gnd INVX1
+X_1952_ _1043_ _54_ _51_ _685_ vdd gnd MUX2X1
+X_1532_ _900_ _901_ _902_ vdd gnd NOR2X1
+X_2317_ _729_ i_clk_sys_ext_bF$buf1 raddr[2] vdd gnd DFFPOSX1
+X_2490_ _552_ _545_ _544_ vdd gnd NOR2X1
+X_2070_ _134_ _135_ _426__bF$buf0 _648_ vdd gnd MUX2X1
+X_1761_ _302_ _285_ i_rst_n_bF$buf2 _1063_ vdd gnd OAI21X1
+X_1341_ \u_cpu.alu.cmp_r\ _360_ _361_ _359_ vdd gnd AOI21X1
+X_2546_ _572_ i_clk_sys_ext_bF$buf5 \u_cpu.ctrl.o_ibus_adr\[29] vdd gnd DFFPOSX1
+X_2126_ \u_mem_serial.state\[1] _536_ _1116_ _168_ vdd gnd OAI21X1
+X_1817_ _1100_ _1101_ _559_ _1102_ vdd gnd MUX2X1
+X_1990_ \u_mem_serial.shift_reg\[23] rf_read_reg1_to_if[4] mem_ibus_ack_bF$buf6 _82_ vdd gnd MUX2X1
+X_1570_ _936_ _380_ _937_ vdd gnd NOR2X1
+X_1150_ _1119_ o_rf_sync vdd gnd BUFX2
+X_2355_ _579_ i_clk_sys_ext_bF$buf3 \u_cpu.ctrl.o_ibus_adr\[4] vdd gnd DFFPOSX1
+X_1626_ _393__bF$buf3 _975_ _977_ _790_ vdd gnd OAI21X1
+X_1206_ \u_cpu.bne_or_bge\ \u_cpu.decode.co_mem_word\ _493_ _492_ vdd gnd OAI21X1
+X_2164_ _191_ _197_ _463_ _198_ vdd gnd OAI21X1
+XFILL97950x54150 gnd vdd FILL
+X_1855_ \u_cpu.decode.opcode\[0] _1135_ _1123_ _1136_ vdd gnd OAI21X1
+X_1435_ _1119_ _271_ vdd gnd INVX1
+X_2393_ _615_[2] i_clk_sys_ext_bF$buf13 \u_cpu.bufreg2.i_bytecnt\[1] vdd gnd DFFPOSX1
+X_1664_ \u_rf_if.stream_active\ _999_ _1001_ _776_ vdd gnd AOI21X1
+X_1244_ \u_cpu.bufreg2.dhi\[4] _458_ _455_ _454_ vdd gnd OAI21X1
+X_2449_ _767_ i_clk_sys_ext_bF$buf4 \u_rf_if.read_buf0\[23] vdd gnd DFFPOSX1
+X_2029_ \u_cpu.decode.opcode\[0] \u_cpu.decode.opcode\[2] \u_cpu.decode.opcode\[1] _110_ vdd gnd AOI21X1
+X_1893_ \u_mem_serial.shift_reg\[2] mem_ibus_ack_bF$buf2 _12_ vdd gnd NAND2X1
+X_1473_ _292_ _514_ _853_ vdd gnd OR2X2
+X_2258_ \u_cpu.ctrl.o_ibus_adr\[30] _251_ vdd gnd INVX1
+X_1949_ \u_mem_serial.shift_reg\[17] rf_read_reg0_to_if[3] mem_ibus_ack_bF$buf0 _53_ vdd gnd MUX2X1
+X_1529_ \u_rf_if.stream_cnt\[3] _899_ vdd gnd INVX1
+X_1282_ _470_ _469_ _418_ vdd gnd NOR2X1
+X_2487_ \u_mem_serial.shift_reg\[10] _542__bF$buf2 _543__bF$buf1 _541_ vdd gnd NAND3X1
+X_2067_ \u_cpu.bufreg.data\[17] _134_ vdd gnd INVX1
+X_1758_ _314_ _285_ _1061_ _742_ vdd gnd AOI21X1
+X_1338_ \u_cpu.bufreg.i_right_shift_op\ _365_ _363_ _362_ vdd gnd NAND3X1
+X_2296_ _647_ i_clk_sys_ext_bF$buf5 \u_cpu.bufreg.data\[15] vdd gnd DFFPOSX1
+X_1987_ _78_ _79_ _70_ _675_ vdd gnd MUX2X1
+X_1567_ \u_rf_if.stream_cnt\[2] \u_rf_if.stream_cnt\[1] \u_rf_if.stream_cnt\[3] _934_ vdd gnd NAND3X1
+X_1796_ _898_ _1085_ _1083_ _1084_ _728_ vdd 
 + gnd
 + AOI22X1
-X_1902_ _504_ _22_ _23_ _703_ vdd gnd OAI21X1
-X_1499_ _886_ _848_ _805_ _1122_ vdd gnd AOI21X1
-X_2440_ _607_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[17] vdd gnd DFFPOSX1
-X_2020_ _518_ _1110_ _107_ _108_ vdd gnd OAI21X1
-X_1711_ _969_ _1043_ vdd gnd INVX1
-X_1940_ \u_mem_serial.shift_reg\[30] mem_ibus_ack_bF$buf7 _51_ vdd gnd NAND2X1
-X_1520_ \u_rf_if.rcnt\[1] _903_ vdd gnd INVX1
-X_2305_ _642_ i_clk_sys_ext_bF$buf9 \u_cpu.bufreg.data\[6] vdd gnd DFFPOSX1
-X_2534_ _618_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.i_shamt\[2] vdd gnd DFFPOSX1
-X_2114_ _166_ _149_ _151_ _633_ vdd gnd MUX2X1
-X_1805_ \u_rf_if.rreg1_latched\[2] _973_ _972_ raddr[6] _1103_ vdd 
+X_1376_ _333_ _332_ _327_ _326_ vdd gnd AOI21X1
+X_1185_ \u_rf_if.tx_state\[3] \u_rf_if.tx_state\[4] _511_ vdd gnd NOR2X1
+X_2199_ \u_cpu.bufreg2.cnt_next\[6] _177_ _223_ vdd gnd NOR2X1
+X_2411_ _598_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[22] vdd gnd DFFPOSX1
+X_1699_ \u_rf_if.read_buf0\[27] _943__bF$buf2 \u_rf_if.read_buf0\[29] _926_ _1024_ vdd 
++ gnd
++ OAI22X1
+X_1279_ \u_cpu.decode.opcode\[0] _422_ _421_ vdd gnd NOR2X1
+X_2220_ \u_cpu.ctrl.o_ibus_adr\[21] _236_ vdd gnd INVX1
+X_1911_ _549_ _20_ _25_ vdd gnd NOR2X1
+X_1720_ \u_rf_if.issue_idx\[3] _1035_ _896_ _1039_ vdd gnd OAI21X1
+X_1300_ _410_ _401_ _400_ vdd gnd OR2X2
+X_2505_ _810_ i_clk_sys_ext_bF$buf2 \u_rf_if.stream_cnt\[0] vdd gnd DFFPOSX1
+X_2314_ _663_ i_clk_sys_ext_bF$buf12 \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[5] vdd gnd DFFPOSX1
+X_2543_ \u_rf_if.rtrig0\ i_clk_sys_ext_bF$buf6 \u_rf_if.rtrig1\ vdd gnd DFFPOSX1
+X_2123_ _506_ _543__bF$buf2 _1121_ _528_ _626_ vdd 
++ gnd
++ OAI22X1
+XFILL97650x32550 gnd vdd FILL
+X_1814_ _526_ _542__bF$buf4 _1099_ vdd gnd NAND2X1
+X_2352_ _578_ i_clk_sys_ext_bF$buf9 \u_cpu.ctrl.o_ibus_adr\[3] vdd gnd DFFPOSX1
+X_1623_ \u_rf_if.read_buf0\[1] _975_ vdd gnd INVX1
+X_1203_ \u_cpu.decode.co_mem_word\ _495_ vdd gnd INVX2
+X_2408_ _742_ i_clk_fast_bF$buf5 \u_rf_if.last_req_key\[0] vdd gnd DFFPOSX1
+X_2161_ _178_ _194_ _195_ _196_ vdd gnd OAI21X1
+X_1852_ \u_cpu.bne_or_bge\ _1132_ _1133_ vdd gnd NAND2X1
+X_1432_ _274_ _281_ _273_ vdd gnd NAND2X1
+X_2217_ _233_ _234_ _873__bF$buf0 _599_ vdd gnd MUX2X1
+X_2390_ _587_ i_clk_sys_ext_bF$buf5 \u_cpu.ctrl.o_ibus_adr\[12] vdd gnd DFFPOSX1
+XFILL97950x75750 gnd vdd FILL
+X_1908_ _550_ _529_ _22_ _697_ vdd gnd OAI21X1
+X_1661_ _393__bF$buf0 \u_rf_if.read_buf0\[14] \u_rf_if.read_buf0\[13] _943__bF$buf4 _1000_ vdd 
++ gnd
++ OAI22X1
+X_1241_ \u_cpu.bufreg2.dhi\[4] _458_ _457_ vdd gnd NOR2X1
+X_2446_ _764_ i_clk_sys_ext_bF$buf2 \u_rf_if.read_buf0\[26] vdd gnd DFFPOSX1
+X_2026_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[5] _107_ vdd gnd INVX1
+X_1717_ _896_ _1036_ _1037_ vdd gnd NAND2X1
+X_1890_ mem_ibus_ack_bF$buf1 \u_cpu.decode.opcode\[2] _11_ vdd gnd NOR2X1
+X_1470_ _803_ _840_ _842_ vdd gnd NOR2X1
+X_2255_ _248_ _873__bF$buf5 _249_ _575_ vdd gnd AOI21X1
+X_1946_ mem_ibus_ack_bF$buf3 _50_ _48_ _51_ vdd gnd OAI21X1
+X_1526_ _896_ _897_ vdd gnd INVX1
+X_2484_ \u_mem_serial.shift_reg\[7] _542__bF$buf2 _543__bF$buf1 _539_ vdd gnd NAND3X1
+X_2064_ _131_ _132_ _426__bF$buf0 _651_ vdd gnd MUX2X1
+X_1755_ _1060_ _261_ _744_ vdd gnd AND2X2
+X_1335_ \u_cpu.bne_or_bge\ _365_ vdd gnd INVX1
+X_2293_ \u_cpu.state.cnt_r\[1] i_clk_sys_ext_bF$buf5 \u_cpu.state.cnt_r\[2] vdd gnd DFFPOSX1
+X_1984_ _76_ _77_ _70_ _676_ vdd gnd MUX2X1
+X_1564_ _918_ _931_ \u_rf_if.prefetch_active\ _932_ vdd gnd OAI21X1
+X_2349_ _693_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[22] vdd gnd DFFPOSX1
+X_1793_ \u_rf_if.issue_idx\[3] _933_ _1083_ vdd gnd NAND2X1
+X_1373_ \u_rf_if.last_req_key\[4] _330_ _329_ vdd gnd NAND2X1
+X_2578_ _721_ i_clk_fast_bF$buf4 \u_mem_serial.shift_reg\[1] vdd gnd DFFPOSX1
+X_2158_ _459_ _192_ _463_ _193_ vdd gnd OAI21X1
+X_1849_ _1128_ _1129_ _1130_ vdd gnd OR2X2
+X_1429_ \u_rf_if.tx_state\[3] _512_ \u_rf_if.tx_state\[4] _275_ vdd gnd OAI21X1
+X_1182_ _515_ _514_ vdd gnd INVX2
+X_2387_ _569_ i_clk_sys_ext_bF$buf9 \u_cpu.ctrl.pc_plus_4_cy_r_w\ vdd gnd DFFPOSX1
+X_1658_ \u_rf_if.read_buf0\[12] _943__bF$buf4 \u_rf_if.read_buf0\[14] _926_ _998_ vdd 
++ gnd
++ OAI22X1
+X_1238_ _462_ _461_ _460_ vdd gnd NAND2X1
+X_2196_ \u_mem_serial.shift_reg\[25] _870_ _221_ vdd gnd NOR2X1
+X_1887_ mem_ibus_ack_bF$buf1 _365_ _9_ _705_ vdd gnd OAI21X1
+X_1467_ \u_cpu.o_wdata0\ _805_ _833_ vdd gnd AND2X2
+X_1696_ \u_rf_if.read_buf0\[28] _1022_ vdd gnd INVX1
+X_1276_ _432_ _425_ _424_ vdd gnd NOR2X1
+X_2502_ _610_ i_clk_fast_bF$buf2 \u_mem_serial.shift_reg\[10] vdd gnd DFFPOSX1
+X_2099_ \u_cpu.bufreg.data\[31] _149_ vdd gnd INVX1
+X_2311_ _660_ i_clk_sys_ext_bF$buf13 \u_cpu.bufreg.data\[28] vdd gnd DFFPOSX1
+X_1599_ _795_ _889_ \u_rf_if.wdata0_next_phase\ _959_ vdd gnd OAI21X1
+X_1179_ _519_ _518_ _517_ vdd gnd NOR2X1
+X_2540_ _838_ i_clk_fast_bF$buf7 \u_rf_if.last_req_key\[9] vdd gnd DFFPOSX1
+X_2120_ \u_mem_serial.shift_reg\[14] _165_ vdd gnd INVX1
+X_1811_ \u_rf_if.rs2_stream_buf\[0] _947_ _936_ _1097_ vdd gnd OAI21X1
+X_1620_ _899_ _970_ _973_ _807_ vdd gnd OAI21X1
+X_1200_ \u_rf_if.rcnt\[0] _498_ vdd gnd INVX1
+X_2405_ _594_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[19] vdd gnd DFFPOSX1
+X_2214_ \u_cpu.ctrl.o_ibus_adr\[24] _233_ vdd gnd INVX1
+X_1905_ \u_mem_serial.bit_count\[2] _19_ _20_ vdd gnd NOR2X1
+X_2443_ _761_ i_clk_sys_ext_bF$buf2 \u_rf_if.read_buf0\[29] vdd gnd DFFPOSX1
+X_2023_ _100_ _51_ _105_ _665_ vdd gnd AOI21X1
+X_1714_ \u_rf_if.issue_idx\[0] _1033_ _1034_ vdd gnd NAND2X1
+X_2252_ \u_cpu.ctrl.o_ibus_adr\[1] _248_ vdd gnd INVX1
+X_1943_ _47_ _48_ vdd gnd INVX1
+X_1523_ \u_rf_if.prefetch_active\ _894_ _895_ vdd gnd NOR2X1
+X_2308_ _657_ i_clk_sys_ext_bF$buf3 \u_cpu.bufreg.data\[25] vdd gnd DFFPOSX1
+X_2481_ _817_ i_clk_sys_ext_bF$buf6 \u_rf_if.write_wait\[1] vdd gnd DFFPOSX1
+X_2061_ \u_cpu.bufreg.data\[20] _131_ vdd gnd INVX1
+X_1752_ _269_ _1058_ _745_ vdd gnd NOR2X1
+X_1332_ _369_ _370_ _368_ vdd gnd NAND2X1
+X_2537_ _622_ i_clk_fast_bF$buf1 \u_mem_serial.shift_reg\[6] vdd gnd DFFPOSX1
+X_2117_ _385_ _149_ _163_ vdd gnd NOR2X1
+X_2290_ \u_mem_serial.bit_count\[4] _551_ vdd gnd INVX1
+X_1808_ \u_rf_if.rs2_stream_buf\[0] _1094_ vdd gnd INVX1
+X_1981_ _74_ _75_ _70_ _677_ vdd gnd MUX2X1
+X_1561_ _926_ _912_ _929_ _822_ vdd gnd OAI21X1
+X_2346_ _691_ i_clk_sys_ext_bF$buf7 \u_cpu.branch_op\ vdd gnd DFFPOSX1
+X_1617_ _971_ _972_ vdd gnd INVX1
+X_1790_ _305_ _932_ _1081_ vdd gnd NAND2X1
+X_1370_ \u_rf_if.last_req_key\[6] _334_ _332_ vdd gnd NAND2X1
+X_2575_ _642_ i_clk_sys_ext_bF$buf11 \u_cpu.bufreg.data\[10] vdd gnd DFFPOSX1
+X_2155_ \u_cpu.bufreg2.dhi\[3] _190_ vdd gnd INVX1
+X_1846_ _370_ _369_ _1126_ _1127_ vdd gnd AOI21X1
+X_1426_ i_rst_n_bF$buf3 _277_ vdd gnd INVX1
+X_2384_ _715_ i_clk_sys_ext_bF$buf5 \u_cpu.state.cnt_r\[0] vdd gnd DFFPOSX1
+X_1655_ \u_rf_if.read_buf0\[11] _943__bF$buf4 \u_rf_if.read_buf0\[13] _926_ _996_ vdd 
++ gnd
++ OAI22X1
+X_1235_ _464_ _463_ vdd gnd INVX4
+X_2193_ _142_ _218_ _559_ _219_ vdd gnd MUX2X1
+X_1884_ \u_mem_serial.shift_reg\[13] mem_ibus_ack_bF$buf3 _8_ vdd gnd NAND2X1
+X_1464_ _800_ _802_ \u_rf_if.tx_state\[1] _803_ vdd gnd AOI21X1
+X_2249_ _1143_ _1101_ _873__bF$buf3 _579_ vdd gnd MUX2X1
+X_1693_ \u_rf_if.read_buf0\[27] _1020_ vdd gnd INVX1
+X_1273_ \u_cpu.bufreg.i_right_shift_op\ _452_ _428_ _427_ vdd gnd OAI21X1
+X_2478_ _731_ i_clk_sys_ext_bF$buf1 raddr[0] vdd gnd DFFPOSX1
+X_2058_ _128_ _129_ _426__bF$buf4 _654_ vdd gnd MUX2X1
+X_1749_ i_rst_n_bF$buf0 _282_ _1057_ vdd gnd NAND2X1
+X_1329_ _372_ _371_ vdd gnd INVX1
+X_2287_ _561_ _555_ _560_ _554_ vdd gnd OAI21X1
+X_1978_ _72_ _73_ _70_ _678_ vdd gnd MUX2X1
+X_1558_ \u_rf_if.read_buf0\[30] _393__bF$buf2 _927_ vdd gnd NAND2X1
+X_2096_ _466_ _425_ _146_ _147_ vdd gnd OAI21X1
+X_1787_ _313_ _820_ _1078_ _730_ vdd gnd OAI21X1
+X_1367_ ren raddr[6] _342_ _336_ _335_ vdd 
 + gnd
 + AOI22X1
-X_2343_ _677_ i_clk_sys_ext_bF$buf10 rf_read_reg1_to_if[2] vdd gnd DFFPOSX1
-X_1614_ \u_rf_if.stream_cnt\[2] _928_ _980_ vdd gnd NAND2X1
-X_2572_ _854_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[11] vdd gnd DFFPOSX1
-X_2152_ _187_ _193_ _192_ _622_ vdd gnd OAI21X1
-XCLKBUF1_insert43 i_clk_fast i_clk_fast_bF$buf7 vdd gnd CLKBUF1
-XCLKBUF1_insert44 i_clk_fast i_clk_fast_bF$buf6 vdd gnd CLKBUF1
-XCLKBUF1_insert45 i_clk_fast i_clk_fast_bF$buf5 vdd gnd CLKBUF1
-XCLKBUF1_insert46 i_clk_fast i_clk_fast_bF$buf4 vdd gnd CLKBUF1
-XCLKBUF1_insert47 i_clk_fast i_clk_fast_bF$buf3 vdd gnd CLKBUF1
-XCLKBUF1_insert48 i_clk_fast i_clk_fast_bF$buf2 vdd gnd CLKBUF1
-XCLKBUF1_insert49 i_clk_fast i_clk_fast_bF$buf1 vdd gnd CLKBUF1
-X_1843_ _505__bF$buf1 _1134_ _1135_ _719_ vdd gnd AOI21X1
-X_1423_ _293_ \u_rf_if.last_req_key\[4] _291_ vdd gnd AND2X2
-X_2208_ \u_cpu.bufreg2.cnt_next\[6] _189_ _238_ vdd gnd NOR2X1
-X_2381_ _707_ i_clk_sys_ext_bF$buf6 \u_cpu.decode.opcode\[1] vdd gnd DFFPOSX1
-X_1652_ _383__bF$buf1 \u_rf_if.read_buf0\[11] \u_rf_if.read_buf0\[10] _990__bF$buf2 _1006_ vdd 
+X_1596_ _956_ _954_ _957_ vdd gnd OR2X2
+X_1176_ _520_ _526_ _543__bF$buf4 _845_ vdd gnd MUX2X1
+X_2402_ _739_ i_clk_fast_bF$buf5 \u_rf_if.last_req_key\[3] vdd gnd DFFPOSX1
+X_2211_ _231_ _230_ _873__bF$buf1 _602_ vdd gnd MUX2X1
+X_1902_ _16_ _17_ _542__bF$buf0 _18_ vdd gnd OAI21X1
+X_1499_ _875_ _438_ \u_cpu.decode.opcode\[2] _876_ vdd gnd AOI21X1
+X_2440_ _759_ i_clk_sys_ext_bF$buf1 \u_rf_if.issue_idx\[1] vdd gnd DFFPOSX1
+X_2020_ rf_read_reg1_to_if[0] \u_cpu.branch_op\ _102_ _103_ vdd gnd OAI21X1
+X_1711_ _1030_ _1031_ _759_ vdd gnd AND2X2
+XFILL97950x7350 gnd vdd FILL
+X_1940_ \u_mem_serial.shift_reg\[30] mem_ibus_ack_bF$buf5 _46_ vdd gnd NAND2X1
+X_1520_ _888_ _891_ _892_ _826_ vdd gnd AOI21X1
+X_2305_ \u_cpu.state.cnt_r\[0] i_clk_sys_ext_bF$buf5 \u_cpu.state.cnt_r\[1] vdd gnd DFFPOSX1
+X_2534_ _571_ i_clk_sys_ext_bF$buf5 \u_cpu.ctrl.o_ibus_adr\[28] vdd gnd DFFPOSX1
+X_2114_ \u_cpu.bufreg.data\[2] _490_ _161_ _162_ vdd gnd AOI21X1
+X_1805_ _939_ _1090_ _1091_ _725_ vdd gnd OAI21X1
+X_2343_ _688_ i_clk_sys_ext_bF$buf9 \u_cpu.bufreg.i_sh_signed\ vdd gnd DFFPOSX1
+X_1614_ \u_rf_if.stream_cnt\[2] _969_ vdd gnd INVX1
+X_2572_ _640_ i_clk_sys_ext_bF$buf3 \u_cpu.bufreg.data\[8] vdd gnd DFFPOSX1
+X_2152_ _184_ _463_ _187_ _188_ vdd gnd OAI21X1
+XCLKBUF1_insert40 i_clk_sys_ext i_clk_sys_ext_bF$buf8 vdd gnd CLKBUF1
+XCLKBUF1_insert41 i_clk_sys_ext i_clk_sys_ext_bF$buf7 vdd gnd CLKBUF1
+XCLKBUF1_insert42 i_clk_sys_ext i_clk_sys_ext_bF$buf6 vdd gnd CLKBUF1
+XCLKBUF1_insert43 i_clk_sys_ext i_clk_sys_ext_bF$buf5 vdd gnd CLKBUF1
+XCLKBUF1_insert44 i_clk_sys_ext i_clk_sys_ext_bF$buf4 vdd gnd CLKBUF1
+XCLKBUF1_insert45 i_clk_sys_ext i_clk_sys_ext_bF$buf3 vdd gnd CLKBUF1
+XCLKBUF1_insert46 i_clk_sys_ext i_clk_sys_ext_bF$buf2 vdd gnd CLKBUF1
+XCLKBUF1_insert47 i_clk_sys_ext i_clk_sys_ext_bF$buf1 vdd gnd CLKBUF1
+XCLKBUF1_insert48 i_clk_sys_ext i_clk_sys_ext_bF$buf0 vdd gnd CLKBUF1
+XCLKBUF1_insert49 i_clk_fast i_clk_fast_bF$buf7 vdd gnd CLKBUF1
+X_1843_ \u_cpu.alu.cmp_r\ _1124_ vdd gnd INVX1
+XFILL97950x82950 gnd vdd FILL
+X_1423_ \u_rf_if.tx_state\[1] _282_ _281_ _280_ vdd gnd NAND3X1
+X_2208_ _229_ _525_ _543__bF$buf4 _603_ vdd gnd MUX2X1
+X_2381_ _585_ i_clk_sys_ext_bF$buf13 \u_cpu.ctrl.o_ibus_adr\[10] vdd gnd DFFPOSX1
+X_1652_ \u_rf_if.read_buf0\[10] _943__bF$buf3 \u_rf_if.read_buf0\[12] _926_ _994_ vdd 
 + gnd
 + OAI22X1
-X_1232_ _480_ _478_ _477_ vdd gnd NAND2X1
-X_2437_ _751_ i_clk_sys_ext_bF$buf0 \u_rf_if.o_waddr\[2] vdd gnd DFFPOSX1
-X_2017_ _518_ _402_ _105_ vdd gnd NAND2X1
-X_2190_ \u_cpu.ctrl.o_ibus_adr\[8] _224_ vdd gnd INVX1
-X_1708_ _1040_ _911_ _1041_ vdd gnd OR2X2
-X_1881_ _10_ _11_ _567_ _12_ vdd gnd MUX2X1
-X_1461_ _525_ _807_ _809_ vdd gnd NOR2X1
-X_2246_ _258_ _259_ _440__bF$buf5 _593_ vdd gnd MUX2X1
-X_1937_ _518_ _1151_ _49_ _694_ vdd gnd OAI21X1
-X_1517_ \u_rf_if.wdata0_next_phase\ _900_ _898_ _901_ vdd gnd MUX2X1
-X_1690_ _383__bF$buf2 \u_rf_if.read_buf0\[25] \u_rf_if.read_buf0\[24] _990__bF$buf0 _1030_ vdd 
+X_1232_ _490_ _466_ vdd gnd INVX1
+X_2437_ \u_rf_if.i_stream_rs2_en\ i_clk_sys_ext_bF$buf6 current_stream_rs2_hint vdd gnd DFFPOSX1
+X_2017_ rf_read_reg0_to_if[4] _100_ vdd gnd INVX1
+X_2190_ \u_mem_serial.shift_reg\[25] _543__bF$buf5 _216_ vdd gnd NOR2X1
+X_1708_ _1028_ _920_ _1029_ vdd gnd NOR2X1
+X_1881_ _4_ _5_ _559_ _6_ vdd gnd MUX2X1
+X_1461_ _717_ \u_rf_if.i_stream_rs2_en\ _799_ _800_ vdd gnd OAI21X1
+X_2246_ _213_ _5_ _873__bF$buf3 _582_ vdd gnd MUX2X1
+X_1937_ _508_ _1098_ _44_ vdd gnd NOR2X1
+X_1517_ _719_ _889_ _890_ vdd gnd NOR2X1
+X_1690_ \u_rf_if.read_buf0\[26] _1018_ vdd gnd INVX1
+X_1270_ _491_ _431_ _430_ vdd gnd NAND2X1
+X_2475_ _788_ i_clk_sys_ext_bF$buf8 \u_rf_if.read_buf0\[2] vdd gnd DFFPOSX1
+X_2055_ \u_cpu.bufreg.data\[23] _128_ vdd gnd INVX1
+X_1746_ \u_rf_if.o_waddr\[2] _865_ _1055_ vdd gnd NOR2X1
+X_1326_ \u_cpu.branch_op\ _383_ _377_ _374_ vdd gnd OAI21X1
+X_2284_ i_clk_sys_ext_bF$buf0 _557_ vdd gnd INVX1
+X_1975_ _68_ _71_ _70_ _679_ vdd gnd MUX2X1
+X_1555_ _919_ _923_ _924_ vdd gnd NAND2X1
+X_2093_ _523_ _144_ _426__bF$buf1 _634_ vdd gnd MUX2X1
+X_1784_ \u_rf_if.stream_cnt\[2] \u_rf_if.stream_cnt\[1] _939_ _1076_ vdd gnd OAI21X1
+X_1364_ \u_rf_if.last_req_key\[7] _340_ _338_ vdd gnd NOR2X1
+X_2569_ _637_ i_clk_sys_ext_bF$buf3 \u_cpu.bufreg.data\[5] vdd gnd DFFPOSX1
+X_2149_ _184_ _459_ _185_ vdd gnd NOR2X1
+X_1593_ \u_rf_if.rcnt\[0] \u_rf_if.rcnt\[1] _954_ vdd gnd NOR2X1
+X_1173_ \u_cpu.ctrl.o_ibus_adr\[3] _522_ vdd gnd INVX1
+X_2378_ \u_cpu.state.cnt_r\[2] i_clk_sys_ext_bF$buf5 \u_cpu.state.cnt_r\[3] vdd gnd DFFPOSX1
+X_1649_ \u_rf_if.read_buf0\[11] _992_ vdd gnd INVX1
+X_1229_ \u_cpu.decode.opcode\[2] _469_ vdd gnd INVX2
+X_2187_ _143_ _213_ _559_ _214_ vdd gnd MUX2X1
+X_1878_ _2_ _542__bF$buf4 _3_ vdd gnd NAND2X1
+X_1458_ _795_ \u_rf_if.wdata0_next_phase\ _797_ vdd gnd AND2X2
+X_1687_ \u_rf_if.read_buf0\[25] _1016_ vdd gnd INVX1
+X_1267_ \u_cpu.state.cnt_r\[0] _434_ _433_ vdd gnd NAND2X1
+X_1496_ _473_ _466_ _873_ vdd gnd NOR2X1
+X_2302_ _653_ i_clk_sys_ext_bF$buf13 \u_cpu.bufreg.data\[21] vdd gnd DFFPOSX1
+X_2531_ _832_ i_clk_sys_ext_bF$buf8 \u_rf_if.o_waddr\[3] vdd gnd DFFPOSX1
+X_2111_ _153_ _158_ _159_ vdd gnd OR2X2
+X_1802_ _939_ _1088_ _1089_ _726_ vdd gnd OAI21X1
+X_1399_ ren \u_rf_if.o_waddr\[2] _304_ _303_ vdd gnd OAI21X1
+X_2340_ _686_ i_clk_sys_ext_bF$buf0 rf_read_reg0_to_if[2] vdd gnd DFFPOSX1
+X_1611_ _393__bF$buf3 _901_ _967_ _810_ vdd gnd AOI21X1
+X_1840_ _1121_ _543__bF$buf2 _502_ _528_ _714_ vdd 
 + gnd
 + OAI22X1
-X_1270_ _526_ _441_ _845_ vdd gnd NOR2X1
-X_2475_ _732_ i_clk_sys_ext_bF$buf0 raddr[4] vdd gnd DFFPOSX1
-X_2055_ _131_ _132_ _413__bF$buf1 _659_ vdd gnd MUX2X1
-X_1746_ _1067_ _443_ _754_ vdd gnd NOR2X1
-X_1326_ \u_cpu.decode.opcode\[0] _424_ _386_ vdd gnd NOR2X1
-X_2284_ _476_ _1145_ _274_ _570_ vdd gnd OAI21X1
-X_1975_ _73_ _76_ _75_ _683_ vdd gnd MUX2X1
-X_1555_ \u_rf_if.stream_cnt\[4] _934_ _931_ _828_ vdd gnd OAI21X1
-X_2093_ \u_cpu.state.i_ctrl_misalign\ _149_ vdd gnd INVX1
-X_1784_ _919_ _927_ raddr[0] _829_ _1088_ vdd 
-+ gnd
-+ OAI22X1
-X_1364_ \u_cpu.state.cnt_r\[2] _420_ _348_ vdd gnd NAND2X1
-X_2569_ _628_ i_clk_fast_bF$buf4 \u_mem_serial.state\[1] vdd gnd DFFPOSX1
-X_2149_ _488_ _185_ _466_ _191_ vdd gnd NAND3X1
-X_1593_ _963_ _965_ _966_ vdd gnd NAND2X1
-X_1173_ \u_cpu.ctrl.o_ibus_adr\[3] _532_ vdd gnd INVX1
-X_2378_ _703_ i_clk_fast_bF$buf0 \u_mem_serial.bit_count\[1] vdd gnd DFFPOSX1
-X_1649_ \u_rf_if.read_buf0\[11] _947__bF$buf3 \u_rf_if.read_buf0\[9] _990__bF$buf3 _1004_ vdd 
-+ gnd
-+ OAI22X1
-X_1229_ \u_cpu.state.cnt_r\[2] _480_ vdd gnd INVX1
-X_2187_ _505__bF$buf3 _220_ _221_ _614_ vdd gnd AOI21X1
-XFILL98550x3750 gnd vdd FILL
-X_1878_ _8_ _551__bF$buf4 _9_ vdd gnd NAND2X1
-X_1458_ _524_ _338_ _806_ vdd gnd NOR2X1
-X_1687_ _383__bF$buf2 \u_rf_if.read_buf0\[24] \u_rf_if.read_buf0\[23] _990__bF$buf0 _1028_ vdd 
-+ gnd
-+ OAI22X1
-X_1267_ _501_ _443_ \u_rf_if.rtrig0\ vdd gnd NOR2X1
-X_1496_ _293_ _807_ _883_ _884_ vdd gnd AOI21X1
-X_2302_ _555_ _556_ _554_ vdd gnd NOR2X1
-X_2531_ _821_ i_clk_sys_ext_bF$buf13 \u_rf_if.issue_idx\[5] vdd gnd DFFPOSX1
-X_2111_ _157_ _162_ _493_ _164_ vdd gnd AOI21X1
-X_1802_ \u_rf_if.rreg1_latched\[1] _973_ _972_ raddr[5] _1101_ vdd 
+X_1420_ _345_ _284_ _283_ _838_ vdd gnd AOI21X1
+X_2205_ \u_cpu.ctrl.o_ibus_adr\[2] _227_ vdd gnd INVX1
+X_2434_ _605_ i_clk_sys_ext_bF$buf13 \u_cpu.bufreg2.cnt_next\[6] vdd gnd DFFPOSX1
+X_2014_ _87_ _97_ _98_ _667_ vdd gnd OAI21X1
+X_1705_ _920_ _933_ _1027_ vdd gnd NAND2X1
+X_2243_ _246_ _247_ _873__bF$buf2 _585_ vdd gnd MUX2X1
+X_1934_ _347_ _470_ mem_ibus_ack_bF$buf1 _691_ vdd gnd MUX2X1
+X_1514_ mem_ibus_ack_bF$buf7 _886_ _887_ _827_ vdd gnd AOI21X1
+X_2472_ _786_ i_clk_sys_ext_bF$buf8 \u_rf_if.read_buf0\[4] vdd gnd DFFPOSX1
+X_2052_ _125_ _126_ _426__bF$buf3 _657_ vdd gnd MUX2X1
+X_1743_ _861_ _862_ _1053_ _749_ vdd gnd AOI21X1
+X_1323_ _381_ _379_ _378_ _377_ vdd gnd OAI21X1
+X_2528_ _620_ i_clk_sys_ext_bF$buf13 \u_cpu.bufreg2.dhi\[6] vdd gnd DFFPOSX1
+X_2108_ _155_ _154_ _156_ vdd gnd OR2X2
+X_2281_ \u_mem_serial.state\[0] \u_mem_serial.state\[1] _560_ vdd gnd NOR2X1
+X_1972_ _406_ _11_ _69_ vdd gnd NAND2X1
+X_1552_ \u_rf_if.issue_idx\[1] _920_ _921_ vdd gnd NOR2X1
+X_2337_ _684_ i_clk_sys_ext_bF$buf0 \u_cpu.csr_imm\ vdd gnd DFFPOSX1
+X_2090_ _1142_ _1100_ _426__bF$buf3 _636_ vdd gnd MUX2X1
+X_1608_ \u_rf_if.shift_rx\[1] _965_ i_rst_n_bF$buf0 _966_ vdd gnd OAI21X1
+X_1781_ _900_ _937_ _1074_ vdd gnd NAND2X1
+X_1361_ _344_ rf_wreg0_to_if[3] _341_ vdd gnd AND2X2
+X_2566_ _635_ i_clk_sys_ext_bF$buf9 \u_cpu.bufreg.data\[3] vdd gnd DFFPOSX1
+X_2146_ _182_ _183_ vdd gnd INVX1
+X_1837_ _487_ _481_ _953_ _1114_ vdd gnd OAI21X1
+X_1417_ _440_ _286_ _285_ vdd gnd NAND2X1
+X_1590_ _948_ _952_ _816_ vdd gnd NOR2X1
+X_1170_ \u_mem_serial.shift_reg\[18] _525_ vdd gnd INVX1
+X_2375_ _712_ i_clk_sys_ext_bF$buf7 \u_cpu.state.init_done\ vdd gnd DFFPOSX1
+X_1646_ _989_ _925__bF$buf3 _990_ _783_ vdd gnd AOI21X1
+X_1226_ \u_cpu.bufreg.i_right_shift_op\ _473_ _472_ vdd gnd NAND2X1
+X_2184_ _543__bF$buf4 _210_ _211_ _609_ vdd gnd AOI21X1
+X_1875_ _870_ _1149_ _1120_ _508_ _708_ vdd 
 + gnd
 + AOI22X1
-X_1399_ _317_ _316_ _318_ _315_ vdd gnd AOI21X1
-X_2340_ _674_ i_clk_sys_ext_bF$buf9 rf_wreg0_to_if[3] vdd gnd DFFPOSX1
-XFILL98550x57750 gnd vdd FILL
-X_1611_ _383__bF$buf3 _932_ _978_ _816_ vdd gnd AOI21X1
-X_1840_ _445_ _1133_ _720_ vdd gnd OR2X2
-X_1420_ ren_bF$buf1 raddr[4] _336_ _295_ _294_ vdd 
-+ gnd
-+ AOI22X1
-X_2205_ \u_mem_serial.shift_reg\[8] _551__bF$buf2 _236_ vdd gnd NAND2X1
-X_2434_ _605_ i_clk_sys_ext_bF$buf13 \u_cpu.ctrl.o_ibus_adr\[25] vdd gnd DFFPOSX1
-X_2014_ mem_ibus_ack_bF$buf4 \u_cpu.immdec.gen_immdec_w_eq_1.imm31\ _103_ vdd gnd NOR2X1
-X_1705_ _942_ _969_ _1039_ vdd gnd NAND2X1
-XFILL98850x10950 gnd vdd FILL
-X_2243_ \u_cpu.ctrl.o_ibus_adr\[14] _258_ vdd gnd INVX1
-X_1934_ mem_ibus_ack_bF$buf6 \u_mem_serial.shift_reg\[14] _48_ vdd gnd NAND2X1
-X_1514_ _527_ _865_ _336_ _898_ vdd gnd NAND3X1
-X_2472_ _825_ i_clk_sys_ext_bF$buf12 \u_rf_if.rreg0_latched\[3] vdd gnd DFFPOSX1
-X_2052_ \u_cpu.bufreg.data\[24] _131_ vdd gnd INVX1
-X_1743_ \u_rf_if.rcnt\[2] _904_ _1065_ vdd gnd NAND2X1
-X_1323_ _397_ _390_ _389_ vdd gnd OR2X2
-X_2528_ _616_ i_clk_sys_ext_bF$buf1 \u_cpu.bufreg.i_shamt\[0] vdd gnd DFFPOSX1
-X_2108_ _158_ _159_ _161_ vdd gnd NAND2X1
-X_2281_ _477_ _1140_ _273_ vdd gnd NAND2X1
-X_1972_ _438_ _376_ _17_ _74_ vdd gnd NAND3X1
-X_1552_ \u_rf_if.stream_cnt\[0] _932_ vdd gnd INVX1
-X_2337_ _671_ i_clk_sys_ext_bF$buf9 rf_wreg0_to_if[0] vdd gnd DFFPOSX1
-X_2090_ _1112_ _533_ _413__bF$buf4 _638_ vdd gnd MUX2X1
-X_1608_ \u_rf_if.shift_rx\[1] _976_ i_rst_n_bF$buf3 _977_ vdd gnd OAI21X1
-X_1781_ ren_bF$buf2 _276_ i_rst_n_bF$buf1 _1086_ vdd gnd OAI21X1
-X_1361_ \u_cpu.alu.cmp_r\ _352_ _353_ _351_ vdd gnd AOI21X1
-X_2566_ _851_ i_clk_fast_bF$buf1 \u_mem_serial.shift_reg\[8] vdd gnd DFFPOSX1
-X_2146_ _469_ _466_ _188_ _189_ vdd gnd OAI21X1
-X_1837_ \u_mem_serial.active_ibus\ _1132_ vdd gnd INVX1
-X_1417_ _299_ _298_ _297_ vdd gnd NAND2X1
-X_1590_ \u_rf_if.write_wait\[0] \u_rf_if.write_wait\[1] _963_ vdd gnd NOR2X1
-X_1170_ \u_mem_serial.shift_reg\[17] _535_ vdd gnd INVX1
-X_2375_ _585_ i_clk_sys_ext_bF$buf9 \u_cpu.ctrl.o_ibus_adr\[5] vdd gnd DFFPOSX1
-X_1646_ \u_rf_if.read_buf0\[10] _1002_ vdd gnd INVX1
-X_1226_ _484_ _483_ vdd gnd INVX1
-X_2184_ _552__bF$buf1 _218_ _219_ _615_ vdd gnd OAI21X1
-X_1875_ _504_ _4_ _518_ _6_ _713_ vdd 
+X_1455_ \u_rf_if.o_waddr\[2] \u_rf_if.o_waddr\[1] _794_ vdd gnd NOR2X1
+X_1684_ _1013_ _925__bF$buf1 _1014_ _769_ vdd gnd AOI21X1
+X_1264_ _437_ _436_ vdd gnd INVX1
+X_2469_ _783_ i_clk_sys_ext_bF$buf8 \u_rf_if.read_buf0\[7] vdd gnd DFFPOSX1
+X_2049_ \u_cpu.bufreg.data\[26] _125_ vdd gnd INVX1
+X_1493_ \u_mem_serial.shift_reg\[26] _870_ _871_ vdd gnd NOR2X1
+X_2278_ \u_mem_serial.shift_reg\[11] _563_ vdd gnd INVX1
+X_1969_ _66_ _51_ _67_ vdd gnd NOR2X1
+X_1549_ \u_rf_if.issue_idx\[4] \u_rf_if.issue_idx\[5] _918_ vdd gnd NOR2X1
+X_2087_ _143_ _4_ _426__bF$buf3 _639_ vdd gnd MUX2X1
+X_1778_ _498_ _955_ _792_ _1072_ vdd gnd OAI21X1
+X_1358_ ren _344_ vdd gnd INVX2
+X_1587_ \u_rf_if.rs2_stream_buf\[1] _949_ _950_ vdd gnd NAND2X1
+X_1167_ \u_mem_serial.shift_reg\[9] _527_ vdd gnd INVX1
+X_1396_ _315_ _310_ _314_ _307_ _306_ vdd 
 + gnd
 + OAI22X1
-X_1455_ _276_ _804_ _799_ _838_ vdd gnd AOI21X1
-X_1684_ \u_rf_if.read_buf0\[24] _947__bF$buf2 \u_rf_if.read_buf0\[22] _990__bF$buf0 _1026_ vdd 
+X_2202_ \u_mem_serial.shift_reg\[16] _542__bF$buf1 _1105_ \u_cpu.ctrl.o_ibus_adr\[1] _225_ vdd 
++ gnd
++ AOI22X1
+X_2431_ _604_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[17] vdd gnd DFFPOSX1
+X_2011_ _89_ _95_ _96_ _668_ vdd gnd OAI21X1
+X_1702_ _1022_ _976_ _1025_ _927_ _762_ vdd 
++ gnd
++ AOI22X1
+X_1299_ _402_ _403_ _401_ vdd gnd NAND2X1
+X_2240_ \u_cpu.ctrl.o_ibus_adr\[11] _246_ vdd gnd INVX1
+X_1931_ _560_ _556_ _41_ vdd gnd NAND2X1
+X_1511_ mem_ibus_ack_bF$buf7 _884_ _885_ _828_ vdd gnd AOI21X1
+X_1740_ mem_ibus_ack_bF$buf4 \u_rf_if.rreg1_latched\[2] _1052_ vdd gnd NOR2X1
+X_1320_ \u_rf_if.i_stream_rs2_en\ _380_ vdd gnd INVX1
+X_2525_ _619_ i_clk_sys_ext_bF$buf11 \u_cpu.bufreg2.dhi\[5] vdd gnd DFFPOSX1
+X_2105_ _469_ _152_ _413_ _153_ vdd gnd NAND3X1
+X_2334_ _681_ i_clk_sys_ext_bF$buf7 \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[1] vdd gnd DFFPOSX1
+X_1605_ _939_ _961_ _963_ _812_ vdd gnd OAI21X1
+X_2563_ _633_ i_clk_sys_ext_bF$buf13 \u_cpu.bufreg.data\[0] vdd gnd DFFPOSX1
+X_2143_ _485_ _175_ _464_ _180_ vdd gnd NAND3X1
+X_1834_ \u_mem_serial.shift_reg\[28] _870_ _1112_ vdd gnd NOR2X1
+X_1414_ _295_ _289_ _288_ vdd gnd NOR2X1
+X_2372_ _709_ i_clk_fast_bF$buf0 \u_mem_serial.bit_count\[0] vdd gnd DFFPOSX1
+X_1643_ \u_rf_if.stream_active\ _986_ _988_ _784_ vdd gnd AOI21X1
+X_1223_ \u_cpu.state.cnt_r\[3] _476_ _475_ vdd gnd NOR2X1
+XFILL97650x68550 gnd vdd FILL
+X_2428_ _753_ i_clk_sys_ext_bF$buf12 \u_rf_if.rreg0_latched\[2] vdd gnd DFFPOSX1
+X_2008_ _89_ _93_ _94_ _669_ vdd gnd OAI21X1
+X_2181_ _527_ _528_ _209_ _610_ vdd gnd OAI21X1
+X_1872_ _562_ _556_ _552_ _1148_ vdd gnd OAI21X1
+X_1452_ _719_ _791_ vdd gnd INVX1
+X_2237_ _243_ _244_ _873__bF$buf0 _588_ vdd gnd MUX2X1
+X_1928_ _37_ _38_ _559_ _39_ vdd gnd MUX2X1
+X_1508_ _543__bF$buf5 _882_ _883_ _829_ vdd gnd AOI21X1
+X_1681_ _1011_ _925__bF$buf1 _1012_ _770_ vdd gnd AOI21X1
+X_1261_ _516_ _439_ _841_ vdd gnd NOR2X1
+X_2466_ _782_ i_clk_sys_ext_bF$buf8 \u_rf_if.read_buf0\[8] vdd gnd DFFPOSX1
+X_2046_ _123_ _122_ _426__bF$buf4 _660_ vdd gnd MUX2X1
+X_1737_ mem_ibus_ack_bF$buf2 \u_rf_if.rreg1_latched\[1] _1050_ vdd gnd NOR2X1
+X_1317_ _386_ _385_ _384_ _383_ vdd gnd OAI21X1
+X_1490_ _867_ _868_ _869_ vdd gnd NOR2X1
+X_2275_ _170_ _259_ vdd gnd INVX1
+X_1966_ _62_ _51_ _64_ _681_ vdd gnd AOI21X1
+X_1546_ \u_rf_if.issue_idx\[3] \u_rf_if.issue_idx\[2] _915_ vdd gnd NOR2X1
+X_2084_ _141_ _142_ _426__bF$buf2 _641_ vdd gnd MUX2X1
+X_1775_ _1069_ _285_ _1070_ _734_ vdd gnd AOI21X1
+X_1355_ _553_ _544_ \u_mem_serial.shift_reg\[7] _346_ vdd gnd OAI21X1
+X_1584_ _946_ _923_ _907_ _947_ vdd gnd OAI21X1
+X_1164_ _545_ _542__bF$buf2 _529_ _528_ vdd gnd NAND3X1
+X_2369_ _707_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[23] vdd gnd DFFPOSX1
+X_1393_ _344_ raddr[0] _309_ vdd gnd OR2X2
+X_2178_ _1147_ _532_ _612_ vdd gnd NAND2X1
+X_1869_ \u_mem_serial.bit_count\[0] _553_ _1146_ vdd gnd NAND2X1
+X_1449_ \u_rf_if.wdata0_next\[0] _717_ vdd gnd INVX1
+X_1678_ _1009_ _1010_ _771_ vdd gnd NOR2X1
+X_1258_ _498_ _441_ \u_rf_if.rtrig0\ vdd gnd NOR2X1
+X_1487_ _865_ \u_rf_if.o_waddr\[2] _866_ vdd gnd AND2X2
+X_1296_ _407_ _405_ \u_cpu.ctrl.pc\ _404_ vdd gnd OAI21X1
+X_2522_ _825_ i_clk_sys_ext_bF$buf1 \u_rf_if.issue_idx\[5] vdd gnd DFFPOSX1
+X_2102_ \u_cpu.decode.opcode\[1] _450_ \u_cpu.branch_op\ _150_ vdd gnd OAI21X1
+X_2331_ _851_ i_clk_fast_bF$buf4 \u_mem_serial.shift_reg\[11] vdd gnd DFFPOSX1
+X_1602_ \u_rf_if.rreg0_latched\[3] _960_ _933_ _961_ vdd gnd NAND3X1
+X_1199_ _507_ _499_ \u_rf_if.i_stream_rs2_en\ vdd gnd NAND2X1
+X_2560_ _629_ i_clk_sys_ext_bF$buf9 \u_cpu.bufreg.c_r\ vdd gnd DFFPOSX1
+X_2140_ _473_ _176_ _178_ vdd gnd NOR2X1
+X_1831_ _1110_ _483_ _615_[1] vdd gnd NOR2X1
+X_1411_ \u_rf_if.last_req_key\[5] _292_ _291_ vdd gnd NAND2X1
+X_1640_ _393__bF$buf4 \u_rf_if.read_buf0\[6] \u_rf_if.read_buf0\[5] _943__bF$buf1 _987_ vdd 
 + gnd
 + OAI22X1
-X_1264_ _446_ _445_ vdd gnd INVX1
-X_2469_ _774_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[22] vdd gnd DFFPOSX1
-X_2049_ _128_ _129_ _413__bF$buf1 _662_ vdd gnd MUX2X1
-X_1493_ _309_ \u_rf_if.tx_state\[0] _881_ vdd gnd AND2X2
-X_2278_ _387_ \u_cpu.ctrl.i_jump\ _271_ vdd gnd AND2X2
-X_1969_ _518_ \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[1] _71_ _72_ vdd gnd AOI21X1
-X_1549_ _916_ _923_ _929_ vdd gnd NOR2X1
-X_2087_ _10_ _41_ _413__bF$buf4 _642_ vdd gnd MUX2X1
-X_1778_ _300_ _704__bF$buf0 _1084_ _739_ vdd gnd AOI21X1
-X_1358_ \u_cpu.bufreg.i_right_shift_op\ _357_ _355_ _354_ vdd gnd NAND3X1
-X_1587_ \u_rf_if.ready_pulse\ _962_ vdd gnd INVX1
-X_1167_ \u_mem_serial.shift_reg\[8] _552__bF$buf2 _537_ vdd gnd NAND2X1
-X_1396_ \u_rf_if.last_req_key\[1] _323_ _319_ _318_ vdd gnd OAI21X1
-X_2202_ _145_ _233_ _567_ _234_ vdd gnd MUX2X1
-X_2431_ _749_ i_clk_fast_bF$buf7 \u_rf_if.tx_state\[0] vdd gnd DFFPOSX1
-X_2011_ rf_wreg0_to_if[1] _518_ _101_ vdd gnd NAND2X1
-X_1702_ \u_rf_if.read_buf0\[30] _383__bF$buf3 _1037_ vdd gnd NOR2X1
-X_1299_ _416_ _414_ _413_ vdd gnd NAND2X1
-X_2240_ _255_ _256_ _440__bF$buf4 _596_ vdd gnd MUX2X1
-X_1931_ _45_ _566_ _46_ _47_ vdd gnd AOI21X1
-X_1511_ _894_ \u_rf_if.o_waddr\[3] _896_ vdd gnd AND2X2
-X_1740_ mem_ibus_ack_bF$buf7 \u_rf_if.rreg1_latched\[2] _1064_ vdd gnd NOR2X1
-X_1320_ _393_ _396_ _392_ vdd gnd OR2X2
-X_2525_ _615_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[13] vdd gnd DFFPOSX1
-X_2105_ \u_cpu.bufreg.c_r\ _158_ vdd gnd INVX1
-XFILL98550x43350 gnd vdd FILL
-X_2334_ _668_ i_clk_sys_ext_bF$buf6 \u_cpu.immdec.gen_immdec_w_eq_1.imm7\ vdd gnd DFFPOSX1
-X_1605_ _968_ _971_ _974_ _818_ vdd gnd OAI21X1
-X_2563_ _849_ i_clk_fast_bF$buf2 \u_rf_if.launch_pending\ vdd gnd DFFPOSX1
-X_2143_ _183_ _184_ _468_ _185_ _186_ vdd 
-+ gnd
-+ AOI22X1
-X_1834_ _1130_ _486_ _620_[1] vdd gnd NOR2X1
-X_1414_ ren_bF$buf0 raddr[6] _336_ _301_ _300_ vdd 
-+ gnd
-+ AOI22X1
-XBUFX2_insert70 _383_ _383__bF$buf4 vdd gnd BUFX2
-XBUFX2_insert71 _383_ _383__bF$buf3 vdd gnd BUFX2
-XBUFX2_insert72 _383_ _383__bF$buf2 vdd gnd BUFX2
-XBUFX2_insert73 _383_ _383__bF$buf1 vdd gnd BUFX2
-XBUFX2_insert74 _383_ _383__bF$buf0 vdd gnd BUFX2
-XBUFX2_insert75 _947_ _947__bF$buf4 vdd gnd BUFX2
-XBUFX2_insert76 _947_ _947__bF$buf3 vdd gnd BUFX2
-XBUFX2_insert77 _947_ _947__bF$buf2 vdd gnd BUFX2
-XBUFX2_insert78 _947_ _947__bF$buf1 vdd gnd BUFX2
-XBUFX2_insert79 _947_ _947__bF$buf0 vdd gnd BUFX2
-X_2372_ _700_ i_clk_fast_bF$buf0 \u_mem_serial.bit_count\[4] vdd gnd DFFPOSX1
-X_1643_ \u_rf_if.read_buf0\[8] _383__bF$buf3 _1000_ vdd gnd NOR2X1
-X_1223_ _491_ _487_ _486_ vdd gnd NOR2X1
-X_2428_ _748_ i_clk_fast_bF$buf7 \u_rf_if.tx_state\[1] vdd gnd DFFPOSX1
-X_2008_ \u_mem_serial.shift_reg\[8] rf_wreg0_to_if[2] mem_ibus_ack_bF$buf3 _99_ vdd gnd MUX2X1
-X_2181_ _217_ _211_ _189_ _616_ vdd gnd MUX2X1
-X_1872_ \u_mem_serial.bit_count\[0] _3_ _554_ _4_ vdd gnd NAND3X1
-X_1452_ \u_rf_if.tx_state\[1] _802_ vdd gnd INVX1
-X_2237_ \u_cpu.ctrl.o_ibus_adr\[17] _255_ vdd gnd INVX1
-X_1928_ _8_ _44_ _552__bF$buf1 _698_ vdd gnd MUX2X1
-X_1508_ \u_rf_if.o_waddr\[1] _892_ _893_ vdd gnd NAND2X1
-X_1681_ \u_rf_if.read_buf0\[23] _1024_ vdd gnd INVX1
-X_1261_ _449_ _482_ _448_ vdd gnd NAND2X1
-X_2466_ _772_ i_clk_sys_ext_bF$buf3 \u_rf_if.read_buf0\[24] vdd gnd DFFPOSX1
-X_2046_ \u_cpu.bufreg.data\[27] _128_ vdd gnd INVX1
-X_1737_ mem_ibus_ack_bF$buf5 \u_rf_if.rreg1_latched\[1] _1062_ vdd gnd NOR2X1
-X_1317_ \u_cpu.decode.opcode\[0] \u_cpu.decode.opcode\[1] _405_ \u_cpu.decode.co_ebreak\ _395_ vdd 
-+ gnd
-+ AOI22X1
-X_1490_ _522_ \u_rf_if.tx_state\[3] _878_ vdd gnd OR2X2
-X_2275_ _389_ _392_ _1148_ _574_ vdd gnd AOI21X1
-XFILL99150x36150 gnd vdd FILL
-X_1966_ _67_ _56_ _69_ _685_ vdd gnd AOI21X1
-X_1546_ _916_ _923_ _926_ _927_ vdd gnd OAI21X1
-X_2084_ \u_cpu.bufreg.data\[8] _147_ vdd gnd INVX1
-XFILL98850x18150 gnd vdd FILL
-X_1775_ \u_rf_if.last_req_key\[5] _704__bF$buf3 i_rst_n_bF$buf0 _1083_ vdd gnd OAI21X1
-X_1355_ \u_cpu.bne_or_bge\ _357_ vdd gnd INVX1
-X_1584_ _370_ _951_ _959_ _960_ vdd gnd OAI21X1
-X_1164_ \u_mem_serial.shift_reg\[12] _552__bF$buf0 _539_ vdd gnd NAND2X1
-X_2369_ _582_ i_clk_sys_ext_bF$buf9 \u_cpu.ctrl.o_ibus_adr\[2] vdd gnd DFFPOSX1
-X_1393_ \u_rf_if.last_req_key\[8] _321_ vdd gnd INVX1
-X_2178_ _188_ _208_ _215_ _216_ vdd gnd OAI21X1
-X_1869_ _542_ _504_ _562_ _2_ vdd gnd OAI21X1
-X_1449_ _797_ _800_ _840_ vdd gnd AND2X2
-X_1678_ \u_rf_if.read_buf0\[22] _947__bF$buf2 _1022_ vdd gnd NOR2X1
-X_1258_ _452_ _451_ vdd gnd INVX1
-X_1487_ _874_ _873_ _872_ _875_ vdd gnd OAI21X1
-X_1296_ _477_ _417_ _416_ vdd gnd NAND2X1
-X_2522_ _815_ i_clk_sys_ext_bF$buf11 \u_rf_if.stream_cnt\[1] vdd gnd DFFPOSX1
-X_2102_ _154_ _419_ _155_ vdd gnd NOR2X1
-XFILL98550x64950 gnd vdd FILL
-X_2331_ _665_ i_clk_sys_ext_bF$buf9 \u_cpu.immdec.gen_immdec_w_eq_1.imm11_7\[4] vdd gnd DFFPOSX1
-X_1602_ _829_ _972_ vdd gnd INVX1
-X_1199_ _511_ _509_ _508_ vdd gnd NOR2X1
-X_2560_ _845_ i_clk_fast_bF$buf7 \u_rf_if.req_seen\ vdd gnd DFFPOSX1
-X_2140_ \u_cpu.bufreg2.i_bytecnt\[1] \u_cpu.state.i_ctrl_misalign\ _182_ _183_ vdd gnd OAI21X1
-X_1831_ \u_cpu.state.cnt_r\[3] \u_cpu.state.o_cnt\[2] _1129_ vdd gnd NOR2X1
-X_1411_ _326_ _325_ _304_ _303_ vdd gnd OAI21X1
-XBUFX2_insert40 _440_ _440__bF$buf2 vdd gnd BUFX2
-XBUFX2_insert41 _440_ _440__bF$buf1 vdd gnd BUFX2
-XBUFX2_insert42 _440_ _440__bF$buf0 vdd gnd BUFX2
-X_1640_ _996_ _997_ _998_ _791_ vdd gnd AOI21X1
-X_1220_ \u_cpu.state.o_cnt\[2] _489_ vdd gnd INVX1
-X_2425_ _747_ i_clk_fast_bF$buf7 \u_rf_if.tx_state\[2] vdd gnd DFFPOSX1
-X_2005_ \u_mem_serial.shift_reg\[9] rf_wreg0_to_if[3] mem_ibus_ack_bF$buf3 _97_ vdd gnd MUX2X1
-X_2234_ _252_ _253_ _440__bF$buf4 _599_ vdd gnd MUX2X1
-X_1925_ \u_cpu.ctrl.o_ibus_adr\[6] _42_ vdd gnd INVX1
-X_1505_ \u_rf_if.o_waddr\[0] _890_ vdd gnd INVX1
-X_2463_ _769_ i_clk_sys_ext_bF$buf11 \u_rf_if.read_buf0\[27] vdd gnd DFFPOSX1
-X_2043_ \u_cpu.bufreg.data\[28] _126_ vdd gnd INVX1
-X_1734_ mem_ibus_ack_bF$buf0 \u_rf_if.rreg1_latched\[0] _1060_ vdd gnd NOR2X1
-X_1314_ _423_ _399_ _398_ vdd gnd AND2X2
-X_2519_ _613_ i_clk_fast_bF$buf4 \u_mem_serial.shift_reg\[23] vdd gnd DFFPOSX1
-X_2272_ _179_ _268_ vdd gnd INVX1
-X_1963_ \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[1] _67_ vdd gnd INVX1
-X_1543_ \u_rf_if.stream_cnt\[0] _383__bF$buf4 _924_ vdd gnd NOR2X1
-X_2328_ _662_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.data\[26] vdd gnd DFFPOSX1
-XFILL99150x90150 gnd vdd FILL
-XFILL99150x57750 gnd vdd FILL
-X_2081_ _144_ _145_ _413__bF$buf2 _646_ vdd gnd MUX2X1
-X_1772_ _328_ _704__bF$buf3 _1081_ _742_ vdd gnd AOI21X1
-X_1352_ _361_ _362_ _360_ vdd gnd NAND2X1
-XFILL98850x72150 gnd vdd FILL
-X_2557_ _626_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[31] vdd gnd DFFPOSX1
-X_2137_ \u_mem_serial.shift_reg\[0] _505__bF$buf4 _181_ vdd gnd NOR2X1
-XFILL98850x39750 gnd vdd FILL
-X_1828_ \u_mem_serial.shift_reg\[0] _551__bF$buf3 _1127_ vdd gnd NAND2X1
-X_1408_ _307_ _308_ _306_ vdd gnd NAND2X1
-X_1581_ \u_rf_if.rs2_stream_buf\[1] _956_ _957_ vdd gnd NOR2X1
-X_1161_ _542_ _553_ _551__bF$buf2 _541_ vdd gnd OAI21X1
-X_2366_ _581_ i_clk_sys_ext_bF$buf9 \u_cpu.ctrl.o_ibus_adr\[1] vdd gnd DFFPOSX1
-X_1637_ \u_rf_if.read_buf0\[7] _996_ vdd gnd INVX1
-X_1217_ \u_cpu.bufreg2.i_bytecnt\[1] _492_ vdd gnd INVX1
-X_1390_ _337_ raddr[1] _324_ vdd gnd OR2X2
-X_2175_ _211_ _212_ _213_ vdd gnd NOR2X1
-X_1866_ _1153_ _1154_ _567_ _1125_ vdd gnd MUX2X1
-X_1446_ \u_rf_if.shift_rx\[0] _798_ vdd gnd INVX1
-X_1675_ \u_rf_if.read_buf0\[21] _947__bF$buf4 _1020_ vdd gnd NOR2X1
-X_1255_ _470_ _465_ _455_ _454_ vdd gnd OAI21X1
-X_1484_ _871_ \u_rf_if.rtrig0\ _872_ vdd gnd NOR2X1
-X_2269_ \u_cpu.ctrl.o_ibus_adr\[29] _267_ vdd gnd INVX1
-X_1293_ \u_cpu.state.cnt_r\[0] _420_ _419_ vdd gnd NAND2X1
-X_2498_ _796_ i_clk_sys_ext_bF$buf3 \u_rf_if.read_buf0\[0] vdd gnd DFFPOSX1
-X_2078_ \u_cpu.bufreg.data\[11] _144_ vdd gnd INVX1
-X_1769_ \u_rf_if.last_req_key\[2] _704__bF$buf1 i_rst_n_bF$buf3 _1080_ vdd gnd OAI21X1
-X_1349_ _364_ _365_ _363_ vdd gnd NAND2X1
-X_1998_ _434_ _477_ _91_ vdd gnd NAND2X1
-X_1578_ _930_ _954_ vdd gnd INVX1
-X_1158_ _1121_ o_mem_sync vdd gnd BUFX2
-X_1387_ _328_ _327_ vdd gnd INVX1
-X_1196_ \u_mem_serial.shift_reg\[1] _512_ _511_ vdd gnd NAND2X1
-XBUFX2_insert10 _552_ _552__bF$buf3 vdd gnd BUFX2
-XBUFX2_insert11 _552_ _552__bF$buf2 vdd gnd BUFX2
-XBUFX2_insert12 _552_ _552__bF$buf1 vdd gnd BUFX2
-XBUFX2_insert13 _552_ _552__bF$buf0 vdd gnd BUFX2
-XBUFX2_insert14 i_rst_n i_rst_n_bF$buf3 vdd gnd BUFX2
-XBUFX2_insert15 i_rst_n i_rst_n_bF$buf2 vdd gnd BUFX2
-XBUFX2_insert16 i_rst_n i_rst_n_bF$buf1 vdd gnd BUFX2
-XBUFX2_insert17 i_rst_n i_rst_n_bF$buf0 vdd gnd BUFX2
-XBUFX2_insert18 _505_ _505__bF$buf4 vdd gnd BUFX2
-XBUFX2_insert19 _505_ _505__bF$buf3 vdd gnd BUFX2
-X_2422_ _600_ i_clk_sys_ext_bF$buf3 \u_cpu.ctrl.o_ibus_adr\[20] vdd gnd DFFPOSX1
-X_2002_ mem_ibus_ack_bF$buf3 \u_mem_serial.shift_reg\[10] _94_ _95_ vdd gnd AOI21X1
-X_2231_ \u_cpu.ctrl.o_ibus_adr\[20] _252_ vdd gnd INVX1
-X_1922_ _38_ _39_ _699_ vdd gnd NAND2X1
-X_1502_ _505__bF$buf4 _887_ _888_ _835_ vdd gnd AOI21X1
-X_2460_ _766_ i_clk_sys_ext_bF$buf5 \u_rf_if.issue_idx\[0] vdd gnd DFFPOSX1
-X_2040_ _120_ _86_ _124_ _666_ vdd gnd AOI21X1
-X_1731_ mem_ibus_ack_bF$buf5 \u_rf_if.rreg0_latched\[2] _1058_ vdd gnd NOR2X1
-X_1311_ _402_ _484_ _401_ vdd gnd NAND2X1
-XFILL98850x7350 gnd vdd FILL
-X_2516_ _812_ i_clk_sys_ext_bF$buf13 \u_rf_if.read_buf1\[0] vdd gnd DFFPOSX1
-X_1960_ mem_ibus_ack_bF$buf4 _61_ _14_ _65_ vdd gnd OAI21X1
-X_1540_ _920_ _921_ vdd gnd INVX1
-X_2325_ _660_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.data\[24] vdd gnd DFFPOSX1
-X_2554_ _840_ i_clk_fast_bF$buf7 \u_rf_if.shift_rx\[0] vdd gnd DFFPOSX1
-X_2134_ \u_mem_serial.bit_count\[1] _558_ \u_mem_serial.bit_count\[5] _178_ vdd gnd OAI21X1
-XFILL98850x93750 gnd vdd FILL
-X_1825_ \u_mem_serial.shift_reg\[29] _551__bF$buf1 _1118_ _1119_ vdd gnd AOI21X1
-X_1405_ _337_ raddr[2] _310_ _309_ vdd gnd OAI21X1
-X_2363_ _694_ i_clk_sys_ext_bF$buf6 \u_cpu.decode.co_ebreak\ vdd gnd DFFPOSX1
-X_1634_ \u_rf_if.read_buf0\[6] _947__bF$buf2 _994_ vdd gnd NOR2X1
-X_1214_ \u_cpu.bne_or_bge\ \u_cpu.decode.co_mem_word\ _496_ _495_ vdd gnd OAI21X1
-X_2419_ _744_ i_clk_fast_bF$buf2 \u_rf_if.last_req_key\[1] vdd gnd DFFPOSX1
-X_2172_ _207_ _210_ _618_ vdd gnd NAND2X1
-X_1863_ _1110_ _551__bF$buf5 _1152_ vdd gnd NAND2X1
-X_1443_ \u_rf_if.tx_state\[2] _520_ _723_ vdd gnd NOR2X1
-X_2228_ _249_ _250_ _440__bF$buf2 _602_ vdd gnd MUX2X1
-X_1919_ _36_ _37_ vdd gnd INVX1
-X_1672_ _1017_ _997_ _1018_ _779_ vdd gnd AOI21X1
-X_1252_ \u_cpu.bufreg2.dhi\[5] _457_ vdd gnd INVX1
-X_2457_ _610_ i_clk_fast_bF$buf1 \u_mem_serial.shift_reg\[9] vdd gnd DFFPOSX1
-X_2037_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[0] _518_ _122_ vdd gnd NAND2X1
-X_1728_ mem_ibus_ack_bF$buf5 \u_rf_if.rreg0_latched\[1] _1056_ vdd gnd NOR2X1
-X_1308_ _405_ _404_ vdd gnd INVX1
-XFILL99150x43350 gnd vdd FILL
-X_1481_ _868_ \u_rf_if.wdata0_r\[0] _722_ _869_ vdd gnd AOI21X1
-X_2266_ \u_cpu.ctrl.o_ibus_adr\[30] _265_ vdd gnd INVX1
-X_1957_ _62_ _56_ _63_ vdd gnd NOR2X1
-X_1537_ \u_rf_if.stream_cnt\[2] _918_ vdd gnd INVX1
-X_1290_ _423_ _422_ vdd gnd INVX1
-X_2495_ _793_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[3] vdd gnd DFFPOSX1
-X_2075_ _141_ _142_ _413__bF$buf0 _649_ vdd gnd MUX2X1
-X_1766_ _289_ _704__bF$buf1 _1078_ _745_ vdd gnd AOI21X1
-X_1346_ _367_ _366_ vdd gnd INVX1
-X_1995_ _1061_ _89_ _86_ _676_ vdd gnd MUX2X1
-X_1575_ rf_read_reg0_to_if[3] _952_ vdd gnd INVX1
-X_1155_ _1124_ o_rf_sync vdd gnd BUFX2
-X_1384_ raddr[3] _330_ vdd gnd INVX1
-X_2589_ _639_ i_clk_sys_ext_bF$buf9 \u_cpu.bufreg.data\[4] vdd gnd DFFPOSX1
-X_2169_ _464_ _465_ _208_ vdd gnd NOR2X1
-X_1193_ \u_mem_serial.shift_reg\[5] _514_ vdd gnd INVX1
-X_2398_ _620_[1] i_clk_sys_ext_bF$buf1 \u_cpu.bufreg2.i_bytecnt\[0] vdd gnd DFFPOSX1
-X_1669_ \u_rf_if.stream_active_bF$buf0\ _1014_ _1016_ _780_ vdd gnd AOI21X1
-X_1249_ _461_ _460_ vdd gnd INVX1
-X_1898_ _19_ _20_ _0_ vdd gnd NOR2X1
-X_1478_ \u_rf_if.rcnt\[2] \u_rf_if.wdata0_next_phase\ _865_ _866_ vdd gnd MUX2X1
-X_1287_ _425_ _529_ \u_rf_if.rtrig0\ _844_ vdd gnd MUX2X1
-X_2513_ \u_mem_serial.state\[1] _568_ _551_ vdd gnd NOR2X1
-X_2322_ _657_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.data\[21] vdd gnd DFFPOSX1
-X_2551_ _569_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[2] vdd gnd DFFPOSX1
-X_2131_ _20_ _505__bF$buf1 _176_ _626_ vdd gnd OAI21X1
-X_1822_ \u_mem_serial.shift_reg\[29] _505__bF$buf1 _1117_ vdd gnd NOR2X1
-X_1402_ _314_ _313_ \u_rf_if.req_seen\ _312_ vdd gnd OAI21X1
-X_2360_ _692_ i_clk_sys_ext_bF$buf6 \u_cpu.bufreg.i_sh_signed\ vdd gnd DFFPOSX1
-X_1631_ \u_rf_if.read_buf0\[5] _947__bF$buf4 _992_ vdd gnd NOR2X1
-X_1211_ \u_cpu.decode.co_mem_word\ _498_ vdd gnd INVX1
-X_2416_ _597_ i_clk_sys_ext_bF$buf3 \u_cpu.ctrl.o_ibus_adr\[17] vdd gnd DFFPOSX1
-X_1860_ _1149_ \u_cpu.state.ibus_cyc\ _799_ _1150_ vdd gnd AOI21X1
-X_1440_ \u_rf_if.last_req_key\[9] _704__bF$buf2 i_rst_n_bF$buf1 _705_ vdd gnd OAI21X1
-X_2225_ \u_cpu.ctrl.o_ibus_adr\[23] _249_ vdd gnd INVX1
-X_1916_ _561_ _32_ _34_ _700_ vdd gnd OAI21X1
-X_2454_ _763_ i_clk_sys_ext_bF$buf5 \u_rf_if.issue_idx\[3] vdd gnd DFFPOSX1
-X_2034_ _111_ _75_ _118_ _119_ _667_ vdd 
-+ gnd
-+ AOI22X1
-X_1725_ mem_ibus_ack_bF$buf2 \u_rf_if.rreg0_latched\[0] _1054_ vdd gnd NOR2X1
-X_1305_ \u_cpu.bufreg2.i_op_b_sel\ _408_ _407_ vdd gnd NAND2X1
-X_2263_ _262_ _440__bF$buf0 _263_ _580_ vdd gnd AOI21X1
-XFILL99150x64950 gnd vdd FILL
-X_1954_ _1053_ _60_ _56_ _688_ vdd gnd MUX2X1
-X_1534_ _909_ _914_ _910_ _915_ vdd gnd OAI21X1
-X_2319_ _654_ i_clk_sys_ext_bF$buf2 \u_cpu.bufreg.data\[18] vdd gnd DFFPOSX1
-X_2492_ _790_ i_clk_sys_ext_bF$buf11 \u_rf_if.read_buf0\[6] vdd gnd DFFPOSX1
-X_2072_ \u_cpu.bufreg.data\[14] _141_ vdd gnd INVX1
-X_1763_ _1077_ _858_ _747_ vdd gnd AND2X2
-X_1343_ \u_rf_if.rs2_stream_buf\[0] _370_ \u_cpu.bufreg2.i_op_b_sel\ _369_ vdd gnd OAI21X1
-X_2548_ _835_ i_clk_fast_bF$buf0 \u_mem_serial.shift_reg\[27] vdd gnd DFFPOSX1
-X_2128_ _541_ _174_ _175_ vdd gnd AND2X2
-X_1819_ _551__bF$buf5 _1114_ _1111_ _1115_ vdd gnd OAI21X1
-X_1992_ \u_mem_serial.shift_reg\[22] rf_read_reg1_to_if[3] mem_ibus_ack_bF$buf2 _88_ vdd gnd MUX2X1
-X_1572_ \u_rf_if.read_buf0\[31] _948_ _950_ vdd gnd NAND2X1
-X_2357_ _689_ i_clk_sys_ext_bF$buf10 rf_read_reg0_to_if[1] vdd gnd DFFPOSX1
-X_1628_ _948_ _990_ vdd gnd INVX8
-X_1208_ \u_rf_if.rcnt\[0] _501_ vdd gnd INVX1
-X_1381_ _334_ _333_ vdd gnd INVX1
-X_2586_ _638_ i_clk_sys_ext_bF$buf9 \u_cpu.bufreg.data\[3] vdd gnd DFFPOSX1
-X_2166_ _203_ _205_ _619_ vdd gnd NAND2X1
-X_1857_ _500_ _484_ _481_ _717_ vdd gnd OAI21X1
-X_1437_ _337_ _338_ _278_ _302_ _277_ vdd 
-+ gnd
-+ AOI22X1
-X_1190_ current_stream_rs2_hint _518_ _517_ vdd gnd NAND2X1
-X_2395_ \u_cpu.state.cnt_r\[2] i_clk_sys_ext_bF$buf2 \u_cpu.state.cnt_r\[3] vdd gnd DFFPOSX1
-X_1666_ _383__bF$buf1 \u_rf_if.read_buf0\[16] \u_rf_if.read_buf0\[15] _990__bF$buf2 _1015_ vdd 
+X_1220_ _479_ _478_ vdd gnd INVX1
+X_2425_ _750_ i_clk_sys_ext_bF$buf12 \u_rf_if.rreg1_latched\[2] vdd gnd DFFPOSX1
+X_2005_ _89_ _91_ _92_ _670_ vdd gnd OAI21X1
+X_2234_ \u_cpu.ctrl.o_ibus_adr\[14] _243_ vdd gnd INVX1
+X_1925_ _1140_ _542__bF$buf3 _36_ vdd gnd NAND2X1
+X_1505_ _881_ _518_ \u_rf_if.rtrig0\ _830_ vdd gnd MUX2X1
+X_2463_ _780_ i_clk_sys_ext_bF$buf8 \u_rf_if.read_buf0\[10] vdd gnd DFFPOSX1
+X_2043_ _118_ _89_ _121_ _661_ vdd gnd OAI21X1
+X_1734_ mem_ibus_ack_bF$buf4 \u_rf_if.rreg1_latched\[0] _1048_ vdd gnd NOR2X1
+X_1314_ \u_cpu.bufreg2.i_op_b_sel\ _386_ vdd gnd INVX1
+X_2519_ _617_ i_clk_sys_ext_bF$buf11 \u_cpu.bufreg2.dhi\[3] vdd gnd DFFPOSX1
+X_2272_ \u_cpu.alu.cmp_r\ _473_ _258_ vdd gnd NAND2X1
+X_1963_ \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[1] _62_ vdd gnd INVX1
+X_1543_ _910_ _911_ \u_rf_if.shift_rx\[0] _912_ vdd gnd OAI21X1
+X_2328_ _676_ i_clk_sys_ext_bF$buf0 \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[1] vdd gnd DFFPOSX1
+X_2081_ \u_cpu.bufreg.data\[10] _141_ vdd gnd INVX1
+X_1772_ _340_ _284_ _1068_ _735_ vdd gnd AOI21X1
+X_1352_ _470_ _349_ _357_ _348_ vdd gnd OAI21X1
+X_2557_ _575_ i_clk_sys_ext_bF$buf9 \u_cpu.ctrl.pc\ vdd gnd DFFPOSX1
+X_2137_ _435_ _429_ _175_ vdd gnd NOR2X1
+X_1828_ \u_cpu.state.cnt_r\[3] \u_cpu.state.o_cnt\[2] _1109_ vdd gnd NOR2X1
+XFILL97650x54150 gnd vdd FILL
+X_1408_ rf_wreg0_to_if[1] _294_ vdd gnd INVX1
+X_1581_ \u_rf_if.write_wait\[0] \u_rf_if.write_wait\[1] _945_ vdd gnd NAND2X1
+X_1161_ \u_mem_serial.shift_reg\[13] _531_ vdd gnd INVX1
+X_2366_ _537_ _536_ vdd gnd INVX1
+X_1637_ _393__bF$buf4 \u_rf_if.read_buf0\[5] \u_rf_if.read_buf0\[4] _943__bF$buf1 _985_ vdd 
 + gnd
 + OAI22X1
-X_1246_ \u_cpu.bufreg.i_shamt\[0] \u_cpu.bufreg.i_shamt\[1] _463_ vdd gnd NOR2X1
-X_1895_ _1121_ _19_ vdd gnd INVX1
-X_1475_ \u_rf_if.o_waddr\[0] \u_rf_if.o_waddr\[3] _863_ vdd gnd NOR2X1
-X_1284_ _431_ _428_ _427_ vdd gnd NOR2X1
-X_2489_ _787_ i_clk_sys_ext_bF$buf11 \u_rf_if.read_buf0\[9] vdd gnd DFFPOSX1
-X_2069_ _138_ _139_ _413__bF$buf3 _652_ vdd gnd MUX2X1
-X_2298_ _561_ _560_ _559_ _558_ vdd gnd NAND3X1
-X_1989_ mem_ibus_ack_bF$buf7 _85_ _53_ _86_ vdd gnd OAI21X1
-X_1569_ \u_rf_if.stream_active_bF$buf3\ _946_ _948_ vdd gnd NOR2X1
-X_2510_ _552__bF$buf2 _550_ _549_ _856_ vdd gnd OAI21X1
-X_1798_ \u_rf_if.rreg0_latched\[0] _970_ _969_ _1098_ vdd gnd NAND3X1
-X_1378_ \u_rf_if.rtrig0\ _336_ vdd gnd INVX2
-X_1187_ _520_ _522_ \u_rf_if.launch_pending\ _519_ vdd gnd OAI21X1
-X_2413_ _741_ i_clk_fast_bF$buf2 \u_rf_if.last_req_key\[4] vdd gnd DFFPOSX1
-X_2222_ _245_ _247_ _440__bF$buf5 _605_ vdd gnd MUX2X1
-X_1913_ _31_ _32_ vdd gnd INVX1
-X_2451_ _608_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[16] vdd gnd DFFPOSX1
-X_2031_ _112_ _113_ _116_ _117_ vdd gnd OAI21X1
-X_1722_ \u_rf_if.issue_idx\[4] _1050_ _966_ _1052_ vdd gnd OAI21X1
-X_1302_ \u_cpu.decode.opcode\[1] _410_ vdd gnd INVX1
-X_2507_ _552__bF$buf3 _548_ _547_ _855_ vdd gnd OAI21X1
-X_2260_ \u_cpu.ctrl.o_ibus_adr\[1] _262_ vdd gnd INVX1
-X_1951_ \u_mem_serial.shift_reg\[16] rf_read_reg0_to_if[2] mem_ibus_ack_bF$buf2 _59_ vdd gnd MUX2X1
-X_1531_ \u_rf_if.issue_idx\[3] \u_rf_if.issue_idx\[2] _912_ vdd gnd NOR2X1
-X_2316_ _651_ i_clk_sys_ext_bF$buf8 \u_cpu.bufreg.data\[15] vdd gnd DFFPOSX1
-X_1760_ _809_ _1075_ _748_ vdd gnd NOR2X1
-X_1340_ \u_cpu.branch_op\ _373_ _372_ vdd gnd NOR2X1
-X_2545_ _623_ i_clk_sys_ext_bF$buf1 \u_cpu.bufreg2.dhi\[6] vdd gnd DFFPOSX1
-X_2125_ \u_mem_serial.clk_sys_prev\ _565_ \u_mem_serial.state\[1] _173_ vdd gnd OAI21X1
-X_1816_ \u_cpu.bufreg.data\[4] _1112_ vdd gnd INVX1
-X_2354_ _686_ i_clk_sys_ext_bF$buf4 \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[2] vdd gnd DFFPOSX1
-X_1625_ \u_rf_if.read_buf0\[3] _988_ vdd gnd INVX1
-X_1205_ \u_mem_serial.shift_reg\[25] _504_ _503_ vdd gnd NOR2X1
-X_2583_ _636_ i_clk_sys_ext_bF$buf1 \u_cpu.bufreg.data\[0] vdd gnd DFFPOSX1
-X_2163_ _461_ _202_ _465_ _203_ vdd gnd OAI21X1
-X_1854_ \u_cpu.bne_or_bge\ _1145_ _437_ _1146_ vdd gnd OAI21X1
-X_1434_ _281_ _282_ _280_ vdd gnd NAND2X1
-X_2219_ \u_cpu.ctrl.o_ibus_adr\[27] _246_ vdd gnd INVX1
-X_2392_ _717_ i_clk_sys_ext_bF$buf1 \u_cpu.state.init_done\ vdd gnd DFFPOSX1
-X_1663_ \u_rf_if.read_buf0\[16] _947__bF$buf3 \u_rf_if.read_buf0\[14] _990__bF$buf3 _1013_ vdd 
+X_1217_ _489_ _482_ _481_ vdd gnd NOR2X1
+X_1390_ ren _313_ _312_ vdd gnd NAND2X1
+X_2175_ _204_ _207_ _614_ vdd gnd NAND2X1
+X_1866_ _1142_ _1143_ _559_ _1144_ vdd gnd MUX2X1
+X_1446_ _265_ _512_ _261_ vdd gnd NAND2X1
+X_1675_ \u_rf_if.stream_active\ _1006_ _1008_ _772_ vdd gnd AOI21X1
+X_1255_ _444_ _443_ vdd gnd INVX1
+X_1484_ _861_ _862_ _863_ vdd gnd NOR2X1
+X_2269_ _252_ _873__bF$buf2 _256_ _255_ _568_ vdd 
 + gnd
 + OAI22X1
-X_1243_ _467_ _466_ vdd gnd INVX1
-X_2448_ _759_ i_clk_sys_ext_bF$buf12 \u_rf_if.rreg0_latched\[2] vdd gnd DFFPOSX1
-X_2028_ \u_cpu.decode.opcode\[0] \u_cpu.decode.opcode\[2] \u_cpu.decode.opcode\[1] _114_ vdd gnd AOI21X1
-XFILL99150x50550 gnd vdd FILL
-X_1719_ _1048_ \u_rf_if.issue_idx\[3] _1050_ vdd gnd AND2X2
-X_1892_ _512_ _410_ mem_ibus_ack_bF$buf1 _707_ vdd gnd MUX2X1
-X_1472_ _384_ _451_ _860_ vdd gnd NOR2X1
-X_2257_ _1154_ _1113_ _440__bF$buf1 _584_ vdd gnd MUX2X1
-XFILL98850x32550 gnd vdd FILL
-X_1948_ _952_ _57_ _56_ _691_ vdd gnd MUX2X1
-X_1528_ \u_rf_if.issue_idx\[4] _909_ vdd gnd INVX1
-X_1281_ rf_wreg0_to_if[0] _430_ vdd gnd INVX1
-X_2486_ _785_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[11] vdd gnd DFFPOSX1
-X_2066_ \u_cpu.bufreg.data\[17] _138_ vdd gnd INVX1
-X_1757_ i_rst_n_bF$buf3 _722_ _1074_ vdd gnd NAND2X1
-X_1337_ \u_cpu.bufreg.i_sh_signed\ _375_ vdd gnd INVX1
-X_2295_ \u_mem_serial.bit_count\[4] _561_ vdd gnd INVX1
-X_1986_ \u_mem_serial.shift_reg\[25] \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[1] mem_ibus_ack_bF$buf3 _84_ vdd gnd MUX2X1
-X_1566_ _942_ _944_ _945_ vdd gnd NOR2X1
-X_1795_ \u_rf_if.issue_idx\[3] _1043_ _1095_ _1096_ vdd gnd OAI21X1
-X_1375_ _515_ _505__bF$buf0 _339_ _842_ vdd gnd OAI21X1
-X_1184_ _523_ _522_ vdd gnd INVX2
-X_2389_ _714_ i_clk_fast_bF$buf4 \u_mem_serial.bit_count\[0] vdd gnd DFFPOSX1
-X_2198_ _121_ _230_ _552__bF$buf3 _612_ vdd gnd MUX2X1
-X_1889_ mem_ibus_ack_bF$buf4 _376_ _16_ _709_ vdd gnd OAI21X1
-X_1469_ \u_rf_if.tx_state\[1] \u_rf_if.tx_state\[0] \u_rf_if.tx_state\[2] _857_ vdd gnd OAI21X1
-X_2410_ _594_ i_clk_sys_ext_bF$buf3 \u_cpu.ctrl.o_ibus_adr\[14] vdd gnd DFFPOSX1
-X_1698_ \u_rf_if.stream_active_bF$buf3\ _1032_ _1034_ _769_ vdd gnd AOI21X1
-X_1278_ rf_wreg0_to_if[3] _433_ vdd gnd INVX1
-X_1910_ _29_ _28_ _551__bF$buf1 _30_ vdd gnd OAI21X1
-X_2504_ \u_mem_serial.shift_reg\[11] _552__bF$buf3 _545_ vdd gnd NAND2X1
-X_2313_ _701_ i_clk_fast_bF$buf4 \u_mem_serial.bit_count\[3] vdd gnd DFFPOSX1
-X_2542_ _622_ i_clk_sys_ext_bF$buf1 \u_cpu.bufreg2.dhi\[5] vdd gnd DFFPOSX1
-X_2122_ \u_mem_serial.shift_reg\[3] _551__bF$buf3 _505__bF$buf2 _171_ vdd gnd NAND3X1
-X_1813_ _1109_ _1108_ _1104_ _729_ vdd gnd OAI21X1
-X_2351_ _684_ i_clk_sys_ext_bF$buf6 \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[0] vdd gnd DFFPOSX1
-X_1622_ \u_rf_if.read_buf0\[2] _986_ vdd gnd INVX1
-X_1202_ _517_ _506_ \u_rf_if.i_stream_rs2_en\ vdd gnd NAND2X1
-X_2407_ _738_ i_clk_fast_bF$buf1 \u_rf_if.last_req_key\[7] vdd gnd DFFPOSX1
-X_2580_ _632_ i_clk_sys_ext_bF$buf1 \u_cpu.bufreg.c_r\ vdd gnd DFFPOSX1
-X_2160_ \u_cpu.bufreg2.dhi\[3] _200_ vdd gnd INVX1
-X_1851_ _1141_ _1140_ _1143_ vdd gnd AND2X2
-X_1431_ ren_bF$buf1 raddr[5] _336_ _284_ _283_ vdd 
+X_1293_ _450_ _423_ _408_ _417_ _407_ vdd 
++ gnd
++ OAI22X1
+X_2498_ _609_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[16] vdd gnd DFFPOSX1
+X_2078_ _138_ _139_ _426__bF$buf2 _644_ vdd gnd MUX2X1
+X_1769_ \u_rf_if.last_req_key\[6] _284_ i_rst_n_bF$buf1 _1067_ vdd gnd OAI21X1
+X_1349_ _356_ _353_ _351_ vdd gnd AND2X2
+X_1998_ _1047_ _81_ _86_ _671_ vdd gnd AOI21X1
+X_1578_ _393__bF$buf2 _924_ _943_ vdd gnd NAND2X1
+X_1158_ _534_ _536_ _533_ vdd gnd NOR2X1
+X_1387_ \u_rf_if.last_req_key\[1] _315_ vdd gnd INVX1
+X_1196_ \u_mem_serial.shift_reg\[1] _502_ _501_ vdd gnd NAND2X1
+XBUFX2_insert10 _943_ _943__bF$buf0 vdd gnd BUFX2
+XBUFX2_insert11 _426_ _426__bF$buf4 vdd gnd BUFX2
+XBUFX2_insert12 _426_ _426__bF$buf3 vdd gnd BUFX2
+XBUFX2_insert13 _426_ _426__bF$buf2 vdd gnd BUFX2
+XBUFX2_insert14 _426_ _426__bF$buf1 vdd gnd BUFX2
+XBUFX2_insert15 _426_ _426__bF$buf0 vdd gnd BUFX2
+XBUFX2_insert16 i_rst_n i_rst_n_bF$buf3 vdd gnd BUFX2
+XBUFX2_insert17 i_rst_n i_rst_n_bF$buf2 vdd gnd BUFX2
+XBUFX2_insert18 i_rst_n i_rst_n_bF$buf1 vdd gnd BUFX2
+XBUFX2_insert19 i_rst_n i_rst_n_bF$buf0 vdd gnd BUFX2
+X_2422_ _748_ i_clk_sys_ext_bF$buf1 \u_rf_if.o_waddr\[1] vdd gnd DFFPOSX1
+X_2002_ _508_ \u_cpu.immdec.gen_immdec_w_eq_1.imm11_7\[4] _90_ vdd gnd AND2X2
+X_2231_ _240_ _241_ _873__bF$buf0 _591_ vdd gnd MUX2X1
+X_1922_ _27_ _34_ vdd gnd INVX1
+X_1502_ _877_ _878_ _879_ vdd gnd AND2X2
+X_2460_ _777_ i_clk_sys_ext_bF$buf4 \u_rf_if.read_buf0\[13] vdd gnd DFFPOSX1
+X_2040_ _119_ _81_ _120_ vdd gnd NOR2X1
+X_1731_ mem_ibus_ack_bF$buf7 \u_rf_if.rreg0_latched\[2] _1046_ vdd gnd NOR2X1
+X_1311_ \u_cpu.alu.add_cy_r\ _389_ vdd gnd INVX1
+X_2516_ _822_ i_clk_sys_ext_bF$buf2 \u_rf_if.read_buf0\[30] vdd gnd DFFPOSX1
+X_1960_ mem_ibus_ack_bF$buf3 _56_ _8_ _60_ vdd gnd OAI21X1
+X_1540_ _907_ _909_ _904_ _898_ _823_ vdd 
 + gnd
 + AOI22X1
-X_2216_ _551__bF$buf5 _243_ _241_ _244_ vdd gnd OAI21X1
-X_1907_ _559_ _24_ _27_ vdd gnd NAND2X1
-X_1660_ \u_rf_if.read_buf0\[15] _947__bF$buf3 \u_rf_if.read_buf0\[13] _990__bF$buf3 _1011_ vdd 
+X_2325_ _673_ i_clk_sys_ext_bF$buf12 rf_read_reg1_to_if[2] vdd gnd DFFPOSX1
+X_2554_ _574_ i_clk_sys_ext_bF$buf11 \u_cpu.ctrl.o_ibus_adr\[27] vdd gnd DFFPOSX1
+X_2134_ _488_ _432_ _172_ vdd gnd NOR2X1
+X_1825_ _1107_ _543__bF$buf2 _504_ _528_ _721_ vdd 
 + gnd
 + OAI22X1
-X_1240_ _471_ _469_ vdd gnd INVX2
-X_2445_ _756_ i_clk_sys_ext_bF$buf10 \u_rf_if.rreg1_latched\[2] vdd gnd DFFPOSX1
-X_2025_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[5] _111_ vdd gnd INVX1
-X_1716_ _1047_ _1048_ vdd gnd INVX1
-X_2254_ _224_ _11_ _440__bF$buf0 _587_ vdd gnd MUX2X1
-X_1945_ _499_ _404_ _54_ _55_ vdd gnd OAI21X1
-X_1525_ mem_ibus_ack_bF$buf2 \u_rf_if.rreg1_latched\[3] _907_ vdd gnd NOR2X1
-X_2483_ _782_ i_clk_sys_ext_bF$buf11 \u_rf_if.read_buf0\[14] vdd gnd DFFPOSX1
-X_2063_ _135_ _136_ _413__bF$buf2 _655_ vdd gnd MUX2X1
-X_1754_ _1072_ _446_ _751_ vdd gnd AND2X2
-X_1334_ _383__bF$buf2 _382_ _379_ _378_ vdd gnd OAI21X1
-X_2539_ _824_ i_clk_sys_ext_bF$buf11 \u_rf_if.rs2_stream_buf\[1] vdd gnd DFFPOSX1
-X_2119_ \u_mem_serial.shift_reg\[13] _551__bF$buf3 _169_ vdd gnd NAND2X1
-X_2292_ \u_mem_serial.clk_sys_prev\ _565_ _564_ vdd gnd NOR2X1
-X_1983_ \u_mem_serial.shift_reg\[26] \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[2] mem_ibus_ack_bF$buf6 _82_ vdd gnd MUX2X1
-X_1563_ \u_rf_if.issue_idx\[0] _942_ vdd gnd INVX1
-X_2348_ _682_ i_clk_sys_ext_bF$buf4 \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[3] vdd gnd DFFPOSX1
-X_1619_ _921_ \u_rf_if.stream_active_bF$buf2\ _917_ _984_ vdd gnd AOI21X1
-X_1792_ \u_rf_if.stream_cnt\[3] _920_ _926_ _1094_ vdd gnd OAI21X1
-X_1372_ _436_ _341_ _349_ _386_ _340_ vdd 
+X_1405_ \u_rf_if.last_req_key\[1] _311_ \u_rf_if.last_req_key\[0] _308_ _297_ vdd 
++ gnd
++ OAI22X1
+X_2363_ _836_ i_clk_fast_bF$buf7 \u_rf_if.tx_state\[4] vdd gnd DFFPOSX1
+X_1634_ _393__bF$buf4 \u_rf_if.read_buf0\[4] \u_rf_if.read_buf0\[3] _943__bF$buf1 _983_ vdd 
++ gnd
++ OAI22X1
+X_1214_ _485_ _484_ vdd gnd INVX1
+X_2419_ _601_ i_clk_sys_ext_bF$buf5 \u_cpu.ctrl.o_ibus_adr\[25] vdd gnd DFFPOSX1
+X_2172_ _202_ _463_ _205_ vdd gnd NOR2X1
+X_1863_ _1098_ _542__bF$buf4 _1141_ vdd gnd NAND2X1
+X_1443_ \u_rf_if.tx_state\[2] _514_ \u_rf_if.tx_state\[3] _264_ vdd gnd OAI21X1
+X_2228_ \u_cpu.ctrl.o_ibus_adr\[17] _240_ vdd gnd INVX1
+X_1919_ _30_ _28_ _31_ vdd gnd NAND2X1
+X_1672_ _393__bF$buf1 \u_rf_if.read_buf0\[18] \u_rf_if.read_buf0\[17] _943__bF$buf0 _1007_ vdd 
++ gnd
++ OAI22X1
+X_1252_ _479_ _447_ _451_ _468_ _446_ vdd 
 + gnd
 + AOI22X1
-X_2577_ _630_ i_clk_fast_bF$buf5 \u_mem_serial.shift_reg\[14] vdd gnd DFFPOSX1
-X_2157_ _457_ _465_ _187_ _198_ vdd gnd OAI21X1
-X_1848_ _377_ _363_ _380_ _1140_ vdd gnd OAI21X1
-X_1428_ \u_rf_if.last_req_key\[0] _288_ _286_ vdd gnd NOR2X1
-X_1181_ \u_rf_if.tx_state\[1] \u_rf_if.tx_state\[0] _525_ vdd gnd NOR2X1
-X_2386_ _712_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[22] vdd gnd DFFPOSX1
-X_1657_ \u_rf_if.read_buf0\[14] _1009_ vdd gnd INVX1
-X_1237_ \u_cpu.decode.opcode\[2] _472_ vdd gnd INVX2
-X_2195_ \u_cpu.ctrl.o_ibus_adr\[9] _228_ vdd gnd INVX1
-X_1886_ \u_mem_serial.shift_reg\[12] mem_ibus_ack_bF$buf6 _15_ vdd gnd NAND2X1
-X_1466_ \u_rf_if.tx_state\[2] _524_ \u_rf_if.tx_state\[3] _843_ vdd gnd OAI21X1
-X_1695_ _383__bF$buf4 \u_rf_if.read_buf0\[27] \u_rf_if.read_buf0\[26] _990__bF$buf1 _1033_ vdd 
-+ gnd
-+ OAI22X1
-X_1275_ _438_ _437_ _436_ vdd gnd NOR2X1
-X_2289_ i_rst_n_bF$buf0 \u_cpu.state.ibus_cyc\ _567_ vdd gnd NAND2X1
-X_2501_ _820_ i_clk_sys_ext_bF$buf12 \u_rf_if.pending_read\ vdd gnd DFFPOSX1
-X_2098_ \u_cpu.bufreg.data\[31] _153_ vdd gnd INVX1
-X_1789_ _968_ _1089_ _1091_ _735_ vdd gnd OAI21X1
-X_1369_ _344_ _348_ _343_ vdd gnd NOR2X1
-X_2310_ _647_ i_clk_sys_ext_bF$buf3 \u_cpu.bufreg.data\[11] vdd gnd DFFPOSX1
-X_1598_ _927_ _968_ vdd gnd INVX2
-X_1178_ \u_rf_if.rtrig1\ _528_ vdd gnd INVX1
-X_1810_ _1106_ \u_rf_if.i_stream_rs2_en\ _956_ _1107_ vdd gnd OAI21X1
-X_2404_ _591_ i_clk_sys_ext_bF$buf13 \u_cpu.ctrl.o_ibus_adr\[11] vdd gnd DFFPOSX1
-X_2213_ _239_ _551__bF$buf5 _241_ vdd gnd NAND2X1
-X_1904_ _560_ _21_ _25_ vdd gnd NOR2X1
-X_2442_ _737_ i_clk_fast_bF$buf1 \u_rf_if.last_req_key\[8] vdd gnd DFFPOSX1
-X_2022_ _104_ _56_ _109_ _669_ vdd gnd AOI21X1
-X_1713_ \u_rf_if.issue_idx\[0] _1044_ _1045_ vdd gnd NAND2X1
-X_2251_ _261_ _233_ _440__bF$buf3 _590_ vdd gnd MUX2X1
-X_1942_ mem_ibus_ack_bF$buf7 _477_ _52_ vdd gnd NOR2X1
-X_1522_ _904_ _902_ _905_ vdd gnd OR2X2
-X_2307_ _644_ i_clk_sys_ext_bF$buf10 \u_cpu.bufreg.data\[8] vdd gnd DFFPOSX1
-X_2480_ _779_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[17] vdd gnd DFFPOSX1
-X_2060_ \u_cpu.bufreg.data\[20] _135_ vdd gnd INVX1
-X_1751_ _1070_ _1069_ _752_ vdd gnd NOR2X1
-X_1331_ _383__bF$buf2 _382_ _381_ vdd gnd NOR2X1
-X_2536_ _827_ i_clk_sys_ext_bF$buf13 \u_rf_if.read_buf0\[30] vdd gnd DFFPOSX1
-X_2116_ _375_ _153_ _167_ vdd gnd NOR2X1
-X_1807_ \u_rf_if.rs2_stream_buf\[1] _924_ _1104_ vdd gnd NAND2X1
-X_1980_ \u_mem_serial.shift_reg\[27] \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[3] mem_ibus_ack_bF$buf6 _80_ vdd gnd MUX2X1
-X_1560_ \u_rf_if.issue_idx\[4] _913_ _939_ vdd gnd NOR2X1
-X_2345_ _679_ i_clk_sys_ext_bF$buf4 \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[0] vdd gnd DFFPOSX1
-X_1616_ _383__bF$buf3 _920_ _925_ _982_ vdd gnd OAI21X1
-X_2574_ _730_ i_clk_sys_ext_bF$buf12 raddr[6] vdd gnd DFFPOSX1
-X_2154_ _194_ _461_ _195_ vdd gnd NOR2X1
-X_1845_ _499_ _498_ _1137_ vdd gnd NAND2X1
-X_1425_ ren_bF$buf3 \u_rf_if.o_waddr\[0] _290_ _289_ vdd gnd OAI21X1
-X_2383_ _709_ i_clk_sys_ext_bF$buf6 \u_cpu.bufreg2.i_op_b_sel\ vdd gnd DFFPOSX1
-X_1654_ \u_rf_if.read_buf0\[13] _947__bF$buf3 _1007_ vdd gnd NOR2X1
-X_1234_ \u_cpu.bufreg.i_right_shift_op\ _476_ _475_ vdd gnd NAND2X1
-X_2439_ _752_ i_clk_sys_ext_bF$buf0 \u_rf_if.o_waddr\[1] vdd gnd DFFPOSX1
-X_2019_ rf_read_reg1_to_if[0] \u_cpu.branch_op\ _106_ _107_ vdd gnd OAI21X1
-X_2192_ _551__bF$buf4 _225_ _223_ _226_ vdd gnd OAI21X1
-X_1883_ _7_ _13_ _552__bF$buf4 _712_ vdd gnd MUX2X1
-X_1463_ _300_ _811_ vdd gnd INVX1
-X_2248_ _259_ _260_ _440__bF$buf3 _592_ vdd gnd MUX2X1
-X_1939_ _512_ _505__bF$buf2 _50_ _693_ vdd gnd OAI21X1
-X_1519_ \u_rf_if.rcnt\[0] \u_rf_if.rcnt\[1] _902_ vdd gnd NOR2X1
-X_1692_ \u_rf_if.read_buf0\[27] _947__bF$buf1 \u_rf_if.read_buf0\[25] _990__bF$buf1 _1031_ vdd 
-+ gnd
-+ OAI22X1
-X_1272_ rf_wreg0_to_if[1] _439_ vdd gnd INVX1
-X_2477_ _733_ i_clk_sys_ext_bF$buf0 raddr[3] vdd gnd DFFPOSX1
-X_2057_ _132_ _133_ _413__bF$buf0 _658_ vdd gnd MUX2X1
-X_1748_ _890_ _891_ _1068_ _753_ vdd gnd AOI21X1
-X_1328_ _498_ _385_ _384_ vdd gnd NAND2X1
-X_2286_ _510_ _505__bF$buf4 _275_ _569_ vdd gnd OAI21X1
-X_1977_ \u_mem_serial.shift_reg\[28] \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[4] mem_ibus_ack_bF$buf6 _78_ vdd gnd MUX2X1
-X_1557_ _333_ _811_ _936_ vdd gnd NOR2X1
-X_2095_ _468_ _412_ _150_ _151_ vdd gnd OAI21X1
-X_1786_ raddr[1] _1043_ _1044_ _1089_ vdd gnd AOI21X1
-X_1366_ \u_cpu.ctrl.pc\ \u_cpu.ctrl.pc_plus_4_cy_r_w\ _346_ vdd gnd NOR2X1
-X_1595_ _910_ _967_ _821_ vdd gnd NOR2X1
-X_1175_ _551__bF$buf5 _531_ _534_ _530_ vdd gnd OAI21X1
-X_2189_ _7_ _551__bF$buf0 _223_ vdd gnd NAND2X1
-X_2401_ _727_ i_clk_fast_bF$buf5 \u_mem_serial.shift_reg\[29] vdd gnd DFFPOSX1
-X_1689_ \u_rf_if.read_buf0\[26] _1029_ vdd gnd INVX1
-X_1269_ \u_rf_if.req_seen\ _442_ _441_ vdd gnd NOR2X1
-X_2210_ \u_mem_serial.shift_reg\[16] _239_ vdd gnd INVX1
-X_1901_ \u_mem_serial.bit_count\[1] _2_ _23_ vdd gnd NAND2X1
-X_1498_ _858_ _877_ _885_ _886_ vdd gnd OAI21X1
-X_1710_ _969_ _1041_ _1042_ _765_ vdd gnd AOI21X1
-X_2304_ _640_ i_clk_sys_ext_bF$buf9 \u_cpu.bufreg.data\[5] vdd gnd DFFPOSX1
-X_2533_ _831_ i_clk_sys_ext_bF$buf12 \u_rf_if.rcnt\[1] vdd gnd DFFPOSX1
-X_2113_ \u_cpu.bufreg.data\[2] _493_ _165_ _166_ vdd gnd AOI21X1
-X_1804_ \u_rf_if.rreg0_latched\[2] _970_ _969_ _1102_ vdd gnd NAND3X1
-X_2342_ _676_ i_clk_sys_ext_bF$buf4 rf_read_reg1_to_if[1] vdd gnd DFFPOSX1
-X_1613_ \u_rf_if.stream_cnt\[1] _978_ _979_ _815_ vdd gnd AOI21X1
-X_2571_ _578_ i_clk_sys_ext_bF$buf13 \u_cpu.ctrl.o_ibus_adr\[30] vdd gnd DFFPOSX1
-X_2151_ _469_ _466_ \u_cpu.bufreg2.dhi\[5] _193_ vdd gnd OAI21X1
-XCLKBUF1_insert30 i_clk_sys_ext i_clk_sys_ext_bF$buf6 vdd gnd CLKBUF1
-XCLKBUF1_insert31 i_clk_sys_ext i_clk_sys_ext_bF$buf5 vdd gnd CLKBUF1
-XCLKBUF1_insert32 i_clk_sys_ext i_clk_sys_ext_bF$buf4 vdd gnd CLKBUF1
-XCLKBUF1_insert33 i_clk_sys_ext i_clk_sys_ext_bF$buf3 vdd gnd CLKBUF1
-XCLKBUF1_insert34 i_clk_sys_ext i_clk_sys_ext_bF$buf2 vdd gnd CLKBUF1
-XCLKBUF1_insert35 i_clk_sys_ext i_clk_sys_ext_bF$buf1 vdd gnd CLKBUF1
-XCLKBUF1_insert36 i_clk_sys_ext i_clk_sys_ext_bF$buf0 vdd gnd CLKBUF1
-X_1842_ \u_mem_serial.shift_reg\[28] _505__bF$buf1 _1135_ vdd gnd NOR2X1
-X_1422_ \u_rf_if.last_req_key\[4] _293_ _292_ vdd gnd NOR2X1
-X_2207_ _552__bF$buf2 _236_ _237_ _610_ vdd gnd OAI21X1
-X_2380_ \u_mem_serial.bit_count\[0] _542_ vdd gnd INVX1
-X_1651_ \u_rf_if.read_buf0\[12] _947__bF$buf4 _1005_ vdd gnd NOR2X1
-X_1231_ \u_cpu.state.cnt_r\[3] _479_ _478_ vdd gnd NOR2X1
-X_2436_ _830_ i_clk_sys_ext_bF$buf10 \u_rf_if.rreg1_latched\[3] vdd gnd DFFPOSX1
-X_2016_ rf_read_reg0_to_if[4] _104_ vdd gnd INVX1
-X_1707_ _943_ _942_ _1040_ vdd gnd NOR2X1
-X_1880_ \u_cpu.ctrl.o_ibus_adr\[7] _11_ vdd gnd INVX1
-X_1460_ ren_bF$buf3 _807_ _808_ vdd gnd NAND2X1
-X_2245_ \u_cpu.ctrl.o_ibus_adr\[13] _259_ vdd gnd INVX1
-X_1936_ \u_cpu.decode.co_ebreak\ _518_ _49_ vdd gnd NAND2X1
-X_1516_ _899_ _862_ _900_ vdd gnd NOR2X1
-X_2474_ _776_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[20] vdd gnd DFFPOSX1
-X_2054_ \u_cpu.bufreg.data\[23] _132_ vdd gnd INVX1
-X_1745_ _1066_ _1065_ _1067_ vdd gnd NAND2X1
-X_1325_ _419_ _388_ _389_ _387_ vdd gnd NAND3X1
-XFILL98550x39750 gnd vdd FILL
-X_2283_ \u_cpu.alu.cmp_r\ _476_ _274_ vdd gnd NAND2X1
-X_1974_ \u_mem_serial.shift_reg\[29] \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[5] mem_ibus_ack_bF$buf6 _76_ vdd gnd MUX2X1
-X_1554_ _933_ _922_ _934_ vdd gnd NAND2X1
-X_2339_ _673_ i_clk_sys_ext_bF$buf9 rf_wreg0_to_if[2] vdd gnd DFFPOSX1
-X_2092_ _533_ _148_ _413__bF$buf4 _637_ vdd gnd MUX2X1
-X_1783_ _968_ _1039_ _1087_ vdd gnd NOR2X1
-X_1363_ _350_ _411_ _349_ vdd gnd OR2X2
-X_2568_ _852_ i_clk_fast_bF$buf5 \u_mem_serial.shift_reg\[12] vdd gnd DFFPOSX1
-X_2148_ _470_ _189_ _190_ _623_ vdd gnd OAI21X1
-XFILL99150x10950 gnd vdd FILL
-X_1839_ _490_ _484_ _962_ _1133_ vdd gnd OAI21X1
-X_1419_ ren_bF$buf1 _430_ _295_ vdd gnd NOR2X1
-X_1592_ \u_rf_if.prefetch_active\ _964_ _965_ vdd gnd NOR2X1
-X_1172_ \u_cpu.bufreg.data\[3] _533_ vdd gnd INVX1
-X_2377_ _586_ i_clk_sys_ext_bF$buf4 \u_cpu.ctrl.o_ibus_adr\[6] vdd gnd DFFPOSX1
-X_1648_ _1002_ _997_ _1003_ _788_ vdd gnd AOI21X1
-X_1228_ _482_ _481_ vdd gnd INVX1
-X_2186_ \u_mem_serial.shift_reg\[15] _505__bF$buf3 _221_ vdd gnd NOR2X1
-X_1877_ \u_mem_serial.shift_reg\[21] _8_ vdd gnd INVX1
-X_1457_ i_clk_fast_bF$buf7 _805_ _1123_ vdd gnd NOR2X1
-X_1686_ \u_rf_if.read_buf0\[25] _947__bF$buf2 _1027_ vdd gnd NOR2X1
-X_1266_ _444_ _443_ vdd gnd INVX1
-X_1495_ _881_ _882_ _858_ _883_ vdd gnd OAI21X1
-X_2089_ _1153_ _1112_ _413__bF$buf4 _639_ vdd gnd MUX2X1
-X_2301_ \u_mem_serial.bit_count\[6] \u_mem_serial.bit_count\[5] _555_ vdd gnd OR2X2
-X_1589_ _915_ \u_rf_if.prefetch_active\ _822_ vdd gnd AND2X2
-X_1169_ \u_mem_serial.shift_reg\[18] _536_ vdd gnd INVX1
-X_2530_ _617_ i_clk_sys_ext_bF$buf1 \u_cpu.bufreg.i_shamt\[1] vdd gnd DFFPOSX1
-X_2110_ _157_ _162_ _163_ vdd gnd OR2X2
-X_1801_ \u_rf_if.rreg0_latched\[1] _970_ _969_ _1100_ vdd gnd NAND3X1
-X_1398_ _527_ \u_rf_if.last_req_key\[9] _316_ vdd gnd OR2X2
-X_1610_ _928_ _924_ _978_ vdd gnd NOR2X1
-X_2204_ _505__bF$buf3 _235_ _231_ _611_ vdd gnd AOI21X1
-X_2433_ _735_ i_clk_sys_ext_bF$buf5 raddr[1] vdd gnd DFFPOSX1
-X_2013_ _91_ _101_ _102_ _671_ vdd gnd OAI21X1
-X_1704_ _1037_ _1038_ _767_ vdd gnd NOR2X1
-X_2242_ _256_ _257_ _440__bF$buf4 _595_ vdd gnd MUX2X1
-X_1933_ _515_ _438_ mem_ibus_ack_bF$buf4 _696_ vdd gnd MUX2X1
-X_1513_ _897_ _446_ _833_ vdd gnd AND2X2
-X_2471_ \u_rf_if.rtrig0\ i_clk_sys_ext_bF$buf5 \u_rf_if.rtrig1\ vdd gnd DFFPOSX1
-X_2051_ _129_ _130_ _413__bF$buf1 _661_ vdd gnd MUX2X1
-X_1742_ \u_rf_if.rcnt\[0] _443_ _755_ vdd gnd NOR2X1
-X_1322_ _391_ _392_ _390_ vdd gnd NAND2X1
-X_2527_ _819_ i_clk_sys_ext_bF$buf5 \u_rf_if.prefetch_active\ vdd gnd DFFPOSX1
-X_2107_ _159_ _158_ _160_ vdd gnd OR2X2
-X_2280_ _266_ _440__bF$buf3 _272_ _271_ _572_ vdd 
-+ gnd
-+ OAI22X1
-XFILL98550x93750 gnd vdd FILL
-X_1971_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[4] _73_ vdd gnd INVX1
-X_1551_ _928_ _930_ \u_rf_if.stream_cnt\[4] _931_ vdd gnd OAI21X1
-X_2336_ _670_ i_clk_sys_ext_bF$buf6 \u_cpu.immdec.gen_immdec_w_eq_1.imm31\ vdd gnd DFFPOSX1
-X_1607_ _723_ _807_ _976_ vdd gnd AND2X2
-X_1780_ _334_ _704__bF$buf0 _1085_ _738_ vdd gnd AOI21X1
-X_1360_ _450_ _419_ _352_ vdd gnd NOR2X1
-X_2565_ _627_ i_clk_fast_bF$buf0 _1121_ vdd gnd DFFPOSX1
-X_2145_ _187_ _188_ vdd gnd INVX1
-X_1836_ _1131_ _484_ _620_[2] vdd gnd NOR2X1
-X_1416_ _300_ \u_rf_if.last_req_key\[6] _298_ vdd gnd OR2X2
-X_2374_ i_clk_sys_ext_bF$buf9 i_clk_fast_bF$buf4 \u_mem_serial.clk_sys_prev\ vdd gnd DFFPOSX1
-X_1645_ _1000_ _1001_ _789_ vdd gnd NOR2X1
-X_1225_ _492_ _485_ _484_ vdd gnd NOR2X1
-X_2183_ \u_mem_serial.shift_reg\[13] _552__bF$buf1 _219_ vdd gnd NAND2X1
-X_1874_ \u_mem_serial.state\[1] _5_ _4_ \u_mem_serial.state\[0] _6_ vdd 
+X_2457_ _775_ i_clk_sys_ext_bF$buf4 \u_rf_if.read_buf0\[15] vdd gnd DFFPOSX1
+X_2037_ \u_mem_serial.shift_reg\[24] _117_ vdd gnd INVX1
+X_1728_ mem_ibus_ack_bF$buf4 \u_rf_if.rreg0_latched\[1] _1044_ vdd gnd NOR2X1
+X_1308_ \u_rf_if.read_buf0\[0] _392_ vdd gnd INVX1
+X_1481_ _860_ _262_ _271_ _1117_ vdd gnd AOI21X1
+X_2266_ _355_ _254_ _1137_ _569_ vdd gnd AOI21X1
+X_1957_ _57_ _51_ _58_ vdd gnd NOR2X1
+X_1537_ _906_ _905_ \u_rf_if.stream_active\ _907_ vdd gnd OAI21X1
+X_1290_ _413_ _411_ _424_ _436_ _410_ vdd 
 + gnd
 + AOI22X1
-X_1454_ _803_ _442_ _1124_ _804_ vdd gnd OAI21X1
-X_2239_ \u_cpu.ctrl.o_ibus_adr\[16] _256_ vdd gnd INVX1
-X_1683_ _1024_ _997_ _1025_ _775_ vdd gnd AOI21X1
-X_1263_ _474_ _447_ _446_ vdd gnd NAND2X1
-X_2468_ \u_rf_if.wdata0_next\[0] i_clk_sys_ext_bF$buf0 \u_rf_if.wdata0_r\[0] vdd gnd DFFPOSX1
-X_2048_ \u_cpu.bufreg.data\[26] _129_ vdd gnd INVX1
-X_1739_ rf_read_reg1_to_if[2] _1063_ vdd gnd INVX1
-X_1319_ _408_ _394_ \u_cpu.ctrl.pc\ _393_ vdd gnd OAI21X1
-X_1492_ _283_ _524_ _880_ vdd gnd OR2X2
-X_2277_ _270_ _1148_ _573_ vdd gnd NOR2X1
-X_1968_ _518_ _1151_ _71_ vdd gnd NOR2X1
-X_1548_ \u_rf_if.stream_active_bF$buf1\ \u_rf_if.ready_pulse\ _928_ vdd gnd NOR2X1
-XFILL99150x7350 gnd vdd FILL
-X_2086_ _147_ _10_ _413__bF$buf4 _643_ vdd gnd MUX2X1
-XFILL98850x68550 gnd vdd FILL
-X_1777_ \u_rf_if.last_req_key\[6] _704__bF$buf0 i_rst_n_bF$buf0 _1084_ vdd gnd OAI21X1
-X_1357_ _356_ _358_ _355_ vdd gnd AND2X2
-X_1586_ _957_ _961_ _824_ vdd gnd NOR2X1
-X_1166_ \u_mem_serial.shift_reg\[7] _551__bF$buf2 _538_ vdd gnd NAND2X1
-X_1395_ _322_ _320_ _319_ vdd gnd AND2X2
-X_2201_ \u_cpu.ctrl.o_ibus_adr\[10] _233_ vdd gnd INVX1
-XFILL99150x18150 gnd vdd FILL
-X_1489_ _876_ _875_ _877_ vdd gnd NAND2X1
-X_2430_ _603_ i_clk_sys_ext_bF$buf13 \u_cpu.ctrl.o_ibus_adr\[23] vdd gnd DFFPOSX1
-X_2010_ _93_ _99_ _100_ _672_ vdd gnd OAI21X1
-X_1701_ _1035_ _1036_ _768_ vdd gnd NOR2X1
-X_1298_ \u_cpu.bufreg.i_right_shift_op\ _454_ _415_ _414_ vdd gnd OAI21X1
-X_1930_ _544_ _564_ _46_ vdd gnd NAND2X1
-X_1510_ \u_rf_if.o_waddr\[3] _894_ _895_ vdd gnd NOR2X1
-X_2524_ _816_ i_clk_sys_ext_bF$buf11 \u_rf_if.stream_cnt\[0] vdd gnd DFFPOSX1
-X_2104_ _472_ _156_ _400_ _157_ vdd gnd NAND3X1
-X_2333_ _667_ i_clk_sys_ext_bF$buf4 \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[5] vdd gnd DFFPOSX1
-X_1604_ \u_rf_if.rreg1_latched\[3] _973_ _972_ raddr[7] _974_ vdd 
-+ gnd
-+ AOI22X1
-X_2562_ _847_ i_clk_fast_bF$buf5 \u_mem_serial.shift_reg\[26] vdd gnd DFFPOSX1
-X_2142_ _421_ _469_ _185_ vdd gnd NOR2X1
-X_1833_ \u_cpu.bufreg2.i_bytecnt\[0] _488_ _1130_ vdd gnd NOR2X1
-X_1413_ ren_bF$buf0 _432_ _301_ vdd gnd NOR2X1
-XBUFX2_insert60 _551_ _551__bF$buf4 vdd gnd BUFX2
-XBUFX2_insert61 _551_ _551__bF$buf3 vdd gnd BUFX2
-XBUFX2_insert62 _551_ _551__bF$buf2 vdd gnd BUFX2
-XBUFX2_insert63 _551_ _551__bF$buf1 vdd gnd BUFX2
-XBUFX2_insert64 _551_ _551__bF$buf0 vdd gnd BUFX2
-XBUFX2_insert65 _413_ _413__bF$buf4 vdd gnd BUFX2
-XBUFX2_insert66 _413_ _413__bF$buf3 vdd gnd BUFX2
-XBUFX2_insert67 _413_ _413__bF$buf2 vdd gnd BUFX2
-XBUFX2_insert68 _413_ _413__bF$buf1 vdd gnd BUFX2
-XBUFX2_insert69 _413_ _413__bF$buf0 vdd gnd BUFX2
-X_2371_ _583_ i_clk_sys_ext_bF$buf0 \u_cpu.ctrl.o_ibus_adr\[3] vdd gnd DFFPOSX1
-X_1642_ \u_rf_if.stream_active_bF$buf2\ _996_ _999_ _790_ vdd gnd AOI21X1
-X_1222_ _488_ _487_ vdd gnd INVX1
-X_2427_ _602_ i_clk_sys_ext_bF$buf13 \u_cpu.ctrl.o_ibus_adr\[22] vdd gnd DFFPOSX1
-X_2007_ _93_ _97_ _98_ _673_ vdd gnd OAI21X1
-X_2180_ _211_ \u_cpu.bufreg.i_shamt\[1] _465_ _217_ vdd gnd MUX2X1
-X_1871_ \u_mem_serial.state\[1] _1132_ _3_ vdd gnd NOR2X1
-X_1451_ _799_ _801_ _839_ vdd gnd NOR2X1
-X_2236_ _253_ _254_ _440__bF$buf4 _598_ vdd gnd MUX2X1
-X_1927_ _551__bF$buf4 _43_ _40_ _44_ vdd gnd OAI21X1
-X_1507_ _890_ _891_ _892_ vdd gnd NOR2X1
-X_1680_ _1022_ _1023_ _776_ vdd gnd NOR2X1
-X_1260_ _450_ _451_ _449_ vdd gnd NOR2X1
-X_2465_ _771_ i_clk_sys_ext_bF$buf7 \u_rf_if.read_buf0\[25] vdd gnd DFFPOSX1
-X_2045_ _127_ _126_ _413__bF$buf1 _664_ vdd gnd MUX2X1
-X_1736_ rf_read_reg1_to_if[1] _1061_ vdd gnd INVX1
-X_1316_ \u_cpu.ctrl.pc_plus_offset_cy_r_w\ _396_ vdd gnd INVX1
-X_2274_ _36_ _268_ _269_ _575_ vdd gnd OAI21X1
-X_1965_ _68_ _56_ _69_ vdd gnd NOR2X1
-X_1545_ _925_ _370_ _926_ vdd gnd NOR2X1
-X_2083_ _145_ _146_ _413__bF$buf2 _645_ vdd gnd MUX2X1
-X_1774_ _294_ _704__bF$buf3 _1082_ _741_ vdd gnd AOI21X1
-X_1354_ _381_ _367_ _358_ vdd gnd NAND2X1
-X_2559_ _844_ i_clk_sys_ext_bF$buf0 \u_rf_if.wen0_r\ vdd gnd DFFPOSX1
-X_2139_ _491_ _418_ _182_ vdd gnd NOR2X1
-X_1583_ \u_rf_if.rs2_stream_buf\[1] _958_ _959_ vdd gnd NAND2X1
-X_1163_ \u_mem_serial.shift_reg\[11] _551__bF$buf0 _540_ vdd gnd NAND2X1
-X_2368_ _698_ i_clk_fast_bF$buf5 \u_mem_serial.shift_reg\[21] vdd gnd DFFPOSX1
-X_1639_ _383__bF$buf1 \u_rf_if.read_buf0\[6] \u_rf_if.read_buf0\[5] _990__bF$buf2 _998_ vdd 
+X_2495_ _630_ i_clk_sys_ext_bF$buf13 \u_cpu.state.i_ctrl_misalign\ vdd gnd DFFPOSX1
+X_2075_ \u_cpu.bufreg.data\[13] _138_ vdd gnd INVX1
+X_1766_ _330_ _284_ _1065_ _738_ vdd gnd AOI21X1
+X_1346_ \u_cpu.ctrl.pc\ \u_cpu.ctrl.pc_plus_4_cy_r_w\ _354_ vdd gnd OR2X2
+X_1995_ _1049_ _84_ _81_ _672_ vdd gnd MUX2X1
+X_1575_ _930_ \u_rf_if.issue_idx\[4] \u_rf_if.issue_idx\[5] _941_ vdd gnd AOI21X1
+X_1155_ _0_ o_mem_mosi vdd gnd BUFX2
+X_1384_ _322_ _325_ _319_ _318_ vdd gnd AOI21X1
+X_2169_ \u_cpu.bufreg.i_shamt\[1] _202_ vdd gnd INVX1
+X_1193_ \u_mem_serial.shift_reg\[0] _504_ vdd gnd INVX1
+X_2398_ _737_ i_clk_fast_bF$buf5 \u_rf_if.last_req_key\[5] vdd gnd DFFPOSX1
+X_1669_ \u_rf_if.read_buf0\[16] _943__bF$buf4 \u_rf_if.read_buf0\[18] _926_ _1005_ vdd 
 + gnd
 + OAI22X1
-X_1219_ \u_cpu.state.cnt_r\[3] _490_ vdd gnd INVX1
-X_1392_ \u_rf_if.last_req_key\[8] _337_ _322_ vdd gnd NAND2X1
-X_2177_ _212_ _465_ _188_ _215_ vdd gnd OAI21X1
-X_1868_ _1151_ _1_ _552__bF$buf4 _715_ vdd gnd MUX2X1
-X_1448_ _724_ _798_ _799_ _800_ vdd gnd AOI21X1
+X_1249_ \u_cpu.decode.opcode\[2] _450_ _449_ vdd gnd NAND2X1
+X_1898_ _13_ _14_ _0_ vdd gnd NOR2X1
+X_1478_ _854_ _270_ _857_ _858_ vdd gnd AOI21X1
+X_1287_ _481_ _419_ _414_ _413_ vdd gnd OAI21X1
+X_2513_ _818_ i_clk_sys_ext_bF$buf8 \u_rf_if.read_buf0\[31] vdd gnd DFFPOSX1
+X_2322_ _670_ i_clk_sys_ext_bF$buf12 rf_wreg0_to_if[3] vdd gnd DFFPOSX1
+X_2551_ _848_ i_clk_fast_bF$buf4 \u_mem_serial.shift_reg\[13] vdd gnd DFFPOSX1
+X_2131_ \u_mem_serial.bit_count\[6] _870_ _170_ vdd gnd NOR2X1
+X_1822_ \u_mem_serial.shift_reg\[29] _542__bF$buf2 _1105_ _1106_ vdd gnd AOI21X1
+X_1402_ \u_rf_if.last_req_key\[2] _300_ vdd gnd INVX1
+X_2360_ _698_ i_clk_fast_bF$buf0 \u_mem_serial.bit_count\[1] vdd gnd DFFPOSX1
+X_1631_ _393__bF$buf4 \u_rf_if.read_buf0\[3] \u_rf_if.read_buf0\[2] _943__bF$buf1 _981_ vdd 
++ gnd
++ OAI22X1
+X_1211_ \u_cpu.state.cnt_r\[3] _487_ vdd gnd INVX1
+X_2416_ _747_ i_clk_sys_ext_bF$buf4 \u_rf_if.o_waddr\[2] vdd gnd DFFPOSX1
+X_1860_ _1138_ \u_cpu.state.ibus_cyc\ _277_ _1139_ vdd gnd AOI21X1
+X_1440_ ren _270_ _268_ _269_ _267_ vdd 
++ gnd
++ AOI22X1
+X_2225_ _237_ _238_ _873__bF$buf4 _594_ vdd gnd MUX2X1
+X_1916_ _870_ _28_ _529_ _29_ vdd gnd OAI21X1
+X_2454_ _772_ i_clk_sys_ext_bF$buf4 \u_rf_if.read_buf0\[18] vdd gnd DFFPOSX1
+X_2034_ \u_mem_serial.shift_reg\[30] mem_ibus_ack_bF$buf6 _70_ _115_ vdd gnd AOI21X1
+X_1725_ mem_ibus_ack_bF$buf4 \u_rf_if.rreg0_latched\[0] _1042_ vdd gnd NOR2X1
+X_1305_ \u_cpu.bufreg.i_right_shift_op\ \u_cpu.bne_or_bge\ _395_ vdd gnd NOR2X1
+X_2263_ _253_ _250_ _873__bF$buf1 _571_ vdd gnd MUX2X1
+X_1954_ _1041_ _55_ _51_ _684_ vdd gnd MUX2X1
+X_1534_ _903_ _899_ _904_ vdd gnd OR2X2
+X_2319_ _667_ i_clk_sys_ext_bF$buf12 rf_wreg0_to_if[0] vdd gnd DFFPOSX1
+X_2492_ \u_mem_serial.bit_count\[5] \u_mem_serial.bit_count\[6] _546_ vdd gnd NOR2X1
+X_2072_ _135_ _136_ _426__bF$buf0 _647_ vdd gnd MUX2X1
+X_1763_ _322_ _285_ i_rst_n_bF$buf3 _1064_ vdd gnd OAI21X1
+X_1343_ _424_ _358_ _396_ _357_ vdd gnd OAI21X1
+X_2548_ _624_ i_clk_fast_bF$buf4 _1116_ vdd gnd DFFPOSX1
+X_2128_ _14_ _543__bF$buf0 _1104_ _528_ _623_ vdd 
++ gnd
++ OAI22X1
+X_1819_ _1103_ _1098_ _543__bF$buf3 _723_ vdd gnd MUX2X1
+X_1992_ \u_mem_serial.shift_reg\[22] rf_read_reg1_to_if[3] mem_ibus_ack_bF$buf5 _83_ vdd gnd MUX2X1
+X_1572_ _938_ _939_ vdd gnd INVX2
+X_1152_ _1117_ o_rf_mosi vdd gnd BUFX2
+X_2357_ _580_ i_clk_sys_ext_bF$buf3 \u_cpu.ctrl.o_ibus_adr\[5] vdd gnd DFFPOSX1
+X_1628_ \u_rf_if.read_buf0\[3] _925__bF$buf0 _976_ \u_rf_if.read_buf0\[1] _979_ vdd 
++ gnd
++ AOI22X1
+X_1208_ _497_ _491_ _490_ vdd gnd NAND2X1
+X_1381_ \u_rf_if.last_req_key\[8] _344_ _345_ \u_rf_if.last_req_key\[9] _321_ vdd 
++ gnd
++ AOI22X1
+X_2166_ _187_ _194_ _199_ _200_ vdd gnd OAI21X1
+X_1857_ _497_ _481_ _478_ _712_ vdd gnd OAI21X1
+X_1437_ _274_ _282_ _270_ vdd gnd NOR2X1
+X_1190_ current_stream_rs2_hint _508_ _507_ vdd gnd NAND2X1
+X_2395_ _589_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[14] vdd gnd DFFPOSX1
+X_1666_ \u_rf_if.read_buf0\[15] _943__bF$buf4 \u_rf_if.read_buf0\[17] _926_ _1003_ vdd 
++ gnd
++ OAI22X1
+X_1246_ _467_ _463_ _453_ _452_ vdd gnd OAI21X1
+X_1895_ _1116_ _13_ vdd gnd INVX1
+X_1475_ _282_ _302_ _855_ vdd gnd NOR2X1
+X_1284_ _496_ _417_ \u_cpu.immdec.gen_immdec_w_eq_1.imm31\ _416_ vdd gnd OAI21X1
+X_2489_ _553_ _544_ _543_ vdd gnd NOR2X1
+X_2069_ \u_cpu.bufreg.data\[16] _135_ vdd gnd INVX1
+X_2298_ _649_ i_clk_sys_ext_bF$buf11 \u_cpu.bufreg.data\[17] vdd gnd DFFPOSX1
+X_1989_ mem_ibus_ack_bF$buf3 _80_ _48_ _81_ vdd gnd OAI21X1
+X_1569_ _935_ _936_ vdd gnd INVX1
+X_2510_ _613_ i_clk_sys_ext_bF$buf11 \u_cpu.bufreg.i_shamt\[0] vdd gnd DFFPOSX1
+X_1798_ \u_rf_if.rreg1_latched\[0] _962_ _940_ raddr[4] _1087_ vdd 
++ gnd
++ AOI22X1
+X_1378_ raddr[3] _324_ vdd gnd INVX1
+X_1187_ _510_ _512_ \u_rf_if.launch_pending\ _509_ vdd gnd OAI21X1
+X_2413_ _744_ i_clk_fast_bF$buf7 \u_rf_if.tx_state\[2] vdd gnd DFFPOSX1
+X_2222_ \u_cpu.ctrl.o_ibus_adr\[20] _237_ vdd gnd INVX1
+X_1913_ _549_ _529_ _26_ _696_ vdd gnd OAI21X1
+X_2451_ _769_ i_clk_sys_ext_bF$buf10 \u_rf_if.read_buf0\[21] vdd gnd DFFPOSX1
+X_2031_ \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[0] _110_ _111_ _112_ vdd gnd OAI21X1
+X_1722_ \u_rf_if.issue_idx\[4] _1038_ _896_ _1040_ vdd gnd OAI21X1
+X_1302_ _433_ _399_ _400_ _398_ vdd gnd NAND3X1
+X_2507_ _811_ i_clk_fast_bF$buf7 \u_rf_if.shift_rx\[1] vdd gnd DFFPOSX1
+X_2260_ _252_ _251_ _873__bF$buf2 _573_ vdd gnd MUX2X1
+X_1951_ \u_mem_serial.shift_reg\[16] rf_read_reg0_to_if[2] mem_ibus_ack_bF$buf0 _54_ vdd gnd MUX2X1
+X_1531_ \u_rf_if.stream_cnt\[0] _901_ vdd gnd INVX1
+X_2316_ _665_ i_clk_sys_ext_bF$buf9 rf_read_reg0_to_if[4] vdd gnd DFFPOSX1
+X_1760_ _315_ _285_ _1062_ _741_ vdd gnd AOI21X1
+X_1340_ _448_ _433_ _360_ vdd gnd NOR2X1
+X_2545_ _845_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[19] vdd gnd DFFPOSX1
+X_2125_ \u_mem_serial.state\[0] _535_ _167_ _625_ vdd gnd OAI21X1
+X_1816_ \u_cpu.ctrl.o_ibus_adr\[4] _1101_ vdd gnd INVX1
+X_2354_ _841_ i_clk_fast_bF$buf1 \u_rf_if.req_seen\ vdd gnd DFFPOSX1
+X_1625_ \u_rf_if.read_buf0\[2] _925__bF$buf2 _976_ \u_rf_if.read_buf0\[0] _977_ vdd 
++ gnd
++ AOI22X1
+X_1205_ \u_cpu.branch_op\ \u_cpu.decode.opcode\[0] _493_ vdd gnd NOR2X1
+X_2163_ _462_ _461_ _197_ vdd gnd NOR2X1
+X_1854_ _1133_ _1134_ _1135_ vdd gnd NAND2X1
+X_1434_ _285_ _272_ _277_ _835_ vdd gnd AOI21X1
+X_2219_ _234_ _235_ _873__bF$buf4 _598_ vdd gnd MUX2X1
+X_2392_ _588_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[13] vdd gnd DFFPOSX1
+X_1663_ \u_rf_if.read_buf0\[14] _943__bF$buf4 \u_rf_if.read_buf0\[16] _926_ _1001_ vdd 
++ gnd
++ OAI22X1
+X_1243_ \u_cpu.bufreg2.dhi\[5] _455_ vdd gnd INVX1
+X_2448_ _766_ i_clk_sys_ext_bF$buf2 \u_rf_if.read_buf0\[24] vdd gnd DFFPOSX1
+X_2028_ \u_cpu.branch_op\ _450_ _109_ vdd gnd NAND2X1
+X_1719_ _1035_ \u_rf_if.issue_idx\[3] _1038_ vdd gnd AND2X2
+X_1892_ _502_ _423_ mem_ibus_ack_bF$buf1 _702_ vdd gnd MUX2X1
+X_1472_ _264_ _843_ _852_ vdd gnd NAND2X1
+X_2257_ _250_ _231_ _873__bF$buf1 _574_ vdd gnd MUX2X1
+X_1948_ _886_ _52_ _51_ _687_ vdd gnd MUX2X1
+X_1528_ \u_rf_if.stream_cnt\[4] _898_ vdd gnd INVX1
+X_1281_ rf_read_reg1_to_if[0] rf_wreg0_to_if[0] _420_ _419_ vdd gnd MUX2X1
+X_2486_ _563_ _543__bF$buf1 _541_ _851_ vdd gnd OAI21X1
+X_2066_ _132_ _133_ _426__bF$buf0 _650_ vdd gnd MUX2X1
+X_1757_ _307_ _285_ i_rst_n_bF$buf0 _1061_ vdd gnd OAI21X1
+X_1337_ _364_ _366_ _363_ vdd gnd AND2X2
+X_2295_ _646_ i_clk_sys_ext_bF$buf11 \u_cpu.bufreg.data\[14] vdd gnd DFFPOSX1
+X_1986_ \u_mem_serial.shift_reg\[25] \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[1] mem_ibus_ack_bF$buf6 _79_ vdd gnd MUX2X1
+X_1566_ _932_ _933_ vdd gnd INVX2
+XFILL97950x90150 gnd vdd FILL
+XFILL97950x57750 gnd vdd FILL
+X_1795_ _937_ _934_ _1085_ vdd gnd AND2X2
+X_1375_ _329_ _328_ _327_ vdd gnd NAND2X1
+X_1184_ _513_ _512_ vdd gnd INVX2
+X_2389_ _733_ i_clk_sys_ext_bF$buf4 \u_rf_if.rcnt\[0] vdd gnd DFFPOSX1
+X_2198_ _543__bF$buf5 _221_ _222_ _606_ vdd gnd AOI21X1
+X_1889_ mem_ibus_ack_bF$buf1 _386_ _10_ _704_ vdd gnd OAI21X1
+X_1469_ _834_ _833_ _804_ _840_ vdd gnd OAI21X1
+X_2410_ _743_ i_clk_fast_bF$buf7 \u_rf_if.tx_state\[3] vdd gnd DFFPOSX1
+X_1698_ _1022_ _925__bF$buf2 _1023_ _764_ vdd gnd AOI21X1
+X_1278_ _469_ _423_ _422_ vdd gnd NAND2X1
+X_1910_ _23_ _24_ vdd gnd INVX1
+X_2504_ _565_ i_clk_fast_bF$buf2 \u_mem_serial.shift_reg\[3] vdd gnd DFFPOSX1
+X_2313_ _662_ i_clk_sys_ext_bF$buf0 rf_read_reg1_to_if[4] vdd gnd DFFPOSX1
+X_2542_ _839_ i_clk_fast_bF$buf2 \u_mem_serial.shift_reg\[7] vdd gnd DFFPOSX1
+X_2122_ _165_ _528_ _166_ _627_ vdd gnd OAI21X1
+X_1813_ \u_mem_serial.shift_reg\[20] _1098_ vdd gnd INVX1
+X_2351_ _694_ i_clk_fast_bF$buf3 \u_mem_serial.bit_count\[5] vdd gnd DFFPOSX1
+X_1622_ \u_rf_if.write_wait\[0] _974_ _806_ vdd gnd NOR2X1
+X_1202_ \u_cpu.bufreg.i_right_shift_op\ _496_ vdd gnd INVX2
+X_2407_ _595_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[20] vdd gnd DFFPOSX1
+X_2160_ _184_ _463_ _178_ _195_ vdd gnd OAI21X1
+X_1851_ _1130_ _1131_ _1125_ _1127_ _1132_ vdd 
++ gnd
++ AOI22X1
+X_1431_ \u_rf_if.tx_state\[1] _274_ vdd gnd INVX1
+X_2216_ \u_cpu.ctrl.o_ibus_adr\[23] _234_ vdd gnd INVX1
+X_1907_ _21_ _20_ _542__bF$buf0 _22_ vdd gnd OAI21X1
+X_1660_ \u_rf_if.read_buf0\[15] _999_ vdd gnd INVX1
+X_1240_ _459_ _458_ vdd gnd INVX1
+X_2445_ _763_ i_clk_sys_ext_bF$buf2 \u_rf_if.read_buf0\[27] vdd gnd DFFPOSX1
+X_2025_ _473_ _101_ _106_ _664_ vdd gnd OAI21X1
+X_1716_ _1032_ _1034_ _1036_ vdd gnd NAND2X1
+X_2254_ \u_cpu.ctrl.pc\ _873__bF$buf5 _249_ vdd gnd NOR2X1
+X_1945_ _496_ _417_ _49_ _50_ vdd gnd OAI21X1
+X_1525_ _896_ \u_rf_if.issue_idx\[5] _825_ vdd gnd AND2X2
+X_2483_ _815_ i_clk_sys_ext_bF$buf2 \u_rf_if.stream_active\ vdd gnd DFFPOSX1
+X_2063_ \u_cpu.bufreg.data\[19] _132_ vdd gnd INVX1
+X_1754_ _277_ _440_ _1059_ _1060_ vdd gnd OAI21X1
+X_1334_ _391_ _377_ _366_ vdd gnd NAND2X1
+X_2539_ _570_ i_clk_sys_ext_bF$buf9 \u_cpu.ctrl.pc_plus_offset_cy_r_w\ vdd gnd DFFPOSX1
+X_2119_ _164_ _149_ _426__bF$buf1 _628_ vdd gnd MUX2X1
+X_2292_ \u_mem_serial.bit_count\[3] _549_ vdd gnd INVX1
+X_1983_ \u_mem_serial.shift_reg\[26] \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[2] mem_ibus_ack_bF$buf6 _77_ vdd gnd MUX2X1
+X_1563_ \u_rf_if.issue_idx\[5] _930_ _931_ vdd gnd NOR2X1
+X_2348_ _692_ i_clk_fast_bF$buf2 \u_mem_serial.req_pending\ vdd gnd DFFPOSX1
+X_1619_ \u_rf_if.stream_cnt\[2] _899_ _971_ _973_ vdd gnd NAND3X1
+X_1792_ _939_ _1082_ _1080_ _729_ vdd gnd OAI21X1
+X_1372_ ren raddr[4] _342_ _331_ _330_ vdd 
++ gnd
++ AOI22X1
+X_2577_ _568_ i_clk_sys_ext_bF$buf5 \u_cpu.ctrl.o_ibus_adr\[31] vdd gnd DFFPOSX1
+X_2157_ _190_ _191_ _192_ vdd gnd NOR2X1
+X_1848_ _495_ _395_ _363_ _1129_ vdd gnd OAI21X1
+X_1428_ _279_ _276_ _837_ vdd gnd AND2X2
+X_1181_ \u_rf_if.tx_state\[1] \u_rf_if.tx_state\[0] _515_ vdd gnd NOR2X1
+X_2386_ _596_[0] i_clk_sys_ext_bF$buf13 \u_cpu.state.o_cnt\[2] vdd gnd DFFPOSX1
+X_1657_ \u_rf_if.read_buf0\[13] _393__bF$buf2 _997_ vdd gnd NOR2X1
+X_1237_ \u_cpu.bufreg.i_shamt\[0] \u_cpu.bufreg.i_shamt\[1] _461_ vdd gnd NOR2X1
+X_2195_ _543__bF$buf5 _220_ _216_ _607_ vdd gnd AOI21X1
+X_1886_ mem_ibus_ack_bF$buf5 \u_mem_serial.shift_reg\[12] _9_ vdd gnd NAND2X1
+X_1466_ \u_rf_if.i_stream_rs2_en\ _798_ _805_ vdd gnd NOR2X1
+X_1695_ _1020_ _925__bF$buf1 _1021_ _765_ vdd gnd AOI21X1
+X_1275_ _426__bF$buf1 _425_ vdd gnd INVX1
+X_2289_ \u_mem_serial.state\[0] _552_ vdd gnd INVX1
+X_2501_ _808_ i_clk_sys_ext_bF$buf8 \u_rf_if.stream_cnt\[2] vdd gnd DFFPOSX1
+X_2098_ \u_cpu.bufreg.data\[30] _148_ vdd gnd INVX1
+X_1789_ _934_ _1079_ _937_ _1080_ vdd gnd NAND3X1
+X_1369_ _334_ \u_rf_if.last_req_key\[6] _333_ vdd gnd OR2X2
+X_2310_ _659_ i_clk_sys_ext_bF$buf13 \u_cpu.bufreg.data\[27] vdd gnd DFFPOSX1
+X_1598_ _796_ _890_ _958_ vdd gnd NAND2X1
+X_1178_ \u_rf_if.wen0_r\ _518_ vdd gnd INVX1
+X_1810_ _1093_ \u_rf_if.i_stream_rs2_en\ _1095_ _1096_ vdd gnd AOI21X1
+X_2404_ _740_ i_clk_fast_bF$buf5 \u_rf_if.last_req_key\[2] vdd gnd DFFPOSX1
+X_2213_ _230_ _232_ _873__bF$buf1 _601_ vdd gnd MUX2X1
+X_1904_ _16_ _19_ vdd gnd INVX1
+X_2442_ _760_ i_clk_sys_ext_bF$buf1 \u_rf_if.issue_idx\[0] vdd gnd DFFPOSX1
+X_2022_ _51_ _104_ _105_ vdd gnd NOR2X1
+X_1713_ _1028_ _932_ _1033_ vdd gnd NOR2X1
+X_2251_ _522_ _227_ _873__bF$buf5 _577_ vdd gnd MUX2X1
+X_1942_ mem_ibus_ack_bF$buf3 _474_ _47_ vdd gnd NOR2X1
+X_1522_ \u_rf_if.pending_read\ _894_ vdd gnd INVX1
+X_2307_ _656_ i_clk_sys_ext_bF$buf3 \u_cpu.bufreg.data\[24] vdd gnd DFFPOSX1
+X_2480_ \u_mem_serial.bit_count\[0] _538_ vdd gnd INVX1
+X_2060_ _129_ _130_ _426__bF$buf4 _653_ vdd gnd MUX2X1
+X_1751_ _510_ _512_ i_rst_n_bF$buf2 _1058_ vdd gnd OAI21X1
+X_1331_ _373_ _375_ _387_ _369_ vdd gnd OAI21X1
+X_2536_ _814_ i_clk_sys_ext_bF$buf4 \u_rf_if.rcnt\[1] vdd gnd DFFPOSX1
+X_2116_ _156_ _159_ _425_ _629_ vdd gnd AOI21X1
+X_1807_ _912_ _1093_ vdd gnd INVX1
+X_1980_ \u_mem_serial.shift_reg\[27] \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[3] mem_ibus_ack_bF$buf6 _75_ vdd gnd MUX2X1
+X_1560_ \u_rf_if.stream_active\ \u_rf_if.read_buf0\[31] _924_ _928_ _929_ vdd 
++ gnd
++ AOI22X1
+X_2345_ _690_ i_clk_sys_ext_bF$buf7 \u_cpu.bufreg.i_right_shift_op\ vdd gnd DFFPOSX1
+X_1616_ _393__bF$buf3 _905_ _971_ vdd gnd NOR2X1
+X_2574_ _723_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[20] vdd gnd DFFPOSX1
+X_2154_ _186_ _189_ _618_ vdd gnd NAND2X1
+X_1845_ _496_ _495_ _1126_ vdd gnd NAND2X1
+X_1425_ \u_rf_if.shift_rx\[0] _278_ vdd gnd INVX1
+X_2383_ _586_ i_clk_sys_ext_bF$buf13 \u_cpu.ctrl.o_ibus_adr\[11] vdd gnd DFFPOSX1
+X_1654_ \u_rf_if.read_buf0\[12] _393__bF$buf2 _995_ vdd gnd NOR2X1
+X_1234_ _468_ _465_ _464_ vdd gnd NAND2X1
+X_2439_ _606_ i_clk_fast_bF$buf3 \u_mem_serial.shift_reg\[26] vdd gnd DFFPOSX1
+X_2019_ mem_ibus_ack_bF$buf3 \u_cpu.branch_op\ _101_ _102_ vdd gnd OAI21X1
+X_2192_ \u_cpu.ctrl.o_ibus_adr\[9] _218_ vdd gnd INVX1
+X_1883_ _7_ _1_ _543__bF$buf3 _707_ vdd gnd MUX2X1
+X_1463_ _801_ _798_ _802_ vdd gnd NAND2X1
+X_2248_ _38_ _1143_ _873__bF$buf3 _580_ vdd gnd MUX2X1
+X_1939_ mem_ibus_ack_bF$buf0 _408_ _45_ _689_ vdd gnd OAI21X1
+X_1519_ \u_cpu.o_wdata0\ _891_ _444_ _892_ vdd gnd OAI21X1
+X_1692_ _1018_ _925__bF$buf1 _1019_ _766_ vdd gnd AOI21X1
+X_1272_ _497_ _429_ _428_ vdd gnd NOR2X1
+X_2477_ _790_ i_clk_sys_ext_bF$buf8 \u_rf_if.read_buf0\[0] vdd gnd DFFPOSX1
+X_2057_ \u_cpu.bufreg.data\[22] _129_ vdd gnd INVX1
+X_1748_ _1056_ _444_ _747_ vdd gnd AND2X2
+X_1328_ _373_ _375_ _372_ vdd gnd NOR2X1
+X_2286_ _558_ _556_ _555_ vdd gnd NAND2X1
+X_1977_ \u_mem_serial.shift_reg\[28] \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[4] mem_ibus_ack_bF$buf6 _73_ vdd gnd MUX2X1
+X_1557_ _925__bF$buf3 _926_ vdd gnd INVX4
+XFILL97950x64950 gnd vdd FILL
+X_2095_ _476_ _434_ _466_ _146_ vdd gnd NAND3X1
+X_1786_ _938_ _1033_ _1077_ _1078_ vdd gnd AOI21X1
+X_1366_ _344_ rf_wreg0_to_if[2] _336_ vdd gnd AND2X2
+X_1595_ _498_ _955_ _956_ vdd gnd NOR2X1
+X_1175_ _542__bF$buf1 _521_ _524_ _520_ vdd gnd OAI21X1
+X_2189_ _215_ _117_ _543__bF$buf3 _608_ vdd gnd MUX2X1
+X_2401_ _592_ i_clk_sys_ext_bF$buf10 \u_cpu.ctrl.o_ibus_adr\[17] vdd gnd DFFPOSX1
+X_1689_ _1016_ _925__bF$buf3 _1017_ _767_ vdd gnd AOI21X1
+X_1269_ \u_cpu.state.init_done\ _470_ _473_ _431_ vdd gnd AOI21X1
+X_2210_ \u_cpu.ctrl.o_ibus_adr\[27] _231_ vdd gnd INVX1
+X_1901_ _538_ _15_ _17_ vdd gnd NOR2X1
+X_1498_ _874_ _875_ vdd gnd INVX1
+X_1710_ _932_ _1028_ _897_ _1031_ vdd gnd AOI21X1
+X_2304_ _654_ i_clk_sys_ext_bF$buf13 \u_cpu.bufreg.data\[22] vdd gnd DFFPOSX1
+X_2533_ \u_cpu.o_wdata0\ i_clk_sys_ext_bF$buf6 \u_rf_if.wdata0_next\[0] vdd gnd DFFPOSX1
+X_2113_ _159_ _160_ _161_ vdd gnd AND2X2
+X_1804_ \u_rf_if.rreg1_latched\[2] _962_ _940_ raddr[6] _1091_ vdd 
++ gnd
++ AOI22X1
+X_2342_ _714_ i_clk_fast_bF$buf1 \u_mem_serial.shift_reg\[4] vdd gnd DFFPOSX1
+X_1613_ _967_ \u_rf_if.stream_cnt\[1] _968_ _809_ vdd gnd AOI21X1
+X_2571_ _639_ i_clk_sys_ext_bF$buf3 \u_cpu.bufreg.data\[7] vdd gnd DFFPOSX1
+X_2151_ _178_ _187_ vdd gnd INVX1
+XCLKBUF1_insert35 i_clk_sys_ext i_clk_sys_ext_bF$buf13 vdd gnd CLKBUF1
+XCLKBUF1_insert36 i_clk_sys_ext i_clk_sys_ext_bF$buf12 vdd gnd CLKBUF1
+XCLKBUF1_insert37 i_clk_sys_ext i_clk_sys_ext_bF$buf11 vdd gnd CLKBUF1
+XCLKBUF1_insert38 i_clk_sys_ext i_clk_sys_ext_bF$buf10 vdd gnd CLKBUF1
+XCLKBUF1_insert39 i_clk_sys_ext i_clk_sys_ext_bF$buf9 vdd gnd CLKBUF1
+X_1842_ _470_ _478_ _1123_ vdd gnd NOR2X1
+X_1422_ \u_rf_if.tx_state\[2] _510_ _281_ vdd gnd NOR2X1
+X_2207_ _542__bF$buf1 _228_ _226_ _229_ vdd gnd OAI21X1
+X_2380_ _716_ i_clk_fast_bF$buf6 \u_mem_serial.shift_reg\[29] vdd gnd DFFPOSX1
+X_1651_ _992_ _925__bF$buf3 _993_ _781_ vdd gnd AOI21X1
+X_1231_ \u_cpu.bufreg2.dhi\[6] _467_ vdd gnd INVX1
+X_2436_ _757_ i_clk_sys_ext_bF$buf1 \u_rf_if.issue_idx\[3] vdd gnd DFFPOSX1
+X_2016_ mem_ibus_ack_bF$buf6 _14_ _99_ _666_ vdd gnd AOI21X1
+X_1707_ \u_rf_if.issue_idx\[1] _1028_ vdd gnd INVX1
+X_1880_ \u_cpu.ctrl.o_ibus_adr\[7] _5_ vdd gnd INVX1
+X_1460_ \u_rf_if.i_stream_rs2_en\ \u_rf_if.read_buf1\[0] _798_ _799_ vdd gnd AOI21X1
+X_2245_ _218_ _213_ _873__bF$buf3 _583_ vdd gnd MUX2X1
+X_1936_ mem_ibus_ack_bF$buf0 _496_ _43_ _690_ vdd gnd OAI21X1
+X_1516_ _498_ _441_ _517_ _889_ vdd gnd OAI21X1
+X_2474_ _787_ i_clk_sys_ext_bF$buf8 \u_rf_if.read_buf0\[3] vdd gnd DFFPOSX1
+X_2054_ _126_ _127_ _426__bF$buf4 _656_ vdd gnd MUX2X1
+X_1745_ _1054_ _865_ _748_ vdd gnd NOR2X1
+X_1325_ _376_ _382_ _375_ vdd gnd AND2X2
+X_2283_ _559_ _558_ vdd gnd INVX1
+XFILL97350x54150 gnd vdd FILL
+X_1974_ \u_mem_serial.shift_reg\[29] \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[5] mem_ibus_ack_bF$buf6 _71_ vdd gnd MUX2X1
+X_1554_ \u_rf_if.issue_idx\[4] _922_ \u_rf_if.i_stream_rs2_en\ _923_ vdd gnd NAND3X1
+X_2339_ _720_ i_clk_fast_bF$buf4 \u_mem_serial.shift_reg\[2] vdd gnd DFFPOSX1
+X_2092_ \u_cpu.bufreg.data\[2] _144_ vdd gnd INVX1
+X_1783_ _939_ _1075_ _1074_ _731_ vdd gnd OAI21X1
+X_1363_ _340_ \u_rf_if.last_req_key\[7] _339_ vdd gnd AND2X2
+X_2568_ _724_ i_clk_sys_ext_bF$buf4 \u_rf_if.rs2_stream_buf\[0] vdd gnd DFFPOSX1
+X_2148_ \u_cpu.bufreg2.dhi\[4] _184_ vdd gnd INVX1
+X_1839_ \u_mem_serial.shift_reg\[4] _1121_ vdd gnd INVX1
+X_1419_ \u_rf_if.last_req_key\[9] _284_ i_rst_n_bF$buf3 _283_ vdd gnd OAI21X1
+X_1592_ \u_rf_if.stream_active\ _953_ _907_ _815_ vdd gnd OAI21X1
+X_1172_ \u_cpu.bufreg.data\[3] _523_ vdd gnd INVX1
+X_2377_ _583_ i_clk_sys_ext_bF$buf9 \u_cpu.ctrl.o_ibus_adr\[8] vdd gnd DFFPOSX1
+X_1648_ \u_rf_if.stream_active\ _989_ _991_ _782_ vdd gnd AOI21X1
+X_1228_ \u_cpu.branch_op\ _470_ vdd gnd INVX2
+X_2186_ \u_cpu.ctrl.o_ibus_adr\[8] _213_ vdd gnd INVX1
+X_1877_ \u_mem_serial.shift_reg\[22] _2_ vdd gnd INVX1
+X_1457_ _792_ _795_ _796_ vdd gnd NOR2X1
+X_1686_ \u_rf_if.stream_active\ _1013_ _1015_ _768_ vdd gnd AOI21X1
+X_1266_ \u_cpu.state.o_cnt\[2] _435_ _434_ vdd gnd NOR2X1
+X_1495_ _543__bF$buf3 _871_ _872_ _831_ vdd gnd AOI21X1
+X_2089_ _37_ _1142_ _426__bF$buf3 _637_ vdd gnd MUX2X1
+X_2301_ _652_ i_clk_sys_ext_bF$buf13 \u_cpu.bufreg.data\[20] vdd gnd DFFPOSX1
+X_1589_ _393__bF$buf3 \u_rf_if.stream_cnt\[0] _951_ _952_ vdd gnd OAI21X1
+X_1169_ \u_mem_serial.shift_reg\[19] _526_ vdd gnd INVX1
+X_2530_ _566_ i_clk_sys_ext_bF$buf7 \u_cpu.alu.cmp_r\ vdd gnd DFFPOSX1
+X_2110_ _157_ _156_ _158_ vdd gnd NAND2X1
+X_1801_ \u_rf_if.rreg1_latched\[1] _962_ _940_ raddr[5] _1089_ vdd 
++ gnd
++ AOI22X1
+X_1398_ ren _305_ _304_ vdd gnd NAND2X1
+X_1610_ _908_ _935_ _967_ vdd gnd NOR2X1
+X_2204_ _224_ _542__bF$buf1 _226_ vdd gnd NAND2X1
+X_2433_ _756_ i_clk_sys_ext_bF$buf1 \u_rf_if.issue_idx\[4] vdd gnd DFFPOSX1
+X_2013_ mem_ibus_ack_bF$buf2 \u_mem_serial.shift_reg\[7] _89_ rf_wreg0_to_if[0] _98_ vdd 
++ gnd
++ AOI22X1
+X_1704_ _942_ _925__bF$buf2 _1026_ _761_ vdd gnd AOI21X1
+X_2242_ \u_cpu.ctrl.o_ibus_adr\[10] _247_ vdd gnd INVX1
+X_1933_ _561_ _41_ _42_ _692_ vdd gnd AOI21X1
+X_1513_ mem_ibus_ack_bF$buf7 \u_rf_if.rreg0_latched\[3] _887_ vdd gnd NOR2X1
+X_2471_ _785_ i_clk_sys_ext_bF$buf8 \u_rf_if.read_buf0\[5] vdd gnd DFFPOSX1
+X_2051_ \u_cpu.bufreg.data\[25] _126_ vdd gnd INVX1
+X_1742_ _861_ _862_ _444_ _1053_ vdd gnd OAI21X1
+X_1322_ _386_ _413_ _378_ vdd gnd NAND2X1
+X_2527_ _816_ i_clk_sys_ext_bF$buf2 \u_rf_if.rs2_stream_buf\[1] vdd gnd DFFPOSX1
+X_2107_ _150_ _391_ _155_ vdd gnd NAND2X1
+X_2280_ \u_mem_serial.req_pending\ _561_ vdd gnd INVX1
+X_1971_ \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25\[4] _68_ vdd gnd INVX1
+X_1551_ \u_rf_if.issue_idx\[0] _920_ vdd gnd INVX1
+X_2336_ _683_ i_clk_sys_ext_bF$buf12 \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[3] vdd gnd DFFPOSX1
+X_1607_ _281_ _270_ _965_ vdd gnd AND2X2
+X_1780_ _1073_ _441_ _732_ vdd gnd NOR2X1
+X_1360_ \u_rf_if.rtrig0\ _342_ vdd gnd INVX2
+X_2565_ _634_ i_clk_sys_ext_bF$buf9 \u_cpu.bufreg.data\[2] vdd gnd DFFPOSX1
+X_2145_ _455_ _463_ _182_ vdd gnd NOR2X1
+X_1836_ _543__bF$buf4 _1112_ _1113_ _716_ vdd gnd AOI21X1
+X_1416_ _287_ _343_ _286_ vdd gnd AND2X2
+X_2374_ _711_ i_clk_sys_ext_bF$buf12 \u_cpu.state.ibus_cyc\ vdd gnd DFFPOSX1
+X_1645_ _393__bF$buf4 \u_rf_if.read_buf0\[8] \u_rf_if.read_buf0\[7] _943__bF$buf1 _990_ vdd 
++ gnd
++ OAI22X1
+X_1225_ _474_ _473_ vdd gnd INVX2
+X_2183_ \u_mem_serial.shift_reg\[16] _543__bF$buf4 _211_ vdd gnd NOR2X1
+X_1874_ _1149_ _537_ _1120_ vdd gnd NAND2X1
+X_1454_ \u_rf_if.o_waddr\[0] \u_rf_if.o_waddr\[3] _793_ vdd gnd NOR2X1
+X_2239_ _244_ _245_ _873__bF$buf0 _587_ vdd gnd MUX2X1
+X_1683_ _393__bF$buf1 \u_rf_if.read_buf0\[22] \u_rf_if.read_buf0\[21] _943__bF$buf0 _1014_ vdd 
++ gnd
++ OAI22X1
+X_1263_ _469_ _438_ _437_ vdd gnd NOR2X1
+X_2468_ _726_ i_clk_sys_ext_bF$buf6 raddr[5] vdd gnd DFFPOSX1
+X_2048_ _122_ _124_ _426__bF$buf4 _659_ vdd gnd MUX2X1
+X_1739_ rf_read_reg1_to_if[2] _1051_ vdd gnd INVX1
+X_1319_ \u_rf_if.read_buf1\[0] \u_rf_if.i_stream_rs2_en\ \u_rf_if.stream_active\ _381_ vdd gnd OAI21X1
+X_1492_ _542__bF$buf0 _870_ vdd gnd INVX2
+X_2277_ _31_ _259_ _260_ _564_ vdd gnd OAI21X1
+X_1968_ mem_ibus_ack_bF$buf0 _62_ _45_ _66_ vdd gnd OAI21X1
+X_1548_ _916_ _917_ vdd gnd INVX1
+X_2086_ _142_ _143_ _426__bF$buf3 _640_ vdd gnd MUX2X1
+X_1777_ \u_rf_if.rcnt\[2] _956_ _1071_ vdd gnd NAND2X1
+X_1357_ _517_ _345_ vdd gnd INVX1
+X_1586_ \u_rf_if.i_stream_rs2_en\ _947_ _949_ vdd gnd NAND2X1
+X_1166_ _530_ _543__bF$buf0 _563_ _528_ _847_ vdd 
++ gnd
++ OAI22X1
+X_1395_ _308_ _307_ vdd gnd INVX1
+X_2201_ \u_mem_serial.shift_reg\[17] _224_ vdd gnd INVX1
+X_1489_ _866_ \u_rf_if.o_waddr\[3] _868_ vdd gnd AND2X2
+X_2430_ _755_ i_clk_sys_ext_bF$buf12 \u_rf_if.rreg0_latched\[0] vdd gnd DFFPOSX1
+X_2010_ rf_wreg0_to_if[1] _89_ _96_ vdd gnd NAND2X1
+X_1701_ _393__bF$buf3 \u_rf_if.read_buf0\[29] _926_ _1025_ vdd gnd OAI21X1
+X_1298_ _409_ _404_ _402_ vdd gnd NAND2X1
+X_1930_ _40_ _2_ _543__bF$buf3 _693_ vdd gnd MUX2X1
+X_1510_ mem_ibus_ack_bF$buf7 \u_rf_if.rreg1_latched\[3] _885_ vdd gnd NOR2X1
+X_2524_ _828_ i_clk_sys_ext_bF$buf12 \u_rf_if.rreg1_latched\[3] vdd gnd DFFPOSX1
+X_2104_ \u_cpu.decode.opcode\[0] _423_ _151_ _152_ vdd gnd OAI21X1
+X_2333_ _680_ i_clk_sys_ext_bF$buf7 \u_cpu.immdec.gen_immdec_w_eq_1.imm19_12_20\[0] vdd gnd DFFPOSX1
+X_1604_ \u_rf_if.rreg1_latched\[3] _962_ _940_ raddr[7] _963_ vdd 
++ gnd
++ AOI22X1
+X_2562_ _632_ i_clk_sys_ext_bF$buf9 \u_cpu.bufreg.data\[30] vdd gnd DFFPOSX1
+X_2142_ _467_ _177_ _179_ _620_ vdd gnd OAI21X1
+X_1833_ _1111_ _481_ _615_[2] vdd gnd NOR2X1
+X_1413_ _291_ _290_ _289_ vdd gnd NAND2X1
+XBUFX2_insert60 _542_ _542__bF$buf1 vdd gnd BUFX2
+XBUFX2_insert61 _542_ _542__bF$buf0 vdd gnd BUFX2
+XBUFX2_insert62 mem_ibus_ack mem_ibus_ack_bF$buf7 vdd gnd BUFX2
+XBUFX2_insert63 mem_ibus_ack mem_ibus_ack_bF$buf6 vdd gnd BUFX2
+XBUFX2_insert64 mem_ibus_ack mem_ibus_ack_bF$buf5 vdd gnd BUFX2
+XBUFX2_insert65 mem_ibus_ack mem_ibus_ack_bF$buf4 vdd gnd BUFX2
+XBUFX2_insert66 mem_ibus_ack mem_ibus_ack_bF$buf3 vdd gnd BUFX2
+XBUFX2_insert67 mem_ibus_ack mem_ibus_ack_bF$buf2 vdd gnd BUFX2
+XBUFX2_insert68 mem_ibus_ack mem_ibus_ack_bF$buf1 vdd gnd BUFX2
+XBUFX2_insert69 mem_ibus_ack mem_ibus_ack_bF$buf0 vdd gnd BUFX2
+X_2371_ _582_ i_clk_sys_ext_bF$buf3 \u_cpu.ctrl.o_ibus_adr\[7] vdd gnd DFFPOSX1
+X_1642_ \u_rf_if.read_buf0\[6] _943__bF$buf1 \u_rf_if.read_buf0\[8] _926_ _988_ vdd 
++ gnd
++ OAI22X1
+X_1222_ \u_cpu.state.cnt_r\[0] \u_cpu.state.cnt_r\[1] _476_ vdd gnd OR2X2
+X_2427_ _752_ i_clk_sys_ext_bF$buf12 \u_rf_if.rreg1_latched\[0] vdd gnd DFFPOSX1
+X_2007_ rf_wreg0_to_if[2] _89_ _94_ vdd gnd NAND2X1
+X_2180_ _553_ _544_ \u_mem_serial.shift_reg\[10] _209_ vdd gnd OAI21X1
+X_1871_ \u_mem_serial.active_ibus\ _1147_ vdd gnd INVX1
+X_1451_ _718_ _382_ _719_ vdd gnd NAND2X1
+X_2236_ \u_cpu.ctrl.o_ibus_adr\[13] _244_ vdd gnd INVX1
+X_1927_ \u_cpu.ctrl.o_ibus_adr\[6] _38_ vdd gnd INVX1
+X_1507_ \u_mem_serial.shift_reg\[28] _543__bF$buf5 _883_ vdd gnd NOR2X1
+X_1680_ _393__bF$buf1 \u_rf_if.read_buf0\[21] \u_rf_if.read_buf0\[20] _943__bF$buf0 _1012_ vdd 
++ gnd
++ OAI22X1
+X_1260_ \u_rf_if.req_seen\ _440_ _439_ vdd gnd NOR2X1
+X_2465_ _727_ i_clk_sys_ext_bF$buf6 raddr[4] vdd gnd DFFPOSX1
+X_2045_ \u_cpu.bufreg.data\[29] _123_ vdd gnd INVX1
+X_1736_ rf_read_reg1_to_if[1] _1049_ vdd gnd INVX1
+X_1316_ \u_cpu.bne_or_bge\ \u_cpu.decode.co_mem_word\ _384_ vdd gnd NOR2X1
+X_2274_ _502_ _543__bF$buf2 _1108_ _528_ _565_ vdd 
++ gnd
++ OAI22X1
+X_1965_ _63_ _51_ _64_ vdd gnd NOR2X1
+X_1545_ \u_rf_if.issue_idx\[1] \u_rf_if.issue_idx\[0] _914_ vdd gnd NOR2X1
+X_2083_ \u_cpu.bufreg.data\[9] _142_ vdd gnd INVX1
+X_1774_ ren _285_ i_rst_n_bF$buf3 _1070_ vdd gnd OAI21X1
+X_1354_ \u_mem_serial.shift_reg\[6] _347_ vdd gnd INVX1
+X_2559_ _628_ i_clk_sys_ext_bF$buf9 \u_cpu.bufreg.data\[31] vdd gnd DFFPOSX1
+X_2139_ _473_ _176_ _464_ _177_ vdd gnd OAI21X1
+X_1583_ _919_ _946_ vdd gnd INVX1
+X_1163_ _553_ _529_ vdd gnd INVX2
+X_2368_ _706_ i_clk_sys_ext_bF$buf4 \u_cpu.decode.co_mem_word\ vdd gnd DFFPOSX1
+X_1639_ \u_rf_if.read_buf0\[7] _986_ vdd gnd INVX1
+X_1219_ _490_ _480_ _479_ vdd gnd NOR2X1
+X_1392_ _311_ _310_ vdd gnd INVX1
+X_2177_ _208_ _201_ _177_ _613_ vdd gnd MUX2X1
+X_1868_ _1145_ _1140_ _543__bF$buf3 _710_ vdd gnd MUX2X1
+X_1448_ _514_ _311_ _699_ _700_ vdd gnd OAI21X1
 
 .ends
 .end

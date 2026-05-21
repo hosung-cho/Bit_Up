@@ -13,6 +13,7 @@ module my_mcu_top #(
     // Area-first RV32E mode. The core still decodes 5-bit register fields, but
     // the external RF only implements x0-x15; software must not use x16-x31.
     parameter integer RV32E_MODE = 0,
+    parameter integer GPR_REGS_OVERRIDE = 0,
     parameter integer MEM_ADDR_BITS = 32,
     parameter integer USE_RF_INTERLOCK = 1,
     parameter integer DISABLE_DBUS = 0,
@@ -71,7 +72,8 @@ module my_mcu_top #(
     localparam W         = 1;
     localparam RF_WIDTH  = W * 2;
     localparam CSR_REGS  = WITH_CSR * 4;
-    localparam GPR_REGS  = (RV32E_MODE != 0) ? 16 : 32;
+    localparam GPR_REGS  = (GPR_REGS_OVERRIDE != 0) ? GPR_REGS_OVERRIDE :
+                           ((RV32E_MODE != 0) ? 16 : 32);
     localparam RF_DEPTH  = (32*(GPR_REGS+CSR_REGS))/RF_WIDTH;
     localparam RF_RAW    = $clog2(GPR_REGS+CSR_REGS);
 
@@ -384,7 +386,7 @@ module my_mcu_top #(
         .i_dbus_cyc((DISABLE_DBUS == 0) ? wb_dbus_cyc : 1'b0),
         .i_dbus_adr(wb_dbus_adr),
         .i_dbus_dat(wb_dbus_dat),
-        .i_dbus_sel((STORE_ONLY_DBUS != 0) ? 4'b1111 : wb_dbus_sel),
+        .i_dbus_sel(((STORE_ONLY_DBUS != 0) || (WORD_MEM_ONLY != 0)) ? 4'b1111 : wb_dbus_sel),
         .i_dbus_we((STORE_ONLY_DBUS != 0) ? 1'b1 : wb_dbus_we),
         .o_dbus_rdt(mem_dbus_rdt),
         .o_dbus_ack(mem_dbus_ack),
