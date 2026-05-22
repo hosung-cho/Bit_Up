@@ -42,7 +42,7 @@ ENDRULES
 *padspacing           : variable
 *rowSep		      : 0.0   0
 *track.pitch	      : 0.0
-*minimum_pad_space    : 360
+*minimum_pad_space    : 0
 *gridX		      : 300
 *gridY		      : 300
 *gridOffsetX	      : 0
@@ -60,6 +60,6 @@ TWSC*call_row_evener	: true
 TWSC*even_rows_maximally : true
 TWSC*no.graphics    : on
 
-GENR*row_to_tile_spacing: 1
+GENR*row_to_tile_spacing: 0
 # GENR*numrows		: 6
 GENR*flip_alternate_rows : 1

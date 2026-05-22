@@ -4,13 +4,6 @@ twpin_i_clk_sys_ext nonfixed
 twpin_i_rst_n nonfixed
 restrict side T
 
-padgroup RF_Bridge permute
-twpin_o_rf_sync nonfixed
-twpin_o_rf_sck nonfixed
-twpin_o_rf_mosi nonfixed
-twpin_i_rf_miso nonfixed
-restrict side L
-
 padgroup Mem_Bridge permute
 twpin_o_mem_sync nonfixed
 twpin_o_mem_sck nonfixed

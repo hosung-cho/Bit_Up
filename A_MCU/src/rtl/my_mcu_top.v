@@ -22,6 +22,9 @@ module my_mcu_top #(
     parameter integer SERV_PRE_REGISTER = 1,
     parameter integer SINGLE_RF_READ = 0,
     parameter integer STREAM_RS2_READ = 0,
+    parameter integer RF_SERIAL_STUB = 0,
+    parameter integer SHARED_SERIAL = 0,
+    parameter integer UNIFIED_SERIAL = 0,
     // Keep MINI for simulation/debug. The physical implementation copy can
     // override this to "NONE" when the MPW flow needs the smallest cell area.
     parameter RESET_STRATEGY = "MINI"
@@ -109,6 +112,18 @@ module my_mcu_top #(
     wire [$clog2(RF_DEPTH)-1:0] raddr;
     wire                ren;
     wire [RF_WIDTH-1:0] rdata;
+    wire                rf_shared_valid;
+    wire [RF_RAW+7:0]   rf_shared_frame;
+    wire [RF_WIDTH-1:0] rf_shared_rdata;
+    wire                rf_sync_if;
+    wire                rf_sck_if;
+    wire                rf_mosi_if;
+    wire                rf_sync_shared;
+    wire                rf_sck_shared;
+    wire                rf_mosi_shared;
+    wire                mem_sync_shared;
+    wire                mem_sck_shared;
+    wire                mem_mosi_shared;
     wire [RF_RAW-1:0]   rf_wreg0_to_if = wreg0[RF_RAW-1:0];
     wire [RF_RAW-1:0]   rf_wreg1_to_if = wreg1[RF_RAW-1:0];
     wire [RF_RAW-1:0]   rf_rreg0_to_if = rf_read_reg0_to_if[RF_RAW-1:0];
@@ -232,16 +247,14 @@ module my_mcu_top #(
     endfunction
 
     reg has_fetched_first_insn;
-    reg current_wdata0_next_hint;
     reg current_stream_rs2_hint;
     generate
         if (RESET_STRATEGY == "NONE") begin : gen_rf_prefetch_hint_no_reset
             always @(posedge clk_sys) begin
                 if (wb_ibus_ack) begin
-                    rf_read_reg0 <= (USE_RF_INTERLOCK == 0) ? rreg0 : {1'b0, wb_ibus_rdt[19:15]};
-                    rf_read_reg1 <= (USE_RF_INTERLOCK == 0) ? rreg1 : decode_rf_read_reg1(wb_ibus_rdt);
+                    rf_read_reg0 <= {1'b0, wb_ibus_rdt[19:15]};
+                    rf_read_reg1 <= decode_rf_read_reg1(wb_ibus_rdt);
                     has_fetched_first_insn <= 1'b1;
-                    current_wdata0_next_hint <= (USE_RF_INTERLOCK == 0) ? 1'b0 : decode_wdata0_next_hint(wb_ibus_rdt);
                     current_stream_rs2_hint <= decode_uses_rs2(wb_ibus_rdt);
                 end else if (rf_rreq) begin
                     rf_read_reg0 <= rreg0;
@@ -254,13 +267,11 @@ module my_mcu_top #(
                     rf_read_reg0 <= {1'b0, 5'd0};
                     rf_read_reg1 <= {1'b0, 5'd0};
                     has_fetched_first_insn <= 1'b0;
-                    current_wdata0_next_hint <= 1'b0;
                     current_stream_rs2_hint <= 1'b0;
                 end else if (wb_ibus_ack) begin
-                    rf_read_reg0 <= (USE_RF_INTERLOCK == 0) ? rreg0 : {1'b0, wb_ibus_rdt[19:15]};
-                    rf_read_reg1 <= (USE_RF_INTERLOCK == 0) ? rreg1 : decode_rf_read_reg1(wb_ibus_rdt);
+                    rf_read_reg0 <= {1'b0, wb_ibus_rdt[19:15]};
+                    rf_read_reg1 <= decode_rf_read_reg1(wb_ibus_rdt);
                     has_fetched_first_insn <= 1'b1;
-                    current_wdata0_next_hint <= (USE_RF_INTERLOCK == 0) ? 1'b0 : decode_wdata0_next_hint(wb_ibus_rdt);
                     current_stream_rs2_hint <= decode_uses_rs2(wb_ibus_rdt);
                 end else if (rf_rreq) begin
                     rf_read_reg0 <= rreg0;
@@ -270,14 +281,11 @@ module my_mcu_top #(
         end
     endgenerate
 
-    assign rf_wdata0_next_to_if = (USE_RF_INTERLOCK == 0) ? rf_wdata0_next :
-                                  (rf_wdata0_next | current_wdata0_next_hint);
+    assign rf_wdata0_next_to_if = rf_wdata0_next;
 
-    assign rf_read_reg0_to_if = (USE_RF_INTERLOCK == 0) ? rreg0 :
-                                wb_ibus_ack ? {1'b0, wb_ibus_rdt[19:15]} :
+    assign rf_read_reg0_to_if = wb_ibus_ack ? {1'b0, wb_ibus_rdt[19:15]} :
                                 rf_read_reg0;
-    assign rf_read_reg1_to_if = (USE_RF_INTERLOCK == 0) ? rreg1 :
-                                ((WITH_CSR != 0) && rf_rreq && rreg1[4+WITH_CSR]) ? rreg1 :
+    assign rf_read_reg1_to_if = ((WITH_CSR != 0) && rf_rreq && rreg1[4+WITH_CSR]) ? rreg1 :
                                 wb_ibus_ack ? decode_rf_read_reg1(wb_ibus_rdt) :
                                 rf_read_reg1;
 
@@ -334,6 +342,7 @@ module my_mcu_top #(
         .csr_regs(CSR_REGS),
         .single_read_port(SINGLE_RF_READ != 0),
         .stream_rs2_read(STREAM_RS2_READ != 0),
+        .rf_serial_stub((RF_SERIAL_STUB != 0) || (SHARED_SERIAL != 0)),
         .W(W)
     ) u_rf_if (
         .i_clk(clk_sys),
@@ -359,11 +368,21 @@ module my_mcu_top #(
         .o_raddr(raddr),
         .o_ren(ren),
         .i_clk_fast(i_clk_fast),
-        .o_rf_sync(o_rf_sync),
-        .o_rf_sck(o_rf_sck),
-        .o_rf_mosi(o_rf_mosi),
-        .i_rf_miso(i_rf_miso)
+        .o_rf_sync(rf_sync_if),
+        .o_rf_sck(rf_sck_if),
+        .o_rf_mosi(rf_mosi_if),
+        .i_rf_miso(i_rf_miso),
+        .o_shared_valid(rf_shared_valid),
+        .o_shared_frame(rf_shared_frame),
+        .i_shared_rdata(rf_shared_rdata)
     );
+
+    assign o_rf_sync = (UNIFIED_SERIAL != 0) ? 1'b0 :
+                       (SHARED_SERIAL != 0) ? rf_sync_shared : rf_sync_if;
+    assign o_rf_sck  = (UNIFIED_SERIAL != 0) ? 1'b0 :
+                       (SHARED_SERIAL != 0) ? rf_sck_shared  : rf_sck_if;
+    assign o_rf_mosi = (UNIFIED_SERIAL != 0) ? 1'b0 :
+                       (SHARED_SERIAL != 0) ? rf_mosi_shared : rf_mosi_if;
 
     // -----------------------------------------------------------------
     // 7. Wishbone 주소 디코더 (Address Decoder)
@@ -372,6 +391,11 @@ module my_mcu_top #(
     
     offchip_mem_bridge #(
         .ADDR_BITS(MEM_ADDR_BITS),
+        .ENABLE_RF_PORT(SHARED_SERIAL != 0),
+        .RF_RAW(RF_RAW),
+        .RF_WIDTH(RF_WIDTH),
+        .WORD_MEM_ONLY(WORD_MEM_ONLY != 0),
+        .UNIFIED_SERIAL(UNIFIED_SERIAL != 0),
         .RESET_STRATEGY(RESET_STRATEGY)
     ) u_mem_serial (
         .i_clk_fast(i_clk_fast),
@@ -391,11 +415,23 @@ module my_mcu_top #(
         .o_dbus_rdt(mem_dbus_rdt),
         .o_dbus_ack(mem_dbus_ack),
 
-        .o_mem_sync(o_mem_sync),
-        .o_mem_sck(o_mem_sck),
-        .o_mem_mosi(o_mem_mosi),
-        .i_mem_miso(i_mem_miso)
+        .o_mem_sync(mem_sync_shared),
+        .o_mem_sck(mem_sck_shared),
+        .o_mem_mosi(mem_mosi_shared),
+        .i_mem_miso(i_mem_miso),
+
+        .i_rf_valid(rf_shared_valid),
+        .i_rf_frame(rf_shared_frame),
+        .o_rf_rdata(rf_shared_rdata),
+        .o_rf_sync(rf_sync_shared),
+        .o_rf_sck(rf_sck_shared),
+        .o_rf_mosi(rf_mosi_shared),
+        .i_rf_miso(i_rf_miso)
     );
+
+    assign o_mem_sync = mem_sync_shared;
+    assign o_mem_sck  = mem_sck_shared;
+    assign o_mem_mosi = mem_mosi_shared;
 
     assign wb_dbus_rdt = ((DISABLE_DBUS == 0) && (STORE_ONLY_DBUS == 0)) ? mem_dbus_rdt : 32'b0;
     assign wb_dbus_ack = (DISABLE_DBUS == 0) ? mem_dbus_ack : wb_dbus_cyc;

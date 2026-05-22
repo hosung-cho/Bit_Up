@@ -18,7 +18,7 @@ VERILOG_SRCS = \
 all:
 	@echo ''
 	@echo 'QFlow physical implementation for $(TOP_MODULE) using ETRI 0.5um CMOS'
-	@echo 'Targets: synthesize place sta route migrate lvs size clean'
+	@echo 'Targets: synthesize place place_mapped_no_fanout sta route migrate lvs size clean'
 	@echo ''
 
 synthesize: log/synth.log
@@ -29,6 +29,12 @@ log/synth.log: $(VERILOG_SRCS) source/$(TOP_MODULE).ys
 place: log/place.log
 
 log/place.log: log/synth.log layout/$(TOP_MODULE).par layout/$(TOP_MODULE).cel2 project_vars.sh
+	qflow place -T etri050 $(TOP_MODULE)
+
+place_mapped_no_fanout: log/synth.log layout/$(TOP_MODULE).par layout/$(TOP_MODULE).cel2 project_vars.sh
+	/usr/local/share/qflow/bin/vlog2Verilog -c -v vdd -g gnd -l /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef -o synthesis/$(TOP_MODULE)_synth.rtl.v synthesis/$(TOP_MODULE)_mapped.v
+	/usr/local/share/qflow/bin/vlog2Verilog -c -p -v vdd -g gnd -l /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef -o synthesis/$(TOP_MODULE)_synth.rtlnopwr.v synthesis/$(TOP_MODULE)_mapped.v
+	/usr/local/share/qflow/bin/vlog2Verilog -c -p -b -n -v vdd -g gnd -l /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef -o synthesis/$(TOP_MODULE)_synth.rtlbb.v synthesis/$(TOP_MODULE)_mapped.v
 	qflow place -T etri050 $(TOP_MODULE)
 
 sta: log/sta.log

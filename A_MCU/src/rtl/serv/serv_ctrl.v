@@ -37,6 +37,8 @@ module serv_ctrl
    //External
    output reg [31:0] o_ibus_adr);
 
+   localparam RESET_PC_REG = (RESET_STRATEGY != "NONE") && (RESET_STRATEGY != "STATE_ONLY");
+
    wire [B:0] pc_plus_4;
    wire       pc_plus_4_cy;
    reg 	      pc_plus_4_cy_r;
@@ -98,13 +100,13 @@ module serv_ctrl
    assign pc_plus_offset_cy_r_w[0] = pc_plus_offset_cy_r;
    assign pc_plus_4_cy_r_w[0] = pc_plus_4_cy_r;
 
-   initial if (RESET_STRATEGY == "NONE") o_ibus_adr = RESET_PC;
+   initial if (!RESET_PC_REG) o_ibus_adr = RESET_PC;
 
    always @(posedge clk) begin
       pc_plus_4_cy_r <= i_pc_en & pc_plus_4_cy;
       pc_plus_offset_cy_r <= i_pc_en & pc_plus_offset_cy;
 
-      if (RESET_STRATEGY == "NONE") begin
+      if (!RESET_PC_REG) begin
 	 if (i_pc_en)
 	   o_ibus_adr <= {new_pc, o_ibus_adr[31:W]};
       end else begin

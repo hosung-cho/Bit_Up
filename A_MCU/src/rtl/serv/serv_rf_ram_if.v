@@ -14,10 +14,13 @@ module serv_rf_ram_if
     parameter csr_regs=4,
     parameter single_read_port=0,
     parameter stream_rs2_read=0,
+    parameter rf_serial_stub=0,
     parameter B=W-1,
     parameter raw=$clog2(gpr_regs+csr_regs),
     parameter l2w=$clog2(width),
-    parameter aw=5+raw-l2w)
+    parameter aw=5+raw-l2w,
+    parameter FRAME_BITS=raw+8,
+    parameter KEY_BITS=FRAME_BITS-width)
   (
    input wire		   i_clk,
    input wire		   i_rst,
@@ -49,10 +52,16 @@ module serv_rf_ram_if
    output reg              o_rf_sync,
    output wire             o_rf_sck,
    output wire             o_rf_mosi,
-   input wire              i_rf_miso
+   input wire              i_rf_miso,
+
+   output wire             o_shared_valid,
+   output wire [FRAME_BITS-1:0] o_shared_frame,
+   input wire [width-1:0]       i_shared_rdata
   );
 
    localparam depth = 32 * (gpr_regs + csr_regs) / width;
+   localparam RESET_RF_IF = (reset_strategy != "NONE");
+   localparam RESET_RF_DATA = (reset_strategy != "NONE") && (reset_strategy != "STATE_ONLY");
 
    reg ready_pulse;
    assign o_ready = i_wreq | ready_pulse;
@@ -69,7 +78,9 @@ module serv_rf_ram_if
    reg [width-1:0] rs2_stream_buf;
 
    assign o_rdata1 = (single_read_port != 0) ? 1'b0 :
-                     stream_active ? (stream_rs2_active ? rs2_stream_buf[0] : read_buf1[0]) : 1'b0;
+                     ((stream_rs2_read != 0) && (single_read_port == 0)) ?
+                        (stream_active && stream_rs2_active ? rs2_stream_buf[0] : 1'b0) :
+                        (stream_active ? read_buf1[0] : 1'b0);
 
    localparam ratio = width/W;
    localparam CMSB = 4-$clog2(W);
@@ -137,9 +148,6 @@ module serv_rf_ram_if
    // ----------------------------------------------------------------
    // serv_rf_ram 모듈 내부에서 이식한 통합 FSM 및 시리얼 전송 로직
    // ----------------------------------------------------------------
-   localparam FRAME_BITS = raw + 8;
-   localparam KEY_BITS = FRAME_BITS - width;
-
    wire [raw-1:0] ram_rreg = raddr_w[aw-1 : 4];
    wire [3:0] ram_rbit = raddr_w[3:0];
    wire [raw-1:0] ram_wreg = waddr_w[aw-1 : 4];
@@ -149,6 +157,8 @@ module serv_rf_ram_if
    wire [3:0] target_bit = ren_w ? ram_rbit : ram_wbit;
    wire [FRAME_BITS-1:0] req_key = {wen_w, ren_w, target_reg, target_bit, wdata_w};
    wire [KEY_BITS-1:0] req_seen_key = {wen_w, ren_w, target_reg, target_bit};
+   assign o_shared_valid = wen_w || ren_w;
+   assign o_shared_frame = req_key;
 
    reg [4:0] tx_state;
    reg [width-1:0] shift_rx;
@@ -156,8 +166,8 @@ module serv_rf_ram_if
    reg        req_seen;
    reg        launch_pending;
 
-   assign o_rf_sck = (o_rf_sync) ? ~i_clk_fast : 1'b0;
-   assign o_rf_mosi = o_rf_sync ? req_key[tx_state - 1'b1] : 1'b0;
+   assign o_rf_sck = ((rf_serial_stub == 0) && o_rf_sync) ? ~i_clk_fast : 1'b0;
+   assign o_rf_mosi = ((rf_serial_stub == 0) && o_rf_sync) ? req_key[tx_state - 1'b1] : 1'b0;
 
    always @(posedge i_clk_fast) begin
       if (i_rst) begin
@@ -168,40 +178,50 @@ module serv_rf_ram_if
          req_seen <= 1'b0;
          launch_pending <= 1'b0;
       end else begin
-         if (!(wen_w || ren_w)) begin
+         if (rf_serial_stub != 0) begin
+            tx_state <= 0;
+            o_rf_sync <= 1'b0;
+            shift_rx <= {width{1'b0}};
+            last_req_key <= {KEY_BITS{1'b0}};
             req_seen <= 1'b0;
             launch_pending <= 1'b0;
-         end
-
-         if (tx_state == 0) begin
-            if (launch_pending && (wen_w || ren_w)) begin
-               last_req_key <= req_seen_key;
-               req_seen <= 1'b1;
+         end else begin
+            if (!(wen_w || ren_w)) begin
+               req_seen <= 1'b0;
                launch_pending <= 1'b0;
-               tx_state <= FRAME_BITS;
-               o_rf_sync <= 1'b1;
-            end else if ((wen_w || ren_w) && (!req_seen || (req_seen_key != last_req_key))) begin
-               last_req_key <= req_seen_key;
-               req_seen <= 1'b1;
-               tx_state <= FRAME_BITS;
-               o_rf_sync <= 1'b1;
             end
-         end 
-         else begin
-            if (tx_state == 3) shift_rx[1] <= i_rf_miso;
-            if (tx_state == 2) shift_rx[0] <= i_rf_miso;
 
-            tx_state <= tx_state - 1;
+            if (tx_state == 0) begin
+               if (launch_pending && (wen_w || ren_w)) begin
+                  last_req_key <= req_seen_key;
+                  req_seen <= 1'b1;
+                  launch_pending <= 1'b0;
+                  tx_state <= FRAME_BITS;
+                  o_rf_sync <= 1'b1;
+               end else if ((wen_w || ren_w) && (!req_seen || (req_seen_key != last_req_key))) begin
+                  last_req_key <= req_seen_key;
+                  req_seen <= 1'b1;
+                  tx_state <= FRAME_BITS;
+                  o_rf_sync <= 1'b1;
+               end
+            end 
+            else begin
+               if (tx_state == 3) shift_rx[1] <= i_rf_miso;
+               if (tx_state == 2) shift_rx[0] <= i_rf_miso;
 
-            if (tx_state == 1) begin
-               o_rf_sync <= 1'b0;
+               tx_state <= tx_state - 1;
+
+               if (tx_state == 1) begin
+                  o_rf_sync <= 1'b0;
+               end
             end
          end
       end
    end
 
    // 0번 레지스터(x0)는 RISC-V 스펙상 항상 0을 반환하도록 마스킹
-   wire [width-1:0] rdata_w = (target_reg == {raw{1'b0}}) ? {width{1'b0}} : shift_rx;
+   wire [width-1:0] serial_rdata_w = (rf_serial_stub != 0) ? i_shared_rdata : shift_rx;
+   wire [width-1:0] rdata_w = (target_reg == {raw{1'b0}}) ? {width{1'b0}} : serial_rdata_w;
 
    always @(posedge i_clk) begin
       ready_pulse <= 1'b0;
@@ -260,7 +280,7 @@ module serv_rf_ram_if
       end else if (prefetch_active) begin
          if (prev_valid) begin
             if (prev_sel) begin
-               if (stream_rs2_active)
+               if (stream_rs2_mode)
                   rs2_stream_buf <= rdata_w;
                else
                   read_buf1 <= {rdata_w, read_buf1[31:2]};
@@ -302,17 +322,11 @@ module serv_rf_ram_if
       end
 
       if (i_rst) begin
-         if (reset_strategy != "NONE") begin
+         if (RESET_RF_IF) begin
             ready_pulse <= 1'b0;
-            o_raddr <= {aw{1'b0}};
             o_ren <= 1'b0;
-            read_buf0 <= 32'b0;
-            read_buf1 <= 32'b0;
-            rs2_stream_buf <= {width{1'b0}};
             rcnt <= {CMSB+1{1'b0}};
             rtrig1 <= 1'b0;
-            wdata0_r <= {width{1'b0}};
-            wdata1_r <= {(width+W){1'b0}};
             wen0_r <= 1'b0;
             wen1_r <= 1'b0;
             write_chunk <= 4'b0;
@@ -326,6 +340,14 @@ module serv_rf_ram_if
             stream_pending <= 1'b0;
             stream_active <= 1'b0;
             stream_cnt <= 5'b0;
+            if (RESET_RF_DATA) begin
+               o_raddr <= {aw{1'b0}};
+               read_buf0 <= 32'b0;
+               read_buf1 <= 32'b0;
+               rs2_stream_buf <= {width{1'b0}};
+               wdata0_r <= {width{1'b0}};
+               wdata1_r <= {(width+W){1'b0}};
+            end
          end
       end
    end

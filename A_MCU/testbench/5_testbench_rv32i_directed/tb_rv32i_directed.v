@@ -57,7 +57,9 @@ module tb_rv32i_directed;
    wire [7:0] gpio_oe;
 
    my_mcu_top #(
-      .STREAM_RS2_READ(1)
+      .STREAM_RS2_READ(1),
+      .SHARED_SERIAL(1),
+      .UNIFIED_SERIAL(1)
    ) dut (
       .i_clk_fast(clk_fast),
       .i_rst_n(rst_n),
@@ -82,8 +84,10 @@ module tb_rv32i_directed;
 
    reg [31:0] ext_mem [0:511];
    reg [69:0] mem_rx_buffer = 0;
+   reg [RF_FRAME_BITS-1:0] unified_rf_rx_buffer = 0;
    integer mem_bit_cnt = 0;
    reg [31:0] mem_read_shift = 0;
+   reg [1:0] unified_rf_tx_data = 0;
    reg [31:0] mem_addr = 0;
    reg [31:0] mem_wdata = 0;
    reg [3:0] mem_sel = 0;
@@ -236,7 +240,15 @@ module tb_rv32i_directed;
    always @(posedge mem_sck) begin
       if (mem_sync) begin
          mem_rx_buffer[69 - mem_bit_cnt] = mem_mosi;
+         if (mem_bit_cnt < RF_FRAME_BITS)
+            unified_rf_rx_buffer[RF_FRAME_BITS-1 - mem_bit_cnt] = mem_mosi;
          mem_bit_cnt = mem_bit_cnt + 1;
+
+         if (mem_bit_cnt == RF_FRAME_BITS-2) begin
+            if (unified_rf_rx_buffer[RF_FRAME_BITS-2] &&
+                unified_rf_rx_buffer[RF_FRAME_BITS-3:6] < RF_REGS)
+               unified_rf_tx_data = pico_ram[unified_rf_rx_buffer[RF_FRAME_BITS-3:6]][{unified_rf_rx_buffer[5:2], 1'b0} +: 2];
+         end
 
          if (mem_bit_cnt == 38) begin
             mem_addr = mem_rx_buffer[63:32];
@@ -249,33 +261,52 @@ module tb_rv32i_directed;
    always @(posedge mem_sync) begin
       mem_bit_cnt = 0;
       mem_rx_buffer = 70'b0;
+      unified_rf_rx_buffer = {RF_FRAME_BITS{1'b0}};
       mem_read_shift = 32'h0000_0013;
    end
 
    always @(negedge mem_sync) begin
-      mem_frame_cnt = mem_frame_cnt + 1;
-      mem_addr = mem_rx_buffer[63:32];
-      mem_word_index = mem_addr[10:2];
-
-      if (mem_rx_buffer[69]) begin
-         mem_write_cnt = mem_write_cnt + 1;
-         mem_sel = mem_rx_buffer[67:64];
-         mem_wdata = mem_rx_buffer[31:0];
-
-         if (mem_sel[0]) begin
-            ext_mem[mem_word_index][7:0] = mem_wdata[7:0];
-            $display("TB_MEM_WRITE: addr=%h data=%h", mem_addr, mem_wdata);
+      if (mem_bit_cnt == RF_FRAME_BITS) begin
+         frame_cnt = frame_cnt + 1;
+         if (unified_rf_rx_buffer[RF_FRAME_BITS-1]) begin
+            write_frame_cnt = write_frame_cnt + 1;
+            $display("TB_RF_WRITE: reg=%d chunk=%d data=%b",
+                     unified_rf_rx_buffer[RF_FRAME_BITS-3:6],
+                     unified_rf_rx_buffer[5:2],
+                     unified_rf_rx_buffer[1:0]);
+            if (unified_rf_rx_buffer[RF_FRAME_BITS-3:6] < RF_REGS)
+               pico_ram[unified_rf_rx_buffer[RF_FRAME_BITS-3:6]][{unified_rf_rx_buffer[5:2], 1'b0} +: 2] = unified_rf_rx_buffer[1:0];
+            else
+               invalid_rf_frame_cnt = invalid_rf_frame_cnt + 1;
+         end else if (unified_rf_rx_buffer[RF_FRAME_BITS-2]) begin
+            read_frame_cnt = read_frame_cnt + 1;
          end
-         if (mem_sel[1]) ext_mem[mem_word_index][15:8] = mem_wdata[15:8];
-         if (mem_sel[2]) ext_mem[mem_word_index][23:16] = mem_wdata[23:16];
-         if (mem_sel[3]) ext_mem[mem_word_index][31:24] = mem_wdata[31:24];
       end else begin
-         mem_read_cnt = mem_read_cnt + 1;
+         mem_frame_cnt = mem_frame_cnt + 1;
+         mem_addr = mem_rx_buffer[63:32];
+         mem_word_index = mem_addr[10:2];
+
+         if (mem_rx_buffer[69]) begin
+            mem_write_cnt = mem_write_cnt + 1;
+            mem_sel = mem_rx_buffer[67:64];
+            mem_wdata = mem_rx_buffer[31:0];
+
+            if (mem_sel[0]) begin
+               ext_mem[mem_word_index][7:0] = mem_wdata[7:0];
+               $display("TB_MEM_WRITE: addr=%h data=%h", mem_addr, mem_wdata);
+            end
+            if (mem_sel[1]) ext_mem[mem_word_index][15:8] = mem_wdata[15:8];
+            if (mem_sel[2]) ext_mem[mem_word_index][23:16] = mem_wdata[23:16];
+            if (mem_sel[3]) ext_mem[mem_word_index][31:24] = mem_wdata[31:24];
+         end else begin
+            mem_read_cnt = mem_read_cnt + 1;
+         end
       end
    end
 
-   assign mem_miso = (mem_sync && mem_bit_cnt >= 38 && mem_bit_cnt < 70) ?
-                     mem_read_shift[69 - mem_bit_cnt] : 1'b0;
+   assign mem_miso = (mem_sync && mem_bit_cnt == RF_FRAME_BITS-2) ? unified_rf_tx_data[1] :
+                     (mem_sync && mem_bit_cnt >= RF_FRAME_BITS-1 && mem_bit_cnt < RF_FRAME_BITS) ? unified_rf_tx_data[0] :
+                     (mem_sync && mem_bit_cnt >= 38 && mem_bit_cnt < 70) ? mem_read_shift[69 - mem_bit_cnt] : 1'b0;
 
    always @(posedge rf_sck) begin
       if (rf_sync) begin
