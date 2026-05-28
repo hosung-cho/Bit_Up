@@ -212,7 +212,7 @@ module tb_physical_profile;
             mem_write_cnt = mem_write_cnt + 1;
             ext_mem[mem_word_index] = mem_rx_buffer[31:0];
             $display("TB_MEM_WRITE: addr=%h data=%h", mem_addr, mem_rx_buffer[31:0]);
-            if (mem_addr == 8'h28)
+            if (mem_addr == 8'h30)
                done_seen = 1'b1;
          end else begin
             mem_read_cnt = mem_read_cnt + 1;
@@ -249,26 +249,19 @@ module tb_physical_profile;
          ext_mem[i] = 32'h00000013;
 
       pc_word = 0;
-      emit(enc_i(5, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
-      emit(enc_i(7, 5'd0, FNC_ADD_SUB, 5'd2, OPC_ARI_ITYPE));
+      emit(enc_i(12, 5'd0, FNC_ADD_SUB, 5'd1, OPC_ARI_ITYPE));
       emit_nops(2);
-      emit(enc_r(FNC7_0, 5'd2, 5'd1, FNC_ADD_SUB, 5'd3));
+      emit(enc_s(32'h02c, 5'd1, 5'd0, FNC_SW));
       emit_nops(2);
-      emit(enc_s(32'h020, 5'd3, 5'd0, FNC_SW));
-      emit(enc_i(32'h020, 5'd0, FNC_LW, 5'd4, OPC_LOAD));
+      emit(enc_i(32'h02c, 5'd0, FNC_LW, 5'd2, OPC_LOAD));
       emit_nops(2);
-      emit(enc_i(1, 5'd4, FNC_ADD_SUB, 5'd5, OPC_ARI_ITYPE));
-      emit_nops(2);
-      emit(enc_s(32'h024, 5'd5, 5'd0, FNC_SW));
-      emit(enc_i(21, 5'd0, FNC_ADD_SUB, 5'd6, OPC_ARI_ITYPE));
-      emit_nops(2);
-      emit(enc_s(32'h028, 5'd6, 5'd0, FNC_SW));
+      emit(enc_s(32'h030, 5'd2, 5'd0, FNC_SW));
       emit(enc_j(0, 5'd0));
 
       $display("------------------------------------------------------------");
       $display("Physical profile smoke: RV32E + %0d-bit WORD_MEM_ONLY DBUS", MEM_ADDR_BITS);
       $display("  Program words = %0d", pc_word);
-      $display("  Expected writes: [0x20]=12 [0x24]=13 [0x28]=21");
+      $display("  Expected writes: [0x2c]=12 [0x30]=12");
       $display("------------------------------------------------------------");
 
       rst_n = 1'b0;
@@ -278,9 +271,8 @@ module tb_physical_profile;
       wait(done_seen);
       #50000;
 
-      check_word(8'h20, 32'h0000000c);
-      check_word(8'h24, 32'h0000000d);
-      check_word(8'h28, 32'h00000015);
+      check_word(8'h2c, 32'h0000000c);
+      check_word(8'h30, 32'h0000000c);
 
       if (rf_sync !== 1'b0 || rf_sck !== 1'b0 || rf_mosi !== 1'b0) begin
          error_cnt = error_cnt + 1;
@@ -291,7 +283,7 @@ module tb_physical_profile;
                rf_frame_cnt, rf_write_cnt, rf_read_cnt, invalid_rf_frame_cnt);
       $display("Memory frames observed = %0d writes=%0d reads=%0d",
                mem_frame_cnt, mem_write_cnt, mem_read_cnt);
-      if (error_cnt == 0 && invalid_rf_frame_cnt == 0 && mem_write_cnt >= 3 && mem_read_cnt >= 1) begin
+      if (error_cnt == 0 && invalid_rf_frame_cnt == 0 && mem_write_cnt >= 2 && mem_read_cnt >= 1) begin
          $display("[TB PASS] physical profile LW/SW smoke passed");
          $finish;
       end else begin

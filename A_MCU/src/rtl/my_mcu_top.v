@@ -248,6 +248,7 @@ module my_mcu_top #(
 
     reg has_fetched_first_insn;
     reg current_stream_rs2_hint;
+    reg current_wdata0_next_hint;
     generate
         if (RESET_STRATEGY == "NONE") begin : gen_rf_prefetch_hint_no_reset
             always @(posedge clk_sys) begin
@@ -256,6 +257,7 @@ module my_mcu_top #(
                     rf_read_reg1 <= decode_rf_read_reg1(wb_ibus_rdt);
                     has_fetched_first_insn <= 1'b1;
                     current_stream_rs2_hint <= decode_uses_rs2(wb_ibus_rdt);
+                    current_wdata0_next_hint <= decode_wdata0_next_hint(wb_ibus_rdt);
                 end else if (rf_rreq) begin
                     rf_read_reg0 <= rreg0;
                     rf_read_reg1 <= rreg1;
@@ -268,11 +270,13 @@ module my_mcu_top #(
                     rf_read_reg1 <= {1'b0, 5'd0};
                     has_fetched_first_insn <= 1'b0;
                     current_stream_rs2_hint <= 1'b0;
+                    current_wdata0_next_hint <= 1'b0;
                 end else if (wb_ibus_ack) begin
                     rf_read_reg0 <= {1'b0, wb_ibus_rdt[19:15]};
                     rf_read_reg1 <= decode_rf_read_reg1(wb_ibus_rdt);
                     has_fetched_first_insn <= 1'b1;
                     current_stream_rs2_hint <= decode_uses_rs2(wb_ibus_rdt);
+                    current_wdata0_next_hint <= decode_wdata0_next_hint(wb_ibus_rdt);
                 end else if (rf_rreq) begin
                     rf_read_reg0 <= rreg0;
                     rf_read_reg1 <= rreg1;
@@ -281,7 +285,7 @@ module my_mcu_top #(
         end
     endgenerate
 
-    assign rf_wdata0_next_to_if = rf_wdata0_next;
+    assign rf_wdata0_next_to_if = rf_wdata0_next | (wb_ibus_ack ? decode_wdata0_next_hint(wb_ibus_rdt) : current_wdata0_next_hint);
 
     assign rf_read_reg0_to_if = wb_ibus_ack ? {1'b0, wb_ibus_rdt[19:15]} :
                                 rf_read_reg0;

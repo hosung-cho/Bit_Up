@@ -269,14 +269,15 @@ module serv_rf_ram_if
 
       if (i_rreq) begin
          pending_read <= 1'b1;
-         rreg0_latched <= i_rreg0;
-         rreg1_latched <= i_rreg1;
       end
 
       if (!prefetch_active && (write_wait == 2'd0) && pending_read) begin
          prefetch_active <= 1'b1;
          pending_read <= 1'b0;
          issue_idx <= 6'd0;
+         rreg0_latched <= i_rreg0;
+         rreg1_latched <= i_rreg1;
+         $display("[RF_IF] LATCH TIME: %d, i_rreg0=%d, i_rreg1=%d, i_stream_rs2_en=%b (LATELY)", $time, i_rreg0, i_rreg1, i_stream_rs2_en);
       end else if (prefetch_active) begin
          if (prev_valid) begin
             if (prev_sel) begin
@@ -340,10 +341,11 @@ module serv_rf_ram_if
             stream_pending <= 1'b0;
             stream_active <= 1'b0;
             stream_cnt <= 5'b0;
+            read_buf1[0] <= 1'b0;
             if (RESET_RF_DATA) begin
                o_raddr <= {aw{1'b0}};
                read_buf0 <= 32'b0;
-               read_buf1 <= 32'b0;
+               read_buf1[31:1] <= 31'b0;
                rs2_stream_buf <= {width{1'b0}};
                wdata0_r <= {width{1'b0}};
                wdata1_r <= {(width+W){1'b0}};
