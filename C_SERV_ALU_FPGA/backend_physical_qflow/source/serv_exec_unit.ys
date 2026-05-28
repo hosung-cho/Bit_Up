@@ -1,0 +1,20 @@
+# Area-first synthesis script for the SERV-compatible ASIC execution unit.
+read_liberty -lib -ignore_miss_dir -setattr blackbox /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
+read_verilog /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v
+read_verilog /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v
+
+synth -top serv_exec_unit
+dfflibmap -liberty /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
+opt
+
+abc -exe /usr/local/share/qflow/bin/yosys-abc -liberty /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib -script +strash;scorr;ifraig;retime,{D};strash;dch,-f;map,-M,1,{D}
+flatten
+setundef -zero
+
+clean -purge
+iopadmap -outpad BUFX2 A:Y -bits
+opt
+clean
+rename -enumerate
+write_verilog serv_exec_unit_mapped.v
+stat
