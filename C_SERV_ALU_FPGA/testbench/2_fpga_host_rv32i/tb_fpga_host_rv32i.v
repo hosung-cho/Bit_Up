@@ -8,12 +8,12 @@ module tb_fpga_host_rv32i;
    wire        asic_cmd_valid;
    wire        asic_cmd_ready;
    wire [3:0]  asic_cmd_op;
-   wire [3:0]  asic_cmd_a;
-   wire [3:0]  asic_cmd_b;
+   wire        asic_cmd_a;
+   wire        asic_cmd_b;
    wire        asic_cmd_last;
    wire        asic_rsp_valid;
    wire        asic_rsp_ready;
-   wire [3:0]  asic_rsp_result;
+   wire        asic_rsp_result;
    wire [5:0]  asic_rsp_flags;
    wire        asic_rsp_last;
 

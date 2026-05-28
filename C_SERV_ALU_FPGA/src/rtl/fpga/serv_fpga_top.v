@@ -8,13 +8,13 @@ module serv_fpga_top
    output wire       asic_cmd_valid,
    input wire        asic_cmd_ready,
    output wire [3:0] asic_cmd_op,
-   output wire [3:0] asic_cmd_a,
-   output wire [3:0] asic_cmd_b,
+   output wire       asic_cmd_a,
+   output wire       asic_cmd_b,
    output wire       asic_cmd_last,
 
    input wire        asic_rsp_valid,
    output wire       asic_rsp_ready,
-   input wire [3:0]  asic_rsp_result,
+   input wire        asic_rsp_result,
    input wire [5:0]  asic_rsp_flags,
    input wire        asic_rsp_last,
 

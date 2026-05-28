@@ -19,13 +19,13 @@ module serv_exec_fpga_bridge
    output wire       asic_cmd_valid,
    input wire        asic_cmd_ready,
    output wire [3:0] asic_cmd_op,
-   output wire [3:0] asic_cmd_a,
-   output wire [3:0] asic_cmd_b,
+   output wire       asic_cmd_a,
+   output wire       asic_cmd_b,
    output wire       asic_cmd_last,
 
    input wire        asic_rsp_valid,
    output wire       asic_rsp_ready,
-   input wire [3:0]  asic_rsp_result,
+   input wire        asic_rsp_result,
    input wire [5:0]  asic_rsp_flags,
    input wire        asic_rsp_last
    );
@@ -36,8 +36,8 @@ module serv_exec_fpga_bridge
    localparam ST_RESP = 2'd3;
 
    reg [1:0]  state;
-   reg [2:0]  send_cnt;
-   reg [2:0]  recv_cnt;
+   reg [4:0]  send_cnt;
+   reg [4:0]  recv_cnt;
    reg [3:0]  op_r;
    reg [31:0] a_r;
    reg [31:0] b_r;
@@ -54,16 +54,16 @@ module serv_exec_fpga_bridge
 
    assign asic_cmd_valid = (state == ST_SEND);
    assign asic_cmd_op = op_r;
-   assign asic_cmd_a = a_r[3:0];
-   assign asic_cmd_b = b_r[3:0];
-   assign asic_cmd_last = (send_cnt == 3'd7);
+   assign asic_cmd_a = a_r[0];
+   assign asic_cmd_b = b_r[0];
+   assign asic_cmd_last = (send_cnt == 5'd31);
    assign asic_rsp_ready = (state == ST_RECV);
 
    always @(posedge clk) begin
       if (!rst_n) begin
          state <= ST_IDLE;
-         send_cnt <= 3'd0;
-         recv_cnt <= 3'd0;
+         send_cnt <= 5'd0;
+         recv_cnt <= 5'd0;
          op_r <= 4'd0;
          a_r <= 32'd0;
          b_r <= 32'd0;
@@ -72,8 +72,8 @@ module serv_exec_fpga_bridge
       end else begin
          case (state)
            ST_IDLE: begin
-              send_cnt <= 3'd0;
-              recv_cnt <= 3'd0;
+              send_cnt <= 5'd0;
+              recv_cnt <= 5'd0;
               if (req_valid) begin
                  op_r <= req_op;
                  a_r <= req_a;
@@ -86,34 +86,25 @@ module serv_exec_fpga_bridge
 
            ST_SEND: begin
               if (send_fire) begin
-                 a_r <= {4'd0, a_r[31:4]};
-                 b_r <= {4'd0, b_r[31:4]};
+                 a_r <= {1'b0, a_r[31:1]};
+                 b_r <= {1'b0, b_r[31:1]};
                  if (asic_cmd_last) begin
                     state <= ST_RECV;
-                    recv_cnt <= 3'd0;
+                    recv_cnt <= 5'd0;
                  end else begin
-                    send_cnt <= send_cnt + 3'd1;
+                    send_cnt <= send_cnt + 5'd1;
                  end
               end
            end
 
            ST_RECV: begin
               if (recv_fire) begin
-                 case (recv_cnt)
-                   3'd0: result_r[3:0] <= asic_rsp_result;
-                   3'd1: result_r[7:4] <= asic_rsp_result;
-                   3'd2: result_r[11:8] <= asic_rsp_result;
-                   3'd3: result_r[15:12] <= asic_rsp_result;
-                   3'd4: result_r[19:16] <= asic_rsp_result;
-                   3'd5: result_r[23:20] <= asic_rsp_result;
-                   3'd6: result_r[27:24] <= asic_rsp_result;
-                   default: result_r[31:28] <= asic_rsp_result;
-                 endcase
+                 result_r <= {asic_rsp_result, result_r[31:1]};
                  flags_r <= asic_rsp_flags;
-                 if (asic_rsp_last | (recv_cnt == 3'd7)) begin
+                 if (asic_rsp_last | (recv_cnt == 5'd31)) begin
                     state <= ST_RESP;
                  end else begin
-                    recv_cnt <= recv_cnt + 3'd1;
+                    recv_cnt <= recv_cnt + 5'd1;
                  end
               end
            end

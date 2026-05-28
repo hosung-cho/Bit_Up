@@ -8,13 +8,13 @@ module serv_exec_unit
    input wire        cmd_valid,
    output wire       cmd_ready,
    input wire [3:0]  cmd_op,
-   input wire [3:0]  cmd_a,
-   input wire [3:0]  cmd_b,
+   input wire        cmd_a,
+   input wire        cmd_b,
    input wire        cmd_last,
 
    output wire       rsp_valid,
    input wire        rsp_ready,
-   output wire [3:0] rsp_result,
+   output wire       rsp_result,
    output wire [5:0] rsp_flags,
    output wire       rsp_last,
 
@@ -42,8 +42,8 @@ module serv_exec_unit
    localparam ST_SEND = 3'd3;
 
    reg [2:0]  state;
-   reg [2:0]  load_cnt;
-   reg [2:0]  send_cnt;
+   reg [4:0]  load_cnt;
+   reg [4:0]  send_cnt;
    reg [5:0]  exec_cnt;
    reg [3:0]  op_r;
    reg [31:0] a_r;
@@ -81,9 +81,9 @@ module serv_exec_unit
 
    assign cmd_ready  = (state == ST_IDLE) | (state == ST_LOAD);
    assign rsp_valid  = (state == ST_SEND) & valid_r;
-   assign rsp_result = result_r[3:0];
-   assign rsp_last   = (send_cnt == 3'd7);
+   assign rsp_result = result_r[0];
    assign rsp_flags  = {~cmp_r, cmp_r, is_cmp & cmp_r, is_cmp & ~cmp_r, is_sub, 1'b1};
+   assign rsp_last   = (send_cnt == 5'd31);
    assign busy       = (state != ST_IDLE);
    assign debug_state = state;
 
@@ -107,8 +107,8 @@ module serv_exec_unit
    always @(posedge clk) begin
       if (!rst_n) begin
          state    <= ST_IDLE;
-         load_cnt <= 3'd0;
-         send_cnt <= 3'd0;
+         load_cnt <= 5'd0;
+         send_cnt <= 5'd0;
          exec_cnt <= 6'd0;
          op_r     <= OP_ADD;
          a_r      <= 32'd0;
@@ -120,38 +120,31 @@ module serv_exec_unit
          case (state)
            ST_IDLE: begin
               valid_r  <= 1'b0;
-              load_cnt <= 3'd0;
-              send_cnt <= 3'd0;
+              load_cnt <= 5'd0;
+              send_cnt <= 5'd0;
               exec_cnt <= 6'd0;
               if (load_fire) begin
                  op_r <= cmd_op;
-                 a_r  <= {28'd0, cmd_a};
-                 b_r  <= {28'd0, cmd_b};
+                 a_r  <= {31'd0, cmd_a};
+                 b_r  <= {31'd0, cmd_b};
                  if (cmd_last) begin
                     state <= ST_EXEC;
                  end else begin
                     state <= ST_LOAD;
-                    load_cnt <= 3'd1;
+                    load_cnt <= 5'd1;
                  end
               end
            end
 
            ST_LOAD: begin
               if (load_fire) begin
-                 case (load_cnt)
-                   3'd1: begin a_r[7:4]   <= cmd_a; b_r[7:4]   <= cmd_b; end
-                   3'd2: begin a_r[11:8]  <= cmd_a; b_r[11:8]  <= cmd_b; end
-                   3'd3: begin a_r[15:12] <= cmd_a; b_r[15:12] <= cmd_b; end
-                   3'd4: begin a_r[19:16] <= cmd_a; b_r[19:16] <= cmd_b; end
-                   3'd5: begin a_r[23:20] <= cmd_a; b_r[23:20] <= cmd_b; end
-                   3'd6: begin a_r[27:24] <= cmd_a; b_r[27:24] <= cmd_b; end
-                   default: begin a_r[31:28] <= cmd_a; b_r[31:28] <= cmd_b; end
-                 endcase
-                 if (cmd_last | (load_cnt == 3'd7)) begin
+                 a_r[load_cnt] <= cmd_a;
+                 b_r[load_cnt] <= cmd_b;
+                 if (cmd_last | (load_cnt == 5'd31)) begin
                     state <= ST_EXEC;
                     exec_cnt <= 6'd0;
                  end else begin
-                    load_cnt <= load_cnt + 3'd1;
+                    load_cnt <= load_cnt + 5'd1;
                  end
               end
            end
@@ -164,7 +157,7 @@ module serv_exec_unit
               if (exec_done) begin
                  state <= ST_SEND;
                  valid_r <= 1'b1;
-                 send_cnt <= 3'd0;
+                 send_cnt <= 5'd0;
                  if (is_slt | is_sltu | is_eq | is_lt | is_ltu) begin
                     result_r <= {31'd0, alu_cmp};
                  end else if (is_ne | is_ge | is_geu) begin
@@ -178,12 +171,12 @@ module serv_exec_unit
 
            ST_SEND: begin
               if (send_fire) begin
-                 result_r <= {4'd0, result_r[31:4]};
+                 result_r <= {1'b0, result_r[31:1]};
                  if (rsp_last) begin
                     state <= ST_IDLE;
                     valid_r <= 1'b0;
                  end else begin
-                    send_cnt <= send_cnt + 3'd1;
+                    send_cnt <= send_cnt + 5'd1;
                  end
               end
            end

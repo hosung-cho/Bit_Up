@@ -23,7 +23,7 @@ FPGA-hosted RV32I 실행기의 핵심 top이다.
 - branch/jump PC update
 - halt/trap/debug outputs
 
-ASIC과 직접 nibble protocol을 말하지 않고 기존 `serv_exec_fpga_bridge`를 통해 32-bit operation request를 보낸다.
+ASIC과 직접 1-bit serial protocol을 말하지 않고 기존 `serv_exec_fpga_bridge`를 통해 32-bit operation request를 보낸다.
 
 ### `src/rtl/fpga/serv_fpga_top.v`
 

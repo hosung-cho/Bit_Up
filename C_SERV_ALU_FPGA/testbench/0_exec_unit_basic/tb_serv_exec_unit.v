@@ -7,12 +7,12 @@ module tb_serv_exec_unit;
    reg         cmd_valid = 1'b0;
    wire        cmd_ready;
    reg [3:0]   cmd_op = 4'd0;
-   reg [3:0]   cmd_a = 4'd0;
-   reg [3:0]   cmd_b = 4'd0;
+   reg         cmd_a = 1'b0;
+   reg         cmd_b = 1'b0;
    reg         cmd_last = 1'b0;
    wire        rsp_valid;
    reg         rsp_ready = 1'b1;
-   wire [3:0]  rsp_result;
+   wire        rsp_result;
    wire [5:0]  rsp_flags;
    wire        rsp_last;
    wire        busy;
@@ -61,14 +61,14 @@ module tb_serv_exec_unit;
       input [31:0] b;
       integer i;
       begin
-         for (i = 0; i < 8; i = i + 1) begin
+         for (i = 0; i < 32; i = i + 1) begin
             @(posedge clk);
             while (!cmd_ready) @(posedge clk);
             cmd_valid <= 1'b1;
             cmd_op <= op;
-            cmd_a <= a[(i*4) +: 4];
-            cmd_b <= b[(i*4) +: 4];
-            cmd_last <= (i == 7);
+            cmd_a <= a[i];
+            cmd_b <= b[i];
+            cmd_last <= (i == 31);
          end
          @(posedge clk);
          cmd_valid <= 1'b0;
@@ -82,10 +82,10 @@ module tb_serv_exec_unit;
       begin
          value = 32'd0;
          i = 0;
-         while (i < 8) begin
+         while (i < 32) begin
             @(posedge clk);
             if (rsp_valid) begin
-               value[(i*4) +: 4] = rsp_result;
+               value[i] = rsp_result;
                i = i + 1;
             end
          end
