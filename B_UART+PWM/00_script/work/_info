@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/doct0/Drive/vscode/veiliog/school/modelsim/00_script
+vpwm_core
+Z0 !s110 1780050072
+!i10b 1
+!s100 XQWLM7=::[09Y3`BQI6]C0
+IQzBYKB]S]0UM=1`ZkzGWl1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dF:/workspace/Bit_Up/B_UART+PWM/00_script
+Z3 w1780049151
+8pwm_core.v
+Fpwm_core.v
+L0 5
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1780050072.000000
+Z6 !s107 uart_pwm_top.v|uart_tx.v|uart_rx.v|uart_cmd_parser.v|reg_bank.v|pwm_core.v|tb_uart_pwm_top.v|
+Z7 !s90 -reportprogress|300|-novopt|tb_uart_pwm_top.v|pwm_core.v|reg_bank.v|uart_cmd_parser.v|uart_rx.v|uart_tx.v|uart_pwm_top.v|
+!i113 1
+Z8 o-L mtiAvm -L mtiOvm -L mtiUPF
+Z9 tCvgOpt 0
+vreg_bank
+R0
+!i10b 1
+!s100 WS=kYB03>R>;1>7gSeaCf2
+I2:W0nfL15PDeS?PFa`:2z1
+R1
+R2
+R3
+8reg_bank.v
+Freg_bank.v
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+vtb_uart_pwm_top
+R0
+!i10b 1
+!s100 =RK^MR>]eCN]==QIXSSTJ1
+InhVNOJ@QH04MRPM;P;XJg0
+R1
+R2
+R3
+8tb_uart_pwm_top.v
+Ftb_uart_pwm_top.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+vuart_cmd_parser
+R0
+!i10b 1
+!s100 zT??:]=Pj1cf>PWkM]AMA3
+IONlYI<fKoP`DiL@iLFTn00
+R1
+R2
+R3
+8uart_cmd_parser.v
+Fuart_cmd_parser.v
+L0 7
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+vuart_pwm_top
+R0
+!i10b 1
+!s100 @NGfPgN2@;mfAz0@h>Un^1
+IjQW4:3NgAQ=<I`PkfCYa>1
+R1
+R2
+R3
+8uart_pwm_top.v
+Fuart_pwm_top.v
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+vuart_rx
+R0
+!i10b 1
+!s100 TO8Y<dBR;XLgM7f<R;5i;2
+ITiZhKJO1;NQ6WVLD_m0JN3
+R1
+R2
+R3
+8uart_rx.v
+Fuart_rx.v
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+vuart_tx
+R0
+!i10b 1
+!s100 BcjOzKE[5R:zc=1`2:@CC3
+IZfmSU>K<@UUE8:kXC6Ae21
+R1
+R2
+R3
+8uart_tx.v
+Fuart_tx.v
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
