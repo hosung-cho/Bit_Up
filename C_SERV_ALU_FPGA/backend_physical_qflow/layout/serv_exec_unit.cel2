@@ -1,0 +1,17 @@
+padgroup Control permute
+twpin_clk nonfixed
+twpin_rst_n nonfixed
+restrict side T
+
+padgroup Command permute
+twpin_cmd_valid nonfixed
+twpin_cmd_ready nonfixed
+twpin_cmd_last nonfixed
+restrict side L
+
+padgroup Response permute
+twpin_rsp_valid nonfixed
+twpin_rsp_ready nonfixed
+twpin_rsp_last nonfixed
+twpin_busy nonfixed
+restrict side R

@@ -1,0 +1,12 @@
+padgroup Control permute
+twpin_i_clk_fast nonfixed
+twpin_i_clk_sys_ext nonfixed
+twpin_i_rst_n nonfixed
+restrict side T
+
+padgroup Mem_Bridge permute
+twpin_o_mem_sync nonfixed
+twpin_o_mem_sck nonfixed
+twpin_o_mem_mosi nonfixed
+twpin_i_mem_miso nonfixed
+restrict side R

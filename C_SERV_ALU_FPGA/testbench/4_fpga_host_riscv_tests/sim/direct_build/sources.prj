@@ -1,0 +1,6 @@
+verilog xil_defaultlib "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v"
+verilog xil_defaultlib "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/asic/serv_exec_unit.v"
+verilog xil_defaultlib "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_exec_fpga_bridge.v"
+verilog xil_defaultlib "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_fpga_host.v"
+verilog xil_defaultlib "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_fpga_top.v"
+verilog xil_defaultlib "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/tb_fpga_host_riscv_tests.v"

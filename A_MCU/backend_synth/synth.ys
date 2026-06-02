@@ -1,0 +1,26 @@
+# 1. SERV 코어 본체 및 수정된 레지스터 파일 모듈 읽기
+read_verilog ../src/rtl/serv/*.v
+
+# 2. 어댑터 브릿지 및 최상위 SoC 인터페이스 모듈 읽기
+read_verilog ../src/rtl/offchip_mem_bridge.v
+read_verilog ../src/rtl/simple_gpio.v
+read_verilog ../src/rtl/my_mcu_top.v
+
+# 3. 최상위 모듈 지정 및 계층 구조 무결성 검사
+hierarchy -check -top my_mcu_top
+
+# 4. 논리 합성 시작
+synth -top my_mcu_top
+
+# 5. 기본 논리 최적화 및 FSM/메모리 타겟 매핑
+proc; opt; memory; opt; fsm; opt; techmap; opt
+
+# 6. ETRI 0.5um 표준 셀 라이브러리로 레치 및 조합회로 매핑
+dfflibmap -liberty /home/hosung/Ho/MPW/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/digital_ETRI050_m1f/khu_etri05_stdcells.lib
+abc -liberty /home/hosung/Ho/MPW/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/digital_ETRI050_m1f/khu_etri05_stdcells.lib
+
+# 7. 최적화 후 남은 찌꺼기 클린업
+clean
+
+# 8. ETRI 0.5um 공정 면적 통계(Area Report) 출력
+stat -liberty /home/hosung/Ho/MPW/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/digital_ETRI050_m1f/khu_etri05_stdcells.lib

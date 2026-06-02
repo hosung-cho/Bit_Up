@@ -1,0 +1,61 @@
+# Custom synthesis script for area-first optimization
+read_liberty -lib -ignore_miss_dir -setattr blackbox /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
+read_verilog  /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/my_mcu_top.v
+read_verilog  offchip_mem_bridge.v
+read_verilog  serv_rf_ram_if.v
+read_verilog  serv_top.v
+read_verilog  serv_csr.v
+read_verilog  serv_mem_if.v
+read_verilog  serv_rf_if.v
+read_verilog  serv_alu.v
+read_verilog  serv_ctrl.v
+read_verilog  serv_bufreg2.v
+read_verilog  serv_bufreg.v
+read_verilog  serv_immdec.v
+read_verilog  serv_decode.v
+read_verilog  serv_state.v
+
+# Physical profile parameters
+chparam -set USE_EXT_SYS_CLK 1 my_mcu_top
+chparam -set RV32E_MODE 1 my_mcu_top
+chparam -set MEM_ADDR_BITS 6 my_mcu_top
+chparam -set USE_RF_INTERLOCK 0 my_mcu_top
+chparam -set DISABLE_DBUS 0 my_mcu_top
+chparam -set WORD_MEM_ONLY 1 my_mcu_top
+chparam -set SERV_PRE_REGISTER 1 my_mcu_top
+chparam -set SINGLE_RF_READ 0 my_mcu_top
+chparam -set STREAM_RS2_READ 1 my_mcu_top
+chparam -set SHARED_SERIAL 1 my_mcu_top
+chparam -set UNIFIED_SERIAL 1 my_mcu_top
+chparam -set RESET_STRATEGY "STATE_ONLY" my_mcu_top
+
+# High-level synthesis (preventing default abc inside synth)
+synth -top my_mcu_top -noabc
+
+# Flatten the hierarchy BEFORE register mapping and combinatorial mapping
+flatten
+share -force
+opt -purge
+
+# Physical profile uses UNIFIED_SERIAL=1, so RF serial pins are not bonded out.
+# Delete before technology mapping so dead RF output logic can be optimized away.
+delete w:o_rf_mosi w:o_rf_sck w:o_rf_sync w:i_rf_miso
+opt -purge
+
+# Map register flops
+dfflibmap -liberty /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
+opt -purge
+
+# Custom ABC script for area optimization on the FLATTENED design
+abc -exe /usr/local/share/qflow/bin/yosys-abc -liberty /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib -script +strash;ifraig;scorr;dc2;dch;strash;map,-a
+setundef -zero
+
+clean -purge
+# Output buffering
+iopadmap -outpad BUFX2 A:Y -bits
+# Cleanup
+opt
+clean
+rename -enumerate
+write_verilog  my_mcu_top_mapped.v
+stat
