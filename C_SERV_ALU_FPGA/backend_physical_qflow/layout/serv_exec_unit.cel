@@ -16349,20 +16349,39 @@ pad 25 name twpin_debug_state[0]
 corners 4 -150 -300 -150 300 150 300 150 -300
 pin name debug_state[0] signal debug_state[0] layer 1 0 0
 
-padgroup Control permute
+padgroup Control_T permute
 twpin_clk nonfixed
 twpin_rst_n nonfixed
+twpin_cmd_op[3] nonfixed
+twpin_cmd_op[2] nonfixed
+twpin_cmd_op[1] nonfixed
+twpin_cmd_op[0] nonfixed
 restrict side T
 
-padgroup Command permute
+padgroup Command_L permute
 twpin_cmd_valid nonfixed
 twpin_cmd_ready nonfixed
+twpin_cmd_a nonfixed
+twpin_cmd_b nonfixed
 twpin_cmd_last nonfixed
 restrict side L
 
-padgroup Response permute
+padgroup Response_R permute
 twpin_rsp_valid nonfixed
 twpin_rsp_ready nonfixed
 twpin_rsp_last nonfixed
+twpin_rsp_result nonfixed
 twpin_busy nonfixed
+twpin_rsp_flags[1] nonfixed
+twpin_rsp_flags[0] nonfixed
 restrict side R
+
+padgroup Debug_B permute
+twpin_rsp_flags[5] nonfixed
+twpin_rsp_flags[4] nonfixed
+twpin_rsp_flags[3] nonfixed
+twpin_rsp_flags[2] nonfixed
+twpin_debug_state[2] nonfixed
+twpin_debug_state[1] nonfixed
+twpin_debug_state[0] nonfixed
+restrict side B
