@@ -80,6 +80,7 @@ module tb_qnn_top_system;
         end
 
         $display("[TB INFO] Parallel input and sequential output verified successfully.");
+        #10;
         $finish;
     end
 
