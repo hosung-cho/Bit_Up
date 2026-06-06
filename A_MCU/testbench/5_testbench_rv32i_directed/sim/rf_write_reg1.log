@@ -1,0 +1,400 @@
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=            86969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=00 TIME=            90969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=11 TIME=            94969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=01 TIME=            98969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=10 TIME=           102969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=11 TIME=           106969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=11 TIME=           110969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=11 TIME=           114969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=11 TIME=           118969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=11 TIME=           122969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=11 TIME=           126969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=11 TIME=           130969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=11 TIME=           134969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=11 TIME=           138969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=11 TIME=           142969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=11 TIME=           146969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=         38824969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=10 TIME=         38828969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=         38832969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=         38836969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=         38840969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=         38844969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=         38848969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=         38852969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=         38856969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=         38860969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=         38864969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=         38868969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=         38872969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=         38876969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=         38880969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=         38884969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=         40630969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=10 TIME=         40634969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=         40638969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=         40642969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=         40646969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=         40650969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=         40654969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=         40658969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=         40662969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=         40666969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=         40670969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=         40674969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=         40678969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=         40682969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=         40686969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=         40690969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=         42294969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=10 TIME=         42298969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=         42302969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=         42306969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=         42310969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=         42314969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=         42318969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=         42322969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=         42326969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=         42330969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=         42334969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=         42338969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=         42342969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=         42346969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=         42350969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=         42354969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=         43958969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=00 TIME=         43962969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=01 TIME=         43966969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=10 TIME=         43970969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=01 TIME=         43974969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=         43978969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=         43982969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=         43986969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=         43990969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=         43994969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=         43998969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=         44002969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=         44006969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=         44010969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=         44014969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=         44018969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=11 TIME=         45622969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=00 TIME=         45626969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=         45630969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=00 TIME=         45634969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=         45638969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=         45642969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=         45646969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=         45650969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=         45654969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=         45658969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=         45662969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=         45666969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=         45670969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=         45674969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=         45678969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=         45682969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=11 TIME=         47286969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=11 TIME=         47290969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=11 TIME=         47294969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=         47298969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=11 TIME=         47302969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=11 TIME=         47306969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=11 TIME=         47310969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=11 TIME=         47314969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=11 TIME=         47318969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=11 TIME=         47322969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=11 TIME=         47326969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=11 TIME=         47330969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=11 TIME=         47334969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=11 TIME=         47338969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=11 TIME=         47342969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=11 TIME=         47346969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=         74500969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=10 TIME=         74504969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=         74508969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=         74512969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=         74516969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=         74520969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=         74524969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=         74528969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=         74532969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=         74536969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=         74540969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=         74544969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=         74548969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=         74552969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=         74556969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=         74560969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=         76306969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=10 TIME=         76310969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=         76314969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=         76318969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=         76322969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=         76326969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=         76330969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=         76334969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=         76338969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=         76342969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=         76346969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=         76350969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=         76354969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=         76358969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=         76362969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=         76366969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=         77970969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=10 TIME=         77974969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=         77978969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=         77982969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=         77986969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=         77990969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=         77994969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=         77998969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=         78002969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=         78006969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=         78010969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=         78014969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=         78018969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=         78022969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=         78026969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=         78030969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=         79634969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=00 TIME=         79638969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=01 TIME=         79642969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=10 TIME=         79646969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=01 TIME=         79650969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=         79654969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=         79658969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=         79662969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=         79666969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=         79670969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=         79674969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=         79678969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=         79682969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=         79686969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=         79690969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=         79694969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=11 TIME=         81298969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=00 TIME=         81302969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=         81306969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=00 TIME=         81310969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=         81314969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=         81318969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=         81322969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=         81326969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=         81330969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=         81334969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=         81338969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=         81342969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=         81346969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=         81350969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=         81354969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=         81358969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=11 TIME=         82962969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=11 TIME=         82966969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=11 TIME=         82970969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=         82974969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=11 TIME=         82978969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=11 TIME=         82982969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=11 TIME=         82986969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=11 TIME=         82990969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=11 TIME=         82994969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=11 TIME=         82998969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=11 TIME=         83002969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=11 TIME=         83006969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=11 TIME=         83010969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=11 TIME=         83014969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=11 TIME=         83018969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=11 TIME=         83022969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=        110176969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=10 TIME=        110180969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=        110184969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=        110188969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=        110192969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=        110196969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=        110200969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=        110204969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=        110208969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=        110212969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=        110216969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=        110220969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=        110224969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=        110228969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=        110232969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=        110236969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=        111982969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=10 TIME=        111986969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=        111990969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=        111994969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=        111998969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=        112002969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=        112006969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=        112010969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=        112014969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=        112018969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=        112022969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=        112026969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=        112030969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=        112034969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=        112038969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=        112042969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=        113646969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=10 TIME=        113650969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=        113654969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=        113658969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=        113662969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=        113666969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=        113670969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=        113674969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=        113678969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=        113682969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=        113686969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=        113690969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=        113694969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=        113698969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=        113702969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=        113706969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=        115310969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=00 TIME=        115314969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=01 TIME=        115318969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=10 TIME=        115322969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=01 TIME=        115326969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=        115330969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=        115334969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=        115338969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=        115342969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=        115346969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=        115350969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=        115354969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=        115358969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=        115362969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=        115366969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=        115370969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=11 TIME=        116974969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=00 TIME=        116978969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=        116982969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=00 TIME=        116986969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=        116990969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=        116994969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=        116998969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=        117002969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=        117006969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=        117010969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=        117014969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=        117018969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=        117022969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=        117026969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=        117030969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=        117034969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=11 TIME=        118638969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=11 TIME=        118642969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=11 TIME=        118646969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=        118650969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=11 TIME=        118654969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=11 TIME=        118658969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=11 TIME=        118662969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=11 TIME=        118666969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=11 TIME=        118670969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=11 TIME=        118674969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=11 TIME=        118678969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=11 TIME=        118682969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=11 TIME=        118686969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=11 TIME=        118690969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=11 TIME=        118694969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=11 TIME=        118698969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=        145852969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=10 TIME=        145856969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=        145860969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=        145864969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=        145868969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=        145872969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=        145876969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=        145880969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=        145884969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=        145888969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=        145892969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=        145896969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=        145900969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=        145904969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=        145908969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=        145912969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=        147658969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=10 TIME=        147662969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=        147666969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=        147670969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=        147674969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=        147678969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=        147682969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=        147686969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=        147690969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=        147694969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=        147698969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=        147702969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=        147706969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=        147710969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=        147714969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=        147718969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=        149322969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=10 TIME=        149326969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=        149330969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=        149334969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=        149338969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=        149342969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=        149346969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=        149350969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=        149354969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=        149358969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=        149362969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=        149366969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=        149370969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=        149374969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=        149378969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=        149382969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=00 TIME=        150986969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=00 TIME=        150990969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=01 TIME=        150994969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=10 TIME=        150998969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=01 TIME=        151002969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=        151006969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=        151010969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=        151014969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=        151018969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=        151022969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=        151026969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=        151030969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=        151034969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=        151038969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=        151042969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=        151046969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=11 TIME=        152650969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=00 TIME=        152654969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=00 TIME=        152658969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=00 TIME=        152662969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=00 TIME=        152666969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=00 TIME=        152670969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=00 TIME=        152674969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=00 TIME=        152678969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=00 TIME=        152682969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=00 TIME=        152686969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=00 TIME=        152690969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=00 TIME=        152694969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=00 TIME=        152698969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=00 TIME=        152702969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=00 TIME=        152706969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=00 TIME=        152710969000
+DEBUG_RF_WRITE: addr=010 reg= 1 chunk= 0 data=11 TIME=        154314969000
+DEBUG_RF_WRITE: addr=011 reg= 1 chunk= 1 data=11 TIME=        154318969000
+DEBUG_RF_WRITE: addr=012 reg= 1 chunk= 2 data=11 TIME=        154322969000
+DEBUG_RF_WRITE: addr=013 reg= 1 chunk= 3 data=11 TIME=        154326969000
+DEBUG_RF_WRITE: addr=014 reg= 1 chunk= 4 data=11 TIME=        154330969000
+DEBUG_RF_WRITE: addr=015 reg= 1 chunk= 5 data=11 TIME=        154334969000
+DEBUG_RF_WRITE: addr=016 reg= 1 chunk= 6 data=11 TIME=        154338969000
+DEBUG_RF_WRITE: addr=017 reg= 1 chunk= 7 data=11 TIME=        154342969000
+DEBUG_RF_WRITE: addr=018 reg= 1 chunk= 8 data=11 TIME=        154346969000
+DEBUG_RF_WRITE: addr=019 reg= 1 chunk= 9 data=11 TIME=        154350969000
+DEBUG_RF_WRITE: addr=01a reg= 1 chunk=10 data=11 TIME=        154354969000
+DEBUG_RF_WRITE: addr=01b reg= 1 chunk=11 data=11 TIME=        154358969000
+DEBUG_RF_WRITE: addr=01c reg= 1 chunk=12 data=11 TIME=        154362969000
+DEBUG_RF_WRITE: addr=01d reg= 1 chunk=13 data=11 TIME=        154366969000
+DEBUG_RF_WRITE: addr=01e reg= 1 chunk=14 data=11 TIME=        154370969000
+DEBUG_RF_WRITE: addr=01f reg= 1 chunk=15 data=11 TIME=        154374969000

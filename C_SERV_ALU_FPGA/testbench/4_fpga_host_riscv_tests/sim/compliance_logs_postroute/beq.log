@@ -1,0 +1,145 @@
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Jun  6 00:47:05 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_postroute.tcl -notrace
+[Tcl] 1. postroute simulation project...
+[Tcl] 2. adding stdcells, postroute netlist, FPGA RTL, and testbench...
+[Tcl] 3. top module...
+[Tcl] 4. simulation settings...
+[Tcl] 5. run...
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fpga_host_riscv_tests'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/sim_workspace_postroute/sim_project_postroute.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/hosung/tools/xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fpga_host_riscv_tests' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/sim_workspace_postroute/sim_project_postroute.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_fpga_host_riscv_tests_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/digital_ETRI/khu_etri05_stdcells.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AND2X1
+INFO: [VRFC 10-311] analyzing module AND2X2
+INFO: [VRFC 10-311] analyzing module AOI21X1
+INFO: [VRFC 10-311] analyzing module AOI22X1
+INFO: [VRFC 10-311] analyzing module BUFX2
+INFO: [VRFC 10-311] analyzing module BUFX4
+INFO: [VRFC 10-311] analyzing module CLKBUF1
+INFO: [VRFC 10-311] analyzing module CLKBUF2
+INFO: [VRFC 10-311] analyzing module CLKBUF3
+INFO: [VRFC 10-311] analyzing module DFFNEGX1
+INFO: [VRFC 10-311] analyzing module DFFPOSX1
+INFO: [VRFC 10-311] analyzing module DFFSR
+INFO: [VRFC 10-311] analyzing module FAX1
+INFO: [VRFC 10-311] analyzing module FILL
+INFO: [VRFC 10-311] analyzing module HAX1
+INFO: [VRFC 10-311] analyzing module INVX1
+INFO: [VRFC 10-311] analyzing module INVX2
+INFO: [VRFC 10-311] analyzing module INVX4
+INFO: [VRFC 10-311] analyzing module INVX8
+INFO: [VRFC 10-311] analyzing module LATCH
+INFO: [VRFC 10-311] analyzing module MUX2X1
+INFO: [VRFC 10-311] analyzing module NAND2X1
+INFO: [VRFC 10-311] analyzing module NAND3X1
+INFO: [VRFC 10-311] analyzing module NOR2X1
+INFO: [VRFC 10-311] analyzing module NOR3X1
+INFO: [VRFC 10-311] analyzing module OAI21X1
+INFO: [VRFC 10-311] analyzing module OAI22X1
+INFO: [VRFC 10-311] analyzing module OR2X1
+INFO: [VRFC 10-311] analyzing module OR2X2
+INFO: [VRFC 10-311] analyzing module PADINC
+INFO: [VRFC 10-311] analyzing module PADINOUT
+INFO: [VRFC 10-311] analyzing module PADOUT
+INFO: [VRFC 10-311] analyzing module TBUFX1
+INFO: [VRFC 10-311] analyzing module TBUFX2
+INFO: [VRFC 10-311] analyzing module XNOR2X1
+INFO: [VRFC 10-311] analyzing module XOR2X1
+INFO: [VRFC 10-311] analyzing module PADNC
+INFO: [VRFC 10-311] analyzing module PADFC
+INFO: [VRFC 10-311] analyzing module PADGND
+INFO: [VRFC 10-311] analyzing module PADVDD
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_exec_fpga_bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_exec_fpga_bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_exec_unit
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'cmd_a' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:74]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'cmd_b' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:75]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'rsp_last' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:83]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'rst_n' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:90]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'clk' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:201]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'busy' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:308]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'rsp_result' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:411]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'debug_state' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:440]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'cmd_ready' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:528]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'cmd_valid' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:531]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'rsp_ready' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:673]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'rsp_valid' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:677]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'cmd_op' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:694]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'rsp_flags' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:757]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'cmd_last' is not allowed [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/synthesis/serv_exec_unit_postroute.v:900]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_fpga_host.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_fpga_host
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/tb_fpga_host_riscv_tests.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fpga_host_riscv_tests
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/sim_workspace_postroute/sim_project_postroute.sim/sim_1/behav/xsim'
+xelab --incr --debug off --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fpga_host_riscv_tests_behav xil_defaultlib.tb_fpga_host_riscv_tests -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/hosung/tools/xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug off --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fpga_host_riscv_tests_behav xil_defaultlib.tb_fpga_host_riscv_tests -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.serv_exec_fpga_bridge
+Compiling module xil_defaultlib.serv_fpga_host(IMEM_WORDS=512,DM...
+Compiling module xil_defaultlib.FILL
+Compiling module xil_defaultlib.AOI22X1
+Compiling module xil_defaultlib.NAND3X1
+Compiling module xil_defaultlib.AOI21X1
+Compiling module xil_defaultlib.udp_dff_reduced_0
+Compiling module xil_defaultlib.DFFPOSX1
+Compiling module xil_defaultlib.INVX1
+Compiling module xil_defaultlib.OAI21X1
+Compiling module xil_defaultlib.BUFX2
+Compiling module xil_defaultlib.NOR2X1
+Compiling module xil_defaultlib.NOR3X1
+Compiling module xil_defaultlib.AND2X2
+Compiling module xil_defaultlib.INVX2
+Compiling module xil_defaultlib.NAND2X1
+Compiling module xil_defaultlib.INVX8
+Compiling module xil_defaultlib.OAI22X1
+Compiling module xil_defaultlib.OR2X2
+Compiling module xil_defaultlib.CLKBUF1
+Compiling module xil_defaultlib.serv_exec_unit
+Compiling module xil_defaultlib.tb_fpga_host_riscv_tests
+Built simulation snapshot tb_fpga_host_riscv_tests_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/sim_workspace_postroute/sim_project_postroute.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fpga_host_riscv_tests_behav -key {Behavioral:sim_1:Functional:tb_fpga_host_riscv_tests} -tclbatch {/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/generated/run_only_postroute.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/generated/run_only_postroute.tcl
+[TB PASS] riscv-tests case passed cycles=28809 pc=00000018
+$finish called at time : 288125 ns : File "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/tb_fpga_host_riscv_tests.v" Line 153
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fpga_host_riscv_tests_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for all
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1425.070 ; gain = 45.496 ; free physical = 9511 ; free virtual = 15636
+[Tcl] postroute simulation complete.
+INFO: [Common 17-206] Exiting Vivado at Sat Jun  6 00:47:18 2026...

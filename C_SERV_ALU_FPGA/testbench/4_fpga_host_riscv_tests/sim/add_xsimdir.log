@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# xsim v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri May 29 00:55:59 2026
+# Process ID         : 75
+# Current directory  : /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim
+# Command line       : xsim -log add_xsimdir.log -mode tcl -source {sim_workspace/sim_project.sim/sim_1/behav/xsim/xsim.dir/tb_fpga_host_riscv_tests_behav/xsim_script.tcl}
+# Log file           : /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/add_xsimdir.log
+# Journal file       : /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/xsim.jou
+# Running On         : Ho-SER7
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : AMD Ryzen 7 7840HS w/ Radeon 780M Graphics
+# CPU Frequency      : 3792.873 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16353 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20648 MB
+# Available Virtual  : 11860 MB
+#-----------------------------------------------------------
+source sim_workspace/sim_project.sim/sim_1/behav/xsim/xsim.dir/tb_fpga_host_riscv_tests_behav/xsim_script.tcl
+# xsim {tb_fpga_host_riscv_tests_behav} -autoloadwcfg -xsimdir sim_workspace/sim_project.sim/sim_1/behav/xsim/xsim.dir -runall -onfinish quit
+ERROR: unexpected exception when evaluating tcl command
+    while executing
+"xsim {tb_fpga_host_riscv_tests_behav} -autoloadwcfg -xsimdir sim_workspace/sim_project.sim/sim_1/behav/xsim/xsim.dir -runall -onfinish quit"
+    (file "sim_workspace/sim_project.sim/sim_1/behav/xsim/xsim.dir/tb_fpga_host_riscv_tests_behav/xsim_script.tcl" line 1)
+INFO: [Common 17-206] Exiting xsim at Fri May 29 00:56:01 2026...

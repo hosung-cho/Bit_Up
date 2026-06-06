@@ -1,0 +1,2356 @@
+Vivado Tcl Batch mode simulation starts...
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Tue May 19 20:24:53 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_sim.tcl -notrace
+[Tcl] 1. 임시 시뮬레이션 프로젝트 생성 중...
+[Tcl] 2. 소스 파일 및 테스트벤치 추가 중...
+[Tcl] 3. Top 모듈 지정...
+[Tcl] 4. 시뮬레이션 설정...
+[Tcl] 5. 컴파일 및 시뮬레이션 실행!
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_rv32i_directed'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/testbench/5_testbench_rv32i_directed/sim/sim_workspace/sim_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/hosung/tools/xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_rv32i_directed' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/testbench/5_testbench_rv32i_directed/sim/sim_workspace/sim_project.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_rv32i_directed_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/my_mcu_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_mcu_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/offchip_mem_bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module offchip_mem_bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_aligner.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_aligner
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_bufreg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_bufreg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_bufreg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_bufreg2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_compdec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_compdec
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_csr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_csr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_debug.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_debug
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_immdec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_immdec
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_mem_if.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_mem_if
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_rf_if.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_rf_if
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_rf_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_rf_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_rf_ram_if.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_rf_ram_if
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_state.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_state
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_top
+WARNING: [VRFC 10-3380] identifier 'alu_rd_sel' is used before its declaration [/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_top.v:144]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/testbench/5_testbench_rv32i_directed/tb_rv32i_directed.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rv32i_directed
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/testbench/5_testbench_rv32i_directed/sim/sim_workspace/sim_project.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_rv32i_directed_behav xil_defaultlib.tb_rv32i_directed -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/hosung/tools/xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_rv32i_directed_behav xil_defaultlib.tb_rv32i_directed -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/my_mcu_top.v" Line 4. Module my_mcu_top_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_top.v" Line 9. Module serv_top(WITH_CSR=0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_state.v" Line 7. Module serv_state(WITH_CSR=1'b0,ALIGN=1'b0,MDU=1'b0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_decode.v" Line 8. Module serv_decode(PRE_REGISTER=1'b1,MDU=1'b0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_immdec.v" Line 8. Module serv_immdec_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_bufreg.v" Line 7. Module serv_bufreg(MDU=1'b0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_bufreg2.v" Line 7. Module serv_bufreg2_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_ctrl.v" Line 8. Module serv_ctrl(WITH_CSR=0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_alu.v" Line 8. Module serv_alu_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_rf_if.v" Line 8. Module serv_rf_if(WITH_CSR=0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_mem_if.v" Line 8. Module serv_mem_if(WITH_CSR=1'b0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_rf_ram_if.v" Line 9. Module serv_rf_ram_if(csr_regs=0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_rf_ram.v" Line 1. Module serv_rf_ram(csr_regs=0,depth=512) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/offchip_mem_bridge.v" Line 17. Module offchip_mem_bridge doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/my_mcu_top.v" Line 4. Module my_mcu_top_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_top.v" Line 9. Module serv_top(WITH_CSR=0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_state.v" Line 7. Module serv_state(WITH_CSR=1'b0,ALIGN=1'b0,MDU=1'b0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_decode.v" Line 8. Module serv_decode(PRE_REGISTER=1'b1,MDU=1'b0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_immdec.v" Line 8. Module serv_immdec_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_bufreg.v" Line 7. Module serv_bufreg(MDU=1'b0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_bufreg2.v" Line 7. Module serv_bufreg2_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_ctrl.v" Line 8. Module serv_ctrl(WITH_CSR=0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_alu.v" Line 8. Module serv_alu_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_rf_if.v" Line 8. Module serv_rf_if(WITH_CSR=0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_mem_if.v" Line 8. Module serv_mem_if(WITH_CSR=1'b0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_rf_ram_if.v" Line 9. Module serv_rf_ram_if(csr_regs=0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/serv/serv_rf_ram.v" Line 1. Module serv_rf_ram(csr_regs=0,depth=512) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/src/rtl/offchip_mem_bridge.v" Line 17. Module offchip_mem_bridge doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.serv_state(WITH_CSR=1'b0,ALIGN=1...
+Compiling module xil_defaultlib.serv_decode(PRE_REGISTER=1'b1,MD...
+Compiling module xil_defaultlib.serv_immdec_default
+Compiling module xil_defaultlib.serv_bufreg(MDU=1'b0)
+Compiling module xil_defaultlib.serv_bufreg2_default
+Compiling module xil_defaultlib.serv_ctrl(WITH_CSR=0)
+Compiling module xil_defaultlib.serv_alu_default
+Compiling module xil_defaultlib.serv_rf_if(WITH_CSR=0)
+Compiling module xil_defaultlib.serv_mem_if(WITH_CSR=1'b0)
+Compiling module xil_defaultlib.serv_top(WITH_CSR=0)
+Compiling module xil_defaultlib.serv_rf_ram_if(csr_regs=0)
+Compiling module xil_defaultlib.serv_rf_ram(csr_regs=0,depth=512...
+Compiling module xil_defaultlib.offchip_mem_bridge
+Compiling module xil_defaultlib.my_mcu_top_default
+Compiling module xil_defaultlib.tb_rv32i_directed
+Built simulation snapshot tb_rv32i_directed_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/testbench/5_testbench_rv32i_directed/sim/sim_workspace/sim_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_rv32i_directed_behav -key {Behavioral:sim_1:Functional:tb_rv32i_directed} -tclbatch {tb_rv32i_directed.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_rv32i_directed.tcl
+------------------------------------------------------------
+RV32I directed regression case list
+  R-type      : ADD SUB SLL SLT SLTU XOR OR AND SRL SRA
+  I-type      : ADDI SLTI SLTIU XORI ORI ANDI
+  Shift imm   : SLLI SRLI SRAI
+  Load        : LW LH LB LHU LBU
+  Store       : SW SH SB
+  U-type      : LUI AUIPC
+  Branch      : BEQ BNE BLT BGE BLTU BGEU
+  Jump        : JAL JALR
+------------------------------------------------------------
+TB_PC: 00000000 TIME:             12969000
+TB_RF_WRITE: reg= 1 chunk= 0 data=00
+TB_RF_WRITE: reg= 1 chunk= 1 data=11
+TB_RF_WRITE: reg= 1 chunk= 2 data=01
+TB_RF_WRITE: reg= 1 chunk= 3 data=10
+TB_RF_WRITE: reg= 1 chunk= 4 data=11
+TB_RF_WRITE: reg= 1 chunk= 5 data=11
+TB_RF_WRITE: reg= 1 chunk= 6 data=11
+TB_RF_WRITE: reg= 1 chunk= 7 data=11
+TB_RF_WRITE: reg= 1 chunk= 8 data=11
+TB_RF_WRITE: reg= 1 chunk= 9 data=11
+TB_RF_WRITE: reg= 1 chunk=10 data=11
+TB_RF_WRITE: reg= 1 chunk=11 data=11
+TB_RF_WRITE: reg= 1 chunk=12 data=11
+TB_RF_WRITE: reg= 1 chunk=13 data=11
+TB_RF_WRITE: reg= 1 chunk=14 data=11
+TB_RF_WRITE: reg= 1 chunk=15 data=11
+TB_PC: 00000004 TIME:            154969000
+TB_RF_WRITE: reg= 2 chunk= 0 data=00
+TB_RF_WRITE: reg= 2 chunk= 1 data=10
+TB_RF_WRITE: reg= 2 chunk= 2 data=00
+TB_RF_WRITE: reg= 2 chunk= 3 data=11
+TB_RF_WRITE: reg= 2 chunk= 4 data=00
+TB_RF_WRITE: reg= 2 chunk= 5 data=00
+TB_RF_WRITE: reg= 2 chunk= 6 data=00
+TB_RF_WRITE: reg= 2 chunk= 7 data=00
+TB_RF_WRITE: reg= 2 chunk= 8 data=00
+TB_RF_WRITE: reg= 2 chunk= 9 data=00
+TB_RF_WRITE: reg= 2 chunk=10 data=00
+TB_RF_WRITE: reg= 2 chunk=11 data=00
+TB_RF_WRITE: reg= 2 chunk=12 data=00
+TB_RF_WRITE: reg= 2 chunk=13 data=00
+TB_RF_WRITE: reg= 2 chunk=14 data=00
+TB_RF_WRITE: reg= 2 chunk=15 data=00
+TB_PC: 00000008 TIME:            296969000
+TB_RF_WRITE: reg= 3 chunk= 0 data=00
+TB_RF_WRITE: reg= 3 chunk= 1 data=01
+TB_RF_WRITE: reg= 3 chunk= 2 data=10
+TB_RF_WRITE: reg= 3 chunk= 3 data=01
+TB_RF_WRITE: reg= 3 chunk= 4 data=00
+TB_RF_WRITE: reg= 3 chunk= 5 data=00
+TB_RF_WRITE: reg= 3 chunk= 6 data=00
+TB_RF_WRITE: reg= 3 chunk= 7 data=00
+TB_RF_WRITE: reg= 3 chunk= 8 data=00
+TB_RF_WRITE: reg= 3 chunk= 9 data=00
+TB_RF_WRITE: reg= 3 chunk=10 data=00
+TB_RF_WRITE: reg= 3 chunk=11 data=00
+TB_RF_WRITE: reg= 3 chunk=12 data=00
+TB_RF_WRITE: reg= 3 chunk=13 data=00
+TB_RF_WRITE: reg= 3 chunk=14 data=00
+TB_RF_WRITE: reg= 3 chunk=15 data=00
+TB_PC: 0000000c TIME:            438969000
+TB_PC: 00000010 TIME:            580969000
+TB_PC: 00000014 TIME:            722969000
+TB_PC: 00000018 TIME:            864969000
+TB_PC: 0000001c TIME:           1006969000
+TB_DBUS_WE: addr=00000700 data=00000064 sel=1111 TIME:           1142969000
+TB_DBUS_WE: addr=00000700 data=00000064 sel=1111 TIME:           1144969000
+TB_DBUS_WE: addr=00000700 data=00000064 sel=1111 TIME:           1146969000
+TB_MEM_WRITE: addr=00000700 data=00000064
+TB_DBUS_WE: addr=00000700 data=00000064 sel=1111 TIME:           1148969000
+TB_PC: 00000020 TIME:           1220969000
+TB_RF_WRITE: reg= 4 chunk= 0 data=00
+TB_RF_WRITE: reg= 4 chunk= 1 data=01
+TB_RF_WRITE: reg= 4 chunk= 2 data=01
+TB_RF_WRITE: reg= 4 chunk= 3 data=11
+TB_RF_WRITE: reg= 4 chunk= 4 data=10
+TB_RF_WRITE: reg= 4 chunk= 5 data=11
+TB_RF_WRITE: reg= 4 chunk= 6 data=11
+TB_RF_WRITE: reg= 4 chunk= 7 data=11
+TB_RF_WRITE: reg= 4 chunk= 8 data=11
+TB_RF_WRITE: reg= 4 chunk= 9 data=11
+TB_RF_WRITE: reg= 4 chunk=10 data=11
+TB_RF_WRITE: reg= 4 chunk=11 data=11
+TB_RF_WRITE: reg= 4 chunk=12 data=11
+TB_RF_WRITE: reg= 4 chunk=13 data=11
+TB_RF_WRITE: reg= 4 chunk=14 data=11
+TB_RF_WRITE: reg= 4 chunk=15 data=11
+TB_PC: 00000024 TIME:           1416969000
+TB_PC: 00000028 TIME:           1558969000
+TB_PC: 0000002c TIME:           1700969000
+TB_PC: 00000030 TIME:           1842969000
+TB_PC: 00000034 TIME:           1984969000
+TB_DBUS_WE: addr=00000704 data=fffffed4 sel=1111 TIME:           2120969000
+TB_DBUS_WE: addr=00000704 data=fffffed4 sel=1111 TIME:           2122969000
+TB_DBUS_WE: addr=00000704 data=fffffed4 sel=1111 TIME:           2124969000
+TB_MEM_WRITE: addr=00000704 data=fffffed4
+TB_DBUS_WE: addr=00000704 data=fffffed4 sel=1111 TIME:           2126969000
+TB_PC: 00000038 TIME:           2198969000
+TB_RF_WRITE: reg= 5 chunk= 0 data=00
+TB_RF_WRITE: reg= 5 chunk= 1 data=00
+TB_RF_WRITE: reg= 5 chunk= 2 data=00
+TB_RF_WRITE: reg= 5 chunk= 3 data=00
+TB_RF_WRITE: reg= 5 chunk= 4 data=00
+TB_RF_WRITE: reg= 5 chunk= 5 data=11
+TB_RF_WRITE: reg= 5 chunk= 6 data=01
+TB_RF_WRITE: reg= 5 chunk= 7 data=10
+TB_RF_WRITE: reg= 5 chunk= 8 data=11
+TB_RF_WRITE: reg= 5 chunk= 9 data=11
+TB_RF_WRITE: reg= 5 chunk=10 data=11
+TB_RF_WRITE: reg= 5 chunk=11 data=11
+TB_RF_WRITE: reg= 5 chunk=12 data=11
+TB_RF_WRITE: reg= 5 chunk=13 data=11
+TB_RF_WRITE: reg= 5 chunk=14 data=11
+TB_RF_WRITE: reg= 5 chunk=15 data=11
+TB_PC: 0000003c TIME:           2458969000
+TB_PC: 00000040 TIME:           2654969000
+TB_PC: 00000044 TIME:           2796969000
+TB_PC: 00000048 TIME:           2938969000
+TB_PC: 0000004c TIME:           3080969000
+TB_DBUS_WE: addr=00000708 data=ffff9c00 sel=1111 TIME:           3216969000
+TB_DBUS_WE: addr=00000708 data=ffff9c00 sel=1111 TIME:           3218969000
+TB_DBUS_WE: addr=00000708 data=ffff9c00 sel=1111 TIME:           3220969000
+TB_MEM_WRITE: addr=00000708 data=ffff9c00
+TB_DBUS_WE: addr=00000708 data=ffff9c00 sel=1111 TIME:           3222969000
+TB_PC: 00000050 TIME:           3294969000
+TB_RF_WRITE: reg= 6 chunk= 0 data=01
+TB_RF_WRITE: reg= 6 chunk= 1 data=00
+TB_RF_WRITE: reg= 6 chunk= 2 data=00
+TB_RF_WRITE: reg= 6 chunk= 3 data=00
+TB_RF_WRITE: reg= 6 chunk= 4 data=00
+TB_RF_WRITE: reg= 6 chunk= 5 data=00
+TB_RF_WRITE: reg= 6 chunk= 6 data=00
+TB_RF_WRITE: reg= 6 chunk= 7 data=00
+TB_RF_WRITE: reg= 6 chunk= 8 data=00
+TB_RF_WRITE: reg= 6 chunk= 9 data=00
+TB_RF_WRITE: reg= 6 chunk=10 data=00
+TB_RF_WRITE: reg= 6 chunk=11 data=00
+TB_RF_WRITE: reg= 6 chunk=12 data=00
+TB_RF_WRITE: reg= 6 chunk=13 data=00
+TB_RF_WRITE: reg= 6 chunk=14 data=00
+TB_RF_WRITE: reg= 6 chunk=15 data=00
+TB_PC: 00000054 TIME:           3554969000
+TB_PC: 00000058 TIME:           3750969000
+TB_PC: 0000005c TIME:           3892969000
+TB_PC: 00000060 TIME:           4034969000
+TB_PC: 00000064 TIME:           4176969000
+TB_DBUS_WE: addr=0000070c data=00000001 sel=1111 TIME:           4312969000
+TB_DBUS_WE: addr=0000070c data=00000001 sel=1111 TIME:           4314969000
+TB_DBUS_WE: addr=0000070c data=00000001 sel=1111 TIME:           4316969000
+TB_MEM_WRITE: addr=0000070c data=00000001
+TB_DBUS_WE: addr=0000070c data=00000001 sel=1111 TIME:           4318969000
+TB_PC: 00000068 TIME:           4390969000
+TB_RF_WRITE: reg= 7 chunk= 0 data=00
+TB_RF_WRITE: reg= 7 chunk= 1 data=00
+TB_RF_WRITE: reg= 7 chunk= 2 data=00
+TB_RF_WRITE: reg= 7 chunk= 3 data=00
+TB_RF_WRITE: reg= 7 chunk= 4 data=00
+TB_RF_WRITE: reg= 7 chunk= 5 data=00
+TB_RF_WRITE: reg= 7 chunk= 6 data=00
+TB_RF_WRITE: reg= 7 chunk= 7 data=00
+TB_RF_WRITE: reg= 7 chunk= 8 data=00
+TB_RF_WRITE: reg= 7 chunk= 9 data=00
+TB_RF_WRITE: reg= 7 chunk=10 data=00
+TB_RF_WRITE: reg= 7 chunk=11 data=00
+TB_RF_WRITE: reg= 7 chunk=12 data=00
+TB_RF_WRITE: reg= 7 chunk=13 data=00
+TB_RF_WRITE: reg= 7 chunk=14 data=00
+TB_RF_WRITE: reg= 7 chunk=15 data=00
+TB_PC: 0000006c TIME:           4650969000
+TB_PC: 00000070 TIME:           4846969000
+TB_PC: 00000074 TIME:           4988969000
+TB_PC: 00000078 TIME:           5130969000
+TB_PC: 0000007c TIME:           5272969000
+TB_DBUS_WE: addr=00000710 data=00000000 sel=1111 TIME:           5408969000
+TB_DBUS_WE: addr=00000710 data=00000000 sel=1111 TIME:           5410969000
+TB_DBUS_WE: addr=00000710 data=00000000 sel=1111 TIME:           5412969000
+TB_MEM_WRITE: addr=00000710 data=00000000
+TB_DBUS_WE: addr=00000710 data=00000000 sel=1111 TIME:           5414969000
+TB_PC: 00000080 TIME:           5486969000
+TB_RF_WRITE: reg= 8 chunk= 0 data=00
+TB_RF_WRITE: reg= 8 chunk= 1 data=01
+TB_RF_WRITE: reg= 8 chunk= 2 data=01
+TB_RF_WRITE: reg= 8 chunk= 3 data=01
+TB_RF_WRITE: reg= 8 chunk= 4 data=11
+TB_RF_WRITE: reg= 8 chunk= 5 data=11
+TB_RF_WRITE: reg= 8 chunk= 6 data=11
+TB_RF_WRITE: reg= 8 chunk= 7 data=11
+TB_RF_WRITE: reg= 8 chunk= 8 data=11
+TB_RF_WRITE: reg= 8 chunk= 9 data=11
+TB_RF_WRITE: reg= 8 chunk=10 data=11
+TB_RF_WRITE: reg= 8 chunk=11 data=11
+TB_RF_WRITE: reg= 8 chunk=12 data=11
+TB_RF_WRITE: reg= 8 chunk=13 data=11
+TB_RF_WRITE: reg= 8 chunk=14 data=11
+TB_RF_WRITE: reg= 8 chunk=15 data=11
+TB_PC: 00000084 TIME:           5682969000
+TB_PC: 00000088 TIME:           5824969000
+TB_PC: 0000008c TIME:           5966969000
+TB_PC: 00000090 TIME:           6108969000
+TB_PC: 00000094 TIME:           6250969000
+TB_DBUS_WE: addr=00000714 data=ffffff54 sel=1111 TIME:           6386969000
+TB_DBUS_WE: addr=00000714 data=ffffff54 sel=1111 TIME:           6388969000
+TB_DBUS_WE: addr=00000714 data=ffffff54 sel=1111 TIME:           6390969000
+TB_MEM_WRITE: addr=00000714 data=ffffff54
+TB_DBUS_WE: addr=00000714 data=ffffff54 sel=1111 TIME:           6392969000
+TB_PC: 00000098 TIME:           6464969000
+TB_RF_WRITE: reg= 9 chunk= 0 data=00
+TB_RF_WRITE: reg= 9 chunk= 1 data=11
+TB_RF_WRITE: reg= 9 chunk= 2 data=01
+TB_RF_WRITE: reg= 9 chunk= 3 data=11
+TB_RF_WRITE: reg= 9 chunk= 4 data=11
+TB_RF_WRITE: reg= 9 chunk= 5 data=11
+TB_RF_WRITE: reg= 9 chunk= 6 data=11
+TB_RF_WRITE: reg= 9 chunk= 7 data=11
+TB_RF_WRITE: reg= 9 chunk= 8 data=11
+TB_RF_WRITE: reg= 9 chunk= 9 data=11
+TB_RF_WRITE: reg= 9 chunk=10 data=11
+TB_RF_WRITE: reg= 9 chunk=11 data=11
+TB_RF_WRITE: reg= 9 chunk=12 data=11
+TB_RF_WRITE: reg= 9 chunk=13 data=11
+TB_RF_WRITE: reg= 9 chunk=14 data=11
+TB_RF_WRITE: reg= 9 chunk=15 data=11
+TB_PC: 0000009c TIME:           6660969000
+TB_PC: 000000a0 TIME:           6802969000
+TB_PC: 000000a4 TIME:           6944969000
+TB_PC: 000000a8 TIME:           7086969000
+TB_PC: 000000ac TIME:           7228969000
+TB_DBUS_WE: addr=00000718 data=ffffffdc sel=1111 TIME:           7364969000
+TB_DBUS_WE: addr=00000718 data=ffffffdc sel=1111 TIME:           7366969000
+TB_DBUS_WE: addr=00000718 data=ffffffdc sel=1111 TIME:           7368969000
+TB_MEM_WRITE: addr=00000718 data=ffffffdc
+TB_DBUS_WE: addr=00000718 data=ffffffdc sel=1111 TIME:           7370969000
+TB_PC: 000000b0 TIME:           7442969000
+TB_RF_WRITE: reg=10 chunk= 0 data=00
+TB_RF_WRITE: reg=10 chunk= 1 data=10
+TB_RF_WRITE: reg=10 chunk= 2 data=00
+TB_RF_WRITE: reg=10 chunk= 3 data=10
+TB_RF_WRITE: reg=10 chunk= 4 data=00
+TB_RF_WRITE: reg=10 chunk= 5 data=00
+TB_RF_WRITE: reg=10 chunk= 6 data=00
+TB_RF_WRITE: reg=10 chunk= 7 data=00
+TB_RF_WRITE: reg=10 chunk= 8 data=00
+TB_RF_WRITE: reg=10 chunk= 9 data=00
+TB_RF_WRITE: reg=10 chunk=10 data=00
+TB_RF_WRITE: reg=10 chunk=11 data=00
+TB_RF_WRITE: reg=10 chunk=12 data=00
+TB_RF_WRITE: reg=10 chunk=13 data=00
+TB_RF_WRITE: reg=10 chunk=14 data=00
+TB_RF_WRITE: reg=10 chunk=15 data=00
+TB_PC: 000000b4 TIME:           7638969000
+TB_PC: 000000b8 TIME:           7780969000
+TB_PC: 000000bc TIME:           7922969000
+TB_PC: 000000c0 TIME:           8064969000
+TB_PC: 000000c4 TIME:           8206969000
+TB_DBUS_WE: addr=0000071c data=00000088 sel=1111 TIME:           8342969000
+TB_DBUS_WE: addr=0000071c data=00000088 sel=1111 TIME:           8344969000
+TB_DBUS_WE: addr=0000071c data=00000088 sel=1111 TIME:           8346969000
+TB_MEM_WRITE: addr=0000071c data=00000088
+TB_DBUS_WE: addr=0000071c data=00000088 sel=1111 TIME:           8348969000
+TB_PC: 000000c8 TIME:           8420969000
+TB_RF_WRITE: reg=11 chunk= 0 data=11
+TB_RF_WRITE: reg=11 chunk= 1 data=11
+TB_RF_WRITE: reg=11 chunk= 2 data=11
+TB_RF_WRITE: reg=11 chunk= 3 data=11
+TB_RF_WRITE: reg=11 chunk= 4 data=11
+TB_RF_WRITE: reg=11 chunk= 5 data=11
+TB_RF_WRITE: reg=11 chunk= 6 data=11
+TB_RF_WRITE: reg=11 chunk= 7 data=11
+TB_RF_WRITE: reg=11 chunk= 8 data=11
+TB_RF_WRITE: reg=11 chunk= 9 data=11
+TB_RF_WRITE: reg=11 chunk=10 data=11
+TB_RF_WRITE: reg=11 chunk=11 data=11
+TB_RF_WRITE: reg=11 chunk=12 data=00
+TB_RF_WRITE: reg=11 chunk=13 data=00
+TB_RF_WRITE: reg=11 chunk=14 data=00
+TB_RF_WRITE: reg=11 chunk=15 data=00
+TB_PC: 000000cc TIME:           8696969000
+TB_PC: 000000d0 TIME:           8892969000
+TB_PC: 000000d4 TIME:           9034969000
+TB_PC: 000000d8 TIME:           9176969000
+TB_PC: 000000dc TIME:           9318969000
+TB_DBUS_WE: addr=00000720 data=00ffffff sel=1111 TIME:           9454969000
+TB_DBUS_WE: addr=00000720 data=00ffffff sel=1111 TIME:           9456969000
+TB_DBUS_WE: addr=00000720 data=00ffffff sel=1111 TIME:           9458969000
+TB_MEM_WRITE: addr=00000720 data=00ffffff
+TB_DBUS_WE: addr=00000720 data=00ffffff sel=1111 TIME:           9460969000
+TB_PC: 000000e0 TIME:           9532969000
+TB_RF_WRITE: reg=12 chunk= 0 data=11
+TB_RF_WRITE: reg=12 chunk= 1 data=11
+TB_RF_WRITE: reg=12 chunk= 2 data=11
+TB_RF_WRITE: reg=12 chunk= 3 data=11
+TB_RF_WRITE: reg=12 chunk= 4 data=11
+TB_RF_WRITE: reg=12 chunk= 5 data=11
+TB_RF_WRITE: reg=12 chunk= 6 data=11
+TB_RF_WRITE: reg=12 chunk= 7 data=11
+TB_RF_WRITE: reg=12 chunk= 8 data=11
+TB_RF_WRITE: reg=12 chunk= 9 data=11
+TB_RF_WRITE: reg=12 chunk=10 data=11
+TB_RF_WRITE: reg=12 chunk=11 data=11
+TB_RF_WRITE: reg=12 chunk=12 data=11
+TB_RF_WRITE: reg=12 chunk=13 data=11
+TB_RF_WRITE: reg=12 chunk=14 data=11
+TB_RF_WRITE: reg=12 chunk=15 data=11
+TB_PC: 000000e4 TIME:           9808969000
+TB_PC: 000000e8 TIME:          10004969000
+TB_PC: 000000ec TIME:          10146969000
+TB_PC: 000000f0 TIME:          10288969000
+TB_PC: 000000f4 TIME:          10430969000
+TB_DBUS_WE: addr=00000724 data=ffffffff sel=1111 TIME:          10566969000
+TB_DBUS_WE: addr=00000724 data=ffffffff sel=1111 TIME:          10568969000
+TB_DBUS_WE: addr=00000724 data=ffffffff sel=1111 TIME:          10570969000
+TB_MEM_WRITE: addr=00000724 data=ffffffff
+TB_DBUS_WE: addr=00000724 data=ffffffff sel=1111 TIME:          10572969000
+TB_PC: 000000f8 TIME:          10644969000
+TB_RF_WRITE: reg=13 chunk= 0 data=00
+TB_RF_WRITE: reg=13 chunk= 1 data=00
+TB_RF_WRITE: reg=13 chunk= 2 data=00
+TB_RF_WRITE: reg=13 chunk= 3 data=00
+TB_RF_WRITE: reg=13 chunk= 4 data=00
+TB_RF_WRITE: reg=13 chunk= 5 data=00
+TB_RF_WRITE: reg=13 chunk= 6 data=00
+TB_RF_WRITE: reg=13 chunk= 7 data=00
+TB_RF_WRITE: reg=13 chunk= 8 data=00
+TB_RF_WRITE: reg=13 chunk= 9 data=00
+TB_RF_WRITE: reg=13 chunk=10 data=00
+TB_RF_WRITE: reg=13 chunk=11 data=11
+TB_RF_WRITE: reg=13 chunk=12 data=01
+TB_RF_WRITE: reg=13 chunk=13 data=10
+TB_RF_WRITE: reg=13 chunk=14 data=11
+TB_RF_WRITE: reg=13 chunk=15 data=11
+TB_PC: 000000fc TIME:          10904969000
+TB_PC: 00000100 TIME:          11100969000
+TB_PC: 00000104 TIME:          11242969000
+TB_PC: 00000108 TIME:          11384969000
+TB_PC: 0000010c TIME:          11526969000
+TB_DBUS_WE: addr=00000728 data=f9c00000 sel=1111 TIME:          11662969000
+TB_DBUS_WE: addr=00000728 data=f9c00000 sel=1111 TIME:          11664969000
+TB_DBUS_WE: addr=00000728 data=f9c00000 sel=1111 TIME:          11666969000
+TB_MEM_WRITE: addr=00000728 data=f9c00000
+TB_DBUS_WE: addr=00000728 data=f9c00000 sel=1111 TIME:          11668969000
+TB_PC: 00000110 TIME:          11740969000
+TB_RF_WRITE: reg=14 chunk= 0 data=11
+TB_RF_WRITE: reg=14 chunk= 1 data=11
+TB_RF_WRITE: reg=14 chunk= 2 data=11
+TB_RF_WRITE: reg=14 chunk= 3 data=11
+TB_RF_WRITE: reg=14 chunk= 4 data=11
+TB_RF_WRITE: reg=14 chunk= 5 data=11
+TB_RF_WRITE: reg=14 chunk= 6 data=00
+TB_RF_WRITE: reg=14 chunk= 7 data=00
+TB_RF_WRITE: reg=14 chunk= 8 data=00
+TB_RF_WRITE: reg=14 chunk= 9 data=00
+TB_RF_WRITE: reg=14 chunk=10 data=00
+TB_RF_WRITE: reg=14 chunk=11 data=00
+TB_RF_WRITE: reg=14 chunk=12 data=00
+TB_RF_WRITE: reg=14 chunk=13 data=00
+TB_RF_WRITE: reg=14 chunk=14 data=00
+TB_RF_WRITE: reg=14 chunk=15 data=00
+TB_PC: 00000114 TIME:          12040969000
+TB_PC: 00000118 TIME:          12236969000
+TB_PC: 0000011c TIME:          12378969000
+TB_PC: 00000120 TIME:          12520969000
+TB_PC: 00000124 TIME:          12662969000
+TB_DBUS_WE: addr=0000072c data=00000fff sel=1111 TIME:          12798969000
+TB_DBUS_WE: addr=0000072c data=00000fff sel=1111 TIME:          12800969000
+TB_DBUS_WE: addr=0000072c data=00000fff sel=1111 TIME:          12802969000
+TB_MEM_WRITE: addr=0000072c data=00000fff
+TB_DBUS_WE: addr=0000072c data=00000fff sel=1111 TIME:          12804969000
+TB_PC: 00000128 TIME:          12876969000
+TB_RF_WRITE: reg=15 chunk= 0 data=11
+TB_RF_WRITE: reg=15 chunk= 1 data=11
+TB_RF_WRITE: reg=15 chunk= 2 data=11
+TB_RF_WRITE: reg=15 chunk= 3 data=11
+TB_RF_WRITE: reg=15 chunk= 4 data=11
+TB_RF_WRITE: reg=15 chunk= 5 data=11
+TB_RF_WRITE: reg=15 chunk= 6 data=11
+TB_RF_WRITE: reg=15 chunk= 7 data=11
+TB_RF_WRITE: reg=15 chunk= 8 data=11
+TB_RF_WRITE: reg=15 chunk= 9 data=11
+TB_RF_WRITE: reg=15 chunk=10 data=11
+TB_RF_WRITE: reg=15 chunk=11 data=11
+TB_RF_WRITE: reg=15 chunk=12 data=11
+TB_RF_WRITE: reg=15 chunk=13 data=11
+TB_RF_WRITE: reg=15 chunk=14 data=11
+TB_RF_WRITE: reg=15 chunk=15 data=11
+TB_PC: 0000012c TIME:          13176969000
+TB_PC: 00000130 TIME:          13372969000
+TB_PC: 00000134 TIME:          13514969000
+TB_PC: 00000138 TIME:          13656969000
+TB_PC: 0000013c TIME:          13798969000
+TB_DBUS_WE: addr=00000730 data=ffffffff sel=1111 TIME:          13934969000
+TB_DBUS_WE: addr=00000730 data=ffffffff sel=1111 TIME:          13936969000
+TB_DBUS_WE: addr=00000730 data=ffffffff sel=1111 TIME:          13938969000
+TB_MEM_WRITE: addr=00000730 data=ffffffff
+TB_DBUS_WE: addr=00000730 data=ffffffff sel=1111 TIME:          13940969000
+TB_PC: 00000140 TIME:          14012969000
+TB_RF_WRITE: reg= 3 chunk= 0 data=00
+TB_RF_WRITE: reg= 3 chunk= 1 data=01
+TB_RF_WRITE: reg= 3 chunk= 2 data=01
+TB_RF_WRITE: reg= 3 chunk= 3 data=11
+TB_RF_WRITE: reg= 3 chunk= 4 data=10
+TB_RF_WRITE: reg= 3 chunk= 5 data=11
+TB_RF_WRITE: reg= 3 chunk= 6 data=11
+TB_RF_WRITE: reg= 3 chunk= 7 data=11
+TB_RF_WRITE: reg= 3 chunk= 8 data=11
+TB_RF_WRITE: reg= 3 chunk= 9 data=11
+TB_RF_WRITE: reg= 3 chunk=10 data=11
+TB_RF_WRITE: reg= 3 chunk=11 data=11
+TB_RF_WRITE: reg= 3 chunk=12 data=11
+TB_RF_WRITE: reg= 3 chunk=13 data=11
+TB_RF_WRITE: reg= 3 chunk=14 data=11
+TB_RF_WRITE: reg= 3 chunk=15 data=11
+TB_PC: 00000144 TIME:          14208969000
+TB_PC: 00000148 TIME:          14350969000
+TB_PC: 0000014c TIME:          14492969000
+TB_PC: 00000150 TIME:          14634969000
+TB_PC: 00000154 TIME:          14776969000
+TB_DBUS_WE: addr=00000734 data=fffffed4 sel=1111 TIME:          14912969000
+TB_DBUS_WE: addr=00000734 data=fffffed4 sel=1111 TIME:          14914969000
+TB_DBUS_WE: addr=00000734 data=fffffed4 sel=1111 TIME:          14916969000
+TB_MEM_WRITE: addr=00000734 data=fffffed4
+TB_DBUS_WE: addr=00000734 data=fffffed4 sel=1111 TIME:          14918969000
+TB_PC: 00000158 TIME:          14990969000
+TB_RF_WRITE: reg= 4 chunk= 0 data=00
+TB_RF_WRITE: reg= 4 chunk= 1 data=00
+TB_RF_WRITE: reg= 4 chunk= 2 data=00
+TB_RF_WRITE: reg= 4 chunk= 3 data=00
+TB_RF_WRITE: reg= 4 chunk= 4 data=00
+TB_RF_WRITE: reg= 4 chunk= 5 data=00
+TB_RF_WRITE: reg= 4 chunk= 6 data=00
+TB_RF_WRITE: reg= 4 chunk= 7 data=00
+TB_RF_WRITE: reg= 4 chunk= 8 data=00
+TB_RF_WRITE: reg= 4 chunk= 9 data=00
+TB_RF_WRITE: reg= 4 chunk=10 data=00
+TB_RF_WRITE: reg= 4 chunk=11 data=00
+TB_RF_WRITE: reg= 4 chunk=12 data=00
+TB_RF_WRITE: reg= 4 chunk=13 data=00
+TB_RF_WRITE: reg= 4 chunk=14 data=00
+TB_RF_WRITE: reg= 4 chunk=15 data=00
+TB_PC: 0000015c TIME:          15250969000
+TB_PC: 00000160 TIME:          15446969000
+TB_PC: 00000164 TIME:          15588969000
+TB_PC: 00000168 TIME:          15730969000
+TB_PC: 0000016c TIME:          15872969000
+TB_DBUS_WE: addr=00000738 data=00000000 sel=1111 TIME:          16008969000
+TB_DBUS_WE: addr=00000738 data=00000000 sel=1111 TIME:          16010969000
+TB_DBUS_WE: addr=00000738 data=00000000 sel=1111 TIME:          16012969000
+TB_MEM_WRITE: addr=00000738 data=00000000
+TB_DBUS_WE: addr=00000738 data=00000000 sel=1111 TIME:          16014969000
+TB_PC: 00000170 TIME:          16086969000
+TB_RF_WRITE: reg= 5 chunk= 0 data=00
+TB_RF_WRITE: reg= 5 chunk= 1 data=00
+TB_RF_WRITE: reg= 5 chunk= 2 data=00
+TB_RF_WRITE: reg= 5 chunk= 3 data=00
+TB_RF_WRITE: reg= 5 chunk= 4 data=00
+TB_RF_WRITE: reg= 5 chunk= 5 data=00
+TB_RF_WRITE: reg= 5 chunk= 6 data=00
+TB_RF_WRITE: reg= 5 chunk= 7 data=00
+TB_RF_WRITE: reg= 5 chunk= 8 data=00
+TB_RF_WRITE: reg= 5 chunk= 9 data=00
+TB_RF_WRITE: reg= 5 chunk=10 data=00
+TB_RF_WRITE: reg= 5 chunk=11 data=00
+TB_RF_WRITE: reg= 5 chunk=12 data=00
+TB_RF_WRITE: reg= 5 chunk=13 data=00
+TB_RF_WRITE: reg= 5 chunk=14 data=00
+TB_RF_WRITE: reg= 5 chunk=15 data=00
+TB_PC: 00000174 TIME:          16346969000
+TB_PC: 00000178 TIME:          16542969000
+TB_PC: 0000017c TIME:          16684969000
+TB_PC: 00000180 TIME:          16826969000
+TB_PC: 00000184 TIME:          16968969000
+TB_DBUS_WE: addr=0000073c data=00000000 sel=1111 TIME:          17104969000
+TB_DBUS_WE: addr=0000073c data=00000000 sel=1111 TIME:          17106969000
+TB_DBUS_WE: addr=0000073c data=00000000 sel=1111 TIME:          17108969000
+TB_MEM_WRITE: addr=0000073c data=00000000
+TB_DBUS_WE: addr=0000073c data=00000000 sel=1111 TIME:          17110969000
+TB_PC: 00000188 TIME:          17182969000
+TB_RF_WRITE: reg= 6 chunk= 0 data=00
+TB_RF_WRITE: reg= 6 chunk= 1 data=01
+TB_RF_WRITE: reg= 6 chunk= 2 data=10
+TB_RF_WRITE: reg= 6 chunk= 3 data=10
+TB_RF_WRITE: reg= 6 chunk= 4 data=00
+TB_RF_WRITE: reg= 6 chunk= 5 data=00
+TB_RF_WRITE: reg= 6 chunk= 6 data=00
+TB_RF_WRITE: reg= 6 chunk= 7 data=00
+TB_RF_WRITE: reg= 6 chunk= 8 data=00
+TB_RF_WRITE: reg= 6 chunk= 9 data=00
+TB_RF_WRITE: reg= 6 chunk=10 data=00
+TB_RF_WRITE: reg= 6 chunk=11 data=00
+TB_RF_WRITE: reg= 6 chunk=12 data=00
+TB_RF_WRITE: reg= 6 chunk=13 data=00
+TB_RF_WRITE: reg= 6 chunk=14 data=00
+TB_RF_WRITE: reg= 6 chunk=15 data=00
+TB_PC: 0000018c TIME:          17378969000
+TB_PC: 00000190 TIME:          17520969000
+TB_PC: 00000194 TIME:          17662969000
+TB_PC: 00000198 TIME:          17804969000
+TB_PC: 0000019c TIME:          17946969000
+TB_DBUS_WE: addr=00000740 data=000000a4 sel=1111 TIME:          18082969000
+TB_DBUS_WE: addr=00000740 data=000000a4 sel=1111 TIME:          18084969000
+TB_DBUS_WE: addr=00000740 data=000000a4 sel=1111 TIME:          18086969000
+TB_MEM_WRITE: addr=00000740 data=000000a4
+TB_DBUS_WE: addr=00000740 data=000000a4 sel=1111 TIME:          18088969000
+TB_PC: 000001a0 TIME:          18160969000
+TB_RF_WRITE: reg= 7 chunk= 0 data=00
+TB_RF_WRITE: reg= 7 chunk= 1 data=11
+TB_RF_WRITE: reg= 7 chunk= 2 data=11
+TB_RF_WRITE: reg= 7 chunk= 3 data=10
+TB_RF_WRITE: reg= 7 chunk= 4 data=11
+TB_RF_WRITE: reg= 7 chunk= 5 data=11
+TB_RF_WRITE: reg= 7 chunk= 6 data=11
+TB_RF_WRITE: reg= 7 chunk= 7 data=11
+TB_RF_WRITE: reg= 7 chunk= 8 data=11
+TB_RF_WRITE: reg= 7 chunk= 9 data=11
+TB_RF_WRITE: reg= 7 chunk=10 data=11
+TB_RF_WRITE: reg= 7 chunk=11 data=11
+TB_RF_WRITE: reg= 7 chunk=12 data=11
+TB_RF_WRITE: reg= 7 chunk=13 data=11
+TB_RF_WRITE: reg= 7 chunk=14 data=11
+TB_RF_WRITE: reg= 7 chunk=15 data=11
+TB_PC: 000001a4 TIME:          18356969000
+TB_PC: 000001a8 TIME:          18498969000
+TB_PC: 000001ac TIME:          18640969000
+TB_PC: 000001b0 TIME:          18782969000
+TB_PC: 000001b4 TIME:          18924969000
+TB_DBUS_WE: addr=00000744 data=ffffffbc sel=1111 TIME:          19060969000
+TB_DBUS_WE: addr=00000744 data=ffffffbc sel=1111 TIME:          19062969000
+TB_DBUS_WE: addr=00000744 data=ffffffbc sel=1111 TIME:          19064969000
+TB_MEM_WRITE: addr=00000744 data=ffffffbc
+TB_DBUS_WE: addr=00000744 data=ffffffbc sel=1111 TIME:          19066969000
+TB_PC: 000001b8 TIME:          19138969000
+TB_RF_WRITE: reg= 8 chunk= 0 data=00
+TB_RF_WRITE: reg= 8 chunk= 1 data=10
+TB_RF_WRITE: reg= 8 chunk= 2 data=01
+TB_RF_WRITE: reg= 8 chunk= 3 data=00
+TB_RF_WRITE: reg= 8 chunk= 4 data=11
+TB_RF_WRITE: reg= 8 chunk= 5 data=11
+TB_RF_WRITE: reg= 8 chunk= 6 data=11
+TB_RF_WRITE: reg= 8 chunk= 7 data=11
+TB_RF_WRITE: reg= 8 chunk= 8 data=11
+TB_RF_WRITE: reg= 8 chunk= 9 data=11
+TB_RF_WRITE: reg= 8 chunk=10 data=11
+TB_RF_WRITE: reg= 8 chunk=11 data=11
+TB_RF_WRITE: reg= 8 chunk=12 data=11
+TB_RF_WRITE: reg= 8 chunk=13 data=11
+TB_RF_WRITE: reg= 8 chunk=14 data=11
+TB_RF_WRITE: reg= 8 chunk=15 data=11
+TB_PC: 000001bc TIME:          19334969000
+TB_PC: 000001c0 TIME:          19476969000
+TB_PC: 000001c4 TIME:          19618969000
+TB_PC: 000001c8 TIME:          19760969000
+TB_PC: 000001cc TIME:          19902969000
+TB_DBUS_WE: addr=00000748 data=ffffff18 sel=1111 TIME:          20038969000
+TB_DBUS_WE: addr=00000748 data=ffffff18 sel=1111 TIME:          20040969000
+TB_DBUS_WE: addr=00000748 data=ffffff18 sel=1111 TIME:          20042969000
+TB_MEM_WRITE: addr=00000748 data=ffffff18
+TB_DBUS_WE: addr=00000748 data=ffffff18 sel=1111 TIME:          20044969000
+TB_PC: 000001d0 TIME:          20116969000
+TB_RF_WRITE: reg=20 chunk= 0 data=00
+TB_RF_WRITE: reg=20 chunk= 1 data=00
+TB_RF_WRITE: reg=20 chunk= 2 data=00
+TB_RF_WRITE: reg=20 chunk= 3 data=00
+TB_RF_WRITE: reg=20 chunk= 4 data=10
+TB_RF_WRITE: reg=20 chunk= 5 data=01
+TB_RF_WRITE: reg=20 chunk= 6 data=00
+TB_RF_WRITE: reg=20 chunk= 7 data=00
+TB_RF_WRITE: reg=20 chunk= 8 data=00
+TB_RF_WRITE: reg=20 chunk= 9 data=00
+TB_RF_WRITE: reg=20 chunk=10 data=00
+TB_RF_WRITE: reg=20 chunk=11 data=00
+TB_RF_WRITE: reg=20 chunk=12 data=00
+TB_RF_WRITE: reg=20 chunk=13 data=00
+TB_RF_WRITE: reg=20 chunk=14 data=00
+TB_RF_WRITE: reg=20 chunk=15 data=00
+TB_PC: 000001d4 TIME:          20312969000
+TB_RF_WRITE: reg= 2 chunk= 0 data=11
+TB_RF_WRITE: reg= 2 chunk= 1 data=11
+TB_RF_WRITE: reg= 2 chunk= 2 data=10
+TB_RF_WRITE: reg= 2 chunk= 3 data=11
+TB_RF_WRITE: reg= 2 chunk= 4 data=10
+TB_RF_WRITE: reg= 2 chunk= 5 data=11
+TB_RF_WRITE: reg= 2 chunk= 6 data=11
+TB_RF_WRITE: reg= 2 chunk= 7 data=10
+TB_RF_WRITE: reg= 2 chunk= 8 data=01
+TB_RF_WRITE: reg= 2 chunk= 9 data=11
+TB_RF_WRITE: reg= 2 chunk=10 data=10
+TB_RF_WRITE: reg= 2 chunk=11 data=10
+TB_RF_WRITE: reg= 2 chunk=12 data=10
+TB_RF_WRITE: reg= 2 chunk=13 data=11
+TB_RF_WRITE: reg= 2 chunk=14 data=01
+TB_RF_WRITE: reg= 2 chunk=15 data=11
+TB_PC: 000001d8 TIME:          20526969000
+TB_PC: 000001dc TIME:          20722969000
+TB_PC: 000001e0 TIME:          20864969000
+TB_PC: 000001e4 TIME:          21006969000
+TB_PC: 000001e8 TIME:          21148969000
+TB_DBUS_WE: addr=0000074c data=deadbeef sel=1111 TIME:          21284969000
+TB_DBUS_WE: addr=0000074c data=deadbeef sel=1111 TIME:          21286969000
+TB_DBUS_WE: addr=0000074c data=deadbeef sel=1111 TIME:          21288969000
+TB_MEM_WRITE: addr=0000074c data=deadbeef
+TB_DBUS_WE: addr=0000074c data=deadbeef sel=1111 TIME:          21290969000
+TB_PC: 000001ec TIME:          21362969000
+TB_RF_WRITE: reg= 3 chunk= 0 data=11
+TB_RF_WRITE: reg= 3 chunk= 1 data=11
+TB_RF_WRITE: reg= 3 chunk= 2 data=10
+TB_RF_WRITE: reg= 3 chunk= 3 data=11
+TB_RF_WRITE: reg= 3 chunk= 4 data=10
+TB_RF_WRITE: reg= 3 chunk= 5 data=11
+TB_RF_WRITE: reg= 3 chunk= 6 data=11
+TB_RF_WRITE: reg= 3 chunk= 7 data=10
+TB_RF_WRITE: reg= 3 chunk= 8 data=11
+TB_RF_WRITE: reg= 3 chunk= 9 data=11
+TB_RF_WRITE: reg= 3 chunk=10 data=11
+TB_RF_WRITE: reg= 3 chunk=11 data=11
+TB_RF_WRITE: reg= 3 chunk=12 data=11
+TB_RF_WRITE: reg= 3 chunk=13 data=11
+TB_RF_WRITE: reg= 3 chunk=14 data=11
+TB_RF_WRITE: reg= 3 chunk=15 data=11
+TB_PC: 000001f0 TIME:          21630969000
+TB_PC: 000001f4 TIME:          21826969000
+TB_PC: 000001f8 TIME:          21968969000
+TB_PC: 000001fc TIME:          22110969000
+TB_PC: 00000200 TIME:          22252969000
+TB_DBUS_WE: addr=00000750 data=ffffbeef sel=1111 TIME:          22388969000
+TB_DBUS_WE: addr=00000750 data=ffffbeef sel=1111 TIME:          22390969000
+TB_DBUS_WE: addr=00000750 data=ffffbeef sel=1111 TIME:          22392969000
+TB_MEM_WRITE: addr=00000750 data=ffffbeef
+TB_DBUS_WE: addr=00000750 data=ffffbeef sel=1111 TIME:          22394969000
+TB_PC: 00000204 TIME:          22466969000
+TB_RF_WRITE: reg= 5 chunk= 0 data=01
+TB_RF_WRITE: reg= 5 chunk= 1 data=11
+TB_RF_WRITE: reg= 5 chunk= 2 data=10
+TB_RF_WRITE: reg= 5 chunk= 3 data=10
+TB_RF_WRITE: reg= 5 chunk= 4 data=10
+TB_RF_WRITE: reg= 5 chunk= 5 data=11
+TB_RF_WRITE: reg= 5 chunk= 6 data=01
+TB_RF_WRITE: reg= 5 chunk= 7 data=11
+TB_RF_WRITE: reg= 5 chunk= 8 data=11
+TB_RF_WRITE: reg= 5 chunk= 9 data=11
+TB_RF_WRITE: reg= 5 chunk=10 data=11
+TB_RF_WRITE: reg= 5 chunk=11 data=11
+TB_RF_WRITE: reg= 5 chunk=12 data=11
+TB_RF_WRITE: reg= 5 chunk=13 data=11
+TB_RF_WRITE: reg= 5 chunk=14 data=11
+TB_RF_WRITE: reg= 5 chunk=15 data=11
+TB_PC: 00000208 TIME:          22734969000
+TB_PC: 0000020c TIME:          22930969000
+TB_PC: 00000210 TIME:          23072969000
+TB_PC: 00000214 TIME:          23214969000
+TB_PC: 00000218 TIME:          23356969000
+TB_DBUS_WE: addr=00000754 data=ffffdead sel=1111 TIME:          23492969000
+TB_DBUS_WE: addr=00000754 data=ffffdead sel=1111 TIME:          23494969000
+TB_DBUS_WE: addr=00000754 data=ffffdead sel=1111 TIME:          23496969000
+TB_MEM_WRITE: addr=00000754 data=ffffdead
+TB_DBUS_WE: addr=00000754 data=ffffdead sel=1111 TIME:          23498969000
+TB_PC: 0000021c TIME:          23570969000
+TB_RF_WRITE: reg= 7 chunk= 0 data=11
+TB_RF_WRITE: reg= 7 chunk= 1 data=11
+TB_RF_WRITE: reg= 7 chunk= 2 data=10
+TB_RF_WRITE: reg= 7 chunk= 3 data=11
+TB_RF_WRITE: reg= 7 chunk= 4 data=11
+TB_RF_WRITE: reg= 7 chunk= 5 data=11
+TB_RF_WRITE: reg= 7 chunk= 6 data=11
+TB_RF_WRITE: reg= 7 chunk= 7 data=11
+TB_RF_WRITE: reg= 7 chunk= 8 data=11
+TB_RF_WRITE: reg= 7 chunk= 9 data=11
+TB_RF_WRITE: reg= 7 chunk=10 data=11
+TB_RF_WRITE: reg= 7 chunk=11 data=11
+TB_RF_WRITE: reg= 7 chunk=12 data=11
+TB_RF_WRITE: reg= 7 chunk=13 data=11
+TB_RF_WRITE: reg= 7 chunk=14 data=11
+TB_RF_WRITE: reg= 7 chunk=15 data=11
+TB_PC: 00000220 TIME:          23838969000
+TB_PC: 00000224 TIME:          24034969000
+TB_PC: 00000228 TIME:          24176969000
+TB_PC: 0000022c TIME:          24318969000
+TB_PC: 00000230 TIME:          24460969000
+TB_DBUS_WE: addr=00000758 data=ffffffef sel=1111 TIME:          24596969000
+TB_DBUS_WE: addr=00000758 data=ffffffef sel=1111 TIME:          24598969000
+TB_DBUS_WE: addr=00000758 data=ffffffef sel=1111 TIME:          24600969000
+TB_MEM_WRITE: addr=00000758 data=ffffffef
+TB_DBUS_WE: addr=00000758 data=ffffffef sel=1111 TIME:          24602969000
+TB_PC: 00000234 TIME:          24674969000
+TB_RF_WRITE: reg= 8 chunk= 0 data=10
+TB_RF_WRITE: reg= 8 chunk= 1 data=11
+TB_RF_WRITE: reg= 8 chunk= 2 data=11
+TB_RF_WRITE: reg= 8 chunk= 3 data=10
+TB_RF_WRITE: reg= 8 chunk= 4 data=11
+TB_RF_WRITE: reg= 8 chunk= 5 data=11
+TB_RF_WRITE: reg= 8 chunk= 6 data=11
+TB_RF_WRITE: reg= 8 chunk= 7 data=11
+TB_RF_WRITE: reg= 8 chunk= 8 data=11
+TB_RF_WRITE: reg= 8 chunk= 9 data=11
+TB_RF_WRITE: reg= 8 chunk=10 data=11
+TB_RF_WRITE: reg= 8 chunk=11 data=11
+TB_RF_WRITE: reg= 8 chunk=12 data=11
+TB_RF_WRITE: reg= 8 chunk=13 data=11
+TB_RF_WRITE: reg= 8 chunk=14 data=11
+TB_RF_WRITE: reg= 8 chunk=15 data=11
+TB_PC: 00000238 TIME:          24942969000
+TB_PC: 0000023c TIME:          25138969000
+TB_PC: 00000240 TIME:          25280969000
+TB_PC: 00000244 TIME:          25422969000
+TB_PC: 00000248 TIME:          25564969000
+TB_DBUS_WE: addr=0000075c data=ffffffbe sel=1111 TIME:          25700969000
+TB_DBUS_WE: addr=0000075c data=ffffffbe sel=1111 TIME:          25702969000
+TB_DBUS_WE: addr=0000075c data=ffffffbe sel=1111 TIME:          25704969000
+TB_MEM_WRITE: addr=0000075c data=ffffffbe
+TB_DBUS_WE: addr=0000075c data=ffffffbe sel=1111 TIME:          25706969000
+TB_PC: 0000024c TIME:          25778969000
+TB_RF_WRITE: reg= 9 chunk= 0 data=01
+TB_RF_WRITE: reg= 9 chunk= 1 data=11
+TB_RF_WRITE: reg= 9 chunk= 2 data=10
+TB_RF_WRITE: reg= 9 chunk= 3 data=10
+TB_RF_WRITE: reg= 9 chunk= 4 data=11
+TB_RF_WRITE: reg= 9 chunk= 5 data=11
+TB_RF_WRITE: reg= 9 chunk= 6 data=11
+TB_RF_WRITE: reg= 9 chunk= 7 data=11
+TB_RF_WRITE: reg= 9 chunk= 8 data=11
+TB_RF_WRITE: reg= 9 chunk= 9 data=11
+TB_RF_WRITE: reg= 9 chunk=10 data=11
+TB_RF_WRITE: reg= 9 chunk=11 data=11
+TB_RF_WRITE: reg= 9 chunk=12 data=11
+TB_RF_WRITE: reg= 9 chunk=13 data=11
+TB_RF_WRITE: reg= 9 chunk=14 data=11
+TB_RF_WRITE: reg= 9 chunk=15 data=11
+TB_PC: 00000250 TIME:          26046969000
+TB_PC: 00000254 TIME:          26242969000
+TB_PC: 00000258 TIME:          26384969000
+TB_PC: 0000025c TIME:          26526969000
+TB_PC: 00000260 TIME:          26668969000
+TB_DBUS_WE: addr=00000760 data=ffffffad sel=1111 TIME:          26804969000
+TB_DBUS_WE: addr=00000760 data=ffffffad sel=1111 TIME:          26806969000
+TB_DBUS_WE: addr=00000760 data=ffffffad sel=1111 TIME:          26808969000
+TB_MEM_WRITE: addr=00000760 data=ffffffad
+TB_DBUS_WE: addr=00000760 data=ffffffad sel=1111 TIME:          26810969000
+TB_PC: 00000264 TIME:          26882969000
+TB_RF_WRITE: reg=10 chunk= 0 data=10
+TB_RF_WRITE: reg=10 chunk= 1 data=11
+TB_RF_WRITE: reg=10 chunk= 2 data=01
+TB_RF_WRITE: reg=10 chunk= 3 data=11
+TB_RF_WRITE: reg=10 chunk= 4 data=11
+TB_RF_WRITE: reg=10 chunk= 5 data=11
+TB_RF_WRITE: reg=10 chunk= 6 data=11
+TB_RF_WRITE: reg=10 chunk= 7 data=11
+TB_RF_WRITE: reg=10 chunk= 8 data=11
+TB_RF_WRITE: reg=10 chunk= 9 data=11
+TB_RF_WRITE: reg=10 chunk=10 data=11
+TB_RF_WRITE: reg=10 chunk=11 data=11
+TB_RF_WRITE: reg=10 chunk=12 data=11
+TB_RF_WRITE: reg=10 chunk=13 data=11
+TB_RF_WRITE: reg=10 chunk=14 data=11
+TB_RF_WRITE: reg=10 chunk=15 data=11
+TB_PC: 00000268 TIME:          27150969000
+TB_PC: 0000026c TIME:          27346969000
+TB_PC: 00000270 TIME:          27488969000
+TB_PC: 00000274 TIME:          27630969000
+TB_PC: 00000278 TIME:          27772969000
+TB_DBUS_WE: addr=00000764 data=ffffffde sel=1111 TIME:          27908969000
+TB_DBUS_WE: addr=00000764 data=ffffffde sel=1111 TIME:          27910969000
+TB_DBUS_WE: addr=00000764 data=ffffffde sel=1111 TIME:          27912969000
+TB_MEM_WRITE: addr=00000764 data=ffffffde
+TB_DBUS_WE: addr=00000764 data=ffffffde sel=1111 TIME:          27914969000
+TB_PC: 0000027c TIME:          27986969000
+TB_RF_WRITE: reg=11 chunk= 0 data=11
+TB_RF_WRITE: reg=11 chunk= 1 data=11
+TB_RF_WRITE: reg=11 chunk= 2 data=10
+TB_RF_WRITE: reg=11 chunk= 3 data=11
+TB_RF_WRITE: reg=11 chunk= 4 data=10
+TB_RF_WRITE: reg=11 chunk= 5 data=11
+TB_RF_WRITE: reg=11 chunk= 6 data=11
+TB_RF_WRITE: reg=11 chunk= 7 data=10
+TB_RF_WRITE: reg=11 chunk= 8 data=00
+TB_RF_WRITE: reg=11 chunk= 9 data=00
+TB_RF_WRITE: reg=11 chunk=10 data=00
+TB_RF_WRITE: reg=11 chunk=11 data=00
+TB_RF_WRITE: reg=11 chunk=12 data=00
+TB_RF_WRITE: reg=11 chunk=13 data=00
+TB_RF_WRITE: reg=11 chunk=14 data=00
+TB_RF_WRITE: reg=11 chunk=15 data=00
+TB_PC: 00000280 TIME:          28254969000
+TB_PC: 00000284 TIME:          28450969000
+TB_PC: 00000288 TIME:          28592969000
+TB_PC: 0000028c TIME:          28734969000
+TB_PC: 00000290 TIME:          28876969000
+TB_DBUS_WE: addr=00000768 data=0000beef sel=1111 TIME:          29012969000
+TB_DBUS_WE: addr=00000768 data=0000beef sel=1111 TIME:          29014969000
+TB_DBUS_WE: addr=00000768 data=0000beef sel=1111 TIME:          29016969000
+TB_MEM_WRITE: addr=00000768 data=0000beef
+TB_DBUS_WE: addr=00000768 data=0000beef sel=1111 TIME:          29018969000
+TB_PC: 00000294 TIME:          29090969000
+TB_RF_WRITE: reg=13 chunk= 0 data=01
+TB_RF_WRITE: reg=13 chunk= 1 data=11
+TB_RF_WRITE: reg=13 chunk= 2 data=10
+TB_RF_WRITE: reg=13 chunk= 3 data=10
+TB_RF_WRITE: reg=13 chunk= 4 data=10
+TB_RF_WRITE: reg=13 chunk= 5 data=11
+TB_RF_WRITE: reg=13 chunk= 6 data=01
+TB_RF_WRITE: reg=13 chunk= 7 data=11
+TB_RF_WRITE: reg=13 chunk= 8 data=00
+TB_RF_WRITE: reg=13 chunk= 9 data=00
+TB_RF_WRITE: reg=13 chunk=10 data=00
+TB_RF_WRITE: reg=13 chunk=11 data=00
+TB_RF_WRITE: reg=13 chunk=12 data=00
+TB_RF_WRITE: reg=13 chunk=13 data=00
+TB_RF_WRITE: reg=13 chunk=14 data=00
+TB_RF_WRITE: reg=13 chunk=15 data=00
+TB_PC: 00000298 TIME:          29358969000
+TB_PC: 0000029c TIME:          29554969000
+TB_PC: 000002a0 TIME:          29696969000
+TB_PC: 000002a4 TIME:          29838969000
+TB_PC: 000002a8 TIME:          29980969000
+TB_DBUS_WE: addr=0000076c data=0000dead sel=1111 TIME:          30116969000
+TB_DBUS_WE: addr=0000076c data=0000dead sel=1111 TIME:          30118969000
+TB_DBUS_WE: addr=0000076c data=0000dead sel=1111 TIME:          30120969000
+TB_MEM_WRITE: addr=0000076c data=0000dead
+TB_DBUS_WE: addr=0000076c data=0000dead sel=1111 TIME:          30122969000
+TB_PC: 000002ac TIME:          30194969000
+TB_RF_WRITE: reg=15 chunk= 0 data=11
+TB_RF_WRITE: reg=15 chunk= 1 data=11
+TB_RF_WRITE: reg=15 chunk= 2 data=10
+TB_RF_WRITE: reg=15 chunk= 3 data=11
+TB_RF_WRITE: reg=15 chunk= 4 data=00
+TB_RF_WRITE: reg=15 chunk= 5 data=00
+TB_RF_WRITE: reg=15 chunk= 6 data=00
+TB_RF_WRITE: reg=15 chunk= 7 data=00
+TB_RF_WRITE: reg=15 chunk= 8 data=00
+TB_RF_WRITE: reg=15 chunk= 9 data=00
+TB_RF_WRITE: reg=15 chunk=10 data=00
+TB_RF_WRITE: reg=15 chunk=11 data=00
+TB_RF_WRITE: reg=15 chunk=12 data=00
+TB_RF_WRITE: reg=15 chunk=13 data=00
+TB_RF_WRITE: reg=15 chunk=14 data=00
+TB_RF_WRITE: reg=15 chunk=15 data=00
+TB_PC: 000002b0 TIME:          30462969000
+TB_PC: 000002b4 TIME:          30658969000
+TB_PC: 000002b8 TIME:          30800969000
+TB_PC: 000002bc TIME:          30942969000
+TB_PC: 000002c0 TIME:          31084969000
+TB_DBUS_WE: addr=00000770 data=000000ef sel=1111 TIME:          31220969000
+TB_DBUS_WE: addr=00000770 data=000000ef sel=1111 TIME:          31222969000
+TB_DBUS_WE: addr=00000770 data=000000ef sel=1111 TIME:          31224969000
+TB_MEM_WRITE: addr=00000770 data=000000ef
+TB_DBUS_WE: addr=00000770 data=000000ef sel=1111 TIME:          31226969000
+TB_PC: 000002c4 TIME:          31298969000
+TB_RF_WRITE: reg=16 chunk= 0 data=10
+TB_RF_WRITE: reg=16 chunk= 1 data=11
+TB_RF_WRITE: reg=16 chunk= 2 data=11
+TB_RF_WRITE: reg=16 chunk= 3 data=10
+TB_RF_WRITE: reg=16 chunk= 4 data=00
+TB_RF_WRITE: reg=16 chunk= 5 data=00
+TB_RF_WRITE: reg=16 chunk= 6 data=00
+TB_RF_WRITE: reg=16 chunk= 7 data=00
+TB_RF_WRITE: reg=16 chunk= 8 data=00
+TB_RF_WRITE: reg=16 chunk= 9 data=00
+TB_RF_WRITE: reg=16 chunk=10 data=00
+TB_RF_WRITE: reg=16 chunk=11 data=00
+TB_RF_WRITE: reg=16 chunk=12 data=00
+TB_RF_WRITE: reg=16 chunk=13 data=00
+TB_RF_WRITE: reg=16 chunk=14 data=00
+TB_RF_WRITE: reg=16 chunk=15 data=00
+TB_PC: 000002c8 TIME:          31566969000
+TB_PC: 000002cc TIME:          31762969000
+TB_PC: 000002d0 TIME:          31904969000
+TB_PC: 000002d4 TIME:          32046969000
+TB_PC: 000002d8 TIME:          32188969000
+TB_DBUS_WE: addr=00000774 data=000000be sel=1111 TIME:          32324969000
+TB_DBUS_WE: addr=00000774 data=000000be sel=1111 TIME:          32326969000
+TB_DBUS_WE: addr=00000774 data=000000be sel=1111 TIME:          32328969000
+TB_MEM_WRITE: addr=00000774 data=000000be
+TB_DBUS_WE: addr=00000774 data=000000be sel=1111 TIME:          32330969000
+TB_PC: 000002dc TIME:          32402969000
+TB_RF_WRITE: reg=17 chunk= 0 data=01
+TB_RF_WRITE: reg=17 chunk= 1 data=11
+TB_RF_WRITE: reg=17 chunk= 2 data=10
+TB_RF_WRITE: reg=17 chunk= 3 data=10
+TB_RF_WRITE: reg=17 chunk= 4 data=00
+TB_RF_WRITE: reg=17 chunk= 5 data=00
+TB_RF_WRITE: reg=17 chunk= 6 data=00
+TB_RF_WRITE: reg=17 chunk= 7 data=00
+TB_RF_WRITE: reg=17 chunk= 8 data=00
+TB_RF_WRITE: reg=17 chunk= 9 data=00
+TB_RF_WRITE: reg=17 chunk=10 data=00
+TB_RF_WRITE: reg=17 chunk=11 data=00
+TB_RF_WRITE: reg=17 chunk=12 data=00
+TB_RF_WRITE: reg=17 chunk=13 data=00
+TB_RF_WRITE: reg=17 chunk=14 data=00
+TB_RF_WRITE: reg=17 chunk=15 data=00
+TB_PC: 000002e0 TIME:          32670969000
+TB_PC: 000002e4 TIME:          32866969000
+TB_PC: 000002e8 TIME:          33008969000
+TB_PC: 000002ec TIME:          33150969000
+TB_PC: 000002f0 TIME:          33292969000
+TB_DBUS_WE: addr=00000778 data=000000ad sel=1111 TIME:          33428969000
+TB_DBUS_WE: addr=00000778 data=000000ad sel=1111 TIME:          33430969000
+TB_DBUS_WE: addr=00000778 data=000000ad sel=1111 TIME:          33432969000
+TB_MEM_WRITE: addr=00000778 data=000000ad
+TB_DBUS_WE: addr=00000778 data=000000ad sel=1111 TIME:          33434969000
+TB_PC: 000002f4 TIME:          33506969000
+TB_RF_WRITE: reg=18 chunk= 0 data=10
+TB_RF_WRITE: reg=18 chunk= 1 data=11
+TB_RF_WRITE: reg=18 chunk= 2 data=01
+TB_RF_WRITE: reg=18 chunk= 3 data=11
+TB_RF_WRITE: reg=18 chunk= 4 data=00
+TB_RF_WRITE: reg=18 chunk= 5 data=00
+TB_RF_WRITE: reg=18 chunk= 6 data=00
+TB_RF_WRITE: reg=18 chunk= 7 data=00
+TB_RF_WRITE: reg=18 chunk= 8 data=00
+TB_RF_WRITE: reg=18 chunk= 9 data=00
+TB_RF_WRITE: reg=18 chunk=10 data=00
+TB_RF_WRITE: reg=18 chunk=11 data=00
+TB_RF_WRITE: reg=18 chunk=12 data=00
+TB_RF_WRITE: reg=18 chunk=13 data=00
+TB_RF_WRITE: reg=18 chunk=14 data=00
+TB_RF_WRITE: reg=18 chunk=15 data=00
+TB_PC: 000002f8 TIME:          33774969000
+TB_PC: 000002fc TIME:          33970969000
+TB_PC: 00000300 TIME:          34112969000
+TB_PC: 00000304 TIME:          34254969000
+TB_PC: 00000308 TIME:          34396969000
+TB_DBUS_WE: addr=0000077c data=000000de sel=1111 TIME:          34532969000
+TB_DBUS_WE: addr=0000077c data=000000de sel=1111 TIME:          34534969000
+TB_DBUS_WE: addr=0000077c data=000000de sel=1111 TIME:          34536969000
+TB_MEM_WRITE: addr=0000077c data=000000de
+TB_DBUS_WE: addr=0000077c data=000000de sel=1111 TIME:          34538969000
+TB_PC: 0000030c TIME:          34610969000
+TB_RF_WRITE: reg=21 chunk= 0 data=00
+TB_RF_WRITE: reg=21 chunk= 1 data=00
+TB_RF_WRITE: reg=21 chunk= 2 data=00
+TB_RF_WRITE: reg=21 chunk= 3 data=00
+TB_RF_WRITE: reg=21 chunk= 4 data=00
+TB_RF_WRITE: reg=21 chunk= 5 data=00
+TB_RF_WRITE: reg=21 chunk= 6 data=01
+TB_RF_WRITE: reg=21 chunk= 7 data=01
+TB_RF_WRITE: reg=21 chunk= 8 data=00
+TB_RF_WRITE: reg=21 chunk= 9 data=01
+TB_RF_WRITE: reg=21 chunk=10 data=11
+TB_RF_WRITE: reg=21 chunk=11 data=00
+TB_RF_WRITE: reg=21 chunk=12 data=10
+TB_RF_WRITE: reg=21 chunk=13 data=00
+TB_RF_WRITE: reg=21 chunk=14 data=01
+TB_RF_WRITE: reg=21 chunk=15 data=00
+TB_PC: 00000310 TIME:          34806969000
+TB_RF_WRITE: reg=21 chunk= 0 data=00
+TB_RF_WRITE: reg=21 chunk= 1 data=10
+TB_RF_WRITE: reg=21 chunk= 2 data=11
+TB_RF_WRITE: reg=21 chunk= 3 data=01
+TB_RF_WRITE: reg=21 chunk= 4 data=10
+TB_RF_WRITE: reg=21 chunk= 5 data=01
+TB_RF_WRITE: reg=21 chunk= 6 data=01
+TB_RF_WRITE: reg=21 chunk= 7 data=01
+TB_RF_WRITE: reg=21 chunk= 8 data=00
+TB_RF_WRITE: reg=21 chunk= 9 data=01
+TB_RF_WRITE: reg=21 chunk=10 data=11
+TB_RF_WRITE: reg=21 chunk=11 data=00
+TB_RF_WRITE: reg=21 chunk=12 data=10
+TB_RF_WRITE: reg=21 chunk=13 data=00
+TB_RF_WRITE: reg=21 chunk=14 data=01
+TB_RF_WRITE: reg=21 chunk=15 data=00
+TB_PC: 00000314 TIME:          34948969000
+TB_DBUS_WE: addr=00000640 data=12345678 sel=1111 TIME:          35084969000
+TB_DBUS_WE: addr=00000640 data=12345678 sel=1111 TIME:          35086969000
+TB_DBUS_WE: addr=00000640 data=12345678 sel=1111 TIME:          35088969000
+TB_MEM_WRITE: addr=00000640 data=12345678
+TB_DBUS_WE: addr=00000640 data=12345678 sel=1111 TIME:          35090969000
+TB_PC: 00000318 TIME:          35162969000
+TB_DBUS_WE: addr=00000644 data=12345678 sel=0011 TIME:          35352969000
+TB_DBUS_WE: addr=00000644 data=12345678 sel=0011 TIME:          35354969000
+TB_DBUS_WE: addr=00000644 data=12345678 sel=0011 TIME:          35356969000
+TB_MEM_WRITE: addr=00000644 data=12345678
+TB_DBUS_WE: addr=00000644 data=12345678 sel=0011 TIME:          35358969000
+TB_PC: 0000031c TIME:          35430969000
+TB_DBUS_WE: addr=00000648 data=56780000 sel=1100 TIME:          35620969000
+TB_DBUS_WE: addr=00000648 data=56780000 sel=1100 TIME:          35622969000
+TB_DBUS_WE: addr=00000648 data=56780000 sel=1100 TIME:          35624969000
+TB_DBUS_WE: addr=00000648 data=56780000 sel=1100 TIME:          35626969000
+TB_PC: 00000320 TIME:          35698969000
+TB_DBUS_WE: addr=00000650 data=12345678 sel=0001 TIME:          35888969000
+TB_DBUS_WE: addr=00000650 data=12345678 sel=0001 TIME:          35890969000
+TB_DBUS_WE: addr=00000650 data=12345678 sel=0001 TIME:          35892969000
+TB_MEM_WRITE: addr=00000650 data=12345678
+TB_DBUS_WE: addr=00000650 data=12345678 sel=0001 TIME:          35894969000
+TB_PC: 00000324 TIME:          35966969000
+TB_DBUS_WE: addr=00000650 data=34567800 sel=0010 TIME:          36156969000
+TB_DBUS_WE: addr=00000650 data=34567800 sel=0010 TIME:          36158969000
+TB_DBUS_WE: addr=00000650 data=34567800 sel=0010 TIME:          36160969000
+TB_DBUS_WE: addr=00000650 data=34567800 sel=0010 TIME:          36162969000
+TB_PC: 00000328 TIME:          36234969000
+TB_DBUS_WE: addr=00000650 data=56780000 sel=0100 TIME:          36424969000
+TB_DBUS_WE: addr=00000650 data=56780000 sel=0100 TIME:          36426969000
+TB_DBUS_WE: addr=00000650 data=56780000 sel=0100 TIME:          36428969000
+TB_DBUS_WE: addr=00000650 data=56780000 sel=0100 TIME:          36430969000
+TB_PC: 0000032c TIME:          36502969000
+TB_DBUS_WE: addr=00000650 data=78000000 sel=1000 TIME:          36692969000
+TB_DBUS_WE: addr=00000650 data=78000000 sel=1000 TIME:          36694969000
+TB_DBUS_WE: addr=00000650 data=78000000 sel=1000 TIME:          36696969000
+TB_DBUS_WE: addr=00000650 data=78000000 sel=1000 TIME:          36698969000
+TB_PC: 00000330 TIME:          36770969000
+TB_RF_WRITE: reg=22 chunk= 0 data=00
+TB_RF_WRITE: reg=22 chunk= 1 data=00
+TB_RF_WRITE: reg=22 chunk= 2 data=00
+TB_RF_WRITE: reg=22 chunk= 3 data=00
+TB_RF_WRITE: reg=22 chunk= 4 data=00
+TB_RF_WRITE: reg=22 chunk= 5 data=00
+TB_RF_WRITE: reg=22 chunk= 6 data=00
+TB_RF_WRITE: reg=22 chunk= 7 data=00
+TB_RF_WRITE: reg=22 chunk= 8 data=11
+TB_RF_WRITE: reg=22 chunk= 9 data=11
+TB_RF_WRITE: reg=22 chunk=10 data=11
+TB_RF_WRITE: reg=22 chunk=11 data=11
+TB_RF_WRITE: reg=22 chunk=12 data=11
+TB_RF_WRITE: reg=22 chunk=13 data=11
+TB_RF_WRITE: reg=22 chunk=14 data=11
+TB_RF_WRITE: reg=22 chunk=15 data=01
+TB_PC: 00000334 TIME:          36966969000
+TB_PC: 00000338 TIME:          37108969000
+TB_PC: 0000033c TIME:          37250969000
+TB_PC: 00000340 TIME:          37392969000
+TB_PC: 00000344 TIME:          37534969000
+TB_DBUS_WE: addr=00000780 data=7fff0000 sel=1111 TIME:          37670969000
+TB_DBUS_WE: addr=00000780 data=7fff0000 sel=1111 TIME:          37672969000
+TB_DBUS_WE: addr=00000780 data=7fff0000 sel=1111 TIME:          37674969000
+TB_MEM_WRITE: addr=00000780 data=7fff0000
+TB_DBUS_WE: addr=00000780 data=7fff0000 sel=1111 TIME:          37676969000
+TB_PC: 00000348 TIME:          37748969000
+TB_RF_WRITE: reg=23 chunk= 0 data=00
+TB_RF_WRITE: reg=23 chunk= 1 data=10
+TB_RF_WRITE: reg=23 chunk= 2 data=00
+TB_RF_WRITE: reg=23 chunk= 3 data=01
+TB_RF_WRITE: reg=23 chunk= 4 data=11
+TB_RF_WRITE: reg=23 chunk= 5 data=00
+TB_RF_WRITE: reg=23 chunk= 6 data=00
+TB_RF_WRITE: reg=23 chunk= 7 data=00
+TB_RF_WRITE: reg=23 chunk= 8 data=11
+TB_RF_WRITE: reg=23 chunk= 9 data=11
+TB_RF_WRITE: reg=23 chunk=10 data=11
+TB_RF_WRITE: reg=23 chunk=11 data=11
+TB_RF_WRITE: reg=23 chunk=12 data=11
+TB_RF_WRITE: reg=23 chunk=13 data=11
+TB_RF_WRITE: reg=23 chunk=14 data=11
+TB_RF_WRITE: reg=23 chunk=15 data=01
+TB_PC: 0000034c TIME:          37944969000
+TB_PC: 00000350 TIME:          38086969000
+TB_PC: 00000354 TIME:          38228969000
+TB_PC: 00000358 TIME:          38370969000
+TB_PC: 0000035c TIME:          38512969000
+TB_DBUS_WE: addr=00000784 data=7fff0348 sel=1111 TIME:          38648969000
+TB_DBUS_WE: addr=00000784 data=7fff0348 sel=1111 TIME:          38650969000
+TB_DBUS_WE: addr=00000784 data=7fff0348 sel=1111 TIME:          38652969000
+TB_MEM_WRITE: addr=00000784 data=7fff0348
+TB_DBUS_WE: addr=00000784 data=7fff0348 sel=1111 TIME:          38654969000
+TB_PC: 00000360 TIME:          38726969000
+TB_RF_WRITE: reg= 1 chunk= 0 data=00
+TB_RF_WRITE: reg= 1 chunk= 1 data=01
+TB_RF_WRITE: reg= 1 chunk= 2 data=10
+TB_RF_WRITE: reg= 1 chunk= 3 data=01
+TB_RF_WRITE: reg= 1 chunk= 4 data=00
+TB_RF_WRITE: reg= 1 chunk= 5 data=00
+TB_RF_WRITE: reg= 1 chunk= 6 data=00
+TB_RF_WRITE: reg= 1 chunk= 7 data=00
+TB_RF_WRITE: reg= 1 chunk= 8 data=00
+TB_RF_WRITE: reg= 1 chunk= 9 data=00
+TB_RF_WRITE: reg= 1 chunk=10 data=00
+TB_RF_WRITE: reg= 1 chunk=11 data=00
+TB_RF_WRITE: reg= 1 chunk=12 data=00
+TB_RF_WRITE: reg= 1 chunk=13 data=00
+TB_RF_WRITE: reg= 1 chunk=14 data=00
+TB_RF_WRITE: reg= 1 chunk=15 data=00
+TB_PC: 00000364 TIME:          38922969000
+TB_RF_WRITE: reg= 2 chunk= 0 data=00
+TB_RF_WRITE: reg= 2 chunk= 1 data=01
+TB_RF_WRITE: reg= 2 chunk= 2 data=10
+TB_RF_WRITE: reg= 2 chunk= 3 data=01
+TB_RF_WRITE: reg= 2 chunk= 4 data=00
+TB_RF_WRITE: reg= 2 chunk= 5 data=00
+TB_RF_WRITE: reg= 2 chunk= 6 data=00
+TB_RF_WRITE: reg= 2 chunk= 7 data=00
+TB_RF_WRITE: reg= 2 chunk= 8 data=00
+TB_RF_WRITE: reg= 2 chunk= 9 data=00
+TB_RF_WRITE: reg= 2 chunk=10 data=00
+TB_RF_WRITE: reg= 2 chunk=11 data=00
+TB_RF_WRITE: reg= 2 chunk=12 data=00
+TB_RF_WRITE: reg= 2 chunk=13 data=00
+TB_RF_WRITE: reg= 2 chunk=14 data=00
+TB_RF_WRITE: reg= 2 chunk=15 data=00
+TB_PC: 00000368 TIME:          39064969000
+TB_RF_WRITE: reg=24 chunk= 0 data=00
+TB_RF_WRITE: reg=24 chunk= 1 data=00
+TB_RF_WRITE: reg=24 chunk= 2 data=00
+TB_RF_WRITE: reg=24 chunk= 3 data=00
+TB_RF_WRITE: reg=24 chunk= 4 data=00
+TB_RF_WRITE: reg=24 chunk= 5 data=00
+TB_RF_WRITE: reg=24 chunk= 6 data=00
+TB_RF_WRITE: reg=24 chunk= 7 data=00
+TB_RF_WRITE: reg=24 chunk= 8 data=00
+TB_RF_WRITE: reg=24 chunk= 9 data=00
+TB_RF_WRITE: reg=24 chunk=10 data=00
+TB_RF_WRITE: reg=24 chunk=11 data=00
+TB_RF_WRITE: reg=24 chunk=12 data=00
+TB_RF_WRITE: reg=24 chunk=13 data=00
+TB_RF_WRITE: reg=24 chunk=14 data=00
+TB_RF_WRITE: reg=24 chunk=15 data=00
+TB_PC: 0000036c TIME:          39206969000
+TB_PC: 00000374 TIME:          39412969000
+TB_RF_WRITE: reg=24 chunk= 0 data=10
+TB_RF_WRITE: reg=24 chunk= 1 data=00
+TB_RF_WRITE: reg=24 chunk= 2 data=00
+TB_RF_WRITE: reg=24 chunk= 3 data=00
+TB_RF_WRITE: reg=24 chunk= 4 data=00
+TB_RF_WRITE: reg=24 chunk= 5 data=00
+TB_RF_WRITE: reg=24 chunk= 6 data=00
+TB_RF_WRITE: reg=24 chunk= 7 data=00
+TB_RF_WRITE: reg=24 chunk= 8 data=00
+TB_RF_WRITE: reg=24 chunk= 9 data=00
+TB_RF_WRITE: reg=24 chunk=10 data=00
+TB_RF_WRITE: reg=24 chunk=11 data=00
+TB_RF_WRITE: reg=24 chunk=12 data=00
+TB_RF_WRITE: reg=24 chunk=13 data=00
+TB_RF_WRITE: reg=24 chunk=14 data=00
+TB_RF_WRITE: reg=24 chunk=15 data=00
+TB_PC: 00000378 TIME:          39608969000
+TB_PC: 0000037c TIME:          39750969000
+TB_PC: 00000380 TIME:          39892969000
+TB_PC: 00000384 TIME:          40034969000
+TB_PC: 00000388 TIME:          40176969000
+TB_DBUS_WE: addr=00000788 data=00000002 sel=1111 TIME:          40312969000
+TB_DBUS_WE: addr=00000788 data=00000002 sel=1111 TIME:          40314969000
+TB_DBUS_WE: addr=00000788 data=00000002 sel=1111 TIME:          40316969000
+TB_MEM_WRITE: addr=00000788 data=00000002
+TB_DBUS_WE: addr=00000788 data=00000002 sel=1111 TIME:          40318969000
+TB_PC: 0000038c TIME:          40390969000
+TB_RF_WRITE: reg= 1 chunk= 0 data=00
+TB_RF_WRITE: reg= 1 chunk= 1 data=01
+TB_RF_WRITE: reg= 1 chunk= 2 data=10
+TB_RF_WRITE: reg= 1 chunk= 3 data=01
+TB_RF_WRITE: reg= 1 chunk= 4 data=00
+TB_RF_WRITE: reg= 1 chunk= 5 data=00
+TB_RF_WRITE: reg= 1 chunk= 6 data=00
+TB_RF_WRITE: reg= 1 chunk= 7 data=00
+TB_RF_WRITE: reg= 1 chunk= 8 data=00
+TB_RF_WRITE: reg= 1 chunk= 9 data=00
+TB_RF_WRITE: reg= 1 chunk=10 data=00
+TB_RF_WRITE: reg= 1 chunk=11 data=00
+TB_RF_WRITE: reg= 1 chunk=12 data=00
+TB_RF_WRITE: reg= 1 chunk=13 data=00
+TB_RF_WRITE: reg= 1 chunk=14 data=00
+TB_RF_WRITE: reg= 1 chunk=15 data=00
+TB_PC: 00000390 TIME:          40586969000
+TB_RF_WRITE: reg= 2 chunk= 0 data=00
+TB_RF_WRITE: reg= 2 chunk= 1 data=10
+TB_RF_WRITE: reg= 2 chunk= 2 data=00
+TB_RF_WRITE: reg= 2 chunk= 3 data=11
+TB_RF_WRITE: reg= 2 chunk= 4 data=00
+TB_RF_WRITE: reg= 2 chunk= 5 data=00
+TB_RF_WRITE: reg= 2 chunk= 6 data=00
+TB_RF_WRITE: reg= 2 chunk= 7 data=00
+TB_RF_WRITE: reg= 2 chunk= 8 data=00
+TB_RF_WRITE: reg= 2 chunk= 9 data=00
+TB_RF_WRITE: reg= 2 chunk=10 data=00
+TB_RF_WRITE: reg= 2 chunk=11 data=00
+TB_RF_WRITE: reg= 2 chunk=12 data=00
+TB_RF_WRITE: reg= 2 chunk=13 data=00
+TB_RF_WRITE: reg= 2 chunk=14 data=00
+TB_RF_WRITE: reg= 2 chunk=15 data=00
+TB_PC: 00000394 TIME:          40728969000
+TB_RF_WRITE: reg=24 chunk= 0 data=00
+TB_RF_WRITE: reg=24 chunk= 1 data=00
+TB_RF_WRITE: reg=24 chunk= 2 data=00
+TB_RF_WRITE: reg=24 chunk= 3 data=00
+TB_RF_WRITE: reg=24 chunk= 4 data=00
+TB_RF_WRITE: reg=24 chunk= 5 data=00
+TB_RF_WRITE: reg=24 chunk= 6 data=00
+TB_RF_WRITE: reg=24 chunk= 7 data=00
+TB_RF_WRITE: reg=24 chunk= 8 data=00
+TB_RF_WRITE: reg=24 chunk= 9 data=00
+TB_RF_WRITE: reg=24 chunk=10 data=00
+TB_RF_WRITE: reg=24 chunk=11 data=00
+TB_RF_WRITE: reg=24 chunk=12 data=00
+TB_RF_WRITE: reg=24 chunk=13 data=00
+TB_RF_WRITE: reg=24 chunk=14 data=00
+TB_RF_WRITE: reg=24 chunk=15 data=00
+TB_PC: 00000398 TIME:          40870969000
+TB_PC: 000003a0 TIME:          41076969000
+TB_RF_WRITE: reg=24 chunk= 0 data=11
+TB_RF_WRITE: reg=24 chunk= 1 data=00
+TB_RF_WRITE: reg=24 chunk= 2 data=00
+TB_RF_WRITE: reg=24 chunk= 3 data=00
+TB_RF_WRITE: reg=24 chunk= 4 data=00
+TB_RF_WRITE: reg=24 chunk= 5 data=00
+TB_RF_WRITE: reg=24 chunk= 6 data=00
+TB_RF_WRITE: reg=24 chunk= 7 data=00
+TB_RF_WRITE: reg=24 chunk= 8 data=00
+TB_RF_WRITE: reg=24 chunk= 9 data=00
+TB_RF_WRITE: reg=24 chunk=10 data=00
+TB_RF_WRITE: reg=24 chunk=11 data=00
+TB_RF_WRITE: reg=24 chunk=12 data=00
+TB_RF_WRITE: reg=24 chunk=13 data=00
+TB_RF_WRITE: reg=24 chunk=14 data=00
+TB_RF_WRITE: reg=24 chunk=15 data=00
+TB_PC: 000003a4 TIME:          41272969000
+TB_PC: 000003a8 TIME:          41414969000
+TB_PC: 000003ac TIME:          41556969000
+TB_PC: 000003b0 TIME:          41698969000
+TB_PC: 000003b4 TIME:          41840969000
+TB_DBUS_WE: addr=0000078c data=00000003 sel=1111 TIME:          41976969000
+TB_DBUS_WE: addr=0000078c data=00000003 sel=1111 TIME:          41978969000
+TB_DBUS_WE: addr=0000078c data=00000003 sel=1111 TIME:          41980969000
+TB_MEM_WRITE: addr=0000078c data=00000003
+TB_DBUS_WE: addr=0000078c data=00000003 sel=1111 TIME:          41982969000
+TB_PC: 000003b8 TIME:          42054969000
+TB_RF_WRITE: reg= 1 chunk= 0 data=00
+TB_RF_WRITE: reg= 1 chunk= 1 data=01
+TB_RF_WRITE: reg= 1 chunk= 2 data=10
+TB_RF_WRITE: reg= 1 chunk= 3 data=01
+TB_RF_WRITE: reg= 1 chunk= 4 data=00
+TB_RF_WRITE: reg= 1 chunk= 5 data=00
+TB_RF_WRITE: reg= 1 chunk= 6 data=00
+TB_RF_WRITE: reg= 1 chunk= 7 data=00
+TB_RF_WRITE: reg= 1 chunk= 8 data=00
+TB_RF_WRITE: reg= 1 chunk= 9 data=00
+TB_RF_WRITE: reg= 1 chunk=10 data=00
+TB_RF_WRITE: reg= 1 chunk=11 data=00
+TB_RF_WRITE: reg= 1 chunk=12 data=00
+TB_RF_WRITE: reg= 1 chunk=13 data=00
+TB_RF_WRITE: reg= 1 chunk=14 data=00
+TB_RF_WRITE: reg= 1 chunk=15 data=00
+TB_PC: 000003bc TIME:          42250969000
+TB_RF_WRITE: reg= 2 chunk= 0 data=00
+TB_RF_WRITE: reg= 2 chunk= 1 data=10
+TB_RF_WRITE: reg= 2 chunk= 2 data=00
+TB_RF_WRITE: reg= 2 chunk= 3 data=11
+TB_RF_WRITE: reg= 2 chunk= 4 data=00
+TB_RF_WRITE: reg= 2 chunk= 5 data=00
+TB_RF_WRITE: reg= 2 chunk= 6 data=00
+TB_RF_WRITE: reg= 2 chunk= 7 data=00
+TB_RF_WRITE: reg= 2 chunk= 8 data=00
+TB_RF_WRITE: reg= 2 chunk= 9 data=00
+TB_RF_WRITE: reg= 2 chunk=10 data=00
+TB_RF_WRITE: reg= 2 chunk=11 data=00
+TB_RF_WRITE: reg= 2 chunk=12 data=00
+TB_RF_WRITE: reg= 2 chunk=13 data=00
+TB_RF_WRITE: reg= 2 chunk=14 data=00
+TB_RF_WRITE: reg= 2 chunk=15 data=00
+TB_PC: 000003c0 TIME:          42392969000
+TB_RF_WRITE: reg=24 chunk= 0 data=00
+TB_RF_WRITE: reg=24 chunk= 1 data=00
+TB_RF_WRITE: reg=24 chunk= 2 data=00
+TB_RF_WRITE: reg=24 chunk= 3 data=00
+TB_RF_WRITE: reg=24 chunk= 4 data=00
+TB_RF_WRITE: reg=24 chunk= 5 data=00
+TB_RF_WRITE: reg=24 chunk= 6 data=00
+TB_RF_WRITE: reg=24 chunk= 7 data=00
+TB_RF_WRITE: reg=24 chunk= 8 data=00
+TB_RF_WRITE: reg=24 chunk= 9 data=00
+TB_RF_WRITE: reg=24 chunk=10 data=00
+TB_RF_WRITE: reg=24 chunk=11 data=00
+TB_RF_WRITE: reg=24 chunk=12 data=00
+TB_RF_WRITE: reg=24 chunk=13 data=00
+TB_RF_WRITE: reg=24 chunk=14 data=00
+TB_RF_WRITE: reg=24 chunk=15 data=00
+TB_PC: 000003c4 TIME:          42534969000
+TB_PC: 000003cc TIME:          42740969000
+TB_RF_WRITE: reg=24 chunk= 0 data=00
+TB_RF_WRITE: reg=24 chunk= 1 data=01
+TB_RF_WRITE: reg=24 chunk= 2 data=00
+TB_RF_WRITE: reg=24 chunk= 3 data=00
+TB_RF_WRITE: reg=24 chunk= 4 data=00
+TB_RF_WRITE: reg=24 chunk= 5 data=00
+TB_RF_WRITE: reg=24 chunk= 6 data=00
+TB_RF_WRITE: reg=24 chunk= 7 data=00
+TB_RF_WRITE: reg=24 chunk= 8 data=00
+TB_RF_WRITE: reg=24 chunk= 9 data=00
+TB_RF_WRITE: reg=24 chunk=10 data=00
+TB_RF_WRITE: reg=24 chunk=11 data=00
+TB_RF_WRITE: reg=24 chunk=12 data=00
+TB_RF_WRITE: reg=24 chunk=13 data=00
+TB_RF_WRITE: reg=24 chunk=14 data=00
+TB_RF_WRITE: reg=24 chunk=15 data=00
+TB_PC: 000003d0 TIME:          42936969000
+TB_PC: 000003d4 TIME:          43078969000
+TB_PC: 000003d8 TIME:          43220969000
+TB_PC: 000003dc TIME:          43362969000
+TB_PC: 000003e0 TIME:          43504969000
+TB_DBUS_WE: addr=00000790 data=00000004 sel=1111 TIME:          43640969000
+TB_DBUS_WE: addr=00000790 data=00000004 sel=1111 TIME:          43642969000
+TB_DBUS_WE: addr=00000790 data=00000004 sel=1111 TIME:          43644969000
+TB_MEM_WRITE: addr=00000790 data=00000004
+TB_DBUS_WE: addr=00000790 data=00000004 sel=1111 TIME:          43646969000
+TB_PC: 000003e4 TIME:          43718969000
+TB_RF_WRITE: reg= 1 chunk= 0 data=00
+TB_RF_WRITE: reg= 1 chunk= 1 data=10
+TB_RF_WRITE: reg= 1 chunk= 2 data=00
+TB_RF_WRITE: reg= 1 chunk= 3 data=11
+TB_RF_WRITE: reg= 1 chunk= 4 data=00
+TB_RF_WRITE: reg= 1 chunk= 5 data=00
+TB_RF_WRITE: reg= 1 chunk= 6 data=00
+TB_RF_WRITE: reg= 1 chunk= 7 data=00
+TB_RF_WRITE: reg= 1 chunk= 8 data=00
+TB_RF_WRITE: reg= 1 chunk= 9 data=00
+TB_RF_WRITE: reg= 1 chunk=10 data=00
+TB_RF_WRITE: reg= 1 chunk=11 data=00
+TB_RF_WRITE: reg= 1 chunk=12 data=00
+TB_RF_WRITE: reg= 1 chunk=13 data=00
+TB_RF_WRITE: reg= 1 chunk=14 data=00
+TB_RF_WRITE: reg= 1 chunk=15 data=00
+TB_PC: 000003e8 TIME:          43914969000
+TB_RF_WRITE: reg= 2 chunk= 0 data=00
+TB_RF_WRITE: reg= 2 chunk= 1 data=01
+TB_RF_WRITE: reg= 2 chunk= 2 data=10
+TB_RF_WRITE: reg= 2 chunk= 3 data=01
+TB_RF_WRITE: reg= 2 chunk= 4 data=00
+TB_RF_WRITE: reg= 2 chunk= 5 data=00
+TB_RF_WRITE: reg= 2 chunk= 6 data=00
+TB_RF_WRITE: reg= 2 chunk= 7 data=00
+TB_RF_WRITE: reg= 2 chunk= 8 data=00
+TB_RF_WRITE: reg= 2 chunk= 9 data=00
+TB_RF_WRITE: reg= 2 chunk=10 data=00
+TB_RF_WRITE: reg= 2 chunk=11 data=00
+TB_RF_WRITE: reg= 2 chunk=12 data=00
+TB_RF_WRITE: reg= 2 chunk=13 data=00
+TB_RF_WRITE: reg= 2 chunk=14 data=00
+TB_RF_WRITE: reg= 2 chunk=15 data=00
+TB_PC: 000003ec TIME:          44056969000
+TB_RF_WRITE: reg=24 chunk= 0 data=00
+TB_RF_WRITE: reg=24 chunk= 1 data=00
+TB_RF_WRITE: reg=24 chunk= 2 data=00
+TB_RF_WRITE: reg=24 chunk= 3 data=00
+TB_RF_WRITE: reg=24 chunk= 4 data=00
+TB_RF_WRITE: reg=24 chunk= 5 data=00
+TB_RF_WRITE: reg=24 chunk= 6 data=00
+TB_RF_WRITE: reg=24 chunk= 7 data=00
+TB_RF_WRITE: reg=24 chunk= 8 data=00
+TB_RF_WRITE: reg=24 chunk= 9 data=00
+TB_RF_WRITE: reg=24 chunk=10 data=00
+TB_RF_WRITE: reg=24 chunk=11 data=00
+TB_RF_WRITE: reg=24 chunk=12 data=00
+TB_RF_WRITE: reg=24 chunk=13 data=00
+TB_RF_WRITE: reg=24 chunk=14 data=00
+TB_RF_WRITE: reg=24 chunk=15 data=00
+TB_PC: 000003f0 TIME:          44198969000
+TB_PC: 000003f8 TIME:          44404969000
+TB_RF_WRITE: reg=24 chunk= 0 data=01
+TB_RF_WRITE: reg=24 chunk= 1 data=01
+TB_RF_WRITE: reg=24 chunk= 2 data=00
+TB_RF_WRITE: reg=24 chunk= 3 data=00
+TB_RF_WRITE: reg=24 chunk= 4 data=00
+TB_RF_WRITE: reg=24 chunk= 5 data=00
+TB_RF_WRITE: reg=24 chunk= 6 data=00
+TB_RF_WRITE: reg=24 chunk= 7 data=00
+TB_RF_WRITE: reg=24 chunk= 8 data=00
+TB_RF_WRITE: reg=24 chunk= 9 data=00
+TB_RF_WRITE: reg=24 chunk=10 data=00
+TB_RF_WRITE: reg=24 chunk=11 data=00
+TB_RF_WRITE: reg=24 chunk=12 data=00
+TB_RF_WRITE: reg=24 chunk=13 data=00
+TB_RF_WRITE: reg=24 chunk=14 data=00
+TB_RF_WRITE: reg=24 chunk=15 data=00
+TB_PC: 000003fc TIME:          44600969000
+TB_PC: 00000400 TIME:          44742969000
+TB_PC: 00000404 TIME:          44884969000
+TB_PC: 00000408 TIME:          45026969000
+TB_PC: 0000040c TIME:          45168969000
+TB_DBUS_WE: addr=00000794 data=00000005 sel=1111 TIME:          45304969000
+TB_DBUS_WE: addr=00000794 data=00000005 sel=1111 TIME:          45306969000
+TB_DBUS_WE: addr=00000794 data=00000005 sel=1111 TIME:          45308969000
+TB_MEM_WRITE: addr=00000794 data=00000005
+TB_DBUS_WE: addr=00000794 data=00000005 sel=1111 TIME:          45310969000
+TB_PC: 00000410 TIME:          45382969000
+TB_RF_WRITE: reg= 1 chunk= 0 data=01
+TB_RF_WRITE: reg= 1 chunk= 1 data=00
+TB_RF_WRITE: reg= 1 chunk= 2 data=00
+TB_RF_WRITE: reg= 1 chunk= 3 data=00
+TB_RF_WRITE: reg= 1 chunk= 4 data=00
+TB_RF_WRITE: reg= 1 chunk= 5 data=00
+TB_RF_WRITE: reg= 1 chunk= 6 data=00
+TB_RF_WRITE: reg= 1 chunk= 7 data=00
+TB_RF_WRITE: reg= 1 chunk= 8 data=00
+TB_RF_WRITE: reg= 1 chunk= 9 data=00
+TB_RF_WRITE: reg= 1 chunk=10 data=00
+TB_RF_WRITE: reg= 1 chunk=11 data=00
+TB_RF_WRITE: reg= 1 chunk=12 data=00
+TB_RF_WRITE: reg= 1 chunk=13 data=00
+TB_RF_WRITE: reg= 1 chunk=14 data=00
+TB_RF_WRITE: reg= 1 chunk=15 data=00
+TB_PC: 00000414 TIME:          45578969000
+TB_RF_WRITE: reg= 2 chunk= 0 data=11
+TB_RF_WRITE: reg= 2 chunk= 1 data=11
+TB_RF_WRITE: reg= 2 chunk= 2 data=11
+TB_RF_WRITE: reg= 2 chunk= 3 data=11
+TB_RF_WRITE: reg= 2 chunk= 4 data=11
+TB_RF_WRITE: reg= 2 chunk= 5 data=11
+TB_RF_WRITE: reg= 2 chunk= 6 data=11
+TB_RF_WRITE: reg= 2 chunk= 7 data=11
+TB_RF_WRITE: reg= 2 chunk= 8 data=11
+TB_RF_WRITE: reg= 2 chunk= 9 data=11
+TB_RF_WRITE: reg= 2 chunk=10 data=11
+TB_RF_WRITE: reg= 2 chunk=11 data=11
+TB_RF_WRITE: reg= 2 chunk=12 data=11
+TB_RF_WRITE: reg= 2 chunk=13 data=11
+TB_RF_WRITE: reg= 2 chunk=14 data=11
+TB_RF_WRITE: reg= 2 chunk=15 data=11
+TB_PC: 00000418 TIME:          45720969000
+TB_RF_WRITE: reg=24 chunk= 0 data=00
+TB_RF_WRITE: reg=24 chunk= 1 data=00
+TB_RF_WRITE: reg=24 chunk= 2 data=00
+TB_RF_WRITE: reg=24 chunk= 3 data=00
+TB_RF_WRITE: reg=24 chunk= 4 data=00
+TB_RF_WRITE: reg=24 chunk= 5 data=00
+TB_RF_WRITE: reg=24 chunk= 6 data=00
+TB_RF_WRITE: reg=24 chunk= 7 data=00
+TB_RF_WRITE: reg=24 chunk= 8 data=00
+TB_RF_WRITE: reg=24 chunk= 9 data=00
+TB_RF_WRITE: reg=24 chunk=10 data=00
+TB_RF_WRITE: reg=24 chunk=11 data=00
+TB_RF_WRITE: reg=24 chunk=12 data=00
+TB_RF_WRITE: reg=24 chunk=13 data=00
+TB_RF_WRITE: reg=24 chunk=14 data=00
+TB_RF_WRITE: reg=24 chunk=15 data=00
+TB_PC: 0000041c TIME:          45862969000
+TB_PC: 00000424 TIME:          46068969000
+TB_RF_WRITE: reg=24 chunk= 0 data=10
+TB_RF_WRITE: reg=24 chunk= 1 data=01
+TB_RF_WRITE: reg=24 chunk= 2 data=00
+TB_RF_WRITE: reg=24 chunk= 3 data=00
+TB_RF_WRITE: reg=24 chunk= 4 data=00
+TB_RF_WRITE: reg=24 chunk= 5 data=00
+TB_RF_WRITE: reg=24 chunk= 6 data=00
+TB_RF_WRITE: reg=24 chunk= 7 data=00
+TB_RF_WRITE: reg=24 chunk= 8 data=00
+TB_RF_WRITE: reg=24 chunk= 9 data=00
+TB_RF_WRITE: reg=24 chunk=10 data=00
+TB_RF_WRITE: reg=24 chunk=11 data=00
+TB_RF_WRITE: reg=24 chunk=12 data=00
+TB_RF_WRITE: reg=24 chunk=13 data=00
+TB_RF_WRITE: reg=24 chunk=14 data=00
+TB_RF_WRITE: reg=24 chunk=15 data=00
+TB_PC: 00000428 TIME:          46264969000
+TB_PC: 0000042c TIME:          46406969000
+TB_PC: 00000430 TIME:          46548969000
+TB_PC: 00000434 TIME:          46690969000
+TB_PC: 00000438 TIME:          46832969000
+TB_DBUS_WE: addr=00000798 data=00000006 sel=1111 TIME:          46968969000
+TB_DBUS_WE: addr=00000798 data=00000006 sel=1111 TIME:          46970969000
+TB_DBUS_WE: addr=00000798 data=00000006 sel=1111 TIME:          46972969000
+TB_MEM_WRITE: addr=00000798 data=00000006
+TB_DBUS_WE: addr=00000798 data=00000006 sel=1111 TIME:          46974969000
+TB_PC: 0000043c TIME:          47046969000
+TB_RF_WRITE: reg= 1 chunk= 0 data=11
+TB_RF_WRITE: reg= 1 chunk= 1 data=11
+TB_RF_WRITE: reg= 1 chunk= 2 data=11
+TB_RF_WRITE: reg= 1 chunk= 3 data=11
+TB_RF_WRITE: reg= 1 chunk= 4 data=11
+TB_RF_WRITE: reg= 1 chunk= 5 data=11
+TB_RF_WRITE: reg= 1 chunk= 6 data=11
+TB_RF_WRITE: reg= 1 chunk= 7 data=11
+TB_RF_WRITE: reg= 1 chunk= 8 data=11
+TB_RF_WRITE: reg= 1 chunk= 9 data=11
+TB_RF_WRITE: reg= 1 chunk=10 data=11
+TB_RF_WRITE: reg= 1 chunk=11 data=11
+TB_RF_WRITE: reg= 1 chunk=12 data=11
+TB_RF_WRITE: reg= 1 chunk=13 data=11
+TB_RF_WRITE: reg= 1 chunk=14 data=11
+TB_RF_WRITE: reg= 1 chunk=15 data=11
+TB_PC: 00000440 TIME:          47242969000
+TB_RF_WRITE: reg= 2 chunk= 0 data=01
+TB_RF_WRITE: reg= 2 chunk= 1 data=00
+TB_RF_WRITE: reg= 2 chunk= 2 data=00
+TB_RF_WRITE: reg= 2 chunk= 3 data=00
+TB_RF_WRITE: reg= 2 chunk= 4 data=00
+TB_RF_WRITE: reg= 2 chunk= 5 data=00
+TB_RF_WRITE: reg= 2 chunk= 6 data=00
+TB_RF_WRITE: reg= 2 chunk= 7 data=00
+TB_RF_WRITE: reg= 2 chunk= 8 data=00
+TB_RF_WRITE: reg= 2 chunk= 9 data=00
+TB_RF_WRITE: reg= 2 chunk=10 data=00
+TB_RF_WRITE: reg= 2 chunk=11 data=00
+TB_RF_WRITE: reg= 2 chunk=12 data=00
+TB_RF_WRITE: reg= 2 chunk=13 data=00
+TB_RF_WRITE: reg= 2 chunk=14 data=00
+TB_RF_WRITE: reg= 2 chunk=15 data=00
+TB_PC: 00000444 TIME:          47384969000
+TB_RF_WRITE: reg=24 chunk= 0 data=00
+TB_RF_WRITE: reg=24 chunk= 1 data=00
+TB_RF_WRITE: reg=24 chunk= 2 data=00
+TB_RF_WRITE: reg=24 chunk= 3 data=00
+TB_RF_WRITE: reg=24 chunk= 4 data=00
+TB_RF_WRITE: reg=24 chunk= 5 data=00
+TB_RF_WRITE: reg=24 chunk= 6 data=00
+TB_RF_WRITE: reg=24 chunk= 7 data=00
+TB_RF_WRITE: reg=24 chunk= 8 data=00
+TB_RF_WRITE: reg=24 chunk= 9 data=00
+TB_RF_WRITE: reg=24 chunk=10 data=00
+TB_RF_WRITE: reg=24 chunk=11 data=00
+TB_RF_WRITE: reg=24 chunk=12 data=00
+TB_RF_WRITE: reg=24 chunk=13 data=00
+TB_RF_WRITE: reg=24 chunk=14 data=00
+TB_RF_WRITE: reg=24 chunk=15 data=00
+TB_PC: 00000448 TIME:          47526969000
+TB_PC: 00000450 TIME:          47732969000
+TB_RF_WRITE: reg=24 chunk= 0 data=11
+TB_RF_WRITE: reg=24 chunk= 1 data=01
+TB_RF_WRITE: reg=24 chunk= 2 data=00
+TB_RF_WRITE: reg=24 chunk= 3 data=00
+TB_RF_WRITE: reg=24 chunk= 4 data=00
+TB_RF_WRITE: reg=24 chunk= 5 data=00
+TB_RF_WRITE: reg=24 chunk= 6 data=00
+TB_RF_WRITE: reg=24 chunk= 7 data=00
+TB_RF_WRITE: reg=24 chunk= 8 data=00
+TB_RF_WRITE: reg=24 chunk= 9 data=00
+TB_RF_WRITE: reg=24 chunk=10 data=00
+TB_RF_WRITE: reg=24 chunk=11 data=00
+TB_RF_WRITE: reg=24 chunk=12 data=00
+TB_RF_WRITE: reg=24 chunk=13 data=00
+TB_RF_WRITE: reg=24 chunk=14 data=00
+TB_RF_WRITE: reg=24 chunk=15 data=00
+TB_PC: 00000454 TIME:          47928969000
+TB_PC: 00000458 TIME:          48070969000
+TB_PC: 0000045c TIME:          48212969000
+TB_PC: 00000460 TIME:          48354969000
+TB_PC: 00000464 TIME:          48496969000
+TB_DBUS_WE: addr=0000079c data=00000007 sel=1111 TIME:          48632969000
+TB_DBUS_WE: addr=0000079c data=00000007 sel=1111 TIME:          48634969000
+TB_DBUS_WE: addr=0000079c data=00000007 sel=1111 TIME:          48636969000
+TB_MEM_WRITE: addr=0000079c data=00000007
+TB_DBUS_WE: addr=0000079c data=00000007 sel=1111 TIME:          48638969000
+TB_PC: 00000468 TIME:          48710969000
+TB_RF_WRITE: reg=25 chunk= 0 data=00
+TB_RF_WRITE: reg=25 chunk= 1 data=11
+TB_RF_WRITE: reg=25 chunk= 2 data=10
+TB_RF_WRITE: reg=25 chunk= 3 data=01
+TB_RF_WRITE: reg=25 chunk= 4 data=00
+TB_RF_WRITE: reg=25 chunk= 5 data=01
+TB_RF_WRITE: reg=25 chunk= 6 data=00
+TB_RF_WRITE: reg=25 chunk= 7 data=00
+TB_RF_WRITE: reg=25 chunk= 8 data=00
+TB_RF_WRITE: reg=25 chunk= 9 data=00
+TB_RF_WRITE: reg=25 chunk=10 data=00
+TB_RF_WRITE: reg=25 chunk=11 data=00
+TB_RF_WRITE: reg=25 chunk=12 data=00
+TB_RF_WRITE: reg=25 chunk=13 data=00
+TB_RF_WRITE: reg=25 chunk=14 data=00
+TB_RF_WRITE: reg=25 chunk=15 data=00
+TB_PC: 00000470 TIME:          48970969000
+TB_RF_WRITE: reg=27 chunk= 0 data=01
+TB_RF_WRITE: reg=27 chunk= 1 data=10
+TB_RF_WRITE: reg=27 chunk= 2 data=00
+TB_RF_WRITE: reg=27 chunk= 3 data=00
+TB_RF_WRITE: reg=27 chunk= 4 data=00
+TB_RF_WRITE: reg=27 chunk= 5 data=00
+TB_RF_WRITE: reg=27 chunk= 6 data=00
+TB_RF_WRITE: reg=27 chunk= 7 data=00
+TB_RF_WRITE: reg=27 chunk= 8 data=00
+TB_RF_WRITE: reg=27 chunk= 9 data=00
+TB_RF_WRITE: reg=27 chunk=10 data=00
+TB_RF_WRITE: reg=27 chunk=11 data=00
+TB_RF_WRITE: reg=27 chunk=12 data=00
+TB_RF_WRITE: reg=27 chunk=13 data=00
+TB_RF_WRITE: reg=27 chunk=14 data=00
+TB_RF_WRITE: reg=27 chunk=15 data=00
+TB_PC: 00000474 TIME:          49166969000
+TB_PC: 00000478 TIME:          49308969000
+TB_PC: 0000047c TIME:          49450969000
+TB_PC: 00000480 TIME:          49592969000
+TB_PC: 00000484 TIME:          49734969000
+TB_DBUS_WE: addr=000007a0 data=0000046c sel=1111 TIME:          49870969000
+TB_DBUS_WE: addr=000007a0 data=0000046c sel=1111 TIME:          49872969000
+TB_DBUS_WE: addr=000007a0 data=0000046c sel=1111 TIME:          49874969000
+TB_MEM_WRITE: addr=000007a0 data=0000046c
+TB_DBUS_WE: addr=000007a0 data=0000046c sel=1111 TIME:          49876969000
+TB_PC: 00000488 TIME:          49948969000
+TB_PC: 0000048c TIME:          50144969000
+TB_PC: 00000490 TIME:          50286969000
+TB_PC: 00000494 TIME:          50428969000
+TB_PC: 00000498 TIME:          50570969000
+TB_DBUS_WE: addr=000007a4 data=00000000 sel=1111 TIME:          50706969000
+TB_DBUS_WE: addr=000007a4 data=00000000 sel=1111 TIME:          50708969000
+TB_DBUS_WE: addr=000007a4 data=00000000 sel=1111 TIME:          50710969000
+TB_MEM_WRITE: addr=000007a4 data=00000000
+TB_DBUS_WE: addr=000007a4 data=00000000 sel=1111 TIME:          50712969000
+TB_PC: 0000049c TIME:          50784969000
+TB_PC: 000004a0 TIME:          50980969000
+TB_PC: 000004a4 TIME:          51122969000
+TB_PC: 000004a8 TIME:          51264969000
+TB_PC: 000004ac TIME:          51406969000
+TB_DBUS_WE: addr=000007a8 data=00000009 sel=1111 TIME:          51542969000
+TB_DBUS_WE: addr=000007a8 data=00000009 sel=1111 TIME:          51544969000
+TB_DBUS_WE: addr=000007a8 data=00000009 sel=1111 TIME:          51546969000
+TB_MEM_WRITE: addr=000007a8 data=00000009
+TB_DBUS_WE: addr=000007a8 data=00000009 sel=1111 TIME:          51548969000
+TB_PC: 000004b0 TIME:          51620969000
+TB_RF_WRITE: reg=28 chunk= 0 data=00
+TB_RF_WRITE: reg=28 chunk= 1 data=11
+TB_RF_WRITE: reg=28 chunk= 2 data=11
+TB_RF_WRITE: reg=28 chunk= 3 data=10
+TB_RF_WRITE: reg=28 chunk= 4 data=00
+TB_RF_WRITE: reg=28 chunk= 5 data=01
+TB_RF_WRITE: reg=28 chunk= 6 data=00
+TB_RF_WRITE: reg=28 chunk= 7 data=00
+TB_RF_WRITE: reg=28 chunk= 8 data=00
+TB_RF_WRITE: reg=28 chunk= 9 data=00
+TB_RF_WRITE: reg=28 chunk=10 data=00
+TB_RF_WRITE: reg=28 chunk=11 data=00
+TB_RF_WRITE: reg=28 chunk=12 data=00
+TB_RF_WRITE: reg=28 chunk=13 data=00
+TB_RF_WRITE: reg=28 chunk=14 data=00
+TB_RF_WRITE: reg=28 chunk=15 data=00
+TB_PC: 000004b4 TIME:          51816969000
+TB_RF_WRITE: reg=29 chunk= 0 data=00
+TB_RF_WRITE: reg=29 chunk= 1 data=10
+TB_RF_WRITE: reg=29 chunk= 2 data=11
+TB_RF_WRITE: reg=29 chunk= 3 data=10
+TB_RF_WRITE: reg=29 chunk= 4 data=00
+TB_RF_WRITE: reg=29 chunk= 5 data=01
+TB_RF_WRITE: reg=29 chunk= 6 data=00
+TB_RF_WRITE: reg=29 chunk= 7 data=00
+TB_RF_WRITE: reg=29 chunk= 8 data=00
+TB_RF_WRITE: reg=29 chunk= 9 data=00
+TB_RF_WRITE: reg=29 chunk=10 data=00
+TB_RF_WRITE: reg=29 chunk=11 data=00
+TB_RF_WRITE: reg=29 chunk=12 data=00
+TB_RF_WRITE: reg=29 chunk=13 data=00
+TB_RF_WRITE: reg=29 chunk=14 data=00
+TB_RF_WRITE: reg=29 chunk=15 data=00
+TB_PC: 000004bc TIME:          52022969000
+TB_RF_WRITE: reg=31 chunk= 0 data=10
+TB_RF_WRITE: reg=31 chunk= 1 data=10
+TB_RF_WRITE: reg=31 chunk= 2 data=00
+TB_RF_WRITE: reg=31 chunk= 3 data=00
+TB_RF_WRITE: reg=31 chunk= 4 data=00
+TB_RF_WRITE: reg=31 chunk= 5 data=00
+TB_RF_WRITE: reg=31 chunk= 6 data=00
+TB_RF_WRITE: reg=31 chunk= 7 data=00
+TB_RF_WRITE: reg=31 chunk= 8 data=00
+TB_RF_WRITE: reg=31 chunk= 9 data=00
+TB_RF_WRITE: reg=31 chunk=10 data=00
+TB_RF_WRITE: reg=31 chunk=11 data=00
+TB_RF_WRITE: reg=31 chunk=12 data=00
+TB_RF_WRITE: reg=31 chunk=13 data=00
+TB_RF_WRITE: reg=31 chunk=14 data=00
+TB_RF_WRITE: reg=31 chunk=15 data=00
+TB_PC: 000004c0 TIME:          52218969000
+TB_PC: 000004c4 TIME:          52360969000
+TB_PC: 000004c8 TIME:          52502969000
+TB_PC: 000004cc TIME:          52644969000
+TB_PC: 000004d0 TIME:          52786969000
+TB_DBUS_WE: addr=000007ac data=000004b8 sel=1111 TIME:          52922969000
+TB_DBUS_WE: addr=000007ac data=000004b8 sel=1111 TIME:          52924969000
+TB_DBUS_WE: addr=000007ac data=000004b8 sel=1111 TIME:          52926969000
+TB_MEM_WRITE: addr=000007ac data=000004b8
+TB_DBUS_WE: addr=000007ac data=000004b8 sel=1111 TIME:          52928969000
+TB_PC: 000004d4 TIME:          53000969000
+TB_PC: 000004d8 TIME:          53196969000
+TB_PC: 000004dc TIME:          53338969000
+TB_PC: 000004e0 TIME:          53480969000
+TB_PC: 000004e4 TIME:          53622969000
+TB_DBUS_WE: addr=000007b0 data=00000000 sel=1111 TIME:          53758969000
+TB_DBUS_WE: addr=000007b0 data=00000000 sel=1111 TIME:          53760969000
+TB_DBUS_WE: addr=000007b0 data=00000000 sel=1111 TIME:          53762969000
+TB_MEM_WRITE: addr=000007b0 data=00000000
+TB_DBUS_WE: addr=000007b0 data=00000000 sel=1111 TIME:          53764969000
+TB_PC: 000004e8 TIME:          53836969000
+TB_PC: 000004ec TIME:          54032969000
+TB_PC: 000004f0 TIME:          54174969000
+TB_PC: 000004f4 TIME:          54316969000
+TB_PC: 000004f8 TIME:          54458969000
+TB_DBUS_WE: addr=000007b4 data=0000000a sel=1111 TIME:          54594969000
+TB_DBUS_WE: addr=000007b4 data=0000000a sel=1111 TIME:          54596969000
+TB_DBUS_WE: addr=000007b4 data=0000000a sel=1111 TIME:          54598969000
+TB_MEM_WRITE: addr=000007b4 data=0000000a
+TB_DBUS_WE: addr=000007b4 data=0000000a sel=1111 TIME:          54600969000
+TB_PC: 000004fc TIME:          54672969000
+TB_PC: 000004fc TIME:          54932969000
+TB_PC: 000004fc TIME:          55192969000
+TB_PC: 000004fc TIME:          55452969000
+TB_PC: 000004fc TIME:          55712969000
+TB_PC: 000004fc TIME:          55972969000
+TB_PC: 000004fc TIME:          56232969000
+TB_PC: 000004fc TIME:          56492969000
+TB_PC: 000004fc TIME:          56752969000
+TB_PC: 000004fc TIME:          57012969000
+TB_PC: 000004fc TIME:          57272969000
+TB_PC: 000004fc TIME:          57532969000
+TB_PC: 000004fc TIME:          57792969000
+TB_PC: 000004fc TIME:          58052969000
+TB_PC: 000004fc TIME:          58312969000
+TB_PC: 000004fc TIME:          58572969000
+TB_PC: 000004fc TIME:          58832969000
+TB_PC: 000004fc TIME:          59092969000
+TB_PC: 000004fc TIME:          59352969000
+TB_PC: 000004fc TIME:          59612969000
+TB_PC: 000004fc TIME:          59872969000
+TB_PC: 000004fc TIME:          60132969000
+TB_PC: 000004fc TIME:          60392969000
+TB_PC: 000004fc TIME:          60652969000
+TB_PC: 000004fc TIME:          60912969000
+TB_PC: 000004fc TIME:          61172969000
+TB_PC: 000004fc TIME:          61432969000
+TB_PC: 000004fc TIME:          61692969000
+TB_PC: 000004fc TIME:          61952969000
+TB_PC: 000004fc TIME:          62212969000
+TB_PC: 000004fc TIME:          62472969000
+TB_PC: 000004fc TIME:          62732969000
+TB_PC: 000004fc TIME:          62992969000
+TB_PC: 000004fc TIME:          63252969000
+TB_PC: 000004fc TIME:          63512969000
+TB_PC: 000004fc TIME:          63772969000
+TB_PC: 000004fc TIME:          64032969000
+TB_PC: 000004fc TIME:          64292969000
+TB_PC: 000004fc TIME:          64552969000
+TB_PC: 000004fc TIME:          64812969000
+TB_PC: 000004fc TIME:          65072969000
+TB_PC: 000004fc TIME:          65332969000
+TB_PC: 000004fc TIME:          65592969000
+TB_PC: 000004fc TIME:          65852969000
+TB_PC: 000004fc TIME:          66112969000
+TB_PC: 000004fc TIME:          66372969000
+TB_PC: 000004fc TIME:          66632969000
+TB_PC: 000004fc TIME:          66892969000
+TB_PC: 000004fc TIME:          67152969000
+TB_PC: 000004fc TIME:          67412969000
+TB_PC: 000004fc TIME:          67672969000
+TB_PC: 000004fc TIME:          67932969000
+TB_PC: 000004fc TIME:          68192969000
+TB_PC: 000004fc TIME:          68452969000
+TB_PC: 000004fc TIME:          68712969000
+TB_PC: 000004fc TIME:          68972969000
+TB_PC: 000004fc TIME:          69232969000
+TB_PC: 000004fc TIME:          69492969000
+TB_PC: 000004fc TIME:          69752969000
+TB_PC: 000004fc TIME:          70012969000
+TB_PC: 000004fc TIME:          70272969000
+TB_PC: 000004fc TIME:          70532969000
+TB_PC: 000004fc TIME:          70792969000
+TB_PC: 000004fc TIME:          71052969000
+TB_PC: 000004fc TIME:          71312969000
+TB_PC: 000004fc TIME:          71572969000
+TB_PC: 000004fc TIME:          71832969000
+TB_PC: 000004fc TIME:          72092969000
+TB_PC: 000004fc TIME:          72352969000
+TB_PC: 000004fc TIME:          72612969000
+TB_PC: 000004fc TIME:          72872969000
+TB_PC: 000004fc TIME:          73132969000
+TB_PC: 000004fc TIME:          73392969000
+TB_PC: 000004fc TIME:          73652969000
+TB_PC: 000004fc TIME:          73912969000
+TB_PC: 000004fc TIME:          74172969000
+TB_PC: 000004fc TIME:          74432969000
+TB_PC: 000004fc TIME:          74692969000
+TB_PC: 000004fc TIME:          74952969000
+TB_PC: 000004fc TIME:          75212969000
+TB_PC: 000004fc TIME:          75472969000
+TB_PC: 000004fc TIME:          75732969000
+TB_PC: 000004fc TIME:          75992969000
+TB_PC: 000004fc TIME:          76252969000
+TB_PC: 000004fc TIME:          76512969000
+TB_PC: 000004fc TIME:          76772969000
+TB_PC: 000004fc TIME:          77032969000
+TB_PC: 000004fc TIME:          77292969000
+TB_PC: 000004fc TIME:          77552969000
+TB_PC: 000004fc TIME:          77812969000
+TB_PC: 000004fc TIME:          78072969000
+TB_PC: 000004fc TIME:          78332969000
+TB_PC: 000004fc TIME:          78592969000
+TB_PC: 000004fc TIME:          78852969000
+TB_PC: 000004fc TIME:          79112969000
+TB_PC: 000004fc TIME:          79372969000
+TB_PC: 000004fc TIME:          79632969000
+TB_PC: 000004fc TIME:          79892969000
+TB_PC: 000004fc TIME:          80152969000
+TB_PC: 000004fc TIME:          80412969000
+TB_PC: 000004fc TIME:          80672969000
+TB_PC: 000004fc TIME:          80932969000
+TB_PC: 000004fc TIME:          81192969000
+TB_PC: 000004fc TIME:          81452969000
+TB_PC: 000004fc TIME:          81712969000
+TB_PC: 000004fc TIME:          81972969000
+TB_PC: 000004fc TIME:          82232969000
+TB_PC: 000004fc TIME:          82492969000
+TB_PC: 000004fc TIME:          82752969000
+TB_PC: 000004fc TIME:          83012969000
+TB_PC: 000004fc TIME:          83272969000
+TB_PC: 000004fc TIME:          83532969000
+TB_PC: 000004fc TIME:          83792969000
+TB_PC: 000004fc TIME:          84052969000
+TB_PC: 000004fc TIME:          84312969000
+TB_PC: 000004fc TIME:          84572969000
+TB_PC: 000004fc TIME:          84832969000
+TB_PC: 000004fc TIME:          85092969000
+TB_PC: 000004fc TIME:          85352969000
+TB_PC: 000004fc TIME:          85612969000
+TB_PC: 000004fc TIME:          85872969000
+TB_PC: 000004fc TIME:          86132969000
+TB_PC: 000004fc TIME:          86392969000
+TB_PC: 000004fc TIME:          86652969000
+TB_PC: 000004fc TIME:          86912969000
+TB_PC: 000004fc TIME:          87172969000
+TB_PC: 000004fc TIME:          87432969000
+TB_PC: 000004fc TIME:          87692969000
+TB_PC: 000004fc TIME:          87952969000
+TB_PC: 000004fc TIME:          88212969000
+TB_PC: 000004fc TIME:          88472969000
+TB_PC: 000004fc TIME:          88732969000
+TB_PC: 000004fc TIME:          88992969000
+TB_PC: 000004fc TIME:          89252969000
+TB_PC: 000004fc TIME:          89512969000
+TB_PC: 000004fc TIME:          89772969000
+TB_PC: 000004fc TIME:          90032969000
+TB_PC: 000004fc TIME:          90292969000
+TB_PC: 000004fc TIME:          90552969000
+TB_PC: 000004fc TIME:          90812969000
+TB_PC: 000004fc TIME:          91072969000
+TB_PC: 000004fc TIME:          91332969000
+TB_PC: 000004fc TIME:          91592969000
+TB_PC: 000004fc TIME:          91852969000
+TB_PC: 000004fc TIME:          92112969000
+TB_PC: 000004fc TIME:          92372969000
+TB_PC: 000004fc TIME:          92632969000
+TB_PC: 000004fc TIME:          92892969000
+TB_PC: 000004fc TIME:          93152969000
+TB_PC: 000004fc TIME:          93412969000
+TB_PC: 000004fc TIME:          93672969000
+TB_PC: 000004fc TIME:          93932969000
+TB_PC: 000004fc TIME:          94192969000
+TB_PC: 000004fc TIME:          94452969000
+TB_PC: 000004fc TIME:          94712969000
+TB_PC: 000004fc TIME:          94972969000
+TB_PC: 000004fc TIME:          95232969000
+TB_PC: 000004fc TIME:          95492969000
+TB_PC: 000004fc TIME:          95752969000
+TB_PC: 000004fc TIME:          96012969000
+TB_PC: 000004fc TIME:          96272969000
+TB_PC: 000004fc TIME:          96532969000
+TB_PC: 000004fc TIME:          96792969000
+TB_PC: 000004fc TIME:          97052969000
+TB_PC: 000004fc TIME:          97312969000
+TB_PC: 000004fc TIME:          97572969000
+TB_PC: 000004fc TIME:          97832969000
+TB_PC: 000004fc TIME:          98092969000
+TB_PC: 000004fc TIME:          98352969000
+TB_PC: 000004fc TIME:          98612969000
+TB_PC: 000004fc TIME:          98872969000
+TB_PC: 000004fc TIME:          99132969000
+TB_PC: 000004fc TIME:          99392969000
+TB_PC: 000004fc TIME:          99652969000
+TB_PC: 000004fc TIME:          99912969000
+TB_PC: 000004fc TIME:         100172969000
+TB_PC: 000004fc TIME:         100432969000
+TB_PC: 000004fc TIME:         100692969000
+TB_PC: 000004fc TIME:         100952969000
+TB_PC: 000004fc TIME:         101212969000
+TB_PC: 000004fc TIME:         101472969000
+TB_PC: 000004fc TIME:         101732969000
+TB_PC: 000004fc TIME:         101992969000
+TB_PC: 000004fc TIME:         102252969000
+TB_PC: 000004fc TIME:         102512969000
+TB_PC: 000004fc TIME:         102772969000
+TB_PC: 000004fc TIME:         103032969000
+TB_PC: 000004fc TIME:         103292969000
+TB_PC: 000004fc TIME:         103552969000
+TB_PC: 000004fc TIME:         103812969000
+TB_PC: 000004fc TIME:         104072969000
+TB_PC: 000004fc TIME:         104332969000
+TB_PC: 000004fc TIME:         104592969000
+TB_PC: 000004fc TIME:         104852969000
+TB_PC: 000004fc TIME:         105112969000
+TB_PC: 000004fc TIME:         105372969000
+TB_PC: 000004fc TIME:         105632969000
+TB_PC: 000004fc TIME:         105892969000
+TB_PC: 000004fc TIME:         106152969000
+TB_PC: 000004fc TIME:         106412969000
+TB_PC: 000004fc TIME:         106672969000
+TB_PC: 000004fc TIME:         106932969000
+TB_PC: 000004fc TIME:         107192969000
+TB_PC: 000004fc TIME:         107452969000
+TB_PC: 000004fc TIME:         107712969000
+TB_PC: 000004fc TIME:         107972969000
+TB_PC: 000004fc TIME:         108232969000
+TB_PC: 000004fc TIME:         108492969000
+TB_PC: 000004fc TIME:         108752969000
+TB_PC: 000004fc TIME:         109012969000
+TB_PC: 000004fc TIME:         109272969000
+TB_PC: 000004fc TIME:         109532969000
+TB_PC: 000004fc TIME:         109792969000
+TB_PC: 000004fc TIME:         110052969000
+TB_PC: 000004fc TIME:         110312969000
+TB_PC: 000004fc TIME:         110572969000
+TB_PC: 000004fc TIME:         110832969000
+TB_PC: 000004fc TIME:         111092969000
+TB_PC: 000004fc TIME:         111352969000
+TB_PC: 000004fc TIME:         111612969000
+TB_PC: 000004fc TIME:         111872969000
+TB_PC: 000004fc TIME:         112132969000
+TB_PC: 000004fc TIME:         112392969000
+TB_PC: 000004fc TIME:         112652969000
+TB_PC: 000004fc TIME:         112912969000
+TB_PC: 000004fc TIME:         113172969000
+TB_PC: 000004fc TIME:         113432969000
+TB_PC: 000004fc TIME:         113692969000
+TB_PC: 000004fc TIME:         113952969000
+TB_PC: 000004fc TIME:         114212969000
+TB_PC: 000004fc TIME:         114472969000
+TB_PC: 000004fc TIME:         114732969000
+TB_PC: 000004fc TIME:         114992969000
+TB_PC: 000004fc TIME:         115252969000
+TB_PC: 000004fc TIME:         115512969000
+TB_PC: 000004fc TIME:         115772969000
+TB_PC: 000004fc TIME:         116032969000
+TB_PC: 000004fc TIME:         116292969000
+TB_PC: 000004fc TIME:         116552969000
+TB_PC: 000004fc TIME:         116812969000
+TB_PC: 000004fc TIME:         117072969000
+TB_PC: 000004fc TIME:         117332969000
+TB_PC: 000004fc TIME:         117592969000
+TB_PC: 000004fc TIME:         117852969000
+TB_PC: 000004fc TIME:         118112969000
+TB_PC: 000004fc TIME:         118372969000
+TB_PC: 000004fc TIME:         118632969000
+TB_PC: 000004fc TIME:         118892969000
+TB_PC: 000004fc TIME:         119152969000
+TB_PC: 000004fc TIME:         119412969000
+TB_PC: 000004fc TIME:         119672969000
+TB_PC: 000004fc TIME:         119932969000
+TB_PC: 000004fc TIME:         120192969000
+TB_PC: 000004fc TIME:         120452969000
+TB_PC: 000004fc TIME:         120712969000
+TB_PC: 000004fc TIME:         120972969000
+TB_PC: 000004fc TIME:         121232969000
+TB_PC: 000004fc TIME:         121492969000
+TB_PC: 000004fc TIME:         121752969000
+TB_PC: 000004fc TIME:         122012969000
+TB_PC: 000004fc TIME:         122272969000
+TB_PC: 000004fc TIME:         122532969000
+TB_PC: 000004fc TIME:         122792969000
+TB_PC: 000004fc TIME:         123052969000
+TB_PC: 000004fc TIME:         123312969000
+TB_PC: 000004fc TIME:         123572969000
+TB_PC: 000004fc TIME:         123832969000
+TB_PC: 000004fc TIME:         124092969000
+TB_PC: 000004fc TIME:         124352969000
+TB_PC: 000004fc TIME:         124612969000
+TB_PC: 000004fc TIME:         124872969000
+TB_PC: 000004fc TIME:         125132969000
+TB_PC: 000004fc TIME:         125392969000
+TB_PC: 000004fc TIME:         125652969000
+TB_PC: 000004fc TIME:         125912969000
+TB_PC: 000004fc TIME:         126172969000
+TB_PC: 000004fc TIME:         126432969000
+TB_PC: 000004fc TIME:         126692969000
+TB_PC: 000004fc TIME:         126952969000
+TB_PC: 000004fc TIME:         127212969000
+TB_PC: 000004fc TIME:         127472969000
+TB_PC: 000004fc TIME:         127732969000
+TB_PC: 000004fc TIME:         127992969000
+TB_PC: 000004fc TIME:         128252969000
+TB_PC: 000004fc TIME:         128512969000
+TB_PC: 000004fc TIME:         128772969000
+TB_PC: 000004fc TIME:         129032969000
+TB_PC: 000004fc TIME:         129292969000
+TB_PC: 000004fc TIME:         129552969000
+TB_PC: 000004fc TIME:         129812969000
+TB_PC: 000004fc TIME:         130072969000
+TB_PC: 000004fc TIME:         130332969000
+TB_PC: 000004fc TIME:         130592969000
+TB_PC: 000004fc TIME:         130852969000
+TB_PC: 000004fc TIME:         131112969000
+TB_PC: 000004fc TIME:         131372969000
+TB_PC: 000004fc TIME:         131632969000
+TB_PC: 000004fc TIME:         131892969000
+TB_PC: 000004fc TIME:         132152969000
+TB_PC: 000004fc TIME:         132412969000
+TB_PC: 000004fc TIME:         132672969000
+TB_PC: 000004fc TIME:         132932969000
+TB_PC: 000004fc TIME:         133192969000
+TB_PC: 000004fc TIME:         133452969000
+TB_PC: 000004fc TIME:         133712969000
+TB_PC: 000004fc TIME:         133972969000
+TB_PC: 000004fc TIME:         134232969000
+TB_PC: 000004fc TIME:         134492969000
+TB_PC: 000004fc TIME:         134752969000
+TB_PC: 000004fc TIME:         135012969000
+TB_PC: 000004fc TIME:         135272969000
+TB_PC: 000004fc TIME:         135532969000
+TB_PC: 000004fc TIME:         135792969000
+TB_PC: 000004fc TIME:         136052969000
+TB_PC: 000004fc TIME:         136312969000
+TB_PC: 000004fc TIME:         136572969000
+TB_PC: 000004fc TIME:         136832969000
+TB_PC: 000004fc TIME:         137092969000
+TB_PC: 000004fc TIME:         137352969000
+TB_PC: 000004fc TIME:         137612969000
+TB_PC: 000004fc TIME:         137872969000
+TB_PC: 000004fc TIME:         138132969000
+TB_PC: 000004fc TIME:         138392969000
+TB_PC: 000004fc TIME:         138652969000
+TB_PC: 000004fc TIME:         138912969000
+TB_PC: 000004fc TIME:         139172969000
+TB_PC: 000004fc TIME:         139432969000
+TB_PC: 000004fc TIME:         139692969000
+TB_PC: 000004fc TIME:         139952969000
+TB_PC: 000004fc TIME:         140212969000
+TB_PC: 000004fc TIME:         140472969000
+TB_PC: 000004fc TIME:         140732969000
+TB_PC: 000004fc TIME:         140992969000
+TB_PC: 000004fc TIME:         141252969000
+TB_PC: 000004fc TIME:         141512969000
+TB_PC: 000004fc TIME:         141772969000
+TB_PC: 000004fc TIME:         142032969000
+TB_PC: 000004fc TIME:         142292969000
+TB_PC: 000004fc TIME:         142552969000
+TB_PC: 000004fc TIME:         142812969000
+TB_PC: 000004fc TIME:         143072969000
+TB_PC: 000004fc TIME:         143332969000
+TB_PC: 000004fc TIME:         143592969000
+TB_PC: 000004fc TIME:         143852969000
+TB_PC: 000004fc TIME:         144112969000
+TB_PC: 000004fc TIME:         144372969000
+TB_PC: 000004fc TIME:         144632969000
+TB_PC: 000004fc TIME:         144892969000
+TB_PC: 000004fc TIME:         145152969000
+TB_PC: 000004fc TIME:         145412969000
+TB_PC: 000004fc TIME:         145672969000
+TB_PC: 000004fc TIME:         145932969000
+TB_PC: 000004fc TIME:         146192969000
+TB_PC: 000004fc TIME:         146452969000
+TB_PC: 000004fc TIME:         146712969000
+TB_PC: 000004fc TIME:         146972969000
+TB_PC: 000004fc TIME:         147232969000
+TB_PC: 000004fc TIME:         147492969000
+TB_PC: 000004fc TIME:         147752969000
+TB_PC: 000004fc TIME:         148012969000
+TB_PC: 000004fc TIME:         148272969000
+TB_PC: 000004fc TIME:         148532969000
+TB_PC: 000004fc TIME:         148792969000
+TB_PC: 000004fc TIME:         149052969000
+TB_PC: 000004fc TIME:         149312969000
+TB_PC: 000004fc TIME:         149572969000
+TB_PC: 000004fc TIME:         149832969000
+TB_PC: 000004fc TIME:         150092969000
+TB_PC: 000004fc TIME:         150352969000
+TB_PC: 000004fc TIME:         150612969000
+TB_PC: 000004fc TIME:         150872969000
+TB_PC: 000004fc TIME:         151132969000
+TB_PC: 000004fc TIME:         151392969000
+TB_PC: 000004fc TIME:         151652969000
+TB_PC: 000004fc TIME:         151912969000
+TB_PC: 000004fc TIME:         152172969000
+TB_PC: 000004fc TIME:         152432969000
+TB_PC: 000004fc TIME:         152692969000
+TB_PC: 000004fc TIME:         152952969000
+TB_PC: 000004fc TIME:         153212969000
+TB_PC: 000004fc TIME:         153472969000
+TB_PC: 000004fc TIME:         153732969000
+TB_PC: 000004fc TIME:         153992969000
+TB_PC: 000004fc TIME:         154252969000
+TB_PC: 000004fc TIME:         154512969000
+TB_PC: 000004fc TIME:         154772969000
+TB_PC: 000004fc TIME:         155032969000
+TB_PC: 000004fc TIME:         155292969000
+TB_PC: 000004fc TIME:         155552969000
+TB_PC: 000004fc TIME:         155812969000
+TB_PC: 000004fc TIME:         156072969000
+TB_PC: 000004fc TIME:         156332969000
+TB_PC: 000004fc TIME:         156592969000
+TB_PC: 000004fc TIME:         156852969000
+TB_PC: 000004fc TIME:         157112969000
+TB_PC: 000004fc TIME:         157372969000
+TB_PC: 000004fc TIME:         157632969000
+TB_PC: 000004fc TIME:         157892969000
+TB_PC: 000004fc TIME:         158152969000
+TB_PC: 000004fc TIME:         158412969000
+TB_PC: 000004fc TIME:         158672969000
+TB_PC: 000004fc TIME:         158932969000
+TB_PC: 000004fc TIME:         159192969000
+TB_PC: 000004fc TIME:         159452969000
+TB_PC: 000004fc TIME:         159712969000
+TB_PC: 000004fc TIME:         159972969000
+TB_PC: 000004fc TIME:         160232969000
+TB_PC: 000004fc TIME:         160492969000
+TB_PC: 000004fc TIME:         160752969000
+TB_PC: 000004fc TIME:         161012969000
+TB_PC: 000004fc TIME:         161272969000
+TB_PC: 000004fc TIME:         161532969000
+TB_PC: 000004fc TIME:         161792969000
+TB_PC: 000004fc TIME:         162052969000
+TB_PC: 000004fc TIME:         162312969000
+TB_PC: 000004fc TIME:         162572969000
+TB_PC: 000004fc TIME:         162832969000
+TB_PC: 000004fc TIME:         163092969000
+TB_PC: 000004fc TIME:         163352969000
+TB_PC: 000004fc TIME:         163612969000
+TB_PC: 000004fc TIME:         163872969000
+TB_PC: 000004fc TIME:         164132969000
+TB_PC: 000004fc TIME:         164392969000
+TB_PC: 000004fc TIME:         164652969000
+TB_PC: 000004fc TIME:         164912969000
+TB_PC: 000004fc TIME:         165172969000
+TB_PC: 000004fc TIME:         165432969000
+TB_PC: 000004fc TIME:         165692969000
+TB_PC: 000004fc TIME:         165952969000
+TB_PC: 000004fc TIME:         166212969000
+TB_PC: 000004fc TIME:         166472969000
+TB_PC: 000004fc TIME:         166732969000
+TB_PC: 000004fc TIME:         166992969000
+TB_PC: 000004fc TIME:         167252969000
+TB_PC: 000004fc TIME:         167512969000
+TB_PC: 000004fc TIME:         167772969000
+TB_PC: 000004fc TIME:         168032969000
+TB_PC: 000004fc TIME:         168292969000
+TB_PC: 000004fc TIME:         168552969000
+TB_PC: 000004fc TIME:         168812969000
+TB_PC: 000004fc TIME:         169072969000
+TB_PC: 000004fc TIME:         169332969000
+TB_PC: 000004fc TIME:         169592969000
+TB_PC: 000004fc TIME:         169852969000
+TB_PC: 000004fc TIME:         170112969000
+TB_PC: 000004fc TIME:         170372969000
+TB_PC: 000004fc TIME:         170632969000
+TB_PC: 000004fc TIME:         170892969000
+TB_PC: 000004fc TIME:         171152969000
+TB_PC: 000004fc TIME:         171412969000
+TB_PC: 000004fc TIME:         171672969000
+TB_PC: 000004fc TIME:         171932969000
+TB_PC: 000004fc TIME:         172192969000
+TB_PC: 000004fc TIME:         172452969000
+TB_PC: 000004fc TIME:         172712969000
+TB_PC: 000004fc TIME:         172972969000
+TB_PC: 000004fc TIME:         173232969000
+TB_PC: 000004fc TIME:         173492969000
+TB_PC: 000004fc TIME:         173752969000
+TB_PC: 000004fc TIME:         174012969000
+TB_PC: 000004fc TIME:         174272969000
+TB_PC: 000004fc TIME:         174532969000
+TB_PC: 000004fc TIME:         174792969000
+TB_PC: 000004fc TIME:         175052969000
+TB_PC: 000004fc TIME:         175312969000
+TB_PC: 000004fc TIME:         175572969000
+TB_PC: 000004fc TIME:         175832969000
+TB_PC: 000004fc TIME:         176092969000
+TB_PC: 000004fc TIME:         176352969000
+TB_PC: 000004fc TIME:         176612969000
+TB_PC: 000004fc TIME:         176872969000
+TB_PC: 000004fc TIME:         177132969000
+TB_PC: 000004fc TIME:         177392969000
+TB_PC: 000004fc TIME:         177652969000
+TB_PC: 000004fc TIME:         177912969000
+TB_PC: 000004fc TIME:         178172969000
+TB_PC: 000004fc TIME:         178432969000
+TB_PC: 000004fc TIME:         178692969000
+TB_PC: 000004fc TIME:         178952969000
+TB_PC: 000004fc TIME:         179212969000
+TB_PC: 000004fc TIME:         179472969000
+TB_PC: 000004fc TIME:         179732969000
+TB_PC: 000004fc TIME:         179992969000
+RV32I directed program words = 320
+RF frames observed = 15697 writes=1088 reads=14608 invalid=0
+Memory frames observed = 861 writes=53 reads=808
+Instruction fetches = 794 last_pc=000004fc last_insn=0000006f
+[PASS]                                                     SW full word memory[0x640]=12345678
+[PASS]                                                  SH low halfword memory[0x644]=00005678
+[PASS]                                                 SH high halfword memory[0x648]=56780000
+[PASS]                                            SB byte lanes 0/1/2/3 memory[0x650]=78787878
+[PASS]                                                              ADD memory[0x700]=00000064
+[PASS]                                                              SUB memory[0x704]=fffffed4
+[PASS]                                                              SLL memory[0x708]=ffff9c00
+[PASS]                                                              SLT memory[0x70c]=00000001
+[PASS]                                                             SLTU memory[0x710]=00000000
+[PASS]                                                              XOR memory[0x714]=ffffff54
+[PASS]                                                               OR memory[0x718]=ffffffdc
+[PASS]                                                              AND memory[0x71c]=00000088
+[PASS]                                                              SRL memory[0x720]=00ffffff
+[PASS]                                                              SRA memory[0x724]=ffffffff
+[PASS]                                                             SLLI memory[0x728]=f9c00000
+[PASS]                                                             SRLI memory[0x72c]=00000fff
+[PASS]                                                             SRAI memory[0x730]=ffffffff
+[PASS]                                                             ADDI memory[0x734]=fffffed4
+[PASS]                                                             SLTI memory[0x738]=00000000
+[PASS]                                                            SLTIU memory[0x73c]=00000000
+[PASS]                                                             XORI memory[0x740]=000000a4
+[PASS]                                                              ORI memory[0x744]=ffffffbc
+[PASS]                                                             ANDI memory[0x748]=ffffff18
+[PASS]                                                      LW offset 0 memory[0x74c]=deadbeef
+[PASS]                                          LH offset 0 sign-extend memory[0x750]=ffffbeef
+[PASS]                                          LH offset 2 sign-extend memory[0x754]=ffffdead
+[PASS]                                          LB offset 0 sign-extend memory[0x758]=ffffffef
+[PASS]                                          LB offset 1 sign-extend memory[0x75c]=ffffffbe
+[PASS]                                          LB offset 2 sign-extend memory[0x760]=ffffffad
+[PASS]                                          LB offset 3 sign-extend memory[0x764]=ffffffde
+[PASS]                                         LHU offset 0 zero-extend memory[0x768]=0000beef
+[PASS]                                         LHU offset 2 zero-extend memory[0x76c]=0000dead
+[PASS]                                         LBU offset 0 zero-extend memory[0x770]=000000ef
+[PASS]                                         LBU offset 1 zero-extend memory[0x774]=000000be
+[PASS]                                         LBU offset 2 zero-extend memory[0x778]=000000ad
+[PASS]                                         LBU offset 3 zero-extend memory[0x77c]=000000de
+[PASS]                                                              LUI memory[0x780]=7fff0000
+[PASS]                                                            AUIPC memory[0x784]=7fff0348
+[PASS]                                                        BEQ taken memory[0x788]=00000002
+[PASS]                                                        BNE taken memory[0x78c]=00000003
+[PASS]                                                        BLT taken memory[0x790]=00000004
+[PASS]                                                        BGE taken memory[0x794]=00000005
+[PASS]                                                       BLTU taken memory[0x798]=00000006
+[PASS]                                                       BGEU taken memory[0x79c]=00000007
+[PASS]                                                 JAL link rd=pc+4 memory[0x7a0]=0000046c
+[PASS]                                          JAL skipped instruction memory[0x7a4]=00000000
+[PASS]                                              JAL target executed memory[0x7a8]=00000009
+[PASS]                                                JALR link rd=pc+4 memory[0x7ac]=000004b8
+[PASS]                                         JALR skipped instruction memory[0x7b0]=00000000
+[PASS]                                             JALR target executed memory[0x7b4]=0000000a
+[TB PASS] rv32i directed tests passed on my_mcu_top off-chip path
+$finish called at time : 180 ms : File "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/A_MCU/testbench/5_testbench_rv32i_directed/tb_rv32i_directed.v" Line 553
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1502.379 ; gain = 55.840 ; free physical = 5111 ; free virtual = 11227
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_rv32i_directed_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for all
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1502.379 ; gain = 61.316 ; free physical = 5111 ; free virtual = 11227
+[Tcl] 시뮬레이션 완료!
+INFO: [Common 17-206] Exiting Vivado at Tue May 19 20:25:09 2026...
+
+=========================================
+[Cleanup] Remove unnecessary Vivado temp files
+=========================================
+[Cleanup] done

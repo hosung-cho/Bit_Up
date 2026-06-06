@@ -1,0 +1,571 @@
+Qflow static timing analysis logfile created on Fri May 22 02:33:25 KST 2026
+Running vesta static timing analysis
+vesta --long my_mcu_top.rtlnopwr.v /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.4.100
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "etri05_stdcells"
+End of library at line 6613
+Lib read /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib:  Processed 6615 lines.
+Parsing module "my_mcu_top"
+Verilog netlist read:  Processed 10941 lines.
+Number of paths analyzed:  277
+
+Top 20 maximum delay paths:
+Path _2525_/CLK to _2566_/D delay 8526.27 ps
+      0.0 ps                    i_clk_sys_ext:          -> _2525_/CLK
+    447.3 ps  \u_cpu.bufreg.i_right_shift_op : _2525_/Q -> _2480_/A
+    955.3 ps                            _636_: _2480_/Y -> _1248_/B
+   1295.0 ps                            _633_: _1248_/Y -> _1251_/A
+   1480.3 ps                            _630_: _1251_/Y -> _1252_/B
+   1804.1 ps                            _629_: _1252_/Y -> _1253_/A
+   2153.2 ps                            _628_: _1253_/Y -> _1261_/C
+   2326.6 ps                            _620_: _1261_/Y -> _1262_/A
+   2548.4 ps                            _619_: _1262_/Y -> _1263_/B
+   3189.1 ps                            _618_: _1263_/Y -> _1274_/S
+   3621.7 ps                            _607_: _1274_/Y -> _1276_/B
+   3787.2 ps                            _605_: _1276_/Y -> _1284_/B
+   5917.5 ps                            _597_: _1284_/Y -> _1285_/A
+   6716.9 ps                            _596_: _1285_/Y -> _1286_/B
+   7080.6 ps                            _595_: _1286_/Y -> _1300_/C
+   7372.7 ps                            _581_: _1300_/Y -> _1307_/A
+   7520.3 ps                            _574_: _1307_/Y -> _1308_/C
+   7708.1 ps                            _573_: _1308_/Y -> _1384_/B
+   7937.9 ps                 \u_cpu.o_wdata0 : _1384_/Y -> _2386_/B
+   8113.4 ps                            _265_: _2386_/Y -> _2389_/C
+   8239.7 ps                            _685_: _2389_/Y -> _2566_/D
+
+   clock skew at destination = 0
+   setup at destination = 286.567
+
+Path _2525_/CLK to _2649_/D delay 8433.64 ps
+      0.0 ps                    i_clk_sys_ext:          -> _2525_/CLK
+    447.3 ps  \u_cpu.bufreg.i_right_shift_op : _2525_/Q -> _2480_/A
+    955.3 ps                            _636_: _2480_/Y -> _1248_/B
+   1295.0 ps                            _633_: _1248_/Y -> _1251_/A
+   1480.3 ps                            _630_: _1251_/Y -> _1252_/B
+   1804.1 ps                            _629_: _1252_/Y -> _1253_/A
+   2153.2 ps                            _628_: _1253_/Y -> _1261_/C
+   2326.6 ps                            _620_: _1261_/Y -> _1262_/A
+   2548.4 ps                            _619_: _1262_/Y -> _1263_/B
+   3189.1 ps                            _618_: _1263_/Y -> _1274_/S
+   3621.7 ps                            _607_: _1274_/Y -> _1276_/B
+   3787.2 ps                            _605_: _1276_/Y -> _1284_/B
+   5917.5 ps                            _597_: _1284_/Y -> _1285_/A
+   6716.9 ps                            _596_: _1285_/Y -> _1286_/B
+   7080.6 ps                            _595_: _1286_/Y -> _1300_/C
+   7372.7 ps                            _581_: _1300_/Y -> _1307_/A
+   7520.3 ps                            _574_: _1307_/Y -> _1308_/C
+   7708.1 ps                            _573_: _1308_/Y -> _1384_/B
+   7937.9 ps                 \u_cpu.o_wdata0 : _1384_/Y -> _2041_/B
+   8058.2 ps                             _18_: _2041_/Y -> _2044_/B
+   8170.4 ps                            _783_: _2044_/Y -> _2649_/D
+
+   clock skew at destination = 0
+   setup at destination = 263.219
+
+Path _2525_/CLK to _2657_/D delay 8315.58 ps
+      0.0 ps                    i_clk_sys_ext:          -> _2525_/CLK
+    447.3 ps  \u_cpu.bufreg.i_right_shift_op : _2525_/Q -> _2480_/A
+    955.3 ps                            _636_: _2480_/Y -> _1248_/B
+   1295.0 ps                            _633_: _1248_/Y -> _1251_/A
+   1480.3 ps                            _630_: _1251_/Y -> _1252_/B
+   1804.1 ps                            _629_: _1252_/Y -> _1253_/A
+   2153.2 ps                            _628_: _1253_/Y -> _1261_/C
+   2326.6 ps                            _620_: _1261_/Y -> _1262_/A
+   2548.4 ps                            _619_: _1262_/Y -> _1263_/B
+   3189.1 ps                            _618_: _1263_/Y -> _1274_/S
+   3621.7 ps                            _607_: _1274_/Y -> _1276_/B
+   3787.2 ps                            _605_: _1276_/Y -> _1284_/B
+   5917.5 ps                            _597_: _1284_/Y -> _1285_/A
+   6716.9 ps                            _596_: _1285_/Y -> _1286_/B
+   7080.6 ps                            _595_: _1286_/Y -> _1300_/C
+   7372.7 ps                            _581_: _1300_/Y -> _1307_/A
+   7520.3 ps                            _574_: _1307_/Y -> _1308_/C
+   7708.1 ps                            _573_: _1308_/Y -> _1384_/B
+   7937.9 ps                 \u_cpu.o_wdata0 : _1384_/Y -> _2657_/D
+
+   clock skew at destination = 0
+   setup at destination = 377.639
+
+Path _2525_/CLK to _2511_/D delay 8237.03 ps
+      0.0 ps                    i_clk_sys_ext:          -> _2525_/CLK
+    447.3 ps  \u_cpu.bufreg.i_right_shift_op : _2525_/Q -> _2480_/A
+    955.3 ps                            _636_: _2480_/Y -> _1248_/B
+   1295.0 ps                            _633_: _1248_/Y -> _1251_/A
+   1480.3 ps                            _630_: _1251_/Y -> _1252_/B
+   1804.1 ps                            _629_: _1252_/Y -> _1253_/A
+   2153.2 ps                            _628_: _1253_/Y -> _1261_/C
+   2326.6 ps                            _620_: _1261_/Y -> _1262_/A
+   2548.4 ps                            _619_: _1262_/Y -> _1263_/B
+   3189.1 ps                            _618_: _1263_/Y -> _1274_/S
+   3621.7 ps                            _607_: _1274_/Y -> _1276_/B
+   3787.2 ps                            _605_: _1276_/Y -> _1284_/B
+   5917.5 ps                            _597_: _1284_/Y -> _1285_/A
+   6716.9 ps                            _596_: _1285_/Y -> _1286_/B
+   7080.6 ps                            _595_: _1286_/Y -> _1300_/C
+   7372.7 ps                            _581_: _1300_/Y -> _1307_/A
+   7520.3 ps                            _574_: _1307_/Y -> _1308_/C
+   7708.1 ps                            _573_: _1308_/Y -> _1883_/A
+   7873.4 ps                           _1124_: _1883_/Y -> _1885_/D
+   7963.9 ps                            _808_: _1885_/Y -> _2511_/D
+
+   clock skew at destination = 0
+   setup at destination = 273.089
+
+Path _2555_/CLK to _2640_/D delay 8108.38 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2077_/D
+   7684.9 ps                       _43_: _2077_/Y -> _2078_/C
+   7798.0 ps                      _772_: _2078_/Y -> _2640_/D
+
+   clock skew at destination = 0
+   setup at destination = 310.385
+
+Path _2555_/CLK to _2639_/D delay 8108.38 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2079_/D
+   7684.9 ps                       _44_: _2079_/Y -> _2080_/C
+   7798.0 ps                      _771_: _2080_/Y -> _2639_/D
+
+   clock skew at destination = 0
+   setup at destination = 310.385
+
+Path _2555_/CLK to _2631_/D delay 8108.38 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2096_/D
+   7684.9 ps                       _55_: _2096_/Y -> _2097_/C
+   7798.0 ps                      _765_: _2097_/Y -> _2631_/D
+
+   clock skew at destination = 0
+   setup at destination = 310.385
+
+Path _2555_/CLK to _2625_/D delay 8108.38 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2110_/D
+   7684.9 ps                       _64_: _2110_/Y -> _2111_/C
+   7798.0 ps                      _760_: _2111_/Y -> _2625_/D
+
+   clock skew at destination = 0
+   setup at destination = 310.385
+
+Path _2555_/CLK to _2614_/D delay 8108.38 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2135_/D
+   7684.9 ps                       _80_: _2135_/Y -> _2136_/C
+   7798.0 ps                      _751_: _2136_/Y -> _2614_/D
+
+   clock skew at destination = 0
+   setup at destination = 310.385
+
+Path _2555_/CLK to _2617_/D delay 8108.38 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2127_/D
+   7684.9 ps                       _75_: _2127_/Y -> _2128_/C
+   7798.0 ps                      _754_: _2128_/Y -> _2617_/D
+
+   clock skew at destination = 0
+   setup at destination = 310.385
+
+Path _2555_/CLK to _2610_/D delay 8103.01 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2147_/D
+   7684.9 ps                       _88_: _2147_/Y -> _2148_/B
+   7795.3 ps                      _747_: _2148_/Y -> _2610_/D
+
+   clock skew at destination = 0
+   setup at destination = 307.749
+
+Path _2555_/CLK to _2634_/D delay 8103.01 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2088_/D
+   7684.9 ps                       _50_: _2088_/Y -> _2089_/B
+   7795.3 ps                      _768_: _2089_/Y -> _2634_/D
+
+   clock skew at destination = 0
+   setup at destination = 307.749
+
+Path _2555_/CLK to _2637_/D delay 8103.01 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2082_/D
+   7684.9 ps                       _46_: _2082_/Y -> _2083_/B
+   7795.3 ps                      _770_: _2083_/Y -> _2637_/D
+
+   clock skew at destination = 0
+   setup at destination = 307.749
+
+Path _2555_/CLK to _2626_/D delay 8103.01 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2108_/D
+   7684.9 ps                       _63_: _2108_/Y -> _2109_/B
+   7795.3 ps                      _761_: _2109_/Y -> _2626_/D
+
+   clock skew at destination = 0
+   setup at destination = 307.749
+
+Path _2555_/CLK to _2628_/D delay 8103.01 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2102_/D
+   7684.9 ps                       _59_: _2102_/Y -> _2103_/B
+   7795.3 ps                      _763_: _2103_/Y -> _2628_/D
+
+   clock skew at destination = 0
+   setup at destination = 307.749
+
+Path _2555_/CLK to _2618_/D delay 8103.01 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2125_/D
+   7684.9 ps                       _74_: _2125_/Y -> _2126_/B
+   7795.3 ps                      _755_: _2126_/Y -> _2618_/D
+
+   clock skew at destination = 0
+   setup at destination = 307.749
+
+Path _2555_/CLK to _2620_/D delay 8103.01 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2119_/D
+   7684.9 ps                       _70_: _2119_/Y -> _2120_/B
+   7795.3 ps                      _757_: _2120_/Y -> _2620_/D
+
+   clock skew at destination = 0
+   setup at destination = 307.749
+
+Path _2555_/CLK to _2624_/D delay 8103.01 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2113_/D
+   7684.9 ps                       _66_: _2113_/Y -> _2114_/B
+   7795.3 ps                      _759_: _2114_/Y -> _2624_/D
+
+   clock skew at destination = 0
+   setup at destination = 307.749
+
+Path _2555_/CLK to _2612_/D delay 8103.01 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2141_/D
+   7684.9 ps                       _84_: _2141_/Y -> _2142_/B
+   7795.3 ps                      _749_: _2142_/Y -> _2612_/D
+
+   clock skew at destination = 0
+   setup at destination = 307.749
+
+Path _2555_/CLK to _2615_/D delay 8103.01 ps
+      0.0 ps                 i_clk_fast:          -> _2555_/CLK
+   1462.7 ps               mem_ibus_ack: _2555_/Q -> _1320_/A
+   3165.1 ps                      _561_: _1320_/Y -> _1321_/B
+   3640.7 ps                      _560_: _1321_/Y -> _1330_/C
+   4177.5 ps  \u_rf_if.i_stream_rs2_en : _1330_/Y -> _1932_/B
+   4509.0 ps                     _1168_: _1932_/Y -> _1933_/B
+   4669.0 ps                     _1169_: _1933_/Y -> _1934_/B
+   5800.3 ps                     _1170_: _1934_/Y -> _1935_/A
+   7287.7 ps                     _1171_: _1935_/Y -> _2133_/D
+   7684.9 ps                       _79_: _2133_/Y -> _2134_/B
+   7795.3 ps                      _752_: _2134_/Y -> _2615_/D
+
+   clock skew at destination = 0
+   setup at destination = 307.749
+
+Computed maximum clock frequency (zero margin) = 117.285 MHz
+-----------------------------------------
+
+Number of paths analyzed:  277
+
+Top 20 minimum delay paths:
+Path _2524_/CLK to _2524_/D delay 107.126 ps
+      0.0 ps             i_clk_sys_ext:          -> _2524_/CLK
+      0.0 ps  \u_cpu.decode.co_ebreak : _2524_/Q -> _2648_/A
+    126.4 ps                     _657_: _2648_/Y -> _1418_/B
+    202.5 ps                     _937_: _1418_/Y -> _2524_/D
+
+   clock skew at destination = 0
+   hold at destination = -95.3363
+
+Path _2657_/CLK to _2483_/D delay 130.415 ps
+      0.0 ps             i_clk_sys_ext:          -> _2657_/CLK
+    224.5 ps  \u_rf_if.wdata0_next [0]: _2657_/Q -> _2483_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.073
+
+Path _2507_/CLK to _2507_/D delay 132.277 ps
+      0.0 ps                                 i_clk_sys_ext:          -> _2507_/CLK
+      0.0 ps  \u_cpu.immdec.gen_immdec_w_eq_1.imm30_25 [0]: _2507_/Q -> _1491_/A
+    126.5 ps                                         _418_: _1491_/Y -> _1493_/A
+    225.0 ps                                         _921_: _1493_/Y -> _2507_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.7163
+
+Path _2563_/CLK to _2563_/D delay 133.465 ps
+      0.0 ps                   i_clk_fast:          -> _2563_/CLK
+      0.0 ps  \u_mem_serial.bit_count [4]: _2563_/Q -> _2248_/A
+    125.1 ps                        _162_: _2248_/Y -> _2261_/A
+    226.8 ps                        _720_: _2261_/Y -> _2563_/D
+
+   clock skew at destination = 0
+   hold at destination = -93.3432
+
+Path _2709_/CLK to _2708_/D delay 141.388 ps
+      0.0 ps                i_clk_sys_ext:          -> _2709_/CLK
+      0.0 ps  \u_cpu.ctrl.o_ibus_adr [25]: _2709_/Q -> _1819_/A
+    134.3 ps                       _1092_: _1819_/Y -> _1822_/A
+    234.0 ps                        _839_: _1822_/Y -> _2708_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2710_/CLK to _2709_/D delay 141.388 ps
+      0.0 ps                i_clk_sys_ext:          -> _2710_/CLK
+      0.0 ps  \u_cpu.ctrl.o_ibus_adr [26]: _2710_/Q -> _1815_/A
+    134.3 ps                       _1089_: _1815_/Y -> _1820_/A
+    234.0 ps                        _840_: _1820_/Y -> _2709_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2692_/CLK to _2691_/D delay 141.388 ps
+      0.0 ps               i_clk_sys_ext:          -> _2692_/CLK
+      0.0 ps  \u_cpu.ctrl.o_ibus_adr [9]: _2692_/Q -> _1851_/A
+    134.3 ps                      _1108_: _1851_/Y -> _1854_/A
+    234.0 ps                       _823_: _1854_/Y -> _2691_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2691_/CLK to _2690_/D delay 141.388 ps
+      0.0 ps               i_clk_sys_ext:          -> _2691_/CLK
+      0.0 ps  \u_cpu.ctrl.o_ibus_adr [8]: _2691_/Q -> _1853_/A
+    134.3 ps                      _1109_: _1853_/Y -> _1856_/A
+    234.0 ps                       _822_: _1856_/Y -> _2690_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2747_/CLK to _2490_/D delay 141.388 ps
+      0.0 ps            i_clk_sys_ext:          -> _2747_/CLK
+      0.0 ps  \u_cpu.bufreg.data [29]: _2747_/Q -> _1572_/A
+    134.3 ps                    _352_: _1572_/Y -> _1573_/A
+    234.0 ps                    _906_: _1573_/Y -> _2490_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2746_/CLK to _2747_/D delay 141.388 ps
+      0.0 ps            i_clk_sys_ext:          -> _2746_/CLK
+      0.0 ps  \u_cpu.bufreg.data [30]: _2746_/Q -> _1631_/A
+    134.3 ps                    _668_: _1631_/Y -> _1632_/A
+    234.0 ps                    _878_: _1632_/Y -> _2747_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2689_/CLK to _2688_/D delay 141.388 ps
+      0.0 ps               i_clk_sys_ext:          -> _2689_/CLK
+      0.0 ps  \u_cpu.ctrl.o_ibus_adr [6]: _2689_/Q -> _1857_/A
+    134.3 ps                      _1111_: _1857_/Y -> _1860_/A
+    234.0 ps                       _820_: _1860_/Y -> _2688_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2706_/CLK to _2705_/D delay 141.388 ps
+      0.0 ps                i_clk_sys_ext:          -> _2706_/CLK
+      0.0 ps  \u_cpu.ctrl.o_ibus_adr [22]: _2706_/Q -> _1825_/A
+    134.3 ps                       _1095_: _1825_/Y -> _1828_/A
+    234.0 ps                        _836_: _1828_/Y -> _2705_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2707_/CLK to _2706_/D delay 141.388 ps
+      0.0 ps                i_clk_sys_ext:          -> _2707_/CLK
+      0.0 ps  \u_cpu.ctrl.o_ibus_adr [23]: _2707_/Q -> _1823_/A
+    134.3 ps                       _1094_: _1823_/Y -> _1826_/A
+    234.0 ps                        _837_: _1826_/Y -> _2706_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2703_/CLK to _2702_/D delay 141.388 ps
+      0.0 ps                i_clk_sys_ext:          -> _2703_/CLK
+      0.0 ps  \u_cpu.ctrl.o_ibus_adr [19]: _2703_/Q -> _1831_/A
+    134.3 ps                       _1098_: _1831_/Y -> _1834_/A
+    234.0 ps                        _833_: _1834_/Y -> _2702_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2704_/CLK to _2703_/D delay 141.388 ps
+      0.0 ps                i_clk_sys_ext:          -> _2704_/CLK
+      0.0 ps  \u_cpu.ctrl.o_ibus_adr [20]: _2704_/Q -> _1829_/A
+    134.3 ps                       _1097_: _1829_/Y -> _1832_/A
+    234.0 ps                        _834_: _1832_/Y -> _2703_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2486_/CLK to _2485_/D delay 141.388 ps
+      0.0 ps            i_clk_sys_ext:          -> _2486_/CLK
+      0.0 ps  \u_cpu.bufreg.data [24]: _2486_/Q -> _1580_/A
+    134.3 ps                    _348_: _1580_/Y -> _1583_/A
+    234.0 ps                    _901_: _1583_/Y -> _2485_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2760_/CLK to _2759_/D delay 141.388 ps
+      0.0 ps            i_clk_sys_ext:          -> _2760_/CLK
+      0.0 ps  \u_cpu.bufreg.data [12]: _2760_/Q -> _1604_/A
+    134.3 ps                    _336_: _1604_/Y -> _1607_/A
+    234.0 ps                    _889_: _1607_/Y -> _2759_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2482_/CLK to _2481_/D delay 141.388 ps
+      0.0 ps            i_clk_sys_ext:          -> _2482_/CLK
+      0.0 ps  \u_cpu.bufreg.data [21]: _2482_/Q -> _1586_/A
+    134.3 ps                    _345_: _1586_/Y -> _1589_/A
+    234.0 ps                    _898_: _1589_/Y -> _2481_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2756_/CLK to _2755_/D delay 141.388 ps
+      0.0 ps           i_clk_sys_ext:          -> _2756_/CLK
+      0.0 ps  \u_cpu.bufreg.data [9]: _2756_/Q -> _1610_/A
+    134.3 ps                   _333_: _1610_/Y -> _1613_/A
+    234.0 ps                   _886_: _1613_/Y -> _2755_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Path _2766_/CLK to _2765_/D delay 141.388 ps
+      0.0 ps            i_clk_sys_ext:          -> _2766_/CLK
+      0.0 ps  \u_cpu.bufreg.data [18]: _2766_/Q -> _1592_/A
+    134.3 ps                    _342_: _1592_/Y -> _1595_/A
+    234.0 ps                    _895_: _1595_/Y -> _2765_/D
+
+   clock skew at destination = 0
+   hold at destination = -92.5786
+
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  0
+
+Top 0 maximum delay paths:
+-----------------------------------------
+
+Number of paths analyzed:  0
+
+Top 0 minimum delay paths:
+-----------------------------------------
+

@@ -1,0 +1,1285 @@
+* NGSPICE file created from serv_exec_unit.ext - technology: scmos
+
+.subckt AOI21X1 A B C Y vdd gnd
+M1000 vdd A a_7_146# vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=25.2p ps=28.2u
+M1001 Y C a_7_146# vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=14.4p ps=14.4u
+M1002 a_28_14# A gnd gnd nfet w=6u l=0.6u
++  ad=1.8p pd=6.6u as=12.6p ps=16.2u
+M1003 Y B a_28_14# gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.7u as=1.8p ps=6.6u
+M1004 a_7_146# B vdd vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=14.4p ps=14.4u
+M1005 gnd C Y gnd nfet w=3u l=0.6u
++  ad=6.3p pd=10.2u as=7.2p ps=8.7u
+.ends
+
+.subckt DFFPOSX1 D CLK Q vdd gnd
+M1000 vdd Q a_189_206# vdd pfet w=3u l=0.6u
++  ad=10.125p pd=14.7u as=0.9p ps=3.6u
+M1001 a_83_186# a_11_14# a_59_14# vdd pfet w=6u l=0.6u
++  ad=3.6p pd=7.2u as=7.2p ps=8.4u
+M1002 a_87_10# a_59_14# gnd gnd nfet w=3u l=0.6u
++  ad=6.3p pd=10.2u as=4.05p ps=5.7u
+M1003 gnd CLK a_11_14# gnd nfet w=6u l=0.6u
++  ad=5.85p pd=8.4u as=12.6p ps=16.2u
+M1004 gnd a_87_10# a_81_14# gnd nfet w=3u l=0.6u
++  ad=4.05p pd=5.7u as=1.35p ps=3.9u
+M1005 a_159_14# a_87_10# gnd gnd nfet w=3u l=0.6u
++  ad=0.9p pd=3.6u as=6.3p ps=10.2u
+M1006 a_49_186# D vdd vdd pfet w=6u l=0.6u
++  ad=4.5p pd=7.5u as=11.25p ps=14.4u
+M1007 vdd a_87_10# a_83_186# vdd pfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=3.6p ps=7.2u
+M1008 Q a_167_14# gnd gnd nfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=6.975p ps=8.7u
+M1009 Q a_167_14# vdd vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=10.125p ps=14.7u
+M1010 a_167_14# CLK a_159_14# gnd nfet w=3u l=0.6u
++  ad=3.6p pd=5.4u as=0.9p ps=3.6u
+M1011 a_49_14# D gnd gnd nfet w=3u l=0.6u
++  ad=1.35p pd=3.9u as=5.85p ps=8.4u
+M1012 a_87_10# a_59_14# vdd vdd pfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=7.2p ps=8.4u
+M1013 a_59_14# CLK a_49_186# vdd pfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=4.5p ps=7.5u
+M1014 a_161_186# a_87_10# vdd vdd pfet w=6u l=0.6u
++  ad=1.8p pd=6.6u as=12.6p ps=16.2u
+M1015 a_189_206# CLK a_167_14# vdd pfet w=3u l=0.6u
++  ad=0.9p pd=3.6u as=6.075p ps=8.4u
+M1016 a_59_14# a_11_14# a_49_14# gnd nfet w=3u l=0.6u
++  ad=4.05p pd=5.7u as=1.35p ps=3.9u
+M1017 a_187_14# a_11_14# a_167_14# gnd nfet w=3u l=0.6u
++  ad=1.35p pd=3.9u as=3.6p ps=5.4u
+M1018 vdd CLK a_11_14# vdd pfet w=12u l=0.6u
++  ad=11.25p pd=14.4u as=25.2p ps=28.2u
+M1019 gnd Q a_187_14# gnd nfet w=3u l=0.6u
++  ad=6.975p pd=8.7u as=1.35p ps=3.9u
+M1020 a_167_14# a_11_14# a_161_186# vdd pfet w=6u l=0.6u
++  ad=6.075p pd=8.4u as=1.8p ps=6.6u
+M1021 a_81_14# CLK a_59_14# gnd nfet w=3u l=0.6u
++  ad=1.35p pd=3.9u as=4.05p ps=5.7u
+.ends
+
+.subckt OAI21X1 A B C Y vdd gnd
+M1000 Y C a_7_14# gnd nfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=7.2p ps=8.4u
+M1001 a_30_146# A vdd vdd pfet w=12u l=0.6u
++  ad=3.6p pd=12.6u as=25.2p ps=28.2u
+M1002 vdd C Y vdd pfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=14.4p ps=14.7u
+M1003 gnd A a_7_14# gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=12.6p ps=16.2u
+M1004 Y B a_30_146# vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.7u as=3.6p ps=12.6u
+M1005 a_7_14# B gnd gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=7.2p ps=8.4u
+.ends
+
+.subckt INVX1 A Y vdd gnd
+M1000 Y A gnd gnd nfet w=3u l=0.6u
++  ad=6.3p pd=10.2u as=6.3p ps=10.2u
+M1001 Y A vdd vdd pfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=12.6p ps=16.2u
+.ends
+
+.subckt AND2X2 A B Y vdd gnd
+M1000 a_25_14# A a_7_14# gnd nfet w=6u l=0.6u
++  ad=2.7p pd=6.9u as=12.6p ps=16.2u
+M1001 gnd B a_25_14# gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=2.7p ps=6.9u
+M1002 vdd B a_7_14# vdd pfet w=6u l=0.6u
++  ad=14.4p pd=14.7u as=8.1p ps=8.7u
+M1003 Y a_7_14# gnd gnd nfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=7.2p ps=8.4u
+M1004 Y a_7_14# vdd vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=14.4p ps=14.7u
+M1005 a_7_14# A vdd vdd pfet w=6u l=0.6u
++  ad=8.1p pd=8.7u as=12.6p ps=16.2u
+.ends
+
+.subckt NAND2X1 A B Y vdd gnd
+M1000 a_27_14# A gnd gnd nfet w=6u l=0.6u
++  ad=2.7p pd=6.9u as=12.6p ps=16.2u
+M1001 Y B a_27_14# gnd nfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=2.7p ps=6.9u
+M1002 vdd B Y vdd pfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=7.2p ps=8.4u
+M1003 Y A vdd vdd pfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=12.6p ps=16.2u
+.ends
+
+.subckt AOI22X1 A B C D Y vdd gnd
+M1000 gnd C a_56_14# gnd nfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=1.8p ps=6.6u
+M1001 vdd A a_7_146# vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=25.2p ps=28.2u
+M1002 Y D a_7_146# vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=14.4p ps=14.4u
+M1003 a_28_14# A gnd gnd nfet w=6u l=0.6u
++  ad=1.8p pd=6.6u as=12.6p ps=16.2u
+M1004 Y B a_28_14# gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=1.8p ps=6.6u
+M1005 a_7_146# C Y vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=14.4p ps=14.4u
+M1006 a_7_146# B vdd vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=14.4p ps=14.4u
+M1007 a_56_14# D Y gnd nfet w=6u l=0.6u
++  ad=1.8p pd=6.6u as=7.2p ps=8.4u
+.ends
+
+.subckt BUFX2 A Y vdd gnd
+M1000 Y a_7_14# vdd vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=14.4p ps=14.7u
+M1001 gnd A a_7_14# gnd nfet w=3u l=0.6u
++  ad=7.2p pd=8.7u as=6.3p ps=10.2u
+M1002 Y a_7_14# gnd gnd nfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=7.2p ps=8.7u
+M1003 vdd A a_7_14# vdd pfet w=6u l=0.6u
++  ad=14.4p pd=14.7u as=12.6p ps=16.2u
+.ends
+
+.subckt CLKBUF1 A Y vdd gnd
+M1000 Y a_105_14# vdd vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=14.4p ps=14.4u
+M1001 a_65_14# a_25_14# gnd gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=7.2p ps=8.4u
+M1002 a_105_14# a_65_14# vdd vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=14.4p ps=14.4u
+M1003 Y a_105_14# gnd gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=7.2p ps=8.4u
+M1004 a_25_14# A vdd vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=25.2p ps=28.2u
+M1005 a_65_14# a_25_14# vdd vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=14.4p ps=14.4u
+M1006 a_25_14# A gnd gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=12.6p ps=16.2u
+M1007 gnd a_25_14# a_65_14# gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=7.2p ps=8.4u
+M1008 a_105_14# a_65_14# gnd gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=7.2p ps=8.4u
+M1009 gnd a_105_14# Y gnd nfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=7.2p ps=8.4u
+M1010 vdd a_65_14# a_105_14# vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=14.4p ps=14.4u
+M1011 vdd a_105_14# Y vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=14.4p ps=14.4u
+M1012 vdd a_25_14# a_65_14# vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=14.4p ps=14.4u
+M1013 gnd A a_25_14# gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=7.2p ps=8.4u
+M1014 vdd A a_25_14# vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=14.4p ps=14.4u
+M1015 gnd a_65_14# a_105_14# gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=7.2p ps=8.4u
+.ends
+
+.subckt NOR3X1 A B C Y vdd gnd
+M1000 gnd B Y gnd nfet w=3u l=0.6u
++  ad=3.6p pd=5.4u as=3.6p ps=5.4u
+M1001 a_7_166# A vdd vdd pfet w=9u l=0.6u
++  ad=10.8p pd=11.4u as=10.8p ps=11.4u
+M1002 a_7_166# B a_65_166# vdd pfet w=9u l=0.6u
++  ad=18.9p pd=22.2u as=10.8p ps=11.4u
+M1003 a_65_166# C Y vdd pfet w=9u l=0.6u
++  ad=18.9p pd=22.2u as=10.8p ps=11.4u
+M1004 Y C gnd gnd nfet w=3u l=0.6u
++  ad=6.3p pd=10.2u as=3.6p ps=5.4u
+M1005 a_65_166# B a_7_166# vdd pfet w=9u l=0.6u
++  ad=10.8p pd=11.4u as=10.8p ps=11.4u
+M1006 vdd A a_7_166# vdd pfet w=9u l=0.6u
++  ad=10.8p pd=11.4u as=18.9p ps=22.2u
+M1007 Y C a_65_166# vdd pfet w=9u l=0.6u
++  ad=10.8p pd=11.4u as=18.9p ps=22.2u
+M1008 Y A gnd gnd nfet w=3u l=0.6u
++  ad=3.6p pd=5.4u as=7.2p ps=10.8u
+.ends
+
+.subckt NOR2X1 A B Y vdd gnd
+M1000 a_25_146# A vdd vdd pfet w=12u l=0.6u
++  ad=3.6p pd=12.6u as=25.2p ps=28.2u
+M1001 Y A gnd gnd nfet w=3u l=0.6u
++  ad=3.6p pd=5.4u as=6.3p ps=10.2u
+M1002 Y B a_25_146# vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=3.6p ps=12.6u
+M1003 gnd B Y gnd nfet w=3u l=0.6u
++  ad=6.3p pd=10.2u as=3.6p ps=5.4u
+.ends
+
+.subckt INVX2 A Y vdd gnd
+M1000 Y A vdd vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=25.2p ps=28.2u
+M1001 Y A gnd gnd nfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=12.6p ps=16.2u
+.ends
+
+.subckt NAND3X1 A B C Y vdd gnd
+M1000 Y C a_34_14# gnd nfet w=9u l=0.6u
++  ad=18.9p pd=22.2u as=2.7p ps=9.6u
+M1001 a_26_14# A gnd gnd nfet w=9u l=0.6u
++  ad=2.7p pd=9.6u as=18.9p ps=22.2u
+M1002 vdd B Y vdd pfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=7.2p ps=8.4u
+M1003 a_34_14# B a_26_14# gnd nfet w=9u l=0.6u
++  ad=2.7p pd=9.6u as=2.7p ps=9.6u
+M1004 Y C vdd vdd pfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=7.2p ps=8.4u
+M1005 Y A vdd vdd pfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=12.6p ps=16.2u
+.ends
+
+.subckt OAI22X1 A B C D Y vdd gnd
+M1000 Y D a_7_14# gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=7.2p ps=8.4u
+M1001 a_25_146# A vdd vdd pfet w=12u l=0.6u
++  ad=5.4p pd=12.9u as=25.2p ps=28.2u
+M1002 a_65_146# D Y vdd pfet w=12u l=0.6u
++  ad=5.4p pd=12.9u as=23.4p ps=15.9u
+M1003 gnd A a_7_14# gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=12.6p ps=16.2u
+M1004 a_7_14# C Y gnd nfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=7.2p ps=8.4u
+M1005 a_7_14# B gnd gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=7.2p ps=8.4u
+M1006 Y B a_25_146# vdd pfet w=12u l=0.6u
++  ad=23.4p pd=15.9u as=5.4p ps=12.9u
+M1007 vdd C a_65_146# vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=5.4p ps=12.9u
+.ends
+
+.subckt OR2X2 A B Y vdd gnd
+M1000 Y a_7_146# gnd gnd nfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=6.3p ps=8.4u
+M1001 a_25_146# A a_7_146# vdd pfet w=12u l=0.6u
++  ad=5.4p pd=12.9u as=25.2p ps=28.2u
+M1002 a_7_146# A gnd gnd nfet w=3u l=0.6u
++  ad=3.6p pd=5.4u as=6.3p ps=10.2u
+M1003 Y a_7_146# vdd vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=14.4p ps=14.4u
+M1004 gnd B a_7_146# gnd nfet w=3u l=0.6u
++  ad=6.3p pd=8.4u as=3.6p ps=5.4u
+M1005 vdd B a_25_146# vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=5.4p ps=12.9u
+.ends
+
+.subckt INVX8 A Y vdd gnd
+M1000 Y A gnd gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=7.2p ps=8.4u
+M1001 Y A vdd vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=25.2p ps=28.2u
+M1002 Y A vdd vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=14.4p ps=14.4u
+M1003 Y A gnd gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=12.6p ps=16.2u
+M1004 gnd A Y gnd nfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=7.2p ps=8.4u
+M1005 vdd A Y vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=14.4p ps=14.4u
+M1006 gnd A Y gnd nfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=7.2p ps=8.4u
+M1007 vdd A Y vdd pfet w=12u l=0.6u
++  ad=14.4p pd=14.4u as=14.4p ps=14.4u
+.ends
+
+.subckt serv_exec_unit gnd vdd clk rst_n cmd_valid cmd_ready cmd_op[3] cmd_op[2] cmd_op[1]
++ cmd_op[0] cmd_a cmd_b cmd_last rsp_valid rsp_ready rsp_result rsp_flags[5] rsp_flags[4]
++ rsp_flags[3] rsp_flags[2] rsp_flags[1] rsp_flags[0] rsp_last busy debug_state[2]
++ debug_state[1] debug_state[0]
+X_1270_ _1270_/A _1270_/B _1517_/C _1630_/D vdd gnd AOI21X1
+X_1606_ _1606_/D _1651_/CLK _1606_/Q vdd gnd DFFPOSX1
+X_1399_ _1449_/A _1434_/B _1625_/Q _1401_/A vdd gnd OAI21X1
+X_1468_ _1574_/Q _1469_/C vdd gnd INVX1
+X_1537_ _1537_/D _1651_/CLK _1537_/Q vdd gnd DFFPOSX1
+X_981_ _981_/A _981_/B _984_/C vdd gnd AND2X2
+X_1253_ _1253_/A _1253_/B _1500_/C _1255_/A vdd gnd OAI21X1
+X_1322_ _977_/B _1332_/B _1327_/A vdd gnd NAND2X1
+X_1184_ _1184_/A _885_/B _1185_/B vdd gnd NAND2X1
+X_895_ _895_/A _895_/B _895_/C _895_/Y vdd gnd AOI21X1
+X_964_ _964_/A _964_/B _964_/C _964_/D _965_/B vdd gnd AOI22X1
+X_1236_ _1644_/Q _964_/B _964_/C _1642_/Q _1237_/B vdd gnd AOI22X1
+X_1305_ _1616_/Q _1454_/B _1453_/C _1306_/C vdd gnd OAI21X1
+X_1098_ _1098_/A _1098_/B _963_/C _1100_/A vdd gnd OAI21X1
+X_1167_ _903_/C _1278_/B _1167_/C _1168_/B vdd gnd OAI21X1
+XBUFX2_insert0 _896_/Y _1532_/C vdd gnd BUFX2
+X_878_ _917_/A _990_/A _920_/B vdd gnd NAND2X1
+X_947_ _947_/A _947_/B _947_/C _947_/Y vdd gnd AOI21X1
+X_1021_ _1520_/C _1508_/B _1021_/C _1023_/A vdd gnd AOI21X1
+X_1219_ _1650_/Q _911_/B _889_/A _1648_/Q _1220_/B vdd gnd AOI22X1
+X_801_ _804_/Y _802_/Y _801_/Y vdd gnd NAND2X1
+X_1570_ _1570_/D _1653_/CLK _957_/A vdd gnd DFFPOSX1
+X_1004_ _1004_/A _1004_/B _1500_/C _1006_/A vdd gnd OAI21X1
+XCLKBUF1_insert40 clk _767_/CLK vdd gnd CLKBUF1
+X_1622_ _1622_/D _1655_/CLK _1622_/Q vdd gnd DFFPOSX1
+X_1484_ _1484_/A _1484_/B _947_/C _1542_/D vdd gnd AOI21X1
+X_1553_ _1553_/D _1654_/CLK _968_/A vdd gnd DFFPOSX1
+X_1536_ _1536_/D _1637_/CLK _1536_/Q vdd gnd DFFPOSX1
+X_1605_ _947_/Y _1644_/CLK _954_/A vdd gnd DFFPOSX1
+X_1398_ _1398_/A _1450_/B _1398_/C _1625_/D vdd gnd AOI21X1
+X_1467_ _1467_/A _1467_/B _1467_/C _1590_/D vdd gnd AOI21X1
+X_980_ _980_/A _980_/B _985_/A vdd gnd NAND2X1
+X_1252_ _1296_/A _1493_/B _1252_/C _1253_/B vdd gnd NOR3X1
+X_1321_ _1337_/A _1321_/B _1321_/C _1592_/D vdd gnd AOI21X1
+X_1183_ _924_/A _944_/B _1184_/A vdd gnd NOR2X1
+X_1519_ _1519_/A _1519_/B _1519_/C _1521_/A vdd gnd AOI21X1
+X_894_ _894_/A _911_/B _894_/C _905_/A _895_/A vdd gnd AOI22X1
+X_963_ _963_/A _963_/B _963_/C _965_/A vdd gnd OAI21X1
+X_1166_ cmd_a _1524_/A _1278_/B vdd gnd NAND2X1
+X_1235_ _963_/C _1235_/B _1237_/A vdd gnd NAND2X1
+X_1304_ _1465_/B _1455_/B _1537_/Q _1306_/A vdd gnd OAI21X1
+XBUFX2_insert1 _896_/Y _963_/C vdd gnd BUFX2
+X_1097_ _1284_/A _1493_/B _1481_/A _1098_/B vdd gnd NOR3X1
+X_877_ _959_/B _990_/A vdd gnd INVX2
+X_946_ _946_/A _946_/B _946_/C _954_/A _947_/B vdd gnd AOI22X1
+X_1020_ _959_/B _990_/C _1508_/B vdd gnd NOR2X1
+X_1149_ _1337_/A _1321_/B _1149_/C _1553_/D vdd gnd AOI21X1
+X_1218_ _1218_/A _1218_/B _1532_/C _1220_/A vdd gnd OAI21X1
+X_800_ _808_/Y _806_/Y _801_/Y _800_/Y vdd gnd NAND3X1
+X_929_ _957_/B _958_/A _929_/C _932_/A vdd gnd NAND3X1
+X_1003_ _874_/A _1499_/B _1252_/C _1004_/B vdd gnd NOR3X1
+XCLKBUF1_insert41 clk _1644_/CLK vdd gnd CLKBUF1
+X_1552_ _1552_/D _1637_/CLK _1552_/Q vdd gnd DFFPOSX1
+X_1621_ _1621_/D _1651_/CLK _1621_/Q vdd gnd DFFPOSX1
+X_1483_ _1558_/Q _946_/B _964_/C _1542_/Q _1484_/B vdd gnd AOI22X1
+X_1535_ _1535_/D _1651_/CLK _850_/A vdd gnd DFFPOSX1
+X_1604_ _1604_/D _1653_/CLK _842_/A vdd gnd DFFPOSX1
+X_1397_ _1625_/Q _1435_/B _1453_/C _1398_/C vdd gnd OAI21X1
+X_1466_ _755_/A _1467_/B _1466_/C _1467_/C vdd gnd OAI21X1
+X_1320_ _860_/A _1320_/B _1321_/C vdd gnd NAND2X1
+X_1182_ _1539_/Q _1182_/B _1185_/A vdd gnd NAND2X1
+X_1251_ _1498_/A _1251_/B _1251_/C _1253_/A vdd gnd AOI21X1
+X_1449_ _1449_/A _850_/B _1635_/Q _1451_/A vdd gnd OAI21X1
+X_1518_ _1598_/Q _1519_/C vdd gnd INVX1
+X_893_ _908_/A _893_/B _908_/C _894_/C vdd gnd OAI21X1
+X_962_ _962_/A _962_/B _962_/C _963_/B vdd gnd NOR3X1
+X_1303_ _980_/A _980_/B _1303_/C _1303_/Y vdd gnd NAND3X1
+X_1096_ cmd_a _961_/B _961_/C _1284_/A vdd gnd NAND3X1
+X_1165_ _1289_/B _1277_/B _1545_/Q _1167_/C vdd gnd OAI21X1
+X_1234_ _962_/C _1234_/B _1234_/C _1235_/B vdd gnd OAI21X1
+XBUFX2_insert2 _896_/Y _945_/C vdd gnd BUFX2
+X_945_ _945_/A _945_/B _945_/C _947_/A vdd gnd OAI21X1
+X_876_ _929_/C _939_/C _920_/A vdd gnd NAND2X1
+X_1079_ _1541_/Q _946_/B _946_/C _1573_/Q _1080_/B vdd gnd AOI22X1
+X_1148_ _968_/A _1365_/C _1149_/C vdd gnd NAND2X1
+X_1217_ _1261_/A _1499_/B _1252_/C _1218_/B vdd gnd NOR3X1
+X_928_ _946_/A _931_/C vdd gnd INVX1
+X_859_ _859_/A _859_/B _859_/C _859_/D _859_/Y vdd gnd OAI22X1
+X_1002_ _1492_/A _1251_/B _1002_/C _1004_/A vdd gnd AOI21X1
+XCLKBUF1_insert42 clk _1655_/CLK vdd gnd CLKBUF1
+X_1482_ _963_/C _1482_/B _1484_/A vdd gnd NAND2X1
+X_1551_ _1551_/D _1653_/CLK _845_/A vdd gnd DFFPOSX1
+X_1620_ _1620_/D _1654_/CLK _1620_/Q vdd gnd DFFPOSX1
+X_1465_ _1606_/Q _1465_/B _1465_/C _1465_/D _1467_/A vdd gnd AOI22X1
+X_1534_ _1534_/A _1534_/B _895_/C _1566_/D vdd gnd AOI21X1
+X_1603_ _955_/Y _1647_/CLK _964_/A vdd gnd DFFPOSX1
+X_1396_ _1449_/A _1455_/B _1629_/Q _1398_/A vdd gnd OAI21X1
+X_1181_ _1181_/A _1181_/B _947_/C _1541_/D vdd gnd AOI21X1
+X_1250_ _1636_/Q _1251_/C vdd gnd INVX1
+X_1448_ _1448_/A _1450_/B _1448_/C _1635_/D vdd gnd AOI21X1
+X_1517_ _1517_/A _1517_/B _1517_/C _1639_/D vdd gnd AOI21X1
+X_1379_ _1379_/A _1379_/B _828_/B _1383_/B vdd gnd OAI21X1
+X_961_ cmd_b _961_/B _961_/C _962_/A vdd gnd NAND3X1
+X_892_ _892_/A _892_/B _893_/B vdd gnd NOR2X1
+X_1233_ _949_/A _950_/A _1642_/Q _1234_/C vdd gnd OAI21X1
+X_1302_ _1302_/A _1302_/B _895_/C _1618_/D vdd gnd AOI21X1
+X_1095_ _960_/A _1498_/B _1095_/C _1098_/A vdd gnd AOI21X1
+X_1164_ _1164_/A _1164_/B _1523_/C _1547_/D vdd gnd AOI21X1
+XBUFX2_insert3 _896_/Y _1285_/C vdd gnd BUFX2
+X_944_ _944_/A _944_/B _962_/C _945_/B vdd gnd NOR3X1
+X_875_ _973_/B _948_/C _891_/A _907_/A vdd gnd NAND3X1
+X_1216_ _973_/A _892_/A _1216_/C _1218_/A vdd gnd AOI21X1
+X_1078_ _1078_/A _1078_/B _945_/C _1080_/A vdd gnd OAI21X1
+X_1147_ _1319_/C _970_/B _1533_/B _1321_/B vdd gnd OAI21X1
+X_858_ _858_/A _859_/B _858_/C _858_/Y vdd gnd OAI21X1
+X_927_ _927_/A _927_/B _947_/C _927_/Y vdd gnd AOI21X1
+X_789_ _790_/Y _805_/Y _789_/Y vdd gnd NAND2X1
+X_1001_ _873_/C _959_/B _1492_/A vdd gnd AND2X2
+XCLKBUF1_insert43 clk _1650_/CLK vdd gnd CLKBUF1
+X_1481_ _1481_/A _952_/B _1481_/C _1482_/B vdd gnd OAI21X1
+X_1550_ _1550_/D _1650_/CLK _1550_/Q vdd gnd DFFPOSX1
+X_1602_ _1602_/D _1651_/CLK _1602_/Q vdd gnd DFFPOSX1
+X_1395_ _1395_/A _1450_/B _1395_/C _1629_/D vdd gnd AOI21X1
+X_1464_ _848_/B _1464_/B _1465_/B _1465_/C vdd gnd AOI21X1
+X_1533_ _1655_/Q _1533_/B _889_/A _894_/A _1534_/B vdd gnd AOI22X1
+X_1180_ _1180_/A _885_/B _1181_/B vdd gnd NAND2X1
+X_1516_ _1550_/Q _1522_/B _1522_/C _1639_/Q _1517_/B vdd gnd AOI22X1
+X_1378_ _1378_/A _1378_/B _999_/C _1649_/D vdd gnd AOI21X1
+X_1447_ _1635_/Q _1450_/B _1453_/C _1448_/C vdd gnd OAI21X1
+X_891_ _891_/A _891_/B _892_/B vdd gnd NAND2X1
+X_960_ _960_/A _990_/B _960_/C _963_/A vdd gnd AOI21X1
+X_1232_ _1232_/A _1232_/B _965_/C _1644_/D vdd gnd AOI21X1
+X_1301_ _1620_/Q _1533_/B _1301_/C _808_/B _1302_/A vdd gnd AOI22X1
+X_1094_ _1567_/Q _1095_/C vdd gnd INVX1
+X_1163_ _1549_/Q _1334_/A _1280_/C _1547_/Q _1164_/B vdd gnd AOI22X1
+XBUFX2_insert4 _896_/Y _910_/A vdd gnd BUFX2
+X_874_ _874_/A _874_/B _885_/A vdd gnd NOR2X1
+X_943_ cmd_b _961_/C _943_/C _944_/A vdd gnd NAND3X1
+X_1146_ _969_/A _1319_/C vdd gnd INVX1
+X_1215_ _1648_/Q _1216_/C vdd gnd INVX1
+X_1077_ _1267_/A _962_/B _1481_/A _1078_/B vdd gnd NOR3X1
+X_788_ _791_/Y _789_/Y _788_/Y vdd gnd NAND2X1
+X_857_ _857_/A _857_/B _857_/C _857_/Y vdd gnd OAI21X1
+X_926_ _926_/A _946_/B _946_/C _936_/A _927_/B vdd gnd AOI22X1
+X_1000_ _1595_/Q _1002_/C vdd gnd INVX1
+XCLKBUF1_insert44 clk _1651_/CLK vdd gnd CLKBUF1
+X_1129_ _887_/A _986_/A _1416_/C _1427_/A vdd gnd OAI21X1
+X_1480_ _941_/B _950_/A _1542_/Q _1481_/C vdd gnd OAI21X1
+X_909_ _926_/A _909_/B _912_/B vdd gnd NAND2X1
+X_1532_ _1532_/A _1532_/B _1532_/C _1534_/A vdd gnd OAI21X1
+X_1601_ _965_/Y _1644_/CLK _964_/D vdd gnd DFFPOSX1
+X_1394_ _1629_/Q _1450_/B _1453_/C _1395_/C vdd gnd OAI21X1
+X_1463_ _1463_/A _1463_/B _1463_/C _1465_/D vdd gnd NAND3X1
+X_1515_ _1515_/A _1515_/B _910_/A _1517_/A vdd gnd OAI21X1
+X_1377_ _997_/C _1377_/B _1386_/A _1378_/A vdd gnd NAND3X1
+X_1446_ _1465_/B _1455_/B _1643_/Q _1448_/A vdd gnd OAI21X1
+X_890_ _957_/A _939_/C _891_/B vdd gnd NOR2X1
+X_1162_ _1162_/A _1162_/B _1274_/C _1164_/A vdd gnd OAI21X1
+X_1231_ _1646_/Q _964_/B _964_/C _1644_/Q _1232_/B vdd gnd AOI22X1
+X_1300_ cmd_a _1319_/B _1300_/C _1302_/B vdd gnd NAND3X1
+X_1093_ _1093_/A _1093_/B _947_/C _1569_/D vdd gnd AOI21X1
+XBUFX2_insert5 _896_/Y _1500_/C vdd gnd BUFX2
+X_1429_ _1562_/Q _1430_/B _1466_/C _1430_/C vdd gnd OAI21X1
+X_873_ cmd_b _961_/C _873_/C _874_/A vdd gnd NAND3X1
+X_942_ _942_/A _943_/C vdd gnd INVX1
+X_1145_ _1332_/B _1337_/A vdd gnd INVX1
+X_1214_ _1214_/A _1214_/B _912_/C _1650_/D vdd gnd AOI21X1
+X_1076_ cmd_a _961_/C _933_/C _1267_/A vdd gnd NAND3X1
+X_925_ _925_/A _925_/B _945_/C _927_/A vdd gnd OAI21X1
+X_787_ _792_/Y _791_/Y _825_/Y _788_/Y _787_/Y vdd gnd OAI22X1
+X_856_ _856_/A _857_/B _856_/Y vdd gnd NOR2X1
+XCLKBUF1_insert34 clk _1647_/CLK vdd gnd CLKBUF1
+X_1059_ _1059_/A _1059_/B _1285_/C _1061_/A vdd gnd OAI21X1
+X_1128_ _888_/B _974_/B _1416_/C vdd gnd NAND2X1
+X_908_ _908_/A _911_/D _908_/C _909_/B vdd gnd OAI21X1
+X_839_ _858_/A _854_/B _859_/A vdd gnd NAND2X1
+X_1462_ _1606_/Q _844_/C _1462_/C _1463_/C vdd gnd NAND3X1
+X_1531_ _962_/A _903_/B _903_/C _1532_/B vdd gnd NOR3X1
+X_1600_ _1600_/D _1653_/CLK _856_/A vdd gnd DFFPOSX1
+X_1393_ _1449_/A _850_/B _1633_/Q _1395_/A vdd gnd OAI21X1
+X_1445_ _1445_/A _1467_/B _1445_/C _1643_/D vdd gnd AOI21X1
+X_1514_ _934_/A _1520_/B _1514_/C _1515_/B vdd gnd NOR3X1
+X_1376_ _1376_/A _1376_/B _1377_/B vdd gnd NOR2X1
+X_1092_ _1571_/Q _946_/B _946_/C _1569_/Q _1093_/B vdd gnd AOI22X1
+X_1161_ _1273_/A _1273_/B _1520_/C _1162_/B vdd gnd NOR3X1
+X_1230_ _1230_/A _1230_/B _963_/C _1232_/A vdd gnd OAI21X1
+XBUFX2_insert6 _896_/Y _1274_/C vdd gnd BUFX2
+X_1428_ _1434_/A _857_/C _1602_/Q _1430_/A vdd gnd OAI21X1
+X_1359_ _1544_/Q _1436_/B _860_/A _1360_/C vdd gnd OAI21X1
+X_941_ _941_/A _941_/B _941_/C _945_/A vdd gnd AOI21X1
+X_872_ _892_/A _948_/C _891_/A _961_/C vdd gnd NAND3X1
+XBUFX2_insert90 _1186_/Y _1366_/B vdd gnd BUFX2
+X_1213_ _1652_/Q _911_/B _1257_/C _911_/D _1214_/A vdd gnd AOI22X1
+X_1075_ _931_/A _973_/B _1075_/C _1078_/A vdd gnd AOI21X1
+X_1144_ _1303_/C _1342_/B _986_/B _1332_/B vdd gnd NAND3X1
+X_924_ _924_/A _944_/B _962_/C _925_/B vdd gnd NOR3X1
+X_786_ _787_/Y _853_/Y gnd _786_/Y vdd gnd AOI21X1
+X_855_ _857_/A _857_/B _855_/Y vdd gnd NOR2X1
+XCLKBUF1_insert35 clk _1653_/CLK vdd gnd CLKBUF1
+X_1058_ _874_/A _903_/B _1519_/A _1059_/B vdd gnd NOR3X1
+X_1127_ _1127_/A _1127_/B _1517_/C _1559_/D vdd gnd AOI21X1
+X_838_ _856_/A _854_/B vdd gnd INVX1
+X_907_ _907_/A _911_/D vdd gnd INVX1
+X_769_ _793_/B _772_/Y _769_/Y vdd gnd NAND2X1
+X_1392_ _1392_/A _1392_/B _1392_/C _1633_/D vdd gnd AOI21X1
+X_1461_ _859_/A _844_/B _1462_/C vdd gnd OR2X2
+X_1530_ _1530_/A _1530_/B _1530_/C _1532_/A vdd gnd AOI21X1
+X_1375_ _829_/A _981_/A _1376_/A vdd gnd NOR2X1
+X_1444_ _1643_/Q _1467_/B _1466_/C _1445_/C vdd gnd OAI21X1
+X_1513_ _1519_/A _1513_/B _1513_/C _1515_/A vdd gnd AOI21X1
+X_1091_ _945_/C _1091_/B _1093_/A vdd gnd NAND2X1
+X_1160_ _1273_/C _1519_/B _1160_/C _1162_/A vdd gnd AOI21X1
+XBUFX2_insert7 _848_/Y _850_/B vdd gnd BUFX2
+X_1358_ _1449_/A _1434_/B _1548_/Q _1360_/A vdd gnd OAI21X1
+X_1427_ _1427_/A _1427_/B _1427_/C _1570_/D vdd gnd AOI21X1
+X_1289_ _1289_/A _1289_/B _1289_/C _1291_/A vdd gnd AOI21X1
+X_871_ _973_/B _871_/Y vdd gnd INVX8
+X_940_ _990_/A _942_/A _941_/A vdd gnd NOR2X1
+XBUFX2_insert91 _1186_/Y _1450_/B vdd gnd BUFX2
+XBUFX2_insert80 _880_/Y _1514_/C vdd gnd BUFX2
+X_1212_ _1650_/Q _909_/B _1214_/B vdd gnd NAND2X1
+X_1074_ _1573_/Q _1075_/C vdd gnd INVX1
+X_1143_ _985_/B _1195_/C _1342_/B vdd gnd NAND2X1
+X_854_ _854_/A _854_/B _857_/A vdd gnd NAND2X1
+X_923_ cmd_b _923_/B _961_/C _924_/A vdd gnd NAND3X1
+X_785_ _794_/Y _793_/Y _786_/Y _785_/Y vdd gnd NAND3X1
+XCLKBUF1_insert36 clk _1654_/CLK vdd gnd CLKBUF1
+X_1126_ _1561_/Q _1522_/B _1522_/C _1559_/Q _1127_/B vdd gnd AOI22X1
+X_1057_ _1289_/A _1289_/B _1057_/C _1059_/A vdd gnd AOI21X1
+X_768_ _772_/Y _774_/Y _769_/Y _768_/Y vdd gnd OAI21X1
+X_837_ _850_/A _849_/A vdd gnd INVX1
+X_906_ _906_/A _906_/B _912_/C _906_/Y vdd gnd AOI21X1
+X_1109_ _1498_/A _1498_/B _1109_/C _1112_/A vdd gnd AOI21X1
+X_1391_ _1633_/Q _1392_/B _1435_/C _1392_/C vdd gnd OAI21X1
+X_1460_ _1460_/A _1460_/B _1464_/B _1463_/B vdd gnd OAI21X1
+X_1589_ _1589_/D _1639_/CLK _1589_/Q vdd gnd DFFPOSX1
+X_1512_ _1639_/Q _1513_/C vdd gnd INVX1
+X_1374_ _1379_/A _1379_/B _829_/A _1378_/B vdd gnd OAI21X1
+X_1443_ _1465_/B _1455_/B _1651_/Q _1445_/A vdd gnd OAI21X1
+X_1090_ _1481_/A _1234_/B _1090_/C _1091_/B vdd gnd OAI21X1
+XBUFX2_insert8 _848_/Y _1455_/B vdd gnd BUFX2
+X_1288_ _1622_/Q _1289_/C vdd gnd INVX1
+X_1357_ _1357_/A _1436_/B _1357_/C _1548_/D vdd gnd AOI21X1
+X_1426_ _957_/A _1427_/A _1426_/C _1427_/C vdd gnd OAI21X1
+X_870_ _957_/A _958_/A _939_/C _873_/C vdd gnd NOR3X1
+XBUFX2_insert81 _880_/Y _1481_/A vdd gnd BUFX2
+XBUFX2_insert70 _921_/Y _962_/C vdd gnd BUFX2
+X_999_ _999_/A _999_/B _999_/C _999_/Y vdd gnd AOI21X1
+X_1142_ _1142_/A _1142_/B _1142_/C _1555_/D vdd gnd AOI21X1
+X_1211_ _1211_/A _1211_/B _895_/C _1652_/D vdd gnd AOI21X1
+X_1073_ _1073_/A _1073_/B _895_/C _1575_/D vdd gnd AOI21X1
+X_1409_ _1602_/Q _1430_/B _1466_/C _1410_/C vdd gnd OAI21X1
+X_784_ _795_/Y _800_/Y _784_/Y vdd gnd NAND2X1
+X_853_ _854_/B _857_/B _859_/A _859_/D _853_/Y vdd gnd OAI22X1
+X_922_ _990_/C _923_/B vdd gnd INVX1
+XCLKBUF1_insert37 clk _1639_/CLK vdd gnd CLKBUF1
+X_1125_ _1125_/A _1125_/B _1274_/C _1127_/A vdd gnd OAI21X1
+X_1056_ _892_/B _1289_/A vdd gnd INVX1
+X_905_ _905_/A _911_/B _905_/C _911_/A _906_/B vdd gnd AOI22X1
+X_767_ _768_/Y _767_/CLK _793_/B vdd gnd DFFPOSX1
+X_836_ _836_/A _836_/Y vdd gnd INVX1
+X_1039_ _1039_/A _1039_/B _1523_/C _1585_/D vdd gnd AOI21X1
+X_1108_ _1563_/Q _1109_/C vdd gnd INVX1
+X_1390_ _1390_/A _1434_/B _1637_/Q _1392_/A vdd gnd OAI21X1
+X_819_ _846_/A _846_/C _858_/C vdd gnd NAND2X1
+X_1588_ _1588_/D _1655_/CLK _977_/B vdd gnd DFFPOSX1
+X_1442_ _1442_/A _1467_/B _1442_/C _1651_/D vdd gnd AOI21X1
+X_1511_ _1511_/A _1511_/B _1517_/C _1550_/D vdd gnd AOI21X1
+X_1373_ _1373_/A _1373_/B _999_/C _1653_/D vdd gnd AOI21X1
+XBUFX2_insert9 _848_/Y _1434_/B vdd gnd BUFX2
+X_1425_ _929_/C _995_/A _1425_/C _997_/A _1427_/B vdd gnd AOI22X1
+X_1287_ _1287_/A _1287_/B _1528_/C _1624_/D vdd gnd AOI21X1
+X_1356_ _1548_/Q _1436_/B _1435_/C _1357_/C vdd gnd OAI21X1
+XBUFX2_insert60 _1303_/Y _1449_/A vdd gnd BUFX2
+XBUFX2_insert82 _880_/Y _1499_/C vdd gnd BUFX2
+XBUFX2_insert71 _921_/Y _1519_/A vdd gnd BUFX2
+X_998_ _998_/A _998_/B _998_/C _999_/A vdd gnd NAND3X1
+X_1072_ _1577_/Q _985_/B _1301_/C _805_/A _1073_/A vdd gnd AOI22X1
+X_1141_ _1426_/C _1141_/B _1142_/C vdd gnd NAND2X1
+X_1210_ _1654_/Q _1533_/B _889_/A _1652_/Q _1211_/B vdd gnd AOI22X1
+X_1408_ _1434_/A _857_/C _1611_/Q _1410_/A vdd gnd OAI21X1
+X_1339_ _1572_/Q _1392_/B _1435_/C _1340_/C vdd gnd OAI21X1
+X_921_ _961_/C _921_/B _921_/Y vdd gnd NAND2X1
+X_783_ _801_/Y _806_/Y _799_/Y _783_/Y vdd gnd AOI21X1
+X_852_ _854_/B _857_/B _852_/Y vdd gnd NOR2X1
+XCLKBUF1_insert38 clk _1635_/CLK vdd gnd CLKBUF1
+X_1055_ _1579_/Q _1057_/C vdd gnd INVX1
+X_1124_ _1261_/A _1273_/B _1520_/C _1125_/B vdd gnd NOR3X1
+X_904_ _904_/A _904_/B _910_/A _906_/A vdd gnd OAI21X1
+X_766_ _986_/A debug_state[0] vdd gnd BUFX2
+X_835_ _835_/A _835_/B _835_/C _836_/A vdd gnd NAND3X1
+X_1038_ _1587_/Q _1522_/B _1280_/C _1585_/Q _1039_/B vdd gnd AOI22X1
+X_1107_ _1107_/A _1107_/B _965_/C _1565_/D vdd gnd AOI21X1
+X_818_ _856_/A _858_/A _846_/C vdd gnd NOR2X1
+X_1587_ _1587_/D _1639_/CLK _1587_/Q vdd gnd DFFPOSX1
+X_1441_ _1651_/Q _1467_/B _1466_/C _1442_/C vdd gnd OAI21X1
+X_1510_ _1582_/Q _1510_/B _1522_/C _1550_/Q _1511_/B vdd gnd AOI22X1
+X_1372_ _997_/C _1372_/B _1386_/A _1373_/A vdd gnd NAND3X1
+X_1639_ _1639_/D _1639_/CLK _1639_/Q vdd gnd DFFPOSX1
+X_1355_ _1390_/A _1434_/B _1552_/Q _1357_/A vdd gnd OAI21X1
+X_1424_ _1424_/A _1425_/C vdd gnd INVX1
+X_1286_ _1626_/Q _1334_/A _905_/C _1624_/Q _1287_/B vdd gnd AOI22X1
+XBUFX2_insert50 _810_/Y _964_/B vdd gnd BUFX2
+XBUFX2_insert61 _1303_/Y _1434_/A vdd gnd BUFX2
+XBUFX2_insert83 _880_/Y _1520_/C vdd gnd BUFX2
+XBUFX2_insert72 _921_/Y _1527_/D vdd gnd BUFX2
+X_997_ _997_/A _997_/B _997_/C _998_/B vdd gnd AOI21X1
+X_1071_ _1300_/C _1301_/C vdd gnd INVX1
+X_1140_ _975_/A _1195_/C _975_/B _1141_/B vdd gnd OAI21X1
+X_1338_ _1452_/A _1387_/B _1608_/Q _1340_/A vdd gnd OAI21X1
+X_1407_ _1407_/A _1435_/B _1407_/C _1611_/D vdd gnd AOI21X1
+X_1269_ _1632_/Q _1522_/B _1522_/C _1630_/Q _1270_/B vdd gnd AOI22X1
+X_851_ _851_/A _857_/B vdd gnd INVX2
+X_920_ _920_/A _920_/B _973_/B _921_/B vdd gnd OAI21X1
+X_782_ _858_/Y _791_/Y _789_/Y _782_/Y vdd gnd NAND3X1
+XCLKBUF1_insert39 clk _1637_/CLK vdd gnd CLKBUF1
+X_1054_ _1054_/A _1054_/B _1523_/C _1581_/D vdd gnd AOI21X1
+X_1123_ cmd_a _923_/B _961_/C _1261_/A vdd gnd NAND3X1
+X_834_ _977_/A _977_/B _835_/C vdd gnd NOR2X1
+X_903_ _903_/A _903_/B _903_/C _904_/B vdd gnd NOR3X1
+X_765_ _887_/A debug_state[1] vdd gnd BUFX2
+X_1106_ _1567_/Q _1510_/B _1501_/C _1565_/Q _1107_/B vdd gnd AOI22X1
+X_1037_ _1037_/A _1037_/B _1274_/C _1039_/A vdd gnd OAI21X1
+X_817_ _856_/A _858_/A _847_/A vdd gnd NAND2X1
+X_1586_ _1586_/D _1653_/CLK _958_/A vdd gnd DFFPOSX1
+X_1655_ _1655_/D _1655_/CLK _1655_/Q vdd gnd DFFPOSX1
+X_1371_ _984_/C _1371_/B _1372_/B vdd gnd NOR2X1
+X_1440_ _1465_/B _1455_/B _1538_/Q _1442_/A vdd gnd OAI21X1
+X_1638_ _1638_/D _1647_/CLK _1638_/Q vdd gnd DFFPOSX1
+X_1569_ _1569_/D _1644_/CLK _1569_/Q vdd gnd DFFPOSX1
+X_1285_ _1285_/A _1285_/B _1285_/C _1287_/A vdd gnd OAI21X1
+X_1354_ _1354_/A _1436_/B _1354_/C _1552_/D vdd gnd AOI21X1
+X_1423_ _1427_/A _1423_/B _1423_/C _1578_/D vdd gnd AOI21X1
+XBUFX2_insert51 _810_/Y _1334_/A vdd gnd BUFX2
+XBUFX2_insert62 _888_/Y _964_/C vdd gnd BUFX2
+XBUFX2_insert84 _1186_/Y _1467_/B vdd gnd BUFX2
+XBUFX2_insert73 _921_/Y _1273_/C vdd gnd BUFX2
+X_996_ cmd_last _997_/A vdd gnd INVX1
+X_1070_ cmd_b _1319_/B _1300_/C _1073_/B vdd gnd NAND3X1
+X_1268_ _1268_/A _1268_/B _1274_/C _1270_/A vdd gnd OAI21X1
+X_1337_ _1337_/A _976_/A _1337_/C _1576_/D vdd gnd AOI21X1
+X_1406_ _1611_/Q _1435_/B _860_/A _1407_/C vdd gnd OAI21X1
+X_1199_ _1199_/A _985_/B _1199_/C _1535_/D vdd gnd AOI21X1
+X_781_ _782_/Y _781_/Y vdd gnd INVX1
+X_850_ _850_/A _850_/B _850_/Y vdd gnd NOR2X1
+X_979_ _979_/A _980_/B vdd gnd INVX1
+X_1122_ _1273_/C _1508_/B _1122_/C _1125_/A vdd gnd AOI21X1
+X_1053_ _1583_/Q _1334_/A _1280_/C _1581_/Q _1054_/B vdd gnd AOI22X1
+X_764_ gnd debug_state[2] vdd gnd BUFX2
+X_833_ _969_/A _968_/A _835_/B vdd gnd NOR2X1
+X_902_ cmd_b _961_/C _902_/C _903_/A vdd gnd NAND3X1
+X_1105_ _1105_/A _1105_/B _1500_/C _1107_/A vdd gnd OAI21X1
+X_1036_ _944_/A _1520_/B _1527_/D _1037_/B vdd gnd NOR3X1
+X_816_ _854_/A _858_/A vdd gnd INVX1
+X_1654_ _1654_/D _1654_/CLK _1654_/Q vdd gnd DFFPOSX1
+X_1585_ _1585_/D _1655_/CLK _1585_/Q vdd gnd DFFPOSX1
+X_1019_ _1589_/Q _1021_/C vdd gnd INVX1
+X_1370_ _829_/B _1376_/B _1371_/B vdd gnd NOR2X1
+X_1637_ _1637_/D _1637_/CLK _1637_/Q vdd gnd DFFPOSX1
+X_1499_ _903_/A _1499_/B _1499_/C _1500_/B vdd gnd NOR3X1
+X_1568_ _1568_/D _767_/CLK _826_/A vdd gnd DFFPOSX1
+X_1422_ _957_/B _1427_/A _1426_/C _1423_/C vdd gnd OAI21X1
+X_1284_ _1284_/A _903_/B _1527_/D _1285_/B vdd gnd NOR3X1
+X_1353_ _1552_/Q _1436_/B _1365_/C _1354_/C vdd gnd OAI21X1
+XBUFX2_insert30 _869_/Y _903_/B vdd gnd BUFX2
+XBUFX2_insert52 _810_/Y _946_/B vdd gnd BUFX2
+XBUFX2_insert63 _888_/Y _1501_/C vdd gnd BUFX2
+XBUFX2_insert85 _1186_/Y _1454_/B vdd gnd BUFX2
+XBUFX2_insert74 _871_/Y _990_/B vdd gnd BUFX2
+X_995_ _995_/A _995_/B _995_/C _998_/C vdd gnd AOI21X1
+X_1405_ _1434_/A _857_/C _1617_/Q _1407_/A vdd gnd OAI21X1
+X_1198_ _850_/A _985_/B _1466_/C _1199_/C vdd gnd OAI21X1
+X_1267_ _1267_/A _1273_/B _1273_/C _1268_/B vdd gnd NOR3X1
+X_1336_ _976_/A _1533_/B _860_/A _1337_/C vdd gnd OAI21X1
+X_780_ _781_/Y _783_/Y _780_/Y vdd gnd NAND2X1
+X_978_ _978_/A _978_/B _980_/A vdd gnd NOR2X1
+X_1052_ _1052_/A _1052_/B _1285_/C _1054_/A vdd gnd OAI21X1
+X_1121_ _1559_/Q _1122_/C vdd gnd INVX1
+X_1319_ _970_/B _1319_/B _1319_/C _1320_/B vdd gnd OAI21X1
+X_901_ _957_/B _958_/A _929_/C _902_/C vdd gnd NOR3X1
+X_763_ _812_/Y busy vdd gnd BUFX2
+X_832_ _976_/A _976_/B _835_/A vdd gnd NOR2X1
+X_1035_ _1520_/C _1519_/B _1035_/C _1037_/A vdd gnd AOI21X1
+X_1104_ _1290_/A _1499_/B _1499_/C _1105_/B vdd gnd NOR3X1
+X_815_ _846_/A _859_/D vdd gnd INVX1
+X_1584_ _1584_/D _1637_/CLK _977_/A vdd gnd DFFPOSX1
+X_1653_ _1653_/D _1653_/CLK _829_/B vdd gnd DFFPOSX1
+X_1018_ _1018_/A _1018_/B _1523_/C _1591_/D vdd gnd AOI21X1
+X_1567_ _1567_/D _1647_/CLK _1567_/Q vdd gnd DFFPOSX1
+X_1636_ _1636_/D _1647_/CLK _1636_/Q vdd gnd DFFPOSX1
+X_1498_ _1498_/A _1498_/B _1498_/C _1500_/A vdd gnd AOI21X1
+X_1421_ _920_/A _958_/B _995_/A _1423_/B vdd gnd NAND3X1
+X_1283_ _1530_/A _1289_/B _1283_/C _1285_/A vdd gnd AOI21X1
+X_1352_ _1390_/A _1434_/B _1556_/Q _1354_/A vdd gnd OAI21X1
+X_1619_ _1619_/D _1635_/CLK _1619_/Q vdd gnd DFFPOSX1
+XBUFX2_insert20 _860_/Y _999_/C vdd gnd BUFX2
+XBUFX2_insert31 _869_/Y _874_/B vdd gnd BUFX2
+XBUFX2_insert53 _1557_/Q _973_/B vdd gnd BUFX2
+XBUFX2_insert64 _888_/Y _1522_/C vdd gnd BUFX2
+XBUFX2_insert86 _1186_/Y _1430_/B vdd gnd BUFX2
+XBUFX2_insert75 _871_/Y _1251_/B vdd gnd BUFX2
+X_994_ _994_/A _994_/B _994_/C _995_/C vdd gnd NAND3X1
+X_1335_ _1335_/A _1335_/B _1528_/C _1580_/D vdd gnd AOI21X1
+X_1404_ _1404_/A _1430_/B _1404_/C _1617_/D vdd gnd AOI21X1
+X_1197_ _1197_/A _1197_/B _1199_/A vdd gnd NAND2X1
+X_1266_ _1514_/C _1513_/B _1266_/C _1268_/A vdd gnd AOI21X1
+X_977_ _977_/A _977_/B _978_/B vdd gnd NAND2X1
+X_1051_ _962_/A _903_/B _1527_/D _1052_/B vdd gnd NOR3X1
+X_1120_ _1120_/A _1120_/B _1517_/C _1561_/D vdd gnd AOI21X1
+X_1318_ _858_/A _1424_/A _1318_/C _1596_/D vdd gnd AOI21X1
+X_1249_ _1249_/A _1249_/B _965_/C _1638_/D vdd gnd AOI21X1
+X_831_ _992_/B _831_/Y vdd gnd INVX1
+X_900_ _900_/A _973_/B _900_/C _904_/A vdd gnd AOI21X1
+X_762_ _831_/Y rsp_last vdd gnd BUFX2
+X_1034_ _959_/B _942_/A _1519_/B vdd gnd NOR2X1
+X_1103_ cmd_a _961_/C _873_/C _1290_/A vdd gnd NAND3X1
+X_814_ _845_/A _845_/B _846_/A vdd gnd NOR2X1
+X_1583_ _1583_/D _1655_/CLK _1583_/Q vdd gnd DFFPOSX1
+X_1652_ _1652_/D _1654_/CLK _1652_/Q vdd gnd DFFPOSX1
+X_1017_ _1593_/Q _911_/B _911_/C _1257_/D _1018_/A vdd gnd AOI22X1
+X_1497_ _1615_/Q _1498_/C vdd gnd INVX1
+X_1566_ _1566_/D _1654_/CLK _894_/A vdd gnd DFFPOSX1
+X_1635_ _1635_/D _1635_/CLK _1635_/Q vdd gnd DFFPOSX1
+X_1351_ _1351_/A _1436_/B _1351_/C _1556_/D vdd gnd AOI21X1
+X_1420_ _1420_/A _1420_/B _999_/C _1586_/D vdd gnd AOI21X1
+X_1282_ _1624_/Q _1283_/C vdd gnd INVX1
+X_1618_ _1618_/D _767_/CLK _808_/B vdd gnd DFFPOSX1
+X_1549_ _1549_/D _1639_/CLK _1549_/Q vdd gnd DFFPOSX1
+XBUFX2_insert10 _848_/Y _857_/C vdd gnd BUFX2
+XBUFX2_insert21 _860_/Y _1523_/C vdd gnd BUFX2
+XBUFX2_insert32 _869_/Y _1273_/B vdd gnd BUFX2
+XBUFX2_insert54 _1557_/Q _1498_/B vdd gnd BUFX2
+XBUFX2_insert65 _888_/Y _889_/A vdd gnd BUFX2
+X_993_ _993_/A _993_/B _997_/C _994_/B vdd gnd OAI21X1
+XBUFX2_insert87 _1186_/Y _1435_/B vdd gnd BUFX2
+XBUFX2_insert76 _871_/Y _1289_/B vdd gnd BUFX2
+X_1265_ _1630_/Q _1266_/C vdd gnd INVX1
+X_1334_ _1334_/A _1334_/B _1335_/B vdd gnd NAND2X1
+X_1403_ _1617_/Q _1430_/B _860_/A _1404_/C vdd gnd OAI21X1
+X_1196_ _1464_/B _1196_/B _1197_/B vdd gnd NAND2X1
+X_976_ _976_/A _976_/B _978_/A vdd gnd NAND2X1
+X_1050_ _1530_/A _1289_/B _1050_/C _1052_/A vdd gnd AOI21X1
+X_1248_ _1640_/Q _964_/B _964_/C _1638_/Q _1249_/B vdd gnd AOI22X1
+X_1317_ cmd_op[0] _1424_/A _1426_/C _1318_/C vdd gnd OAI21X1
+X_1179_ _1261_/A _962_/B _1180_/A vdd gnd NOR2X1
+X_761_ vdd rsp_flags[0] vdd gnd BUFX2
+X_830_ _984_/A _981_/A _981_/B _992_/B vdd gnd NAND3X1
+X_959_ _961_/B _959_/B _960_/A vdd gnd AND2X2
+X_1102_ _1492_/A _1498_/B _1102_/C _1105_/A vdd gnd AOI21X1
+X_1033_ _1585_/Q _1035_/C vdd gnd INVX1
+X_813_ _842_/A _845_/B vdd gnd INVX1
+X_1651_ _1651_/D _1651_/CLK _1651_/Q vdd gnd DFFPOSX1
+X_1582_ _1582_/D _1650_/CLK _1582_/Q vdd gnd DFFPOSX1
+X_1016_ _1591_/Q _1256_/B _1018_/B vdd gnd NAND2X1
+X_1634_ _1634_/D _1639_/CLK _1634_/Q vdd gnd DFFPOSX1
+X_1496_ _1496_/A _1496_/B _912_/C _1631_/D vdd gnd AOI21X1
+X_1565_ _1565_/D _1647_/CLK _1565_/Q vdd gnd DFFPOSX1
+X_1281_ _1281_/A _1281_/B _1528_/C _1626_/D vdd gnd AOI21X1
+X_1350_ _1556_/Q _1366_/B _1365_/C _1351_/C vdd gnd OAI21X1
+X_1617_ _1617_/D _1651_/CLK _1617_/Q vdd gnd DFFPOSX1
+X_1479_ _1479_/A _1479_/B _947_/C _1558_/D vdd gnd AOI21X1
+X_1548_ _1548_/D _1635_/CLK _1548_/Q vdd gnd DFFPOSX1
+XBUFX2_insert11 _848_/Y _1387_/B vdd gnd BUFX2
+XBUFX2_insert22 _860_/Y _1517_/C vdd gnd BUFX2
+XBUFX2_insert33 _869_/Y _1520_/B vdd gnd BUFX2
+XBUFX2_insert55 _1557_/Q _1530_/B vdd gnd BUFX2
+XBUFX2_insert88 _1186_/Y _1392_/B vdd gnd BUFX2
+XBUFX2_insert77 _871_/Y _941_/B vdd gnd BUFX2
+XBUFX2_insert66 _888_/Y _946_/C vdd gnd BUFX2
+X_992_ _997_/C _992_/B _994_/A vdd gnd NAND2X1
+X_1402_ _1434_/A _857_/C _1621_/Q _1404_/A vdd gnd OAI21X1
+X_1264_ _1264_/A _1264_/B _1517_/C _1632_/D vdd gnd AOI21X1
+X_1333_ _835_/A _967_/C _1334_/B vdd gnd NOR2X1
+X_1195_ _1460_/A _1460_/B _1195_/C _1196_/B vdd gnd OAI21X1
+X_975_ _975_/A _975_/B _997_/C vdd gnd NOR2X1
+X_1178_ _1541_/Q _1182_/B _1181_/A vdd gnd NAND2X1
+X_1247_ _1247_/A _1247_/B _1500_/C _1249_/A vdd gnd OAI21X1
+X_1316_ _854_/B _1424_/A _1316_/C _1600_/D vdd gnd AOI21X1
+X_760_ _855_/Y rsp_flags[1] vdd gnd BUFX2
+X_889_ _889_/A _908_/C vdd gnd INVX1
+X_958_ _958_/A _958_/B _961_/B vdd gnd NOR2X1
+X_1032_ _1032_/A _1032_/B _1523_/C _1587_/D vdd gnd AOI21X1
+X_1101_ _1565_/Q _1102_/C vdd gnd INVX1
+X_812_ _997_/B _812_/Y vdd gnd INVX1
+X_1581_ _1581_/D _1655_/CLK _1581_/Q vdd gnd DFFPOSX1
+X_1650_ _1650_/D _1650_/CLK _1650_/Q vdd gnd DFFPOSX1
+X_1015_ _908_/A _1257_/D _908_/C _1256_/B vdd gnd OAI21X1
+X_1564_ _1564_/D _1637_/CLK _1564_/Q vdd gnd DFFPOSX1
+X_1633_ _1633_/D _1635_/CLK _1633_/Q vdd gnd DFFPOSX1
+X_1495_ _1647_/Q _1510_/B _1501_/C _1631_/Q _1496_/B vdd gnd AOI22X1
+X_1280_ _1628_/Q _1334_/A _1280_/C _1626_/Q _1281_/B vdd gnd AOI22X1
+X_1547_ _1547_/D _1655_/CLK _1547_/Q vdd gnd DFFPOSX1
+X_1616_ _1616_/D _1635_/CLK _1616_/Q vdd gnd DFFPOSX1
+X_1478_ _1574_/Q _946_/B _946_/C _1558_/Q _1479_/B vdd gnd AOI22X1
+XBUFX2_insert12 _919_/Y _944_/B vdd gnd BUFX2
+XBUFX2_insert23 _860_/Y _912_/C vdd gnd BUFX2
+XBUFX2_insert45 _810_/Y _1522_/B vdd gnd BUFX2
+XBUFX2_insert56 _1557_/Q _949_/A vdd gnd BUFX2
+XBUFX2_insert89 _1186_/Y _1436_/B vdd gnd BUFX2
+XBUFX2_insert78 _871_/Y _892_/A vdd gnd BUFX2
+XBUFX2_insert67 _888_/Y _905_/C vdd gnd BUFX2
+X_991_ cmd_last _991_/B cmd_valid _995_/B vdd gnd OAI21X1
+X_1401_ _1401_/A _1435_/B _1401_/C _1621_/D vdd gnd AOI21X1
+X_1194_ _859_/A _859_/C _859_/B _1460_/B vdd gnd AOI21X1
+X_1263_ _1634_/Q _1522_/B _1522_/C _1632_/Q _1264_/B vdd gnd AOI22X1
+X_1332_ _976_/B _1332_/B _1335_/A vdd gnd NAND2X1
+X_974_ _974_/A _974_/B _995_/A _986_/B vdd gnd OAI21X1
+X_1315_ cmd_op[1] _1424_/A _1426_/C _1316_/C vdd gnd OAI21X1
+X_1177_ _991_/B _908_/A _908_/C _1182_/B vdd gnd OAI21X1
+X_1246_ _1290_/A _1493_/B _1252_/C _1247_/B vdd gnd NOR3X1
+X_957_ _957_/A _957_/B _958_/B vdd gnd NAND2X1
+X_888_ _985_/B _888_/B _888_/Y vdd gnd NOR2X1
+X_1031_ _1589_/Q _1522_/B _905_/C _1587_/Q _1032_/B vdd gnd AOI22X1
+X_1100_ _1100_/A _1100_/B _965_/C _1567_/D vdd gnd AOI21X1
+X_1229_ _1273_/A _1493_/B _1252_/C _1230_/B vdd gnd NOR3X1
+X_811_ _887_/A _986_/A _997_/B vdd gnd NOR2X1
+X_1580_ _1580_/D _1655_/CLK _976_/B vdd gnd DFFPOSX1
+X_1014_ _1498_/B _919_/A _1257_/D vdd gnd NOR2X1
+X_1494_ _1494_/A _1494_/B _1500_/C _1496_/A vdd gnd OAI21X1
+X_1563_ _1563_/D _1650_/CLK _1563_/Q vdd gnd DFFPOSX1
+X_1632_ _1632_/D _1639_/CLK _1632_/Q vdd gnd DFFPOSX1
+X_1477_ _1477_/A _1477_/B _945_/C _1479_/A vdd gnd OAI21X1
+X_1546_ _1546_/D _1637_/CLK _1546_/Q vdd gnd DFFPOSX1
+X_1615_ _1615_/D _1650_/CLK _1615_/Q vdd gnd DFFPOSX1
+XBUFX2_insert13 _919_/Y _1499_/B vdd gnd BUFX2
+XBUFX2_insert24 rst_n _1466_/C vdd gnd BUFX2
+X_990_ _990_/A _990_/B _990_/C _991_/B vdd gnd NOR3X1
+XBUFX2_insert46 _810_/Y _1510_/B vdd gnd BUFX2
+XBUFX2_insert57 _1303_/Y _1452_/A vdd gnd BUFX2
+XBUFX2_insert79 _880_/Y _903_/C vdd gnd BUFX2
+XBUFX2_insert68 _888_/Y _1280_/C vdd gnd BUFX2
+X_1331_ _1331_/A _1331_/B _1331_/C _1584_/D vdd gnd AOI21X1
+X_1400_ _1621_/Q _1435_/B _1435_/C _1401_/C vdd gnd OAI21X1
+X_1193_ _844_/B _859_/A _1460_/A vdd gnd NOR2X1
+X_1262_ _1262_/A _1262_/B _1274_/C _1264_/A vdd gnd OAI21X1
+X_1529_ _894_/A _1530_/C vdd gnd INVX1
+X_973_ _973_/A _973_/B cmd_last _974_/B vdd gnd AOI21X1
+X_1314_ _845_/B _1424_/A _1314_/C _1604_/D vdd gnd AOI21X1
+X_1176_ _1176_/A _1176_/B _1528_/C _1543_/D vdd gnd AOI21X1
+X_1245_ _1492_/A _1251_/B _1245_/C _1247_/A vdd gnd AOI21X1
+X_956_ _964_/D _960_/C vdd gnd INVX1
+X_887_ _887_/A _974_/A _888_/B vdd gnd NOR2X1
+X_1030_ _1030_/A _1030_/B _1285_/C _1032_/A vdd gnd OAI21X1
+X_1228_ _941_/A _990_/B _1228_/C _1230_/A vdd gnd AOI21X1
+X_1159_ _1547_/Q _1160_/C vdd gnd INVX1
+X_810_ _986_/A _975_/A _810_/Y vdd gnd NOR2X1
+X_939_ _957_/A _958_/A _939_/C _942_/A vdd gnd NAND3X1
+X_1013_ _1013_/A _1013_/B _912_/C _1593_/D vdd gnd AOI21X1
+X_1631_ _1631_/D _1647_/CLK _1631_/Q vdd gnd DFFPOSX1
+X_1493_ _874_/A _1493_/B _1499_/C _1494_/B vdd gnd NOR3X1
+X_1562_ _1562_/D _1651_/CLK _1562_/Q vdd gnd DFFPOSX1
+X_1614_ _906_/Y _1650_/CLK _911_/A vdd gnd DFFPOSX1
+X_1476_ _944_/A _944_/B _1481_/A _1477_/B vdd gnd NOR3X1
+X_1545_ _1545_/D _1655_/CLK _1545_/Q vdd gnd DFFPOSX1
+XBUFX2_insert14 _919_/Y _1493_/B vdd gnd BUFX2
+XBUFX2_insert25 rst_n _860_/A vdd gnd BUFX2
+XBUFX2_insert47 _810_/Y _911_/B vdd gnd BUFX2
+XBUFX2_insert58 _1303_/Y _1465_/B vdd gnd BUFX2
+XBUFX2_insert69 _921_/Y _1252_/C vdd gnd BUFX2
+X_1261_ _1261_/A _1273_/B _1273_/C _1262_/B vdd gnd NOR3X1
+X_1330_ _977_/A _967_/C _1365_/C _1331_/C vdd gnd OAI21X1
+X_1192_ _773_/Y _1464_/B vdd gnd INVX1
+X_1459_ _846_/A _859_/A _1459_/C _846_/D _1463_/A vdd gnd AOI22X1
+X_1528_ _1528_/A _1528_/B _1528_/C _1655_/D vdd gnd AOI21X1
+X_972_ _994_/C _998_/A _988_/A vdd gnd AND2X2
+X_1244_ _1638_/Q _1245_/C vdd gnd INVX1
+X_1313_ cmd_op[2] _1424_/A _1426_/C _1314_/C vdd gnd OAI21X1
+X_1175_ _1545_/Q _1533_/B _905_/C _1543_/Q _1176_/B vdd gnd AOI22X1
+X_886_ cmd_valid _974_/A vdd gnd INVX1
+X_955_ _955_/A _955_/B _965_/C _955_/Y vdd gnd AOI21X1
+X_1158_ _1158_/A _1158_/B _1523_/C _1549_/D vdd gnd AOI21X1
+X_1227_ _1644_/Q _1228_/C vdd gnd INVX1
+X_1089_ cmd_a _951_/B _1234_/B vdd gnd NAND2X1
+X_869_ _869_/A _869_/B _869_/Y vdd gnd NAND2X1
+X_938_ _954_/A _941_/C vdd gnd INVX1
+X_1012_ _1595_/Q _911_/B _905_/C _1593_/Q _1013_/B vdd gnd AOI22X1
+X_1630_ _1630_/D _1639_/CLK _1630_/Q vdd gnd DFFPOSX1
+X_1492_ _1492_/A _1498_/B _1492_/C _1494_/A vdd gnd AOI21X1
+X_1561_ _1561_/D _1650_/CLK _1561_/Q vdd gnd DFFPOSX1
+X_1544_ _1544_/D _1637_/CLK _1544_/Q vdd gnd DFFPOSX1
+X_1613_ _1613_/D _1635_/CLK _1613_/Q vdd gnd DFFPOSX1
+X_1475_ _941_/A _949_/A _1475_/C _1477_/A vdd gnd AOI21X1
+XBUFX2_insert15 _919_/Y _962_/B vdd gnd BUFX2
+XBUFX2_insert26 rst_n _1426_/C vdd gnd BUFX2
+XBUFX2_insert48 _810_/Y _1533_/B vdd gnd BUFX2
+XBUFX2_insert59 _1303_/Y _1390_/A vdd gnd BUFX2
+X_1191_ _773_/Y _1195_/C _848_/A _1197_/A vdd gnd NAND3X1
+X_1260_ _1514_/C _1508_/B _1260_/C _1262_/A vdd gnd AOI21X1
+X_1527_ _1598_/Q _911_/B _1527_/C _1527_/D _1528_/A vdd gnd AOI22X1
+X_1389_ _1389_/A _1392_/B _1389_/C _1637_/D vdd gnd AOI21X1
+X_1458_ _847_/A _857_/A _1459_/C vdd gnd NAND2X1
+X_971_ _974_/A _997_/B _998_/A vdd gnd NAND2X1
+X_1174_ _1174_/A _1174_/B _1532_/C _1176_/A vdd gnd OAI21X1
+X_1243_ _1243_/A _1243_/B _965_/C _1640_/D vdd gnd AOI21X1
+X_1312_ _1312_/A _1454_/B _1312_/C _1608_/D vdd gnd AOI21X1
+X_885_ _885_/A _885_/B _895_/B vdd gnd NAND2X1
+X_954_ _954_/A _964_/B _964_/C _964_/A _955_/B vdd gnd AOI22X1
+X_1157_ _1559_/Q _1522_/B _1522_/C _1549_/Q _1158_/B vdd gnd AOI22X1
+X_1226_ _1226_/A _1226_/B _912_/C _1646_/D vdd gnd AOI21X1
+X_1088_ _941_/B _950_/A _1569_/Q _1090_/C vdd gnd OAI21X1
+X_799_ _808_/Y _799_/Y vdd gnd INVX1
+X_868_ _959_/B _918_/B _869_/B vdd gnd NAND2X1
+X_937_ _937_/A _937_/B _999_/C _937_/Y vdd gnd AOI21X1
+X_1011_ _1011_/A _1011_/B _910_/A _1013_/A vdd gnd OAI21X1
+X_1209_ _1209_/A _1209_/B _1532_/C _1211_/A vdd gnd OAI21X1
+X_1560_ _1560_/D _1637_/CLK _1560_/Q vdd gnd DFFPOSX1
+X_1491_ _1631_/Q _1492_/C vdd gnd INVX1
+X_1474_ _1558_/Q _1475_/C vdd gnd INVX1
+X_1543_ _1543_/D _1654_/CLK _1543_/Q vdd gnd DFFPOSX1
+X_1612_ _912_/Y _1650_/CLK _926_/A vdd gnd DFFPOSX1
+XBUFX2_insert16 _860_/Y _947_/C vdd gnd BUFX2
+XBUFX2_insert27 rst_n _1453_/C vdd gnd BUFX2
+XBUFX2_insert49 _810_/Y _985_/B vdd gnd BUFX2
+X_1190_ _1190_/A _1430_/B _1190_/C _1537_/D vdd gnd AOI21X1
+X_1457_ _1457_/A _1467_/B _1457_/C _1606_/D vdd gnd AOI21X1
+X_1526_ _908_/A _1526_/B _1527_/C vdd gnd NOR2X1
+X_1388_ _1637_/Q _1392_/B _1435_/C _1389_/C vdd gnd OAI21X1
+X_970_ _979_/A _970_/B _985_/B _994_/C vdd gnd OAI21X1
+X_1311_ _1608_/Q _1392_/B _1435_/C _1312_/C vdd gnd OAI21X1
+X_1173_ _1284_/A _903_/B _903_/C _1174_/B vdd gnd NOR3X1
+X_1242_ _1642_/Q _964_/B _964_/C _1640_/Q _1243_/B vdd gnd AOI22X1
+X_1509_ _1509_/A _1509_/B _910_/A _1511_/A vdd gnd OAI21X1
+X_953_ _963_/C _953_/B _955_/A vdd gnd NAND2X1
+X_884_ _908_/A _903_/C _885_/B vdd gnd NOR2X1
+X_1087_ _1087_/A _1087_/B _947_/C _1571_/D vdd gnd AOI21X1
+X_1156_ _1156_/A _1156_/B _1274_/C _1158_/A vdd gnd OAI21X1
+X_1225_ _1648_/Q _1510_/B _1501_/C _1646_/Q _1226_/B vdd gnd AOI22X1
+X_936_ _936_/A _946_/B _946_/C _946_/A _937_/B vdd gnd AOI22X1
+X_798_ _857_/Y _805_/A _798_/Y vdd gnd OR2X2
+X_867_ _929_/C _939_/C _917_/A _918_/B vdd gnd NAND3X1
+X_1010_ _903_/A _1499_/B _1519_/A _1011_/B vdd gnd NOR3X1
+X_1208_ _1296_/A _874_/B _903_/C _1209_/B vdd gnd NOR3X1
+X_1139_ _979_/A _970_/B _1195_/C vdd gnd NOR2X1
+X_1490_ _1490_/A _1490_/B _965_/C _1647_/D vdd gnd AOI21X1
+X_919_ _919_/A _919_/B _919_/Y vdd gnd NAND2X1
+X_1611_ _1611_/D _1654_/CLK _1611_/Q vdd gnd DFFPOSX1
+X_1473_ _1473_/A _1473_/B _947_/C _1574_/D vdd gnd AOI21X1
+X_1542_ _1542_/D _1647_/CLK _1542_/Q vdd gnd DFFPOSX1
+XBUFX2_insert17 _860_/Y _965_/C vdd gnd BUFX2
+XBUFX2_insert28 rst_n _1435_/C vdd gnd BUFX2
+X_1387_ _1452_/A _1387_/B _1536_/Q _1389_/A vdd gnd OAI21X1
+X_1456_ _1606_/Q _1467_/B _1466_/C _1457_/C vdd gnd OAI21X1
+X_1525_ _905_/C _1525_/B _1655_/Q _1528_/B vdd gnd OAI21X1
+X_1241_ _1241_/A _1241_/B _963_/C _1243_/A vdd gnd OAI21X1
+X_1310_ _1452_/A _850_/B _1613_/Q _1312_/A vdd gnd OAI21X1
+X_1172_ _1530_/A _1530_/B _1172_/C _1174_/A vdd gnd AOI21X1
+X_1439_ _1439_/A _1450_/B _1439_/C _1538_/D vdd gnd AOI21X1
+X_1508_ _1519_/A _1508_/B _1508_/C _1509_/A vdd gnd AOI21X1
+X_883_ cmd_valid _995_/A _908_/A vdd gnd NAND2X1
+X_952_ _962_/C _952_/B _952_/C _953_/B vdd gnd OAI21X1
+X_1224_ _1224_/A _1224_/B _1500_/C _1226_/A vdd gnd OAI21X1
+X_1086_ _1573_/Q _946_/B _946_/C _1571_/Q _1087_/B vdd gnd AOI22X1
+X_1155_ _1267_/A _1273_/B _1514_/C _1156_/B vdd gnd NOR3X1
+X_866_ _958_/A _917_/A vdd gnd INVX1
+X_935_ _935_/A _935_/B _945_/C _937_/A vdd gnd OAI21X1
+X_797_ _857_/Y _805_/A _797_/Y vdd gnd NAND2X1
+X_1207_ _900_/A _1530_/B _1207_/C _1209_/A vdd gnd AOI21X1
+X_1069_ _961_/C _995_/A _889_/A _1300_/C vdd gnd AOI21X1
+X_1138_ _984_/C _1386_/A _1142_/A vdd gnd NAND2X1
+X_849_ _849_/A _850_/B _849_/Y vdd gnd NOR2X1
+X_918_ _990_/A _918_/B _919_/B vdd gnd NAND2X1
+X_1610_ _770_/Y _1654_/CLK _808_/A vdd gnd DFFPOSX1
+X_1472_ _1539_/Q _946_/B _946_/C _1574_/Q _1473_/B vdd gnd AOI22X1
+X_1541_ _1541_/D _767_/CLK _1541_/Q vdd gnd DFFPOSX1
+XBUFX2_insert18 _860_/Y _895_/C vdd gnd BUFX2
+XBUFX2_insert29 rst_n _1365_/C vdd gnd BUFX2
+X_1524_ _1524_/A _1530_/B _908_/A _1525_/B vdd gnd AOI21X1
+X_1386_ _1386_/A _828_/A _1386_/C _1641_/D vdd gnd AOI21X1
+X_1455_ _1465_/B _1455_/B _1619_/Q _1457_/A vdd gnd OAI21X1
+X_1171_ _1543_/Q _1172_/C vdd gnd INVX1
+X_1240_ _1284_/A _962_/B _962_/C _1241_/B vdd gnd NOR3X1
+X_1507_ _1550_/Q _1508_/C vdd gnd INVX1
+X_1369_ _1369_/A _1376_/B vdd gnd INVX1
+X_1438_ _1538_/Q _1450_/B _1453_/C _1439_/C vdd gnd OAI21X1
+X_882_ _887_/A _975_/B _995_/A vdd gnd NOR2X1
+X_951_ cmd_b _951_/B _952_/B vdd gnd NAND2X1
+X_1154_ _1273_/C _1513_/B _1154_/C _1156_/A vdd gnd AOI21X1
+X_1223_ _1267_/A _1493_/B _1252_/C _1224_/B vdd gnd NOR3X1
+X_1085_ _1085_/A _1085_/B _945_/C _1087_/A vdd gnd OAI21X1
+X_796_ _797_/Y _798_/Y _796_/Y vdd gnd NAND2X1
+X_865_ _957_/B _939_/C vdd gnd INVX2
+X_934_ _934_/A _944_/B _962_/C _935_/B vdd gnd NOR3X1
+X_1137_ _1379_/A _1379_/B _1386_/A vdd gnd NOR2X1
+X_1206_ _1652_/Q _1207_/C vdd gnd INVX1
+X_1068_ _985_/B _1319_/B vdd gnd INVX1
+X_779_ _807_/Y _796_/Y _808_/Y _779_/Y vdd gnd OAI21X1
+X_848_ _848_/A _848_/B _848_/Y vdd gnd NOR2X1
+X_917_ _917_/A _959_/B _948_/C _919_/A vdd gnd NAND3X1
+X_1540_ _1540_/D _1637_/CLK _1540_/Q vdd gnd DFFPOSX1
+X_1471_ _1471_/A _1471_/B _945_/C _1473_/A vdd gnd OAI21X1
+XBUFX2_insert19 _860_/Y _1528_/C vdd gnd BUFX2
+X_1454_ _1454_/A _1454_/B _1454_/C _1619_/D vdd gnd AOI21X1
+X_1523_ _1523_/A _1523_/B _1523_/C _1598_/D vdd gnd AOI21X1
+X_1385_ _828_/A _1385_/B _1426_/C _1386_/C vdd gnd OAI21X1
+X_1170_ _1170_/A _1170_/B _1528_/C _1545_/D vdd gnd AOI21X1
+X_1437_ _1449_/A _1455_/B _1546_/Q _1439_/A vdd gnd OAI21X1
+X_1506_ _924_/A _1520_/B _1514_/C _1509_/B vdd gnd NOR3X1
+X_1299_ _1299_/A _1299_/B _895_/C _1620_/D vdd gnd AOI21X1
+X_1368_ _829_/A _981_/A _1369_/A vdd gnd NAND2X1
+X_950_ _950_/A _951_/B vdd gnd INVX1
+X_881_ _986_/A _975_/B vdd gnd INVX1
+X_1084_ _1273_/A _962_/B _1499_/C _1085_/B vdd gnd NOR3X1
+X_1153_ _1549_/Q _1154_/C vdd gnd INVX1
+X_1222_ _931_/A _1251_/B _1222_/C _1224_/A vdd gnd AOI21X1
+X_933_ cmd_b _961_/C _933_/C _934_/A vdd gnd NAND3X1
+X_795_ _799_/Y _807_/Y _796_/Y _795_/Y vdd gnd OAI21X1
+X_864_ _957_/A _929_/C vdd gnd INVX2
+X_1067_ _1067_/A _1067_/B _895_/C _1577_/D vdd gnd AOI21X1
+X_1136_ _887_/A _975_/B _994_/C _1379_/B vdd gnd OAI21X1
+X_1205_ _1205_/A _1205_/B _895_/C _1654_/D vdd gnd AOI21X1
+X_916_ _973_/A _990_/B _916_/C _925_/A vdd gnd AOI21X1
+X_778_ _779_/Y _782_/Y _859_/Y _778_/Y vdd gnd AOI21X1
+X_847_ _847_/A _859_/B _847_/C _848_/B vdd gnd OAI21X1
+X_1119_ _1563_/Q _1510_/B _1257_/C _1504_/D _1120_/A vdd gnd AOI22X1
+X_1470_ _934_/A _944_/B _1481_/A _1471_/B vdd gnd NOR3X1
+X_1599_ _989_/Y _767_/CLK _986_/A vdd gnd DFFPOSX1
+X_1453_ _1619_/Q _1454_/B _1453_/C _1454_/C vdd gnd OAI21X1
+X_1522_ _1639_/Q _1522_/B _1522_/C _1598_/Q _1523_/B vdd gnd AOI22X1
+X_1384_ _992_/B _984_/B _1385_/B vdd gnd AND2X2
+X_1367_ _1379_/A _1379_/B _829_/B _1373_/B vdd gnd OAI21X1
+X_1436_ _1436_/A _1436_/B _1436_/C _1546_/D vdd gnd AOI21X1
+X_1505_ _1505_/A _1505_/B _1517_/C _1582_/D vdd gnd AOI21X1
+X_1298_ _1622_/Q _1533_/B _889_/A _1620_/Q _1299_/B vdd gnd AOI22X1
+X_880_ _907_/A _880_/B _880_/Y vdd gnd NAND2X1
+X_1221_ _1646_/Q _1222_/C vdd gnd INVX1
+X_1083_ cmd_a _961_/C _943_/C _1273_/A vdd gnd NAND3X1
+X_1152_ _842_/B _1424_/A _1152_/C _1551_/D vdd gnd AOI21X1
+X_1419_ _995_/A _1419_/B _1427_/A _1420_/A vdd gnd NAND3X1
+X_863_ _948_/C _891_/A _869_/A vdd gnd NAND2X1
+X_932_ _932_/A _933_/C vdd gnd INVX1
+X_794_ _856_/Y _795_/Y _800_/Y _794_/Y vdd gnd NAND3X1
+X_1204_ _1543_/Q _1533_/B _889_/A _1654_/Q _1205_/B vdd gnd AOI22X1
+X_1066_ _1579_/Q _911_/B _889_/A _1577_/Q _1067_/B vdd gnd AOI22X1
+X_1135_ _992_/B _1303_/C _994_/B _1379_/A vdd gnd OAI21X1
+X_846_ _846_/A _859_/A _846_/C _846_/D _847_/C vdd gnd AOI22X1
+X_915_ _990_/A _990_/C _973_/A vdd gnd NOR2X1
+X_777_ _859_/Y _777_/Y vdd gnd INVX1
+X_1049_ _958_/B _920_/B _1530_/A vdd gnd NOR2X1
+X_1118_ _910_/A cmd_a _1257_/C vdd gnd AND2X2
+X_829_ _829_/A _829_/B _981_/B vdd gnd AND2X2
+X_1598_ _1598_/D _1639_/CLK _1598_/Q vdd gnd DFFPOSX1
+X_1383_ _1383_/A _1383_/B _999_/C _1645_/D vdd gnd AOI21X1
+X_1452_ _1452_/A _850_/B _1627_/Q _1454_/A vdd gnd OAI21X1
+X_1521_ _1521_/A _1521_/B _910_/A _1523_/A vdd gnd OAI21X1
+X_1504_ _1615_/Q _1510_/B _911_/C _1504_/D _1505_/A vdd gnd AOI22X1
+X_1366_ _1366_/A _1366_/B _1366_/C _1536_/D vdd gnd AOI21X1
+X_1435_ _1546_/Q _1435_/B _1435_/C _1436_/C vdd gnd OAI21X1
+X_1297_ _1297_/A _1297_/B _1532_/C _1299_/A vdd gnd OAI21X1
+X_1151_ cmd_op[3] _1424_/A _1426_/C _1152_/C vdd gnd OAI21X1
+X_1220_ _1220_/A _1220_/B _895_/C _1648_/D vdd gnd AOI21X1
+X_1082_ _941_/A _949_/A _1082_/C _1085_/A vdd gnd AOI21X1
+X_1349_ _1390_/A _1387_/B _1560_/Q _1351_/A vdd gnd OAI21X1
+X_1418_ _1418_/A _990_/C _1419_/B vdd gnd AND2X2
+X_862_ _958_/A _959_/B _891_/A vdd gnd NOR2X1
+X_931_ _931_/A _941_/B _931_/C _935_/A vdd gnd AOI21X1
+X_793_ _836_/Y _793_/B _820_/Y _793_/Y vdd gnd NAND3X1
+X_1134_ _997_/C _1303_/C vdd gnd INVX1
+X_1203_ _1203_/A _1203_/B _1532_/C _1205_/A vdd gnd OAI21X1
+X_1065_ _1065_/A _1065_/B _1532_/C _1067_/A vdd gnd OAI21X1
+X_776_ _836_/Y _793_/B _776_/Y vdd gnd NOR2X1
+X_845_ _845_/A _845_/B _859_/B vdd gnd NAND2X1
+X_914_ _957_/A _957_/B _958_/A _990_/C vdd gnd NAND3X1
+X_1117_ _1561_/Q _1503_/B _1120_/B vdd gnd NAND2X1
+X_1048_ _1581_/Q _1050_/C vdd gnd INVX1
+X_759_ _850_/Y rsp_flags[2] vdd gnd BUFX2
+X_828_ _828_/A _828_/B _981_/A vdd gnd AND2X2
+X_1597_ _999_/Y _767_/CLK _887_/A vdd gnd DFFPOSX1
+X_1520_ _944_/A _1520_/B _1520_/C _1521_/B vdd gnd NOR3X1
+X_1382_ _997_/C _1382_/B _1386_/A _1383_/A vdd gnd NAND3X1
+X_1451_ _1451_/A _1454_/B _1451_/C _1627_/D vdd gnd AOI21X1
+X_1649_ _1649_/D _1653_/CLK _829_/A vdd gnd DFFPOSX1
+X_1503_ _1582_/Q _1503_/B _1505_/B vdd gnd NAND2X1
+X_1296_ _1296_/A _874_/B _1519_/A _1297_/B vdd gnd NOR3X1
+X_1365_ _1536_/Q _1366_/B _1365_/C _1366_/C vdd gnd OAI21X1
+X_1434_ _1434_/A _1434_/B _1554_/Q _1436_/A vdd gnd OAI21X1
+X_1150_ cmd_valid _997_/B _1424_/A vdd gnd NAND2X1
+X_1081_ _1571_/Q _1082_/C vdd gnd INVX1
+X_1417_ _929_/C _939_/C _917_/A _1418_/A vdd gnd OAI21X1
+X_1279_ _1285_/C _1279_/B _1281_/A vdd gnd NAND2X1
+X_1348_ _1348_/A _1366_/B _1348_/C _1560_/D vdd gnd AOI21X1
+X_930_ _990_/A _932_/A _931_/A vdd gnd NOR2X1
+X_792_ _852_/Y _792_/Y vdd gnd INVX1
+X_861_ _957_/A _957_/B _948_/C vdd gnd NOR2X1
+X_1064_ _903_/A _874_/B _1252_/C _1065_/B vdd gnd NOR3X1
+X_1133_ _984_/A _1142_/B vdd gnd INVX1
+X_1202_ _1290_/A _874_/B _903_/C _1203_/B vdd gnd NOR3X1
+X_913_ _936_/A _916_/C vdd gnd INVX1
+X_775_ _777_/Y _776_/Y _775_/Y vdd gnd NOR2X1
+X_844_ _859_/A _844_/B _844_/C _848_/A vdd gnd OAI21X1
+X_1047_ _1047_/A _1047_/B _1528_/C _1583_/D vdd gnd AOI21X1
+X_1116_ _908_/A _1504_/D _908_/C _1503_/B vdd gnd OAI21X1
+X_758_ _849_/Y rsp_flags[3] vdd gnd BUFX2
+X_827_ _993_/B _827_/Y vdd gnd INVX1
+X_1596_ _1596_/D _1653_/CLK _854_/A vdd gnd DFFPOSX1
+X_1450_ _1627_/Q _1450_/B _1453_/C _1451_/C vdd gnd OAI21X1
+X_1381_ _1381_/A _981_/A _1382_/B vdd gnd NOR2X1
+X_1579_ _1579_/D _1650_/CLK _1579_/Q vdd gnd DFFPOSX1
+X_1648_ _1648_/D _767_/CLK _1648_/Q vdd gnd DFFPOSX1
+X_1433_ _1433_/A _1435_/B _1433_/C _1554_/D vdd gnd AOI21X1
+X_1502_ _1502_/A _1502_/B _912_/C _1615_/D vdd gnd AOI21X1
+X_1295_ _900_/A _892_/A _1295_/C _1297_/A vdd gnd AOI21X1
+X_1364_ _1390_/A _1387_/B _1540_/Q _1366_/A vdd gnd OAI21X1
+X_1080_ _1080_/A _1080_/B _947_/C _1573_/D vdd gnd AOI21X1
+X_1347_ _1560_/Q _1366_/B _1365_/C _1348_/C vdd gnd OAI21X1
+X_1416_ _958_/A _812_/Y _1416_/C _1420_/B vdd gnd NAND3X1
+X_1278_ _1527_/D _1278_/B _1278_/C _1279_/B vdd gnd OAI21X1
+X_791_ _808_/B _805_/A _791_/Y vdd gnd NAND2X1
+X_860_ _860_/A _860_/Y vdd gnd INVX8
+X_1201_ _1201_/A _893_/B _1203_/A vdd gnd NOR2X1
+X_989_ _989_/A _989_/Y vdd gnd INVX1
+X_1063_ _900_/A _892_/A _1063_/C _1065_/A vdd gnd AOI21X1
+X_1132_ _1132_/A _990_/B _1132_/C _1557_/D vdd gnd AOI21X1
+X_843_ _843_/A _843_/B _846_/D _844_/C vdd gnd OAI21X1
+X_912_ _912_/A _912_/B _912_/C _912_/Y vdd gnd AOI21X1
+X_774_ _784_/Y _775_/Y _778_/Y _780_/Y _774_/Y vdd gnd AOI22X1
+X_1046_ _1585_/Q _1334_/A _1280_/C _1583_/Q _1047_/B vdd gnd AOI22X1
+X_1115_ _1251_/B _919_/A _1504_/D vdd gnd NOR2X1
+X_826_ _826_/A _887_/A _986_/A _993_/B vdd gnd NAND3X1
+X_757_ _850_/A rsp_flags[4] vdd gnd BUFX2
+X_1595_ _1595_/D _1647_/CLK _1595_/Q vdd gnd DFFPOSX1
+X_1029_ _934_/A _1520_/B _1527_/D _1030_/B vdd gnd NOR3X1
+X_1380_ _828_/A _828_/B _1381_/A vdd gnd NOR2X1
+X_809_ _887_/A _975_/A vdd gnd INVX1
+X_1578_ _1578_/D _767_/CLK _957_/B vdd gnd DFFPOSX1
+X_1647_ _1647_/D _1647_/CLK _1647_/Q vdd gnd DFFPOSX1
+X_1363_ _1363_/A _1366_/B _1363_/C _1540_/D vdd gnd AOI21X1
+X_1432_ _1554_/Q _1435_/B _860_/A _1433_/C vdd gnd OAI21X1
+X_1501_ _1631_/Q _1510_/B _1501_/C _1615_/Q _1502_/B vdd gnd AOI22X1
+X_1294_ _1620_/Q _1295_/C vdd gnd INVX1
+X_1346_ _1452_/A _1387_/B _1564_/Q _1348_/A vdd gnd OAI21X1
+X_1415_ _1415_/A _1415_/B _999_/C _1594_/D vdd gnd AOI21X1
+X_1277_ _1530_/B _1277_/B _1626_/Q _1278_/C vdd gnd OAI21X1
+X_790_ _808_/B _790_/Y vdd gnd INVX1
+X_988_ _988_/A _988_/B _988_/C _989_/A vdd gnd NAND3X1
+X_1200_ _1654_/Q _1201_/A vdd gnd INVX1
+X_1062_ _1577_/Q _1063_/C vdd gnd INVX1
+X_1131_ _887_/A _986_/A _860_/A _1132_/C vdd gnd OAI21X1
+X_1329_ _1329_/A _978_/A _1334_/A _1331_/B vdd gnd OAI21X1
+X_842_ _842_/A _842_/B _846_/D vdd gnd NOR2X1
+X_911_ _911_/A _911_/B _911_/C _911_/D _912_/A vdd gnd AOI22X1
+X_773_ _774_/Y _773_/Y vdd gnd INVX1
+X_1114_ _1114_/A _1114_/B _912_/C _1563_/D vdd gnd AOI21X1
+X_1045_ _1285_/C _1045_/B _1047_/A vdd gnd NAND2X1
+X_756_ _849_/A rsp_flags[5] vdd gnd BUFX2
+X_825_ _843_/B _851_/A _846_/A _843_/A _825_/Y vdd gnd AOI22X1
+X_1594_ _1594_/D _767_/CLK _959_/B vdd gnd DFFPOSX1
+X_1028_ _1520_/C _1513_/B _1028_/C _1030_/A vdd gnd AOI21X1
+X_808_ _808_/A _808_/B _808_/Y vdd gnd NAND2X1
+X_1646_ _1646_/D _1647_/CLK _1646_/Q vdd gnd DFFPOSX1
+X_1577_ _1577_/D _1654_/CLK _1577_/Q vdd gnd DFFPOSX1
+X_1500_ _1500_/A _1500_/B _1500_/C _1502_/A vdd gnd OAI21X1
+X_1293_ _1293_/A _1293_/B _1528_/C _1622_/D vdd gnd AOI21X1
+X_1362_ _1540_/Q _1366_/B _1365_/C _1363_/C vdd gnd OAI21X1
+X_1431_ _1434_/A _857_/C _1562_/Q _1433_/A vdd gnd OAI21X1
+X_1629_ _1629_/D _1635_/CLK _1629_/Q vdd gnd DFFPOSX1
+X_1276_ _1276_/A _1276_/B _1517_/C _1628_/D vdd gnd AOI21X1
+X_1345_ _1345_/A _1392_/B _1345_/C _1564_/D vdd gnd AOI21X1
+X_1414_ _995_/A _1414_/B _1427_/A _1415_/A vdd gnd NAND3X1
+X_987_ _997_/B cmd_last _999_/C _988_/B vdd gnd AOI21X1
+X_1130_ _973_/A _1427_/A _1132_/A vdd gnd NAND2X1
+X_1061_ _1061_/A _1061_/B _1523_/C _1579_/D vdd gnd AOI21X1
+X_1259_ _1632_/Q _1260_/C vdd gnd INVX1
+X_1328_ _977_/A _1332_/B _1331_/A vdd gnd NAND2X1
+X_772_ _985_/B _772_/Y vdd gnd INVX1
+X_841_ _845_/A _842_/B vdd gnd INVX1
+X_910_ _910_/A cmd_b _911_/C vdd gnd AND2X2
+X_1044_ _1527_/D _1526_/B _1044_/C _1045_/B vdd gnd OAI21X1
+X_1113_ _1565_/Q _1510_/B _1501_/C _1563_/Q _1114_/B vdd gnd AOI22X1
+X_755_ _755_/A rsp_result vdd gnd BUFX2
+X_824_ _842_/A _845_/A _851_/A vdd gnd NOR2X1
+X_1593_ _1593_/D _1650_/CLK _1593_/Q vdd gnd DFFPOSX1
+X_1027_ _959_/B _932_/A _1513_/B vdd gnd NOR2X1
+X_807_ _808_/A _808_/B _807_/Y vdd gnd NOR2X1
+X_1576_ _1576_/D _1637_/CLK _976_/A vdd gnd DFFPOSX1
+X_1645_ _1645_/D _1653_/CLK _828_/B vdd gnd DFFPOSX1
+X_1430_ _1430_/A _1430_/B _1430_/C _1562_/D vdd gnd AOI21X1
+X_1292_ _1624_/Q _1533_/B _905_/C _1622_/Q _1293_/B vdd gnd AOI22X1
+X_1361_ _1390_/A _1434_/B _1544_/Q _1363_/A vdd gnd OAI21X1
+X_1559_ _1559_/D _1639_/CLK _1559_/Q vdd gnd DFFPOSX1
+X_1628_ _1628_/D _1639_/CLK _1628_/Q vdd gnd DFFPOSX1
+X_1413_ _973_/A _1413_/B _1414_/B vdd gnd NOR2X1
+X_1275_ _1630_/Q _1522_/B _1522_/C _1628_/Q _1276_/B vdd gnd AOI22X1
+X_1344_ _1564_/Q _1366_/B _1435_/C _1345_/C vdd gnd OAI21X1
+X_986_ _986_/A _986_/B _999_/B _988_/C vdd gnd NAND3X1
+X_1060_ _1581_/Q _911_/B _1280_/C _1579_/Q _1061_/B vdd gnd AOI22X1
+X_1189_ _1537_/Q _1430_/B _1466_/C _1190_/C vdd gnd OAI21X1
+X_1258_ _1258_/A _1258_/B _1517_/C _1634_/D vdd gnd AOI21X1
+X_1327_ _1327_/A _1327_/B _1528_/C _1588_/D vdd gnd AOI21X1
+X_771_ _857_/Y _772_/Y _771_/Y vdd gnd NAND2X1
+X_840_ _842_/A _845_/A _844_/B vdd gnd NAND2X1
+X_969_ _969_/A _969_/B _979_/A vdd gnd NAND2X1
+X_1043_ cmd_b _1524_/A _1526_/B vdd gnd NAND2X1
+X_1112_ _1112_/A _1112_/B _910_/A _1114_/A vdd gnd OAI21X1
+X_823_ _854_/A _856_/A _843_/A vdd gnd NOR2X1
+X_754_ _827_/Y rsp_valid vdd gnd BUFX2
+X_1592_ _1592_/D _1654_/CLK _969_/A vdd gnd DFFPOSX1
+X_1026_ _1587_/Q _1028_/C vdd gnd INVX1
+X_806_ _807_/Y _806_/Y vdd gnd INVX1
+X_1575_ _1575_/D _767_/CLK _805_/A vdd gnd DFFPOSX1
+X_1644_ _1644_/D _1644_/CLK _1644_/Q vdd gnd DFFPOSX1
+X_1009_ _1498_/A _1251_/B _1009_/C _1011_/A vdd gnd AOI21X1
+X_1360_ _1360_/A _1436_/B _1360_/C _1544_/D vdd gnd AOI21X1
+X_1291_ _1291_/A _1291_/B _1532_/C _1293_/A vdd gnd OAI21X1
+X_1489_ _1542_/Q _964_/B _964_/C _1647_/Q _1490_/B vdd gnd AOI22X1
+X_1558_ _1558_/D _1644_/CLK _1558_/Q vdd gnd DFFPOSX1
+X_1627_ _1627_/D _1635_/CLK _1627_/Q vdd gnd DFFPOSX1
+X_1343_ _1452_/A _1387_/B _1572_/Q _1345_/A vdd gnd OAI21X1
+X_1412_ _959_/B _923_/B _1413_/B vdd gnd NOR2X1
+X_1274_ _1274_/A _1274_/B _1274_/C _1276_/A vdd gnd OAI21X1
+X_985_ _985_/A _985_/B _985_/C _997_/C _999_/B vdd gnd AOI22X1
+X_1326_ _1334_/A _1326_/B _970_/B _1327_/B vdd gnd NAND3X1
+X_1188_ _985_/A _857_/C _1188_/C _1190_/A vdd gnd OAI21X1
+X_1257_ _1636_/Q _1510_/B _1257_/C _1257_/D _1258_/A vdd gnd AOI22X1
+X_770_ _772_/Y _783_/Y _771_/Y _770_/Y vdd gnd OAI21X1
+X_968_ _968_/A _969_/B vdd gnd INVX1
+X_899_ _959_/B _899_/B _900_/A vdd gnd NOR2X1
+X_1042_ _1277_/B _1524_/A vdd gnd INVX1
+X_1111_ _1296_/A _1499_/B _1499_/C _1112_/B vdd gnd NOR3X1
+X_1309_ _1309_/A _1454_/B _1309_/C _1613_/D vdd gnd AOI21X1
+X_822_ _859_/C _843_/B vdd gnd INVX1
+X_753_ _975_/A cmd_ready vdd gnd BUFX2
+X_1591_ _1591_/D _1639_/CLK _1591_/Q vdd gnd DFFPOSX1
+X_1025_ _1025_/A _1025_/B _1523_/C _1589_/D vdd gnd AOI21X1
+X_805_ _805_/A _805_/Y vdd gnd INVX1
+X_1643_ _1643_/D _1651_/CLK _1643_/Q vdd gnd DFFPOSX1
+X_1574_ _1574_/D _1644_/CLK _1574_/Q vdd gnd DFFPOSX1
+X_1008_ _990_/A _899_/B _1498_/A vdd gnd NOR2X1
+X_1290_ _1290_/A _874_/B _1519_/A _1291_/B vdd gnd NOR3X1
+X_1626_ _1626_/D _1655_/CLK _1626_/Q vdd gnd DFFPOSX1
+X_1488_ _1488_/A _1488_/B _963_/C _1490_/A vdd gnd OAI21X1
+X_1557_ _1557_/D _767_/CLK _1557_/Q vdd gnd DFFPOSX1
+X_1273_ _1273_/A _1273_/B _1273_/C _1274_/B vdd gnd NOR3X1
+X_1342_ _1342_/A _1342_/B _999_/C _1568_/D vdd gnd AOI21X1
+X_1411_ _959_/B _812_/Y _1416_/C _1415_/B vdd gnd NAND3X1
+X_1609_ _927_/Y _1644_/CLK _936_/A vdd gnd DFFPOSX1
+X_984_ _984_/A _984_/B _984_/C _985_/C vdd gnd NAND3X1
+X_1256_ _1634_/Q _1256_/B _1258_/B vdd gnd NAND2X1
+X_1325_ _1329_/A _978_/A _1325_/C _1326_/B vdd gnd OAI21X1
+X_1187_ _1303_/C _785_/Y _1188_/C vdd gnd AND2X2
+X_898_ _957_/A _939_/C _917_/A _899_/B vdd gnd NAND3X1
+X_967_ _977_/A _977_/B _967_/C _970_/B vdd gnd NAND3X1
+X_1110_ cmd_a _961_/C _902_/C _1296_/A vdd gnd NAND3X1
+X_1041_ _1530_/B _1277_/B _1583_/Q _1044_/C vdd gnd OAI21X1
+X_1239_ _960_/A _941_/B _1239_/C _1241_/A vdd gnd AOI21X1
+X_1308_ _1613_/Q _1454_/B _1453_/C _1309_/C vdd gnd OAI21X1
+X_821_ _854_/A _856_/A _859_/C vdd gnd NAND2X1
+X_1590_ _1590_/D _1651_/CLK _755_/A vdd gnd DFFPOSX1
+X_1024_ _1591_/Q _1522_/B _905_/C _1589_/Q _1025_/B vdd gnd AOI22X1
+X_804_ _857_/Y _805_/Y _804_/Y vdd gnd NAND2X1
+X_1642_ _1642_/D _1647_/CLK _1642_/Q vdd gnd DFFPOSX1
+X_1573_ _1573_/D _1644_/CLK _1573_/Q vdd gnd DFFPOSX1
+X_1007_ _1593_/Q _1009_/C vdd gnd INVX1
+X_1556_ _1556_/D _1637_/CLK _1556_/Q vdd gnd DFFPOSX1
+X_1625_ _1625_/D _1635_/CLK _1625_/Q vdd gnd DFFPOSX1
+X_1487_ _962_/A _962_/B _1499_/C _1488_/B vdd gnd NOR3X1
+X_1410_ _1410_/A _1430_/B _1410_/C _1602_/D vdd gnd AOI21X1
+X_1272_ _1514_/C _1519_/B _1272_/C _1274_/A vdd gnd AOI21X1
+X_1341_ _995_/A _995_/C _826_/A _1342_/A vdd gnd OAI21X1
+X_1539_ _1539_/D _1644_/CLK _1539_/Q vdd gnd DFFPOSX1
+X_1608_ _1608_/D _1635_/CLK _1608_/Q vdd gnd DFFPOSX1
+X_983_ _993_/A _993_/B _984_/B vdd gnd NOR2X1
+X_1186_ _993_/A _993_/B _1319_/B _1186_/Y vdd gnd OAI21X1
+X_1255_ _1255_/A _1255_/B _965_/C _1636_/D vdd gnd AOI21X1
+X_1324_ _977_/B _1325_/C vdd gnd INVX1
+X_897_ _911_/A _900_/C vdd gnd INVX1
+X_966_ _976_/A _976_/B _967_/C vdd gnd AND2X2
+X_1040_ _958_/A _990_/A _948_/C _1277_/B vdd gnd NAND3X1
+X_1169_ _1547_/Q _1334_/A _1280_/C _1545_/Q _1170_/B vdd gnd AOI22X1
+X_1238_ _1640_/Q _1239_/C vdd gnd INVX1
+X_1307_ _1452_/A _850_/B _1616_/Q _1309_/A vdd gnd OAI21X1
+X_820_ _847_/A _859_/D _858_/C _820_/Y vdd gnd OAI21X1
+X_949_ _949_/A _950_/A _964_/A _952_/C vdd gnd OAI21X1
+X_1023_ _1023_/A _1023_/B _1285_/C _1025_/A vdd gnd OAI21X1
+X_803_ _857_/Y _803_/Y vdd gnd INVX1
+X_1572_ _1572_/D _1635_/CLK _1572_/Q vdd gnd DFFPOSX1
+X_1641_ _1641_/D _1653_/CLK _828_/A vdd gnd DFFPOSX1
+X_1006_ _1006_/A _1006_/B _912_/C _1595_/D vdd gnd AOI21X1
+X_1555_ _1555_/D _1653_/CLK _984_/A vdd gnd DFFPOSX1
+X_1624_ _1624_/D _1655_/CLK _1624_/Q vdd gnd DFFPOSX1
+X_1486_ _960_/A _949_/A _1486_/C _1488_/A vdd gnd AOI21X1
+X_1340_ _1340_/A _1392_/B _1340_/C _1572_/D vdd gnd AOI21X1
+X_1271_ _1628_/Q _1272_/C vdd gnd INVX1
+X_1469_ _931_/A _949_/A _1469_/C _1471_/A vdd gnd AOI21X1
+X_1538_ _1538_/D _1651_/CLK _1538_/Q vdd gnd DFFPOSX1
+X_1607_ _937_/Y _1644_/CLK _946_/A vdd gnd DFFPOSX1
+X_982_ rsp_ready _993_/A vdd gnd INVX1
+X_1323_ _977_/A _1329_/A vdd gnd INVX1
+X_1185_ _1185_/A _1185_/B _947_/C _1539_/D vdd gnd AOI21X1
+X_1254_ _1638_/Q _964_/B _1501_/C _1636_/Q _1255_/B vdd gnd AOI22X1
+X_965_ _965_/A _965_/B _965_/C _965_/Y vdd gnd AOI21X1
+X_896_ _908_/A _896_/Y vdd gnd INVX8
+X_1306_ _1306_/A _1454_/B _1306_/C _1616_/D vdd gnd AOI21X1
+X_1099_ _1569_/Q _964_/B _1501_/C _1567_/Q _1100_/B vdd gnd AOI22X1
+X_1168_ _1285_/C _1168_/B _1170_/A vdd gnd NAND2X1
+X_1237_ _1237_/A _1237_/B _965_/C _1642_/D vdd gnd AOI21X1
+X_948_ _958_/A _959_/B _948_/C _950_/A vdd gnd NAND3X1
+X_879_ _920_/A _920_/B _990_/B _880_/B vdd gnd OAI21X1
+X_1022_ _924_/A _1520_/B _1273_/C _1023_/B vdd gnd NOR3X1
+X_802_ _805_/A _803_/Y _802_/Y vdd gnd NAND2X1
+X_1571_ _1571_/D _1644_/CLK _1571_/Q vdd gnd DFFPOSX1
+X_1640_ _1640_/D _1647_/CLK _1640_/Q vdd gnd DFFPOSX1
+X_1005_ _964_/D _1510_/B _1501_/C _1595_/Q _1006_/B vdd gnd AOI22X1
+X_1485_ _1647_/Q _1486_/C vdd gnd INVX1
+X_1554_ _1554_/D _1654_/CLK _1554_/Q vdd gnd DFFPOSX1
+X_1623_ _895_/Y _1650_/CLK _905_/A vdd gnd DFFPOSX1
+.ends
+

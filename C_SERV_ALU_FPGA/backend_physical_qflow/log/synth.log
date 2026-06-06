@@ -1,0 +1,1519 @@
+Qflow synthesis logfile created on Mon Jun 1 04:36:13 KST 2026
+Running yosys for verilog parsing and synthesis
+yosys -s /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.ys
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.63+97 (git sha1 1111a401f, clang++ 18.1.3 -fPIC -O3)
+
+-- Executing script file `/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.ys' --
+
+1. Executing Liberty frontend: /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
+Imported 39 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend: /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v
+Parsing Verilog input from `/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v' to AST representation.
+Generating RTLIL representation for module `\serv_exec_unit'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v
+Parsing Verilog input from `/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v' to AST representation.
+Generating RTLIL representation for module `\serv_alu'.
+Successfully finished Verilog frontend.
+
+4. Executing SYNTH pass.
+
+4.1. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1.1. Analyzing design hierarchy..
+Top module:  \serv_exec_unit
+Used module:     \serv_alu
+Parameter \W = 1
+
+4.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\serv_alu'.
+Parameter \W = 1
+Generating RTLIL representation for module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+
+4.1.3. Analyzing design hierarchy..
+Top module:  \serv_exec_unit
+Used module:     $paramod\serv_alu\W=s32'00000000000000000000000000000001
+
+4.1.4. Analyzing design hierarchy..
+Top module:  \serv_exec_unit
+Used module:     $paramod\serv_alu\W=s32'00000000000000000000000000000001
+Removing unused module `\serv_alu'.
+Removed 1 unused modules.
+
+4.2. Executing PROC pass (convert processes to netlists).
+
+4.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 9 switch rules as full_case in process $proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52 in module serv_exec_unit.
+Removed a total of 0 dead cases.
+
+4.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 7 assignments to connections.
+
+4.2.4. Executing PROC_INIT pass (extract init attributes).
+
+4.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~12 debug messages>
+
+4.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\serv_alu\W=s32'00000000000000000000000000000001.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:79$153'.
+     1/1: $0\cmp_r[0:0]
+Creating decoders for process `\serv_exec_unit.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52'.
+     1/22: $4$lookahead\b_r$51[31:0]$71
+     2/22: $3$bitselwrite$pos$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:142$2[4:0]$69
+     3/22: $4$lookahead\a_r$50[31:0]$70
+     4/22: $3$bitselwrite$pos$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:141$1[4:0]$68
+     5/22: $3$lookahead\b_r$51[31:0]$67
+     6/22: $3$lookahead\a_r$50[31:0]$66
+     7/22: $2$lookahead\b_r$51[31:0]$65
+     8/22: $2$lookahead\a_r$50[31:0]$64
+     9/22: $2$bitselwrite$pos$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:142$2[4:0]$63
+    10/22: $2$bitselwrite$pos$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:141$1[4:0]$62
+    11/22: $1$lookahead\b_r$51[31:0]$61
+    12/22: $1$lookahead\a_r$50[31:0]$60
+    13/22: $1$bitselwrite$pos$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:142$2[4:0]$59
+    14/22: $1$bitselwrite$pos$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:141$1[4:0]$58
+    15/22: $0\valid_r[0:0]
+    16/22: $0\cmp_r[0:0]
+    17/22: $0\result_r[31:0]
+    18/22: $0\op_r[3:0]
+    19/22: $0\exec_cnt[5:0]
+    20/22: $0\send_cnt[4:0]
+    21/22: $0\load_cnt[4:0]
+    22/22: $0\state[2:0]
+
+4.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+4.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod\serv_alu\W=s32'00000000000000000000000000000001.\cmp_r' using process `$paramod\serv_alu\W=s32'00000000000000000000000000000001.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:79$153'.
+  created $dff cell `$procdff$415' with positive edge clock.
+Creating register for signal `$paramod\serv_alu\W=s32'00000000000000000000000000000001.\add_cy_r' using process `$paramod\serv_alu\W=s32'00000000000000000000000000000001.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:79$153'.
+  created $dff cell `$procdff$416' with positive edge clock.
+Creating register for signal `\serv_exec_unit.\state' using process `\serv_exec_unit.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52'.
+  created $dff cell `$procdff$417' with positive edge clock.
+Creating register for signal `\serv_exec_unit.\load_cnt' using process `\serv_exec_unit.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52'.
+  created $dff cell `$procdff$418' with positive edge clock.
+Creating register for signal `\serv_exec_unit.\send_cnt' using process `\serv_exec_unit.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52'.
+  created $dff cell `$procdff$419' with positive edge clock.
+Creating register for signal `\serv_exec_unit.\exec_cnt' using process `\serv_exec_unit.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52'.
+  created $dff cell `$procdff$420' with positive edge clock.
+Creating register for signal `\serv_exec_unit.\op_r' using process `\serv_exec_unit.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52'.
+  created $dff cell `$procdff$421' with positive edge clock.
+Creating register for signal `\serv_exec_unit.\a_r' using process `\serv_exec_unit.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52'.
+  created $dff cell `$procdff$422' with positive edge clock.
+Creating register for signal `\serv_exec_unit.\b_r' using process `\serv_exec_unit.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52'.
+  created $dff cell `$procdff$423' with positive edge clock.
+Creating register for signal `\serv_exec_unit.\result_r' using process `\serv_exec_unit.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52'.
+  created $dff cell `$procdff$424' with positive edge clock.
+Creating register for signal `\serv_exec_unit.\cmp_r' using process `\serv_exec_unit.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52'.
+  created $dff cell `$procdff$425' with positive edge clock.
+Creating register for signal `\serv_exec_unit.\valid_r' using process `\serv_exec_unit.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52'.
+  created $dff cell `$procdff$426' with positive edge clock.
+
+4.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod\serv_alu\W=s32'00000000000000000000000000000001.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:79$153'.
+Removing empty process `$paramod\serv_alu\W=s32'00000000000000000000000000000001.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:79$153'.
+Found and cleaned up 11 empty switches in `\serv_exec_unit.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52'.
+Removing empty process `serv_exec_unit.$proc$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:107$52'.
+Cleaned up 12 empty switches.
+
+4.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+<suppressed ~1 debug messages>
+Optimizing module serv_exec_unit.
+<suppressed ~36 debug messages>
+
+4.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+4.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+Removed 17 unused cells and 150 unused wires.
+<suppressed ~19 debug messages>
+
+4.5. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\serv_alu\W=s32'00000000000000000000000000000001...
+Checking module serv_exec_unit...
+Found and reported 0 problems.
+
+4.6. Executing OPT pass (performing simple optimizations).
+
+4.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+4.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 29 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 176 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Computing hashes of 140 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Computing hashes of 138 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Computing hashes of 137 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+<suppressed ~117 debug messages>
+Removed a total of 39 cells.
+
+4.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \serv_exec_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$241.
+    dead port 2/2 on $mux $procmux$232.
+    dead port 2/2 on $mux $procmux$223.
+    dead port 2/2 on $mux $procmux$220.
+    dead port 2/2 on $mux $procmux$211.
+    dead port 2/2 on $mux $procmux$208.
+    dead port 2/2 on $mux $procmux$188.
+    dead port 2/2 on $mux $procmux$185.
+    dead port 2/2 on $mux $procmux$166.
+    dead port 2/2 on $mux $procmux$163.
+Removed 10 multiplexer ports.
+<suppressed ~82 debug messages>
+
+4.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+  Optimizing cells in module \serv_exec_unit.
+Performed a total of 0 changes.
+
+4.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 29 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 127 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+4.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+Removed 0 unused cells and 49 unused wires.
+<suppressed ~1 debug messages>
+
+4.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+4.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \serv_exec_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~72 debug messages>
+
+4.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+  Optimizing cells in module \serv_exec_unit.
+Performed a total of 0 changes.
+
+4.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 29 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 127 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+4.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+
+4.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+4.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+4.7. Executing FSM pass (extract and optimize FSM).
+
+4.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking serv_exec_unit.state as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+
+4.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+4.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+4.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+
+4.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+4.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+4.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+4.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+4.8. Executing OPT pass (performing simple optimizations).
+
+4.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+4.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 29 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 127 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+4.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \serv_exec_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~72 debug messages>
+
+4.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+  Optimizing cells in module \serv_exec_unit.
+Performed a total of 0 changes.
+
+4.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 29 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 127 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+4.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$415 ($dff) from module $paramod\serv_alu\W=s32'00000000000000000000000000000001 (D = \o_cmp, Q = \cmp_r).
+Adding SRST signal on $procdff$426 ($dff) from module serv_exec_unit (D = $procmux$277_Y, Q = \valid_r, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$428 ($sdff) from module serv_exec_unit (D = $procmux$277_Y, Q = \valid_r).
+Adding SRST signal on $procdff$425 ($dff) from module serv_exec_unit (D = $procmux$297_Y, Q = \cmp_r, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$440 ($sdff) from module serv_exec_unit (D = $procmux$295_Y, Q = \cmp_r).
+Adding SRST signal on $procdff$424 ($dff) from module serv_exec_unit (D = $procmux$305_Y, Q = \result_r, rval = 0).
+Adding EN signal on $auto$ff.cc:337:slice$442 ($sdff) from module serv_exec_unit (D = $procmux$305_Y, Q = \result_r).
+Adding SRST signal on $procdff$423 ($dff) from module serv_exec_unit (D = $2$lookahead\b_r$51[31:0]$65, Q = \b_r, rval = 0).
+Adding EN signal on $auto$ff.cc:337:slice$450 ($sdff) from module serv_exec_unit (D = $2$lookahead\b_r$51[31:0]$65, Q = \b_r).
+Adding SRST signal on $procdff$422 ($dff) from module serv_exec_unit (D = $2$lookahead\a_r$50[31:0]$64, Q = \a_r, rval = 0).
+Adding EN signal on $auto$ff.cc:337:slice$460 ($sdff) from module serv_exec_unit (D = $2$lookahead\a_r$50[31:0]$64, Q = \a_r).
+Adding SRST signal on $procdff$421 ($dff) from module serv_exec_unit (D = $procmux$326_Y, Q = \op_r, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:337:slice$470 ($sdff) from module serv_exec_unit (D = \cmd_op, Q = \op_r).
+Adding SRST signal on $procdff$420 ($dff) from module serv_exec_unit (D = $procmux$336_Y, Q = \exec_cnt, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:337:slice$474 ($sdff) from module serv_exec_unit (D = $procmux$336_Y, Q = \exec_cnt).
+Adding SRST signal on $procdff$419 ($dff) from module serv_exec_unit (D = $procmux$355_Y, Q = \send_cnt, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:337:slice$486 ($sdff) from module serv_exec_unit (D = $procmux$355_Y, Q = \send_cnt).
+Adding SRST signal on $procdff$418 ($dff) from module serv_exec_unit (D = $procmux$374_Y, Q = \load_cnt, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:337:slice$498 ($sdff) from module serv_exec_unit (D = $procmux$374_Y, Q = \load_cnt).
+Adding SRST signal on $procdff$417 ($dff) from module serv_exec_unit (D = $procmux$392_Y, Q = \state, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$508 ($sdff) from module serv_exec_unit (D = $procmux$392_Y, Q = \state).
+
+4.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+Removed 14 unused cells and 14 unused wires.
+<suppressed ~16 debug messages>
+
+4.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+<suppressed ~7 debug messages>
+
+4.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \serv_exec_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~56 debug messages>
+
+4.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+  Optimizing cells in module \serv_exec_unit.
+Performed a total of 0 changes.
+
+4.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 28 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 152 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Computing hashes of 136 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Computing hashes of 135 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+<suppressed ~51 debug messages>
+Removed a total of 17 cells.
+
+4.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+Removed 0 unused cells and 17 unused wires.
+<suppressed ~1 debug messages>
+
+4.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+4.8.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.8.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \serv_exec_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~56 debug messages>
+
+4.8.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+  Optimizing cells in module \serv_exec_unit.
+Performed a total of 0 changes.
+
+4.8.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 28 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 135 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+4.8.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.8.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+
+4.8.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+4.8.23. Finished fast OPT passes. (There is nothing left to do.)
+
+4.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 2) from port B of cell serv_exec_unit.$auto$opt_dff.cc:235:make_patterns_logic$483 ($ne).
+Removed top 1 bits (of 6) from port B of cell serv_exec_unit.$eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:57$5 ($eq).
+Removed top 3 bits (of 4) from port B of cell serv_exec_unit.$eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:59$7 ($eq).
+Removed top 2 bits (of 4) from port B of cell serv_exec_unit.$eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:60$8 ($eq).
+Removed top 2 bits (of 4) from port B of cell serv_exec_unit.$eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:61$9 ($eq).
+Removed top 1 bits (of 4) from port B of cell serv_exec_unit.$eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:62$10 ($eq).
+Removed top 1 bits (of 4) from port B of cell serv_exec_unit.$eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:63$11 ($eq).
+Removed top 1 bits (of 4) from port B of cell serv_exec_unit.$eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:64$12 ($eq).
+Removed top 1 bits (of 4) from port B of cell serv_exec_unit.$eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:65$13 ($eq).
+Removed top 1 bits (of 2) from mux cell serv_exec_unit.$ternary$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:77$30 ($mux).
+Converting cell serv_exec_unit.$neg$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:142$83 ($neg) from signed to unsigned.
+Removed top 1 bits (of 6) from port A of cell serv_exec_unit.$neg$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:142$83 ($neg).
+Removed top 4 bits (of 5) from port B of cell serv_exec_unit.$add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:147$88 ($add).
+Removed top 5 bits (of 6) from port B of cell serv_exec_unit.$add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:168$97 ($add).
+Removed top 4 bits (of 5) from port B of cell serv_exec_unit.$add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:179$98 ($add).
+Removed top 2 bits (of 3) from port B of cell serv_exec_unit.$procmux$375_CMP0 ($eq).
+Removed top 4 bits (of 5) from mux cell serv_exec_unit.$procmux$378 ($mux).
+Removed top 4 bits (of 5) from mux cell serv_exec_unit.$procmux$380 ($mux).
+Removed top 1 bits (of 3) from port B of cell serv_exec_unit.$procmux$393_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell serv_exec_unit.$procmux$397_CMP0 ($eq).
+Removed top 1 bits (of 3) from mux cell serv_exec_unit.$procmux$407 ($mux).
+Removed top 4 bits (of 5) from wire serv_exec_unit.$procmux$378_Y.
+Removed top 4 bits (of 5) from wire serv_exec_unit.$procmux$380_Y.
+Removed top 1 bits (of 2) from wire serv_exec_unit.$ternary$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:77$30_Y.
+Removed top 1 bits (of 3) from wire serv_exec_unit.$procmux$407_Y.
+
+4.10. Executing PEEPOPT pass (run peephole optimizers).
+
+4.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+4.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module $paramod\serv_alu\W=s32'00000000000000000000000000000001:
+  creating $macc model for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:47$134 ($add).
+  creating $macc model for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:47$133 ($add).
+  creating $macc model for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:45$131 ($add).
+  creating $macc model for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:45$130 ($add).
+  merging $macc model for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:45$130 into $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:45$131.
+  merging $macc model for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:47$133 into $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:47$134.
+  creating $alu model for $macc $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:45$131.
+  creating $alu model for $macc $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:47$134.
+  creating $alu cell for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:47$134: $auto$alumacc.cc:512:replace_alu$528
+  creating $alu cell for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v:45$131: $auto$alumacc.cc:512:replace_alu$531
+  created 2 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module serv_exec_unit:
+  creating $macc model for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:179$98 ($add).
+  creating $macc model for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:168$97 ($add).
+  creating $macc model for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:147$88 ($add).
+  creating $macc model for $neg$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:142$83 ($neg).
+  creating $alu model for $macc $neg$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:142$83.
+  creating $alu model for $macc $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:147$88.
+  creating $alu model for $macc $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:168$97.
+  creating $alu model for $macc $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:179$98.
+  creating $alu cell for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:179$98: $auto$alumacc.cc:512:replace_alu$534
+  creating $alu cell for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:168$97: $auto$alumacc.cc:512:replace_alu$537
+  creating $alu cell for $add$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:147$88: $auto$alumacc.cc:512:replace_alu$540
+  creating $alu cell for $neg$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:142$83: $auto$alumacc.cc:512:replace_alu$543
+  created 4 $alu and 0 $macc cells.
+
+4.13. Executing SHARE pass (SAT-based resource sharing).
+
+4.14. Executing OPT pass (performing simple optimizations).
+
+4.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+4.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 28 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 135 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+4.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \serv_exec_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~56 debug messages>
+
+4.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+  Optimizing cells in module \serv_exec_unit.
+Performed a total of 0 changes.
+
+4.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 28 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 135 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+4.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+4.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+4.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \serv_exec_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~56 debug messages>
+
+4.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+  Optimizing cells in module \serv_exec_unit.
+Performed a total of 0 changes.
+
+4.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 26 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 135 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+4.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+
+4.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+4.14.16. Finished fast OPT passes. (There is nothing left to do.)
+
+4.15. Executing MEMORY pass.
+
+4.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+4.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+4.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+4.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+4.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+4.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+
+4.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+4.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+4.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+
+4.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+
+4.17. Executing OPT pass (performing simple optimizations).
+
+4.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+<suppressed ~32 debug messages>
+
+4.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 26 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 113 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+4.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+Removed 0 unused cells and 22 unused wires.
+<suppressed ~1 debug messages>
+
+4.17.5. Finished fast OPT passes.
+
+4.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+4.19. Executing OPT pass (performing simple optimizations).
+
+4.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+4.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 26 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 113 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+4.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \serv_exec_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~31 debug messages>
+
+4.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+  Optimizing cells in module \serv_exec_unit.
+    New ctrl vector for $pmux cell $procmux$355: $eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:83$40_Y
+    Consolidated identical input bits for $pmux cell $procmux$392:
+      Old ports: A=3'000, B={ 1'0 $auto$wreduce.cc:514:run$527 [1:0] 9'010011000 }, Y=$procmux$392_Y
+      New ports: A=2'00, B={ $auto$wreduce.cc:514:run$527 [1:0] 6'101100 }, Y=$procmux$392_Y [1:0]
+      New connections: $procmux$392_Y [2] = 1'0
+    New ctrl vector for $pmux cell $procmux$392: { $eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:82$37_Y $eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:82$38_Y $eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:93$48_Y }
+    New ctrl vector for $pmux cell $procmux$277: $eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:93$48_Y
+    New ctrl vector for $pmux cell $procmux$336: $eq$/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/source/serv_exec_unit.v:93$48_Y
+  Optimizing cells in module \serv_exec_unit.
+Performed a total of 5 changes.
+
+4.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 26 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 113 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+4.19.6. Executing OPT_SHARE pass.
+
+4.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+
+4.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+<suppressed ~1 debug messages>
+
+4.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \serv_exec_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+4.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+  Optimizing cells in module \serv_exec_unit.
+Performed a total of 0 changes.
+
+4.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 26 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 112 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+4.19.14. Executing OPT_SHARE pass.
+
+4.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 2 on $auto$ff.cc:337:slice$509 ($sdffe) from module serv_exec_unit.
+
+4.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+4.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+<suppressed ~2 debug messages>
+
+4.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \serv_exec_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+4.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+  Optimizing cells in module \serv_exec_unit.
+Performed a total of 0 changes.
+
+4.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 26 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 112 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+4.19.22. Executing OPT_SHARE pass.
+
+4.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+
+4.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+4.19.26. Finished fast OPT passes. (There is nothing left to do.)
+
+4.20. Executing TECHMAP pass (map to technology primitives).
+
+4.20.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+4.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $sdffe.
+Using template $paramod$9f3f81d189a6b1d5c738a580270bbb92e45c5c71\_90_alu for cells of type $alu.
+Using template $paramod$672a140277c71df8314410f22acc08d55222c3c7\_90_alu for cells of type $alu.
+Using template $paramod$32efbfac1c4dc57230cf86180788fdfd12e3b511\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$constmap:a4d6512a57e16ef384f5fad80eb3ccf92bf06652$paramod$320aa077a7b7c3e2ebcbf2ed330b2bc798d6703e\_90_shift_shiftx for cells of type $shift.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port A: 1'1
+Creating constmapped module `$paramod$constmap:b3a74507ecbdc52cd4a015f7ded2697bb951dd26$paramod$320aa077a7b7c3e2ebcbf2ed330b2bc798d6703e\_90_shift_shiftx'.
+
+4.20.14. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:b3a74507ecbdc52cd4a015f7ded2697bb951dd26$paramod$320aa077a7b7c3e2ebcbf2ed330b2bc798d6703e\_90_shift_shiftx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$1155.
+    dead port 2/2 on $mux $procmux$1161.
+    dead port 2/2 on $mux $procmux$1167.
+    dead port 2/2 on $mux $procmux$1173.
+    dead port 2/2 on $mux $procmux$1179.
+Removed 5 multiplexer ports.
+<suppressed ~473 debug messages>
+
+4.20.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:b3a74507ecbdc52cd4a015f7ded2697bb951dd26$paramod$320aa077a7b7c3e2ebcbf2ed330b2bc798d6703e\_90_shift_shiftx.
+<suppressed ~2 debug messages>
+Removed 0 unused cells and 10 unused wires.
+Using template $paramod$constmap:b3a74507ecbdc52cd4a015f7ded2697bb951dd26$paramod$320aa077a7b7c3e2ebcbf2ed330b2bc798d6703e\_90_shift_shiftx for cells of type $shift.
+Using template $paramod$8fabc56b80a569262acfc42757a02ca0b8e91278\_90_pmux for cells of type $pmux.
+Using template $paramod$97565c3687be688407d1272a293bd9d0ae6852dc\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000101 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000110 for cells of type $lcu.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod$1d1e68f77481583066c6d429218f48ea9d5739b3\_90_alu for cells of type $alu.
+Using template $paramod$fc972a7a46956c1788f3cb5257b53c8f1df2d0cc\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $dff.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000001 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000001 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~847 debug messages>
+
+4.21. Executing OPT pass (performing simple optimizations).
+
+4.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+<suppressed ~20 debug messages>
+Optimizing module serv_exec_unit.
+<suppressed ~1329 debug messages>
+
+4.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 36 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 1155 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Computing hashes of 1095 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Computing hashes of 1083 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+<suppressed ~216 debug messages>
+Removed a total of 72 cells.
+
+4.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+Removed 13 unused cells and 642 unused wires.
+<suppressed ~15 debug messages>
+
+4.21.5. Finished fast OPT passes.
+
+4.22. Executing ABC pass (technology mapping using ABC).
+
+4.22.1. Extracting gate netlist of module `$paramod\serv_alu\W=s32'00000000000000000000000000000001' to `<abc-temp-dir>/input.blif'..
+
+4.22.1.1. Executed ABC.
+Extracted 29 gates and 44 wires to a netlist network with 15 inputs and 3 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Mar 16 2026 11:33:38)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+4.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:            ANDNOT cells:        7
+ABC RESULTS:               MUX cells:        2
+ABC RESULTS:              NAND cells:        4
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:                OR cells:        4
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:              XNOR cells:        2
+ABC RESULTS:               XOR cells:        4
+ABC RESULTS:        internal signals:       26
+ABC RESULTS:           input signals:       15
+ABC RESULTS:          output signals:        3
+Removing temp directory.
+
+4.22.2. Extracting gate netlist of module `\serv_exec_unit' to `<abc-temp-dir>/input.blif'..
+
+4.22.2.1. Executed ABC.
+Extracted 954 gates and 1082 wires to a netlist network with 126 inputs and 141 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Mar 16 2026 11:33:38)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+4.22.2.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       17
+ABC RESULTS:            ANDNOT cells:      435
+ABC RESULTS:               MUX cells:       74
+ABC RESULTS:              NAND cells:       68
+ABC RESULTS:               NOR cells:       13
+ABC RESULTS:               NOT cells:       23
+ABC RESULTS:                OR cells:      130
+ABC RESULTS:             ORNOT cells:      107
+ABC RESULTS:              XNOR cells:        6
+ABC RESULTS:               XOR cells:       11
+ABC RESULTS:        internal signals:      815
+ABC RESULTS:           input signals:      126
+ABC RESULTS:          output signals:      141
+Removing temp directory.
+Removing global temp directory.
+
+4.23. Executing OPT pass (performing simple optimizations).
+
+4.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+<suppressed ~33 debug messages>
+
+4.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 28 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 1005 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Computing hashes of 1002 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+4.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+Removed 1 unused cells and 429 unused wires.
+<suppressed ~28 debug messages>
+
+4.23.5. Finished fast OPT passes.
+
+4.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `serv_exec_unit'. Setting top module to serv_exec_unit.
+
+4.24.1. Analyzing design hierarchy..
+Top module:  \serv_exec_unit
+Used module:     $paramod\serv_alu\W=s32'00000000000000000000000000000001
+
+4.24.2. Analyzing design hierarchy..
+Top module:  \serv_exec_unit
+Used module:     $paramod\serv_alu\W=s32'00000000000000000000000000000001
+Removed 0 unused modules.
+
+4.25. Printing statistics.
+
+=== $paramod\serv_alu\W=s32'00000000000000000000000000000001 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       39 wires
+       42 wire bits
+       15 public wires
+       18 public wire bits
+       13 ports
+       16 port bits
+       28 cells
+        7   $_ANDNOT_
+        1   $_AND_
+        1   $_DFFE_PP_
+        1   $_DFF_P_
+        2   $_MUX_
+        4   $_NAND_
+        1   $_NOR_
+        1   $_ORNOT_
+        4   $_OR_
+        2   $_XNOR_
+        4   $_XOR_
+
+=== serv_exec_unit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      834 wires
+     1022 wire bits
+       33 public wires
+      157 public wire bits
+       15 ports
+       25 port bits
+     1000 cells
+      434   $_ANDNOT_
+       16   $_AND_
+       74   $_MUX_
+       68   $_NAND_
+       13   $_NOR_
+       22   $_NOT_
+      107   $_ORNOT_
+      129   $_OR_
+      120   $_SDFFE_PN0P_
+        6   $_XNOR_
+       11   $_XOR_
+        1 submodules
+        1   $paramod\serv_alu\W=s32'00000000000000000000000000000001
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+     1028 serv_exec_unit
+       28 $paramod\serv_alu\W=s32'00000000000000000000000000000001
+
+        +----------Count including submodules.
+        | 
+      873 wires
+     1064 wire bits
+       48 public wires
+      175 public wire bits
+       28 ports
+       41 port bits
+        - memories
+        - memory bits
+        - processes
+     1028 cells
+      441   $_ANDNOT_
+       17   $_AND_
+        1   $_DFFE_PP_
+        1   $_DFF_P_
+       76   $_MUX_
+       72   $_NAND_
+       14   $_NOR_
+       22   $_NOT_
+      108   $_ORNOT_
+      133   $_OR_
+      120   $_SDFFE_PN0P_
+        8   $_XNOR_
+       15   $_XOR_
+        1 submodules
+        1   $paramod\serv_alu\W=s32'00000000000000000000000000000001
+
+4.26. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\serv_alu\W=s32'00000000000000000000000000000001...
+Checking module serv_exec_unit...
+Found and reported 0 problems.
+
+5. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFFNEGX1 (noninv, pins=3, area=864.00) is a direct match for cell type $_DFF_N_.
+  cell DFFPOSX1 (noninv, pins=3, area=864.00) is a direct match for cell type $_DFF_P_.
+  cell DFFSR (noninv, pins=5, area=1584.00) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    \DFFNEGX1 _DFF_N_ (.CLK( C), .D( D), .Q( Q));
+    \DFFPOSX1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    unmapped dff cell: $_DFF_PN0_
+    unmapped dff cell: $_DFF_PN1_
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \DFFSR _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .R( R), .S( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+5.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001':
+  mapped 2 $_DFF_P_ cells to \DFFPOSX1 cells.
+Mapping DFF cells in module `\serv_exec_unit':
+  mapped 120 $_DFF_P_ cells to \DFFPOSX1 cells.
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 29 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 1241 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \serv_exec_unit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+  Optimizing cells in module \serv_exec_unit.
+Performed a total of 0 changes.
+
+6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Computing hashes of 29 cells of `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding duplicate cells in `$paramod\serv_alu\W=s32'00000000000000000000000000000001'.
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 1241 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\serv_alu\W=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module \serv_exec_unit..
+
+6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+Optimizing module serv_exec_unit.
+
+6.9. Finished fast OPT passes. (There is nothing left to do.)
+
+7. Executing ABC pass (technology mapping using ABC).
+
+7.1. Extracting gate netlist of module `$paramod\serv_alu\W=s32'00000000000000000000000000000001' to `<abc-temp-dir>/input.blif'..
+
+7.1.1. Executed ABC.
+Extracted 27 gates and 42 wires to a netlist network with 15 inputs and 4 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFNEGX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFPOSX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFSR".
+ABC: Scl_LibertyReadGenlib() skipped cell "FAX1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "HAX1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "LATCH".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "PADINOUT".
+ABC: Scl_LibertyReadGenlib() skipped cell "TBUFX1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "TBUFX2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "XNOR2X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "XOR2X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADFC" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADNC" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADVDD" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADGND" without logic function.
+ABC: Library "etri05_stdcells" from "/usr/local/share/qflow/tech/etri050/etri05_stdcells.lib" has 24 cells (15 skipped: 4 seq; 1 tri-state; 4 no func; 6 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.00 sec
+ABC: Memory =    0.51 MB. Time =     0.00 sec
+ABC: + strash 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + ifraig 
+ABC: + retime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + map -M 1 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.1.2. Re-integrating ABC results.
+ABC RESULTS:           AOI21X1 cells:        3
+ABC RESULTS:           AOI22X1 cells:        1
+ABC RESULTS:             INVX1 cells:       10
+ABC RESULTS:           NAND2X1 cells:       13
+ABC RESULTS:           NAND3X1 cells:        5
+ABC RESULTS:            NOR2X1 cells:        3
+ABC RESULTS:           OAI21X1 cells:        4
+ABC RESULTS:           OAI22X1 cells:        1
+ABC RESULTS:             OR2X2 cells:        1
+ABC RESULTS:        internal signals:       23
+ABC RESULTS:           input signals:       15
+ABC RESULTS:          output signals:        4
+Removing temp directory.
+
+7.2. Extracting gate netlist of module `\serv_exec_unit' to `<abc-temp-dir>/input.blif'..
+
+7.2.1. Executed ABC.
+Extracted 1120 gates and 1253 wires to a netlist network with 132 inputs and 138 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFNEGX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFPOSX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFSR".
+ABC: Scl_LibertyReadGenlib() skipped cell "FAX1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "HAX1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "LATCH".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "PADINOUT".
+ABC: Scl_LibertyReadGenlib() skipped cell "TBUFX1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "TBUFX2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "XNOR2X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "XOR2X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADFC" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADNC" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADVDD" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "PADGND" without logic function.
+ABC: Library "etri05_stdcells" from "/usr/local/share/qflow/tech/etri050/etri05_stdcells.lib" has 24 cells (15 skipped: 4 seq; 1 tri-state; 4 no func; 6 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.00 sec
+ABC: Memory =    0.51 MB. Time =     0.00 sec
+ABC: + strash 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + ifraig 
+ABC: + retime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + map -M 1 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.2.2. Re-integrating ABC results.
+ABC RESULTS:            AND2X2 cells:       12
+ABC RESULTS:           AOI21X1 cells:      171
+ABC RESULTS:           AOI22X1 cells:       68
+ABC RESULTS:             INVX1 cells:       91
+ABC RESULTS:           NAND2X1 cells:       63
+ABC RESULTS:           NAND3X1 cells:       47
+ABC RESULTS:            NOR2X1 cells:       56
+ABC RESULTS:            NOR3X1 cells:       48
+ABC RESULTS:           OAI21X1 cells:      167
+ABC RESULTS:           OAI22X1 cells:        2
+ABC RESULTS:             OR2X2 cells:        1
+ABC RESULTS:        internal signals:      983
+ABC RESULTS:           input signals:      132
+ABC RESULTS:          output signals:      138
+Removing temp directory.
+Removing global temp directory.
+
+8. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod\serv_alu\W=s32'00000000000000000000000000000001.
+<suppressed ~1 debug messages>
+
+9. Executing SETUNDEF pass (replace undef values with defined constants).
+Removed 0 unused cells and 1243 unused wires.
+
+10. Executing IOPADMAP pass (mapping inputs/outputs to IO-PAD cells).
+Mapping port serv_exec_unit.debug_state using BUFX2.
+Mapping port serv_exec_unit.busy using BUFX2.
+Mapping port serv_exec_unit.rsp_last using BUFX2.
+Mapping port serv_exec_unit.rsp_flags using BUFX2.
+Mapping port serv_exec_unit.rsp_result using BUFX2.
+Don't map input port serv_exec_unit.rsp_ready: Missing option -inpad.
+Mapping port serv_exec_unit.rsp_valid using BUFX2.
+Don't map input port serv_exec_unit.cmd_last: Missing option -inpad.
+Don't map input port serv_exec_unit.cmd_b: Missing option -inpad.
+Don't map input port serv_exec_unit.cmd_a: Missing option -inpad.
+Don't map input port serv_exec_unit.cmd_op: Missing option -inpad.
+Mapping port serv_exec_unit.cmd_ready using BUFX2.
+Don't map input port serv_exec_unit.cmd_valid: Missing option -inpad.
+Don't map input port serv_exec_unit.rst_n: Missing option -inpad.
+Don't map input port serv_exec_unit.clk: Missing option -inpad.
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serv_exec_unit.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 904 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \serv_exec_unit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \serv_exec_unit.
+Performed a total of 0 changes.
+
+11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 904 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serv_exec_unit..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serv_exec_unit.
+
+11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \serv_exec_unit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \serv_exec_unit.
+Performed a total of 0 changes.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serv_exec_unit'.
+Computing hashes of 904 cells of `\serv_exec_unit'.
+Finding duplicate cells in `\serv_exec_unit'.
+Removed a total of 0 cells.
+
+11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serv_exec_unit..
+
+11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serv_exec_unit.
+
+11.16. Finished fast OPT passes. (There is nothing left to do.)
+
+12. Executing Verilog backend.
+
+12.1. Executing BMUXMAP pass.
+
+12.2. Executing DEMUXMAP pass.
+Dumping module `\serv_exec_unit'.
+
+13. Printing statistics.
+
+=== serv_exec_unit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      791 wires
+      920 wire bits
+      791 public wires
+      920 public wire bits
+       15 ports
+       25 port bits
+      904 cells
+        1   $scopeinfo
+       12   AND2X2
+      174   AOI21X1
+       69   AOI22X1
+       14   BUFX2
+      122   DFFPOSX1
+      101   INVX1
+       76   NAND2X1
+       52   NAND3X1
+       59   NOR2X1
+       48   NOR3X1
+      171   OAI21X1
+        3   OAI22X1
+        2   OR2X2
+
+End of script. Logfile hash: ee76919816, CPU: user 0.36s system 0.05s, MEM: 26.50 MB peak
+Yosys 0.63+97 (git sha1 1111a401f, clang++ 18.1.3 -fPIC -O3)
+Time spent: 49% 2x abc (0 sec), 9% 35x opt_expr (0 sec), ...
+Running getpowerground to determine power and ground net names.
+getpowerground.tcl  /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef
+Running vlogFanout
+vlogFanout -l 300 -c 75 -I serv_exec_unit_nofanout -s nullstring -p /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib -b BUFX2,CLKBUF1 -i A,A -o Y,Y serv_exec_unit_mapped.v serv_exec_unit_sized.v
+
+vlogFanout for qflow 1.4.100
+Parsing library "etri05_stdcells"
+End of library at line 6613
+Lib Read:  Processed 6615 lines.
+Top internal fanout is 75 (load 2370.42) from node \u_serv_alu.i_en ,
+driven by NOR2X1 with strength 186.879 (fF driven at latency 300)
+Top fanout load-to-strength ratio is 12.8875 (latency = 3866.24 ps)
+Top input node fanout is 122 (load 6091.34) from node clk.
+0 gates exceed specified minimum load.
+92 buffers were added.
+Warning 1: load of 191.204 is 1.16202 times greater than strongest gate NAND3X1
+This warning will only be repeated for larger overload ratios.  Warning count reflects
+the total number of overloaded nets.
+Warning 7: load of 245.921 is 1.49023 times greater than strongest gate OAI21X1
+Warning 8: load of 314.221 is 1.89542 times greater than strongest gate NAND2X1
+Warning 9: load of 2136.71 is 12.9481 times greater than strongest gate OAI21X1
+7 gates were changed.
+
+Gate counts by drive strength:
+
+	"1" gates	In: 886    	Out: 879    	-7
+	"2" gates	In: 109    	Out: 113    	+4
+
+37 gates exceed specified minimum load.
+0 buffers were added.
+0 gates were changed.
+
+Gate counts by drive strength:
+
+	"1" gates	In: 886    	Out: 879    	-7
+	"2" gates	In: 109    	Out: 113    	+4
+
+Number of gates changed: 0
+Running vlog2Verilog for antenna cell mapping.
+vlog2Verilog -c -p -v vdd -g gnd  -l /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef 
+   -o serv_exec_unit.v serv_exec_unit_sized.v
+
+Generating RTL verilog and SPICE netlist file in directory
+	 /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/synthesis
+Files:
+   Verilog: /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/synthesis/serv_exec_unit.rtl.v
+   Verilog: /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/synthesis/serv_exec_unit.rtlnopwr.v
+   Verilog: /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/synthesis/serv_exec_unit.rtlbb.v
+   Spice:   /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/backend_physical_qflow/synthesis/serv_exec_unit.spc
+
+Running vlog2Verilog.
+vlog2Verilog -c -v vdd -g gnd  -l /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef 
+	-o serv_exec_unit.rtl.v
+   serv_exec_unit.v
+vlog2Verilog -c -p -v vdd -g gnd  -l /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef 
+	-o serv_exec_unit.rtlnopwr.v
+   serv_exec_unit.v
+/usr/local/share/qflow/bin/vlog2Verilog -c -p -b -n -v vdd -g gnd  -l /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef
+   -o serv_exec_unit.rtlbb.v
+Running vlog2Spice.
+vlog2Spice -i -l  /usr/local/share/qflow/tech/etri050/etri050_stdcells.sp -o serv_exec_unit.spc serv_exec_unit.rtl.v
+Running spi2xspice.py
+spi2xspice.py "/usr/local/share/qflow/tech/etri050/etri05_stdcells.lib" serv_exec_unit.spc serv_exec_unit.xspice
+
+Synthesis script ended on Mon Jun 1 04:36:14 KST 2026

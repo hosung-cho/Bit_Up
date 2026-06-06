@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/asic/serv_exec_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_exec_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_exec_fpga_bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_exec_fpga_bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_fpga_host.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_fpga_host
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_fpga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_fpga_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/tb_fpga_host_riscv_tests.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fpga_host_riscv_tests

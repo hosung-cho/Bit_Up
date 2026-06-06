@@ -1,0 +1,422 @@
+
+Subcircuit summary:
+Circuit 1: AOI21X1                         |Circuit 2: AOI21X1                         
+-------------------------------------------|-------------------------------------------
+pfet (3)                                   |pfet (3)                                   
+nfet (3)                                   |nfet (3)                                   
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: AOI21X1                         |Circuit 2: AOI21X1                         
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+A                                          |A                                          
+C                                          |C                                          
+B                                          |B                                          
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes AOI21X1 and AOI21X1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: DFFPOSX1                        |Circuit 2: DFFPOSX1                        
+-------------------------------------------|-------------------------------------------
+pfet (11)                                  |pfet (11)                                  
+nfet (11)                                  |nfet (11)                                  
+Number of devices: 22                      |Number of devices: 22                      
+Number of nets: 17                         |Number of nets: 17                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: DFFPOSX1                        |Circuit 2: DFFPOSX1                        
+-------------------------------------------|-------------------------------------------
+CLK                                        |CLK                                        
+D                                          |D                                          
+Q                                          |Q                                          
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes DFFPOSX1 and DFFPOSX1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: OAI21X1                         |Circuit 2: OAI21X1                         
+-------------------------------------------|-------------------------------------------
+nfet (3)                                   |nfet (3)                                   
+pfet (3)                                   |pfet (3)                                   
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: OAI21X1                         |Circuit 2: OAI21X1                         
+-------------------------------------------|-------------------------------------------
+gnd                                        |gnd                                        
+vdd                                        |vdd                                        
+C                                          |C                                          
+A                                          |A                                          
+B                                          |B                                          
+Y                                          |Y                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes OAI21X1 and OAI21X1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: INVX1                           |Circuit 2: INVX1                           
+-------------------------------------------|-------------------------------------------
+nfet (1)                                   |nfet (1)                                   
+pfet (1)                                   |pfet (1)                                   
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: INVX1                           |Circuit 2: INVX1                           
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+A                                          |A                                          
+gnd                                        |gnd                                        
+vdd                                        |vdd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes INVX1 and INVX1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: AND2X2                          |Circuit 2: AND2X2                          
+-------------------------------------------|-------------------------------------------
+nfet (3)                                   |nfet (3)                                   
+pfet (3)                                   |pfet (3)                                   
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: AND2X2                          |Circuit 2: AND2X2                          
+-------------------------------------------|-------------------------------------------
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+B                                          |B                                          
+A                                          |A                                          
+Y                                          |Y                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes AND2X2 and AND2X2 are equivalent.
+
+Subcircuit summary:
+Circuit 1: NAND2X1                         |Circuit 2: NAND2X1                         
+-------------------------------------------|-------------------------------------------
+nfet (2)                                   |nfet (2)                                   
+pfet (2)                                   |pfet (2)                                   
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: NAND2X1                         |Circuit 2: NAND2X1                         
+-------------------------------------------|-------------------------------------------
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+Y                                          |Y                                          
+B                                          |B                                          
+A                                          |A                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes NAND2X1 and NAND2X1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: AOI22X1                         |Circuit 2: AOI22X1                         
+-------------------------------------------|-------------------------------------------
+nfet (4)                                   |nfet (4)                                   
+pfet (4)                                   |pfet (4)                                   
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 10                         |Number of nets: 10                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: AOI22X1                         |Circuit 2: AOI22X1                         
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+C                                          |C                                          
+A                                          |A                                          
+D                                          |D                                          
+B                                          |B                                          
+gnd                                        |gnd                                        
+vdd                                        |vdd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes AOI22X1 and AOI22X1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: BUFX2                           |Circuit 2: BUFX2                           
+-------------------------------------------|-------------------------------------------
+pfet (2)                                   |pfet (2)                                   
+nfet (2)                                   |nfet (2)                                   
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 5                          |Number of nets: 5                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: BUFX2                           |Circuit 2: BUFX2                           
+-------------------------------------------|-------------------------------------------
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+Y                                          |Y                                          
+A                                          |A                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes BUFX2 and BUFX2 are equivalent.
+
+Class CLKBUF1 (0):  Merged 8 parallel devices.
+Class CLKBUF1 (1):  Merged 8 parallel devices.
+Subcircuit summary:
+Circuit 1: CLKBUF1                         |Circuit 2: CLKBUF1                         
+-------------------------------------------|-------------------------------------------
+pfet (8->4)                                |pfet (8->4)                                
+nfet (8->4)                                |nfet (8->4)                                
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: CLKBUF1                         |Circuit 2: CLKBUF1                         
+-------------------------------------------|-------------------------------------------
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+Y                                          |Y                                          
+A                                          |A                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes CLKBUF1 and CLKBUF1 are equivalent.
+
+Class NOR3X1 (0):  Merged 3 parallel devices.
+Class NOR3X1 (1):  Merged 3 parallel devices.
+Subcircuit summary:
+Circuit 1: NOR3X1                          |Circuit 2: NOR3X1                          
+-------------------------------------------|-------------------------------------------
+nfet (3)                                   |nfet (3)                                   
+pfet (6->3)                                |pfet (6->3)                                
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: NOR3X1                          |Circuit 2: NOR3X1                          
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+vdd                                        |vdd                                        
+B                                          |B                                          
+C                                          |C                                          
+A                                          |A                                          
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes NOR3X1 and NOR3X1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: NOR2X1                          |Circuit 2: NOR2X1                          
+-------------------------------------------|-------------------------------------------
+pfet (2)                                   |pfet (2)                                   
+nfet (2)                                   |nfet (2)                                   
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: NOR2X1                          |Circuit 2: NOR2X1                          
+-------------------------------------------|-------------------------------------------
+gnd                                        |gnd                                        
+vdd                                        |vdd                                        
+Y                                          |Y                                          
+B                                          |B                                          
+A                                          |A                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes NOR2X1 and NOR2X1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: INVX2                           |Circuit 2: INVX2                           
+-------------------------------------------|-------------------------------------------
+pfet (1)                                   |pfet (1)                                   
+nfet (1)                                   |nfet (1)                                   
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: INVX2                           |Circuit 2: INVX2                           
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+A                                          |A                                          
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes INVX2 and INVX2 are equivalent.
+
+Subcircuit summary:
+Circuit 1: NAND3X1                         |Circuit 2: NAND3X1                         
+-------------------------------------------|-------------------------------------------
+nfet (3)                                   |nfet (3)                                   
+pfet (3)                                   |pfet (3)                                   
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: NAND3X1                         |Circuit 2: NAND3X1                         
+-------------------------------------------|-------------------------------------------
+vdd                                        |vdd                                        
+A                                          |A                                          
+C                                          |C                                          
+B                                          |B                                          
+Y                                          |Y                                          
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes NAND3X1 and NAND3X1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: OAI22X1                         |Circuit 2: OAI22X1                         
+-------------------------------------------|-------------------------------------------
+nfet (4)                                   |nfet (4)                                   
+pfet (4)                                   |pfet (4)                                   
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 10                         |Number of nets: 10                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: OAI22X1                         |Circuit 2: OAI22X1                         
+-------------------------------------------|-------------------------------------------
+gnd                                        |gnd                                        
+vdd                                        |vdd                                        
+D                                          |D                                          
+A                                          |A                                          
+C                                          |C                                          
+B                                          |B                                          
+Y                                          |Y                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes OAI22X1 and OAI22X1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: OR2X2                           |Circuit 2: OR2X2                           
+-------------------------------------------|-------------------------------------------
+nfet (3)                                   |nfet (3)                                   
+pfet (3)                                   |pfet (3)                                   
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: OR2X2                           |Circuit 2: OR2X2                           
+-------------------------------------------|-------------------------------------------
+gnd                                        |gnd                                        
+vdd                                        |vdd                                        
+Y                                          |Y                                          
+B                                          |B                                          
+A                                          |A                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes OR2X2 and OR2X2 are equivalent.
+
+Class INVX8 (0):  Merged 6 parallel devices.
+Class INVX8 (1):  Merged 6 parallel devices.
+Subcircuit summary:
+Circuit 1: INVX8                           |Circuit 2: INVX8                           
+-------------------------------------------|-------------------------------------------
+nfet (4->1)                                |nfet (4->1)                                
+pfet (4->1)                                |pfet (4->1)                                
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: INVX8                           |Circuit 2: INVX8                           
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+A                                          |A                                          
+gnd                                        |gnd                                        
+vdd                                        |vdd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes INVX8 and INVX8 are equivalent.
+
+Subcircuit summary:
+Circuit 1: serv_exec_unit                  |Circuit 2: serv_exec_unit                  
+-------------------------------------------|-------------------------------------------
+AOI21X1 (174)                              |AOI21X1 (174)                              
+DFFPOSX1 (122)                             |DFFPOSX1 (122)                             
+OAI21X1 (171)                              |OAI21X1 (171)                              
+INVX1 (94)                                 |INVX1 (94)                                 
+AND2X2 (12)                                |AND2X2 (12)                                
+NAND2X1 (76)                               |NAND2X1 (76)                               
+AOI22X1 (69)                               |AOI22X1 (69)                               
+BUFX2 (95)                                 |BUFX2 (95)                                 
+CLKBUF1 (11)                               |CLKBUF1 (11)                               
+NOR3X1 (48)                                |NOR3X1 (48)                                
+NOR2X1 (59)                                |NOR2X1 (59)                                
+INVX2 (4)                                  |INVX2 (4)                                  
+NAND3X1 (52)                               |NAND3X1 (52)                               
+OAI22X1 (3)                                |OAI22X1 (3)                                
+OR2X2 (2)                                  |OR2X2 (2)                                  
+INVX8 (3)                                  |INVX8 (3)                                  
+Number of devices: 995                     |Number of devices: 995                     
+Number of nets: 1008                       |Number of nets: 1008                       
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: serv_exec_unit                  |Circuit 2: serv_exec_unit                  
+-------------------------------------------|-------------------------------------------
+debug_state[2]                             |debug_state[2]                             
+rsp_flags[0]                               |rsp_flags[0]                               
+debug_state[0]                             |debug_state[0]                             
+busy                                       |busy                                       
+cmd_op[3]                                  |cmd_op[3]                                  
+cmd_op[2]                                  |cmd_op[2]                                  
+cmd_op[1]                                  |cmd_op[1]                                  
+cmd_op[0]                                  |cmd_op[0]                                  
+debug_state[1]                             |debug_state[1]                             
+rsp_flags[3]                               |rsp_flags[3]                               
+rsp_flags[2]                               |rsp_flags[2]                               
+rsp_flags[1]                               |rsp_flags[1]                               
+rsp_valid                                  |rsp_valid                                  
+rsp_last                                   |rsp_last                                   
+rsp_result                                 |rsp_result                                 
+rsp_flags[5]                               |rsp_flags[5]                               
+cmd_ready                                  |cmd_ready                                  
+rsp_flags[4]                               |rsp_flags[4]                               
+rsp_ready                                  |rsp_ready                                  
+clk                                        |clk                                        
+rst_n                                      |rst_n                                      
+cmd_last                                   |cmd_last                                   
+cmd_valid                                  |cmd_valid                                  
+gnd                                        |gnd                                        
+vdd                                        |vdd                                        
+cmd_b                                      |cmd_b                                      
+cmd_a                                      |cmd_a                                      
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes serv_exec_unit and serv_exec_unit are equivalent.
+
+Final result: Circuits match uniquely.
+.

@@ -1,6 +1,6 @@
 sim_workspace/
+sim_workspace_postroute/
 .Xil/
 *.jou
-*.log
 
 .codex

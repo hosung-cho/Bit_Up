@@ -1,0 +1,11 @@
+Qflow project preparation output log Wed Jun  3 14:00:33 2026
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to etri050
+
+No actions specified on command line;
+creating qflow script file ~/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/ETRI050_Ho/qflow_exec.sh only.
+Uncomment lines in this file and source the file to run the flow.

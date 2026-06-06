@@ -1,0 +1,613 @@
+Qflow static timing analysis logfile created on Mon Jun 1 04:36:39 KST 2026
+Running vesta static timing analysis
+vesta --long serv_exec_unit.rtlnopwr.v /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.4.100
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "etri05_stdcells"
+End of library at line 6613
+Lib read /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib:  Processed 6615 lines.
+Parsing module "serv_exec_unit"
+Verilog netlist read:  Processed 11757 lines.
+Number of paths analyzed:  129
+
+Top 20 maximum delay paths:
+Path _1600_/CLK to _1590_/D delay 4875.51 ps
+      0.0 ps   clk_bF$buf10: CLKBUF1_insert34/Y ->         _1600_/CLK
+    443.1 ps        op_r[1]:           _1600_/Q ->          _838_/A
+    755.6 ps          _366_:            _838_/Y ->          _839_/B
+   1345.2 ps          _365_:            _839_/Y ->          _844_/A
+   1608.8 ps          _360_:            _844_/Y ->          _848_/A
+   1949.2 ps          _356_:            _848_/Y -> BUFX2_insert11/A
+   2324.8 ps  _356__bF$buf0:   BUFX2_insert11/Y ->          _857_/C
+   2635.9 ps        alu_sub:            _857_/Y ->          _798_/A
+   2891.2 ps          _686_:            _798_/Y ->          _796_/B
+   3041.9 ps          _688_:            _796_/Y ->          _795_/C
+   3217.9 ps          _689_:            _795_/Y ->          _784_/A
+   3378.8 ps          _699_:            _784_/Y ->          _774_/A
+   3556.6 ps          _709_:            _774_/Y ->          _773_/A
+   3715.6 ps        alu_cmp:            _773_/Y ->         _1192_/A
+   3912.3 ps           _61_:           _1192_/Y ->         _1460_/C
+   4064.2 ps          _568_:           _1460_/Y ->         _1463_/B
+   4234.9 ps          _565_:           _1463_/Y ->         _1465_/D
+   4366.6 ps          _563_:           _1465_/Y ->         _1467_/A
+   4479.9 ps          _399_:           _1467_/Y ->         _1590_/D
+
+   clock skew at destination = 32.6627
+   setup at destination = 362.983
+
+Path _1600_/CLK to _1535_/D delay 4719.01 ps
+      0.0 ps   clk_bF$buf10: CLKBUF1_insert34/Y ->         _1600_/CLK
+    443.1 ps        op_r[1]:           _1600_/Q ->          _838_/A
+    755.6 ps          _366_:            _838_/Y ->          _839_/B
+   1345.2 ps          _365_:            _839_/Y ->          _844_/A
+   1608.8 ps          _360_:            _844_/Y ->          _848_/A
+   1949.2 ps          _356_:            _848_/Y -> BUFX2_insert11/A
+   2324.8 ps  _356__bF$buf0:   BUFX2_insert11/Y ->          _857_/C
+   2635.9 ps        alu_sub:            _857_/Y ->          _798_/A
+   2891.2 ps          _686_:            _798_/Y ->          _796_/B
+   3041.9 ps          _688_:            _796_/Y ->          _795_/C
+   3217.9 ps          _689_:            _795_/Y ->          _784_/A
+   3378.8 ps          _699_:            _784_/Y ->          _774_/A
+   3556.6 ps          _709_:            _774_/Y ->          _773_/A
+   3715.6 ps        alu_cmp:            _773_/Y ->         _1192_/A
+   3912.3 ps           _61_:           _1192_/Y ->         _1196_/A
+   4064.6 ps           _57_:           _1196_/Y ->         _1197_/B
+   4190.1 ps           _56_:           _1197_/Y ->         _1199_/A
+   4301.4 ps          _466_:           _1199_/Y ->         _1535_/D
+
+   clock skew at destination = 54.1462
+   setup at destination = 363.493
+
+Path _1600_/CLK to _1537_/D delay 4389.66 ps
+      0.0 ps       clk_bF$buf10: CLKBUF1_insert34/Y ->         _1600_/CLK
+    443.1 ps            op_r[1]:           _1600_/Q ->          _838_/A
+    755.6 ps              _366_:            _838_/Y ->          _839_/B
+   1345.2 ps              _365_:            _839_/Y ->          _844_/A
+   1608.8 ps              _360_:            _844_/Y ->          _848_/A
+   1949.2 ps              _356_:            _848_/Y -> BUFX2_insert11/A
+   2324.8 ps      _356__bF$buf0:   BUFX2_insert11/Y ->          _857_/C
+   2635.9 ps            alu_sub:            _857_/Y ->          _797_/A
+   2828.2 ps              _687_:            _797_/Y ->          _796_/A
+   3017.3 ps              _688_:            _796_/Y ->          _795_/C
+   3202.8 ps              _689_:            _795_/Y ->          _794_/B
+   3376.8 ps              _690_:            _794_/Y ->          _785_/A
+   3546.4 ps  \u_serv_alu.o_rd :            _785_/Y ->         _1187_/B
+   3765.2 ps               _65_:           _1187_/Y ->         _1188_/C
+   3880.0 ps               _64_:           _1188_/Y ->         _1190_/A
+   3993.7 ps              _467_:           _1190_/Y ->         _1537_/D
+
+   clock skew at destination = 32.6627
+   setup at destination = 363.339
+
+Path _1600_/CLK to _767_/D delay 4086.48 ps
+      0.0 ps   clk_bF$buf10: CLKBUF1_insert34/Y ->         _1600_/CLK
+    443.1 ps        op_r[1]:           _1600_/Q ->          _838_/A
+    755.6 ps          _366_:            _838_/Y ->          _839_/B
+   1345.2 ps          _365_:            _839_/Y ->          _844_/A
+   1608.8 ps          _360_:            _844_/Y ->          _848_/A
+   1949.2 ps          _356_:            _848_/Y -> BUFX2_insert11/A
+   2324.8 ps  _356__bF$buf0:   BUFX2_insert11/Y ->          _857_/C
+   2635.9 ps        alu_sub:            _857_/Y ->          _798_/A
+   2891.2 ps          _686_:            _798_/Y ->          _796_/B
+   3041.9 ps          _688_:            _796_/Y ->          _795_/C
+   3217.9 ps          _689_:            _795_/Y ->          _784_/A
+   3378.8 ps          _699_:            _784_/Y ->          _774_/A
+   3556.6 ps          _709_:            _774_/Y ->          _768_/B
+   3688.2 ps          _675_:            _768_/Y ->          _767_/D
+
+   clock skew at destination = 32.6627
+   setup at destination = 365.579
+
+Path _1557_/CLK to _1620_/D delay 3978.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert70/A
+   3086.8 ps       _295__bF$buf3:   BUFX2_insert70/Y ->         _1296_/C
+   3307.1 ps               _721_:           _1296_/Y ->         _1297_/B
+   3467.4 ps               _720_:           _1297_/Y ->         _1299_/A
+   3584.3 ps               _448_:           _1299_/Y ->         _1620_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.533
+
+Path _1557_/CLK to _1622_/D delay 3978.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert70/A
+   3086.8 ps       _295__bF$buf3:   BUFX2_insert70/Y ->         _1290_/C
+   3307.1 ps               _727_:           _1290_/Y ->         _1291_/B
+   3467.4 ps               _726_:           _1291_/Y ->         _1293_/A
+   3584.3 ps               _449_:           _1293_/Y ->         _1622_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.533
+
+Path _1557_/CLK to _1577_/D delay 3978.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert73/A
+   3086.8 ps       _295__bF$buf0:   BUFX2_insert73/Y ->         _1064_/C
+   3307.1 ps               _168_:           _1064_/Y ->         _1065_/B
+   3467.4 ps               _167_:           _1065_/Y ->         _1067_/A
+   3584.3 ps               _487_:           _1067_/Y ->         _1577_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.533
+
+Path _1557_/CLK to _1579_/D delay 3978.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert70/A
+   3086.8 ps       _295__bF$buf3:   BUFX2_insert70/Y ->         _1058_/C
+   3307.1 ps               _173_:           _1058_/Y ->         _1059_/B
+   3467.4 ps               _172_:           _1059_/Y ->         _1061_/A
+   3584.3 ps               _488_:           _1061_/Y ->         _1579_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.533
+
+Path _1557_/CLK to _1624_/D delay 3978.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert70/A
+   3086.8 ps       _295__bF$buf3:   BUFX2_insert70/Y ->         _1284_/C
+   3307.1 ps               _732_:           _1284_/Y ->         _1285_/B
+   3467.4 ps               _731_:           _1285_/Y ->         _1287_/A
+   3584.3 ps               _450_:           _1287_/Y ->         _1624_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.533
+
+Path _1557_/CLK to _1581_/D delay 3978.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert70/A
+   3086.8 ps       _295__bF$buf3:   BUFX2_insert70/Y ->         _1051_/C
+   3307.1 ps               _179_:           _1051_/Y ->         _1052_/B
+   3467.4 ps               _178_:           _1052_/Y ->         _1054_/A
+   3584.3 ps               _489_:           _1054_/Y ->         _1581_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.533
+
+Path _1557_/CLK to _1636_/D delay 3978.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert73/A
+   3086.8 ps       _295__bF$buf0:   BUFX2_insert73/Y ->         _1252_/C
+   3307.1 ps                _11_:           _1252_/Y ->         _1253_/B
+   3467.4 ps                _10_:           _1253_/Y ->         _1255_/A
+   3584.3 ps               _456_:           _1255_/Y ->         _1636_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.533
+
+Path _1557_/CLK to _1638_/D delay 3978.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert73/A
+   3086.8 ps       _295__bF$buf0:   BUFX2_insert73/Y ->         _1246_/C
+   3307.1 ps                _16_:           _1246_/Y ->         _1247_/B
+   3467.4 ps                _15_:           _1247_/Y ->         _1249_/A
+   3584.3 ps               _457_:           _1249_/Y ->         _1638_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.533
+
+Path _1557_/CLK to _1640_/D delay 3978.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert73/A
+   3086.8 ps       _295__bF$buf0:   BUFX2_insert73/Y ->         _1240_/C
+   3307.1 ps                _21_:           _1240_/Y ->         _1241_/B
+   3467.4 ps                _20_:           _1241_/Y ->         _1243_/A
+   3584.3 ps               _458_:           _1243_/Y ->         _1640_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.533
+
+Path _1557_/CLK to _1593_/D delay 3978.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert73/A
+   3086.8 ps       _295__bF$buf0:   BUFX2_insert73/Y ->         _1010_/C
+   3307.1 ps               _214_:           _1010_/Y ->         _1011_/B
+   3467.4 ps               _213_:           _1011_/Y ->         _1013_/A
+   3584.3 ps               _495_:           _1013_/Y ->         _1593_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.533
+
+Path _1557_/CLK to _1601_/D delay 3978.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert70/A
+   3086.8 ps       _295__bF$buf3:   BUFX2_insert70/Y ->          _962_/C
+   3307.1 ps               _258_:            _962_/Y ->          _963_/B
+   3467.4 ps               _257_:            _963_/Y ->          _965_/A
+   3584.3 ps               _499_:            _965_/Y ->         _1601_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.533
+
+Path _1557_/CLK to _1595_/D delay 3978.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert73/A
+   3086.8 ps       _295__bF$buf0:   BUFX2_insert73/Y ->         _1003_/C
+   3307.1 ps               _220_:           _1003_/Y ->         _1004_/B
+   3467.4 ps               _219_:           _1004_/Y ->         _1006_/A
+   3584.3 ps               _496_:           _1006_/Y ->         _1595_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.533
+
+Path _1557_/CLK to _1630_/D delay 3970.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert69/A
+   3081.2 ps       _295__bF$buf4:   BUFX2_insert69/Y ->         _1267_/C
+   3299.6 ps               _752_:           _1267_/Y ->         _1268_/B
+   3459.5 ps               _745_:           _1268_/Y ->         _1270_/A
+   3576.3 ps               _453_:           _1270_/Y ->         _1630_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.525
+
+Path _1557_/CLK to _1644_/D delay 3970.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert69/A
+   3081.2 ps       _295__bF$buf4:   BUFX2_insert69/Y ->         _1229_/C
+   3299.6 ps                _30_:           _1229_/Y ->         _1230_/B
+   3459.5 ps                _29_:           _1230_/Y ->         _1232_/A
+   3576.3 ps               _460_:           _1232_/Y ->         _1644_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.525
+
+Path _1557_/CLK to _1646_/D delay 3970.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert71/A
+   3081.2 ps       _295__bF$buf2:   BUFX2_insert71/Y ->         _1223_/C
+   3299.6 ps                _35_:           _1223_/Y ->         _1224_/B
+   3459.5 ps                _34_:           _1224_/Y ->         _1226_/A
+   3576.3 ps               _461_:           _1226_/Y ->         _1646_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.525
+
+Path _1557_/CLK to _1632_/D delay 3970.47 ps
+      0.0 ps         clk_bF$buf7: CLKBUF1_insert37/Y ->         _1557_/CLK
+    415.4 ps         load_cnt[4]:           _1557_/Q -> BUFX2_insert56/A
+    856.5 ps  load_cnt_4_bF$buf0:   BUFX2_insert56/Y ->          _871_/A
+    969.1 ps               _342_:            _871_/Y -> BUFX2_insert78/A
+   1260.1 ps       _342__bF$buf0:   BUFX2_insert78/Y ->          _872_/A
+   2086.1 ps               _341_:            _872_/Y ->          _921_/A
+   2636.4 ps               _295_:            _921_/Y -> BUFX2_insert71/A
+   3081.2 ps       _295__bF$buf2:   BUFX2_insert71/Y ->         _1261_/C
+   3299.6 ps                 _4_:           _1261_/Y ->         _1262_/B
+   3459.5 ps                 _3_:           _1262_/Y ->         _1264_/A
+   3576.3 ps               _454_:           _1264_/Y ->         _1632_/D
+
+   clock skew at destination = 29.6776
+   setup at destination = 364.525
+
+Computed maximum clock frequency (zero margin) = 205.107 MHz
+-----------------------------------------
+
+Number of paths analyzed:  129
+
+Top 20 minimum delay paths:
+Path _1590_/CLK to _1590_/D delay 310.761 ps
+      0.0 ps  clk_bF$buf10: CLKBUF1_insert34/Y -> _1590_/CLK
+    194.8 ps   result_r[0]:           _1590_/Q -> _1466_/A
+    320.9 ps         _562_:           _1466_/Y -> _1467_/C
+    405.6 ps         _399_:           _1467_/Y -> _1590_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8815
+
+Path _1641_/CLK to _1641_/D delay 314.053 ps
+      0.0 ps  clk_bF$buf3: CLKBUF1_insert41/Y -> _1641_/CLK
+    311.1 ps  send_cnt[0]:           _1641_/Q -> _1386_/B
+    409.2 ps        _422_:           _1386_/Y -> _1641_/D
+
+   clock skew at destination = 0
+   hold at destination = -95.1281
+
+Path _1568_/CLK to _1568_/D delay 322.854 ps
+      0.0 ps  clk_bF$buf7: CLKBUF1_insert37/Y -> _1568_/CLK
+    196.8 ps      valid_r:           _1568_/Q -> _1341_/C
+    316.6 ps        _652_:           _1341_/Y -> _1342_/A
+    416.5 ps        _434_:           _1342_/Y -> _1568_/D
+
+   clock skew at destination = 0
+   hold at destination = -93.6927
+
+Path _1576_/CLK to _1576_/D delay 323.3 ps
+      0.0 ps  clk_bF$buf10: CLKBUF1_insert34/Y -> _1576_/CLK
+    319.4 ps   exec_cnt[0]:           _1576_/Q -> _1337_/B
+    418.3 ps         _436_:           _1337_/Y -> _1576_/D
+
+   clock skew at destination = 0
+   hold at destination = -95.0285
+
+Path _1629_/CLK to _1629_/D delay 333.906 ps
+      0.0 ps   clk_bF$buf8: CLKBUF1_insert36/Y -> _1629_/CLK
+    215.1 ps  result_r[16]:           _1629_/Q -> _1394_/A
+    343.5 ps         _614_:           _1394_/Y -> _1395_/C
+    428.8 ps         _419_:           _1395_/Y -> _1629_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1536_/CLK to _1536_/D delay 333.906 ps
+      0.0 ps   clk_bF$buf4: CLKBUF1_insert40/Y -> _1536_/CLK
+    215.1 ps  result_r[19]:           _1536_/Q -> _1365_/A
+    343.5 ps         _636_:           _1365_/Y -> _1366_/C
+    428.8 ps         _426_:           _1366_/Y -> _1536_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1621_/CLK to _1621_/D delay 333.906 ps
+      0.0 ps   clk_bF$buf4: CLKBUF1_insert40/Y -> _1621_/CLK
+    215.1 ps  result_r[14]:           _1621_/Q -> _1400_/A
+    343.5 ps         _610_:           _1400_/Y -> _1401_/C
+    428.8 ps         _417_:           _1401_/Y -> _1621_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1538_/CLK to _1538_/D delay 333.906 ps
+      0.0 ps  clk_bF$buf0: CLKBUF1_insert44/Y -> _1538_/CLK
+    215.1 ps  result_r[7]:           _1538_/Q -> _1438_/A
+    343.5 ps        _583_:           _1438_/Y -> _1439_/C
+    428.8 ps        _406_:           _1439_/Y -> _1538_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1548_/CLK to _1548_/D delay 333.906 ps
+      0.0 ps   clk_bF$buf0: CLKBUF1_insert44/Y -> _1548_/CLK
+    215.1 ps  result_r[22]:           _1548_/Q -> _1356_/A
+    343.5 ps         _642_:           _1356_/Y -> _1357_/C
+    428.8 ps         _429_:           _1357_/Y -> _1548_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1619_/CLK to _1619_/D delay 333.906 ps
+      0.0 ps  clk_bF$buf0: CLKBUF1_insert44/Y -> _1619_/CLK
+    215.1 ps  result_r[2]:           _1619_/Q -> _1453_/A
+    343.5 ps        _573_:           _1453_/Y -> _1454_/C
+    428.8 ps        _401_:           _1454_/Y -> _1619_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1544_/CLK to _1544_/D delay 333.906 ps
+      0.0 ps   clk_bF$buf0: CLKBUF1_insert44/Y -> _1544_/CLK
+    215.1 ps  result_r[21]:           _1544_/Q -> _1359_/A
+    343.5 ps         _640_:           _1359_/Y -> _1360_/C
+    428.8 ps         _428_:           _1360_/Y -> _1544_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1560_/CLK to _1560_/D delay 333.906 ps
+      0.0 ps   clk_bF$buf0: CLKBUF1_insert44/Y -> _1560_/CLK
+    215.1 ps  result_r[25]:           _1560_/Q -> _1347_/A
+    343.5 ps         _648_:           _1347_/Y -> _1348_/C
+    428.8 ps         _432_:           _1348_/Y -> _1560_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1643_/CLK to _1643_/D delay 333.906 ps
+      0.0 ps  clk_bF$buf0: CLKBUF1_insert44/Y -> _1643_/CLK
+    215.1 ps  result_r[5]:           _1643_/Q -> _1444_/A
+    343.5 ps        _579_:           _1444_/Y -> _1445_/C
+    428.8 ps        _404_:           _1445_/Y -> _1643_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1635_/CLK to _1635_/D delay 333.906 ps
+      0.0 ps  clk_bF$buf0: CLKBUF1_insert44/Y -> _1635_/CLK
+    215.1 ps  result_r[4]:           _1635_/Q -> _1447_/A
+    343.5 ps        _577_:           _1447_/Y -> _1448_/C
+    428.8 ps        _403_:           _1448_/Y -> _1635_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1627_/CLK to _1627_/D delay 333.906 ps
+      0.0 ps  clk_bF$buf0: CLKBUF1_insert44/Y -> _1627_/CLK
+    215.1 ps  result_r[3]:           _1627_/Q -> _1450_/A
+    343.5 ps        _575_:           _1450_/Y -> _1451_/C
+    428.8 ps        _402_:           _1451_/Y -> _1627_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1546_/CLK to _1546_/D delay 333.906 ps
+      0.0 ps  clk_bF$buf0: CLKBUF1_insert44/Y -> _1546_/CLK
+    215.1 ps  result_r[8]:           _1546_/Q -> _1435_/A
+    343.5 ps        _585_:           _1435_/Y -> _1436_/C
+    428.8 ps        _407_:           _1436_/Y -> _1546_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1617_/CLK to _1617_/D delay 333.906 ps
+      0.0 ps   clk_bF$buf0: CLKBUF1_insert44/Y -> _1617_/CLK
+    215.1 ps  result_r[13]:           _1617_/Q -> _1403_/A
+    343.5 ps         _608_:           _1403_/Y -> _1404_/C
+    428.8 ps         _416_:           _1404_/Y -> _1617_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1537_/CLK to _1537_/D delay 333.906 ps
+      0.0 ps  clk_bF$buf10: CLKBUF1_insert34/Y -> _1537_/CLK
+    215.1 ps  result_r[31]:           _1537_/Q -> _1189_/A
+    343.5 ps          _63_:           _1189_/Y -> _1190_/C
+    428.8 ps         _467_:           _1190_/Y -> _1537_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1616_/CLK to _1616_/D delay 333.906 ps
+      0.0 ps   clk_bF$buf8: CLKBUF1_insert36/Y -> _1616_/CLK
+    215.1 ps  result_r[30]:           _1616_/Q -> _1305_/A
+    343.5 ps         _714_:           _1305_/Y -> _1306_/C
+    428.8 ps         _446_:           _1306_/Y -> _1616_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Path _1608_/CLK to _1608_/D delay 333.906 ps
+      0.0 ps   clk_bF$buf8: CLKBUF1_insert36/Y -> _1608_/CLK
+    215.1 ps  result_r[28]:           _1608_/Q -> _1311_/A
+    343.5 ps         _672_:           _1311_/Y -> _1312_/C
+    428.8 ps         _444_:           _1312_/Y -> _1608_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.8583
+
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  4
+
+Top 4 maximum delay paths:
+Path input pin cmd_op[0] to _1596_/D delay 484.999 ps
+      0.0 ps  cmd_op[0]:          -> _1317_/A
+    114.6 ps      _669_: _1317_/Y -> _1318_/C
+    226.3 ps      _441_: _1318_/Y -> _1596_/D
+
+   setup at destination = 258.654
+
+Path input pin cmd_op[1] to _1600_/D delay 484.999 ps
+      0.0 ps  cmd_op[1]:          -> _1315_/A
+    114.6 ps      _670_: _1315_/Y -> _1316_/C
+    226.3 ps      _442_: _1316_/Y -> _1600_/D
+
+   setup at destination = 258.654
+
+Path input pin cmd_op[2] to _1604_/D delay 484.999 ps
+      0.0 ps  cmd_op[2]:          -> _1313_/A
+    114.6 ps      _671_: _1313_/Y -> _1314_/C
+    226.3 ps      _443_: _1314_/Y -> _1604_/D
+
+   setup at destination = 258.654
+
+Path input pin cmd_op[3] to _1551_/D delay 484.999 ps
+      0.0 ps  cmd_op[3]:          -> _1151_/A
+    114.6 ps       _94_: _1151_/Y -> _1152_/C
+    226.3 ps      _474_: _1152_/Y -> _1551_/D
+
+   setup at destination = 258.654
+
+-----------------------------------------
+
+Number of paths analyzed:  4
+
+Top 4 minimum delay paths:
+Path input pin cmd_op[3] to _1551_/D delay 101.821 ps
+      0.0 ps  cmd_op[3]:          -> _1151_/A
+    114.6 ps       _94_: _1151_/Y -> _1152_/C
+    196.8 ps      _474_: _1152_/Y -> _1551_/D
+
+   hold at destination = -94.9969
+
+Path input pin cmd_op[2] to _1604_/D delay 101.821 ps
+      0.0 ps  cmd_op[2]:          -> _1313_/A
+    114.6 ps      _671_: _1313_/Y -> _1314_/C
+    196.8 ps      _443_: _1314_/Y -> _1604_/D
+
+   hold at destination = -94.9969
+
+Path input pin cmd_op[1] to _1600_/D delay 101.821 ps
+      0.0 ps  cmd_op[1]:          -> _1315_/A
+    114.6 ps      _670_: _1315_/Y -> _1316_/C
+    196.8 ps      _442_: _1316_/Y -> _1600_/D
+
+   hold at destination = -94.9969
+
+Path input pin cmd_op[0] to _1596_/D delay 101.821 ps
+      0.0 ps  cmd_op[0]:          -> _1317_/A
+    114.6 ps      _669_: _1317_/Y -> _1318_/C
+    196.8 ps      _441_: _1318_/Y -> _1596_/D
+
+   hold at destination = -94.9969
+
+-----------------------------------------
+

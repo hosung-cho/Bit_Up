@@ -1,0 +1,46 @@
+
+Magic 8.3 revision 638 - Compiled on Thu Apr 30 21:20:55 KST 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=1048576]
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Input style lambda=0.30(p): scaleFactor=30, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+The following types are not handled by extraction and will be treated as non-electrical types:
+    n_field_implant p_field_implant nselect pselect glass filln filla fillb xp m1p m2p m3p comment bb 
+2 Magic internal units = 1 Lambda
+Using technology "scmos", version 2001a
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )
+
+microns:   0.000 x 0.000   ( 0.000,  0.000), ( 0.000,  0.000)
+lambda:     0.00 x 0.00    (  0.00,  0.00 ), (  0.00,  0.00 )
+internal:      0 x 0       (     0,  0    ), (     0,  0    )
+Creating new cell
+Total DRC errors found: 0
+No errors found.
+Design-rule checker statistics (recent/total):
+    Squares processed: 4/4
+    Tiles processed: 75/75
+    Edges pieces processed: 0/0
+    Constraint areas checked: 0/0
+    Multi-tile constraints: 0/0
+    Interaction areas processed: 0/0
+    Tiles processed for interactions: 75/75
+    Tiles processed for arrays: 0/0
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.150 x 0.150   ( 0.000,  0.000), ( 0.150,  0.150)  0.023     
+lambda:     0.50 x 0.50    (  0.00,  0.00 ), (  0.50,  0.50 )  0.25      
+internal:      1 x 1       (     0,  0    ), (     1,  1    )  1         

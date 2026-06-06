@@ -1,0 +1,88 @@
+Vivado Tcl Batch mode simulation starts...
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Fri May 29 12:07:56 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_sim.tcl -notrace
+[Tcl] 1. 임시 시뮬레이션 프로젝트 생성 중...
+[Tcl] 2. 소스 파일 및 테스트벤치 추가 중...
+[Tcl] 3. Top 모듈 지정...
+[Tcl] 4. 시뮬레이션 설정...
+[Tcl] 5. 컴파일 및 시뮬레이션 실행!
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fpga_host_riscv_tests'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/sim_workspace/sim_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/hosung/tools/xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fpga_host_riscv_tests' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/sim_workspace/sim_project.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_fpga_host_riscv_tests_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_exec_fpga_bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_exec_fpga_bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/asic/serv_exec_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_exec_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_fpga_host.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serv_fpga_host
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/tb_fpga_host_riscv_tests.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fpga_host_riscv_tests
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/sim_workspace/sim_project.sim/sim_1/behav/xsim'
+xelab --incr --debug off --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fpga_host_riscv_tests_behav xil_defaultlib.tb_fpga_host_riscv_tests -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/hosung/tools/xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug off --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fpga_host_riscv_tests_behav xil_defaultlib.tb_fpga_host_riscv_tests -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_fpga_host.v" Line 3. Module serv_fpga_host(IMEM_WORDS=512,DMEM_BYTES=2048) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_exec_fpga_bridge.v" Line 3. Module serv_exec_fpga_bridge doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/asic/serv_exec_unit.v" Line 3. Module serv_exec_unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v" Line 8. Module serv_alu_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_fpga_host.v" Line 3. Module serv_fpga_host(IMEM_WORDS=512,DMEM_BYTES=2048) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/fpga/serv_exec_fpga_bridge.v" Line 3. Module serv_exec_fpga_bridge doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/asic/serv_exec_unit.v" Line 3. Module serv_exec_unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/src/rtl/serv/serv_alu.v" Line 8. Module serv_alu_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.serv_exec_fpga_bridge
+Compiling module xil_defaultlib.serv_fpga_host(IMEM_WORDS=512,DM...
+Compiling module xil_defaultlib.serv_alu_default
+Compiling module xil_defaultlib.serv_exec_unit
+Compiling module xil_defaultlib.tb_fpga_host_riscv_tests
+Built simulation snapshot tb_fpga_host_riscv_tests_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/sim_workspace/sim_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fpga_host_riscv_tests_behav -key {Behavioral:sim_1:Functional:tb_fpga_host_riscv_tests} -tclbatch {/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/generated/run_only.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source /home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/sim/generated/run_only.tcl
+[TB PASS] riscv-tests case passed cycles=28809 pc=00000018
+$finish called at time : 288125 ns : File "/home/hosung/Ho/MPW/MPW_workspace/Bit_Up/C_SERV_ALU_FPGA/testbench/4_fpga_host_riscv_tests/tb_fpga_host_riscv_tests.v" Line 153
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fpga_host_riscv_tests_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for all
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1488.461 ; gain = 45.496 ; free physical = 4737 ; free virtual = 10260
+[Tcl] 시뮬레이션 완료!
+INFO: [Common 17-206] Exiting Vivado at Fri May 29 12:08:06 2026...
+
+=========================================
+[Cleanup] Remove unnecessary Vivado temp files
+=========================================
+[Cleanup] done
